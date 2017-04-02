@@ -1,0 +1,538 @@
+<!DOCTYPE html>
+<html lang="nl">
+  <head>
+    <meta content="text/html; charset=UTF-8" http-equiv="content-type">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Nederlands profiel op ISO 19115 voor geografie</title>
+    <script src='https://tools.geostandaarden.nl/respec/builds/respec-geonovum.js' class='remove'></script>
+    <script class='remove'>
+    var respecConfig = {
+      specStatus: "GN-DEF",
+      specType: "IM",
+      editors: [{
+        name: "Your Name",
+        company: "You company",
+        url: "http://your-site.com",
+      }],
+      shortName: "dahut",
+      github: "https://some.github.repo",
+    };
+    </script>
+  </head>
+  <body>
+    <section id='abstract'>
+      <p>
+        This is required.
+      </p>
+    </section>
+    <section id='sotd'>
+      <p>
+        This is required.
+      </p>
+    </section>
+    <section id="Inleiding">
+    <h2>Inleiding</h2>
+      <section id="afbakening">
+      <h3>Afbakening</h3>
+        <p>
+          Metadata komt voor bij meerdere informatie disciplines. Indien hier over metadata wordt gesproken betreft het metadata die betrekking heeft op geo-informatie. Dit metadata profiel richt zich op de beschrijving van de metadata van geografische datasets en dataset series.
+        </p>
+        <p>
+          Het <a href="http://www.geonovum.nl/wegwijzer/standaarden/nederlands-metadataprofiel-op-iso-19119-services-121"> Nederlandse profiel op ISO 19119 voor services versie 1.2</a> richt zich op de beschrijving van metadata van geografische dataservices. Als er services beschikbaar zijn dient zowel de service als de dataset van metadata te worden voorzien. De relatie tussen metadata van data, metadata van services en de data en services is opgenomen in bijlage 8. In de metadata wiki <a href="wiki.geonovum.nl/index.php/2_Metadata">wiki.geonovum.nl/index.php/2_Metadata </a> zijn alle aspecten van het aanmaken van metadata beschreven.
+        </p>
+      </section>
+      <section id="scope">
+      <h3>Scope</h3>
+        <p>
+          Dit metadata profiel bevat de semantische beschrijving van de verplichte of door conditie verplichte metadata elementen, de kernset, van een dataset of dataset serie. Dit metadata profiel beschrijft tevens de encoding van de metadata van een dataset of dataset serie zodat de uitwisseling tussen machines of mens en machine kan plaatsvinden. De optionele set is een aanvulling op de kernset en voorziet in de behoefte van het geo-werkveld aan eeneen brede gemeenschappelijke basis van metadata-elementen, in het bijzonder voor het beheer.
+        </p>
+        <p>
+          Bij het voldoen aan dit profiel wordt tevens aan de INSPIRE verplichting voldaan.
+          <br><span class="note">
+            Deze verplichting geldt alleen voor metadata van de door INSPIRE benoemde geografische datasets.
+          </span>
+        </p>
+      </section>
+      <section>
+      <h3>Context</h3>
+        <p>
+          Figuur 1 plaatst het Nederlandse metadata profiel voor geografie in zijn internationale en sectorale context. De ISO-kernset is de kleinste eenheid, een selectie uit ISO 19115.
+        </p>
+        <figure id="image003">
+          <img src="image003.gif" alt="image003-gif">
+          <figcaption>Context profiel</figcaption>
+        </figure>
+        <p>
+          De Nederlandse kernset bevat de Europese kernset (INSPIRE) plus een selectie van metadata-elementen uit ISO 19115. In dit profiel zijn de metadata elementen met hun oorsprong aangegeven in bijlage 4.
+        </p>
+        <p>
+          Sectoren in Nederland kunnen een eigen uitbreiding op het Nederlandse profiel ontwikkelen. Voorwaarde is dat de Nederlandse kernset metadata onderdeel is van het sectorale metadata profiel. Deze sectorale uitbreidingen dienen onderdeel te zijn van ISO 19115.
+        </p>
+      </section>
+      <section id="leeswijzer">
+      <h3>Leeswijzer</h3>
+        <p>
+          Hoofdstuk 2 toont de normatieve verwijzingen, hoofdstuk 3 bevat de XSD schema's waarna in hoofdstuk 4 de gehanteerde termen en definities worden beschreven. Het formele deel van het profiel waarin onder andere de verplichte elementen, de kernset, worden beschreven die gelden voor metadata voor geografie staan in hoofdstuk 5. In hoofdstuk 6 staan de optionele elementen. De volgende hoofdstukken geven op specifieke onderdelen van het profiel uitleg. De bijlagen dienen ter ondersteuning van de hoofdstukken.
+        </p>
+      </section>
+    </section>
+    <section id="normatieve-verwijzing">
+    <h2>Normatieve verwijzing</h2>
+      <p>
+        De volgende normen, standaarden en specificaties zijn toegepast in dit profiel:
+      </p>
+      <p>
+        <b>ISO 19115:</b>
+        <ul>
+          <li>
+            EN ISO 19115:2005, Geographic information - Metadata<br><span class="note">EN ISO 19115:2005 is de adoptie door CEN van ISO 19115:2003</span>
+          </li>
+          <li>
+            EN ISO 19115:2005/AC:2008 , Geographic information – Metadata, Technical Corrigendum 1<br><span class="note">EN ISO 19115:2005/AC:2008 is de adoptie door CEN van ISO 19115/Cor.1:2006</span>
+          </li>
+        </ul>
+      </p>
+      <p>
+        <b>CEN ISO/TS 19139:2009</b>, Geographic information - Metadata – XML Schema Implementation<br><span class="note">CEN ISO/TS 19139:2009 is de adoptie door CEN van ISO/TS 19139:2007</span>
+      </p>
+      <p>
+        <b>CSW2 AP ISO</b>, <a href="portal.opengeospatial.org/files/?artifact_id=21460">OpenGIS Catalogue Services Specification 2.0.2 - ISO Metadata Application Profile</a>, Version 1.0.0, OGC 07-045, 2007
+      </p>
+      <p>
+        <b>ISO 19108</b>, EN ISO 19108:2005, Geographic information – Temporal Schema<br><span class="note">EN ISO 19108:2005 is de adoptie door CEN van ISO 19108:2002</span>
+      </p>
+      <p>
+        <b>ISO 8601:2004</b>, Data elements and interchange formats - Information interchange - Representation of dates and times
+      </p>
+      <p>
+        <b>ISO 10646-1</b>, Information technology ― Universal Multiple-Octet Coded Character Set (UCS) ― Part 1: Architecture and Basic Multilingual Plane
+      </p>
+      <p>
+        <b>ISO 639-2</b>, Codes for the representation of names of languages - Part 2: Alpha-3 code
+      </p>
+      <p>
+        <b>ISO TC 46/SC 4</b>, 2009, Dublin Core Metadata Element Set, ook gepubliceerd als ISO 15836:2009
+      </p>
+      <p>
+        <b>INSPIRE</b>, 2008, Implementing Rules for Metadata
+      </p>
+      <p>
+        <b>INSPIRE</b>, 2010, INSPIRE Metadata Implementing Rules: Technical Guidelines based on EN ISO 19115 and EN ISO 19119,0 v1.2
+      </p>
+    </section>
+    <section id="relevante-xsd-schemas">
+    <h2>Relevante XSD schema's</h2>
+      <p>
+        Alle relevante schema’s zijn in de OGC schema repository beschikbaar. Deze zijn vrij beschikbaar onder <a href="http://schemas.opengis.net/">http://schemas.opengis.net/</a>. De volgende tabel toont het relevante schema voor dit profiel.
+      </p>
+      <table>
+        <caption>Locatie van het relevante XSD schema</caption>
+        <thead>
+          <tr>
+            <th>Specificatie</th>
+            <th>Versie</th>
+            <th>Schema locatie</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>ISO/TS 19139:2007</td>
+            <td>1.0</td>
+            <td><a href="http://schemas.opengis.net/iso/19139/20060504/gmd/gmd.xsd">http://schemas.opengis.net/iso/19139/20060504/gmd/gmd.xsd</a></td>
+          </tr>
+        </tbody>
+      </table>
+      <p>
+        <em>ISO 19139</em>: Dit zijn de XML encoding schema’s voor zowel ISO 19115:2003 en ISO 19119:2005/FDAM 1. De subdirectorie ‘/srv’ bevat de encoding voor ISO 19119:2005/FDAM 1. In de metadata dienen ook de codelijsten die op deze locatie te vinden zijn gehanteerd te worden.
+      </p>
+    </section>
+    <section id="termen-en-definities">
+    <h2>Termen en definities</h2>
+      <p>
+        De volgende termen en definities zijn van toepassing op het onderwerp en toepassingsgebied van deze standaard.
+      </p>
+      <p>
+        <b>Abstracte klasse</b>
+        <br>Een abstracte klasse is een klasse zonder objecten.
+      </p>
+      <p>
+        <b>Applicatie</b>
+        <br>Manipulatie en verwerking van data om in gebruiksbehoefte te voorzien [ISO 19101].
+      </p>
+      <p>
+        <b>Codelijst</b>
+        <br>Een uitbreidbare lijst met de domeinwaarden inclusief code voor elk toepasbaar attribuut [ISO 19136].
+      </p>
+      <p>
+        <b>Conditioneel element</b>
+        <br>Metadata element moet gevuld worden met een waarde, indien de conditie van toepassing is.
+      </p>
+      <p>
+        <b>Dataset</b>
+        <br>Identificeerbare collectie van data [ISO34 2002 / ISO 19101:2002]. Een dataset mag een kleinere groep van data zijn, gelimiteerd door beperkingen zoals een geografisch gebied of geo-objecttype ("feature type"), die aanwezig is in een grotere dataset. Theoretisch kan een dataset bestaan uit een enkel geo-object of een attribuut van een geo-object dat aanwezig is in een grotere dataset. Het Nederlandse metadata profiel voor geografie gaat niet uit van dit soort type datasets.
+      </p>
+      <p>
+        <b>Dataset serie</b>
+        <br>Verzameling van datasets met dezelfde productspecificaties [ISO47 2003 / ISO 19115:2003]. Productspecificaties zijn thema, resolutie en methodologie.
+      </p>
+      <p>
+        <b>Default element</b>
+        <br>Metadata element met een standaardwaarde.
+      </p>
+      <p>
+        <b>Expliciete metadata</b>
+        <br>Metadata die niet direct of indirect in de dataset opgeslagen zit en daarom handmatig moet worden opgevoerd.
+      </p>
+      <p>
+        <b>feature</b>
+        <br>Abstractie van een verschijnsel in de werkelijke wereld [ISO 19101].
+        <p>
+          Voorbeeld het verschijnsel ‘Eifel Toren’ kan met andere soortgelijke verschijnselen geclassificeerd worden in een featuretype ‘toren’.
+        </p>
+      </p>
+      <p>
+        <b>Gerelateerde datasets</b>
+        <br>Datasets die onderling gerelateerd zijn.
+      </p>
+      <p>
+        <b>Impliciete metadata</b>
+        <br>Metadata die direct of indirect in de dataset opgeslagen zit en automatisch gegenereerd zou kunnen worden.
+      </p>
+      <p>
+        <b>Metadata</b>
+        <br>Informatie die ruimtelijke datasets en dataset series beschrijft welke het mogelijk maakt om deze te zoeken, evalueren en te gebruiken.
+      </p>
+      <p>
+        <b>Metadata dataset</b>
+        <br>Metadata die een beschrijving geeft van een specifieke dataset [ISO 19101].
+      </p>
+      <p>
+        <b>Namespace</b>
+        <br>Verzameling van namen, geïdentificeerd door een URI-referentie, die gebruikt worden in XML-documenten als elementnamen en attribuutnamen [ISO 19136: Geography Markup Language].
+      </p>
+      <p>
+        <b>Optioneel element</b>
+        <br>Element wat gevuld mag zijn met een waarde.
+      </p>
+      <p>
+        <b>Profiel</b>
+        <br>Set van één of meerdere basisstandaarden en indien van toepassing de identificatie van hoofdstukken, paragrafen, opties en parameters van deze basisstandaarden die noodzakelijk zijn voor het volbrengen van een specifieke functie [ISOIEC21 1998, ISO34 2002].
+        <p>
+          Een basisstandaard is één van de standaarden uit de serie ISO 19100 of andere ICT-standaard die gebruikt kan worden als bron voor componenten voor een profiel of productspecificatie.
+        </p>
+      </p>
+      <p>
+        <b>Resource</b>
+        <br>Verzamelnaam voor datasets, dataset series, services en applicaties [ISO 19115:2003].
+      </p>
+      <p>
+        <b>Verplicht element</b>
+        <br>Element wat gevuld moet zijn met een waarde.
+      </p>
+    </section>
+    <section id="metadata-elementen">
+    <h2>Metadata elementen</h2>
+      <p>
+        Dit hoofdstuk geeft de verplichte of bij conditie verplichte elementen weer inclusief uitleg in de vorm van voorbeelden of default waarden.
+      </p>
+      <section>
+      <h3>Metadata elementen overzicht</h3>
+        <p>
+          In Tabel 2 staan de verplichte of bij conditie verplichte elementen. Bij elk conditioneel element is de conditie benoemd. De in bijlage 4 opgenomen tabel “verantwoording metadata elementen” is gebaseerd op <em>INSPIRE Metadata Implementing Rules: Technical Guidelines based on EN ISO 19115 and EN ISO 19119, v1.2</em>. Hiermee is de relatie gelegd tussen dit document en INSPIRE. 
+        </p>
+        <table>
+          <thead>
+            <tr>
+              <th>Metadata element</th>
+              <th>V/C</th>
+              <th>Conditie en/of opmerking</th>
+            </tr>
+          </thead>
+          <tbody>
+          <tr>
+            <td>Titel van de bron</td>
+            <td>V</td>
+            <td>&nbsp;</td>
+          </tr>
+          <tr>
+            <td>Samenvatting</td>
+            <td>V</td>
+            <td>&nbsp;</td>
+          </tr>
+          <tr>
+            <td>Status</td>
+            <td>V</td>
+            <td>&nbsp;</td>
+          </tr>
+          <tr>
+            <td>Hiërarchieniveau</td>
+            <td>V</td>
+            <td>&nbsp;</td>
+          </tr>
+          <tr>
+            <td>Hiërarchieniveaunaam</td>
+            <td>C</td>
+            <td>Verplicht als Hiërarchieniveau niet gelijk is aan dataset</td>
+          </tr>
+          <tr>
+            <td>URL </td>
+            <td>C</td>
+            <td>Dit element is conditioneel. Het is voor INSPIRE verplicht als er een link is naar meer informatie over debron en/of er een link is die toegang geeft tot gerelateerde services, ookal is die service voorzien van metadata. Voor datasets die buiten INSPIRE vallen en waarvoor gerelateerde services aanwezig zijn, is het verplicht als er geen service metadata is.</td>
+          </tr>
+          <tr>
+            <td>Protocol</td>
+            <td>C</td>
+            <td>Verplicht als er een URL is opgegeven</td>
+          </tr>
+          <tr>
+            <td>Naam </td>
+            <td>C</td>
+            <td>Verplicht gesteld voor de OGC:WMS, OGC:WFS en OGC:WCS.</td>
+          </tr>
+          <tr>
+            <td>Unieke Identifier van de bron</td>
+            <td>V</td>
+            <td>&nbsp;</td>
+          </tr>
+          <tr>
+            <td>Taal van de bron</td>
+            <td>C</td>
+            <td>Het is verplicht als de bron tekstuele informatie bevat</td>
+          </tr>
+          <tr>
+            <td>Karakterset van de bron</td>
+            <td>C</td>
+            <td>Voor INSPIRE verplicht als voor de uitwisseling van de bron geen GML wordt gebruikt en de gebruiktekarakterset geen utf8 is. Voor niet INSPIRE datasets is het verplicht als de waarde niet voldoet aan de ISO/IEC 10646 standaard. </td>
+          </tr>
+          <tr>
+            <td>Onderwerp</td>
+            <td>V</td>
+            <td>&nbsp;</td>
+          </tr>
+          <tr>
+            <td>Trefwoord</td>
+            <td>V</td>
+            <td>&nbsp;</td>
+          </tr>
+          <tr>
+            <td>Thesaurus</td>
+            <td>C&nbsp;</td>
+            <td>Het is verplicht als een keyword uit een thesaurus afkomstig is</td>
+          </tr>
+          <tr>
+            <td>Thesaurus datum</td>
+            <td>C</td>
+            <td>Het is verplicht als een keyword uit een thesaurus afkomstig is</td>
+          </tr>
+          <tr>
+            <td>Thesaurusdatum type</td>
+            <td>C</td>
+            <td>Hetis verplicht als een keyword uit een thesaurus afkomstig is</td>
+          </tr>
+          <tr>
+            <td><b>Omgrenzenderechthoek</b><b></td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+          </tr>
+          <tr>
+            <td>  Minimum x-coördinaat</td>
+            <td>V</td>
+            <td>&nbsp;</td>
+          </tr>
+          <tr>
+            <td>  Maximum x-coördinaat</td>
+            <td>V</td>
+            <td>&nbsp;</td>
+          </tr>
+          <tr>
+            <td>  Minimum y-coördinaat</td>
+            <td>V</td>
+            <td>&nbsp;</td>
+          </tr>
+          <tr>
+            <td>  Maximum y-coördinaat</td>
+            <td>V</td>
+            <td>&nbsp;</td>
+          </tr>
+          <tr>
+            <td>Datum van de bron</td>
+            <td>V</td>
+            <td>op z’n minst één van de elementen Datum voltooiing, Datum publicatie en Datum laatste wijziging verplicht.</td>
+          </tr>
+          <tr>
+            <td>Datumtype van de bron</td>
+          </tr>
+          <tr>
+            <td>Niveau kwaliteitsbeschrijving</td>
+            <td>V</td>
+            <td>&nbsp;</td>
+          </tr>
+          <tr>
+            <td>Algemenebeschrijving herkomst</td>
+            <td>V</td>
+            <td>&nbsp;</td>
+          </tr>
+          <tr>
+            <td>Toepassingsschaal</td>
+            <td>C</td>
+            <td>Verplicht als er een toepassingsschaal gespecificeerd kan worden </td>
+          </tr>
+          <tr>
+            <td>Resolutie</td>
+            <td>C</td>
+            <td>Verplicht als er een resolutie gespecificeerd kan worden</td>
+          </tr>
+          <tr>
+            <td>Codereferentiesysteem</td>
+            <td>V</td>
+            <td>&nbsp;</td>
+          </tr>
+          <tr>
+            <td>Verantwoordelijke organisatie voor namespace referentiesysteem</td>
+            <td>V</td>
+            <td>&nbsp;</td>
+          </tr>
+          <tr>
+            <td>Temporeel referentiesysteem&nbsp;</td>
+            <td>C</td>
+            <td>Verplicht als de dataset temporele informatie bevat die niet gebaseerd is op de Gregoriaanse kalender of de Coordinated Universal Time</td>
+          </tr>
+          <tr>
+            <td>Naam distributie formaat</td>
+            <td>C</td>
+            <td>Het is alleen verplicht als de dataset een INSPIRE bron is</td>
+          </tr>
+          <tr>
+            <td>Versie distributie formaat</td>
+            <td>C</td>
+            <td>Het is alleen verplicht als de dataset een INSPIRE bron is</td>
+          </tr>
+          <tr>
+            <td>Specificatie distributie formaat</td>
+            <td>C</td>
+            <td>Het is alleen verplicht als de dataset een INSPIRE bron is</td>
+          </tr>
+          <tr>
+            <td>Conformiteit indicatie met de specificatie </td>
+            <td>C</td>
+            <td>Het is alleen verplicht als de dataset een INSPIRE bron is of als de informatie is gemodelleerd volgens een specifiek informatie model.</td>
+          </tr>
+          <tr>
+            <td>Verklaring</td>
+            <td>C</td>
+            <td>Het is alleen verplicht als de dataset een INSPIRE bron is of als de informatie is gemodelleerd volgens een specifiek informatie model.</td>
+          </tr>
+          <tr>
+            <td>Specificatie</td>
+            <td>C</td>
+            <td>Het is alleen verplicht als de dataset een INSPIRE bron is of als de informatie is gemodelleerd volgens een specifiek informatie model.</td>
+          </tr>
+          <tr>
+            <td>Specificatiedatum</td>
+            <td>C</td>
+            <td>Het is alleen verplicht als de dataset een INSPIRE bron is of als de informatie is gemodelleerd volgens een specifiek informatie model.</td>
+          </tr>
+          <tr>
+            <td>Specificatiedatum type</td>
+            <td>C</td>
+            <td>Het is alleen verplicht als de dataset een INSPIRE bron is of als de informatie is gemodelleerd volgens een specifiek informatie model.</td>
+          </tr>
+          <tr>
+            <td>Type waarde</td>
+            <td>C</td>
+            <td>Verplicht voor INSPIRE datasets als voor netwerken de aansluiting van hartlijnen niet is verzekerd.</td>
+          </tr>
+          <tr>
+            <td>Topologische samenhang</td>
+            <td>C</td>
+            <td>Verplicht voor INSPIRE datasets als voor netwerken de aansluiting van hartlijnen niet is verzekerd.</td>
+          </tr>
+          <tr>
+            <td>(Juridische)toegangsrestricties</td>
+            <td>V</td>
+            <td>Het is verplicht op zijn minst één van de drie elementen (juridische)toegangsrestricties, overige beperkingen of veiligheidsrestricties op te nemen. </td>
+          </tr>
+          <tr>
+            <td>Overigebeperkingen</td>
+          </tr>
+          <tr>
+            <td>Veiligheidsrestricties</td>
+          </tr>
+          <tr>
+            <td>Gebruiksbeperkingen</td>
+            <td>V</td>
+            <td>&nbsp;</td>
+          </tr>
+          <tr>
+            <td>Verantwoordelijke organisatie bron</td>
+            <td>V</td>
+            <td>&nbsp;</td>
+          </tr>
+          <tr>
+            <td>Verantwoordelijke organisatie bron: e-mail</td>
+            <td>V</td>
+            <td>&nbsp;</td>
+          </tr>
+          <tr>
+            <td>Verantwoordelijke organisatie bron: rol</td>
+            <td>V</td>
+            <td>&nbsp;</td>
+          </tr>
+          <tr>
+            <td>Metadata unieke identifier</td>
+            <td>V</td>
+            <td>&nbsp;</td>
+          </tr>
+          <tr>
+            <td>Parent unieke identifier</td>
+            <td>C</td>
+            <td>Verplicht als er een dataset met hogere hiërarchie bestaat</td>
+          </tr>
+          <tr>
+            <td>Verantwoordelijke organisatie metadata</td>
+            <td>V</td>
+            <td>&nbsp;</td>
+          </tr>
+          <tr>
+            <td>Verantwoordelijke organisatie metadata: rol</td>
+            <td>V</td>
+            <td>&nbsp;</td>
+          </tr>
+          <tr>
+            <td>Verantwoordelijke organisatie metadata: e-mail</td>
+            <td>V</td>
+            <td>&nbsp;</td>
+          </tr>
+          <tr>
+            <td>Metadatadatum</td>
+            <td>V</td>
+            <td>&nbsp;</td>
+          </tr>
+          <tr>
+            <td>Taalvan de metadata</td>
+            <td>V</td>
+            <td>&nbsp;</td>
+          </tr>
+          <tr>
+            <td>Metadatastandaard naam</td>
+            <td>V</td>
+            <td>&nbsp;</td>
+          </tr>
+          <tr>
+            <td>Metadatastandaard versie</td>
+            <td>V</td>
+            <td>&nbsp;</td>
+          </tr>
+        </table>
+      </section>
+    <section id="metadata-elementen-uitwerking">
+    <h3>Metadata elementen uitwerking</h3>
+      <section id="titel-van-de-bron">
+      <h4>Titel van de bron</h4>
+        <p style="text-align:left"><em>identificationInfo[1]/*/citation/*/title</em><span style="float:right">[ISO 19139]</span></p>
+        <p>Dit element dient om de naam van de dataset in vast te leggen.</p>
+      </section>
+    </section>
+    </section>
+  </body>
+</html>
