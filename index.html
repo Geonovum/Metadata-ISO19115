@@ -126,7 +126,20 @@
       <p>
         Alle relevante schema’s zijn in de OGC schema repository beschikbaar. Deze zijn vrij beschikbaar onder <a href="http://schemas.opengis.net/">http://schemas.opengis.net/</a>. De volgende tabel toont het relevante schema voor dit profiel.
       </p>
-      <div id="table-1" class="table">
+      <table style="border: 1px solid black;">
+        <caption>Tabel 1: Locatie van het relevante XSD schema</caption>
+        <tr>
+          <th>Specificatie</th>
+          <th>Versie</th>
+          <th>Schema locatie</th>
+        </tr>
+        <tr>
+          <td>ISO/TS 19139:2007</td>
+          <td>1.0</td>
+          <td><a href="http://schemas.opengis.net/iso/19139/20060504/gmd/gmd.xsd">http://schemas.opengis.net/iso/19139/20060504/gmd/gmd.xsd</a></td>
+        </tr>
+      </table>
+      <!--<div id="table-1" class="table">
         <div class="tcaption">Tabel 1: Locatie van het relevante XSD schema</div>
         <div class="thead">
           <div class="tcell">Specificatie</div>
@@ -138,7 +151,7 @@
           <div class="tcell">1.0</div>
           <div class="tcell"><a href="http://schemas.opengis.net/iso/19139/20060504/gmd/gmd.xsd">http://schemas.opengis.net/iso/19139/20060504/gmd/gmd.xsd</a></div>
         </div>
-      </div>
+      </div>-->
       <p>
         <em>ISO 19139</em>: Dit zijn de XML encoding schema’s voor zowel ISO 19115:2003 en ISO 19119:2005/FDAM 1. De subdirectorie ‘/srv’ bevat de encoding voor ISO 19119:2005/FDAM 1. In de metadata dienen ook de codelijsten die op deze locatie te vinden zijn gehanteerd te worden.
       </p>
@@ -448,7 +461,7 @@
           </div>
           <div class="trow">
             <div class="tcell">(Juridische) toegangsrestricties</div>
-            <div class="tcell">V</div>
+            <div class="tcell" colspan="3">V</div>
             <div class="tcell">Het is verplicht op zijn minst één van de drie elementen (juridische) toegangsrestricties, overige beperkingen of veiligheidsrestricties op te nemen. </div>
           </div>
           <div class="trow">
@@ -1059,5 +1072,97 @@
         </section>
       </section>
     </section>
-  </body>
+    <section id="optionele-set-metadata">
+      <h2>Optionele set metadata</h2>
+      <p>Naast de verplichte kernset heeft de Nederlandse metadatastandaard voor geografie een optionele set. Deze set bestaat uit een selectie van metadata-elementen uit ISO 19115, die nuttig zijn voor het beheer van geografische datasets en –series. Het is niet de volledige ISO19115 set. Als men meer metadata wil vastleggen als mogelijk met de verplichte kernset dan dient men bij voorkeur, om de interoperabiliteit te bevorderen, de benodigde elementen uit deze optionele set te kiezen. Tabel 3 bevat deze optionele set. Van elk metadata element wordt achtereenvolgens gegeven: de metadata naam (naam waaronder de metadata entiteit wordt aangeduid), het ISO nummer, de (eventueel specialiseerde) Nederlandse metadata element naam van het element in ISO 19115 en de bijbehorende definitie. In bijlage 2 worden de onderlinge relaties tussen de elementen in de kernset en de optionele set aangegeven via de abstracte klassen die ISO 19115 gebruikt.</p>
+      <div id="table-58" class="table">
+      </div>
+    </section>
+    <section id="meertaligheid-metadata">
+      <h2>Meertaligheid metadata</h2>
+      <p>Een dataset (serie) kan in meerdere talen worden beschreven conform de Nederlandse metadatastandaard voor geografie. Meertaligheid van metadata bij gebruik van codelijsten is mogelijk met behulp van zogenaamde codespaces. Voor vrije tekst is meertaligheid mogelijk door gebruik te maken van het element Locale uit de klasse MD_Metadata (ISO 19139). Door gebruik te maken van dit element kan metadata in meerdere talen worden vastgelegd. <a href="#image003">Figuur 3</a> geeft de klasse van MD_Metadata weer en het UML-schema van deze extensie op characterString weer.</p>
+      <figure id="image003">
+        <img src="media/image003.gif" alt="image003-gif">
+        <figcaption>Attributen van MD_Metadata in het XML-schema voor geografische metadata.</figcaption>
+      </figure>
+      <p>De elementen met vrije tekst in het domein van CharacterString property type in ISO 19115 is bedoeld om tekstuele metadata-elementen te ondersteunen met meerdere velden voor dezelfde informatie in verschillende “locales” (zie <a href="#image003">figuur 3</a>). Een “locale” heeft als domein “PT_Locale”, wat inhoud dat dit een combinatie is van een taal, land en een character codelijst (zie <a href="#image004">figuur 4</a>), waarin de “localised” characterstring is weergegeven. Deze locale kan in elk vrije tekst element worden toegepast in ISO 19115. Dit is voldoende aangezien codelijsten zelf letterlijk vertaald kunnen worden. Onderstaand conceptueel schema is opgenomen in ISO19139, ook de benodigde data dictionary is opgenomen in ISO 19139.</p>
+      <figure id="image004">
+        <img src="media/image004.jpg" alt="image004-jpg">
+        <figcaption>Vrije tekst en “localiced” characterString.</figcaption>
+      </figure>
+    </section>
+    <section id="object-en-attribuutinformatie">
+      <h2>Object- en attribuutinformatie</h2>
+      <p>In ISO 19115 2003 is het niet mogelijk om object- en attribuutinformatie op te slaan. Aangezien de klankbordgroep hier wel nadrukkelijk om heeft gevraagd, wordt de volgende oplossing aangeboden totdat deze informatie wel in ISO 19115 (2013) kan worden opgenomen. Door ISO wordt een standaard betreffende de objectcatalogus aangeboden in ISO 19110 <em>FeatureCatalogue</em>. Per continent, land of sector kan vervolgens een profiel worden gedefinieerd op deze ISO 19110. Voorbeeld hiervan is ISO 19126, het Amerikaanse profiel op ISO 19110. Aangezien het definiëren van de objectcatalogus buiten de scope van het project valt, richt Geonovum zich enkel op de koppeling met de object- en attribuutinformatie. Dit betekent dat niet alle verplichte elementen uit ISO 19110 worden opgeslagen. De elementen die opgeslagen kunnen worden zijn;
+        <ul>
+          <li>de naam van het object (FC_FeatureType.typeName);</li>
+          <li>de definitie van het object (FC_FeatureType.definition);</li>
+        </ul>
+      </p>
+      <p>Per object (FeatureType):
+        <ul>
+          <li>de attribuutnamen (FC_FeatureAttribute.memberName);</li>
+        </ul>
+      </p>
+      <p>Per attribuut (FeatureAttribute);
+        <ul>
+          <li>code van attribuut (FC_FeatureAttribute.code)</li>
+          <li>toelichting (lange omschrijving) van het attribuut (FC_FeatureAttribute.definition)</li>
+          <li>eenheid van het attribuut (FC_FeatureAttribute.valueMeasurementUnit)</li>
+          <li>bereik van de waarden van het attribuut (FC_FeatureAttribute.listedValue>FC_ListedValue.code)</li>
+        </ul>
+      </p>
+      <div class="advisement">
+      <i>Toelichting: Een voorbeeld van mogelijke vulling van deze informatie</i>
+      <p>naam object: administratieve eenheden
+        <br>definitie object: Eenheid waar een lidstaat rechtsbevoegdheid
+        <br><br>naam attribuut: naam
+        <br>naam attribuut: niveau
+        <br>naam attribuut: nummer
+        <br><br>voor attribuut nummer;
+        <br>code: gemnr
+        <br>toelichting: gemeentenummer, conform cbs nummering jaartal x, hier nog verder uitleg en verwijzing naar externe websites indien zinvol.
+        <br>eenheid: nvt, mag dus ook leeggelaten worden
+        <br>bereik: waarden van 1 tot 1200</p>
+      </div>
+      <p>Hierbij voorziet ISO 19110 in de gebruiksbehoefte van de klankbordgroep. Het is mogelijk is om onderlinge relaties en bijvoorbeeld domeinen van de attributen aan te duiden in ISO 19110. Indien deze extra informatie wordt opgeslagen, dienen de voorwaarden van ISO 19110 in acht te worden genomen.</p>
+      <p>Het schema van ISO 19110 op <a href="http://eden.ign.fr/xsd/isotc211/iso19110/20090316/gfc/gfc.xsd/">http://eden.ign.fr/xsd/isotc211/iso19110/20090316/gfc/gfc.xsd/</a> kan gebruikt worden tot het schema is opgenomen in <a href="http://www.isotc211.org/2005/gfc">http://www.isotc211.org/2005/gfc</a>.</p>
+      <p>Deze methode van vastleggen van object en attribuutinformatie is conform NEN3610. Indien een dataset volgens een sectormodel van NEN3610 is gecodeerd dan kan een objectcatalogus worden gegenereerd, aangezien in de sectormodellen ook de object- en attribuutinformatie (inclusief naam en definitie) is opgeslagen. Een objectcatalogus is een onderdeel van NEN3610.</p>
+      <p>De relatie vanuit de metadata naar de featurecatalog kan worden gelegd door elementen van de klasse MD_FeatureCatalogueDescription op te nemen. De koppeling word gelegd tussen de titel van de featurecatalog in de metadata MD_Metadata. contentInfo> MD_FeatureCatalogueDescription.featureCatalogueCitation>CI_Citation.title en de FC_FeatureCatalogue.name in de featurecatalog.</p>
+    </section>
+    <section id="richtlijnen-voor-sectoren">
+      <h2>Richtlijnen voor sectoren</h2>
+      <p>Sectoren in Nederland kunnen een eigen uitbreiding op het Nederlandse profiel ontwikkelen. Voorwaarde is dat de Nederlandse kernset metadata onderdeel is van het sectorale metadata profiel. Deze sectorale uitbreidingen dienen onderdeel te zijn van ISO 19115.<p>
+      <p>Ook is het mogelijk om de metadata standaard uit te breiden met bijvoorbeeld nieuwe klassen of bijvoorbeeld uitbreidingen van codelijsten. Geonovum raadt dit niet aan en adviseert om hierover contact op te nemen. Vaak zijn deze wensen onder te brengen in de bestaande set uit ISO 19115 zelf. Indien dit niet het geval is kan de procedure gevolgd worden die wordt voorgesteld in Annex C van ISO 19115.</p>
+      <p>Sectorale profielen dienen geregistreerd te worden bij Geonovum, als beherende instantie van de Nederlandse metadatastandaard voor geografie. Geonovum zal een formele naam van het profiel in overleg toekennen. Deze sectorspecifieke profielen leveren input voor het beheer van de Nederlandse metadatastandaard voor geografie.</p>
+    </section>
+    <section id="metadata-in-catalogues">
+      <h2>Metadata in catalogues</h2>
+      <p style="text-align:left">De metadata van datasets en dataset series wordt uitgewisseld in de encoding (XML) conform: <a href="http://schemas.opengis.net/iso/19139/20060504/gmd/gmd.xsd">http://schemas.opengis.net/iso/19139/20060504/gmd/gmd.xsd</a><span style="float:right">[ISO19115 metadata elementen]</span></p>
+      <p style="text-align:left"><a href="http://eden.ign.fr/xsd/isotc211/iso19110/20090316/gfc/gfc.xsd/">http://eden.ign.fr/xsd/isotc211/iso19110/20090316/gfc/gfc.xsd/</a> tot het schema is opgenomen in <a href="http://www.isotc211.org/2005/gfc">http://www.isotc211.org/2005/gfc</a><span style="float:right">[ISO 19110 elementen]</span></p>
+      <p>Deze encoding is geschikt om tussen OGC catalogues (CSW) te kunnen uitwisselen. Voor de catalogues dient dan gebruik te worden gemaakt van de volgende schema’s:</p>
+      <div id="table-59" class="table">
+        <div class="tcaption">Tabel 4: Locatie van de relevante XSD schema’s</div>
+        <div class="thead">
+          <div class="tcell">Specificatie</div>
+          <div class="tcell">Versie</div>
+          <div class="tcell">Schema locatie</div>
+        </div>
+        <div class="trow">
+          <div class="tcell">OGC Catalogue Service</div>
+          <div class="tcell">2.0.2</div>
+          <div class="tcell"><a href="http://schemas.opengis.net/csw/2.0.2/">http://schemas.opengis.net/csw/2.0.2/</a></div>
+        </div>
+        <div class="trow">
+          <div class="tcell">ISO Metadata Application Profile</div>
+          <div class="tcell">1.0.0</div>
+          <div class="tcell"><a href="http://schemas.opengis.net/csw/2.0.2/profiles/apiso/1.0.0/">http://schemas.opengis.net/csw/2.0.2/profiles/apiso/1.0.0/</a></div>
+        </div>
+      </div>
+      <div class="advisement">
+        <i>Toelichting: Uitleg</i>
+        <p>OGC Catalog Service (2.0.2): Dit zijn de schema’s die de interfaces en het core model van de basis catalogue service definiëren.</p>
+        <p>ISO Application Metadata Profile (1.0.0): Dit schema is het basis schema van het ISO Application Profile voor de OGC Catalogue Service 2.0.2. Dit schema is verbonden met ISO 19139.</p>
+      </div>
+ </body>
 </html>

@@ -41,3 +41,8 @@
     border: 1px solid #CCCCCC;
     padding: 0.25em;
 }
+
+.subcell {
+    border: none;
+    padding: 0em;
+}
