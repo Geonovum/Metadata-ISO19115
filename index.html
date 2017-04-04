@@ -3,6 +3,7 @@
   <head>
     <meta content="text/html; charset=UTF-8" http-equiv="content-type">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" type="text/css" href="localstyle.css" />
     <title>Nederlands profiel op ISO 19115 voor geografie</title>
     <script src='https://tools.geostandaarden.nl/respec/builds/respec-geonovum.js' class='remove'></script>
     <script class='remove'>
@@ -30,10 +31,10 @@
         This is required.
       </p>
     </section>
-    <section id="Inleiding">
-    <h2>Inleiding</h2>
+    <section id="inleiding">
+      <h2>Inleiding</h2>
       <section id="afbakening">
-      <h3>Afbakening</h3>
+        <h3>Afbakening</h3>
         <p>
           Metadata komt voor bij meerdere informatie disciplines. Indien hier over metadata wordt gesproken betreft het metadata die betrekking heeft op geo-informatie. Dit metadata profiel richt zich op de beschrijving van de metadata van geografische datasets en dataset series.
         </p>
@@ -42,7 +43,7 @@
         </p>
       </section>
       <section id="scope">
-      <h3>Scope</h3>
+        <h3>Scope</h3>
         <p>
           Dit metadata profiel bevat de semantische beschrijving van de verplichte of door conditie verplichte metadata elementen, de kernset, van een dataset of dataset serie. Dit metadata profiel beschrijft tevens de encoding van de metadata van een dataset of dataset serie zodat de uitwisseling tussen machines of mens en machine kan plaatsvinden. De optionele set is een aanvulling op de kernset en voorziet in de behoefte van het geo-werkveld aan eeneen brede gemeenschappelijke basis van metadata-elementen, in het bijzonder voor het beheer.
         </p>
@@ -54,7 +55,7 @@
         </p>
       </section>
       <section>
-      <h3>Context</h3>
+        <h3>Context</h3>
         <p>
           Figuur 1 plaatst het Nederlandse metadata profiel voor geografie in zijn internationale en sectorale context. De ISO-kernset is de kleinste eenheid, een selectie uit ISO 19115.
         </p>
@@ -70,14 +71,14 @@
         </p>
       </section>
       <section id="leeswijzer">
-      <h3>Leeswijzer</h3>
+        <h3>Leeswijzer</h3>
         <p>
           Hoofdstuk 2 toont de normatieve verwijzingen, hoofdstuk 3 bevat de XSD schema's waarna in hoofdstuk 4 de gehanteerde termen en definities worden beschreven. Het formele deel van het profiel waarin onder andere de verplichte elementen, de kernset, worden beschreven die gelden voor metadata voor geografie staan in hoofdstuk 5. In hoofdstuk 6 staan de optionele elementen. De volgende hoofdstukken geven op specifieke onderdelen van het profiel uitleg. De bijlagen dienen ter ondersteuning van de hoofdstukken.
         </p>
       </section>
     </section>
     <section id="normatieve-verwijzing">
-    <h2>Normatieve verwijzing</h2>
+      <h2>Normatieve verwijzing</h2>
       <p>
         De volgende normen, standaarden en specificaties zijn toegepast in dit profiel:
       </p>
@@ -121,33 +122,29 @@
       </p>
     </section>
     <section id="relevante-xsd-schemas">
-    <h2>Relevante XSD schema's</h2>
+      <h2>Relevante XSD schema's</h2>
       <p>
         Alle relevante schema’s zijn in de OGC schema repository beschikbaar. Deze zijn vrij beschikbaar onder <a href="http://schemas.opengis.net/">http://schemas.opengis.net/</a>. De volgende tabel toont het relevante schema voor dit profiel.
       </p>
-      <table>
-        <caption>Locatie van het relevante XSD schema</caption>
-        <thead>
-          <tr>
-            <th>Specificatie</th>
-            <th>Versie</th>
-            <th>Schema locatie</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td>ISO/TS 19139:2007</td>
-            <td>1.0</td>
-            <td><a href="http://schemas.opengis.net/iso/19139/20060504/gmd/gmd.xsd">http://schemas.opengis.net/iso/19139/20060504/gmd/gmd.xsd</a></td>
-          </tr>
-        </tbody>
-      </table>
+      <section class="table">
+        <div class="tcaption">Tabel 1: Locatie van het relevante XSD schema</div>
+        <div class="thead">
+          <div class="tcell">Specificatie</div>
+          <div class="tcell">Versie</div>
+          <div class="tcell">Schema locatie</div>
+        </div>
+        <div class="trow">
+          <div class="tcell">ISO/TS 19139:2007</div>
+          <div class="tcell">1.0</div>
+          <div class="tcell"><a href="http://schemas.opengis.net/iso/19139/20060504/gmd/gmd.xsd">http://schemas.opengis.net/iso/19139/20060504/gmd/gmd.xsd</a></div>
+        </div>
+      </section>
       <p>
         <em>ISO 19139</em>: Dit zijn de XML encoding schema’s voor zowel ISO 19115:2003 en ISO 19119:2005/FDAM 1. De subdirectorie ‘/srv’ bevat de encoding voor ISO 19119:2005/FDAM 1. In de metadata dienen ook de codelijsten die op deze locatie te vinden zijn gehanteerd te worden.
       </p>
     </section>
     <section id="termen-en-definities">
-    <h2>Termen en definities</h2>
+      <h2>Termen en definities</h2>
       <p>
         De volgende termen en definities zijn van toepassing op het onderwerp en toepassingsgebied van deze standaard.
       </p>
@@ -161,7 +158,7 @@
       </p>
       <p>
         <b>Codelijst</b>
-        <br>Een uitbreidbare lijst met de domeinwaarden inclusief code voor elk toepasbaar attribuut [ISO 19136].
+        <br>Een uitbreidbare lijst met de domeinwaarden inclusief code voor elk toepasbaar atd class="tcell"iv class="trow"ibuut [ISO 19136].
       </p>
       <p>
         <b>Conditioneel element</b>
@@ -169,7 +166,7 @@
       </p>
       <p>
         <b>Dataset</b>
-        <br>Identificeerbare collectie van data [ISO34 2002 / ISO 19101:2002]. Een dataset mag een kleinere groep van data zijn, gelimiteerd door beperkingen zoals een geografisch gebied of geo-objecttype ("feature type"), die aanwezig is in een grotere dataset. Theoretisch kan een dataset bestaan uit een enkel geo-object of een attribuut van een geo-object dat aanwezig is in een grotere dataset. Het Nederlandse metadata profiel voor geografie gaat niet uit van dit soort type datasets.
+        <br>Identificeerbare collectie van data [ISO34 2002 / ISO 19101:2002]. Een dataset mag een kleinere groep van data zijn, gelimiteerd door beperkingen zoals een geografisch gebied of geo-objecttype ("feature type"), die aanwezig is in een grotere dataset. Theoretisch kan een dataset bestaan uit een enkel geo-object of een atd class="tcell"iv class="trow"ibuut van een geo-object dat aanwezig is in een grotere dataset. Het Nederlandse metadata profiel voor geografie gaat niet uit van dit soort type datasets.
       </p>
       <p>
         <b>Dataset serie</b>
@@ -208,7 +205,7 @@
       </p>
       <p>
         <b>Namespace</b>
-        <br>Verzameling van namen, geïdentificeerd door een URI-referentie, die gebruikt worden in XML-documenten als elementnamen en attribuutnamen [ISO 19136: Geography Markup Language].
+        <br>Verzameling van namen, geïdentificeerd door een URI-referentie, die gebruikt worden in XML-documenten als elementnamen en atd class="tcell"iv class="trow"ibuutnamen [ISO 19136: Geography Markup Language].
       </p>
       <p>
         <b>Optioneel element</b>
@@ -231,304 +228,301 @@
       </p>
     </section>
     <section id="metadata-elementen">
-    <h2>Metadata elementen</h2>
+      <h2>Metadata elementen</h2>
       <p>
         Dit hoofdstuk geeft de verplichte of bij conditie verplichte elementen weer inclusief uitleg in de vorm van voorbeelden of default waarden.
       </p>
       <section>
-      <h3>Metadata elementen overzicht</h3>
+        <h3>Metadata elementen overzicht</h3>
         <p>
           In Tabel 2 staan de verplichte of bij conditie verplichte elementen. Bij elk conditioneel element is de conditie benoemd. De in bijlage 4 opgenomen tabel “verantwoording metadata elementen” is gebaseerd op <em>INSPIRE Metadata Implementing Rules: Technical Guidelines based on EN ISO 19115 and EN ISO 19119, v1.2</em>. Hiermee is de relatie gelegd tussen dit document en INSPIRE. 
         </p>
-        <table>
-          <thead>
-            <tr>
-              <th>Metadata element</th>
-              <th>V/C</th>
-              <th>Conditie en/of opmerking</th>
-            </tr>
-          </thead>
-          <tbody>
-          <tr>
-            <td>Titel van de bron</td>
-            <td>V</td>
-            <td>&nbsp;</td>
-          </tr>
-          <tr>
-            <td>Samenvatting</td>
-            <td>V</td>
-            <td>&nbsp;</td>
-          </tr>
-          <tr>
-            <td>Status</td>
-            <td>V</td>
-            <td>&nbsp;</td>
-          </tr>
-          <tr>
-            <td>Hiërarchieniveau</td>
-            <td>V</td>
-            <td>&nbsp;</td>
-          </tr>
-          <tr>
-            <td>Hiërarchieniveaunaam</td>
-            <td>C</td>
-            <td>Verplicht als Hiërarchieniveau niet gelijk is aan dataset</td>
-          </tr>
-          <tr>
-            <td>URL </td>
-            <td>C</td>
-            <td>Dit element is conditioneel. Het is voor INSPIRE verplicht als er een link is naar meer informatie over debron en/of er een link is die toegang geeft tot gerelateerde services, ookal is die service voorzien van metadata. Voor datasets die buiten INSPIRE vallen en waarvoor gerelateerde services aanwezig zijn, is het verplicht als er geen service metadata is.</td>
-          </tr>
-          <tr>
-            <td>Protocol</td>
-            <td>C</td>
-            <td>Verplicht als er een URL is opgegeven</td>
-          </tr>
-          <tr>
-            <td>Naam </td>
-            <td>C</td>
-            <td>Verplicht gesteld voor de OGC:WMS, OGC:WFS en OGC:WCS.</td>
-          </tr>
-          <tr>
-            <td>Unieke Identifier van de bron</td>
-            <td>V</td>
-            <td>&nbsp;</td>
-          </tr>
-          <tr>
-            <td>Taal van de bron</td>
-            <td>C</td>
-            <td>Het is verplicht als de bron tekstuele informatie bevat</td>
-          </tr>
-          <tr>
-            <td>Karakterset van de bron</td>
-            <td>C</td>
-            <td>Voor INSPIRE verplicht als voor de uitwisseling van de bron geen GML wordt gebruikt en de gebruiktekarakterset geen utf8 is. Voor niet INSPIRE datasets is het verplicht als de waarde niet voldoet aan de ISO/IEC 10646 standaard. </td>
-          </tr>
-          <tr>
-            <td>Onderwerp</td>
-            <td>V</td>
-            <td>&nbsp;</td>
-          </tr>
-          <tr>
-            <td>Trefwoord</td>
-            <td>V</td>
-            <td>&nbsp;</td>
-          </tr>
-          <tr>
-            <td>Thesaurus</td>
-            <td>C&nbsp;</td>
-            <td>Het is verplicht als een keyword uit een thesaurus afkomstig is</td>
-          </tr>
-          <tr>
-            <td>Thesaurus datum</td>
-            <td>C</td>
-            <td>Het is verplicht als een keyword uit een thesaurus afkomstig is</td>
-          </tr>
-          <tr>
-            <td>Thesaurusdatum type</td>
-            <td>C</td>
-            <td>Hetis verplicht als een keyword uit een thesaurus afkomstig is</td>
-          </tr>
-          <tr>
-            <td><b>Omgrenzenderechthoek</b><b></td>
-            <td>&nbsp;</td>
-            <td>&nbsp;</td>
-          </tr>
-          <tr>
-            <td>  Minimum x-coördinaat</td>
-            <td>V</td>
-            <td>&nbsp;</td>
-          </tr>
-          <tr>
-            <td>  Maximum x-coördinaat</td>
-            <td>V</td>
-            <td>&nbsp;</td>
-          </tr>
-          <tr>
-            <td>  Minimum y-coördinaat</td>
-            <td>V</td>
-            <td>&nbsp;</td>
-          </tr>
-          <tr>
-            <td>  Maximum y-coördinaat</td>
-            <td>V</td>
-            <td>&nbsp;</td>
-          </tr>
-          <tr>
-            <td>Datum van de bron</td>
-            <td>V</td>
-            <td>op z’n minst één van de elementen Datum voltooiing, Datum publicatie en Datum laatste wijziging verplicht.</td>
-          </tr>
-          <tr>
-            <td>Datumtype van de bron</td>
-          </tr>
-          <tr>
-            <td>Niveau kwaliteitsbeschrijving</td>
-            <td>V</td>
-            <td>&nbsp;</td>
-          </tr>
-          <tr>
-            <td>Algemenebeschrijving herkomst</td>
-            <td>V</td>
-            <td>&nbsp;</td>
-          </tr>
-          <tr>
-            <td>Toepassingsschaal</td>
-            <td>C</td>
-            <td>Verplicht als er een toepassingsschaal gespecificeerd kan worden </td>
-          </tr>
-          <tr>
-            <td>Resolutie</td>
-            <td>C</td>
-            <td>Verplicht als er een resolutie gespecificeerd kan worden</td>
-          </tr>
-          <tr>
-            <td>Codereferentiesysteem</td>
-            <td>V</td>
-            <td>&nbsp;</td>
-          </tr>
-          <tr>
-            <td>Verantwoordelijke organisatie voor namespace referentiesysteem</td>
-            <td>V</td>
-            <td>&nbsp;</td>
-          </tr>
-          <tr>
-            <td>Temporeel referentiesysteem&nbsp;</td>
-            <td>C</td>
-            <td>Verplicht als de dataset temporele informatie bevat die niet gebaseerd is op de Gregoriaanse kalender of de Coordinated Universal Time</td>
-          </tr>
-          <tr>
-            <td>Naam distributie formaat</td>
-            <td>C</td>
-            <td>Het is alleen verplicht als de dataset een INSPIRE bron is</td>
-          </tr>
-          <tr>
-            <td>Versie distributie formaat</td>
-            <td>C</td>
-            <td>Het is alleen verplicht als de dataset een INSPIRE bron is</td>
-          </tr>
-          <tr>
-            <td>Specificatie distributie formaat</td>
-            <td>C</td>
-            <td>Het is alleen verplicht als de dataset een INSPIRE bron is</td>
-          </tr>
-          <tr>
-            <td>Conformiteit indicatie met de specificatie </td>
-            <td>C</td>
-            <td>Het is alleen verplicht als de dataset een INSPIRE bron is of als de informatie is gemodelleerd volgens een specifiek informatie model.</td>
-          </tr>
-          <tr>
-            <td>Verklaring</td>
-            <td>C</td>
-            <td>Het is alleen verplicht als de dataset een INSPIRE bron is of als de informatie is gemodelleerd volgens een specifiek informatie model.</td>
-          </tr>
-          <tr>
-            <td>Specificatie</td>
-            <td>C</td>
-            <td>Het is alleen verplicht als de dataset een INSPIRE bron is of als de informatie is gemodelleerd volgens een specifiek informatie model.</td>
-          </tr>
-          <tr>
-            <td>Specificatiedatum</td>
-            <td>C</td>
-            <td>Het is alleen verplicht als de dataset een INSPIRE bron is of als de informatie is gemodelleerd volgens een specifiek informatie model.</td>
-          </tr>
-          <tr>
-            <td>Specificatiedatum type</td>
-            <td>C</td>
-            <td>Het is alleen verplicht als de dataset een INSPIRE bron is of als de informatie is gemodelleerd volgens een specifiek informatie model.</td>
-          </tr>
-          <tr>
-            <td>Type waarde</td>
-            <td>C</td>
-            <td>Verplicht voor INSPIRE datasets als voor netwerken de aansluiting van hartlijnen niet is verzekerd.</td>
-          </tr>
-          <tr>
-            <td>Topologische samenhang</td>
-            <td>C</td>
-            <td>Verplicht voor INSPIRE datasets als voor netwerken de aansluiting van hartlijnen niet is verzekerd.</td>
-          </tr>
-          <tr>
-            <td>(Juridische)toegangsrestricties</td>
-            <td>V</td>
-            <td>Het is verplicht op zijn minst één van de drie elementen (juridische)toegangsrestricties, overige beperkingen of veiligheidsrestricties op te nemen. </td>
-          </tr>
-          <tr>
-            <td>Overigebeperkingen</td>
-          </tr>
-          <tr>
-            <td>Veiligheidsrestricties</td>
-          </tr>
-          <tr>
-            <td>Gebruiksbeperkingen</td>
-            <td>V</td>
-            <td>&nbsp;</td>
-          </tr>
-          <tr>
-            <td>Verantwoordelijke organisatie bron</td>
-            <td>V</td>
-            <td>&nbsp;</td>
-          </tr>
-          <tr>
-            <td>Verantwoordelijke organisatie bron: e-mail</td>
-            <td>V</td>
-            <td>&nbsp;</td>
-          </tr>
-          <tr>
-            <td>Verantwoordelijke organisatie bron: rol</td>
-            <td>V</td>
-            <td>&nbsp;</td>
-          </tr>
-          <tr>
-            <td>Metadata unieke identifier</td>
-            <td>V</td>
-            <td>&nbsp;</td>
-          </tr>
-          <tr>
-            <td>Parent unieke identifier</td>
-            <td>C</td>
-            <td>Verplicht als er een dataset met hogere hiërarchie bestaat</td>
-          </tr>
-          <tr>
-            <td>Verantwoordelijke organisatie metadata</td>
-            <td>V</td>
-            <td>&nbsp;</td>
-          </tr>
-          <tr>
-            <td>Verantwoordelijke organisatie metadata: rol</td>
-            <td>V</td>
-            <td>&nbsp;</td>
-          </tr>
-          <tr>
-            <td>Verantwoordelijke organisatie metadata: e-mail</td>
-            <td>V</td>
-            <td>&nbsp;</td>
-          </tr>
-          <tr>
-            <td>Metadatadatum</td>
-            <td>V</td>
-            <td>&nbsp;</td>
-          </tr>
-          <tr>
-            <td>Taalvan de metadata</td>
-            <td>V</td>
-            <td>&nbsp;</td>
-          </tr>
-          <tr>
-            <td>Metadatastandaard naam</td>
-            <td>V</td>
-            <td>&nbsp;</td>
-          </tr>
-          <tr>
-            <td>Metadatastandaard versie</td>
-            <td>V</td>
-            <td>&nbsp;</td>
-          </tr>
-        </table>
+        <section class="table">
+          <div class="thead">
+            <div class="tcell">Metadata element</div>
+            <div class="tcell">V/C</div>
+            <div class="tcell">Conditie en/of opmerking</div>
+          </div>
+          <div class="trow">
+            <div class="tcell">Titel van de bron</div>
+            <div class="tcell">V</div>
+            <div class="tcell">&nbsp;</div>
+          </div>
+          <div class="trow">
+            <div class="tcell">Samenvatting</div>
+            <div class="tcell">V</div>
+            <div class="tcell">&nbsp;</div>
+          </div>
+          <div class="trow">
+            <div class="tcell">Status</div>
+            <div class="tcell">V</div>
+            <div class="tcell">&nbsp;</div>
+          </div>
+          <div class="trow">
+            <div class="tcell">Hiërarchieniveau</div>
+            <div class="tcell">V</div>
+            <div class="tcell">&nbsp;</div>
+          </div>
+          <div class="trow">
+            <div class="tcell">Hiërarchieniveaunaam</div>
+            <div class="tcell">C</div>
+            <div class="tcell">Verplicht als Hiërarchieniveau niet gelijk is aan dataset</div>
+          </div>
+          <div class="trow">
+            <div class="tcell">URL </div>
+            <div class="tcell">C</div>
+            <div class="tcell">Dit element is conditioneel. Het is voor INSPIRE verplicht als er een link is naar meer informatie over debron en/of er een link is die toegang geeft tot gerelateerde services, ookal is die service voorzien van metadata. Voor datasets die buiten INSPIRE vallen en waarvoor gerelateerde services aanwezig zijn, is het verplicht als er geen service metadata is.</div>
+          </div>
+          <div class="trow">
+            <div class="tcell">Protocol</div>
+            <div class="tcell">C</div>
+            <div class="tcell">Verplicht als er een URL is opgegeven</div>
+          </div>
+          <div class="trow">
+            <div class="tcell">Naam </div>
+            <div class="tcell">C</div>
+            <div class="tcell">Verplicht gesteld voor de OGC:WMS, OGC:WFS en OGC:WCS.</div>
+          </div>
+          <div class="trow">
+            <div class="tcell">Unieke Identifier van de bron</div>
+            <div class="tcell">V</div>
+            <div class="tcell">&nbsp;</div>
+          </div>
+          <div class="trow">
+            <div class="tcell">Taal van de bron</div>
+            <div class="tcell">C</div>
+            <div class="tcell">Het is verplicht als de bron tekstuele informatie bevat</div>
+          </div>
+          <div class="trow">
+            <div class="tcell">Karakterset van de bron</div>
+            <div class="tcell">C</div>
+            <div class="tcell">Voor INSPIRE verplicht als voor de uitwisseling van de bron geen GML wordt gebruikt en de gebruiktekarakterset geen utf8 is. Voor niet INSPIRE datasets is het verplicht als de waarde niet voldoet aan de ISO/IEC 10646 standaard. </div>
+          </div>
+          <div class="trow">
+            <div class="tcell">Onderwerp</div>
+            <div class="tcell">V</div>
+            <div class="tcell">&nbsp;</div>
+          </div>
+          <div class="trow">
+            <div class="tcell">Trefwoord</div>
+            <div class="tcell">V</div>
+            <div class="tcell">&nbsp;</div>
+          </div>
+          <div class="trow">
+            <div class="tcell">Thesaurus</div>
+            <div class="tcell">C&nbsp;</div>
+            <div class="tcell">Het is verplicht als een keyword uit een thesaurus afkomstig is</div>
+          </div>
+          <div class="trow">
+            <div class="tcell">Thesaurus datum</div>
+            <div class="tcell">C</div>
+            <div class="tcell">Het is verplicht als een keyword uit een thesaurus afkomstig is</div>
+          </div>
+          <div class="trow">
+            <div class="tcell">Thesaurusdatum type</div>
+            <div class="tcell">C</div>
+            <div class="tcell">Hetis verplicht als een keyword uit een thesaurus afkomstig is</div>
+          </div>
+          <div class="trow">
+            <div class="tcell"><b>Omgrenzenderechthoek</b></div>
+            <div class="tcell">&nbsp;</div>
+            <div class="tcell">&nbsp;</div>
+          </div>
+          <div class="trow">
+            <div class="tcell">  Minimum x-coördinaat</div>
+            <div class="tcell">V</div>
+            <div class="tcell">&nbsp;</div>
+          </div>
+          <div class="trow">
+            <div class="tcell">  Maximum x-coördinaat</div>
+            <div class="tcell">V</div>
+            <div class="tcell">&nbsp;</div>
+          </div>
+          <div class="trow">
+            <div class="tcell">  Minimum y-coördinaat</div>
+            <div class="tcell">V</div>
+            <div class="tcell">&nbsp;</div>
+          </div>
+          <div class="trow">
+            <div class="tcell">  Maximum y-coördinaat</div>
+            <div class="tcell">V</div>
+            <div class="tcell">&nbsp;</div>
+          </div>
+          <div class="trow">
+            <div class="tcell">Datum van de bron</div>
+            <div class="tcell">V</div>
+            <div class="tcell">op z’n minst één van de elementen Datum voltooiing, Datum publicatie en Datum laatste wijziging verplicht.</div>
+          </div>
+          <div class="trow">
+            <div class="tcell">Datumtype van de bron</div>
+          </div>
+          <div class="trow">
+            <div class="tcell">Niveau kwaliteitsbeschrijving</div>
+            <div class="tcell">V</div>
+            <div class="tcell">&nbsp;</div>
+          </div>
+          <div class="trow">
+            <div class="tcell">Algemenebeschrijving herkomst</div>
+            <div class="tcell">V</div>
+            <div class="tcell">&nbsp;</div>
+          </div>
+          <div class="trow">
+            <div class="tcell">Toepassingsschaal</div>
+            <div class="tcell">C</div>
+            <div class="tcell">Verplicht als er een toepassingsschaal gespecificeerd kan worden </div>
+          </div>
+          <div class="trow">
+            <div class="tcell">Resolutie</div>
+            <div class="tcell">C</div>
+            <div class="tcell">Verplicht als er een resolutie gespecificeerd kan worden</div>
+          </div>
+          <div class="trow">
+            <div class="tcell">Codereferentiesysteem</div>
+            <div class="tcell">V</div>
+            <div class="tcell">&nbsp;</div>
+          </div>
+          <div class="trow">
+            <div class="tcell">Verantwoordelijke organisatie voor namespace referentiesysteem</div>
+            <div class="tcell">V</div>
+            <div class="tcell">&nbsp;</div>
+          </div>
+          <div class="trow">
+            <div class="tcell">Temporeel referentiesysteem&nbsp;</div>
+            <div class="tcell">C</div>
+            <div class="tcell">Verplicht als de dataset temporele informatie bevat die niet gebaseerd is op de Gregoriaanse kalender of de Coordinated Universal Time</div>
+          </div>
+          <div class="trow">
+            <div class="tcell">Naam distributie formaat</div>
+            <div class="tcell">C</div>
+            <div class="tcell">Het is alleen verplicht als de dataset een INSPIRE bron is</div>
+          </div>
+          <div class="trow">
+            <div class="tcell">Versie distributie formaat</div>
+            <div class="tcell">C</div>
+            <div class="tcell">Het is alleen verplicht als de dataset een INSPIRE bron is</div>
+          </div>
+          <div class="trow">
+            <div class="tcell">Specificatie distributie formaat</div>
+            <div class="tcell">C</div>
+            <div class="tcell">Het is alleen verplicht als de dataset een INSPIRE bron is</div>
+          </div>
+          <div class="trow">
+            <div class="tcell">Conformiteit indicatie met de specificatie </div>
+            <div class="tcell">C</div>
+            <div class="tcell">Het is alleen verplicht als de dataset een INSPIRE bron is of als de informatie is gemodelleerd volgens een specifiek informatie model.</div>
+          </div>
+          <div class="trow">
+            <div class="tcell">Verklaring</div>
+            <div class="tcell">C</div>
+            <div class="tcell">Het is alleen verplicht als de dataset een INSPIRE bron is of als de informatie is gemodelleerd volgens een specifiek informatie model.</div>
+          </div>
+          <div class="trow">
+            <div class="tcell">Specificatie</div>
+            <div class="tcell">C</div>
+            <div class="tcell">Het is alleen verplicht als de dataset een INSPIRE bron is of als de informatie is gemodelleerd volgens een specifiek informatie model.</div>
+          </div>
+          <div class="trow">
+            <div class="tcell">Specificatiedatum</div>
+            <div class="tcell">C</div>
+            <div class="tcell">Het is alleen verplicht als de dataset een INSPIRE bron is of als de informatie is gemodelleerd volgens een specifiek informatie model.</div>
+          </div>
+          <div class="trow">
+            <div class="tcell">Specificatiedatum type</div>
+            <div class="tcell">C</div>
+            <div class="tcell">Het is alleen verplicht als de dataset een INSPIRE bron is of als de informatie is gemodelleerd volgens een specifiek informatie model.</div>
+          </div>
+          <div class="trow">
+            <div class="tcell">Type waarde</div>
+            <div class="tcell">C</div>
+            <div class="tcell">Verplicht voor INSPIRE datasets als voor netwerken de aansluiting van hartlijnen niet is verzekerd.</div>
+          </div>
+          <div class="trow">
+            <div class="tcell">Topologische samenhang</div>
+            <div class="tcell">C</div>
+            <div class="tcell">Verplicht voor INSPIRE datasets als voor netwerken de aansluiting van hartlijnen niet is verzekerd.</div>
+          </div>
+          <div class="trow">
+            <div class="tcell">(Juridische)toegangsrestricties</div>
+            <div class="tcell">V</div>
+            <div class="tcell">Het is verplicht op zijn minst één van de drie elementen (juridische)toegangsrestricties, overige beperkingen of veiligheidsrestricties op te nemen. </div>
+          </div>
+          <div class="trow">
+            <div class="tcell">Overigebeperkingen</div>
+          </div>
+          <div class="trow">
+            <div class="tcell">Veiligheidsrestricties</div>
+          </div>
+          <div class="trow">
+            <div class="tcell">Gebruiksbeperkingen</div>
+            <div class="tcell">V</div>
+            <div class="tcell">&nbsp;</div>
+          </div>
+          <div class="trow">
+            <div class="tcell">Verantwoordelijke organisatie bron</div>
+            <div class="tcell">V</div>
+            <div class="tcell">&nbsp;</div>
+          </div>
+          <div class="trow">
+            <div class="tcell">Verantwoordelijke organisatie bron: e-mail</div>
+            <div class="tcell">V</div>
+            <div class="tcell">&nbsp;</div>
+          </div>
+          <div class="trow">
+            <div class="tcell">Verantwoordelijke organisatie bron: rol</div>
+            <div class="tcell">V</div>
+            <div class="tcell">&nbsp;</div>
+          </div>
+          <div class="trow">
+            <div class="tcell">Metadata unieke identifier</div>
+            <div class="tcell">V</div>
+            <div class="tcell">&nbsp;</div>
+          </div>
+          <div class="trow">
+            <div class="tcell">Parent unieke identifier</div>
+            <div class="tcell">C</div>
+            <div class="tcell">Verplicht als er een dataset met hogere hiërarchie bestaat</div>
+          </div>
+          <div class="trow">
+            <div class="tcell">Verantwoordelijke organisatie metadata</div>
+            <div class="tcell">V</div>
+            <div class="tcell">&nbsp;</div>
+          </div>
+          <div class="trow">
+            <div class="tcell">Verantwoordelijke organisatie metadata: rol</div>
+            <div class="tcell">V</div>
+            <div class="tcell">&nbsp;</div>
+          </div>
+          <div class="trow">
+            <div class="tcell">Verantwoordelijke organisatie metadata: e-mail</div>
+            <div class="tcell">V</div>
+            <div class="tcell">&nbsp;</div>
+          </div>
+          <div class="trow">
+            <div class="tcell">Metadatadatum</div>
+            <div class="tcell">V</div>
+            <div class="tcell">&nbsp;</div>
+          </div>
+          <div class="trow">
+            <div class="tcell">Taalvan de metadata</div>
+            <div class="tcell">V</div>
+            <div class="tcell">&nbsp;</div>
+          </div>
+          <div class="trow">
+            <div class="tcell">Metadatastandaard naam</div>
+            <div class="tcell">V</div>
+            <div class="tcell">&nbsp;</div>
+          </div>
+          <div class="trow">
+            <div class="tcell">Metadatastandaard versie</div>
+            <div class="tcell">V</div>
+            <div class="tcell">&nbsp;</div>
+          </div>
+        </section>
       </section>
     <section id="metadata-elementen-uitwerking">
-    <h3>Metadata elementen uitwerking</h3>
+      <h3>Metadata elementen uitwerking</h3>
       <section id="titel-van-de-bron">
-      <h4>Titel van de bron</h4>
+        <h4>Titel van de bron</h4>
         <p style="text-align:left"><em>identificationInfo[1]/*/citation/*/title</em><span style="float:right">[ISO 19139]</span></p>
         <p>Dit element dient om de naam van de dataset in vast te leggen.</p>
       </section>
