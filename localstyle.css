@@ -8,7 +8,7 @@
     display: table;
     background-color: #F0F0F0;
     border: 1px solid #000000;
-    padding: 0.5em;
+    
     width: 100%;
 }
 
@@ -16,6 +16,14 @@
     display: table-caption;
     font-style: italic;
     text-align: left;
+}
+
+.tcolgroup {
+    display: table-column-group;
+}
+
+.tcol {
+    display: table-column;
 }
 
 .thead {
@@ -30,5 +38,6 @@
 
 .tcell {
     display: table-cell;
-    padding: 0.1em;
+    border: 1px solid #CCCCCC;
+    padding: 0.25em;
 }

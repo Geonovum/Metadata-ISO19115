@@ -39,7 +39,7 @@
           Metadata komt voor bij meerdere informatie disciplines. Indien hier over metadata wordt gesproken betreft het metadata die betrekking heeft op geo-informatie. Dit metadata profiel richt zich op de beschrijving van de metadata van geografische datasets en dataset series.
         </p>
         <p>
-          Het <a href="http://www.geonovum.nl/wegwijzer/standaarden/nederlands-metadataprofiel-op-iso-19119-services-121"> Nederlandse profiel op ISO 19119 voor services versie 1.2</a> richt zich op de beschrijving van metadata van geografische dataservices. Als er services beschikbaar zijn dient zowel de service als de dataset van metadata te worden voorzien. De relatie tussen metadata van data, metadata van services en de data en services is opgenomen in bijlage 8. In de metadata wiki <a href="wiki.geonovum.nl/index.php/2_Metadata">wiki.geonovum.nl/index.php/2_Metadata </a> zijn alle aspecten van het aanmaken van metadata beschreven.
+          Het <a href="http://www.geonovum.nl/wegwijzer/standaarden/nederlands-metadataprofiel-op-iso-19119-services-121"> Nederlandse profiel op ISO 19119 voor services versie 1.2</a> richt zich op de beschrijving van metadata van geografische dataservices. Als er services beschikbaar zijn dient zowel de service als de dataset van metadata te worden voorzien. De relatie tussen metadata van data, metadata van services en de data en services is opgenomen in bijlage 8. In de <a href="wiki.geonovum.nl/index.php/2_Metadata">metadata wiki</a> zijn alle aspecten van het aanmaken van metadata beschreven.
         </p>
       </section>
       <section id="scope">
@@ -54,14 +54,14 @@
           </span>
         </p>
       </section>
-      <section>
+      <section id="context">
         <h3>Context</h3>
         <p>
-          Figuur 1 plaatst het Nederlandse metadata profiel voor geografie in zijn internationale en sectorale context. De ISO-kernset is de kleinste eenheid, een selectie uit ISO 19115.
+          <a href="#image001">Figuur 1</a> plaatst het Nederlandse metadata profiel voor geografie in zijn internationale en sectorale context. De ISO-kernset is de kleinste eenheid, een selectie uit ISO 19115.
         </p>
-        <figure id="image003">
-          <img src="media/image003.gif" alt="image003-gif">
-          <figcaption>Context profiel</figcaption>
+        <figure id="image001">
+          <img src="media/image001.gif" alt="image001-gif">
+          <figcaption>Context profiel.</figcaption>
         </figure>
         <p>
           De Nederlandse kernset bevat de Europese kernset (INSPIRE) plus een selectie van metadata-elementen uit ISO 19115. In dit profiel zijn de metadata elementen met hun oorsprong aangegeven in bijlage 4.
@@ -73,7 +73,7 @@
       <section id="leeswijzer">
         <h3>Leeswijzer</h3>
         <p>
-          Hoofdstuk 2 toont de normatieve verwijzingen, hoofdstuk 3 bevat de XSD schema's waarna in hoofdstuk 4 de gehanteerde termen en definities worden beschreven. Het formele deel van het profiel waarin onder andere de verplichte elementen, de kernset, worden beschreven die gelden voor metadata voor geografie staan in hoofdstuk 5. In hoofdstuk 6 staan de optionele elementen. De volgende hoofdstukken geven op specifieke onderdelen van het profiel uitleg. De bijlagen dienen ter ondersteuning van de hoofdstukken.
+          <a href="#normatieve-verwijzing">Hoofdstuk 2</a> toont de normatieve verwijzingen, <a href="#relevante-xsd-schemas">hoofdstuk 3</a> bevat de XSD schema's waarna in <a href="#termen-en-definities">hoofdstuk 4</a> de gehanteerde termen en definities worden beschreven. Het formele deel van het profiel waarin onder andere de verplichte elementen, de kernset, worden beschreven die gelden voor metadata voor geografie staan in <a href="#metadata-elementen">hoofdstuk 5</a>. In hoofdstuk 6 staan de optionele elementen. De volgende hoofdstukken geven op specifieke onderdelen van het profiel uitleg. De bijlagen dienen ter ondersteuning van de hoofdstukken.
         </p>
       </section>
     </section>
@@ -126,7 +126,7 @@
       <p>
         Alle relevante schema’s zijn in de OGC schema repository beschikbaar. Deze zijn vrij beschikbaar onder <a href="http://schemas.opengis.net/">http://schemas.opengis.net/</a>. De volgende tabel toont het relevante schema voor dit profiel.
       </p>
-      <section class="table">
+      <div id="table-1" class="table">
         <div class="tcaption">Tabel 1: Locatie van het relevante XSD schema</div>
         <div class="thead">
           <div class="tcell">Specificatie</div>
@@ -138,7 +138,7 @@
           <div class="tcell">1.0</div>
           <div class="tcell"><a href="http://schemas.opengis.net/iso/19139/20060504/gmd/gmd.xsd">http://schemas.opengis.net/iso/19139/20060504/gmd/gmd.xsd</a></div>
         </div>
-      </section>
+      </div>
       <p>
         <em>ISO 19139</em>: Dit zijn de XML encoding schema’s voor zowel ISO 19115:2003 en ISO 19119:2005/FDAM 1. De subdirectorie ‘/srv’ bevat de encoding voor ISO 19119:2005/FDAM 1. In de metadata dienen ook de codelijsten die op deze locatie te vinden zijn gehanteerd te worden.
       </p>
@@ -158,7 +158,7 @@
       </p>
       <p>
         <b>Codelijst</b>
-        <br>Een uitbreidbare lijst met de domeinwaarden inclusief code voor elk toepasbaar atd class="tcell"iv class="trow"ibuut [ISO 19136].
+        <br>Een uitbreidbare lijst met de domeinwaarden inclusief code voor elk toepasbaar attribuut [ISO 19136].
       </p>
       <p>
         <b>Conditioneel element</b>
@@ -166,7 +166,7 @@
       </p>
       <p>
         <b>Dataset</b>
-        <br>Identificeerbare collectie van data [ISO34 2002 / ISO 19101:2002]. Een dataset mag een kleinere groep van data zijn, gelimiteerd door beperkingen zoals een geografisch gebied of geo-objecttype ("feature type"), die aanwezig is in een grotere dataset. Theoretisch kan een dataset bestaan uit een enkel geo-object of een atd class="tcell"iv class="trow"ibuut van een geo-object dat aanwezig is in een grotere dataset. Het Nederlandse metadata profiel voor geografie gaat niet uit van dit soort type datasets.
+        <br>Identificeerbare collectie van data [ISO34 2002 / ISO 19101:2002]. Een dataset mag een kleinere groep van data zijn, gelimiteerd door beperkingen zoals een geografisch gebied of geo-objecttype ("feature type"), die aanwezig is in een grotere dataset. Theoretisch kan een dataset bestaan uit een enkel geo-object of een een attribuut van een geo-object dat aanwezig is in een grotere dataset. Het Nederlandse metadata profiel voor geografie gaat niet uit van dit soort type datasets.
       </p>
       <p>
         <b>Dataset serie</b>
@@ -205,7 +205,7 @@
       </p>
       <p>
         <b>Namespace</b>
-        <br>Verzameling van namen, geïdentificeerd door een URI-referentie, die gebruikt worden in XML-documenten als elementnamen en atd class="tcell"iv class="trow"ibuutnamen [ISO 19136: Geography Markup Language].
+        <br>Verzameling van namen, geïdentificeerd door een URI-referentie, die gebruikt worden in XML-documenten als elementnamen en atribuutnamen [ISO 19136: Geography Markup Language].
       </p>
       <p>
         <b>Optioneel element</b>
@@ -232,12 +232,17 @@
       <p>
         Dit hoofdstuk geeft de verplichte of bij conditie verplichte elementen weer inclusief uitleg in de vorm van voorbeelden of default waarden.
       </p>
-      <section>
+      <section id="metadata-elementen-overzicht">
         <h3>Metadata elementen overzicht</h3>
         <p>
-          In Tabel 2 staan de verplichte of bij conditie verplichte elementen. Bij elk conditioneel element is de conditie benoemd. De in bijlage 4 opgenomen tabel “verantwoording metadata elementen” is gebaseerd op <em>INSPIRE Metadata Implementing Rules: Technical Guidelines based on EN ISO 19115 and EN ISO 19119, v1.2</em>. Hiermee is de relatie gelegd tussen dit document en INSPIRE. 
+          In <a href="#table-2">Tabel 2</a> staan de verplichte of bij conditie verplichte elementen. Bij elk conditioneel element is de conditie benoemd. De in bijlage 4 opgenomen tabel “verantwoording metadata elementen” is gebaseerd op <em>INSPIRE Metadata Implementing Rules: Technical Guidelines based on EN ISO 19115 and EN ISO 19119, v1.2</em>. Hiermee is de relatie gelegd tussen dit document en INSPIRE. 
         </p>
-        <section class="table">
+        <div id="table-2" class="table">
+          <div class="tcolgroup">
+            <div class="tcol" style="width: 30%;"></div>
+            <div class="tcol" style="width: 5%;"></div>
+            <div class="tcol" style="width: 65%;"></div>
+          </div>
           <div class="thead">
             <div class="tcell">Metadata element</div>
             <div class="tcell">V/C</div>
@@ -266,17 +271,17 @@
           <div class="trow">
             <div class="tcell">Hiërarchieniveaunaam</div>
             <div class="tcell">C</div>
-            <div class="tcell">Verplicht als Hiërarchieniveau niet gelijk is aan dataset</div>
+            <div class="tcell">Verplicht als Hiërarchieniveau niet gelijk is aan dataset.</div>
           </div>
           <div class="trow">
             <div class="tcell">URL </div>
             <div class="tcell">C</div>
-            <div class="tcell">Dit element is conditioneel. Het is voor INSPIRE verplicht als er een link is naar meer informatie over debron en/of er een link is die toegang geeft tot gerelateerde services, ookal is die service voorzien van metadata. Voor datasets die buiten INSPIRE vallen en waarvoor gerelateerde services aanwezig zijn, is het verplicht als er geen service metadata is.</div>
+            <div class="tcell">Dit element is conditioneel. Het is voor INSPIRE verplicht als er een link is naar meer informatie over de bron en/of er een link is die toegang geeft tot gerelateerde services, ook al is die service voorzien van metadata. Voor datasets die buiten INSPIRE vallen en waarvoor gerelateerde services aanwezig zijn, is het verplicht als er geen service metadata is.</div>
           </div>
           <div class="trow">
             <div class="tcell">Protocol</div>
             <div class="tcell">C</div>
-            <div class="tcell">Verplicht als er een URL is opgegeven</div>
+            <div class="tcell">Verplicht als er een URL is opgegeven.</div>
           </div>
           <div class="trow">
             <div class="tcell">Naam </div>
@@ -284,19 +289,19 @@
             <div class="tcell">Verplicht gesteld voor de OGC:WMS, OGC:WFS en OGC:WCS.</div>
           </div>
           <div class="trow">
-            <div class="tcell">Unieke Identifier van de bron</div>
+            <div class="tcell">Unieke Identifier van de bron.</div>
             <div class="tcell">V</div>
             <div class="tcell">&nbsp;</div>
           </div>
           <div class="trow">
             <div class="tcell">Taal van de bron</div>
             <div class="tcell">C</div>
-            <div class="tcell">Het is verplicht als de bron tekstuele informatie bevat</div>
+            <div class="tcell">Het is verplicht als de bron tekstuele informatie bevat.</div>
           </div>
           <div class="trow">
             <div class="tcell">Karakterset van de bron</div>
             <div class="tcell">C</div>
-            <div class="tcell">Voor INSPIRE verplicht als voor de uitwisseling van de bron geen GML wordt gebruikt en de gebruiktekarakterset geen utf8 is. Voor niet INSPIRE datasets is het verplicht als de waarde niet voldoet aan de ISO/IEC 10646 standaard. </div>
+            <div class="tcell">Voor INSPIRE verplicht als voor de uitwisseling van de bron geen GML wordt gebruikt en de gebruikte karakterset geen utf8 is. Voor niet INSPIRE datasets is het verplicht als de waarde niet voldoet aan de ISO/IEC 10646 standaard. </div>
           </div>
           <div class="trow">
             <div class="tcell">Onderwerp</div>
@@ -311,17 +316,17 @@
           <div class="trow">
             <div class="tcell">Thesaurus</div>
             <div class="tcell">C&nbsp;</div>
-            <div class="tcell">Het is verplicht als een keyword uit een thesaurus afkomstig is</div>
+            <div class="tcell">Het is verplicht als een keyword uit een thesaurus afkomstig is.</div>
           </div>
           <div class="trow">
             <div class="tcell">Thesaurus datum</div>
             <div class="tcell">C</div>
-            <div class="tcell">Het is verplicht als een keyword uit een thesaurus afkomstig is</div>
+            <div class="tcell">Het is verplicht als een keyword uit een thesaurus afkomstig is.</div>
           </div>
           <div class="trow">
             <div class="tcell">Thesaurusdatum type</div>
             <div class="tcell">C</div>
-            <div class="tcell">Hetis verplicht als een keyword uit een thesaurus afkomstig is</div>
+            <div class="tcell">Het is verplicht als een keyword uit een thesaurus afkomstig is.</div>
           </div>
           <div class="trow">
             <div class="tcell"><b>Omgrenzenderechthoek</b></div>
@@ -351,7 +356,7 @@
           <div class="trow">
             <div class="tcell">Datum van de bron</div>
             <div class="tcell">V</div>
-            <div class="tcell">op z’n minst één van de elementen Datum voltooiing, Datum publicatie en Datum laatste wijziging verplicht.</div>
+            <div class="tcell">Op z’n minst één van de elementen Datum voltooiing, Datum publicatie en Datum laatste wijziging verplicht.</div>
           </div>
           <div class="trow">
             <div class="tcell">Datumtype van de bron</div>
@@ -362,19 +367,19 @@
             <div class="tcell">&nbsp;</div>
           </div>
           <div class="trow">
-            <div class="tcell">Algemenebeschrijving herkomst</div>
+            <div class="tcell">Algemene beschrijving herkomst</div>
             <div class="tcell">V</div>
             <div class="tcell">&nbsp;</div>
           </div>
           <div class="trow">
             <div class="tcell">Toepassingsschaal</div>
             <div class="tcell">C</div>
-            <div class="tcell">Verplicht als er een toepassingsschaal gespecificeerd kan worden </div>
+            <div class="tcell">Verplicht als er een toepassingsschaal gespecificeerd kan worden.</div>
           </div>
           <div class="trow">
             <div class="tcell">Resolutie</div>
             <div class="tcell">C</div>
-            <div class="tcell">Verplicht als er een resolutie gespecificeerd kan worden</div>
+            <div class="tcell">Verplicht als er een resolutie gespecificeerd kan worden.</div>
           </div>
           <div class="trow">
             <div class="tcell">Codereferentiesysteem</div>
@@ -389,22 +394,22 @@
           <div class="trow">
             <div class="tcell">Temporeel referentiesysteem&nbsp;</div>
             <div class="tcell">C</div>
-            <div class="tcell">Verplicht als de dataset temporele informatie bevat die niet gebaseerd is op de Gregoriaanse kalender of de Coordinated Universal Time</div>
+            <div class="tcell">Verplicht als de dataset temporele informatie bevat die niet gebaseerd is op de Gregoriaanse kalender of de Coordinated Universal Time.</div>
           </div>
           <div class="trow">
             <div class="tcell">Naam distributie formaat</div>
             <div class="tcell">C</div>
-            <div class="tcell">Het is alleen verplicht als de dataset een INSPIRE bron is</div>
+            <div class="tcell">Het is alleen verplicht als de dataset een INSPIRE bron is.</div>
           </div>
           <div class="trow">
             <div class="tcell">Versie distributie formaat</div>
             <div class="tcell">C</div>
-            <div class="tcell">Het is alleen verplicht als de dataset een INSPIRE bron is</div>
+            <div class="tcell">Het is alleen verplicht als de dataset een INSPIRE bron is.</div>
           </div>
           <div class="trow">
             <div class="tcell">Specificatie distributie formaat</div>
             <div class="tcell">C</div>
-            <div class="tcell">Het is alleen verplicht als de dataset een INSPIRE bron is</div>
+            <div class="tcell">Het is alleen verplicht als de dataset een INSPIRE bron is.</div>
           </div>
           <div class="trow">
             <div class="tcell">Conformiteit indicatie met de specificatie </div>
@@ -442,9 +447,9 @@
             <div class="tcell">Verplicht voor INSPIRE datasets als voor netwerken de aansluiting van hartlijnen niet is verzekerd.</div>
           </div>
           <div class="trow">
-            <div class="tcell">(Juridische)toegangsrestricties</div>
+            <div class="tcell">(Juridische) toegangsrestricties</div>
             <div class="tcell">V</div>
-            <div class="tcell">Het is verplicht op zijn minst één van de drie elementen (juridische)toegangsrestricties, overige beperkingen of veiligheidsrestricties op te nemen. </div>
+            <div class="tcell">Het is verplicht op zijn minst één van de drie elementen (juridische) toegangsrestricties, overige beperkingen of veiligheidsrestricties op te nemen. </div>
           </div>
           <div class="trow">
             <div class="tcell">Overigebeperkingen</div>
@@ -480,7 +485,7 @@
           <div class="trow">
             <div class="tcell">Parent unieke identifier</div>
             <div class="tcell">C</div>
-            <div class="tcell">Verplicht als er een dataset met hogere hiërarchie bestaat</div>
+            <div class="tcell">Verplicht als er een dataset met hogere hiërarchie bestaat.</div>
           </div>
           <div class="trow">
             <div class="tcell">Verantwoordelijke organisatie metadata</div>
@@ -503,7 +508,7 @@
             <div class="tcell">&nbsp;</div>
           </div>
           <div class="trow">
-            <div class="tcell">Taalvan de metadata</div>
+            <div class="tcell">Taal van de metadata</div>
             <div class="tcell">V</div>
             <div class="tcell">&nbsp;</div>
           </div>
@@ -517,16 +522,542 @@
             <div class="tcell">V</div>
             <div class="tcell">&nbsp;</div>
           </div>
+        </div>
+      </section>
+      <section id="metadata-elementen-uitwerking">
+        <h3>Metadata elementen uitwerking</h3>
+        <section id="titel-van-de-bron">
+          <h4>Titel van de bron</h4>
+          <p style="text-align:left">
+            <em>identificationInfo[1]/*/citation/*/title</em>
+            <span style="float:right">[ISO 19139]</span>
+          </p>
+          <p>Dit element dient om de naam van de dataset in vast te leggen.</p>
+          <div id="table-3" class="table"><div class="tcolgroup"><div class="tcol" style="width: 25%">""</div><div class="tcol" style="width: 75%">""</div></div><div class="thead"><div class="tcell">Data  type of Domein</div><div class="tcell">Voorbeeld</div></div><div class="trow"><div class="tcell">String</div><div class="tcell">Nieuwe kaart van Nederland</div></div></div>
+        </section>
+        <section id="samenvatting">
+          <h4>Samenvatting</h4>
+          <p style="text-align:left">
+            <em>identificationInfo[1]/*/abstract</em>
+            <span style="float:right">[ISO19139]</span>
+          </p>
+          <p>Dit element bevat een korte beschrijving van de inhoud van de dataset.</p>
+          <div id="table-4" class="table"><div class="tcolgroup"><div class="tcol" style="width: 25%">""</div><div class="tcol" style="width: 75%">""</div></div><div class="thead"><div class="tcell">Data  type of Domein</div><div class="tcell">Voorbeeld</div></div><div class="trow"><div class="tcell">String</div><div class="tcell">Grenzen van de waterschappen  per 1-1-2005 inclusief adresgegevens voor testdoeleinden</div></div></div>
+        </section>
+        <section id="status">
+          <h4>Status</h4>
+          <p style="text-align:left">
+            <em>identificationInfo[1]/*/status</em>
+            <span style="float:right">[ISO 19139]</span>
+          </p>
+          <p>Dit element is opgenomen in de Nederlandse kernset, omdat de status van de dataset als zoekcriterium kan dienen en een indirecte kwaliteitseigenschap weergeeft. De waarden komen uit codelijst B.5.23 van ISO19115 (zie bijlage 1).</p>
+          <div id="table-5" class="table"><div class="tcolgroup"><div class="tcol" style="width: 25%">""</div><div class="tcol" style="width: 75%">""</div></div><div class="thead"><div class="tcell">Data  type of Domein</div><div class="tcell">Voorbeeld</div></div><div class="trow"><div class="tcell">B.5.23</div><div class="tcell">completed</div></div></div>
+        </section>
+        <section id="hiërarchieniveau">
+          <h4>Hiërarchieniveau</h4>
+          <p style="text-align:left">
+            <em>hierarchyLevel</em>
+            <span style="float:right">[ISO19139]</span>
+          </p>
+          <p>Het element geeft aan waarop de metadata betrekking heeft, de dataset of dataset serie. Voor de waarden geldt de codelijst B.5.25 MD_ScopeCode uit ISO19115. </p>
+          <div id="table-6" class="table"><div class="tcolgroup"><div class="tcol" style="width: 25%">""</div><div class="tcol" style="width: 75%">""</div></div><div class="thead"><div class="tcell">Data  type of Domein</div><div class="tcell">Voorbeeld</div></div><div class="trow"><div class="tcell">B.5.25</div><div class="tcell">dataset</div></div></div>
+          <div class="advisement">
+            <i>Toelichting</i>
+            <p>De kernset van het Nederlands metadata profiel voorgeografie geldt niet alleen voor geografische datasets, maar ook voor datasetseries. Volgens ISO 19115 is een dataset serie een verzameling geografischedata die gelijke karakteristieken hebben ten aanzien van het thema, de resolutie en/of methodologie. Veelal geven dataproducenten aan of er sprake is van een dataset serie. Voorbeelden van dataset series zijn:
+              <ul>
+                <li>Verzameling luchtfoto’s die in dezelfde vlucht met dezelfde camera en filmtype zijn gemaakt;</li>
+                <li>Continue satellietopname van één omwenteling om de aarde;</li>
+                <li>Verzameling rasterdata, verkregen uit een algemene serie van papieren kaarten;</li>
+                <li>TOP10NL in het verleden, opgedeeldin kaartbladen.</li>
+              </ul>
+            <p>Toepassing van metadata op dataset series maakt het gebruikers van de metadata mogelijk om op een hoger niveau dan individuele datasets data te zoeken. Metadata van dataset series is geschikt voor het zoeken op globale karakteristieken van beschikbare data, maar niet voordiepgaand onderzoek naar de kwaliteit van specifieke datasets. Hiervoor is metadata van datasets noodzakelijk. <a href="#image002">Figuur 2</a> geeft een schematische weergave van de relatie tussen de metadata van datasetseries en datasets weer. De hiërarchische relatie tussen een dataset en datasetserie is altijd van verticale aard.</p>
+          </div>
+          <figure id="image002">
+            <img src="media/image002.gif" alt="image002-gif">
+            <figcaption>Gerelateerde datasets.</figcaption>
+          </figure>
+        </section>
+        <section id="hiërarchieniveaunaam">
+          <h4>Hiërarchieniveaunaam</h4>
+          <p style="text-align:left">
+            <em>hierarchyLevelName</em>
+            <span style="float:right">[ISO19139]</span>
+          </p>
+          <p>Dit element is conditioneel. Het is verplicht als Hiërarchieniveau niet gelijk is aan dataset. Het bevat de naam van het hiërarchieniveau waarvoor de metadata is beschreven. Indien het hierarchyniveau dataset is dient dit veld niet ingevuld te worden.</p>
+          <div id="table-7" class="table"><div class="tcolgroup"><div class="tcol" style="width: 25%">""</div><div class="tcol" style="width: 75%">""</div></div><div class="thead"><div class="tcell">Data  type of Domein</div><div class="tcell">Voorbeeld</div></div><div class="trow"><div class="tcell">string</div><div class="tcell">AHN Nederland</div></div></div>
+        </section>
+        <section id="url">
+          <h4>URL</h4>
+          <p style="text-align:left">
+            <em>distributionInfo/*/transferOptions/*/onLine/*/linkage</em>
+            <span style="float:right">[ISO 19139]</span>
+          </p>
+          <p>Dit element is conditioneel. Het is voor INSPIRE verplicht als er een link is naar meer informatie over de bron en/of er een link is die toegang geeft tot gerelateerde services, ook al is die service voorzien van metadata. Voor datasets die buiten INSPIRE vallen en waarvoor gerelateerde services aanwezig zijn, is het verplicht als er nog geen service metadata is. Het element kan meerdere keren voorkomen, bijvoorbeeld als link naar een zip bestand, een catalogue, een data loket, WMS en WFS.</p>
+          <p>Het bevat een valide URL voor online toegang tot de bron of als er niet een directe link naar de bron aanwezig is naar een locatie waar informatie over de bron beschikbaar is. Voor een service dient deze gelijk te zijn aan de resourcelocator uit het Nederlands metadata profiel op ISO19119 voor services.</p>
+          <div id="table-8" class="table"><div class="tcolgroup"><div class="tcol" style="width: 25%">""</div><div class="tcol" style="width: 75%">""</div></div><div class="thead"><div class="tcell">Data  type of Domein</div><div class="tcell">Voorbeeld</div></div><div class="trow"><div class="tcell">URL</div><div class="tcell">www.dinoloket.nl</div></div></div>
+          <br>
+          <div id="table-8" class="table"><div class="tcolgroup"><div class="tcol" style="width: 25%">""</div><div class="tcol" style="width: 75%">""</div></div><div class="thead"><div class="tcell">Data  type of Domein</div><div class="tcell">Voorbeeld</div></div><div class="trow"><div class="tcell">URL</div><div class="tcell">http://wms.nitg.tno.nl/OneGeology?</div></div></div>
+        </section>
+        <section id="protocol">
+          <h4>Protocol</h4>
+          <p style="text-align:left">
+            <em>distributionInfo/*/transferOptions/*/onLine/*/protocol</em>
+            <span style="float:right">[ISO 19139]</span>
+          </p>
+          <p>Dit element is conditioneel. Het is verplicht als er een URL is opgegeven. Bijvoorbeeld naar een zip bestand, WMS of WFS.</p>
+          <p>Het bevat het protocol voor het afhandelen van de URL. De codelijst SV_ServiceType (bijlage 1) wordt hier gehanteerd. De codelijst is uitgebreid met INSPIRE Atom. Onder download vallen bijvoorbeeld ZIP documenten van shapefiles.</p>
+          <div id="table-9" class="table"><div class="tcolgroup"><div class="tcol" style="width: 25%">""</div><div class="tcol" style="width: 75%">""</div></div><div class="thead"><div class="tcell">Data  type of Domein</div><div class="tcell">Voorbeeld</div></div><div class="trow"><div class="tcell">SV_ServiceType</div><div class="tcell">website</div></div></div>
+          <br>
+          <div id="table-9" class="table"><div class="tcolgroup"><div class="tcol" style="width: 25%">""</div><div class="tcol" style="width: 75%">""</div></div><div class="thead"><div class="tcell">Data  type of Domein</div><div class="tcell">Voorbeeld</div></div><div class="trow"><div class="tcell">SV_ServiceType</div><div class="tcell">OGC:WMS</div></div></div>
+          <div class="advisement ">
+            <i>Toelichting</i>
+            <p>Het element Protocol, is van belang voor het automatisch kunnen downloaden van de dataset, en/of het benaderen van de service die deze dataset representeert. Het maakt gebruik van een codelijst die het Nederlandse metadata profiel op ISO19119 wordt vastgelegd, maar het element is een ISO19115 element. Door gebruik te maken van deze codelijst is de invulling van het element software onafhankelijk. Het metadataelement Naam legt de relatie naar de layer in de service die de dataset representeert, door middel van de naam van de layer of de naam van het featuretype. In deze elementen wordt maar één maal per servicetype de relatie gelegd, waarmee de dataset als service gerepresenteerd wordt, zodat het mogelijk wordt de dataset via een service te benaderen.</p>
+          </div>
+        </section>
+        <section id="naam">
+          <h4>Naam</h4>
+          <p style="text-align:left">
+            <em>distributionInfo/*/transferOptions/*/onLine/*/name</em>
+            <span style="float:right">[ISO 19139]</span>
+          </p>
+          <p>Dit element is conditioneel. Voor Nederland is de naam verplicht gesteld voor de OGC:WMS, OGC:WFS en OGC:WCS. Dit element bevat de layer name uit de WMS of WCS of de featureType name van een WFS.</p>
+          <div id="table-10" class="table"><div class="tcolgroup"><div class="tcol" style="width: 25%">""</div><div class="tcol" style="width: 75%">""</div></div><div class="thead"><div class="tcell">Data  type of Domein</div><div class="tcell">Voorbeeld</div></div><div class="trow"><div class="tcell">String</div><div class="tcell">Gemeentegrenzen</div></div></div>
+        </section>
+        <section id="unieke-identifier-van-de-bron">
+          <h4>Unieke Identifier van de bron</h4>
+          <p style="text-align:left">
+            <em>identificationInfo[1]/*/citation/*/identifier/*/code</em>
+            <span style="float:right">[ISO 19139]</span>
+          </p>
+          <p>Dit element bevat de waarde die een object uniek identificeert in een namespace. Geadviseerd wordt om gebruik te maken van een betekenisloze identifier die wereldwijd uniek is zoals de <a href="http://en.wikipedia.org/wiki/UUID">Universal Unique Identifier</a>.</p>
+          <div id="table-11" class="table"><div class="tcolgroup"><div class="tcol" style="width: 25%">""</div><div class="tcol" style="width: 75%">""</div></div><div class="thead"><div class="tcell">Data  type of Domein</div><div class="tcell">Voorbeeld</div></div><div class="trow"><div class="tcell">string</div><div class="tcell">550e8400-e29b-41d4-a716-446655440000</div></div></div>
+        </section>
+        <section id="taal-van-de-bron">
+          <h4>Taal van de bron</h4>
+          <p style="text-align:left">
+            <em>identificationInfo[1]/*/language</em>
+            <span style="float:right">[ISO 19139]</span>
+          </p>
+          <p>Dit element is conditioneel. Het is verplicht als de brontekstuele informatie bevat. Het bevat de code van de taal waarin de tekst in de bron is opgenomen. Gebruik hiervoor alleen de drie-letter codes van 639-2/B (bibliographic codes), zoals gedefinieerd op <a href="http://www.loc.gov/standards/iso639-2/">http://www.loc.gov/standards/iso639-2/</a>. Zie bijlage 1. Voor Nederlands is de code dut.</p>
+          <div id="table-12" class="table"><div class="tcolgroup"><div class="tcol" style="width: 25%">""</div><div class="tcol" style="width: 75%">""</div></div><div class="thead"><div class="tcell">Data type of Domein</div><div class="tcell">Voorbeeld</div></div><div class="trow"><div class="tcell">ISO  639-2</div><div class="tcell">dut</div></div></div>
+        </section>
+        <section id="karakterset-van-de-bron">
+          <h4>Karakterset van de bron</h4>
+          <p style="text-align:left">
+            <em>identificationInfo[1]/*/</em>
+            <span style="float:right">[ISO 19139]</span>
+          </p>
+          <p>Voor INSPIRE verplicht als voor de uitwisseling van de bron geen GML wordt gebruikt en de gebruikte karakterset geen utf8 is. Voor niet INSPIRE datasets is het verplicht als de waarde niet voldoet aan de ISO/IEC 10646 standaard. Utf8 en utf16 voldoen aan deze standaard.</p>
+          <div id="table-13" class="table"><div class="tcolgroup"><div class="tcol" style="width: 25%">""</div><div class="tcol" style="width: 75%">""</div></div><div class="thead"><div class="tcell">Data type of Domein</div><div class="tcell">Voorbeeld</div></div><div class="trow"><div class="tcell">B.5.10</div><div class="tcell">utf16</div></div></div>
+        </section>
+        <section id="onderwerp">
+          <h4>Onderwerp</h4>
+          <p style="text-align:left">
+            <em>identificationInfo[1]/*/topicCategory</em>
+            <span style="float:right">[ISO 19139]</span>
+          </p>
+          <p>Het bevat de belangrijkste onderwerpen van de dataset. De te hanteren onderwerpen zijn opgenomen in codelijst B.5.27 in bijlage 1.</p>
+          <div id="table-14" class="table"><div class="tcolgroup"><div class="tcol" style="width: 25%">""</div><div class="tcol" style="width: 75%">""</div></div><div class="thead"><div class="tcell">Data type of Domein</div><div class="tcell">Voorbeeld</div></div><div class="trow"><div class="tcell">B.5.27</div><div class="tcell">boundaries</div></div></div>
+        </section>
+        <section id="trefwoord">
+          <h4>Trefwoord</h4>
+          <p style="text-align:left">
+            <em>identificationInfo[1]/*/descriptiveKeywords/*/keyword</em>
+            <span style="float:right">[ISO 19139]</span>
+          </p>
+          <p>Het element bevat in het algemeen gebruikte woorden of geformaliseerde zinnen om een dataset of datasetserie te beschrijven. Voor datasets en dataset series die betrekking hebben op INSPIRE dient het de relevante thema’s beschrijven zoals ze zijn gedefinieerd in annex I, II en III van de directive. Deze INSPIRE thema’s zijn opgenomen in de <a href="http://www.eionet.europa.eu/gemet/inspire_themes">thesaurus</a>. Voor INSPIRE datasets dient men voor het beschrijven van de relevante thema’s tenminste één trefwoord uit deze thesaurus over te nemen, in de exacte notatie (met evt. spelfouten en hoofdletters waar toegepast), voor overige datasets mag deze thesaurus gebruikt worden. Het is ook mogelijk zelf gedefinieerde trefwoorden, of trefwoorden uit een andere thesaurus in te vullen.</p>
+          <div id="table-15" class="table"><div class="tcolgroup"><div class="tcol" style="width: 25%">""</div><div class="tcol" style="width: 75%">""</div></div><div class="thead"><div class="tcell">Data  type of Domein</div><div class="tcell">Voorbeeld</div></div><div class="trow"><div class="tcell">String</div><div class="tcell">Beschermde  Gebieden</div></div></div>
+        </section>
+        <section id="thesaurus">
+          <h4>Thesaurus</h4>
+          <p style="text-align:left">
+            <em>identificationInfo[1]/*/descriptiveKeywords/*/thesaurusName/*/title</em>
+            <span style="float:right">[ISO 19139]</span>
+          </p>
+          <p>Dit is een conditioneel element. Het is verplicht als een trefwoord uit een thesaurus afkomstig is zoals in ieder geval voor de INSPIRE thema’s. Het bevat de naam van de thesaurus waar het trefwoord uit afkomstig is. Voor INSPIRE wordt de naam "GEMET – INSPIRE themes, version 1.0" gehanteerd, zoals voorgeschreven in de metadataguidelines.</p>
+          <div id="table-16" class="table"><div class="tcolgroup"><div class="tcol" style="width: 25%">""</div><div class="tcol" style="width: 75%">""</div></div><div class="thead"><div class="tcell">Data  type of Domein</div><div class="tcell">Voorbeeld</div></div><div class="trow"><div class="tcell">string</div><div class="tcell">“GEMET – INSPIRE themes,  version 1.0”</div></div></div>
+        </section>
+        <section id="thesaurusdatum">
+          <h4>Thesaurusdatum</h4>
+          <p style="text-align:left">
+            <em>identificationInfo[1]/*/descriptiveKeywords/*/thesaurusName/*/date/*/date</em>
+            <span style="float:right">[ISO 19139]</span>
+          </p>
+          <p>Dit is een conditioneel element. Het is verplicht als een trefwoord uit een thesaurus afkomstig is zoals in ieder geval voor de INSPIRE thema’s. Het bevat de publicatie datum van de thesaurus waar het trefwoord uit afkomstig is. Het formaat van de datum is JJJJ-MM-DD (met streepjes).</p>
+          <div id="table-17" class="table"><div class="tcolgroup"><div class="tcol" style="width: 25%">""</div><div class="tcol" style="width: 75%">""</div></div><div class="thead"><div class="tcell">Data  type of Domein</div><div class="tcell">Voorbeeld</div></div><div class="trow"><div class="tcell">date</div><div class="tcell">2008-06-01</div></div></div>
+        </section>
+        <section id="thesaurusdatum-type">
+          <h4>Thesaurusdatum type</h4>
+          <p style="text-align:left">
+            <em>identificationInfo[1]/*/descriptiveKeywords/*/thesaurusName/*/date/*/dateType</em>
+            <span style="float:right">[ISO 19139]</span>
+          </p>
+          <p>Dit is een conditioneel element. Het is verplicht als een trefwoord uit een thesaurus afkomstig is zoals in ieder geval voor de INSPIRE thema’s. Het bevat het type gebeurtenis waar de datum betrekking op heeft. Type gebeurtenis wordt gekozen uit codelijst B.5.2 uit ISO 19115 (zie bijlage 1). Mogelijke gebeurtenissen zijn: creatie-, publicatie-, of revisiedatum.</p>
+          <div id="table-18" class="table"><div class="tcolgroup"><div class="tcol" style="width: 25%">""</div><div class="tcol" style="width: 75%">""</div></div><div class="thead"><div class="tcell">Data  type of Domein</div><div class="tcell">Voorbeeld</div></div><div class="trow"><div class="tcell">B.5.2</div><div class="tcell">publication</div></div></div>
+        </section>
+        <section id="minimumx-coördinaat">
+          <h4>Minimumx coördinaat</h4>
+          <p style="text-align:left">
+            <em>identificationInfo[1]/*/extent/*/geographicElement/*/</em>
+            <span style="float:right">[ISO 19139]</span>
+          </p>
+          <p>Dit element bevat de meest westelijke coördinaat uit de horizontale dekking van de dataset weergegeven in longitude en lattitude in decimale graden (noord en oost als positievewaarden). De coördinaten dienen te worden weergegeven volgens referentiesysteem WGS 84.</p>
+          <div id="table-19" class="table"><div class="tcolgroup"><div class="tcol" style="width: 25%">""</div><div class="tcol" style="width: 75%">""</div></div><div class="thead"><div class="tcell">Data type of Domein</div><div class="tcell">Voorbeeld</div></div><div class="trow"><div class="tcell">Decimal</div><div class="tcell">2.50</div></div></div>
+          <div class="advisement">
+            <i>Toelichting: Omgrenzende rechthoek</i>
+            <p>De geografische locatie kan op drie manier worden beschreven, namelijk door een omgrenzende polygon (1), een omgrenzende rechthoek (2) of door een beschrijving (3). De omgrenzenderechthoek is het meest eenvoudig vast te leggen en is verplicht.</p>
+            <p>De omgrenzende rechthoek is de kleinste extent die mogelijk is waarmee de dataset goed weergegeven wordt. </p>
+            <p>De klasse EX_GeographicBoundingBox bestaat uit vier elementen die de hoeken van de omgrenzende rechthoek in decimale graden beschrijft.</p>
+          </div>
+        </section>
+        <section id="maximumx-coördinaat">
+          <h4>Maximumx coördinaat</h4>
+          <p style="text-align:left">
+            <em>identificationInfo[1]/*/extent/*/geographicElement/*/</em>
+            <span style="float:right">[ISO 19139]</span>
+          </p>
+          <p>Dit element bevat de meest oostelijke coördinaat uit de horizontale dekking van de dataset weergegeven in longitude en lattitude in decimale graden (noord en oost als positievewaarden). De coördinaten dienen te worden weergegeven volgens referentiesysteem WGS 84.</p>
+          <div id="table-20" class="table"><div class="tcolgroup"><div class="tcol" style="width: 25%">""</div><div class="tcol" style="width: 75%">""</div></div><div class="thead"><div class="tcell">Data type of Domein</div><div class="tcell">Voorbeeld</div></div><div class="trow"><div class="tcell">Decimal</div><div class="tcell">5.80</div></div></div>
+        </section>
+        <section id="minimum-y-coördinaat">
+          <h4>Minimum y coördinaat</h4>
+          <p style="text-align:left">
+            <em>identificationInfo[1]/*/extent/*/geographicElement/*/</em>
+            <span style="float:right">[ISO 19139]</span>
+          </p>
+          <p>Dit element bevat de meest zuidelijke coördinaat uit de horizontale dekking van de dataset weergegeven in longitude en lattitude in decimale graden (noord en oost als positievewaarden). De coördinaten dienen te worden weergegeven volgens referentiesysteem WGS 84.</p>
+          <div id="table-21" class="table"><div class="tcolgroup"><div class="tcol" style="width: 25%">""</div><div class="tcol" style="width: 75%">""</div></div><div class="thead"><div class="tcell">Data type of Domein</div><div class="tcell">Voorbeeld</div></div><div class="trow"><div class="tcell">Decimal</div><div class="tcell">51.80</div></div></div>
+        </section>
+        <section id="maximumy-coördinaat">
+          <h4>Maximumy coördinaat</h4>
+          <p style="text-align:left">
+            <em>identificationInfo[1]/*/extent/*/geographicElement/*/</em>
+            <span style="float:right">[ISO 19139]</span>
+          </p>
+          <p>Dit element bevat de meest noordelijke coördinaat uit de horizontale dekking van de dataset weergegeven in longitude en lattitude in decimale graden (noord en oost als positievewaarden). De coördinaten dienen te worden weergegeven volgens referentiesysteem WGS 84.</p>
+          <div id="table-22" class="table"><div class="tcolgroup"><div class="tcol" style="width: 25%">""</div><div class="tcol" style="width: 75%">""</div></div><div class="thead"><div class="tcell">Data type of Domein</div><div class="tcell">Voorbeeld</div></div><div class="trow"><div class="tcell">Decimal</div><div class="tcell">54.60</div></div></div>
+        </section>
+        <section id="datum-van-de-bron">
+          <h4>Datum van de bron</h4>
+          <p style="text-align:left">
+            <em>identificationInfo[1]/*/citation/*/date/*/date</em>
+            <span style="float:right">[ISO 19139]</span>
+          </p>
+          <p>Creatie-, publicatie-, of revisiedatum. Het formaat van de datum is JJJJ-MM-DD(met streepjes).</p>
+          <div id="table-23" class="table"><div class="tcolgroup"><div class="tcol" style="width: 25%">""</div><div class="tcol" style="width: 75%">""</div></div><div class="thead"><div class="tcell">Data  type of Domein</div><div class="tcell">Voorbeeld</div></div><div class="trow"><div class="tcell">date</div><div class="tcell">2007-09-15</div></div></div>
+        </section>
+        <section id="datum-type-van-de-bron">
+          <h4>Datum type van de bron</h4>
+          <p style="text-align:left">
+            <em>identificationInfo[1]/*/citation/*/date/*/dateType</em>
+            <span style="float:right">[ISO 19139]</span>
+          </p>
+          <p>Dit element bevat het type gebeurtenis waar de datum betrekking op heeft. Type gebeurtenis wordt gekozenuit codelijst B.5.2. Mogelijke gebeurtenissen zijn: creatie-, publicatie-, of revisiedatum.</p>
+          <div id="table-24" class="table"><div class="tcolgroup"><div class="tcol" style="width: 25%">""</div><div class="tcol" style="width: 75%">""</div></div><div class="thead"><div class="tcell">Data  type of Domein</div><div class="tcell">Voorbeeld</div></div><div class="trow"><div class="tcell">B.5.2</div><div class="tcell">creation</div></div></div>
+        </section>
+        <section id="niveau-kwaliteitsbeschrijving">
+          <h4>Niveau kwaliteitsbeschrijving</h4>
+          <p style="text-align:left">
+            <em>dataQualityInfo/*/scope/*/level</em>
+            <span style="float:right">[ISO19139]</span>
+          </p>
+          <p>Dit element beschrijft het niveau waarop de kwaliteitsinformatie betrekking heeft. Dit niveau wordt gekozen uit codelijst B.5.25. Mogelijkeniveau’s zijn: dataset, series en featureType. Als voor INSPIRE het niveau featureType wordt gekozen dient het element features te worden gebruikt om de featuretype namen in op te nemen.</p>
+          <div id="table-25" class="table"><div class="tcolgroup"><div class="tcol" style="width: 25%">""</div><div class="tcol" style="width: 75%">""</div></div><div class="thead"><div class="tcell">Data  type of Domein</div><div class="tcell">Voorbeeld</div></div><div class="trow"><div class="tcell">B.5.25</div><div class="tcell">dataset</div></div></div>
+        </section>
+        <section id="algemene-beschrijving-herkomst">
+          <h4>Algemene beschrijving herkomst</h4>
+          <p style="text-align:left">
+            <em>dataQualityInfo/*/lineage/*/statement</em>
+            <span style="float:right">[ISO19139]</span>
+          </p>
+          <p>Dit element beschrijft de proceshistorie. Ook kwaliteitsinformatie kan hierin worden opgenomen. Kwaliteitsinformatie kan meerdere keren worden opgenomen. Er dient slechts één set kwaliteitsinformatie opgenomen worden die betrekking heeft op de gehele dataset. Hierin wordt ook het element algemene beschrijving herkomst opgenomen.</p>
+          <div id="table-26" class="table"><div class="tcolgroup"><div class="tcol" style="width: 25%">""</div><div class="tcol" style="width: 75%">""</div></div><div class="thead"><div class="tcell">Data  type of Domein</div><div class="tcell">Voorbeeld</div></div><div class="trow"><div class="tcell">string</div><div class="tcell">In dit bestand is bij de  grenzen van de provincies, daar waar ze  grenzen aan de Waddenzee, Noordzee  en Ijsselmeer, uitgegaan van de land-watergrens en niet van de  bestuursrechtelijke provinciegrens.</div></div></div>
+        </section>
+        <section id="toepassingsschaal">
+          <h4>Toepassingsschaal</h4>
+          <p style="text-align:left">
+            <em>identificationInfo[1]/*/spatialResolution/*/equivalentScale/*/denominator</em>
+            <span style="float:right">[ISO 19139]</span>
+          </p>
+          <p>Dit element is conditioneel. Het is verplicht als er een toepassingsschaal gespecificeerd kan worden. Het element bevat de mate van detail aangeduid als schaalaanduiding van een vergelijkbare hardcopy kaart. Het element kan twee keer voorkomen, hiermee wordt een interval aangegeven. Deze dient vanuit de klasse spatialResolution te worden aangemaakt.</p>
+          <div id="table-27" class="table"><div class="tcolgroup"><div class="tcol" style="width: 25%">""</div><div class="tcol" style="width: 75%">""</div></div><div class="thead"><div class="tcell">Data  type of Domein</div><div class="tcell">Voorbeeld</div></div><div class="trow"><div class="tcell">integer</div><div class="tcell">50000</div></div></div>
+        </section>
+        <section id="resolutie">
+          <h4>Resolutie</h4>
+          <p style="text-align:left">
+            <em>identificationInfo[1]/*/spatialResolution/*/distance</em>
+            <span style="float:right">[ISO 19139]</span>
+          </p>
+          <p>Dit element is conditioneel. Het is verplicht als er een resolutie gespecificeerd kan worden. Het element bevat de resolutie in meters. Het element kan twee keer voorkomen, hiermee wordt een interval aangegeven. Deze dient vanuit de klasse spatialResolution te worden aangemaakt. De meeteenheid voor lengte uit de codelijst ISOStandardUnits, de meter, wordt in het attribuut <i>UnitOfMeasure</i>van distance opgenomen.</p>
+          <div id="table-28" class="table"><div class="tcolgroup"><div class="tcol" style="width: 25%">""</div><div class="tcol" style="width: 75%">""</div></div><div class="thead"><div class="tcell">Data  type of Domein</div><div class="tcell">Voorbeeld</div></div><div class="trow"><div class="tcell">number</div><div class="tcell">3</div></div></div>
+        </section>
+        <section id="codereferentiesysteem">
+          <h4>Codereferentiesysteem</h4>
+          <p style="text-align:left">
+            <em>referenceSystemInfo/*/referenceSystemIdentifier/*/code</em>
+            <span style="float:right">[ISO 19139]</span>
+          </p>
+          <p>Dit elementbevat de Alfanumerieke waarde die het gebruikte referentiesysteem van de dataset aangeeft. EPSG geeft deze code’s uit. Voor het RD wordt de code 28992gehanteerd<span style="font-family:&quot;Helvetica&quot;,sans-serif">.</span></p>
+          <div id="table-29" class="table"><div class="tcolgroup"><div class="tcol" style="width: 25%">""</div><div class="tcol" style="width: 75%">""</div></div><div class="thead"><div class="tcell">Data  type of Domein</div><div class="tcell">Voorbeeld</div></div><div class="trow"><div class="tcell">string</div><div class="tcell">28992</div></div></div>
+          <div class="advisement">
+            <i>Toelichting</i>
+            <p>Naast het horizontaal ruimtelijk referentiesysteem kan ook het verticaal ruimtelijk referentiesysteem in de metadata worden opgeslagen, bijvoorbeeld NAP. Deze gegevens kan men in het optionele element Code verticaal referentiesysteem plaatsen.</p>
+            <p>De EPSG codeskunnen gevonden worden op de website <a href="http://www.epsg.org/">www.epsg.org</a>. Aanbevolen wordt om de Access database van de site te downloaden</p>
+          </div>
+        </section>
+        <section id="verantwoordelijke-organisatie-voor-namespace-referentiesysteem">
+          <h4>Verantwoordelijke organisatie voor namespace referentiesysteem</h4>
+          <p style="text-align:left">
+            <em>referenceSystemInfo/*/referenceSystemIdentifier/*/codeSpace</em>
+            <span style="float:right">[ISO 19139]</span>
+          </p>
+          <p>Dit element bevat de naam of identificatie van de persoon of organisatie verantwoordelijk voor de namespace (van het referentie systeem). Gebruik hiervoor standaard EPSG.</p>
+          <div id="table-30" class="table"><div class="tcolgroup"><div class="tcol" style="width: 25%">""</div><div class="tcol" style="width: 75%">""</div></div><div class="thead"><div class="tcell">Data  type of Domein</div><div class="tcell">Voorbeeld</div></div><div class="trow"><div class="tcell">String</div><div class="tcell">EPSG</div></div></div>
+        </section>
+        <section id="temporeel-referentiesysteem">
+          <h4>Temporeel referentiesysteem</h4>
+          <p style="text-align:left">
+            <em>referenceSystemInfo/*/referenceSystemIdentifier/*/code</em>
+            <span style="float:right">[ISO19139]</span>
+          </p>
+          <p>Dit element is conditioneel in dit profiel. Het is alleen verplicht als de dataset temporele informatie bevat die niet gebaseerd is op de Gregoriaanse kalender of de Coordinated Universal Time. Dit element bevat de Alfanumerieke waarde die het gebruikte referentiesysteem van de dataset aangeeft.</p>
+          <div id="table-31" class="table"><div class="tcolgroup"><div class="tcol" style="width: 25%">""</div><div class="tcol" style="width: 75%">""</div></div><div class="thead"><div class="tcell">Data  type of Domein</div><div class="tcell">Voorbeeld</div></div><div class="trow"><div class="tcell">string</div><div class="tcell">Juliaanse kalender</div></div></div>
+        </section>
+        <section id="naam-distributie-formaat">
+          <h4>Naam distributie formaat</h4>
+          <p style="text-align:left">
+            <em>distributionInfo/*/distributionFormat/*/name</em>
+            <span style="float:right">[ISO 19139]</span>
+          </p>
+          <p>Dit element is conditioneel in dit profiel. Het is alleen verplicht als de dataset een INSPIRE bron is. Dit element bevat de naam van het distributie formaat van de dataset. Deze informatie is te vinden in de INSPIRE dataspecificaties in de paragraaf genaamd Encoding.</p>
+          <div id="table-32" class="table"><div class="tcolgroup"><div class="tcol" style="width: 25%">""</div><div class="tcol" style="width: 75%">""</div></div><div class="thead"><div class="tcell">Data  type of Domein</div><div class="tcell">Voorbeeld</div></div><div class="trow"><div class="tcell">string</div><div class="tcell">Hydrography GML application  schema</div></div></div>
+        </section>
+        <section id="versie-distributie-formaat">
+          <h4>Versie distributie formaat</h4>
+          <p style="text-align:left">
+            <em>distributionInfo/*/distributionFormat/*/version</em>
+            <span style="float:right">[ISO19139]</span>
+          </p>
+          <p>Dit element is conditioneel in dit profiel. Het is alleen verplicht als de dataset een INSPIRE bron is. Dit element bevat de versie van het distributie formaat van de dataset. Deze informatie is te vinden in de INSPIRE dataspecificaties in de paragraaf genaamd Encoding.</p>
+          <div id="table-33" class="table"><div class="tcolgroup"><div class="tcol" style="width: 25%">""</div><div class="tcol" style="width: 75%">""</div></div><div class="thead"><div class="tcell">Data  type of Domein</div><div class="tcell">Voorbeeld</div></div><div class="trow"><div class="tcell">string</div><div class="tcell">version 3.0; GML, version 3.2.1</div></div></div>
+        </section>
+        <section id="specificatie-distributie-formaat">
+          <h4>Specificatie distributie formaat</h4>
+          <p style="text-align:left">
+            <em>distributionInfo/*/distributionFormat/*/specification</em>
+            <span style="float:right">[ISO 19139]</span>
+          </p>
+          <p>Dit element is conditioneel in dit profiel. Het is alleen verplicht als de dataset een INSPIRE bron is. Dit element bevat de specificatie van het distributie formaat van de dataset. Deze informatie is te vinden in de INSPIRE dataspecificaties in de paragraaf genaamd Encoding.</p>
+          <div id="table-34" class="table"><div class="tcolgroup"><div class="tcol" style="width: 25%">""</div><div class="tcol" style="width: 75%">""</div></div><div class="thead"><div class="tcell">Data  type of Domein</div><div class="tcell">Voorbeeld</div></div><div class="trow"><div class="tcell">string</div><div class="tcell">D2.8.I.8 Data  Specification on Hydrography – Guidelines</div></div></div>
+        </section>
+        <section id="conformiteit-indicatie-met-de-specificatie">
+          <h4>Conformiteit indicatie met de specificatie</h4>
+          <p style="text-align:left">
+            <em>dataQualityInfo/*/report/*/result/*/pass</em>
+            <span style="float:right">[ISO 19139]</span>
+          </p>
+          <p>Dit element is conditioneel in dit profiel. Het is alleen verplicht als de dataset een INSPIRE bron is of als de informatie is gemodelleerd volgens een specifiek informatie model. In dit element kan dan worden weergegeven of het wel of niet conform de INSPIRE specificatie is.</p>
+          <div id="table-35" class="table"><div class="tcolgroup"><div class="tcol" style="width: 25%">""</div><div class="tcol" style="width: 75%">""</div></div><div class="thead"><div class="tcell">Data  type of Domein</div><div class="tcell">Voorbeeld</div></div><div class="trow"><div class="tcell">Boolean</div><div class="tcell">TRUE</div></div></div>
+        </section>
+        <section id="verklaring">
+          <h4>Verklaring</h4>
+          <p style="text-align:left">
+            <em>dataQualityInfo/*/report/*/result/*/explanation</em>
+            <span style="float:right">[ISO 19139]</span>
+          </p>
+          <p>Dit element is conditioneel in dit profiel. Het is alleen verplicht als de dataset een INSPIRE bron is of als de informatie is gemodelleerd volgens een specifiek informatie model. Het bevat de verklaring van de betekenis van de conformiteit.</p>
+          <div id="table-36" class="table"><div class="tcolgroup"><div class="tcol" style="width: 25%">""</div><div class="tcol" style="width: 75%">""</div></div><div class="thead"><div class="tcell">Data  type of Domein</div><div class="tcell">Voorbeeld</div></div><div class="trow"><div class="tcell">String</div><div class="tcell">De hier gehanteerde domeinen  wijken af van de domeinen uit de dataspecificaties van INSPIRE</div></div></div>
+        </section>
+        <section id="specificatie">
+          <h4>Specificatie</h4>
+          <p style="text-align:left">
+            <em>dataQualityInfo/*/report/*/result/*/specification/*/title</em>
+            <span style="float:right">[ISO 19139]</span>
+          </p>
+          <p>Dit element is conditioneel in dit profiel. Het is alleen verplicht als de dataset een INSPIRE bron is of als de informatie is gemodelleerd volgens een specifiek informatie model. Het bevat de titel van de specificatie of richtlijnen of informatie model waar de dataset conform aan dient te zijn.</p>
+          <div id="table-37" class="table"><div class="tcolgroup"><div class="tcol" style="width: 25%">""</div><div class="tcol" style="width: 75%">""</div></div><div class="thead"><div class="tcell">Data  type of Domein</div><div class="tcell">Voorbeeld</div></div><div class="trow"><div class="tcell">String</div><div class="tcell">“INSPIRE Data  Specification on Administrative Units – Guidelines v3.0.1”.</div></div><div class="trow"><div class="tcell"/><div class="tcell">IMRO2008</div></div></div>
+        </section>
+        <section id="specificatiedatum">
+          <h4>Specificatiedatum</h4>
+          <p style="text-align:left">
+            <em>dataQualityInfo/*/report/*/result/*/specification/*/date/*/date</em>
+            <span style="float:right">[ISO 19139]</span>
+          </p>
+          <p>Dit element is conditioneel in dit profiel. Het is alleen verplicht als de dataset een INSPIRE bron is of als de informatie is gemodelleerd volgens een specifiek informatie model. Het bevat de datum van de specificatie of richtlijnen of informatie model waar de dataset conform aan dient te zijn. Het formaat van de datum is JJJJ-MM-DD (met streepjes).</p>
+          <div id="table-38" class="table"><div class="tcolgroup"><div class="tcol" style="width: 25%">""</div><div class="tcol" style="width: 75%">""</div></div><div class="thead"><div class="tcell">Data  type of Domein</div><div class="tcell">Voorbeeld</div></div><div class="trow"><div class="tcell">date</div><div class="tcell">2010-05-03</div></div></div>
+        </section>
+        <section id="specificatiedatum-type">
+          <h4>Specificatiedatum type</h4>
+          <p style="text-align:left">
+            <em>dataQualityInfo/*/report/*/result/*/specification/*/date/*/dateType</em>
+            <span style="float:right">[ISO 19139]</span>
+          </p>
+          <p>Dit element is conditioneel in dit profiel. Het is alleen verplicht als de dataset een INSPIRE bron is of als de informatie is gemodelleerd volgens een specifiek informatie model. Het bevat het type gebeurtenis waar de datum betrekking op heeft. Type gebeurtenis wordt gekozen uit codelijst B.5.2. Mogelijke gebeurtenissen zijn: creatie-, publicatie-, of revisiedatum.</p>
+          <div id="table-39" class="table"><div class="tcolgroup"><div class="tcol" style="width: 25%">""</div><div class="tcol" style="width: 75%">""</div></div><div class="thead"><div class="tcell">Data  type of Domein</div><div class="tcell">Voorbeeld</div></div><div class="trow"><div class="tcell">B.5.2</div><div class="tcell">publication</div></div></div>
+        </section>
+        <section id="type-waarde">
+          <h4>Type waarde</h4>
+          <p style="text-align:left">
+            <em>dataQualityInfo/*/report/*/</em>
+            <span style="float:right">[ISO 19139]</span>
+          </p>
+          <p>Dit element is conditioneel in dit profiel. Het is verplicht voor INSPIRE datasets als voor netwerken de aansluiting van hartlijnen niet is verzekerd. Het bevat de meeteenheid waarmee de topologische samenhang is vastgelegd.</p>
+          <div id="table-40" class="table"><div class="tcolgroup"><div class="tcol" style="width: 25%">""</div><div class="tcol" style="width: 75%">""</div></div><div class="thead"><div class="tcell">Data  type of Domein</div><div class="tcell">Voorbeeld</div></div><div class="trow"><div class="tcell">UnitOfMeasure</div><div class="tcell">cm</div></div></div>
+        </section>
+        <section id="topologische-samenhang">
+          <h4>Topologische samenhang</h4>
+          <p style="text-align:left">
+            <em>dataQualityInfo/*/report/*/</em>
+            <span style="float:right">[ISO 19139]</span>
+          </p>
+          <p>Dit element is conditioneel in dit profiel. Het is verplicht voor INSPIRE datasets als voor netwerken de aansluiting van hartlijnen niet is verzekerd. Het bevat de tolerantie waarmee de topologische samenhang is vastgelegd</p>
+          <div id="table-41" class="table"><div class="tcolgroup"><div class="tcol" style="width: 25%">""</div><div class="tcol" style="width: 75%">""</div></div><div class="thead"><div class="tcell">Data  type of Domein</div><div class="tcell">Voorbeeld</div></div><div class="trow"><div class="tcell">Record</div><div class="tcell">3</div></div></div>
+        </section>
+        <section id="juridische-toegangsrestricties">
+          <h4>Juridische toegangsrestricties</h4>
+          <p style="text-align:left">
+            <em>identificationInfo[1]/*/resourceConstraints/*/accessConstraints</em>
+            <span style="float:right">[ISO 19139]</span>
+          </p>
+          <p>Het is verplicht op zijn minst één van de drie elementen (juridische) toegangsrestricties, overige beperkingen of veiligheidsrestricties op te nemen. Als er geen beperkingen zijn dient men dat bij overige beperkingen aan te geven. Als er overige beperkingen worden opgenomen, dient hier de waarde “anders” gekozen te worden. In bijlage 6 is uitgewerkt hoe gebruiksvoorwaarden en public domein mark toe te passen. Dit element bevat toegangseisen die er zorg voor dragen dat privacy of intellectueel eigendom gewaarborgd zijn en elke andere speciale beperkingen voor het verkrijgen van de metadata of data. De waardes komen uit codelijst B.5.24 van ISO19115 (zie bijlage 1).</p>
+          <div id="table-42" class="table"><div class="tcolgroup"><div class="tcol" style="width: 25%">""</div><div class="tcol" style="width: 75%">""</div></div><div class="thead"><div class="tcell">Data  type of Domein</div><div class="tcell">Voorbeeld</div></div><div class="trow"><div class="tcell">B.5.24</div><div class="tcell">intellectualPropertyRights</div></div></div>
+        </section>
+        <section id="overige-beperkingen">
+          <h4>Overige beperkingen</h4>
+          <p style="text-align:left">
+            <em/>identificationInfo[1]/*/resourceConstraints/*/otherConstraints</em>
+            <span style="float:right">[ISO 19139]</span>
+          </p>
+          <p>Het is verplicht op zijn minst één van de drie elementen (juridische) toegangsrestricties, overige beperkingen of veiligheidsrestricties op te nemen. Als er geen beperkingen zijn dient men dat bij overige beperkingen aan te geven. Als er een waarde in dit element wordt ingevuld, dient bij het element (juridische) toegangsrestricties de waarde “anders” gekozen te worden. In bijlage 6 is uitgewerkt hoe gebruiksvoorwaarden en public domein mark toe te passen. Dit element bevat andere restricties en vereisten voor toegang en gebruik van de data. Als er geen beperkingen zijn dient men de tekst “geen beperkingen” op te nemen.</p>
+          <div id="table-43" class="table"><div class="tcolgroup"><div class="tcol" style="width: 25%">""</div><div class="tcol" style="width: 75%">""</div></div><div class="thead"><div class="tcell">Data  type of Domein</div><div class="tcell">Voorbeeld</div></div><div class="trow"><div class="tcell">String</div><div class="tcell">geen  beperkingen</div></div></div>
+        </section>
+        <section id="veiligheidsrestricties">
+          <h4>Veiligheidsrestricties</h4>
+          <p style="text-align:left">
+            <em>identificationInfo[1]/*/resourceConstraints/*/classification</em>
+            <span style="float:right">[ISO 19139]</span>
+          </p>
+          <p>Het is verplicht op zijn minst één van de drie elementen (juridische) toegangsrestricties, overige beperkingen of veiligheidsrestricties op te nemen. Als er geen beperkingen zijn dient men dat bij overige beperkingen aan te geven. In bijlage 6 is uitgewerkt hoe gebruiksvoorwaardenen public domein mark toe te passen. Dit element bevat de soort restrictie op de data. Hiervoor is codelijst B.5.11 (zie bijlage 1).</p>
+          <div id="table-44" class="table"><div class="tcolgroup"><div class="tcol" style="width: 25%">""</div><div class="tcol" style="width: 75%">""</div></div><div class="thead"><div class="tcell">Data  type of Domein</div><div class="tcell">Voorbeeld</div></div><div class="trow"><div class="tcell">B.5.11</div><div class="tcell">restricted</div></div></div>
+        </section>
+        <section id="gebruiksbeperkingen">
+          <h4>Gebruiksbeperkingen</h4>
+          <p style="text-align:left">
+            <em>identificationInfo[1]/*/resourceConstraints/*/useLimitation</em>
+            <span style="float:right">[ISO 19139]</span>
+          </p>
+          <p>Dit element bevat toepassingen waarvoor de dataset niet geschikt is. Voor INSPIRE, bevat het indien van toepassing ook prijsinformatie voor het gebruik van de dataset.</p>
+          <div id="table-45" class="table"><div class="tcolgroup"><div class="tcol" style="width: 25%">""</div><div class="tcol" style="width: 75%">""</div></div><div class="thead"><div class="tcell">Data  type of Domein</div><div class="tcell">Voorbeeld</div></div><div class="trow"><div class="tcell">String</div><div class="tcell">Niet gebruiken voor navigatie</div></div></div>
+        </section>
+        <section id="verantwoordelijke-organisatie-bron">
+          <h4>Verantwoordelijke organisatie bron</h4>
+          <p style="text-align:left">
+            <em>identificationInfo[1]/*/pointOfContact/*/organisationName</em>
+            <span style="float:right">[ISO 19139]</span>
+          </p>
+          <p>Dit element is de identificatie van de verantwoordelijke organisatie. Van de organisatie wordt de organisatie naam vastgelegd. Gebruik de volledig uitgeschreven naam van de verantwoordelijke organisatie. De afkorting kan toegevoegd worden aan de organisatienaam. Voor de correcte overheidsnamen zie: <a href="http://almanak.overheid.nl/">http://almanak.overheid.nl/</a>.</p>
+          <div id="table-46" class="table"><div class="tcolgroup"><div class="tcol" style="width: 25%">""</div><div class="tcol" style="width: 75%">""</div></div><div class="thead"><div class="tcell">Data  type of Domein</div><div class="tcell">Voorbeeld</div></div><div class="trow"><div class="tcell">String</div><div class="tcell">Nederlandse organisatie voor  toegepast-natuurwetenschappelijk onderzoek (TNO)</div></div></div>
+        </section>
+        <section id="verantwoordelijkeorganisatie-bron-email">
+          <h4>Verantwoordelijkeorganisatie bron: e-mail</h4>
+          <p style="text-align:left">
+            <em>identificationInfo[1]/*/pointOfContact/*/contactInfo/*/address/*/electronicMailAddress</em>
+            <span style="float:right">[ISO 19139]</span>
+          </p>
+          <p>Dit element bevat het e-mail adres van de verantwoordelijke organisatie van de bron.</p>
+          <div id="table-47" class="table"><div class="tcolgroup"><div class="tcol" style="width: 25%">""</div><div class="tcol" style="width: 75%">""</div></div><div class="thead"><div class="tcell">Data  type of Domein</div><div class="tcell">Voorbeeld</div></div><div class="trow"><div class="tcell">String</div><div class="tcell">wegwijzer@tno.nl</div></div></div>
+        </section>
+        <section id="verantwoordelijke-organisatie-bron:-rol">
+          <h4>Verantwoordelijke organisatie bron rol</h4>
+          <p style="text-align:left">
+            <em>identificationInfo[1]/*/pointOfContact/*/role</em>
+            <span style="float:right">[ISO 19139]</span>
+          </p>
+          <p>Dit element geeft de rol van de verantwoordelijke organisatie van de bron weer. Voor de rol van de organisatie wordt een codelijst gehanteerd (zie bijlage 1).</p>
+          <div id="table-48" class="table"><div class="tcolgroup"><div class="tcol" style="width: 25%">""</div><div class="tcol" style="width: 75%">""</div></div><div class="thead"><div class="tcell">Data  type of Domein</div><div class="tcell">Voorbeeld</div></div><div class="trow"><div class="tcell">B.5.5</div><div class="tcell">pointOfContact</div></div></div>
+        </section>
+        <section id="metadata-unieke-identifier">
+          <h4>Metadata unieke identifier</h4>
+          <p style="text-align:left">
+            <em>fileIdentifier</em>
+            <span style="float:right">[ISO 19139]</span>
+          </p>
+          <p>Dit element bevat de unieke identifier voor de metadata file. Geadviseerd wordt om gebruik te maken van een betekenisloze identifier die wereldwijd uniek is zoals de <a href="http://en.wikipedia.org/wiki/UUID">Universal Unique Identifier</a></p>
+          <div id="table-49" class="table"><div class="tcolgroup"><div class="tcol" style="width: 25%">""</div><div class="tcol" style="width: 75%">""</div></div><div class="thead"><div class="tcell">Data  type of Domein</div><div class="tcell">Voorbeeld</div></div><div class="trow"><div class="tcell">string</div><div class="tcell">550e8400-e29b-41d4-a716-446655440000</div></div></div>
+        </section>
+        <section id="parent-unieke-identifier">
+          <h4>Parent unieke identifier</h4>
+          <p style="text-align:left">
+            <em>parentIdentifier</em>
+            <span style="float:right">[ISO 19139]</span>
+          </p>
+          <p>Dit element is conditioneel in de kernset. Het is verplicht als er een dataset met hogere hiërarchie is. Het bevat de unieke ID van de metadata waarvan deze metadata een subset is.</p>
+          <div id="table-50" class="table"><div class="tcolgroup"><div class="tcol" style="width: 25%">""</div><div class="tcol" style="width: 75%">""</div></div><div class="thead"><div class="tcell">Data  type of Domein</div><div class="tcell">Voorbeeld</div></div><div class="trow"><div class="tcell">string</div><div class="tcell">550e8400-e29b-41d4-a716-446655440000</div></div></div>
+        </section>
+        <section id="verantwoordelijkeorganisatie-metadata">
+          <h4>Verantwoordelijkeorganisatie metadata</h4>
+          <p style="text-align:left">
+            <em>contact/*/organisationName</em>
+            <span style="float:right">[ISO 19139]</span>
+          </p>
+          <p>Dit element bevat de organisatie verantwoordelijk voor de metadata. Gebruik de volledig uitgeschreven naam van de verantwoordelijke organisatie. De afkorting kan toegevoegd worden aan de organisatienaam. Voor de correcte overheidsnamen zie: <a href="http://almanak.overheid.nl/">http://almanak.overheid.nl/</a>.</p>
+          <div id="table-51" class="table"><div class="tcolgroup"><div class="tcol" style="width: 25%">""</div><div class="tcol" style="width: 75%">""</div></div><div class="thead"><div class="tcell">Data  type of Domein</div><div class="tcell">Voorbeeld</div></div><div class="trow"><div class="tcell">string</div><div class="tcell">Nederlandse organisatie voor  toegepast-natuurwetenschappelijk onderzoek (TNO)</div></div></div>
+        </section>
+        <section id="verantwoordelijke-organisatie-metadata:-rol">
+          <h4>Verantwoordelijke organisatie metadata rol</h4>
+          <p style="text-align:left">
+            <em>contact/*/role</em>
+            <span style="float:right">[ISO 19139]</span>
+          </p>
+          <p>Dit element bevat de rol van de organisatie verantwoordelijk voor de metadata. Voor de rol van de organisatie wordt een codelijst gehanteerd. INSPIRE vereist pointOfContact.</p>
+          <div id="table-52" class="table"><div class="tcolgroup"><div class="tcol" style="width: 25%">""</div><div class="tcol" style="width: 75%">""</div></div><div class="thead"><div class="tcell">Data  type of Domein</div><div class="tcell">Voorbeeld</div></div><div class="trow"><div class="tcell">B.5.5</div><div class="tcell">pointOfContact</div></div></div>
+        </section>
+        <section id="verantwoordelijke-organisatie-metadata:-e-mail">
+          <h4>Verantwoordelijke organisatie metadata e mail</h4>
+          <p style="text-align:left">
+            <em>contact/*/contactInfo/*/address/*/electronicMailAddress</em>
+            <span style="float:right">[ISO 19139]</span>
+          </p>
+          <p>Dit element bevat het e-mail adres van de organisatie verantwoordelijk voor de metadata.</p>
+          <div id="table-53" class="table"><div class="tcolgroup"><div class="tcol" style="width: 25%">""</div><div class="tcol" style="width: 75%">""</div></div><div class="thead"><div class="tcell">Data  type of Domein</div><div class="tcell">Voorbeeld</div></div><div class="trow"><div class="tcell">string</div><div class="tcell">wegwijzer@tno.nl</div></div></div>
+        </section>
+        <section id="metadatadatum">
+          <h4>Metadatadatum</h4>
+          <p style="text-align:left">
+            <em>dateStamp</em>
+            <span style="float:right">[ISO 19139]</span>
+          </p>
+          <p>Datum waarop de metadata gemaakt ofgewijzigd is. Het formaat van de datum is JJJJ-MM-DD (met streepjes).</p>
+          <div id="table-54" class="table"><div class="tcolgroup"><div class="tcol" style="width: 25%">""</div><div class="tcol" style="width: 75%">""</div></div><div class="thead"><div class="tcell">Data  type of Domein</div><div class="tcell">Voorbeeld</div></div><div class="trow"><div class="tcell">Datum</div><div class="tcell">2008-02-25</div></div></div>
+        </section>
+        <section id="taal-van-de-metadata">
+          <h4>Taal van de metadata</h4>
+          <p style="text-align:left">
+            <em>Language</em>
+            <span style="float:right">[ISO 19139]</span>
+          </p>
+          <p>In dit element wordt vastgelegd in welke taal de metadata is beschreven. Het bevat de code van de taal waarin de tekst in de metadata is opgenomen. Gebruik hiervoor alleen de drie-letter codes van 639-2/B (bibliographic codes), zoals gedefinieerd op <a href="http://www.loc.gov/standards/iso639-2/">http://www.loc.gov/standards/iso639-2/</a>. De code voor Nederlands is dut. Zie bijlage 1. Over het algemeen is dut de default waarde.</p>
+          <div id="table-55" class="table"><div class="tcolgroup"><div class="tcol" style="width: 25%">""</div><div class="tcol" style="width: 75%">""</div></div><div class="thead"><div class="tcell">Data  type of Domein</div><div class="tcell">Voorbeeld</div></div><div class="trow"><div class="tcell">ISO 639-2</div><div class="tcell">dut</div></div></div>
+        </section>
+        <section id="metadata-standaard-naam">
+          <h4>Metadata standaard naam</h4>
+          <p style="text-align:left">
+            <em>metadataStandardName</em>
+            <span style="float:right">[ISO 19139]</span>
+          </p>
+          <p>Dit element is nodig om uitbreidingen op profielen te duiden. Dit element bevat de naam van de standaard.</p>
+          <div id="table-56" class="table"><div class="tcolgroup"><div class="tcol" style="width: 25%">""</div><div class="tcol" style="width: 75%">""</div></div><div class="thead"><div class="tcell">Data  type of Domein</div><div class="tcell">Voorbeeld</div></div><div class="trow"><div class="tcell">string</div><div class="tcell">ISO 19115</div></div></div>
+        </section>
+        <section id="metadatastandaard-versie">
+          <h4>Metadatastandaard versie</h4>
+          <p style="text-align:left">
+            <em>metadataStandardVersion</em>
+            <span style="float:right">[ISO 19139]</span>
+          </p>
+          <p>Dit element is nodig om uitbreidingen op standaarden aan te geven. Dit element bevat de versie (profiel) van de metadatastandaard die wordtgebruikt.</p>
+          <div id="table-57" class="table"><div class="tcolgroup"><div class="tcol" style="width: 25%">""</div><div class="tcol" style="width: 75%">""</div></div><div class="thead"><div class="tcell">Data  type of Domein</div><div class="tcell">Voorbeeld</div></div><div class="trow"><div class="tcell">string</div><div class="tcell">Nederlandse metadata profiel  op ISO 19115 voor geografie 1.3</div></div></div>
         </section>
       </section>
-    <section id="metadata-elementen-uitwerking">
-      <h3>Metadata elementen uitwerking</h3>
-      <section id="titel-van-de-bron">
-        <h4>Titel van de bron</h4>
-        <p style="text-align:left"><em>identificationInfo[1]/*/citation/*/title</em><span style="float:right">[ISO 19139]</span></p>
-        <p>Dit element dient om de naam van de dataset in vast te leggen.</p>
-      </section>
-    </section>
     </section>
   </body>
 </html>
