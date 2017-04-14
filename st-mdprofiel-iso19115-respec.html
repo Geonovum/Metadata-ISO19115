@@ -2632,26 +2632,253 @@
     </section>
     <section class="appendix" id="appendix-b">
       <h3>Invulinstructies</h3>
+      <p class="note" title='Appendix B Visualisatie'>Dit is een test om Appendix B (ofwel Bijlage 2: Invulinstructies) te visualiseren, zoals vermeld in <a href="https://github.com/Geonovum/Metadata-ISO19115/issues/1">Issue #1</a></p>
       <p>Metadata ISO-19115 classes.</p>
       <div class="azlist">
-        <p>Classes: <a href="">Metadata unieke identifier</a> | <a href="">Taal van de metadata</a> | <a href="">Metadata karakterset</a> | <a href="">Parent unieke identifier</a> | <a href="">Hiërarchieniveau</a> | <a href="">Hiërarchieniveau naam</a> | <a href="">Contact</a> | <a href="">Metadata datum</a> | <a href=""><Metadata standaard naam/a> | <a href="">Metadata standaard versie</a></p>
+        <p>Classes: <a href="#metadata-unieke-identifier-appendix-b">Metadata unieke identifier</a> | <a href="#taal-van-de-appendix-b">Taal van de metadata</a> | <a href="#metadata-karakterset-appendix-b">Metadata karakterset</a> | <a href="">Parent unieke identifier</a> | <a href="">Hiërarchieniveau</a> | <a href="">Hiërarchieniveau naam</a> | <a href="#contact-appendix-b">Contact</a> | <a href="">Metadata datum</a> | <a href=""><Metadata standaard naam/a> | <a href="">Metadata standaard versie</a></p>
       </div>
-      <section id ="contact">
+      <section id="metadata-unieke-identifier-appendix-b">
+        <h4>Metadata unieke identifier</h4>
+        <em>Metadata unieke identifier</em> - Unieke ID voor de metadata file.<br>
+        <table>
+          <tr>
+            <th>Longname</th>
+            <td>MD_Metadata.fileIdentifier</td>
+          </tr>
+            <th>Type veld</th>
+            <td>String</td>
+          <tr>
+            <th>Domein</th>
+            <td>&nbsp;</td>
+          </tr>
+          <tr>
+            <th>Wijze van invoering</th>
+            <td>Impliciet</td>
+          </tr>
+          <tr>
+            <th>Engelse naam</th>
+            <td>fileIdentifier</td>
+          </tr>
+          <tr>
+            <th>Opmerking</th>
+            <td>Vaak wordt dit geregeld door de metadataeditor en is in de gebruikersinterface niet in te vullen. Als wel aan de gebruiker om een id wordt gevraagd, gebruik dan een <a href="http://en.wikipedia.org/wiki/UUID">Universal Unique Identifier</a>.</td>
+          </tr>
+          <tr>
+            <th>Multipliciteit</th>
+            <td>1</td>
+          </tr>
+        </table>
+        <aside  class="example" title="XML voorbeeld">
+          <pre><code>&ltgmd:MD_Metadata&gt
+  &ltgmd:fileIdentifier&gt
+    &ltgco:CharacterString&gt550E8400-E29B-11D4-A716-446655440000&lt/gmd:CharacterString&gt
+  &lt/gmd:fileIdentifier&gt
+  .
+  .
+&lt/gmd:MD_Metadata&gt</code></pre>
+        </aside>
+      </section>
+      <section id="taal-van-de-appendix-b">
+        <h4>Taal van de metadata</h4>
+        <em>Taal van de metadata</em> - Taal gebruikt om de metadata te beschrijven.<br>
+        <table>
+          <tr>
+            <th>Longname</th>
+            <td>MD_Metadata.language</td>
+          </tr>
+            <th>Type veld</th>
+            <td>codelijst</td>
+          <tr>
+            <th>Domein</th>
+            <td><a href="#codelijst-iso-639-2">ISO 639-2</a></td>
+          </tr>
+          <tr>
+            <th>Wijze van invoering</th>
+            <td>default</td>
+          </tr>
+          <tr>
+            <th>Engelse naam</th>
+            <td>language</td>
+          </tr>
+          <tr>
+            <th>Opmerking</th>
+            <td>Code voor de taal waarmee de metadata is beschreven.</td>
+          </tr>
+          <tr>
+            <th>Multipliciteit</th>
+            <td>1</td>
+          </tr>
+        </table>
+        <aside  class="example" title="XML voorbeeld">
+          <pre><code>&ltgmd:MD_Metadata&gt
+  &ltgmd:language&gt
+    &ltgco:CharacterString&gtdut&lt/gmd:CharacterString&gt
+  &lt/gmd:language&gt
+  .
+  .
+&lt/gmd:MD_Metadata&gt</code></pre>
+        </aside>
+      </section>
+      <section id="metadata-karakterset-appendix-b">
+        <h4>Metadata karakterset</h4>
+        <em>Metadata karakterset</em> - Volledige naam van de karakter codeerstandaard om de metadata set te beschrijven..<br>
+        <table>
+          <tr>
+            <th>Longname</th>
+            <td>MD_Metadata.characterSet</td>
+          </tr>
+            <th>Type veld</th>
+            <td>codelijst</td>
+          <tr>
+            <th>Domein</th>
+            <td><a href="#codelijst-b510">B.5.10</a></td>
+          </tr>
+          <tr>
+            <th>Wijze van invoering</th>
+            <td>default</td>
+          </tr>
+          <tr>
+            <th>Engelse naam</th>
+            <td>characterSet</td>
+          </tr>
+          <tr>
+            <th>Opmerking</th>
+            <td>De waarde utf8 en utf16 voldoen aan de ISO/IEC 10646 standaard. Hierdoor is het niet nodig dit element uit te wisselen. Als men van deze standaard afwijkt, dient men wel de karakter codeerstandaard op te nemen.</td>
+          </tr>
+          <tr>
+            <th>Multipliciteit</th>
+            <td>1</td>
+          </tr>
+        </table>
+        <aside  class="example" title="XML voorbeeld">
+          <pre><code>&ltgmd:MD_Metadata&gt
+  &ltgmd:characterSet&gt
+    &ltgmd:MD_CharacterSet&gtutf8&lt/gmd:MD_CharacterSet&gt
+  &lt/gmd:characterSet&gt
+  .
+  .
+&lt/gmd:MD_Metadata&gt</code></pre>
+        </aside>
+      </section>
+      <section id ="contact-appendix-b">
         <h4>Contact</h4>
-        <div class="specterm">
-          <h4>Contact</h4>
-          <p><em>Naam contactpersoon metadata</em></p>
+        <div class="azlist">
+          <p>Sub-classes: <a href="#naam-contactpersoon-metadata-appendix-b">Naam contactpersoon metadata</a> | <a href="#verantwoordelijke-organisatie-metadata-appendix-b">Verantwoordelijke organisatie metadata</a> | <a href="#rol-contactpersoon-metadata-appendix-b">Rol contactpersoon metadata</a></p>
         </div>
-        <div class="example">
-          <p>XML voorbeeld.</p>
-          <pre class="highlight"><code>
-&ltmd:contact&gt
-  &ltmd:CL_ResponsibleParty&gt
-    &ltmd:individualName&gtBleker, L.&lt/md:individualName&gt
-  &lt/md:CL_ResponsibleParty&gt
-&lt/md:contact&gt
-          </code></pre>
-        </div>
+        <!-- Section: Naam contactpersoon metadata-->
+        <h4 id="naam-contactpersoon-metadata-appendix-b">Naam contactpersoon metadata</h4>
+        <em>Naam contactpersoon metadata</em> - Naam van de contactpersoon.
+        <table>
+          <tr>
+            <th>Longname</th>
+            <td>MD_Metadata.contact>CI_ResponsibleParty.individualName</td>
+          </tr>
+            <th>Type veld</th>
+            <td>string</td>
+          <tr>
+            <th>Domein</th>
+            <td>&nbsp;</td>
+          </tr>
+          <tr>
+            <th>Wijze van invoering</th>
+            <td>expliciet</td>
+          </tr>
+          <tr>
+            <th>Engelse naam</th>
+            <td>individualName</td>
+          </tr>
+          <tr>
+            <th>Opmerking</th>
+            <td>&nbsp;</td>
+          </tr>
+          <tr>
+            <th>Multipliciteit</th>
+            <td>1</td>
+          </tr>
+        </table>
+        <!-- Section: Verantwoordelijke organisatie metadata-->
+        <h4 id="verantwoordelijke-organisatie-metadata-appendix-b">Verantwoordelijke organisatie metadata</h4>
+        <em>Verantwoordelijke organisatie metadata</em> - Volledige naam van de voor metadata verantwoordelijke organisatie. Indien niet een organisatie verantwoordelijk is, maar een persoon, dan wordt de naam van deze persoon ingevuld.
+        <table>
+          <tr>
+            <th>Longname</th>
+            <td>MD_Metadata.contact>CI_ResponsibleParty.organisationName</td>
+          </tr>
+            <th>Type veld</th>
+            <td>string</td>
+          <tr>
+            <th>Domein</th>
+            <td>&nbsp;</td>
+          </tr>
+          <tr>
+            <th>Wijze van invoering</th>
+            <td>default</td>
+          </tr>
+          <tr>
+            <th>Engelse naam</th>
+            <td>organisationName</td>
+          </tr>
+          <tr>
+            <th>Opmerking</th>
+            <td>Gebruik de volledig uitgeschreven naam van de verantwoordelijke organisatie. De afkorting kan toegevoegd worden aan de organisatienaam. Voor de correcte overheidsnamen zie: <a href="http://almanak.overheid.nl/">http://almanak.overheid.nl/</a>.<td>
+          </tr>
+          <tr>
+            <th>Multipliciteit</th>
+            <td>1</td>
+          </tr>
+        </table>
+        <!-- Section: Naam contactpersoon metadata-->
+        <h4 id="rol-contactpersoon-metadata-appendix-b">Rol contactpersoon metadata</h4>
+        <em>Rol contactpersoon metadata</em> - Beschrijving op welke manier de persoon betrokken is bij de metadata.
+        <table>
+          <tr>
+            <th>Longname</th>
+            <td>MD_Metadata.contact>CI_ResponsibleParty.positionName</td>
+          </tr>
+            <th>Type veld</th>
+            <td>string</td>
+          <tr>
+            <th>Domein</th>
+            <td>&nbsp;</td>
+          </tr>
+          <tr>
+            <th>Wijze van invoering</th>
+            <td>expliciet</td>
+          </tr>
+          <tr>
+            <th>Engelse naam</th>
+            <td>role</td>
+          </tr>
+          <tr>
+            <th>Opmerking</th>
+            <td>&nbsp;</td>
+          </tr>
+          <tr>
+            <th>Multipliciteit</th>
+            <td>1</td>
+          </tr>
+        </table>
+        <aside  class="example" title="XML voorbeeld">
+          <pre class="highlight"><code>&ltgmd:MD_Metadata&gt
+  &ltgmd:contact&gt
+    &ltgmd:CI_ResponsibleParty&gt
+      &ltgmd:individualName&gt
+        &ltgco:CharacterString&gtBleker, L&lt/gco:CharacterString&gt
+      &lt/gmd:individualName&gt
+      &ltgmd:organisationName&gt
+        &ltgco:CharacterString&gtMinisterie van Economische Zaken, Landbouw en Innovatie , Dienst Landelijk Gebied (EL&I DLG)&lt/gco:CharacterString&gt
+      &lt/gmd:organisationName&gt
+      &ltgmd:positionName&gt
+        &ltgco:CharacterString&gtTechnisch contactpersoon, Inhoudelijk contactpersoon, GI-beheerder.&lt/gco:CharacterString&gt
+      &lt/gmd:positionName&gt
+    &lt/gmd:CI_ResponsibleParty&gt
+    .
+    .
+  &lt/gmd:contact&gt
+  .
+  .
+&lt/gmd:MD_Metadata&gt</code></pre>
+        </aside >
       </section>
       <!--<table id="table-73">
         <thead>
@@ -4614,7 +4841,7 @@
           <td colspan="7">Toelichting</td>
           <td>MD_Metadata.identificationInfo>MD_DataIdentification.resourceConstraints>MD_SecurityConstraints.userNote</td>
           <td>Toelichting op de veiligheidsrestricties.</td>
-          <td>Voor toegang tot de data kunt u zich wenden tot Ã¢â¬Â¦Ã¢â¬Â¦.</td>
+          <td>Voor toegang tot de data kunt u zich wenden tot …….</td>
           <td>&nbsp;</td>
           <td>string</td>
           <td>&nbsp;</td>
@@ -8803,21 +9030,19 @@
     <section class="appendix" id="appendix-g">
       <h2>Temporele dekking in XML</h2>
       <p>Er zijn verschillende methoden, waarmee de temporele dekking in XML kan worden vastgelegd. Ook INSPIRE laat de keuze daarin vrij. Voor de interoperabiliteit is het echter noodzakelijk dezelfde methode te hanteren. Daarom wordt voor de implementatie van dit profiel de volgende notering voor temporele dekking gehanteerd;</p>
-      <pre>
-        &ltgml:TimePeriodgml:id="temporal-extent-1"xmlns:gml="&lta
-        href="http://www.opengis.net/gml"&gthttp://www.opengis.net/gml&lt/a&gt"&gt
-          &ltgml:begin&gt
-            &ltgml:TimeInstant gml:id="start_temporal-extent-1"&gt
-              &ltgml:timePosition&gt2009-11-27&lt/gml:timePosition&gt
-            &lt/gml:TimeInstant&gt
-          &lt/gml:begin&gt
-          &ltgml:end&gt
-            &ltgml:TimeInstant gml:id="end_temporal-extent-1"&gt
-              &ltgml:timePosition&gt2009-11-27&lt/gml:timePosition&gt
-            &lt/gml:TimeInstant&gt
-          &lt/gml:end&gt
-        &lt/gml:TimePeriod&gt
-      </pre>
+      <pre><code>&ltgml:TimePeriod gml:id="temporal-extent-1"
+xmlns:gml="&ltahref="http://www.opengis.net/gml"&gthttp://www.opengis.net/gml&lt/a&gt"&gt
+  &ltgml:begin&gt
+    &ltgml:TimeInstant gml:id="start_temporal-extent-1"&gt
+      &ltgml:timePosition&gt2009-11-27&lt/gml:timePosition&gt
+    &lt/gml:TimeInstant&gt
+  &lt/gml:begin&gt
+  &ltgml:end&gt
+    &ltgml:TimeInstant gml:id="end_temporal-extent-1"&gt
+      &ltgml:timePosition&gt2009-11-27&lt/gml:timePosition&gt
+    &lt/gml:TimeInstant&gt
+  &lt/gml:end&gt
+&lt/gml:TimePeriod&gt</code></pre>
     </section>
     <section class="appendix" id="appendix-h">
       <h2>Koppeling vanuit metadata met data en service</h2>

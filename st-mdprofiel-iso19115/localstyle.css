@@ -22,3 +22,10 @@ th, td {
 th {
     color: #005A9C;
 }
+
+div.azlist {
+    background: #dddddd;
+    border: solid #000000;
+    padding: 5px;
+    width: 100%;
+}

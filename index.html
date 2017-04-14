@@ -106,6 +106,54 @@ github.com style (c) Vasily Polovnyov <vast@whiteants.net>
     }
   </style>
   <style>
+    /* --- EXAMPLES --- */
+
+    div.example-title {
+      min-width: 7.5em;
+      color: #b9ab2d;
+    }
+
+    div.example-title span {
+      text-transform: uppercase;
+    }
+
+    aside.example,
+    div.example,
+    div.illegal-example {
+      padding: 0.5em;
+      margin: 1em 0;
+      position: relative;
+      clear: both;
+    }
+
+    div.illegal-example {
+      color: red
+    }
+
+    div.illegal-example p {
+      color: black
+    }
+
+    aside.example,
+    div.example {
+      padding: .5em;
+      border-left-width: .5em;
+      border-left-style: solid;
+      border-color: #e0cb52;
+      background: #fcfaee;
+    }
+
+    aside.example div.example {
+      border-left-width: .1em;
+      border-color: #999;
+      background: #fff;
+    }
+
+    aside.example div.example div.example-title {
+      color: #999;
+    }
+  </style>
+  <style>
     /* --- ISSUES/NOTES --- */
 
     div.issue-title,
@@ -920,7 +968,14 @@ github.com style (c) Vasily Polovnyov <vast@whiteants.net>
           </li>
         </ol>
       </li>
-      <li class="tocline"><a href="#appendix-b" class="tocxref"><span class="secno">B. </span>Invulinstructies</a></li>
+      <li class="tocline"><a href="#appendix-b" class="tocxref"><span class="secno">B. </span>Invulinstructies</a>
+        <ol class="toc">
+          <li class="tocline"><a href="#metadata-unieke-identifier-appendix-b" class="tocxref"><span class="secno">B.1 </span>Metadata unieke identifier</a></li>
+          <li class="tocline"><a href="#taal-van-de-appendix-b" class="tocxref"><span class="secno">B.2 </span>Taal van de metadata</a></li>
+          <li class="tocline"><a href="#metadata-karakterset-appendix-b" class="tocxref"><span class="secno">B.3 </span>Metadata karakterset</a></li>
+          <li class="tocline"><a href="#contact-appendix-b" class="tocxref"><span class="secno">B.4 </span>Contact</a></li>
+        </ol>
+      </li>
       <li class="tocline"><a href="#appendix-c" class="tocxref"><span class="secno">C. </span>Wijzigingen op ISO 19115:2003</a></li>
       <li class="tocline"><a href="#appendix-d" class="tocxref"><span class="secno">D. </span>Verantwoording metadata elementen</a></li>
       <li class="tocline"><a href="#appendix-e" class="tocxref"><span class="secno">E. </span>Mapping Kernset 1.3 - OWMS 4.0</a></li>
@@ -4611,6 +4666,298 @@ github.com style (c) Vasily Polovnyov <vast@whiteants.net>
     <!--OddPage-->
     <h2 id="h-appendix-b" resource="#h-appendix-b"><span property="xhv:role" resource="xhv:heading"><span class="secno">B. </span>Invulinstructies</span>
     </h2>
+    <div class="note">
+      <div class="note-title marker" aria-level="3" role="heading" id="h-note1"><span>Noot</span><span style="text-transform: none">: Appendix B Visualisatie</span></div>
+      <p class="">Dit is een test om Appendix B (ofwel Bijlage 2: Invulinstructies) te visualiseren, zoals vermeld in <a href="https://github.com/Geonovum/Metadata-ISO19115/issues/1">Issue #1</a></p>
+    </div>
+    <p>Metadata ISO-19115 classes.</p>
+    <div class="azlist">
+      <p>Classes: <a href="#metadata-unieke-identifier-appendix-b">Metadata unieke identifier</a> | <a href="#taal-van-de-appendix-b">Taal van de metadata</a> | <a href="#metadata-karakterset-appendix-b">Metadata karakterset</a> | <a href="">Parent unieke identifier</a> | <a href="">Hiërarchieniveau</a> | <a href="">Hiërarchieniveau naam</a> | <a href="#contact-appendix-b">Contact</a> | <a href="">Metadata datum</a> |
+        <a href="">
+          <metadata standaard="" naam="" a=""> | </metadata>
+        </a><a href="">Metadata standaard versie</a></p>
+    </div>
+
+    <section id="metadata-unieke-identifier-appendix-b" typeof="bibo:Chapter" resource="#metadata-unieke-identifier-appendix-b" property="bibo:hasPart">
+      <h3 id="h-metadata-unieke-identifier-appendix-b" resource="#h-metadata-unieke-identifier-appendix-b"><span property="xhv:role" resource="xhv:heading"><span class="secno">B.1 </span>Metadata unieke identifier</span>
+      </h3>
+      <em>Metadata unieke identifier</em> - Unieke ID voor de metadata file.<br>
+      <table>
+        <tbody>
+          <tr>
+            <th>Longname</th>
+            <td>MD_Metadata.fileIdentifier</td>
+          </tr>
+          <tr>
+            <th>Type veld</th>
+            <td>String</td>
+          </tr>
+          <tr>
+            <th>Domein</th>
+            <td>&nbsp;</td>
+          </tr>
+          <tr>
+            <th>Wijze van invoering</th>
+            <td>Impliciet</td>
+          </tr>
+          <tr>
+            <th>Engelse naam</th>
+            <td>fileIdentifier</td>
+          </tr>
+          <tr>
+            <th>Opmerking</th>
+            <td>Vaak wordt dit geregeld door de metadataeditor en is in de gebruikersinterface niet in te vullen. Als wel aan de gebruiker om een id wordt gevraagd, gebruik dan een <a href="http://en.wikipedia.org/wiki/UUID">Universal Unique Identifier</a>.</td>
+          </tr>
+          <tr>
+            <th>Multipliciteit</th>
+            <td>1</td>
+          </tr>
+        </tbody>
+      </table>
+      <aside class="example">
+        <div class="example-title marker"><span>Voorbeeld 1</span><span style="text-transform: none">: XML voorbeeld</span></div>
+        <pre aria-busy="false" aria-live="polite" class="hljs xml"><span class="hljs-tag">&lt;<span class="hljs-name">gmd:MD_Metadata</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">gmd:fileIdentifier</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">gco:CharacterString</span>&gt;</span>550E8400-E29B-11D4-A716-446655440000<span class="hljs-tag">&lt;/<span class="hljs-name">gmd:CharacterString</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-name">gmd:fileIdentifier</span>&gt;</span>
+  .
+  .
+<span class="hljs-tag">&lt;/<span class="hljs-name">gmd:MD_Metadata</span>&gt;</span></pre>
+      </aside>
+    </section>
+
+    <section id="taal-van-de-appendix-b" typeof="bibo:Chapter" resource="#taal-van-de-appendix-b" property="bibo:hasPart">
+      <h3 id="h-taal-van-de-appendix-b" resource="#h-taal-van-de-appendix-b"><span property="xhv:role" resource="xhv:heading"><span class="secno">B.2 </span>Taal van de metadata</span>
+      </h3>
+      <em>Taal van de metadata</em> - Taal gebruikt om de metadata te beschrijven.<br>
+      <table>
+        <tbody>
+          <tr>
+            <th>Longname</th>
+            <td>MD_Metadata.language</td>
+          </tr>
+          <tr>
+            <th>Type veld</th>
+            <td>codelijst</td>
+          </tr>
+          <tr>
+            <th>Domein</th>
+            <td><a href="#codelijst-iso-639-2">ISO 639-2</a></td>
+          </tr>
+          <tr>
+            <th>Wijze van invoering</th>
+            <td>default</td>
+          </tr>
+          <tr>
+            <th>Engelse naam</th>
+            <td>language</td>
+          </tr>
+          <tr>
+            <th>Opmerking</th>
+            <td>Code voor de taal waarmee de metadata is beschreven.</td>
+          </tr>
+          <tr>
+            <th>Multipliciteit</th>
+            <td>1</td>
+          </tr>
+        </tbody>
+      </table>
+      <aside class="example">
+        <div class="example-title marker"><span>Voorbeeld 2</span><span style="text-transform: none">: XML voorbeeld</span></div>
+        <pre aria-busy="false" aria-live="polite" class="hljs xml"><span class="hljs-tag">&lt;<span class="hljs-name">gmd:MD_Metadata</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">gmd:language</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">gco:CharacterString</span>&gt;</span>dut<span class="hljs-tag">&lt;/<span class="hljs-name">gmd:CharacterString</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-name">gmd:language</span>&gt;</span>
+  .
+  .
+<span class="hljs-tag">&lt;/<span class="hljs-name">gmd:MD_Metadata</span>&gt;</span></pre>
+      </aside>
+    </section>
+
+    <section id="metadata-karakterset-appendix-b" typeof="bibo:Chapter" resource="#metadata-karakterset-appendix-b" property="bibo:hasPart">
+      <h3 id="h-metadata-karakterset-appendix-b" resource="#h-metadata-karakterset-appendix-b"><span property="xhv:role" resource="xhv:heading"><span class="secno">B.3 </span>Metadata karakterset</span>
+      </h3>
+      <em>Metadata karakterset</em> - Volledige naam van de karakter codeerstandaard om de metadata set te beschrijven..<br>
+      <table>
+        <tbody>
+          <tr>
+            <th>Longname</th>
+            <td>MD_Metadata.characterSet</td>
+          </tr>
+          <tr>
+            <th>Type veld</th>
+            <td>codelijst</td>
+          </tr>
+          <tr>
+            <th>Domein</th>
+            <td><a href="#codelijst-b510">B.5.10</a></td>
+          </tr>
+          <tr>
+            <th>Wijze van invoering</th>
+            <td>default</td>
+          </tr>
+          <tr>
+            <th>Engelse naam</th>
+            <td>characterSet</td>
+          </tr>
+          <tr>
+            <th>Opmerking</th>
+            <td>De waarde utf8 en utf16 voldoen aan de ISO/IEC 10646 standaard. Hierdoor is het niet nodig dit element uit te wisselen. Als men van deze standaard afwijkt, dient men wel de karakter codeerstandaard op te nemen.</td>
+          </tr>
+          <tr>
+            <th>Multipliciteit</th>
+            <td>1</td>
+          </tr>
+        </tbody>
+      </table>
+      <aside class="example">
+        <div class="example-title marker"><span>Voorbeeld 3</span><span style="text-transform: none">: XML voorbeeld</span></div>
+        <pre aria-busy="false" aria-live="polite" class="hljs xml"><span class="hljs-tag">&lt;<span class="hljs-name">gmd:MD_Metadata</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">gmd:characterSet</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">gmd:MD_CharacterSet</span>&gt;</span>utf8<span class="hljs-tag">&lt;/<span class="hljs-name">gmd:MD_CharacterSet</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-name">gmd:characterSet</span>&gt;</span>
+  .
+  .
+<span class="hljs-tag">&lt;/<span class="hljs-name">gmd:MD_Metadata</span>&gt;</span></pre>
+      </aside>
+    </section>
+
+    <section id="contact-appendix-b" typeof="bibo:Chapter" resource="#contact-appendix-b" property="bibo:hasPart">
+      <h3 id="h-contact-appendix-b" resource="#h-contact-appendix-b"><span property="xhv:role" resource="xhv:heading"><span class="secno">B.4 </span>Contact</span>
+      </h3>
+      <div class="azlist">
+        <p>Sub-classes: <a href="#naam-contactpersoon-metadata-appendix-b">Naam contactpersoon metadata</a> | <a href="#verantwoordelijke-organisatie-metadata-appendix-b">Verantwoordelijke organisatie metadata</a> | <a href="#rol-contactpersoon-metadata-appendix-b">Rol contactpersoon metadata</a></p>
+      </div>
+      <!-- Section: Naam contactpersoon metadata-->
+      <h3 id="naam-contactpersoon-metadata-appendix-b">Naam contactpersoon metadata</h3>
+      <em>Naam contactpersoon metadata</em> - Naam van de contactpersoon.
+      <table>
+        <tbody>
+          <tr>
+            <th>Longname</th>
+            <td>MD_Metadata.contact&gt;CI_ResponsibleParty.individualName</td>
+          </tr>
+          <tr>
+            <th>Type veld</th>
+            <td>string</td>
+          </tr>
+          <tr>
+            <th>Domein</th>
+            <td>&nbsp;</td>
+          </tr>
+          <tr>
+            <th>Wijze van invoering</th>
+            <td>expliciet</td>
+          </tr>
+          <tr>
+            <th>Engelse naam</th>
+            <td>individualName</td>
+          </tr>
+          <tr>
+            <th>Opmerking</th>
+            <td>&nbsp;</td>
+          </tr>
+          <tr>
+            <th>Multipliciteit</th>
+            <td>1</td>
+          </tr>
+        </tbody>
+      </table>
+      <!-- Section: Verantwoordelijke organisatie metadata-->
+      <h4 id="verantwoordelijke-organisatie-metadata-appendix-b">Verantwoordelijke organisatie metadata</h4>
+      <em>Verantwoordelijke organisatie metadata</em> - Volledige naam van de voor metadata verantwoordelijke organisatie. Indien niet een organisatie verantwoordelijk is, maar een persoon, dan wordt de naam van deze persoon ingevuld.
+      <table>
+        <tbody>
+          <tr>
+            <th>Longname</th>
+            <td>MD_Metadata.contact&gt;CI_ResponsibleParty.organisationName</td>
+          </tr>
+          <tr>
+            <th>Type veld</th>
+            <td>string</td>
+          </tr>
+          <tr>
+            <th>Domein</th>
+            <td>&nbsp;</td>
+          </tr>
+          <tr>
+            <th>Wijze van invoering</th>
+            <td>default</td>
+          </tr>
+          <tr>
+            <th>Engelse naam</th>
+            <td>organisationName</td>
+          </tr>
+          <tr>
+            <th>Opmerking</th>
+            <td>Gebruik de volledig uitgeschreven naam van de verantwoordelijke organisatie. De afkorting kan toegevoegd worden aan de organisatienaam. Voor de correcte overheidsnamen zie: <a href="http://almanak.overheid.nl/">http://almanak.overheid.nl/</a>.</td>
+            <td>
+            </td>
+          </tr>
+          <tr>
+            <th>Multipliciteit</th>
+            <td>1</td>
+          </tr>
+        </tbody>
+      </table>
+      <!-- Section: Naam contactpersoon metadata-->
+      <h4 id="rol-contactpersoon-metadata-appendix-b">Rol contactpersoon metadata</h4>
+      <em>Rol contactpersoon metadata</em> - Beschrijving op welke manier de persoon betrokken is bij de metadata.
+      <table>
+        <tbody>
+          <tr>
+            <th>Longname</th>
+            <td>MD_Metadata.contact&gt;CI_ResponsibleParty.positionName</td>
+          </tr>
+          <tr>
+            <th>Type veld</th>
+            <td>string</td>
+          </tr>
+          <tr>
+            <th>Domein</th>
+            <td>&nbsp;</td>
+          </tr>
+          <tr>
+            <th>Wijze van invoering</th>
+            <td>expliciet</td>
+          </tr>
+          <tr>
+            <th>Engelse naam</th>
+            <td>role</td>
+          </tr>
+          <tr>
+            <th>Opmerking</th>
+            <td>&nbsp;</td>
+          </tr>
+          <tr>
+            <th>Multipliciteit</th>
+            <td>1</td>
+          </tr>
+        </tbody>
+      </table>
+      <aside class="example">
+        <div class="example-title marker"><span>Voorbeeld 4</span><span style="text-transform: none">: XML voorbeeld</span></div>
+        <pre class="highlight hljs xml" aria-busy="false" aria-live="polite"><span class="hljs-tag">&lt;<span class="hljs-name">gmd:MD_Metadata</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">gmd:contact</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">gmd:CI_ResponsibleParty</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">gmd:individualName</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">gco:CharacterString</span>&gt;</span>Bleker, L<span class="hljs-tag">&lt;/<span class="hljs-name">gco:CharacterString</span>&gt;</span>
+      <span class="hljs-tag">&lt;/<span class="hljs-name">gmd:individualName</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">gmd:organisationName</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">gco:CharacterString</span>&gt;</span>Ministerie van Economische Zaken, Landbouw en Innovatie , Dienst Landelijk Gebied (EL&amp;I DLG)<span class="hljs-tag">&lt;/<span class="hljs-name">gco:CharacterString</span>&gt;</span>
+      <span class="hljs-tag">&lt;/<span class="hljs-name">gmd:organisationName</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">gmd:positionName</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">gco:CharacterString</span>&gt;</span>Technisch contactpersoon, Inhoudelijk contactpersoon, GI-beheerder.<span class="hljs-tag">&lt;/<span class="hljs-name">gco:CharacterString</span>&gt;</span>
+      <span class="hljs-tag">&lt;/<span class="hljs-name">gmd:positionName</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-name">gmd:CI_ResponsibleParty</span>&gt;</span>
+    .
+    .
+  <span class="hljs-tag">&lt;/<span class="hljs-name">gmd:contact</span>&gt;</span>
+  .
+  .
+<span class="hljs-tag">&lt;/<span class="hljs-name">gmd:MD_Metadata</span>&gt;</span></pre>
+      </aside>
+    </section>
     <!--<table id="table-73">
         <thead>
           <tr>
@@ -6572,7 +6919,7 @@ github.com style (c) Vasily Polovnyov <vast@whiteants.net>
           <td colspan="7">Toelichting</td>
           <td>MD_Metadata.identificationInfo>MD_DataIdentification.resourceConstraints>MD_SecurityConstraints.userNote</td>
           <td>Toelichting op de veiligheidsrestricties.</td>
-          <td>Voor toegang tot de data kunt u zich wenden tot Ã¢â¬Â¦Ã¢â¬Â¦.</td>
+          <td>Voor toegang tot de data kunt u zich wenden tot …….</td>
           <td>&nbsp;</td>
           <td>string</td>
           <td>&nbsp;</td>
@@ -10784,20 +11131,19 @@ github.com style (c) Vasily Polovnyov <vast@whiteants.net>
     <h2 id="h-appendix-g" resource="#h-appendix-g"><span property="xhv:role" resource="xhv:heading"><span class="secno">G. </span>Temporele dekking in XML</span>
     </h2>
     <p>Er zijn verschillende methoden, waarmee de temporele dekking in XML kan worden vastgelegd. Ook INSPIRE laat de keuze daarin vrij. Voor de interoperabiliteit is het echter noodzakelijk dezelfde methode te hanteren. Daarom wordt voor de implementatie van dit profiel de volgende notering voor temporele dekking gehanteerd;</p>
-    <pre aria-busy="false" aria-live="polite" class="hljs undefined">        &lt;gml:TimePeriodgml:id="temporal-extent-1"xmlns:gml="&lt;a
-        href="http://www.opengis.net/gml"&gt;http://www.opengis.net/gml&lt;/a&gt;"&gt;
-          &lt;gml:begin&gt;
-            &lt;gml:TimeInstant gml:id="start_temporal-extent-1"&gt;
-              &lt;gml:timePosition&gt;2009-11-27&lt;/gml:timePosition&gt;
-            &lt;/gml:TimeInstant&gt;
-          &lt;/gml:begin&gt;
-          &lt;gml:end&gt;
-            &lt;gml:TimeInstant gml:id="end_temporal-extent-1"&gt;
-              &lt;gml:timePosition&gt;2009-11-27&lt;/gml:timePosition&gt;
-            &lt;/gml:TimeInstant&gt;
-          &lt;/gml:end&gt;
-        &lt;/gml:TimePeriod&gt;
-      </pre>
+    <pre aria-busy="false" aria-live="polite" class="hljs xml"><span class="hljs-tag">&lt;<span class="hljs-name">gml:TimePeriod</span> <span class="hljs-attr">gml:id</span>=<span class="hljs-string">"temporal-extent-1"</span>
+<span class="hljs-attr">xmlns:gml</span>=<span class="hljs-string">"&lt;ahref="</span><span class="hljs-attr">http:</span>//<span class="hljs-attr">www.opengis.net</span>/<span class="hljs-attr">gml</span>"&gt;</span>http://www.opengis.net/gml<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span>"&gt;
+  <span class="hljs-tag">&lt;<span class="hljs-name">gml:begin</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">gml:TimeInstant</span> <span class="hljs-attr">gml:id</span>=<span class="hljs-string">"start_temporal-extent-1"</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">gml:timePosition</span>&gt;</span>2009-11-27<span class="hljs-tag">&lt;/<span class="hljs-name">gml:timePosition</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-name">gml:TimeInstant</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-name">gml:begin</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">gml:end</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">gml:TimeInstant</span> <span class="hljs-attr">gml:id</span>=<span class="hljs-string">"end_temporal-extent-1"</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">gml:timePosition</span>&gt;</span>2009-11-27<span class="hljs-tag">&lt;/<span class="hljs-name">gml:timePosition</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-name">gml:TimeInstant</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-name">gml:end</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">gml:TimePeriod</span>&gt;</span></pre>
   </section>
 
   <section class="appendix" id="appendix-h" typeof="bibo:Chapter" resource="#appendix-h" property="bibo:hasPart">
