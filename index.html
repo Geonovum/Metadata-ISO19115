@@ -727,7 +727,60 @@ github.com style (c) Vasily Polovnyov <vast@whiteants.net>
       }],
       "publishDate": "2013-09-24",
       "shortName": "mdprofiel-iso19115",
-      "github": "https://github.com/Geonovum/Metadata-ISO19115/"
+      "github": "https://github.com/Geonovum/Metadata-ISO19115/",
+      "localBiblio":
+      {
+        "ISO19136":
+        {
+          "href": "https://www.iso.org/standard/32554.html",
+          "title": "ISO 19136:2007 Geographic information -- Geography Markup Language (GML)",
+          "authors": [
+            ""
+          ],
+          "date": "September 2007",
+          "publisher": "International Organization for Standardization"
+        },
+        "ISO19101":
+        {
+          "href": "https://www.iso.org/standard/26002.html",
+          "title": "ISO 19101:2002 Geographic information -- Reference model",
+          "authors": [
+            ""
+          ],
+          "date": "Juli 2002",
+          "publisher": "International Organization for Standardization"
+        },
+        "ISO19115":
+        {
+          "href": "https://www.iso.org/standard/26020.html",
+          "title": "ISO 19115:2003  Geographic information -- Metadata",
+          "authors": [
+            ""
+          ],
+          "date": "Mei 2003",
+          "publisher": "International Organization for Standardization"
+        },
+        "ISO19139":
+        {
+          "href": "http://inspire.ec.europa.eu/documents/Metadata/INSPIRE_MD_IR_and_ISO_v1_2_20100616.pdf",
+          "title": " ISO/TS 19139:2007 Geographic information -- Metadata -- XML schema implementation",
+          "authors": [
+            ""
+          ],
+          "date": "April 2007",
+          "publisher": "International Organization for Standardization"
+        },
+        "INSPIRE-19115-19119":
+        {
+          "href": "http://inspire.ec.europa.eu/documents/Metadata/INSPIRE_MD_IR_and_ISO_v1_2_20100616.pdf",
+          "title": "INSPIRE Metadata Implementing Rules: Technical Guidelines based on EN ISO 19115 and EN ISO 19119",
+          "authors": [
+            "Drafting Team Metadata and European Commission Joint Research Centre"
+          ],
+          "date": "26 oktober 2007",
+          "publisher": "European Commission Joint Research Centre"
+        }
+      }
     }
   </script>
 </head>
@@ -988,6 +1041,11 @@ github.com style (c) Vasily Polovnyov <vast@whiteants.net>
       <li class="tocline"><a href="#appendix-f" class="tocxref"><span class="secno">F. </span>Gebruiksvoorwaarden in metadata</a></li>
       <li class="tocline"><a href="#appendix-g" class="tocxref"><span class="secno">G. </span>Temporele dekking in XML</a></li>
       <li class="tocline"><a href="#appendix-h" class="tocxref"><span class="secno">H. </span>Koppeling vanuit metadata met data en service</a></li>
+      <li class="tocline"><a href="#references" class="tocxref"><span class="secno">I. </span>Referenties</a>
+        <ol class="toc">
+          <li class="tocline"><a href="#informative-references" class="tocxref"><span class="secno">I.1 </span>Informatieve referenties</a></li>
+        </ol>
+      </li>
     </ol>
   </nav>
 
@@ -1008,8 +1066,12 @@ github.com style (c) Vasily Polovnyov <vast@whiteants.net>
       </h3>
       <p>Dit metadata profiel bevat de semantische beschrijving van de verplichte of door conditie verplichte metadata elementen, de kernset, van een dataset of dataset serie. Dit metadata profiel beschrijft tevens de encoding van de metadata van een dataset of dataset serie zodat de uitwisseling tussen machines of mens en machine kan plaatsvinden. De optionele set is een aanvulling op de kernset en voorziet in de behoefte van het geo-werkveld aan eeneen brede gemeenschappelijke basis van metadata-elementen, in het bijzonder voor het beheer.</p>
       <p>Bij het voldoen aan dit profiel wordt tevens aan de INSPIRE verplichting voldaan.
-        <br><span class="note"><span class="marker">NOOT</span>Deze verplichting geldt alleen voor metadata van de door INSPIRE benoemde geografische datasets.</span>
       </p>
+      <div class="note">
+        <div class="note-title marker" aria-level="4" role="heading" id="h-note1"><span>Noot</span></div>
+        <div class="">Deze verplichting geldt alleen voor metadata van de door INSPIRE benoemde geografische datasets.</div>
+      </div>
+      <p></p>
     </section>
 
     <section id="context" typeof="bibo:Chapter" resource="#context" property="bibo:hasPart">
@@ -1090,22 +1152,22 @@ github.com style (c) Vasily Polovnyov <vast@whiteants.net>
       <dt>Abstracte klasse</dt><dt></dt>
       <dd>Een abstracte klasse is een klasse zonder objecten.</dd>
       <dt>Applicatie</dt>
-      <dd>Manipulatie en verwerking van data om in gebruiksbehoefte te voorzien [ISO 19101].</dd>
+      <dd>Manipulatie en verwerking van data om in gebruiksbehoefte te voorzien [<a href="https://www.iso.org/standard/26002.html">ISO 19101:2002</a>].</dd>
       <dt>Codelijst</dt>
-      <dd>Een uitbreidbare lijst met de domeinwaarden inclusief code voor elk toepasbaar attribuut [ISO 19136].</dd>
+      <dd>Een uitbreidbare lijst met de domeinwaarden inclusief code voor elk toepasbaar attribuut [<a href="https://www.iso.org/standard/32554.html">ISO 19136:2007</a>].</dd>
       <dt>Conditioneel element</dt>
       <dd>Metadata element moet gevuld worden met een waarde, indien de conditie van toepassing is.</dd>
       <dt>Dataset</dt>
-      <dd>Identificeerbare collectie van data [ISO34 2002 / ISO 19101:2002]. Een dataset mag een kleinere groep van data zijn, gelimiteerd door beperkingen zoals een geografisch gebied of geo-objecttype ("feature type"), die aanwezig is in een grotere dataset. Theoretisch kan een dataset bestaan uit een enkel geo-object of een een attribuut van een geo-object dat aanwezig is in een grotere dataset. Het Nederlandse metadata profiel voor geografie gaat niet uit van dit soort type datasets.</dd>
+      <dd>Identificeerbare collectie van data [ISO34 2002 / <a href="https://www.iso.org/standard/26002.html">ISO 19101:2002</a>]. Een dataset mag een kleinere groep van data zijn, gelimiteerd door beperkingen zoals een geografisch gebied of geo-objecttype ("feature type"), die aanwezig is in een grotere dataset. Theoretisch kan een dataset bestaan uit een enkel geo-object of een een attribuut van een geo-object dat aanwezig is in een grotere dataset. Het Nederlandse metadata profiel voor geografie gaat niet uit van dit soort type datasets.</dd>
       <dt>Dataset serie</dt>
-      <dd>Verzameling van datasets met dezelfde productspecificaties [ISO47 2003 / ISO 19115:2003]. Productspecificaties zijn thema, resolutie en methodologie.</dd>
+      <dd>Verzameling van datasets met dezelfde productspecificaties [ISO47 2003 / <a href="https://www.iso.org/standard/26020.html">ISO 19115:2003</a>]. Productspecificaties zijn thema, resolutie en methodologie.</dd>
       <dt>Default element</dt>
       <dd>Metadata element met een standaardwaarde.</dd>
       <dt>Expliciete metadata</dt>
       <dd>Metadata die niet direct of indirect in de dataset opgeslagen zit en daarom handmatig moet worden opgevoerd.</dd>
       <dt>feature</dt>
       <dd>
-        <p>Abstractie van een verschijnsel in de werkelijke wereld [ISO 19101].</p>
+        <p>Abstractie van een verschijnsel in de werkelijke wereld [<a href="https://www.iso.org/standard/26002.html">ISO 19101:2002</a>].</p>
         <p>Voorbeeld het verschijnsel ‘Eifel Toren’ kan met andere soortgelijke verschijnselen geclassificeerd worden in een featuretype ‘toren’.</p>
       </dd>
       <dt>Gerelateerde datasets</dt>
@@ -1115,9 +1177,9 @@ github.com style (c) Vasily Polovnyov <vast@whiteants.net>
       <dt>Metadata</dt>
       <dd>Informatie die ruimtelijke datasets en dataset series beschrijft welke het mogelijk maakt om deze te zoeken, evalueren en te gebruiken.</dd>
       <dt>Metadata dataset</dt>
-      <dd>Metadata die een beschrijving geeft van een specifieke dataset [ISO 19101].</dd>
+      <dd>Metadata die een beschrijving geeft van een specifieke dataset [<a href="https://www.iso.org/standard/26002.html">ISO 19101:2002</a>].</dd>
       <dt>Namespace</dt>
-      <dd>Verzameling van namen, geïdentificeerd door een URI-referentie, die gebruikt worden in XML-documenten als elementnamen en atribuutnamen [ISO 19136: Geography Markup Language].</dd>
+      <dd>Verzameling van namen, geïdentificeerd door een URI-referentie, die gebruikt worden in XML-documenten als elementnamen en atribuutnamen [<a href="https://www.iso.org/standard/32554.html">ISO 19136:2007</a>].</dd>
       <dt>Optioneel element</dt>
       <dd>Element wat gevuld mag zijn met een waarde.</dd>
       <dt>Profiel</dt>
@@ -1126,7 +1188,7 @@ github.com style (c) Vasily Polovnyov <vast@whiteants.net>
         <p>Een basisstandaard is één van de standaarden uit de serie ISO 19100 of andere ICT-standaard die gebruikt kan worden als bron voor componenten voor een profiel of productspecificatie.</p>
       </dd>
       <dt>Resource</dt>
-      <dd>Verzamelnaam voor datasets, dataset series, services en applicaties [ISO 19115:2003].</dd>
+      <dd>Verzamelnaam voor datasets, dataset series, services en applicaties [<a href="https://www.iso.org/standard/26020.html">ISO 19115:2003</a>].</dd>
       <dt>Verplicht element</dt>
       <dd>Element wat gevuld moet zijn met een waarde.</dd>
     </dl>
@@ -1141,7 +1203,7 @@ github.com style (c) Vasily Polovnyov <vast@whiteants.net>
     <section id="metadata-elementen-overzicht" typeof="bibo:Chapter" resource="#metadata-elementen-overzicht" property="bibo:hasPart">
       <h3 id="h-metadata-elementen-overzicht" resource="#h-metadata-elementen-overzicht"><span property="xhv:role" resource="xhv:heading"><span class="secno">5.1 </span>Metadata elementen overzicht</span>
       </h3>
-      <p>In <a href="#table-2">Tabel 2</a> staan de verplichte of bij conditie verplichte elementen. Bij elk conditioneel element is de conditie benoemd. De in <a href="#appendix-d">Appendix D</a> opgenomen tabel “verantwoording metadata elementen” is gebaseerd op <em>INSPIRE Metadata Implementing Rules: Technical Guidelines based on EN ISO 19115 and EN ISO 19119, v1.2</em>. Hiermee is de relatie gelegd tussen dit document en INSPIRE. </p>
+      <p>In <a href="#table-2">Tabel 2</a> staan de verplichte of bij conditie verplichte elementen. Bij elk conditioneel element is de conditie benoemd. De in <a href="#appendix-d">Appendix D</a> opgenomen tabel “verantwoording metadata elementen” is gebaseerd op <a href="http://inspire.ec.europa.eu/documents/Metadata/INSPIRE_MD_IR_and_ISO_v1_2_20100616.pdf"><em>INSPIRE Metadata Implementing Rules: Technical Guidelines based on EN ISO 19115 and EN ISO 19119, v1.2</em></a>. Hiermee is de relatie gelegd tussen dit document en INSPIRE. </p>
       <table id="table-2">
         <colgroup>
           <col style="width: 30%;">
@@ -1439,7 +1501,7 @@ github.com style (c) Vasily Polovnyov <vast@whiteants.net>
         </h4>
         <p style="text-align:left">
           <em>identificationInfo[1]/*/citation/*/title</em>
-          <span style="float:right">[ISO 19139]</span>
+          <span style="float:right">[<a href="http://inspire.ec.europa.eu/documents/Metadata/INSPIRE_MD_IR_and_ISO_v1_2_20100616.pdf">ISO 19139:2007</a>]</span>
         </p>
         <p>Dit element dient om de naam van de dataset in vast te leggen.</p>
         <table id="table-3">
@@ -1465,7 +1527,7 @@ github.com style (c) Vasily Polovnyov <vast@whiteants.net>
         </h4>
         <p style="text-align:left">
           <em>identificationInfo[1]/*/abstract</em>
-          <span style="float:right">[ISO19139]</span>
+          <span style="float:right">[<a href="http://inspire.ec.europa.eu/documents/Metadata/INSPIRE_MD_IR_and_ISO_v1_2_20100616.pdf">ISO 19139:2007</a>]</span>
         </p>
         <p>Dit element bevat een korte beschrijving van de inhoud van de dataset.</p>
         <table id="table-4">
@@ -1491,7 +1553,7 @@ github.com style (c) Vasily Polovnyov <vast@whiteants.net>
         </h4>
         <p style="text-align:left">
           <em>identificationInfo[1]/*/status</em>
-          <span style="float:right">[ISO 19139]</span>
+          <span style="float:right">[<a href="http://inspire.ec.europa.eu/documents/Metadata/INSPIRE_MD_IR_and_ISO_v1_2_20100616.pdf">ISO 19139:2007</a>]</span>
         </p>
         <p>Dit element is opgenomen in de Nederlandse kernset, omdat de status van de dataset als zoekcriterium kan dienen en een indirecte kwaliteitseigenschap weergeeft. De waarden komen uit <a href="#codelijst-b523">codelijst B.5.23 van ISO19115</a>.</p>
         <table id="table-5">
@@ -1517,7 +1579,7 @@ github.com style (c) Vasily Polovnyov <vast@whiteants.net>
         </h4>
         <p style="text-align:left">
           <em>hierarchyLevel</em>
-          <span style="float:right">[ISO19139]</span>
+          <span style="float:right">[<a href="http://inspire.ec.europa.eu/documents/Metadata/INSPIRE_MD_IR_and_ISO_v1_2_20100616.pdf">ISO 19139:2007</a>]</span>
         </p>
         <p>Het element geeft aan waarop de metadata betrekking heeft, de dataset of dataset serie. Voor de waarden geldt de <a href="#codelijst-b525">codelijst B.5.25 MD_ScopeCode</a> uit ISO19115. </p>
         <table id="table-6">
@@ -1559,7 +1621,7 @@ github.com style (c) Vasily Polovnyov <vast@whiteants.net>
         </h4>
         <p style="text-align:left">
           <em>hierarchyLevelName</em>
-          <span style="float:right">[ISO19139]</span>
+          <span style="float:right">[<a href="http://inspire.ec.europa.eu/documents/Metadata/INSPIRE_MD_IR_and_ISO_v1_2_20100616.pdf">ISO 19139:2007</a>]</span>
         </p>
         <p>Dit element is conditioneel. Het is verplicht als Hiërarchieniveau niet gelijk is aan dataset. Het bevat de naam van het hiërarchieniveau waarvoor de metadata is beschreven. Indien het hierarchyniveau dataset is dient dit veld niet ingevuld te worden.</p>
         <table id="table-7">
@@ -1585,7 +1647,7 @@ github.com style (c) Vasily Polovnyov <vast@whiteants.net>
         </h4>
         <p style="text-align:left">
           <em>distributionInfo/*/transferOptions/*/onLine/*/linkage</em>
-          <span style="float:right">[ISO 19139]</span>
+          <span style="float:right">[<a href="http://inspire.ec.europa.eu/documents/Metadata/INSPIRE_MD_IR_and_ISO_v1_2_20100616.pdf">ISO 19139:2007</a>]</span>
         </p>
         <p>Dit element is conditioneel. Het is voor INSPIRE verplicht als er een link is naar meer informatie over de bron en/of er een link is die toegang geeft tot gerelateerde services, ook al is die service voorzien van metadata. Voor datasets die buiten INSPIRE vallen en waarvoor gerelateerde services&nbsp;aanwezig zijn,&nbsp;is het verplicht als er nog geen service metadata is. Het element kan meerdere keren voorkomen, bijvoorbeeld als link naar een zip bestand, een catalogue, een data loket, WMS en WFS.</p>
         <p>Het bevat een valide URL voor online toegang tot de bron of als er niet een directe link naar de bron aanwezig is naar een locatie waar informatie over de bron beschikbaar is. Voor een service dient deze gelijk te zijn aan de resourcelocator uit het Nederlands metadata profiel op ISO19119 voor services.</p>
@@ -1629,7 +1691,7 @@ github.com style (c) Vasily Polovnyov <vast@whiteants.net>
         </h4>
         <p style="text-align:left">
           <em>distributionInfo/*/transferOptions/*/onLine/*/protocol</em>
-          <span style="float:right">[ISO 19139]</span>
+          <span style="float:right">[<a href="http://inspire.ec.europa.eu/documents/Metadata/INSPIRE_MD_IR_and_ISO_v1_2_20100616.pdf">ISO 19139:2007</a>]</span>
         </p>
         <p>Dit element is conditioneel. Het is verplicht als er een URL is opgegeven. Bijvoorbeeld naar een zip bestand, WMS of WFS.</p>
         <p>Het bevat het protocol voor het afhandelen van de URL. De <a href="#codelijst-sv-servicetype">codelijst SV_ServiceType</a> wordt hier gehanteerd. De codelijst is uitgebreid met INSPIRE Atom. Onder download vallen bijvoorbeeld ZIP documenten van shapefiles.</p>
@@ -1677,7 +1739,7 @@ github.com style (c) Vasily Polovnyov <vast@whiteants.net>
         </h4>
         <p style="text-align:left">
           <em>distributionInfo/*/transferOptions/*/onLine/*/name</em>
-          <span style="float:right">[ISO 19139]</span>
+          <span style="float:right">[<a href="http://inspire.ec.europa.eu/documents/Metadata/INSPIRE_MD_IR_and_ISO_v1_2_20100616.pdf">ISO 19139:2007</a>]</span>
         </p>
         <p>Dit element is conditioneel. Voor Nederland is de naam verplicht gesteld voor de OGC:WMS, OGC:WFS en OGC:WCS. Dit element bevat de layer name uit de WMS of WCS of de featureType name van een WFS.</p>
         <table id="table-10">
@@ -1703,7 +1765,7 @@ github.com style (c) Vasily Polovnyov <vast@whiteants.net>
         </h4>
         <p style="text-align:left">
           <em>identificationInfo[1]/*/citation/*/identifier/*/code</em>
-          <span style="float:right">[ISO 19139]</span>
+          <span style="float:right">[<a href="http://inspire.ec.europa.eu/documents/Metadata/INSPIRE_MD_IR_and_ISO_v1_2_20100616.pdf">ISO 19139:2007</a>]</span>
         </p>
         <p>Dit element bevat de waarde die een object uniek identificeert in een namespace. Geadviseerd wordt om gebruik te maken van een betekenisloze identifier die wereldwijd uniek is zoals de <a href="http://en.wikipedia.org/wiki/UUID">Universal Unique Identifier</a>.</p>
         <table id="table-11">
@@ -1729,7 +1791,7 @@ github.com style (c) Vasily Polovnyov <vast@whiteants.net>
         </h4>
         <p style="text-align:left">
           <em>identificationInfo[1]/*/language</em>
-          <span style="float:right">[ISO 19139]</span>
+          <span style="float:right">[<a href="http://inspire.ec.europa.eu/documents/Metadata/INSPIRE_MD_IR_and_ISO_v1_2_20100616.pdf">ISO 19139:2007</a>]</span>
         </p>
         <p>Dit element is conditioneel. Het is verplicht als de brontekstuele informatie bevat. Het bevat de code van de taal waarin de tekst in de bron is opgenomen. Gebruik hiervoor alleen de drie-letter codes van 639-2/B (bibliographic codes), zoals gedefinieerd op <a href="http://www.loc.gov/standards/iso639-2/">http://www.loc.gov/standards/iso639-2/</a>. Voor Nederlands is de code dut, zie <a href="#codelijst-iso-639-2">Appendix A</a>.</p>
         <table id="table-12">
@@ -1755,7 +1817,7 @@ github.com style (c) Vasily Polovnyov <vast@whiteants.net>
         </h4>
         <p style="text-align:left">
           <em>identificationInfo[1]/*/</em>
-          <span style="float:right">[ISO 19139]</span>
+          <span style="float:right">[<a href="http://inspire.ec.europa.eu/documents/Metadata/INSPIRE_MD_IR_and_ISO_v1_2_20100616.pdf">ISO 19139:2007</a>]</span>
         </p>
         <p>Voor INSPIRE verplicht als voor de uitwisseling van de bron geen GML wordt gebruikt en de gebruikte karakterset geen utf8 is. Voor niet INSPIRE datasets is het verplicht als de waarde niet voldoet aan de ISO/IEC 10646 standaard. Utf8 en utf16 voldoen aan deze standaard.</p>
         <table id="table-13">
@@ -1781,7 +1843,7 @@ github.com style (c) Vasily Polovnyov <vast@whiteants.net>
         </h4>
         <p style="text-align:left">
           <em>identificationInfo[1]/*/topicCategory</em>
-          <span style="float:right">[ISO 19139]</span>
+          <span style="float:right">[<a href="http://inspire.ec.europa.eu/documents/Metadata/INSPIRE_MD_IR_and_ISO_v1_2_20100616.pdf">ISO 19139:2007</a>]</span>
         </p>
         <p>Het bevat de belangrijkste onderwerpen van de dataset. De te hanteren onderwerpen zijn opgenomen in <a href="#codelijst-b527">codelijst B.5.27</a>.</p>
         <table id="table-14">
@@ -1807,7 +1869,7 @@ github.com style (c) Vasily Polovnyov <vast@whiteants.net>
         </h4>
         <p style="text-align:left">
           <em>identificationInfo[1]/*/descriptiveKeywords/*/keyword</em>
-          <span style="float:right">[ISO 19139]</span>
+          <span style="float:right">[<a href="http://inspire.ec.europa.eu/documents/Metadata/INSPIRE_MD_IR_and_ISO_v1_2_20100616.pdf">ISO 19139:2007</a>]</span>
         </p>
         <p>Het element bevat in het algemeen gebruikte woorden of geformaliseerde zinnen om een dataset of datasetserie te beschrijven. Voor datasets en dataset series die betrekking hebben op INSPIRE dient het de relevante thema’s beschrijven zoals ze zijn gedefinieerd in annex I, II en III van de directive. Deze INSPIRE thema’s zijn opgenomen in de <a href="http://www.eionet.europa.eu/gemet/inspire_themes">thesaurus</a>. Voor INSPIRE datasets dient men voor het beschrijven van de relevante thema’s tenminste één trefwoord uit deze thesaurus over te nemen, in de exacte notatie (met evt. spelfouten en hoofdletters waar toegepast), voor overige datasets mag deze thesaurus gebruikt worden. Het is ook mogelijk zelf gedefinieerde trefwoorden, of trefwoorden uit een andere thesaurus in te vullen.</p>
         <table id="table-15">
@@ -1833,7 +1895,7 @@ github.com style (c) Vasily Polovnyov <vast@whiteants.net>
         </h4>
         <p style="text-align:left">
           <em>identificationInfo[1]/*/descriptiveKeywords/*/thesaurusName/*/title</em>
-          <span style="float:right">[ISO 19139]</span>
+          <span style="float:right">[<a href="http://inspire.ec.europa.eu/documents/Metadata/INSPIRE_MD_IR_and_ISO_v1_2_20100616.pdf">ISO 19139:2007</a>]</span>
         </p>
         <p>Dit is een conditioneel element. Het is verplicht als een trefwoord uit een thesaurus afkomstig is zoals in ieder geval voor de INSPIRE thema’s. Het bevat de naam van de thesaurus waar het trefwoord uit afkomstig is. Voor INSPIRE wordt de naam "GEMET – INSPIRE themes, version 1.0" gehanteerd, zoals voorgeschreven in de metadataguidelines.</p>
         <table id="table-16">
@@ -1859,7 +1921,7 @@ github.com style (c) Vasily Polovnyov <vast@whiteants.net>
         </h4>
         <p style="text-align:left">
           <em>identificationInfo[1]/*/descriptiveKeywords/*/thesaurusName/*/date/*/date</em>
-          <span style="float:right">[ISO 19139]</span>
+          <span style="float:right">[<a href="http://inspire.ec.europa.eu/documents/Metadata/INSPIRE_MD_IR_and_ISO_v1_2_20100616.pdf">ISO 19139:2007</a>]</span>
         </p>
         <p>Dit is een conditioneel element. Het is verplicht als een trefwoord uit een thesaurus afkomstig is zoals in ieder geval voor de INSPIRE thema’s. Het bevat de publicatie datum van de thesaurus waar het trefwoord uit afkomstig is. Het formaat van de datum is JJJJ-MM-DD (met streepjes).</p>
         <table id="table-17">
@@ -1885,7 +1947,7 @@ github.com style (c) Vasily Polovnyov <vast@whiteants.net>
         </h4>
         <p style="text-align:left">
           <em>identificationInfo[1]/*/descriptiveKeywords/*/thesaurusName/*/date/*/dateType</em>
-          <span style="float:right">[ISO 19139]</span>
+          <span style="float:right">[<a href="http://inspire.ec.europa.eu/documents/Metadata/INSPIRE_MD_IR_and_ISO_v1_2_20100616.pdf">ISO 19139:2007</a>]</span>
         </p>
         <p>Dit is een conditioneel element. Het is verplicht als een trefwoord uit een thesaurus afkomstig is zoals in ieder geval voor de INSPIRE thema’s. Het bevat het type gebeurtenis waar de datum betrekking op heeft. Type gebeurtenis wordt gekozen uit <a href="#codelijst-b52">codelijst B.5.2 uit ISO 19115</a>. Mogelijke gebeurtenissen zijn: creatie-, publicatie-, of revisiedatum.</p>
         <table id="table-18">
@@ -1911,7 +1973,7 @@ github.com style (c) Vasily Polovnyov <vast@whiteants.net>
         </h4>
         <p style="text-align:left">
           <em>identificationInfo[1]/*/extent/*/geographicElement/*/</em>
-          <span style="float:right">[ISO 19139]</span>
+          <span style="float:right">[<a href="http://inspire.ec.europa.eu/documents/Metadata/INSPIRE_MD_IR_and_ISO_v1_2_20100616.pdf">ISO 19139:2007</a>]</span>
         </p>
         <p>Dit element bevat de meest westelijke coördinaat uit de horizontale dekking van de dataset weergegeven in longitude en lattitude in decimale graden (noord en oost als positievewaarden). De coördinaten dienen te worden weergegeven volgens referentiesysteem WGS 84.</p>
         <table id="table-19">
@@ -1943,7 +2005,7 @@ github.com style (c) Vasily Polovnyov <vast@whiteants.net>
         </h4>
         <p style="text-align:left">
           <em>identificationInfo[1]/*/extent/*/geographicElement/*/</em>
-          <span style="float:right">[ISO 19139]</span>
+          <span style="float:right">[<a href="http://inspire.ec.europa.eu/documents/Metadata/INSPIRE_MD_IR_and_ISO_v1_2_20100616.pdf">ISO 19139:2007</a>]</span>
         </p>
         <p>Dit element bevat de meest oostelijke coördinaat uit de horizontale dekking van de dataset weergegeven in longitude en lattitude in decimale graden (noord en oost als positievewaarden). De coördinaten dienen te worden weergegeven volgens referentiesysteem WGS 84.</p>
         <table id="table-20">
@@ -1969,7 +2031,7 @@ github.com style (c) Vasily Polovnyov <vast@whiteants.net>
         </h4>
         <p style="text-align:left">
           <em>identificationInfo[1]/*/extent/*/geographicElement/*/</em>
-          <span style="float:right">[ISO 19139]</span>
+          <span style="float:right">[<a href="http://inspire.ec.europa.eu/documents/Metadata/INSPIRE_MD_IR_and_ISO_v1_2_20100616.pdf">ISO 19139:2007</a>]</span>
         </p>
         <p>Dit element bevat de meest zuidelijke coördinaat uit de horizontale dekking van de dataset weergegeven in longitude en lattitude in decimale graden (noord en oost als positievewaarden). De coördinaten dienen te worden weergegeven volgens referentiesysteem WGS 84.</p>
         <table id="table-21">
@@ -1995,7 +2057,7 @@ github.com style (c) Vasily Polovnyov <vast@whiteants.net>
         </h4>
         <p style="text-align:left">
           <em>identificationInfo[1]/*/extent/*/geographicElement/*/</em>
-          <span style="float:right">[ISO 19139]</span>
+          <span style="float:right">[<a href="http://inspire.ec.europa.eu/documents/Metadata/INSPIRE_MD_IR_and_ISO_v1_2_20100616.pdf">ISO 19139:2007</a>]</span>
         </p>
         <p>Dit element bevat de meest noordelijke coördinaat uit de horizontale dekking van de dataset weergegeven in longitude en lattitude in decimale graden (noord en oost als positievewaarden). De coördinaten dienen te worden weergegeven volgens referentiesysteem WGS 84.</p>
         <table id="table-22">
@@ -2021,7 +2083,7 @@ github.com style (c) Vasily Polovnyov <vast@whiteants.net>
         </h4>
         <p style="text-align:left">
           <em>identificationInfo[1]/*/citation/*/date/*/date</em>
-          <span style="float:right">[ISO 19139]</span>
+          <span style="float:right">[<a href="http://inspire.ec.europa.eu/documents/Metadata/INSPIRE_MD_IR_and_ISO_v1_2_20100616.pdf">ISO 19139:2007</a>]</span>
         </p>
         <p>Creatie-, publicatie-, of revisiedatum. Het formaat van de datum is JJJJ-MM-DD(met streepjes).</p>
         <table id="table-23">
@@ -2047,7 +2109,7 @@ github.com style (c) Vasily Polovnyov <vast@whiteants.net>
         </h4>
         <p style="text-align:left">
           <em>identificationInfo[1]/*/citation/*/date/*/dateType</em>
-          <span style="float:right">[ISO 19139]</span>
+          <span style="float:right">[<a href="http://inspire.ec.europa.eu/documents/Metadata/INSPIRE_MD_IR_and_ISO_v1_2_20100616.pdf">ISO 19139:2007</a>]</span>
         </p>
         <p>Dit element bevat het type gebeurtenis waar de datum betrekking op heeft. Type gebeurtenis wordt gekozen uit <a href="#codelijst-b52">codelijst B.5.2</a>. Mogelijke gebeurtenissen zijn: creatie-, publicatie-, of revisiedatum.</p>
         <table id="table-24">
@@ -2073,7 +2135,7 @@ github.com style (c) Vasily Polovnyov <vast@whiteants.net>
         </h4>
         <p style="text-align:left">
           <em>dataQualityInfo/*/scope/*/level</em>
-          <span style="float:right">[ISO19139]</span>
+          <span style="float:right">[<a href="http://inspire.ec.europa.eu/documents/Metadata/INSPIRE_MD_IR_and_ISO_v1_2_20100616.pdf">ISO 19139:2007</a>]</span>
         </p>
         <p>Dit element beschrijft het niveau waarop de kwaliteitsinformatie betrekking heeft. Dit niveau wordt gekozen uit <a href="#codelijst-b525">codelijst B.5.25</a>. Mogelijke niveau’s zijn: dataset, series en featureType. Als voor INSPIRE het niveau featureType wordt gekozen dient het element features te worden gebruikt om de featuretype namen in op te nemen.</p>
         <table id="table-25">
@@ -2099,7 +2161,7 @@ github.com style (c) Vasily Polovnyov <vast@whiteants.net>
         </h4>
         <p style="text-align:left">
           <em>dataQualityInfo/*/lineage/*/statement</em>
-          <span style="float:right">[ISO19139]</span>
+          <span style="float:right">[<a href="http://inspire.ec.europa.eu/documents/Metadata/INSPIRE_MD_IR_and_ISO_v1_2_20100616.pdf">ISO 19139:2007</a>]</span>
         </p>
         <p>Dit element beschrijft de proceshistorie. Ook kwaliteitsinformatie kan hierin worden opgenomen. Kwaliteitsinformatie kan meerdere keren worden opgenomen. Er dient slechts één set kwaliteitsinformatie opgenomen worden die betrekking heeft op de gehele dataset. Hierin wordt ook het element algemene beschrijving herkomst opgenomen.</p>
         <table id="table-26">
@@ -2125,7 +2187,7 @@ github.com style (c) Vasily Polovnyov <vast@whiteants.net>
         </h4>
         <p style="text-align:left">
           <em>identificationInfo[1]/*/spatialResolution/*/equivalentScale/*/denominator</em>
-          <span style="float:right">[ISO 19139]</span>
+          <span style="float:right">[<a href="http://inspire.ec.europa.eu/documents/Metadata/INSPIRE_MD_IR_and_ISO_v1_2_20100616.pdf">ISO 19139:2007</a>]</span>
         </p>
         <p>Dit element is conditioneel. Het is verplicht als er een toepassingsschaal gespecificeerd kan worden. Het element bevat de mate van detail aangeduid als schaalaanduiding van een vergelijkbare hardcopy kaart. Het element kan twee keer voorkomen, hiermee wordt een interval aangegeven. Deze dient vanuit de klasse spatialResolution te worden aangemaakt.</p>
         <table id="table-27">
@@ -2151,7 +2213,7 @@ github.com style (c) Vasily Polovnyov <vast@whiteants.net>
         </h4>
         <p style="text-align:left">
           <em>identificationInfo[1]/*/spatialResolution/*/distance</em>
-          <span style="float:right">[ISO 19139]</span>
+          <span style="float:right">[<a href="http://inspire.ec.europa.eu/documents/Metadata/INSPIRE_MD_IR_and_ISO_v1_2_20100616.pdf">ISO 19139:2007</a>]</span>
         </p>
         <p>Dit element is conditioneel. Het is verplicht als er een resolutie gespecificeerd kan worden. Het element bevat de resolutie in meters. Het element kan twee keer voorkomen, hiermee wordt een interval aangegeven. Deze dient vanuit de klasse spatialResolution te worden aangemaakt. De meeteenheid voor lengte uit de codelijst ISOStandardUnits, de meter, wordt in het attribuut <i>UnitOfMeasure</i>van distance opgenomen.</p>
         <table id="table-28">
@@ -2177,7 +2239,7 @@ github.com style (c) Vasily Polovnyov <vast@whiteants.net>
         </h4>
         <p style="text-align:left">
           <em>referenceSystemInfo/*/referenceSystemIdentifier/*/code</em>
-          <span style="float:right">[ISO 19139]</span>
+          <span style="float:right">[<a href="http://inspire.ec.europa.eu/documents/Metadata/INSPIRE_MD_IR_and_ISO_v1_2_20100616.pdf">ISO 19139:2007</a>]</span>
         </p>
         <p>Dit elementbevat de Alfanumerieke waarde die het gebruikte referentiesysteem van de dataset aangeeft. EPSG geeft deze code’s uit. Voor het RD wordt de code 28992 gehanteerd<span style="font-family:&quot;Helvetica&quot;,sans-serif">.</span></p>
         <table id="table-29">
@@ -2208,7 +2270,7 @@ github.com style (c) Vasily Polovnyov <vast@whiteants.net>
         </h4>
         <p style="text-align:left">
           <em>referenceSystemInfo/*/referenceSystemIdentifier/*/codeSpace</em>
-          <span style="float:right">[ISO 19139]</span>
+          <span style="float:right">[<a href="http://inspire.ec.europa.eu/documents/Metadata/INSPIRE_MD_IR_and_ISO_v1_2_20100616.pdf">ISO 19139:2007</a>]</span>
         </p>
         <p>Dit element bevat de naam of identificatie van de persoon of organisatie verantwoordelijk voor de namespace (van het referentie systeem). Gebruik hiervoor standaard EPSG.</p>
         <table id="table-30">
@@ -2234,7 +2296,7 @@ github.com style (c) Vasily Polovnyov <vast@whiteants.net>
         </h4>
         <p style="text-align:left">
           <em>referenceSystemInfo/*/referenceSystemIdentifier/*/code</em>
-          <span style="float:right">[ISO19139]</span>
+          <span style="float:right">[<a href="http://inspire.ec.europa.eu/documents/Metadata/INSPIRE_MD_IR_and_ISO_v1_2_20100616.pdf">ISO 19139:2007</a>]</span>
         </p>
         <p>Dit element is conditioneel in dit profiel. Het is alleen verplicht als de dataset temporele informatie bevat die niet gebaseerd is op de Gregoriaanse kalender of de Coordinated Universal Time. Dit element bevat de Alfanumerieke waarde die het gebruikte referentiesysteem van de dataset aangeeft.</p>
         <table id="table-31">
@@ -2260,7 +2322,7 @@ github.com style (c) Vasily Polovnyov <vast@whiteants.net>
         </h4>
         <p style="text-align:left">
           <em>distributionInfo/*/distributionFormat/*/name</em>
-          <span style="float:right">[ISO 19139]</span>
+          <span style="float:right">[<a href="http://inspire.ec.europa.eu/documents/Metadata/INSPIRE_MD_IR_and_ISO_v1_2_20100616.pdf">ISO 19139:2007</a>]</span>
         </p>
         <p>Dit element is conditioneel in dit profiel. Het is alleen verplicht als de dataset een INSPIRE bron is. Dit element bevat de naam van het distributie formaat van de dataset. Deze informatie is te vinden in de INSPIRE dataspecificaties in de paragraaf genaamd Encoding.</p>
         <table id="table-32">
@@ -2286,7 +2348,7 @@ github.com style (c) Vasily Polovnyov <vast@whiteants.net>
         </h4>
         <p style="text-align:left">
           <em>distributionInfo/*/distributionFormat/*/version</em>
-          <span style="float:right">[ISO19139]</span>
+          <span style="float:right">[<a href="http://inspire.ec.europa.eu/documents/Metadata/INSPIRE_MD_IR_and_ISO_v1_2_20100616.pdf">ISO 19139:2007</a>]</span>
         </p>
         <p>Dit element is conditioneel in dit profiel. Het is alleen verplicht als de dataset een INSPIRE bron is. Dit element bevat de versie van het distributie formaat van de dataset. Deze informatie is te vinden in de INSPIRE dataspecificaties in de paragraaf genaamd Encoding.</p>
         <table id="table-33">
@@ -2312,7 +2374,7 @@ github.com style (c) Vasily Polovnyov <vast@whiteants.net>
         </h4>
         <p style="text-align:left">
           <em>distributionInfo/*/distributionFormat/*/specification</em>
-          <span style="float:right">[ISO 19139]</span>
+          <span style="float:right">[<a href="http://inspire.ec.europa.eu/documents/Metadata/INSPIRE_MD_IR_and_ISO_v1_2_20100616.pdf">ISO 19139:2007</a>]</span>
         </p>
         <p>Dit element is conditioneel in dit profiel. Het is alleen verplicht als de dataset een INSPIRE bron is. Dit element bevat de specificatie van het distributie formaat van de dataset. Deze informatie is te vinden in de INSPIRE dataspecificaties in de paragraaf genaamd Encoding.</p>
         <table id="table-34">
@@ -2338,7 +2400,7 @@ github.com style (c) Vasily Polovnyov <vast@whiteants.net>
         </h4>
         <p style="text-align:left">
           <em>dataQualityInfo/*/report/*/result/*/pass</em>
-          <span style="float:right">[ISO 19139]</span>
+          <span style="float:right">[<a href="http://inspire.ec.europa.eu/documents/Metadata/INSPIRE_MD_IR_and_ISO_v1_2_20100616.pdf">ISO 19139:2007</a>]</span>
         </p>
         <p>Dit element is conditioneel in dit profiel. Het is alleen verplicht als de dataset een INSPIRE bron is of als de informatie is gemodelleerd volgens een specifiek informatie model. In dit element kan dan worden weergegeven of het wel of niet conform de INSPIRE specificatie is.</p>
         <table id="table-35">
@@ -2364,7 +2426,7 @@ github.com style (c) Vasily Polovnyov <vast@whiteants.net>
         </h4>
         <p style="text-align:left">
           <em>dataQualityInfo/*/report/*/result/*/explanation</em>
-          <span style="float:right">[ISO 19139]</span>
+          <span style="float:right">[<a href="http://inspire.ec.europa.eu/documents/Metadata/INSPIRE_MD_IR_and_ISO_v1_2_20100616.pdf">ISO 19139:2007</a>]</span>
         </p>
         <p>Dit element is conditioneel in dit profiel. Het is alleen verplicht als de dataset een INSPIRE bron is of als de informatie is gemodelleerd volgens een specifiek informatie model. Het bevat de verklaring van de betekenis van de conformiteit.</p>
         <table id="table-36">
@@ -2390,7 +2452,7 @@ github.com style (c) Vasily Polovnyov <vast@whiteants.net>
         </h4>
         <p style="text-align:left">
           <em>dataQualityInfo/*/report/*/result/*/specification/*/title</em>
-          <span style="float:right">[ISO 19139]</span>
+          <span style="float:right">[<a href="http://inspire.ec.europa.eu/documents/Metadata/INSPIRE_MD_IR_and_ISO_v1_2_20100616.pdf">ISO 19139:2007</a>]</span>
         </p>
         <p>Dit element is conditioneel in dit profiel. Het is alleen verplicht als de dataset een INSPIRE bron is of als de informatie is gemodelleerd volgens een specifiek informatie model. Het bevat de titel van de specificatie of richtlijnen of informatie model waar de dataset conform aan dient te zijn.</p>
         <table id="table-37">
@@ -2420,7 +2482,7 @@ github.com style (c) Vasily Polovnyov <vast@whiteants.net>
         </h4>
         <p style="text-align:left">
           <em>dataQualityInfo/*/report/*/result/*/specification/*/date/*/date</em>
-          <span style="float:right">[ISO 19139]</span>
+          <span style="float:right">[<a href="http://inspire.ec.europa.eu/documents/Metadata/INSPIRE_MD_IR_and_ISO_v1_2_20100616.pdf">ISO 19139:2007</a>]</span>
         </p>
         <p>Dit element is conditioneel in dit profiel. Het is alleen verplicht als de dataset een INSPIRE bron is of als de informatie is gemodelleerd volgens een specifiek informatie model. Het bevat de datum van de specificatie of richtlijnen of informatie model waar de dataset conform aan dient te zijn. Het formaat van de datum is JJJJ-MM-DD (met streepjes).</p>
         <table id="table-38">
@@ -2446,7 +2508,7 @@ github.com style (c) Vasily Polovnyov <vast@whiteants.net>
         </h4>
         <p style="text-align:left">
           <em>dataQualityInfo/*/report/*/result/*/specification/*/date/*/dateType</em>
-          <span style="float:right">[ISO 19139]</span>
+          <span style="float:right">[<a href="http://inspire.ec.europa.eu/documents/Metadata/INSPIRE_MD_IR_and_ISO_v1_2_20100616.pdf">ISO 19139:2007</a>]</span>
         </p>
         <p>Dit element is conditioneel in dit profiel. Het is alleen verplicht als de dataset een INSPIRE bron is of als de informatie is gemodelleerd volgens een specifiek informatie model. Het bevat het type gebeurtenis waar de datum betrekking op heeft. Type gebeurtenis wordt gekozen uit <a href="#codelijst-b52">codelijst B.5.2</a>. Mogelijke gebeurtenissen zijn: creatie-, publicatie-, of revisiedatum.</p>
         <table id="table-39">
@@ -2472,7 +2534,7 @@ github.com style (c) Vasily Polovnyov <vast@whiteants.net>
         </h4>
         <p style="text-align:left">
           <em>dataQualityInfo/*/report/*/</em>
-          <span style="float:right">[ISO 19139]</span>
+          <span style="float:right">[<a href="http://inspire.ec.europa.eu/documents/Metadata/INSPIRE_MD_IR_and_ISO_v1_2_20100616.pdf">ISO 19139:2007</a>]</span>
         </p>
         <p>Dit element is conditioneel in dit profiel. Het is verplicht voor INSPIRE datasets als voor netwerken de aansluiting van hartlijnen niet is verzekerd. Het bevat de meeteenheid waarmee de topologische samenhang is vastgelegd.</p>
         <table id="table-40">
@@ -2498,7 +2560,7 @@ github.com style (c) Vasily Polovnyov <vast@whiteants.net>
         </h4>
         <p style="text-align:left">
           <em>dataQualityInfo/*/report/*/</em>
-          <span style="float:right">[ISO 19139]</span>
+          <span style="float:right">[<a href="http://inspire.ec.europa.eu/documents/Metadata/INSPIRE_MD_IR_and_ISO_v1_2_20100616.pdf">ISO 19139:2007</a>]</span>
         </p>
         <p>Dit element is conditioneel in dit profiel. Het is verplicht voor INSPIRE datasets als voor netwerken de aansluiting van hartlijnen niet is verzekerd. Het bevat de tolerantie waarmee de topologische samenhang is vastgelegd</p>
         <table id="table-41">
@@ -2524,7 +2586,7 @@ github.com style (c) Vasily Polovnyov <vast@whiteants.net>
         </h4>
         <p style="text-align:left">
           <em>identificationInfo[1]/*/resourceConstraints/*/accessConstraints</em>
-          <span style="float:right">[ISO 19139]</span>
+          <span style="float:right">[<a href="http://inspire.ec.europa.eu/documents/Metadata/INSPIRE_MD_IR_and_ISO_v1_2_20100616.pdf">ISO 19139:2007</a>]</span>
         </p>
         <p>Het is verplicht op zijn minst één van de drie elementen (juridische) toegangsrestricties, overige beperkingen of veiligheidsrestricties op te nemen. Als er geen beperkingen zijn dient men dat bij overige beperkingen aan te geven. Als er overige beperkingen worden opgenomen, dient hier de waarde "anders" gekozen te worden. In <a href="#appendix-f">Appendix F</a> is uitgewerkt hoe gebruiksvoorwaarden en public domein mark toe te passen. Dit element bevat toegangseisen die er zorg voor dragen dat privacy of intellectueel eigendom gewaarborgd zijn en elke andere speciale beperkingen voor het verkrijgen van de metadata of data. De waardes komen uit <a href="#codelijst-b524">codelijst B.5.24 van ISO19115</a>.</p>
         <table id="table-42">
@@ -2550,7 +2612,7 @@ github.com style (c) Vasily Polovnyov <vast@whiteants.net>
         </h4>
         <p style="text-align:left">
           <em>identificationInfo[1]/*/resourceConstraints/*/otherConstraints</em>
-          <span style="float:right">[ISO 19139]</span>
+          <span style="float:right">[<a href="http://inspire.ec.europa.eu/documents/Metadata/INSPIRE_MD_IR_and_ISO_v1_2_20100616.pdf">ISO 19139:2007</a>]</span>
         </p>
         <p>Het is verplicht op zijn minst één van de drie elementen (juridische) toegangsrestricties, overige beperkingen of veiligheidsrestricties op te nemen. Als er geen beperkingen zijn dient men dat bij overige beperkingen aan te geven. Als er een waarde in dit element wordt ingevuld, dient bij het element (juridische) toegangsrestricties de waarde "anders" gekozen te worden. In <a href="#appendix-f">Appendix F</a> is uitgewerkt hoe gebruiksvoorwaarden en public domein mark toe te passen. Dit element bevat andere restricties en vereisten voor toegang en gebruik van de data. Als er geen beperkingen zijn dient men de tekst “geen beperkingen” op te nemen.</p>
         <table id="table-43">
@@ -2576,7 +2638,7 @@ github.com style (c) Vasily Polovnyov <vast@whiteants.net>
         </h4>
         <p style="text-align:left">
           <em>identificationInfo[1]/*/resourceConstraints/*/classification</em>
-          <span style="float:right">[ISO 19139]</span>
+          <span style="float:right">[<a href="http://inspire.ec.europa.eu/documents/Metadata/INSPIRE_MD_IR_and_ISO_v1_2_20100616.pdf">ISO 19139:2007</a>]</span>
         </p>
         <p>Het is verplicht op zijn minst één van de drie elementen (juridische) toegangsrestricties, overige beperkingen of veiligheidsrestricties op te nemen. Als er geen beperkingen zijn dient men dat bij overige beperkingen aan te geven. In <a href="#appendix-f">Appendix F</a> is uitgewerkt hoe gebruiksvoorwaarden en public domein mark toe te passen. Dit element bevat de soort restrictie op de data. Hiervoor is <a href="#codelijst-b511">codelijst B.5.11</a>.</p>
         <table id="table-44">
@@ -2602,7 +2664,7 @@ github.com style (c) Vasily Polovnyov <vast@whiteants.net>
         </h4>
         <p style="text-align:left">
           <em>identificationInfo[1]/*/resourceConstraints/*/useLimitation</em>
-          <span style="float:right">[ISO 19139]</span>
+          <span style="float:right">[<a href="http://inspire.ec.europa.eu/documents/Metadata/INSPIRE_MD_IR_and_ISO_v1_2_20100616.pdf">ISO 19139:2007</a>]</span>
         </p>
         <p>Dit element bevat toepassingen waarvoor de dataset niet geschikt is. Voor INSPIRE, bevat het indien van toepassing ook prijsinformatie voor het gebruik van de dataset.</p>
         <table id="table-45">
@@ -2628,7 +2690,7 @@ github.com style (c) Vasily Polovnyov <vast@whiteants.net>
         </h4>
         <p style="text-align:left">
           <em>identificationInfo[1]/*/pointOfContact/*/organisationName</em>
-          <span style="float:right">[ISO 19139]</span>
+          <span style="float:right">[<a href="http://inspire.ec.europa.eu/documents/Metadata/INSPIRE_MD_IR_and_ISO_v1_2_20100616.pdf">ISO 19139:2007</a>]</span>
         </p>
         <p>Dit element is de identificatie van de verantwoordelijke organisatie. Van de organisatie wordt de organisatie naam vastgelegd. Gebruik de volledig uitgeschreven naam van de verantwoordelijke organisatie. De afkorting kan toegevoegd worden aan de organisatienaam. Voor de correcte overheidsnamen zie: <a href="http://almanak.overheid.nl/">http://almanak.overheid.nl/</a>.</p>
         <table id="table-46">
@@ -2654,7 +2716,7 @@ github.com style (c) Vasily Polovnyov <vast@whiteants.net>
         </h4>
         <p style="text-align:left">
           <em>identificationInfo[1]/*/pointOfContact/*/contactInfo/*/address/*/electronicMailAddress</em>
-          <span style="float:right">[ISO 19139]</span>
+          <span style="float:right">[<a href="http://inspire.ec.europa.eu/documents/Metadata/INSPIRE_MD_IR_and_ISO_v1_2_20100616.pdf">ISO 19139:2007</a>]</span>
         </p>
         <p>Dit element bevat het e-mail adres van de verantwoordelijke organisatie van de bron.</p>
         <table id="table-47">
@@ -2680,7 +2742,7 @@ github.com style (c) Vasily Polovnyov <vast@whiteants.net>
         </h4>
         <p style="text-align:left">
           <em>identificationInfo[1]/*/pointOfContact/*/role</em>
-          <span style="float:right">[ISO 19139]</span>
+          <span style="float:right">[<a href="http://inspire.ec.europa.eu/documents/Metadata/INSPIRE_MD_IR_and_ISO_v1_2_20100616.pdf">ISO 19139:2007</a>]</span>
         </p>
         <p>Dit element geeft de rol van de verantwoordelijke organisatie van de bron weer. Voor de rol van de organisatie wordt een codelijst gehanteerd, zie zie <a href="#codelijst-b55">Codelijst B.5.5 CI_RoleCode</a>.</p>
         <table id="table-48">
@@ -2706,7 +2768,7 @@ github.com style (c) Vasily Polovnyov <vast@whiteants.net>
         </h4>
         <p style="text-align:left">
           <em>fileIdentifier</em>
-          <span style="float:right">[ISO 19139]</span>
+          <span style="float:right">[<a href="http://inspire.ec.europa.eu/documents/Metadata/INSPIRE_MD_IR_and_ISO_v1_2_20100616.pdf">ISO 19139:2007</a>]</span>
         </p>
         <p>Dit element bevat de unieke identifier voor de metadata file. Geadviseerd wordt om gebruik te maken van een betekenisloze identifier die wereldwijd uniek is zoals de <a href="http://en.wikipedia.org/wiki/UUID">Universal Unique Identifier</a></p>
         <table id="table-49">
@@ -2732,7 +2794,7 @@ github.com style (c) Vasily Polovnyov <vast@whiteants.net>
         </h4>
         <p style="text-align:left">
           <em>parentIdentifier</em>
-          <span style="float:right">[ISO 19139]</span>
+          <span style="float:right">[<a href="http://inspire.ec.europa.eu/documents/Metadata/INSPIRE_MD_IR_and_ISO_v1_2_20100616.pdf">ISO 19139:2007</a>]</span>
         </p>
         <p>Dit element is conditioneel in de kernset. Het is verplicht als er een dataset met hogere hiërarchie is. Het bevat de unieke ID van de metadata waarvan deze metadata een subset is.</p>
         <table id="table-50">
@@ -2758,7 +2820,7 @@ github.com style (c) Vasily Polovnyov <vast@whiteants.net>
         </h4>
         <p style="text-align:left">
           <em>contact/*/organisationName</em>
-          <span style="float:right">[ISO 19139]</span>
+          <span style="float:right">[<a href="http://inspire.ec.europa.eu/documents/Metadata/INSPIRE_MD_IR_and_ISO_v1_2_20100616.pdf">ISO 19139:2007</a>]</span>
         </p>
         <p>Dit element bevat de organisatie verantwoordelijk voor de metadata. Gebruik de volledig uitgeschreven naam van de verantwoordelijke organisatie. De afkorting kan toegevoegd worden aan de organisatienaam. Voor de correcte overheidsnamen zie: <a href="http://almanak.overheid.nl/">http://almanak.overheid.nl/</a>.</p>
         <table id="table-51">
@@ -2784,7 +2846,7 @@ github.com style (c) Vasily Polovnyov <vast@whiteants.net>
         </h4>
         <p style="text-align:left">
           <em>contact/*/role</em>
-          <span style="float:right">[ISO 19139]</span>
+          <span style="float:right">[<a href="http://inspire.ec.europa.eu/documents/Metadata/INSPIRE_MD_IR_and_ISO_v1_2_20100616.pdf">ISO 19139:2007</a>]</span>
         </p>
         <p>Dit element bevat de rol van de organisatie verantwoordelijk voor de metadata. Voor de rol van de organisatie wordt een codelijst gehanteerd. INSPIRE vereist pointOfContact.</p>
         <table id="table-52">
@@ -2810,7 +2872,7 @@ github.com style (c) Vasily Polovnyov <vast@whiteants.net>
         </h4>
         <p style="text-align:left">
           <em>contact/*/contactInfo/*/address/*/electronicMailAddress</em>
-          <span style="float:right">[ISO 19139]</span>
+          <span style="float:right">[<a href="http://inspire.ec.europa.eu/documents/Metadata/INSPIRE_MD_IR_and_ISO_v1_2_20100616.pdf">ISO 19139:2007</a>]</span>
         </p>
         <p>Dit element bevat het e-mail adres van de organisatie verantwoordelijk voor de metadata.</p>
         <table id="table-53">
@@ -2836,7 +2898,7 @@ github.com style (c) Vasily Polovnyov <vast@whiteants.net>
         </h4>
         <p style="text-align:left">
           <em>dateStamp</em>
-          <span style="float:right">[ISO 19139]</span>
+          <span style="float:right">[<a href="http://inspire.ec.europa.eu/documents/Metadata/INSPIRE_MD_IR_and_ISO_v1_2_20100616.pdf">ISO 19139:2007</a>]</span>
         </p>
         <p>Datum waarop de metadata gemaakt ofgewijzigd is. Het formaat van de datum is JJJJ-MM-DD (met streepjes).</p>
         <table id="table-54">
@@ -2862,7 +2924,7 @@ github.com style (c) Vasily Polovnyov <vast@whiteants.net>
         </h4>
         <p style="text-align:left">
           <em>Language</em>
-          <span style="float:right">[ISO 19139]</span>
+          <span style="float:right">[<a href="http://inspire.ec.europa.eu/documents/Metadata/INSPIRE_MD_IR_and_ISO_v1_2_20100616.pdf">ISO 19139:2007</a>]</span>
         </p>
         <p>In dit element wordt vastgelegd in welke taal de metadata is beschreven. Het bevat de code van de taal waarin de tekst in de metadata is opgenomen. Gebruik hiervoor alleen de drie-letter codes van 639-2/B (bibliographic codes), zoals gedefinieerd op <a href="http://www.loc.gov/standards/iso639-2/">http://www.loc.gov/standards/iso639-2/</a>. De code voor Nederlands is dut, zie <a href="#codelijst-iso-639-2">Appendix A</a>. Over het algemeen is dut de default waarde.</p>
         <table id="table-55">
@@ -2888,7 +2950,7 @@ github.com style (c) Vasily Polovnyov <vast@whiteants.net>
         </h4>
         <p style="text-align:left">
           <em>metadataStandardName</em>
-          <span style="float:right">[ISO 19139]</span>
+          <span style="float:right">[<a href="http://inspire.ec.europa.eu/documents/Metadata/INSPIRE_MD_IR_and_ISO_v1_2_20100616.pdf">ISO 19139:2007</a>]</span>
         </p>
         <p>Dit element is nodig om uitbreidingen op profielen te duiden. Dit element bevat de naam van de standaard.</p>
         <table id="table-56">
@@ -2914,7 +2976,7 @@ github.com style (c) Vasily Polovnyov <vast@whiteants.net>
         </h4>
         <p style="text-align:left">
           <em>metadataStandardVersion</em>
-          <span style="float:right">[ISO 19139]</span>
+          <span style="float:right">[<a href="http://inspire.ec.europa.eu/documents/Metadata/INSPIRE_MD_IR_and_ISO_v1_2_20100616.pdf">ISO 19139:2007</a>]</span>
         </p>
         <p>Dit element is nodig om uitbreidingen op standaarden aan te geven. Dit element bevat de versie (profiel) van de metadatastandaard die wordtgebruikt.</p>
         <table id="table-57">
@@ -2941,7 +3003,7 @@ github.com style (c) Vasily Polovnyov <vast@whiteants.net>
     <!--OddPage-->
     <h2 id="h-optionele-set-metadata" resource="#h-optionele-set-metadata"><span property="xhv:role" resource="xhv:heading"><span class="secno">6. </span>Optionele set metadata</span>
     </h2>
-    <p>Naast de verplichte kernset heeft de Nederlandse metadatastandaard voor geografie een optionele set. Deze set bestaat uit een selectie van metadata-elementen uit ISO 19115, die nuttig zijn voor het beheer van geografische datasets en –series. Het is niet de volledige ISO19115 set. Als men meer metadata wil vastleggen als mogelijk met de verplichte kernset dan dient men bij voorkeur, om de interoperabiliteit te bevorderen, de benodigde elementen uit deze optionele set te kiezen. <a href="#table-58">Tabel 3</a> bevat deze optionele set. Van elk metadata element wordt achtereenvolgens gegeven: de metadata naam (naam waaronder de metadata entiteit wordt aangeduid), het ISO nummer, de (eventueel specialiseerde) Nederlandse metadata element naam van het element in ISO 19115 en de bijbehorende definitie. In <a href="#appendix-b">Appendix B</a> worden de onderlinge relaties tussen de elementen in de kernset en de optionele set aangegeven via de abstracte klassen die ISO 19115 gebruikt.</p>
+    <p>Naast de verplichte kernset heeft de Nederlandse metadatastandaard voor geografie een optionele set. Deze set bestaat uit een selectie van metadata-elementen uit ISO 19115, die nuttig zijn voor het beheer van geografische datasets en –series. Het is niet de volledige ISO 19115 set. Als men meer metadata wil vastleggen als mogelijk met de verplichte kernset dan dient men bij voorkeur, om de interoperabiliteit te bevorderen, de benodigde elementen uit deze optionele set te kiezen. <a href="#table-58">Tabel 3</a> bevat deze optionele set. Van elk metadata element wordt achtereenvolgens gegeven: de metadata naam (naam waaronder de metadata entiteit wordt aangeduid), het ISO nummer, de (eventueel specialiseerde) Nederlandse metadata element naam van het element in ISO 19115 en de bijbehorende definitie. In <a href="#appendix-b">Appendix B</a> worden de onderlinge relaties tussen de elementen in de kernset en de optionele set aangegeven via de abstracte klassen die ISO 19115 gebruikt.</p>
     <table id="table-58">
       <colgroup>
         <col style="width: 20%;">
@@ -2971,7 +3033,11 @@ github.com style (c) Vasily Polovnyov <vast@whiteants.net>
           <td>Geeft informatie over de alternative gebruikte talen</td>
         </tr>
         <tr>
-          <td rowspan="2">Contactpersoon metadata<br><span class="note"><span class="marker">NOOT</span>Geonovum adviseert de contactgegevens te ontsluiten via een website (URL organisatie) met daarop de relevante gegevens in plaats van deze elementen.</span>
+          <td rowspan="2">Contactpersoon metadata
+            <div class="note">
+              <div class="note-title marker" aria-level="3" role="heading" id="h-note2"><span>Noot</span></div>
+              <div class="">Geonovum adviseert de contactgegevens te ontsluiten via een website (URL organisatie) met daarop de relevante gegevens in plaats van deze elementen.</div>
+            </div>
           </td>
           <td>375</td>
           <td>Naam contactpersoon metadata</td>
@@ -3283,7 +3349,11 @@ github.com style (c) Vasily Polovnyov <vast@whiteants.net>
           <td>Functie die wordt uitgevoerd door de verantwoordelijke organisatie.</td>
         </tr>
         <tr>
-          <td rowspan="8">Contactpersoon distribuerende organisatie Contactgegevens<br><span class="note"><span class="marker">NOOT</span>Geonovum adviseert de contactgegevens te ontsluiten via een website (URL organisatie) met daarop de relevante gegevens in plaats van deze elementen.</span>
+          <td rowspan="8">Contactpersoon distribuerende organisatie Contactgegevens
+            <div class="note">
+              <div class="note-title marker" aria-level="3" role="heading" id="h-note3"><span>Noot</span></div>
+              <div class="">Geonovum adviseert de contactgegevens te ontsluiten via een website (URL organisatie) met daarop de relevante gegevens in plaats van deze elementen.</div>
+            </div>
           </td>
           <td>408</td>
           <td>Telefoonnummer</td>
@@ -4673,7 +4743,7 @@ github.com style (c) Vasily Polovnyov <vast@whiteants.net>
     <h2 id="h-appendix-b" resource="#h-appendix-b"><span property="xhv:role" resource="xhv:heading"><span class="secno">B. </span>Invulinstructies</span>
     </h2>
     <div class="note">
-      <div class="note-title marker" aria-level="3" role="heading" id="h-note1"><span>Noot</span><span style="text-transform: none">: Appendix B Visualisatie</span></div>
+      <div class="note-title marker" aria-level="3" role="heading" id="h-note4"><span>Noot</span><span style="text-transform: none">: Appendix B Visualisatie</span></div>
       <p class="">Dit is een test om Appendix B (ofwel Bijlage 2: Invulinstructies) te visualiseren, zoals vermeld in <a href="https://github.com/Geonovum/Metadata-ISO19115/issues/1">Issue #1</a></p>
     </div>
     <p>Metadata ISO-19115 classes.</p>
@@ -4685,7 +4755,7 @@ github.com style (c) Vasily Polovnyov <vast@whiteants.net>
       <h3 id="h-metadata-unieke-identifier-appendix-b" resource="#h-metadata-unieke-identifier-appendix-b"><span property="xhv:role" resource="xhv:heading"><span class="secno">B.1 </span>Metadata unieke identifier</span>
       </h3>
       <em>Metadata unieke identifier</em> - Unieke ID voor de metadata file.<br>
-      <table>
+      <table id="table-73">
         <tbody>
           <tr>
             <th>Longname</th>
@@ -4734,7 +4804,7 @@ github.com style (c) Vasily Polovnyov <vast@whiteants.net>
       <h3 id="h-taal-van-de-metadata-appendix-b" resource="#h-taal-van-de-metadata-appendix-b"><span property="xhv:role" resource="xhv:heading"><span class="secno">B.2 </span>Taal van de metadata</span>
       </h3>
       <em>Taal van de metadata</em> - Taal gebruikt om de metadata te beschrijven.<br>
-      <table>
+      <table id="table-74">
         <tbody>
           <tr>
             <th>Longname</th>
@@ -4785,7 +4855,7 @@ github.com style (c) Vasily Polovnyov <vast@whiteants.net>
       <h3 id="h-metadata-karakterset-appendix-b" resource="#h-metadata-karakterset-appendix-b"><span property="xhv:role" resource="xhv:heading"><span class="secno">B.3 </span>Metadata karakterset</span>
       </h3>
       <em>Metadata karakterset</em> - Volledige naam van de karakter codeerstandaard om de metadata set te beschrijven..<br>
-      <table>
+      <table id="table-75">
         <tbody>
           <tr>
             <th>Longname</th>
@@ -4836,7 +4906,7 @@ github.com style (c) Vasily Polovnyov <vast@whiteants.net>
       <h3 id="h-parent-unieke-identifier-appendix-b" resource="#h-parent-unieke-identifier-appendix-b"><span property="xhv:role" resource="xhv:heading"><span class="secno">B.4 </span>Parent unieke identifier</span>
       </h3>
       <em>Parent unieke identifier</em> - Unieke ID van de metadata waarvan deze metadata een subset (child) is.<br>
-      <table>
+      <table id="table-76">
         <tbody>
           <tr>
             <th>Longname</th>
@@ -4885,7 +4955,7 @@ github.com style (c) Vasily Polovnyov <vast@whiteants.net>
       <h3 id="h-hierarchieniveau-appendix-b" resource="#h-hierarchieniveau-appendix-b"><span property="xhv:role" resource="xhv:heading"><span class="secno">B.5 </span>Hiërarchieniveau</span>
       </h3>
       <em>Hiërarchieniveau</em> - Hiërarchisch niveau waar de metadata betrekking op heeft.<br>
-      <table>
+      <table id="table-77">
         <tbody>
           <tr>
             <th>Longname</th>
@@ -4936,7 +5006,7 @@ github.com style (c) Vasily Polovnyov <vast@whiteants.net>
       <h3 id="h-hierarchieniveau-naam-appendix-b" resource="#h-hierarchieniveau-naam-appendix-b"><span property="xhv:role" resource="xhv:heading"><span class="secno">B.6 </span>Hiërarchieniveau naam</span>
       </h3>
       <em>Hiërarchieniveau naam</em> - Naam van het hiërarchisch niveau waar de metadata betrekking op heeft.<br>
-      <table>
+      <table id="table-78">
         <tbody>
           <tr>
             <th>Longname</th>
@@ -4991,7 +5061,7 @@ github.com style (c) Vasily Polovnyov <vast@whiteants.net>
       <!-- Section: Naam contactpersoon metadata -->
       <h3 id="naam-contactpersoon-metadata-appendix-b">Naam contactpersoon metadata</h3>
       <em>Naam contactpersoon metadata</em> - Naam van de contactpersoon.
-      <table>
+      <table id="table-79">
         <tbody>
           <tr>
             <th>Longname</th>
@@ -5027,7 +5097,7 @@ github.com style (c) Vasily Polovnyov <vast@whiteants.net>
       <!-- Section: Verantwoordelijke organisatie metadata -->
       <h4 id="verantwoordelijke-organisatie-metadata-appendix-b">Verantwoordelijke organisatie metadata</h4>
       <em>Verantwoordelijke organisatie metadata</em> - Volledige naam van de voor metadata verantwoordelijke organisatie. Indien niet een organisatie verantwoordelijk is, maar een persoon, dan wordt de naam van deze persoon ingevuld.
-      <table>
+      <table id="table-80">
         <tbody>
           <tr>
             <th>Longname</th>
@@ -5063,7 +5133,7 @@ github.com style (c) Vasily Polovnyov <vast@whiteants.net>
       <!-- Section: Naam contactpersoon metadata -->
       <h4 id="rol-contactpersoon-metadata-appendix-b">Rol contactpersoon metadata</h4>
       <em>Rol contactpersoon metadata</em> - Beschrijving op welke manier de persoon betrokken is bij de metadata.
-      <table>
+      <table id="table-81">
         <tbody>
           <tr>
             <th>Longname</th>
@@ -5121,7 +5191,7 @@ github.com style (c) Vasily Polovnyov <vast@whiteants.net>
       <!-- Section: Telefoonnummer -->
       <h4 id="telefoonnummer-appendix-b">Telefoonnummer</h4>
       <em>Telefoonnummer</em> - Telefoonnummer van de organisatie.
-      <table>
+      <table id="table-82">
         <tbody>
           <tr>
             <th>Longname</th>
@@ -5157,7 +5227,7 @@ github.com style (c) Vasily Polovnyov <vast@whiteants.net>
       <!-- Section: Faxnummer -->
       <h4 id="faxnummer-appendix-b">Faxnummer</h4>
       <em>Faxnummer</em> - Faxnummer van de organisatie.
-      <table>
+      <table id="table-83">
         <tbody>
           <tr>
             <th>Longname</th>
@@ -5220,7 +5290,7 @@ github.com style (c) Vasily Polovnyov <vast@whiteants.net>
       <!-- Section: Adres -->
       <h4 id="adres-appendix-b">Adres</h4>
       <em>Adres</em> - Contactadres van de organisatie.
-      <table>
+      <table id="table-84">
         <tbody>
           <tr>
             <th>Longname</th>
@@ -5256,7 +5326,7 @@ github.com style (c) Vasily Polovnyov <vast@whiteants.net>
       <!-- Section: Plaats -->
       <h4 id="plaats-appendix-b">Plaats</h4>
       <em>Plaats</em> - Plaatsnaam behorende bij het contactadres van de organisatie.
-      <table>
+      <table id="table-85">
         <tbody>
           <tr>
             <th>Longname</th>
@@ -5292,7 +5362,7 @@ github.com style (c) Vasily Polovnyov <vast@whiteants.net>
       <!-- Section: Provincie -->
       <h4 id="provincie-appendix-b">Provincie</h4>
       <em>Provincie</em> - Provincie behorende bij het contactadres van de organisatie.
-      <table>
+      <table id="table-86">
         <tbody>
           <tr>
             <th>Longname</th>
@@ -5328,7 +5398,7 @@ github.com style (c) Vasily Polovnyov <vast@whiteants.net>
       <!-- Section: Postcode -->
       <h4 id="postcode-appendix-b">Postcode</h4>
       <em>Postcode</em> - Postcode behorende bij het contactadres van de organisatie.
-      <table>
+      <table id="table-87">
         <tbody>
           <tr>
             <th>Longname</th>
@@ -5364,7 +5434,7 @@ github.com style (c) Vasily Polovnyov <vast@whiteants.net>
       <!-- Section: Land -->
       <h4 id="land-appendix-b">Land</h4>
       <em>Land</em> - Land behorende bij het contactadres van de organisatie.
-      <table>
+      <table id="table-88">
         <tbody>
           <tr>
             <th>Longname</th>
@@ -5400,7 +5470,7 @@ github.com style (c) Vasily Polovnyov <vast@whiteants.net>
       <!-- Section: Verantwoordelijke organisatie metadata: e-mail -->
       <h4 id="verantwoordelijke-organisatie-bron-email-appendix-b">Verantwoordelijke organisatie metadata: e-mail</h4>
       <em>Verantwoordelijke organisatie metadata: e-mail</em> - E-mail adres van de organisatie.
-      <table>
+      <table id="table-89">
         <tbody>
           <tr>
             <th>Longname</th>
@@ -5475,7 +5545,7 @@ github.com style (c) Vasily Polovnyov <vast@whiteants.net>
       <!-- Section: Verantwoordelijke organisatie metadata: URL -->
       <h4 id="verantwoordelijke-organisatie-bron-url-appendix-b">Verantwoordelijke organisatie metadata: URL</h4>
       <em>Verantwoordelijke organisatie metadata: URL</em> - Locatie voor online toegang bij gebruik van een Uniform Resource Locator adres of een vergelijkbaar schema.
-      <table>
+      <table id="table-90">
         <tbody>
           <tr>
             <th>Longname</th>
@@ -5535,7 +5605,7 @@ github.com style (c) Vasily Polovnyov <vast@whiteants.net>
       <!-- Section: Verantwoordelijke organisatie metadata: rol -->
       <h4 id="verantwoordelijke-organisatie-metadata-rol-appendix-b">Verantwoordelijke organisatie metadata: rol</h4>
       <em>Verantwoordelijke organisatie metadata: rol</em> - Beschrijving op welke manier de organisatie betrokken is bij de metadata.
-      <table>
+      <table id="table-91">
         <tbody>
           <tr>
             <th>Longname</th>
@@ -5592,7 +5662,7 @@ github.com style (c) Vasily Polovnyov <vast@whiteants.net>
       <h3 id="h-metadata-datum-appendix-b" resource="#h-metadata-datum-appendix-b"><span property="xhv:role" resource="xhv:heading"><span class="secno">B.8 </span>Metadata datum</span>
       </h3>
       <em>Metadata datum</em> - Datum waarop de metadata is gecreëerd of gewijzigd.<br>
-      <table>
+      <table id="table-92">
         <tbody>
           <tr>
             <th>Longname</th>
@@ -5641,7 +5711,7 @@ github.com style (c) Vasily Polovnyov <vast@whiteants.net>
       <h3 id="h-metadata-standaard-naam-appendix-b" resource="#h-metadata-standaard-naam-appendix-b"><span property="xhv:role" resource="xhv:heading"><span class="secno">B.9 </span>Metadata standaard naam</span>
       </h3>
       <em>Metadata standaard naam</em> - Naam van de gebruikte metadata-standaard.<br>
-      <table>
+      <table id="table-93">
         <tbody>
           <tr>
             <th>Longname</th>
@@ -5690,7 +5760,7 @@ github.com style (c) Vasily Polovnyov <vast@whiteants.net>
       <h3 id="h-metadata-standaard-versie-appendix-b" resource="#h-metadata-standaard-versie-appendix-b"><span property="xhv:role" resource="xhv:heading"><span class="secno">B.10 </span>Metadata standaard versie</span>
       </h3>
       <em>Metadata standaard versie</em> - Versie (profiel) van de metadata-standaard die wordt gebruikt.<br>
-      <table>
+      <table id="table-94">
         <tbody>
           <tr>
             <th>Longname</th>
@@ -5741,7 +5811,7 @@ github.com style (c) Vasily Polovnyov <vast@whiteants.net>
     <h2 id="h-appendix-c" resource="#h-appendix-c"><span property="xhv:role" resource="xhv:heading"><span class="secno">C. </span>Wijzigingen op ISO 19115:2003</span>
     </h2>
     <p>Om het Nederlandse profiel te creëren, zijn de volgende wijzigingen op ISO 19115 opgenomen, namelijk Codelijst MD_MaintenanceFrequencyCode(B.5.18) is uitgebreid met de volgende elementen:</p>
-    <table id="table-74">
+    <table id="">
       <colgroup>
         <col style="width: 25%;">
         <col style="width: 25%;">
@@ -5807,7 +5877,7 @@ github.com style (c) Vasily Polovnyov <vast@whiteants.net>
     <h2 id="h-appendix-d" resource="#h-appendix-d"><span property="xhv:role" resource="xhv:heading"><span class="secno">D. </span>Verantwoording metadata elementen</span>
     </h2>
     <p>In deze tabel is door middel van het ISO nummer aangegeven op welk ISO element het metadata element gebaseerd is. Verder is de relatie naar de INSPIRE elementen gelegd door de verwijzing naar de paragraaf waarin het element beschreven wordt. Ook is aangegeven welke elementen in deze en in de vorige versie van het Nederlandse profiel verplicht zijn.</p>
-    <table id="table-75">
+    <table id="">
       <colgroup>
         <col width="20%">
         <col width="9%">
@@ -6284,7 +6354,7 @@ github.com style (c) Vasily Polovnyov <vast@whiteants.net>
     </h2>
     <p>De voor Overheid.nl Webmetadata Standaard v4.0 verplichte elementen uit Dublin core</p>
     <p>In deze mapping is de relatie met de elementen van Overheid.nl webmetadata standaard versie 4.0 gelegd. Hiermee voldoet de metadata ook aan de buiten het geo domein gehanteerde standaarden. De elementen die verplicht zijn, zijn in geel weergegeven.</p>
-    <table id="table-76">
+    <table id="">
       <colgroup>
         <col width="20%">
         <col width="9%">
@@ -6840,6 +6910,29 @@ github.com style (c) Vasily Polovnyov <vast@whiteants.net>
 
 
   <script src="https://www.w3.org/scripts/TR/2016/fixup.js"></script>
+
+  <section id="references" class="appendix" typeof="bibo:Chapter" resource="#references" property="bibo:hasPart">
+    <!--OddPage-->
+    <h2 id="h-references" resource="#h-references"><span property="xhv:role" resource="xhv:heading"><span class="secno">I. </span>Referenties</span>
+    </h2>
+
+    <section id="informative-references" typeof="bibo:Chapter" resource="#informative-references" property="bibo:hasPart">
+      <h3 id="h-informative-references" resource="#h-informative-references"><span property="xhv:role" resource="xhv:heading"><span class="secno">I.1 </span>Informatieve referenties</span>
+      </h3>
+      <dl class="bibliography" resource=""><dt id="bib-INSPIRE-19115-19119">[INSPIRE-19115-19119]</dt>
+        <dd><a href="http://inspire.ec.europa.eu/documents/Metadata/INSPIRE_MD_IR_and_ISO_v1_2_20100616.pdf" property="dc:references"><cite>INSPIRE Metadata Implementing Rules: Technical Guidelines based on EN ISO 19115 and EN ISO 19119</cite></a>. Drafting Team Metadata and European Commission Joint Research Centre. European Commission Joint Research Centre. 26 oktober 2007. URL: <a href="http://inspire.ec.europa.eu/documents/Metadata/INSPIRE_MD_IR_and_ISO_v1_2_20100616.pdf" property="dc:references">http://inspire.ec.europa.eu/documents/Metadata/INSPIRE_MD_IR_and_ISO_v1_2_20100616.pdf</a>
+        </dd><dt id="bib-ISO19101">[ISO19101]</dt>
+        <dd><a href="https://www.iso.org/standard/26002.html" property="dc:references"><cite>ISO 19101:2002 Geographic information -- Reference model</cite></a>. . International Organization for Standardization. Juli 2002. URL: <a href="https://www.iso.org/standard/26002.html" property="dc:references">https://www.iso.org/standard/26002.html</a>
+        </dd><dt id="bib-ISO19115">[ISO19115]</dt>
+        <dd><a href="https://www.iso.org/standard/26020.html" property="dc:references"><cite>ISO 19115:2003  Geographic information -- Metadata</cite></a>. . International Organization for Standardization. Mei 2003. URL: <a href="https://www.iso.org/standard/26020.html" property="dc:references">https://www.iso.org/standard/26020.html</a>
+        </dd><dt id="bib-ISO19136">[ISO19136]</dt>
+        <dd><a href="https://www.iso.org/standard/32554.html" property="dc:references"><cite>ISO 19136:2007 Geographic information -- Geography Markup Language (GML)</cite></a>. . International Organization for Standardization. September 2007. URL: <a href="https://www.iso.org/standard/32554.html" property="dc:references">https://www.iso.org/standard/32554.html</a>
+        </dd><dt id="bib-ISO19139">[ISO19139]</dt>
+        <dd><a href="http://inspire.ec.europa.eu/documents/Metadata/INSPIRE_MD_IR_and_ISO_v1_2_20100616.pdf" property="dc:references"><cite> ISO/TS 19139:2007 Geographic information -- Metadata -- XML schema implementation</cite></a>. . International Organization for Standardization. April 2007. URL: <a href="http://inspire.ec.europa.eu/documents/Metadata/INSPIRE_MD_IR_and_ISO_v1_2_20100616.pdf" property="dc:references">http://inspire.ec.europa.eu/documents/Metadata/INSPIRE_MD_IR_and_ISO_v1_2_20100616.pdf</a>
+        </dd>
+      </dl>
+    </section>
+  </section>
   <p role="navigation" id="back-to-top"><a href="#toc"><abbr title="Back to Top">↑</abbr></a></p>
 </body>
 </html>
