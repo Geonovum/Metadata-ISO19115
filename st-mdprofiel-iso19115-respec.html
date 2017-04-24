@@ -38,7 +38,7 @@
         <h3>Context</h3>
         <p><a href="#image001">Figuur 1</a> plaatst het Nederlandse metadata profiel voor geografie in zijn internationale en sectorale context. De ISO-kernset is de kleinste eenheid, een selectie uit ISO 19115.</p>
         <figure id="image001">
-          <img src="st-mdprofiel-iso19115/image001.svg" alt="image001">
+          <a href="st-mdprofiel-iso19115/image001.svg"><img src="st-mdprofiel-iso19115/image001.svg" alt="image001"></a>
           <figcaption>Context profiel.</figcaption>
         </figure>
         <p>De Nederlandse kernset bevat de Europese kernset (INSPIRE) plus een selectie van metadata-elementen uit ISO 19115. In dit profiel zijn de metadata elementen met hun oorsprong aangegeven in <a href="#appendix-d">Appendix D</a>.</p>
@@ -128,7 +128,7 @@
           <table><colgroup><col style="width: 25%"></col><col style="width: 75%"></col></colgroup><tr><th>Data  type of Domein</th><th>Voorbeeld</th></tr><tr><td>B.5.25</td><td>dataset</td></tr></table>
           <div class="advisement"><i>Toelichting</i><p>De kernset van het Nederlands metadata profiel voorgeografie geldt niet alleen voor geografische datasets, maar ook voor datasetseries. Volgens ISO 19115 is een dataset serie een verzameling geografischedata die gelijke karakteristieken hebben ten aanzien van het thema, de resolutie en/of methodologie. Veelal geven dataproducenten aan of er sprake is van een dataset serie. Voorbeelden van dataset series zijn:</p><ul><li>Verzameling luchtfoto’s die in dezelfde vlucht met dezelfde camera en filmtype zijn gemaakt;</li><li>Continue satellietopname van één omwenteling om de aarde;</li><li>Verzameling rasterdata, verkregen uit een algemene serie van papieren kaarten;</li><li>TOP10NL in het verleden, opgedeeldin kaartbladen.</li></ul><p>Toepassing van metadata op dataset series maakt het gebruikers van de metadata mogelijk om op een hoger niveau dan individuele datasets data te zoeken. Metadata van dataset series is geschikt voor het zoeken op globale karakteristieken van beschikbare data, maar niet voordiepgaand onderzoek naar de kwaliteit van specifieke datasets. Hiervoor is metadata van datasets noodzakelijk. <a href="#image002">Figuur 2</a> geeft een schematische weergave van de relatie tussen de metadata van datasetseries en datasets weer. De hiërarchische relatie tussen een dataset en datasetserie is altijd van verticale aard.</p></div>
           <figure id="image002">
-            <img src="st-mdprofiel-iso19115/image002.svg" alt="image002"/>
+            <a href="st-mdprofiel-iso19115/image002.svg"><img src="st-mdprofiel-iso19115/image002.svg" alt="image002"/></a>
             <figcaption>Gerelateerde datasets.</figcaption>
           </figure>
         </section>
@@ -458,12 +458,12 @@
       <h2>Meertaligheid metadata</h2>
       <p>Een dataset (serie) kan in meerdere talen worden beschreven conform de Nederlandse metadatastandaard voor geografie. Meertaligheid van metadata bij gebruik van codelijsten is mogelijk met behulp van zogenaamde codespaces. Voor vrije tekst is meertaligheid mogelijk door gebruik te maken van het element Locale uit de klasse MD_Metadata (ISO 19139). Door gebruik te maken van dit element kan metadata in meerdere talen worden vastgelegd. <a href="#image003">Figuur 3</a> geeft de klasse van MD_Metadata weer en het UML-schema van deze extensie op characterString weer.</p>
       <figure id="image003">
-        <img src="st-mdprofiel-iso19115/image003.png" alt="image003">
+        <a href="st-mdprofiel-iso19115/image003.png"><img src="st-mdprofiel-iso19115/image003.png" alt="image003"></a>
         <figcaption>Attributen van MD_Metadata in het XML-schema voor geografische metadata.</figcaption>
       </figure>
       <p>De elementen met vrije tekst in het domein van CharacterString property type in ISO 19115 is bedoeld om tekstuele metadata-elementen te ondersteunen met meerdere velden voor dezelfde informatie in verschillende “locales” (zie <a href="#image003">figuur 3</a>). Een “locale” heeft als domein “PT_Locale”, wat inhoud dat dit een combinatie is van een taal, land en een character codelijst (zie <a href="#image004">figuur 4</a>), waarin de “localised” characterstring is weergegeven. Deze locale kan in elk vrije tekst element worden toegepast in ISO 19115. Dit is voldoende aangezien codelijsten zelf letterlijk vertaald kunnen worden. Onderstaand conceptueel schema is opgenomen in ISO19139, ook de benodigde data dictionary is opgenomen in ISO 19139.</p>
       <figure id="image004">
-        <img src="st-mdprofiel-iso19115/image004.png" alt="image004">
+        <a href="st-mdprofiel-iso19115/image004.png"><img src="st-mdprofiel-iso19115/image004.png" alt="image004"></a>
         <figcaption>Vrije tekst en “localiced” characterString.</figcaption>
       </figure>
     </section>
@@ -623,7 +623,7 @@
         <table><colgroup><col style="width: 13%;"></col><col style="width: 87%;"></col></colgroup><tr><th>Longname</th><td>MD_Metadata.hierarchyLevel</td></tr><tr><th>Conditie</th><td>Verplicht</td></tr><tr><th>Type veld</th><td>codelijst</td></tr><tr><th>Domein</th><td><a href="codelijst-b525">B.5.25</a></td></tr><tr><th>Wijze van invoering</th><td>expliciet</td></tr><tr><th>Engelse naam</th><td>hierarchyLevel</td></tr><tr><th>Opmerking</th><td>&nbsp;</td></tr><tr><th>Multipliciteit</th><td>N</td></tr></table>
         <p style="float: right; font-size: small;">[<a href="#appendix-b">back to top</a>]</p>
         <aside class="example" title="XML voorbeeld">
-          <pre><code>&ltgmd:MD_Metadata&gt
+          **<pre><code>&ltgmd:MD_Metadata&gt
   &ltgmd:hierarchyLevel&gt
     &ltgmd:MD_ScopeCode codeList="http://www.isotc211.org/2005/resources/Codelist/gmxCodelists.xml#MD_ScopeCode" codeListValue="dataset"/&gt
   &lt/gmd:hierarchyLevel&gt
@@ -648,6 +648,7 @@
         <div class="note">Geonovum adviseert contactinformatie op de website van de organisatie te plaatsen. Contactgegevens hoeven hier dan niet ingevuld en bijgehouden te worden (i.e. Telefoonnummer, Faxnummer, Adres, Plaats, Provincie, Postcode, Land, Verantwoordelijke organisatie metadata: URL).</div>
         <div class="azlist"><p>Elementen: <a href="#naam-contactpersoon-metadata-appendix-b">Naam contactpersoon metadata</a> | <a href="#verantwoordelijke-organisatie-metadata-appendix-b">Verantwoordelijke organisatie metadata</a> | <a href="#rol-contactpersoon-metadata-appendix-b">Rol contactpersoon metadata</a> | <a href="#telefoonnummer-appendix-b">Telefoonnummer</a> | <a href="#faxnummer-appendix-b">Faxnummer</a> | <a href="#adres-appendix-b">Adres</a> | <a href="#plaats-appendix-b">Plaats</a> | <a href="#provincie-appendix-b">Provincie</a> | <a href="#postcode-appendix-b">Postcode</a> | <a href="#land-appendix-b">Land</a> | <a href="#verantwoordelijke-organisatie-bron-email-appendix-b">Verantwoordelijke organisatie metadata: e-mail</a> | <a href="#verantwoordelijke-organisatie-bron-url-appendix-b">Verantwoordelijke organisatie metadata: URL</a> | <a href="#verantwoordelijke-organisatie-metadata-rol-appendix-b">Verantwoordelijke organisatie metadata: rol</a></p></div>
         <p style="float: right; font-size: small;">[<a href="#appendix-b">back to top</a>]</p>
+        <section class="notoc">
         <h4 id="naam-contactpersoon-metadata-appendix-b">Naam contactpersoon metadata</h4>
         <em>Naam contactpersoon metadata</em> - Naam van de contactpersoon.
         <table><colgroup><col style="width: 13%;"></col><col style="width: 87%;"></col></colgroup><tr><th>Longname</th><td>MD_Metadata.contact>CI_ResponsibleParty.individualName</td></tr><tr><th>Conditie</th><td>Optioneel</td></tr><tr><th>Type veld</th><td>string</td></tr><tr><th>Domein</th><td>&nbsp;</td></tr><tr><th>Wijze van invoering</th><td>expliciet</td></tr><tr><th>Engelse naam</th><td>individualName</td></tr><tr><th>Opmerking</th><td>&nbsp;</td></tr><tr><th>Multipliciteit</th><td>1</td></tr></table>
@@ -803,6 +804,7 @@
   &lt/gmd:contact&gt
 &lt/gmd:MD_Metadata&gt</code></pre>
         </aside>
+        </section>
       </section>
       <section id="metadata-datum-appendix-b">
         <h3>Metadata datum</h3>
@@ -872,6 +874,7 @@
         <div class="issue" title="">In de PDF komt referenceSystemInfo 3 keer voor. Bijv. één keer als 'Code referentiesysteem', 'Temporeel referentiesysteem', 'Code verticaal referentiesysteem'. Hoe deze drie varianten opnemen in dit document?</div>
         <div class="azlist"><p>Elementen: <a href="#code-referentiesysteem-appendix-b">Code referentiesysteem</a> | <a href="#verantwoordelijke-organisatie-voor-namespace-referentiesysteem-appendix-b">Verantwoordelijke organisatie voor namespace referentiesysteem</a> | <a href="#temporeel-referentiesysteem-appendix-b">Temporeel referentiesysteem</a> | <a href="#verantwoordelijke-organisatie-voor-namespace-temporele-referentiesysteem-appendix-b">Verantwoordelijke organisatie voor namespace temporele referentiesysteem</a> | <a href="#code-verticaal-referentiesysteem-appendix-b">Code verticaal referentiesysteem</a> | <a href="#verantwoordelijke-organisatie-voor-namespace-verticaal-referentiesysteem-appendix-b">Verantwoordelijke organisatie voor namespace verticaal referentiesysteem</a></p></div>
         <p style="float: right; font-size: small;">[<a href="#appendix-b">back to top</a>]</p>
+        <section class="notoc">
         <h4 id="code-referentiesysteem-appendix-b">Code referentiesysteem</h4>
         <span><em>Code referentiesysteem</em> - Alfanumerieke waarde die het gebruikte referentiesysteem van de dataset aangeeft.</span>
         <table><colgroup><col style="width: 13%;"></col><col style="width: 87%;"></col></colgroup><tr><th>Longname</th><td>MD_Metadata.referenceSystemInfo&gt;MD_ReferenceSystem.referenceSystemIdentifier&gt;RS_Identifier.code</td></tr><tr><th>Conditie</th><td>Verplicht</td></tr><tr><th>Type veld</th><td>string</td></tr><tr><th>Domein</th><td>EPSG codes</td></tr><tr><th>Wijze van invoering</th><td>impliciet</td></tr><tr><th>Engelse naam</th><td>code</td></tr><tr><th>Opmerking</th><td>EPSG codes dienen gebruikt te worden. Aantal voorbeelden in NL:28992 (RD) 4937 (ETRS89)4326 (WGS84)</td></tr><tr><th>Multipliciteit</th><td>1</td></tr></table>
@@ -914,12 +917,14 @@
   &lt/gmd:referenceSystemInfo&gt
 &lt/gmd:MD_Metadata&gt</code></pre>
         </aside>
+        </section>
       </section>
       <section id="role-name:-identificatieinfo-appendix-b">
         <h3>role name: identificatieInfo</h3>
         <div class="issue" title="">Deze sectie mist voorbeelden.</div>
         <div class="azlist"><p>Elementen: <a href="#titel-van-de-bron-appendix-b">Titel van de bron</a> | <a href="#alternatieve-titel-appendix-b">Alternatieve titel</a> | <a href="#datum-van-de-bron-appendix-b">Datum van de bron</a> | <a href="#datum-type-van-de-bron-appendix-b">Datum type van de bron</a> | <a href="#versie-appendix-b">Versie</a> | <a href="#unieke-identifier-van-de-bron-appendix-b">Unieke Identifier van de bron</a> | <a href="#serienaam/-nummer-appendix-b">Serienaam/-nummer</a> | <a href="#samenvatting-appendix-b">Samenvatting</a> | <a href="#doel-van-vervaardiging-appendix-b">Doel van vervaardiging</a> | <a href="#status-appendix-b">Status</a> | <a href="#naam-contactpersoon-appendix-b">Naam contactpersoon</a> | <a href="#verantwoordelijke-organisatie-bron-appendix-b">Verantwoordelijke organisatie bron</a> | <a href="#rol-contactpersoon-appendix-b">Rol contactpersoon</a> | <a href="#telefoonnummer-appendix-b">Telefoonnummer</a> | <a href="#faxnummer-appendix-b">Faxnummer</a> | <a href="#adres-appendix-b">Adres</a> | <a href="#plaats-appendix-b">Plaats</a> | <a href="#provincie-appendix-b">Provincie</a> | <a href="#postcode-appendix-b">Postcode</a> | <a href="#land-appendix-b">Land</a> | <a href="#verantwoordelijke-organisatie-bron:-e-mail-appendix-b">Verantwoordelijke organisatie bron: e-mail</a> | <a href="#verantwoordelijke-organisatie-bron:-url-appendix-b">Verantwoordelijke organisatie bron: URL</a> | <a href="#verantwoordelijke-organisatie-bron:-rol-appendix-b">Verantwoordelijke organisatie bron: rol</a> | <a href="#herzieningsfrequentie-appendix-b">Herzieningsfrequentie</a> | <a href="#datum-volgende-herziening-appendix-b">Datum volgende herziening</a> | <a href="#voorbeeld-appendix-b">Voorbeeld</a> | <a href="#trefwoord-appendix-b">Trefwoord</a> | <a href="#thesaurus-appendix-b">Thesaurus</a> | <a href="#alternatieve-titel-appendix-b">Alternatieve titel</a> | <a href="#thesaurus-datum-appendix-b">Thesaurus datum</a> | <a href="#thesaurus-datum-type-appendix-b">Thesaurus datum type</a> | <a href="#gebruiksbeperkingen-appendix-b">Gebruiksbeperkingen</a> | <a href="#(juridische)-toegangsrestricties-appendix-b">(Juridische) toegangsrestricties</a> | <a href="#(juridische)-gebruiksrestricties-appendix-b">(Juridische) gebruiksrestricties</a> | <a href="#overige-beperkingen-appendix-b">Overige beperkingen</a> | <a href="#veiligheidsrestricties-appendix-b">Veiligheidsrestricties</a> | <a href="#toelichting-appendix-b">Toelichting</a> | <a href="#naam-gerelateerde-dataset-appendix-b">Naam gerelateerde dataset</a> | <a href="#gerelateerde-dataset-referentie-datum-appendix-b">Gerelateerde dataset referentie datum</a> | <a href="#gerelateerde-dataset-datum-type-appendix-b">Gerelateerde dataset datum type</a> | <a href="#type-relatie-appendix-b">Type relatie</a> | <a href="#ruimtelijk-schema-appendix-b">Ruimtelijk schema</a> | <a href="#toepassingsschaal-appendix-b">Toepassingsschaal</a> | <a href="#resolutie-appendix-b">Resolutie</a> | <a href="#taal-van-de-bron-appendix-b">Taal van de bron</a> | <a href="#karakterset-van-de-bron-appendix-b">Karakterset van de bron</a> | <a href="#onderwerp-appendix-b">Onderwerp</a> | <a href="#beschrijving-temporele-dekking-appendix-b">Beschrijving temporele dekking</a> | <a href="#minimum-x-coördinaat-appendix-b">Minimum x-coördinaat</a> | <a href="#maximum-x-coördinaat-appendix-b">Maximum x-coördinaat</a> | <a href="#minimum-y-coördinaat-appendix-b">Minimum y-coördinaat</a> | <a href="#maximum-y-coördinaat-appendix-b">Maximum y-coördinaat</a> | <a href="#identifier-geografisch-gebied-appendix-b">Identifier geografisch gebied</a> | <a href="#temporele-dekking-appendix-b">Temporele dekking</a> | <a href="#minimum-z-coördinaat-appendix-b">Minimum z-coördinaat</a> | <a href="#maximum-z-coördinaat-appendix-b">Maximum z-coördinaat</a> | <a href="#role-name:verticalcrs-appendix-b">Role name:verticalCRS</a> | <a href="#aanvullende-informatie-appendix-b">Aanvullende informatie</a></p></div>
         <p style="float: right; font-size: small;">[<a href="#appendix-b">back to top</a>]</p>
+        <section class="notoc">
         <h4 id="titel-van-de-bron-appendix-b">Titel van de bron</h4>
         <span><em>Titel van de bron</em> - Naam van de dataset of dataset serie.</span>
         <table><colgroup><col style="width: 13%;"></col><col style="width: 87%;"></col></colgroup><tr><th>Longname</th><td>MD_Metadata.identificationInfo&gt;MD_DataIdentification.citation&gt;CI_Citation.title</td></tr><tr><th>Conditie</th><td>Verplicht</td></tr><tr><th>Type veld</th><td>string</td></tr><tr><th>Domein</th><td>&nbsp;</td></tr><tr><th>Wijze van invoering</th><td>expliciet</td></tr><tr><th>Engelse naam</th><td>title</td></tr><tr><th>Opmerking</th><td/></tr><tr><th>Multipliciteit</th><td>1</td></tr></table>
@@ -1159,8 +1164,7 @@
       &lt/gmd:MD_RepresentativeFraction&gt
     &lt/gmd:equivalentScale&gt
   &lt/gmd:MD_Resolution&gt
-&lt/gmd:spatialResolution&gt
-</code></pre>
+&lt/gmd:spatialResolution&gt</code></pre>
         </aside>
         <h4 id="taal-van-de-bron-appendix-b">Taal van de bron</h4>
         <span><em>Taal van de bron</em> - Taal waarmee de dataset beschreven is.</span>
@@ -1218,12 +1222,14 @@
         <span><em>Aanvullende informatie</em> - Aanvullende informatie over de data, bijvoorbeeld documentatie of handleiding.</span>
         <table><colgroup><col style="width: 13%;"></col><col style="width: 87%;"></col></colgroup><tr><th>Longname</th><td>MD_Metadata.identificationInfo&gt;MD_DataIdentification.supplementalInformation</td></tr><tr><th>Conditie</th><td>Optioneel</td></tr><tr><th>Type veld</th><td>string</td></tr><tr><th>Domein</th><td>&nbsp;</td></tr><tr><th>Wijze van invoering</th><td>expliciet</td></tr><tr><th>Engelse naam</th><td>supplementalInformation</td></tr><tr><th>Opmerking</th><td>Referentie naar documentatie. Met een zip bestand kunnen meerder documenten ontsloten kunnen worden</td></tr><tr><th>Multipliciteit</th><td>1</td></tr></table>
         <p style="float: right; font-size: small;">[<a href="#role-name:-identificatieinfo-appendix-b">#</a>][<a href="#appendix-b">back to top</a>]</p>
+        </section>
       </section>
       <section id="role-name:-contentinfo-appendix-b">
         <h3>role name: contentInfo</h3>
         <div class="issue" title="">Deze sectie mist voorbeelden.</div>
         <div class="azlist"><p>Elementen: <a href="#featurecatalog-inbegrepen-bij-dataset-appendix-b">Featurecatalog inbegrepen bij dataset</a> | <a href="#featuretypes-appendix-b">FeatureTypes</a> | <a href="#titel-van-de-featurecatalog-appendix-b">Titel van de featurecatalog</a> | <a href="#datum-van-de-featurecatalog-appendix-b">Datum van de featurecatalog</a> | <a href="#datum-type-van-de-featurecatalog-appendix-b">Datum type van de featurecatalog</a> | <a href="#unieke-identifier-van-de-featurecatalog-appendix-b">Unieke Identifier van de featurecatalog</a></p></div>
         <p style="float: right; font-size: small;">[<a href="#appendix-b">back to top</a>]</p>
+        <section class="notoc">
         <h4 id="featurecatalog-inbegrepen-bij-dataset-appendix-b">Featurecatalog inbegrepen bij dataset</h4>
         <span><em>Featurecatalog inbegrepen bij dataset</em> - Indicatie of de featurecatalog wordt meegeleverd met de dataset</span>
         <table><colgroup><col style="width: 13%;"></col><col style="width: 87%;"></col></colgroup><tr><th>Longname</th><td>MD_Metadata. contentInfo&gt; MD_FeatureCatalogueDescription. includedWithDataset</td></tr><tr><th>Conditie</th><td>Optioneel</td></tr><tr><th>Type veld</th><td>Boolean</td></tr><tr><th>Domein</th><td>&nbsp;</td></tr><tr><th>Wijze van invoering</th><td>&nbsp;</td></tr><tr><th>Engelse naam</th><td>includedWithDataset</td></tr><tr><th>Opmerking</th><td/></tr><tr><th>Multipliciteit</th><td>1</td></tr></table>
@@ -1248,12 +1254,14 @@
         <span><em>Unieke Identifier van de featurecatalog</em> - Unieke waarde om de featurecatalog te beschrijven binnen een namespace.</span>
         <table><colgroup><col style="width: 13%;"></col><col style="width: 87%;"></col></colgroup><tr><th>Longname</th><td>M MD_Metadata. contentInfo&gt; MD_FeatureCatalogueDescription.featureCatalogueCitation &gt;CI_Citation.identifier&gt;MD_Identifier.code</td></tr><tr><th>Conditie</th><td>Optioneel</td></tr><tr><th>Type veld</th><td>string</td></tr><tr><th>Domein</th><td>&nbsp;</td></tr><tr><th>Wijze van invoering</th><td>expliciet</td></tr><tr><th>Engelse naam</th><td>code</td></tr><tr><th>Opmerking</th><td>Komt tot stand door gebruik Universal Unique Identifier (http://en.wikipedia.org/wiki/UUID).</td></tr><tr><th>Multipliciteit</th><td>1</td></tr></table>
         <p style="float: right; font-size: small;">[<a href="#role-name:-contentinfo-appendix-b">#</a>][<a href="#appendix-b">back to top</a>]</p>
+        </section>
       </section>
       <section id="role-name:-distributioninfo-appendix-b">
         <h3>role name: distributionInfo</h3>
         <div class="issue" title="">Deze sectie mist voorbeelden.</div>
         <div class="azlist"><p>Elementen: <a href="#naam-distributie-formaat-appendix-b">Naam distributie formaat</a> | <a href="#versie-distributie-formaat-appendix-b">Versie distributie formaat</a> | <a href="#specificatie-distributie-formaat-appendix-b">Specificatie distributie formaat</a> | <a href="#naam-contactpersoon-appendix-b">Naam contactpersoon</a> | <a href="#naam-distribuerende-organisatie-appendix-b">Naam distribuerende organisatie</a> | <a href="#rol-contactpersoon-appendix-b">Rol contactpersoon</a> | <a href="#telefoonnummer-appendix-b">Telefoonnummer</a> | <a href="#faxnummer-appendix-b">Faxnummer</a> | <a href="#adres-appendix-b">Adres</a> | <a href="#plaats-appendix-b">Plaats</a> | <a href="#provincie-appendix-b">Provincie</a> | <a href="#postcode-appendix-b">Postcode</a> | <a href="#land-appendix-b">Land</a> | <a href="#e-mail-appendix-b">E-mail</a> | <a href="#url-organisatie-appendix-b">URL organisatie</a> | <a href="#rol-organisatie-appendix-b">Rol organisatie</a> | <a href="#prijsinformatie-appendix-b">Prijsinformatie</a> | <a href="#orderprocedure-appendix-b">Orderprocedure</a> | <a href="#doorlooptijd-orderprocedure-appendix-b">Doorlooptijd orderprocedure</a> | <a href="#leverings-/gebruikseenheid-appendix-b">Leverings-/gebruikseenheid</a> | <a href="#bestandsgrootte-appendix-b">Bestandsgrootte</a> | <a href="#url-appendix-b">URL</a> | <a href="#protocol-appendix-b">Protocol</a> | <a href="#naam-appendix-b">Naam</a> | <a href="#naam-medium-appendix-b">Naam medium</a></p></div>
         <p style="float: right; font-size: small;">[<a href="#appendix-b">back to top</a>]</p>
+        <section class="notoc">
         <h4 id="naam-distributie-formaat-appendix-b">Naam distributie formaat</h4>
         <span><em>Naam distributie formaat</em> - Naam van het distributie formaat.</span>
         <table><colgroup><col style="width: 13%;"></col><col style="width: 87%;"></col></colgroup><tr><th>Longname</th><td>MD_Metadata.distributionInfo&gt;MD_Distribution.distributionFormat&gt;MD_Format.name</td></tr><tr><th>Conditie</th><td>Verplicht</td></tr><tr><th>Type veld</th><td>string</td></tr><tr><th>Domein</th><td>&nbsp;</td></tr><tr><th>Wijze van invoering</th><td>impliciet</td></tr><tr><th>Engelse naam</th><td>name</td></tr><tr><th>Opmerking</th><td>Indien het een INSPIRE dataset is dient de naam van het distributie formaat opgenomen te worden. Deze informatie is te vinden in de INSPIRE dataspecificaties in de paragraaf genaamd Encoding</td></tr><tr><th>Multipliciteit</th><td>1</td></tr></table>
@@ -1354,12 +1362,14 @@
         <span><em>Naam medium</em> - Naam van het medium waarop de data ontvangen kan worden.</span>
         <table><colgroup><col style="width: 13%;"></col><col style="width: 87%;"></col></colgroup><tr><th>Longname</th><td>MD_Metadata.distributionInfo&gt;MD_Distribution.transferOptions&gt;MD_DigitalTransferOptions.offline&gt;MD_Medium.name</td></tr><tr><th>Conditie</th><td>Optioneel</td></tr><tr><th>Type veld</th><td>codelijst</td></tr><tr><th>Domein</th><td><a href="#codelijst-b520">B.5.20</a></td></tr><tr><th>Wijze van invoering</th><td>expliciet</td></tr><tr><th>Engelse naam</th><td>name</td></tr><tr><th>Opmerking</th><td/></tr><tr><th>Multipliciteit</th><td>1</td></tr></table>
         <p style="float: right; font-size: small;">[<a href="#role-name:-distributioninfo-appendix-b">#</a>][<a href="#appendix-b">back to top</a>]</p>
+        </section>
       </section>
       <section id="role-name:-dataqualityinfo-appendix-b">
         <h3>role name: dataQualityInfo</h3>
         <div class="issue" title="">Deze sectie mist voorbeelden.</div>
         <div class="azlist"><p>Elementen: <a href="#niveau-kwaliteitsbeschrijving-appendix-b">Niveau kwaliteitsbeschrijving</a> | <a href="#features-appendix-b">Features</a> | <a href="#specificatie-appendix-b">Specificatie</a> | <a href="#alternatieve-titel-appendix-b">Alternatieve titel</a> | <a href="#specificatie-datum-appendix-b">Specificatie datum</a> | <a href="#specificatie-datum-type-appendix-b">Specificatie datum type</a> | <a href="#verklaring-appendix-b">Verklaring</a> | <a href="#conformiteitindicatie-met-de-specificatie-appendix-b">Conformiteitindicatie met de specificatie</a> | <a href="#type-waarde-appendix-b">Type waarde</a> | <a href="#compleetheid-appendix-b">Compleetheid</a> | <a href="#type-waarde-appendix-b">Type waarde</a> | <a href="#topologische-samenhang-appendix-b">Topologische samenhang</a> | <a href="#type-waarde-appendix-b">Type waarde</a> | <a href="#geometrische-nauwkeurigheid-appendix-b">Geometrische nauwkeurigheid</a> | <a href="#algemene-beschrijving-herkomst-appendix-b">Algemene beschrijving herkomst</a> | <a href="#beschrijving-uitgevoerde-bewerkingen-appendix-b">Beschrijving uitgevoerde bewerkingen</a> | <a href="#datum-uitgevoerde-bewerkingen-appendix-b">Datum uitgevoerde bewerkingen</a> | <a href="#producent-beschreven-dataset-appendix-b">Producent beschreven dataset</a> | <a href="#rol-producent-beschreven-dataset-appendix-b">Rol producent beschreven dataset</a> | <a href="#beschrijving-brondata-appendix-b">Beschrijving brondata</a> | <a href="#inwinningsmethode-appendix-b">Inwinningsmethode</a> | <a href="#datum-inwinning-brondata-appendix-b">Datum inwinning brondata</a> | <a href="#inwinnende-organisatie-appendix-b">Inwinnende organisatie</a> | <a href="#rol-inwinnende-organisatie-appendix-b">Rol inwinnende organisatie</a></p></div>
         <p style="float: right; font-size: small;">[<a href="#appendix-b">back to top</a>]</p>
+        <section class="notoc">
         <h4 id="niveau-kwaliteitsbeschrijving-appendix-b">Niveau kwaliteitsbeschrijving</h4>
         <span><em>Niveau kwaliteitsbeschrijving</em> - Niveau (dataset of serie) waar de kwaliteitsbeschrijving betrekking op heeft.</span>
         <table><colgroup><col style="width: 13%;"></col><col style="width: 87%;"></col></colgroup><tr><th>Longname</th><td>MD_Metadata.dataQualityInfo&gt;DQ_DataQuality.scope&gt;DQ_Scope.level</td></tr><tr><th>Conditie</th><td>Verplicht</td></tr><tr><th>Type veld</th><td>codelijst</td></tr><tr><th>Domein</th><td><a href="#codelijst-b525">B.5.25</a></td></tr><tr><th>Wijze van invoering</th><td>expliciet</td></tr><tr><th>Engelse naam</th><td>level</td></tr><tr><th>Opmerking</th><td>Als voor INSPIRE het niveau featureType wordt gekozen dient het element Features te worden gebruikt om de featuretype namen in op te nemen.</td></tr><tr><th>Multipliciteit</th><td>1</td></tr></table>
@@ -1456,6 +1466,7 @@
         <span><em>Rol inwinnende organisatie</em> - Rol van de organisatie die de brongegevens heeft ingewonnen.</span>
         <table><colgroup><col style="width: 13%;"></col><col style="width: 87%;"></col></colgroup><tr><th>Longname</th><td>MD_Metadata.dataQualityInfo&gt;DQ_DataQuality.lineage&gt;LI_Lineage.source&gt;LI_Source.sourceStep&gt;LI_SourceStep.processor&gt;CI_ResponsibleParty.role</td></tr><tr><th>Conditie</th><td>Optioneel</td></tr><tr><th>Type veld</th><td>string</td></tr><tr><th>Domein</th><td><a href="#codelijst-b55">B.5.5</a></td></tr><tr><th>Wijze van invoering</th><td>default</td></tr><tr><th>Engelse naam</th><td>role</td></tr><tr><th>Opmerking</th><td>Role is in deze context altijd inwinner. Codelijst wordt aan gebruiker in het Nederlands weergegeven.</td></tr><tr><th>Multipliciteit</th><td>1</td></tr></table>
         <p style="float: right; font-size: small;">[<a href="#role-name:-dataqualityinfo-appendix-b">#</a>][<a href="#appendix-b">back to top</a>]</p>
+        </section>
       </section>
     </section>
     <section class="appendix" id="appendix-c">
@@ -1505,7 +1516,7 @@ xmlns:gml="&ltahref="http://www.opengis.net/gml"&gthttp://www.opengis.net/gml&lt
     <section class="appendix" id="appendix-h">
       <h2>Koppeling vanuit metadata met data en service</h2>
       <figure id="image005">
-        <img src="st-mdprofiel-iso19115/image005.svg" alt="image005"/>
+        <a href="st-mdprofiel-iso19115/image005.svg"><img src="st-mdprofiel-iso19115/image005.svg" alt="image005"/></a>
         <figcaption>Koppeling vanuit metadata met data en service.</figcaption>
       </figure>
     </section>
