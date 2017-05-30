@@ -11,9 +11,14 @@
   </head>
   <body>
     <section id="abstract">
-      <p>Metadata zorgt ervoor dat datasets en services op
-        specifieke kenmerken te vinden zijn. Welke metadata wordt beschreven, is
-        vastgelegd in het metadataprofiel. Geonovum ontwikkelt en <a href="http://www.geonovum.nl/onderwerp-artikel/beheer-geo-standaarden">beheert</a>
+      <p>Het registreren van datasets en services in registers faciliteert dat
+        de bronnen op specifieke kenmerken te vinden zijn. De kenmerken die
+        tijdens de registratie vastgelegd worden staan bekend als metadata. Ten
+        behoeve van uitwisseling van metadata is
+        het belangrijk dat er een standaard model is welke kenmerken vastgelegd
+        worden. In het geo domein gebruiken we hiervoor de EN ISO19115
+        (datasets) en EN ISO19119 (services) standaarden. Geonovum ontwikkelt en
+        <a href="http://www.geonovum.nl/onderwerp-artikel/beheer-geo-standaarden">beheert</a>
         de Nederlandse metadataprofielen. Deze profielen zijn een
         verbijzondering van de internationale metadatastandaarden van ISO en
         zijn bedoeld om de interoperabiliteit binnen Nederland te bevorderen. De
@@ -24,28 +29,24 @@
         <li>services: <a href="https://github.com/Geonovum/Metadata-ISO19119">Nederlands
             metadataprofiel op ISO 19119 voor services v2.0.0</a></li>
       </ul>
-      <p>Het INSPIRE metadataprofiel beschrijft de vereisten voor de metadata
-        voor INSPIRE. Deze vereisten zijn ook opgenomen in de Nederlandse
-        profielen, zodat met het Nederlandse profiel zowel aan de Europese
-        INSPIRE als de Nederlandse vereisten voldaan kan worden. Het profiel
-        voor metadata is gebaseerd op EN ISO 19115 en EN ISO 19119.</p>
+      <p>Ten behoeve van de Europese INSPIRE regelgeving is ook een metadata
+        profiel opgesteld. De vereisten uit het INSPIRE profiel zijn opgenomen
+        in de Nederlandse profielen, zodat door te voldoen aan het Nederlandse
+        profiel tevens aan de Europese INSPIRE vereisten voldaan kan worden. Het
+        profiel voor metadata is gebaseerd op EN ISO 19115 en EN ISO 19119.</p>
       <p>​Het metadataprofiel voor services wordt gebruikt in combinatie met het
         profiel voor datasets. Beide profielen staan op de <a href="http://forumstandaardisatie.nl/open-standaarden/lijsten-met-open-standaarden/">Pas-toe-of-leg-uit-lijst</a>
         van het College Standaardisatie.</p>
-      <p>Ook de Europese richtlijn INSPIRE schrijft metadataprofielen voor. De
-        Nederlandse profielen zijn hier op afgestemd. Past u de Nederlandse
-        profielen toe, dan voldoet u dus ook aan de <a href="http://www.geonovum.nl/wegwijzer/standaarden/inspire-technical-guidelines-en-iso-19115-and-en-iso-19119">INSPIRE
-          profielen voor metadata</a>.</p>
-    </section>
+      Het Nederlandse metadata profiel voor geografie is niet statisch. Dit
+      document wordt daarom onder beheer gebracht om wijzigingen naar behoefte
+      en op basis van voorstellen gestructureerd door te voeren. Geonovum, als
+      beherende instantie, zal de wijzigingen registreren.</section>
     <section id="sotd">
-      <p>Het Nederlandse metadata profiel voor geografie is niet statisch. Dit
-        document wordt daarom onder beheer gebracht om wijzigingen naar behoefte
-        en op basis van voorstellen gestructureerd door te voeren. Geonovum, als
-        beherende instantie, zal de wijzigingen registreren.</p>
-      <p>Versie 1.3.1 van het Nederlands metadataprofiel voor geografie is
-        ingegaan op 24 september 2013. Versie 1.3.1 maakt het mogelijk ook Atom
-        Feeds te beschrijven. De voorgaande versie (v1.3) wordt nog tot december
-        2014 ondersteund.</p>
+      <p>Versie 2.0.0 van het Nederlands metadataprofiel voor geografie is
+        ingegaan op xx xxx xxxx. Versie 2.0.0 kent een&nbsp; aantal
+        aanpassingen, waarbij introductie van het gebruik van &lt;gmx:anchor&gt;
+        het meest in het oog springt. De voorgaande versie (v1.3.1) wordt nog
+        tot xxx xxxx ondersteund.</p>
       <b>Versienummer</b>
       <table>
         <colgroup><col style="width: 10%;"><col style="width: 15%;"><col style="width: 75%;"></colgroup>
@@ -54,6 +55,13 @@
             <th>Jaar</th>
             <th>Versienummer</th>
             <th>Versiebeschrijving</th>
+          </tr>
+          <tr>
+            <td>2017</td>
+            <td>2.0.0</td>
+            <td>Diverse wijzigingen met betrekking tot identificatie van
+              objecten (introductie gmx:anchor)<br>
+              Speciale aandacht voor Feature catalog metadata.</td>
           </tr>
           <tr>
             <td>2013</td>
@@ -114,20 +122,21 @@
       <h2>Inleiding</h2>
       <section id="afbakening">
         <h3>Afbakening</h3>
-        <p>Metadata komt voor bij meerdere informatie disciplines. Indien hier
-          over metadata wordt gesproken betreft het metadata die betrekking
-          heeft op geo-informatie. Dit metadata profiel richt zich op de
-          beschrijving van de metadata van geografische datasets en dataset
-          series.</p>
+        <p>De term metadata komt voor bij meerdere informatie disciplines.
+          Indien in dit document over metadata wordt gesproken betreft het
+          kenmerken die bronnen van geo-informatie beschrijven. Dit profiel
+          richt zich op een model voor het beschrijving van geografische
+          datasets en dataset series.</p>
         <p>Het <a href="http://www.geonovum.nl/wegwijzer/standaarden/nederlands-metadataprofiel-op-iso-19119-services-121">
-            Nederlandse profiel op ISO 19119 voor services versie 1.2</a> richt
-          zich op de beschrijving van metadata van geografische dataservices.
-          Als er services beschikbaar zijn dient zowel de service als de dataset
-          van metadata te worden voorzien. De relatie tussen metadata van data,
-          metadata van services en de data en services is opgenomen in <a href="#appendix-h">Appendix
-            H</a>. In de <a href="wiki.geonovum.nl/index.php/2_Metadata">metadata
-            wiki</a> zijn alle aspecten van het aanmaken van metadata
-          beschreven.</p>
+            Nederlandse profiel op ISO 19119 voor services versie 2.0</a> richt
+          zich op de beschrijving van geografische dataservices. Als er services
+          beschikbaar zijn dienen volgens deze profielen zowel de service als de
+          daarin ontsloten datasets van metadata te worden voorzien. De relatie
+          tussen metadata van data, metadata van services en de data en services
+          is opgenomen in <a href="#appendix-h">Appendix H</a>. </p>
+        <p>Geonovum beheert tevens een <a href="wiki.geonovum.nl/index.php/2_Metadata">metadata
+            wiki</a> waarin alle aspecten van het aanmaken van metadata
+          beschreven zijn.</p>
       </section>
       <section id="scope">
         <h3>Scope</h3>
@@ -135,9 +144,9 @@
           verplichte of door conditie verplichte metadata elementen, de kernset,
           van een dataset of dataset serie. Dit metadata profiel beschrijft
           tevens de encoding van de metadata van een dataset of dataset serie
-          zodat de uitwisseling tussen machines of mens en machine kan
-          plaatsvinden. De optionele set is een aanvulling op de kernset en
-          voorziet in de behoefte van het geo-werkveld aan eeneen brede
+          zodat de uitwisseling tussen machines of mens en machine kan plaats
+          vinden. Er is tevens een optionele set als aanvulling op de kernset,
+          die voorziet in de behoefte van het geo-werkveld aan een brede
           gemeenschappelijke basis van metadata-elementen, in het bijzonder voor
           het beheer.</p>
         <p>Bij het voldoen aan dit profiel wordt tevens aan de INSPIRE
