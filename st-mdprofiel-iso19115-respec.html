@@ -240,7 +240,32 @@
       <p><em>ISO 19139</em>: Dit zijn de XML encoding schema’s voor zowel ISO
         19115:2003 en ISO 19119:2005/FDAM 1. De subdirectorie ‘/srv’ bevat de
         encoding voor ISO 19119:2005/FDAM 1. In de metadata dienen ook de
-        codelijsten die op deze locatie te vinden zijn gehanteerd te worden.</p>
+        codelijsten die op deze locatie te vinden zijn gehanteerd te
+        worden.</p>
+       <p>De metadata zal ge-encodeerd worden in XML formaat valide volgens het
+        bovenstaande schema. De namespace http://www.isotc211.org/2005/gmd wordt
+        hiervoor gebruikt. Er mag ook verwezen worden naar een kopie van dit
+        schema. Ook kan het schema
+        http://schemas.opengis.net/iso/19139/20060504/gmx/gmx.xsd gebruikt
+        worden, waarbij het gedupliceerde gmd-schema het gmx schema mag
+        importeren. </p>
+      <table>
+        <tbody>
+          <tr>
+            <th>Voorbeeld</th>
+          </tr>
+          <tr>
+            <td> <code> &lt;gmd:MD_Metadata
+                xmlns:gmd="http://www.isotc211.org/2005/gmd"
+                xsi:schemaLocation="http://www.isotc211.org/2005/gmd
+                http://schemas.opengis.net/iso/19139/20060504/gmd/gmd.xsd
+                http://www.isotc211.org/2005/gmx
+                http://schemas.opengis.net/iso/19139/20060504/gmx/gmx.xsd"
+                xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"&gt; </code>
+            </td>
+          </tr>
+        </tbody>
+      </table>
     </section>
     <section id="termen-en-definities">
       <h2>Termen en definities</h2>
