@@ -370,13 +370,13 @@
             <tr>
               <td>URL </td>
               <td>C</td>
-              <td>Dit element is conditioneel. Voor datasets die ontsloten worden 
-                via een directe download, via een service, een link naar een 
-                webapplicatie en / of een webpagina met aanvullende instructies 
-                geeft over hoe de dataset ontsloten kan worden, is het element verplicht 
-                indien de ontsluiting publiek toegankelijk is en onder de 
-                verantwoordelijkheid van de beherende organisatie valt.
-              </td>
+              <td>Dit element is conditioneel. Voor datasets die ontsloten
+                worden via een directe download, via een service, een link naar
+                een webapplicatie en / of een webpagina met aanvullende
+                instructies geeft over hoe de dataset ontsloten kan worden, is
+                het element verplicht indien de ontsluiting publiek toegankelijk
+                is en onder de verantwoordelijkheid van de beherende organisatie
+                valt. </td>
             </tr>
             <tr>
               <td>Protocol</td>
@@ -905,12 +905,14 @@
         </section>
         <section id="unieke-identifier-van-de-bron">
           <h4>Unieke Identifier van de bron</h4>
-          <p style="text-align:left"><em>identificationInfo[1]/*/citation/*/identifier/*/code</em><span
+          <p style="text-align:left"><em>identificationInfo[1]/*/citation/*/identifier/MD_Identifier/code</em><span
               style="float:right">[<a data-cite="ISO19139">ISO 19139:2007</a>]</span></p>
-          <p>Dit element bevat de waarde die een object uniek identificeert in
-            een namespace. Geadviseerd wordt om gebruik te maken van een
-            betekenisloze identifier die wereldwijd uniek is zoals de <a href="http://en.wikipedia.org/wiki/UUID">Universal
-              Unique Identifier</a>.</p>
+          <p>Dit element bevat de waarde die een object uniek identificeert. Er
+            wordt sterk geadviseerd (voor INSPIRE verplicht) om gebruik te maken
+            van een anchor met een verwijzing naar een <a title="Uniform Resource Identifier"
+              href="https://nl.wikipedia.org/wiki/Uniform_resource_identifier">URI</a>.
+            Indien een URI gebruikt wordt dient deze te verwijzen naar een
+            bestaande bron op het web. </p>
           <table>
             <colgroup><col style="width: 25%"><col style="width: 75%"></colgroup>
             <tbody>
@@ -919,8 +921,11 @@
                 <th>Voorbeeld</th>
               </tr>
               <tr>
-                <td>string</td>
-                <td>550e8400-e29b-41d4-a716-446655440000</td>
+                <td>anchor</td>
+                <td>&lt;Anchor
+xlink:href="https://nationaalgeoregister.nl/geonetwork/srv/metadata/ee543323-0fe4-4353-9161-eda61ff26c07"&gt;<br>
+                  ee543323-0fe4-4353-9161-eda61ff26c07<br>
+                  &lt;/Anchor&gt;</td>
               </tr>
             </tbody>
           </table>
