@@ -1371,8 +1371,9 @@ xlink:href="https://nationaalgeoregister.nl/geonetwork/srv/metadata/ee543323-0fe
           <h4>Toepassingsschaal</h4>
           <p style="text-align:left"><em>identificationInfo[1]/*/spatialResolution/*/equivalentScale/*/denominator</em><span
               style="float:right">[<a data-cite="ISO19139">ISO 19139:2007</a>]</span></p>
-          <p>Dit element is conditioneel. Het is verplicht als er een
-            toepassingsschaal gespecificeerd kan worden. Het element bevat de
+          <p>Dit element is conditioneel. Het element is verplicht als er een
+            toepassingsschaal gespecificeerd kan worden en het element resolutie 
+            niet voorkomt. Het element bevat de
             mate van detail aangeduid als schaalaanduiding van een vergelijkbare
             hardcopy kaart. Het element kan twee keer voorkomen, hiermee wordt
             een interval aangegeven. Deze dient vanuit de klasse
@@ -1396,7 +1397,8 @@ xlink:href="https://nationaalgeoregister.nl/geonetwork/srv/metadata/ee543323-0fe
           <p style="text-align:left"><em>identificationInfo[1]/*/spatialResolution/*/distance</em><span
               style="float:right">[<a data-cite="ISO19139">ISO 19139:2007</a>]</span></p>
           <p>Dit element is conditioneel. Het is verplicht als er een resolutie
-            gespecificeerd kan worden. Het element bevat de resolutie in meters.
+            gespecificeerd kan worden en het element toepassingsschaal niet voorkomt. 
+            Het element bevat de resolutie in meters.
             Het element kan twee keer voorkomen, hiermee wordt een interval
             aangegeven. Deze dient vanuit de klasse spatialResolution te worden
             aangemaakt. De meeteenheid voor lengte uit de codelijst
@@ -1410,8 +1412,10 @@ xlink:href="https://nationaalgeoregister.nl/geonetwork/srv/metadata/ee543323-0fe
                 <th>Voorbeeld</th>
               </tr>
               <tr>
-                <td>number</td>
-                <td>3</td>
+                <td>Afstand</td>
+                <td>
+                       &lt;gco:Distance uom="meter"&gt;1.0&lt;/gco:Distance&gt;
+                </td>
               </tr>
             </tbody>
           </table>
