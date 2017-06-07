@@ -227,8 +227,8 @@
     <section id="relevante-xsd-schemas">
       <h2>Relevante XSD schema's</h2>
       <p>Alle relevante schema’s zijn in de OGC schema repository beschikbaar.
-        Deze zijn vrij beschikbaar onder <a href="http://schemas.opengis.net/">http://schemas.opengis.net/</a>.
-        De volgende tabel toont het relevante schema voor dit profiel.</p>
+        De meeste schema's zijn beschikbaar onder <a href="http://schemas.opengis.net/iso/19139/20060504/">http://schemas.opengis.net/iso/19139/20060504/</a>.
+        De volgende tabel toont de relevante schema's voor dit profiel. </p>
       <table>
         <caption>Tabel 1: Locatie van het relevante XSD schema</caption>
         <tbody>
@@ -238,22 +238,74 @@
             <th>Schema locatie</th>
           </tr>
           <tr>
-            <td>ISO/TS 19139:2007</td>
-            <td>1.0</td>
-            <td><a href="http://schemas.opengis.net/iso/19139/20060504/gmd/gmd.xsd">http://schemas.opengis.net/iso/19139/20060504/gmd/gmd.xsd</a></td>
+            <td>GMD</td>
+            <td>0.1</td>
+            <td><a href="http://schemas.opengis.net/iso/19139/20060504/gmd/gmd.xsd">
+            /gmd/gmd.xsd</a></td>
+          </tr>
+          <tr>
+            <td>SRV</td>
+            <td>0.1</td>
+            <td><a href="http://schemas.opengis.net/iso/19139/20060504/srv/srv.xsd">
+            /srv/srv.xsd</a></td>
+          </tr>
+          <tr>
+            <td>GMX</td>
+            <td>0.1</td>
+            <td><a href="http://schemas.opengis.net/iso/19139/20060504/gmx/gmx.xsd">
+            /gmx/gmx.xsd</a></td>
+          </tr>
+          <tr>
+            <td>GML</td>
+            <td>3.2.0</td>
+            <td><a href="http://schemas.opengis.net/iso/19139/20060504/gml/gml.xsd">
+            /gml/gml.xsd</a></td>
+          </tr>
+          <tr>
+            <td>GCO</td>
+            <td>0.1</td>
+            <td><a href="http://schemas.opengis.net/iso/19139/20060504/gml/gml.xsd">
+            /gco/gco.xsd</a></td>
+          </tr>
+          <tr>
+            <td>GFX</td>
+            <td>0.1</td>
+            <td><a href="http://www.isotc211.org/2005/gfc/gfx.xsd">
+            http://www.isotc211.org/2005/gfx/gfx.xsd</a></td>
+          </tr>
+          <tr>
+            <td>CSW</td>
+            <td>2.0.2.2</td>
+            <td><a href="http://schemas.opengis.net/csw/2.0.2/csw.xsd">
+            http://schemas.opengis.net/csw/2.0.2/csw.xsd</a></td>
+          </tr>
+          <tr>
+            <td>CSW AP-ISO</td>
+            <td>1.0.0</td>
+            <td><a href="http://schemas.opengis.net/csw/2.0.2/profiles/apiso/1.0.0/apiso.xsd">
+            http://schemas.opengis.net/csw/2.0.2/profiles/apiso/1.0.0/apiso.xsd</a></td>
           </tr>
         </tbody>
       </table>
-      <p><em>ISO 19139</em>: Dit zijn de XML encoding schema’s voor ISO
+
+      <p><em>GMD, GCO, GML</em>: Dit zijn de XML encoding schema’s voor ISO
         19115:2003. In de metadata dienen ook de codelijsten die op deze locatie
         te vinden zijn gehanteerd te worden.</p>
-      <p>De metadata zal ge-encodeerd worden in XML formaat valide volgens het
-        bovenstaande schema. De namespace http://www.isotc211.org/2005/gmd wordt
-        hiervoor gebruikt. Er mag ook verwezen worden naar een kopie van dit
-        schema. Ook kan het schema
-        http://schemas.opengis.net/iso/19139/20060504/gmx/gmx.xsd gebruikt
-        worden, waarbij het gedupliceerde gmd-schema het gmx schema mag
-        importeren. </p>
+      <p><em>GMX</em>: Een uitbreiding op het basis ISO 19115:2003 model. Het biedt 
+        de mogelijkheid een gco:CharacterString te vervangen 
+        voor gmx:Anchor. gmx:Anchor biedt de mogelijkheid om naast een string tevens een link
+        naar een webadres op te nemen waar meer informatie over dit element te
+        vinden is.</p>
+      <p><em>SRV</em>: Schema ISO 19119 om Dataservices te beschrijven</p>
+      <p><em>GFX</em>: Schema ISO 19110 om object- en attribuutinformatie te beschrijven.</p>
+      <p><em>CSW</em>: Schema dat de interfaces
+          en het core model van de basis catalogue service definiëert.</p>
+      <p><em>APISO</em>: Basis schema van het ISO Application Profile voor de OGC Catalogue Service
+          2.0.2. Dit schema is verbonden met ISO 19139.</p>   
+      <p>Metadata, zoals beschreven in die profiel, zal ge-encodeerd worden in XML formaat valide volgens de
+        bovenstaande schema's. Er mag ook verwezen worden naar een (op het web ontsloten) kopie
+        van deze schema's. Daarbij mag het gedupliceerde GMD-schema gewijzigd worden om het 
+        GMX schema te importeren.</p>
       <table>
         <tbody>
           <tr>
@@ -268,27 +320,6 @@
                 http://schemas.opengis.net/iso/19139/20060504/gmx/gmx.xsd"
                 xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"&gt; </code>
             </td>
-          </tr>
-        </tbody>
-      </table>
-      <p> Introductie van het gmx schema stelt u in staat daar waar van
-        toepassing een gco:CharacterString te vervangen voor een gmx:Anchor.
-        gmx:Anchor biedt de mogelijkheid om naast een string tevens een link
-        naar een webadres op te nemen waar meer informatie over dit element te
-        vinden is. Daarnaast heeft u de mogelijkheid om gco:CharacterString of
-        gmx:Anchor inhoud uit te breiden met gmd:PT_FreeText elementen om
-        alternatieve vertalingen voor de inhoud te introduceren. </p>
-      <table>
-        <tbody>
-          <tr>
-            <th>Voorbeeld</th>
-          </tr>
-          <tr>
-            <td> <code> &lt;Anchor
-                xlink:href="http://www.rijkswaterstaat.nl"&gt;<br>
-                Rijkswaterstaat<br>
-                &lt;/Anchor&gt;<br>
-              </code> </td>
           </tr>
         </tbody>
       </table>
@@ -2664,78 +2695,79 @@ xlink:href="https://nationaalgeoregister.nl/geonetwork/srv/metadata/ee543323-0fe
         benodigde data dictionary is opgenomen in ISO 19139.</p>
       <figure id="image004"> <a href="st-mdprofiel-iso19115/image004.png"><img
             src="st-mdprofiel-iso19115/image004.png" alt="image004"></a> <figcaption>Vrije
-          tekst en “localiced” characterString.</figcaption> </figure>
+          tekst en “localised” characterString.</figcaption> </figure>
     </section>
     <section id="object-en-attribuutinformatie">
       <h2>Object- en attribuutinformatie</h2>
-      <p>In ISO 19115 2003 is het niet mogelijk om object- en
-        attribuutinformatie op te slaan. Aangezien de klankbordgroep hier wel
-        nadrukkelijk om heeft gevraagd, wordt de volgende oplossing aangeboden
-        totdat deze informatie wel in ISO 19115 (2013) kan worden opgenomen.
-        Door ISO wordt een standaard betreffende de objectcatalogus aangeboden
-        in ISO 19110 <em>FeatureCatalogue</em>. Per continent, land of sector
-        kan vervolgens een profiel worden gedefinieerd op deze ISO 19110.
-        Voorbeeld hiervan is ISO 19126, het Amerikaanse profiel op ISO 19110.
-        Aangezien het definiëren van de objectcatalogus buiten de scope van het
-        project valt, richt Geonovum zich enkel op de koppeling met de object-
-        en attribuutinformatie. Dit betekent dat niet alle verplichte elementen
-        uit ISO 19110 worden opgeslagen. De elementen die opgeslagen kunnen
-        worden zijn;</p>
+      <p>
+        De standaard voor het vastleggen van object en attribuutinformatie is
+        ISO 19110 <em>FeatureCatalogue</em>. Het verstrekken van deze metadata wordt
+        niet door dit profiel verplicht gesteld, het is echter aan te bevelen deze 
+        informatie ter beschikking te stellen.</p>  
+      <p>Het ISO 19110 is een apart document waarnaar verwezen kan worden 
+        vanuit 1 of meerdere dataset beschijvingen. De relatie vanuit de 
+        metadata naar de featurecatalog kan worden gelegd
+        door in de dataset beschrijving elementen van de klasse MD_FeatureCatalogueDescription op te nemen.
+        De koppeling word gelegd vanuit een featureCatalogueCitation naar het feature catalog document. 
+        De titel, datum en identifier van de citation in
+        metadata MD_Metadata.contentInfo&gt;
+        MD_FeatureCatalogueDescription.featureCatalogueCitation&gt;CI_Citation verwijzen naar de titel, datum en identifier van de featurecatalog.</p>
+
+        <pre class="highlight"><code>
+        &lt;featureCatalogueCitation&gt;<br/>
+          &lt;CI_Citation&gt;<br/>
+            &lt;title&gt;<br/>
+              &lt;gco:CharacterString&gt;titel&lt;/gco:CharacterString&gt;<br/>
+            &lt;/gmd:title&gt;<br/>
+            &lt;date&gt;...&lt;/date&gt;<br/>
+            &lt;identifier&gt;<br/>
+              &lt;MD_Identifier&gt;<br/>
+                &lt;code&gt;<br/>
+                  &lt;gmx:Anchor xlink:href=“http://domain/id/catalogRecord/7c0b5c3e-f41c-4b33-8e1e-be8c0e68edb2”&gt;<br/>
+                    7c0b5c3e-f41c-4b33-8e1e-be8c0e68edb2&lt;/gmx:Anchor&gt;<br/>
+                &lt;/code&gt;<br/>
+              &lt;/MD_Identifier&gt;<br/>
+            &lt;/identifier&gt;<br/>
+          &lt;/CI_Citation&gt;<br/>
+        &lt;/featureCatalogueCitation&gt;
+        </code></pre>
+
+        <p>De elementen die minimaal opgeslagen worden in een ISO 19110 document zijn;</p>
       <ul>
-        <li>de naam van het object (FC_FeatureType.typeName);</li>
-        <li>de definitie van het object (FC_FeatureType.definition);</li>
+        <li>de naam van het object (<i>FC_FeatureType.typeName</i>);</li>
+        <li>de definitie van het object (<i>FC_FeatureType.definition</i>);</li>
       </ul>
       <p></p>
-      <p>Per object (FeatureType):</p>
+      <p>Per attribuut (<i>FeatureAttribute</i>);</p>
       <ul>
-        <li>de attribuutnamen (FC_FeatureAttribute.memberName);</li>
+        <li>Naam van attribuut (<i>FC_FeatureAttribute.memberName</i>)</li>
+        <li>Code van attribuut (<i>FC_FeatureAttribute.code</i>)</li>
+        <li>Toelichting bij het attribuut
+          (<i>FC_FeatureAttribute.definition</i>)</li>
+        <li>Type van het attribuut (<i>FC_FeatureAttribute.typeName</i>)</li>
+        <li>Bereik van de waarden van het attribuut
+          (<i>FC_FeatureAttribute.range</i>)</li>
       </ul>
       <p></p>
-      <p>Per attribuut (FeatureAttribute);</p>
-      <ul>
-        <li>code van attribuut (FC_FeatureAttribute.code)</li>
-        <li>toelichting (lange omschrijving) van het attribuut
-          (FC_FeatureAttribute.definition)</li>
-        <li>eenheid van het attribuut (FC_FeatureAttribute.valueMeasurementUnit)</li>
-        <li>bereik van de waarden van het attribuut
-          (FC_FeatureAttribute.listedValue&gt;FC_ListedValue.code)</li>
-      </ul>
-      <p></p>
-      <div class="advisement"><i>Toelichting: Een voorbeeld van mogelijke
-          vulling van deze informatie</i>
-        <p>naam object: administratieve eenheden<br>
-          definitie object: Eenheid waar een lidstaat rechtsbevoegdheid<br>
-          <br>
-          naam attribuut: naam<br>
-          naam attribuut: niveau<br>
-          naam attribuut: nummer<br>
-          <br>
-          voor attribuut nummer;<br>
-          code: gemnr<br>
-          toelichting: gemeentenummer, conform cbs nummering jaartal x, hier nog
-          verder uitleg en verwijzing naar externe websites indien zinvol.<br>
-          eenheid: nvt, mag dus ook leeggelaten worden<br>
-          bereik: waarden van 1 tot 1200</p>
+      <div class="advisement">
+        <b>Een voorbeeld van deze informatie</b>
+        <p>Naam object: Administratieve eenheden<br>
+          Toelichting: Eenheid waar een lidstaat rechtsbevoegdheid</p>
+        <p><b>Per attribuut</b><br/> 
+          Naam: Nummer<br>
+          Code: gemnr<br>
+          Toelichting: gemeentenummer, conform cbs nummering jaartal x.<br>
+          Type: String<br>
+          Bereik: Waarden van 1 tot 1200</p>
       </div>
-      <p>Hierbij voorziet ISO 19110 in de gebruiksbehoefte van de
-        klankbordgroep. Het is mogelijk is om onderlinge relaties en
-        bijvoorbeeld domeinen van de attributen aan te duiden in ISO 19110.
-        Indien deze extra informatie wordt opgeslagen, dienen de voorwaarden van
-        ISO 19110 in acht te worden genomen.</p>
-      <p>Het schema van ISO 19110 op <a href="http://eden.ign.fr/xsd/isotc211/iso19110/20090316/gfc/gfc.xsd/">http://eden.ign.fr/xsd/isotc211/iso19110/20090316/gfc/gfc.xsd/</a>
-        kan gebruikt worden tot het schema is opgenomen in <a href="http://www.isotc211.org/2005/gfc">http://www.isotc211.org/2005/gfc</a>.</p>
+     
       <p>Deze methode van vastleggen van object en attribuutinformatie is
         conform NEN3610. Indien een dataset volgens een sectormodel van NEN3610
         is gecodeerd dan kan een objectcatalogus worden gegenereerd, aangezien
         in de sectormodellen ook de object- en attribuutinformatie (inclusief
         naam en definitie) is opgeslagen. Een objectcatalogus is een onderdeel
         van NEN3610.</p>
-      <p>De relatie vanuit de metadata naar de featurecatalog kan worden gelegd
-        door elementen van de klasse MD_FeatureCatalogueDescription op te nemen.
-        De koppeling word gelegd tussen de titel van de featurecatalog in de
-        metadata MD_Metadata. contentInfo&gt;
-        MD_FeatureCatalogueDescription.featureCatalogueCitation&gt;CI_Citation.title
-        en de FC_FeatureCatalogue.name in de featurecatalog.</p>
+      
     </section>
     <section id="richtlijnen-voor-sectoren">
       <h2>Richtlijnen voor sectoren</h2>
@@ -2755,47 +2787,6 @@ xlink:href="https://nationaalgeoregister.nl/geonetwork/srv/metadata/ee543323-0fe
         Geonovum zal een formele naam van het profiel in overleg toekennen. Deze
         sectorspecifieke profielen leveren input voor het beheer van de
         Nederlandse metadatastandaard voor geografie.</p>
-    </section>
-    <section id="metadata-in-catalogues">
-      <h2>Metadata in catalogues</h2>
-      <p style="text-align:left">De metadata van datasets en dataset series
-        wordt uitgewisseld in de encoding (XML) conform: <a href="http://schemas.opengis.net/iso/19139/20060504/gmd/gmd.xsd">http://schemas.opengis.net/iso/19139/20060504/gmd/gmd.xsd</a><span
-          style="float:right">[ISO19115 metadata elementen]</span></p>
-      <p style="text-align:left"><a href="http://eden.ign.fr/xsd/isotc211/iso19110/20090316/gfc/gfc.xsd/">http://eden.ign.fr/xsd/isotc211/iso19110/20090316/gfc/gfc.xsd/</a>
-        tot het schema is opgenomen in <a href="http://www.isotc211.org/2005/gfc">http://www.isotc211.org/2005/gfc</a><span
-          style="float:right">[ISO 19110 elementen]</span></p>
-      <p>Deze encoding is geschikt om tussen OGC catalogues (CSW) te kunnen
-        uitwisselen. Voor de catalogues dient dan gebruik te worden gemaakt van
-        de volgende schema’s:</p>
-      <table>
-        <caption>Tabel 4: Locatie van de relevante XSD schema’s</caption>
-        <thead>
-          <tr>
-            <th>Specificatie</th>
-            <th>Versie</th>
-            <th>Schema locatie</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td>OGC Catalogue Service</td>
-            <td>2.0.2</td>
-            <td><a href="http://schemas.opengis.net/csw/2.0.2/">http://schemas.opengis.net/csw/2.0.2/</a></td>
-          </tr>
-          <tr>
-            <td>ISO Metadata Application Profile</td>
-            <td>1.0.0</td>
-            <td><a href="http://schemas.opengis.net/csw/2.0.2/profiles/apiso/1.0.0/">http://schemas.opengis.net/csw/2.0.2/profiles/apiso/1.0.0/</a></td>
-          </tr>
-        </tbody>
-      </table>
-      <div class="advisement"><i>Toelichting: Uitleg</i>
-        <p>OGC Catalog Service (2.0.2): Dit zijn de schema’s die de interfaces
-          en het core model van de basis catalogue service definiëren.</p>
-        <p>ISO Application Metadata Profile (1.0.0): Dit schema is het basis
-          schema van het ISO Application Profile voor de OGC Catalogue Service
-          2.0.2. Dit schema is verbonden met ISO 19139.</p>
-      </div>
     </section>
     <section class="appendix" id="appendix-a">
       <h2>Codelijsten</h2>
