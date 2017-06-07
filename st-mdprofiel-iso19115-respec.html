@@ -1456,7 +1456,7 @@ xlink:href="https://nationaalgeoregister.nl/geonetwork/srv/metadata/ee543323-0fe
           <h4>Codereferentiesysteem</h4>
           <p style="text-align:left"><em>referenceSystemInfo/*/referenceSystemIdentifier/*/code</em><span
               style="float:right">[<a data-cite="ISO19139">ISO 19139:2007</a>]</span></p>
-          <p>Dit elementbevat de Alfanumerieke waarde die het gebruikte
+          <p>Dit element bevat de Alfanumerieke waarde die het gebruikte
             referentiesysteem van de dataset aangeeft. EPSG geeft deze code’s
             uit. Voor het RD wordt de code 28992 gehanteerd.</p>
           <table>
@@ -1481,26 +1481,6 @@ xlink:href="https://nationaalgeoregister.nl/geonetwork/srv/metadata/ee543323-0fe
               Aanbevolen wordt om de Access database van de site te downloaden</p>
           </div>
         </section>
-        <section id="verantwoordelijke-organisatie-voor-namespace-referentiesysteem">
-          <h4>Verantwoordelijke organisatie voor namespace referentiesysteem</h4>
-          <p style="text-align:left"><em>referenceSystemInfo/*/referenceSystemIdentifier/*/codeSpace</em><span
-              style="float:right">[<a data-cite="ISO19139">ISO 19139:2007</a>]</span></p>
-          <p>Dit element bevat de naam of identificatie van de persoon of
-            organisatie verantwoordelijk voor de namespace (van het referentie
-            systeem). Gebruik hiervoor standaard EPSG.</p>
-          <table>
-            <colgroup><col style="width: 25%"><col style="width: 75%"></colgroup>
-            <tbody>
-              <tr>
-                <th>Data type of Domein</th>
-                <th>Voorbeeld</th>
-              </tr>
-              <tr>
-                <td>String</td>
-                <td>EPSG</td>
-              </tr>
-            </tbody>
-          </table>
         </section>
         <section id="temporeel-referentiesysteem">
           <h4>Temporeel referentiesysteem</h4>
@@ -5153,8 +5133,7 @@ xlink:href="https://nationaalgeoregister.nl/geonetwork/srv/metadata/ee543323-0fe
           varianten opnemen in dit document?</div>
         <div class="azlist">
           <p>Elementen: <a href="#code-referentiesysteem-appendix-b">Code
-              referentiesysteem</a> | <a href="#verantwoordelijke-organisatie-voor-namespace-referentiesysteem-appendix-b">Verantwoordelijke
-              organisatie voor namespace referentiesysteem</a> | <a href="#temporeel-referentiesysteem-appendix-b">Temporeel
+              referentiesysteem</a> | <a href="#temporeel-referentiesysteem-appendix-b">Temporeel
               referentiesysteem</a> | <a href="#verantwoordelijke-organisatie-voor-namespace-temporele-referentiesysteem-appendix-b">Verantwoordelijke
               organisatie voor namespace temporele referentiesysteem</a> | <a href="#code-verticaal-referentiesysteem-appendix-b">Code
               verticaal referentiesysteem</a> | <a href="#verantwoordelijke-organisatie-voor-namespace-verticaal-referentiesysteem-appendix-b">Verantwoordelijke
@@ -5164,8 +5143,9 @@ xlink:href="https://nationaalgeoregister.nl/geonetwork/srv/metadata/ee543323-0fe
             to top</a>]</p>
         <section class="notoc">
           <h4 id="code-referentiesysteem-appendix-b">Code referentiesysteem</h4>
-          <span><em>Code referentiesysteem</em> - Alfanumerieke waarde die het
-            gebruikte referentiesysteem van de dataset aangeeft.</span>
+          <span><em>Code referentiesysteem</em> - Een Anchor verwijzend naar het
+            gebruikte referentiesysteem van de dataset. Met als label een alfanumerieke waarde die het
+            referentie systeem benoemt.</span>
           <table>
             <colgroup><col style="width: 13%;"><col style="width: 87%;"></colgroup>
             <tbody>
@@ -5204,52 +5184,24 @@ xlink:href="https://nationaalgeoregister.nl/geonetwork/srv/metadata/ee543323-0fe
               </tr>
             </tbody>
           </table>
-          <p style="float: right; font-size: small;">[<a href="#role-name:-referencesysteminfo-appendix-b">#</a>][<a
-              href="#appendix-b">back to top</a>]</p>
-          <h4 id="verantwoordelijke-organisatie-voor-namespace-referentiesysteem-appendix-b">Verantwoordelijke
-            organisatie voor namespace referentiesysteem</h4>
-          <span><em>Verantwoordelijke organisatie voor namespace
-              referentiesysteem</em> - Naam of identificatie van de persoon of
-            organisatie verantwoordelijk voor de namespace (van het referentie
-            systeem).</span>
-          <table>
-            <colgroup><col style="width: 13%;"><col style="width: 87%;"></colgroup>
-            <tbody>
-              <tr>
-                <th>Longname</th>
-                <td>MD_Metadata.referenceSystemInfo&gt;MD_ReferenceSystem.referenceSystemIdentifier&gt;RS_Identifier.codeSpace</td>
-              </tr>
-              <tr>
-                <th>Conditie</th>
-                <td>Verplicht</td>
-              </tr>
-              <tr>
-                <th>Type veld</th>
-                <td>string</td>
-              </tr>
-              <tr>
-                <th>Domein</th>
-                <td>&nbsp;</td>
-              </tr>
-              <tr>
-                <th>Wijze van invoering</th>
-                <td>default</td>
-              </tr>
-              <tr>
-                <th>Engelse naam</th>
-                <td>codeSpace</td>
-              </tr>
-              <tr>
-                <th>Opmerking</th>
-                <td>Standaard EPSG codes gebruiken voor betere
-                  interoperabiliteit. De verantwoordelijke organisatie is EPSG</td>
-              </tr>
-              <tr>
-                <th>Multipliciteit</th>
-                <td>1</td>
-              </tr>
-            </tbody>
-          </table>
+          <aside class="example" title="XML voorbeeld">
+            <pre>
+            <code>
+&lt;gmd:referenceSystemInfo&gt;
+  &lt;gmd:MD_ReferenceSystem&gt;
+    &lt;gmd:referenceSystemIdentifier&gt;
+      &lt;gmd:RS_Identifier&gt;
+        &lt;gmd:code&gt;
+          &lt;gmx:Anchor xlink:href="http://www.opengis.net/def/crs/EPSG/0/28992"&gt;
+          RD new&lt;/gmx:Anchor&gt;
+        &lt;/gmd:code&gt;
+      &lt;/gmd:RS_Identifier&gt;
+    &lt;/gmd:referenceSystemIdentifier&gt;
+  &lt;/gmd:MD_ReferenceSystem&gt;
+&lt;/gmd:referenceSystemInfo&gt;
+            </code>
+            </pre>
+          </aside>  
           <p style="float: right; font-size: small;">[<a href="#role-name:-referencesysteminfo-appendix-b">#</a>][<a
               href="#appendix-b">back to top</a>]</p>
           <h4 id="temporeel-referentiesysteem-appendix-b">Temporeel
