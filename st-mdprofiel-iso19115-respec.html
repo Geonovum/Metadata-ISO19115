@@ -1329,11 +1329,12 @@ xlink:href="https://nationaalgeoregister.nl/geonetwork/srv/metadata/ee543323-0fe
         <section id="datum-type-van-de-bron">
           <h4>Datum type van de bron</h4>
           <p style="text-align:left"><em>identificationInfo[1]/*/citation/*/date/*/dateType</em><span
-              style="float:right">[<a data-cite="ISO19139">ISO 19139:2007</a>]</span></p>
+            style="float:right">[<a data-cite="ISO19139">ISO 19139:2007</a>]</span></p>
           <p>Dit element bevat het type gebeurtenis waar de datum betrekking op
             heeft. Type gebeurtenis wordt gekozen uit <a href="#codelijst-b52">codelijst
-              B.5.2</a>. Mogelijke gebeurtenissen zijn: creatie-, publicatie-,
-            of revisiedatum.</p>
+            B.5.2</a>. Mogelijke gebeurtenissen zijn: creatie-, publicatie-,
+            of revisiedatum. INSPIRE vereist bovendien dat het datum type 
+            uniek is per set aan datums van de bron.</p>
           <table>
             <colgroup><col style="width: 25%"><col style="width: 75%"></colgroup>
             <tbody>
@@ -5635,7 +5636,7 @@ xlink:href="https://nationaalgeoregister.nl/geonetwork/srv/metadata/ee543323-0fe
               </tr>
               <tr>
                 <th>Opmerking</th>
-                <td>De type gebeurtenis waar de datum betrekking op heeft kunt u
+                <td>Het type gebeurtenis waar de datum betrekking op heeft kunt u
                   aangeven in het veld "Datum Type". Te gebruiken notatie:
                   JJJJ-MM-DD (met streepjes).</td>
               </tr>
@@ -5681,7 +5682,8 @@ xlink:href="https://nationaalgeoregister.nl/geonetwork/srv/metadata/ee543323-0fe
                 <th>Opmerking</th>
                 <td>Type gebeurtenis wordt gekozen uit codelijst B.5.2.
                   Mogelijke gebeurtenenissen zijn: creatie, publicatie of
-                  revisie .</td>
+                  revisie. INSPIRE vereist bovendien dat het datum type 
+                  uniek is per set aan datums van de bron.</td>
               </tr>
               <tr>
                 <th>Multipliciteit</th>
@@ -7956,8 +7958,7 @@ xlink:href="https://nationaalgeoregister.nl/geonetwork/srv/metadata/ee543323-0fe
                   een tot datum aan te geven. Het formaat van de datum is
                   +/-JJJJ-MM-DDTUU:MM:SS (met streepjes T van time en dubbele
                   punt). Het jaar 1 BC wordt als -0000, 2 BC -0001, etc.
-                  weergegeven. Maand dag en tijd zijn optioneel. Voor de XML
-                  notatie; zie bijlage 7</td>
+                  weergegeven. Maand dag en tijd zijn optioneel.</td>
               </tr>
               <tr>
                 <th>Multipliciteit</th>
@@ -7965,6 +7966,18 @@ xlink:href="https://nationaalgeoregister.nl/geonetwork/srv/metadata/ee543323-0fe
               </tr>
             </tbody>
           </table>
+          <aside class="example" title="XML voorbeeld">
+            <pre class="highlight">
+              <code>
+&lt;gmd:extent&gt;
+  &lt;gml:TimePeriod gml:id="IDd2febbb4-e66f-4ac8-ba76-8fd9bc7c8be6"&gt;
+    &lt;gml:beginPosition>2008-01-01T11:45:30&lt;/gml:beginPosition&gt;
+    &lt;gml:endPosition>2008-12-31T09:10:00&lt;/gml:endPosition&gt;
+  &lt;/gml:TimePeriod&gt;
+&lt;/gmd:extent&gt;
+            </code>
+          </pre>
+          </aside>
           <p style="float: right; font-size: small;">[<a href="#role-name:-identificatieinfo-appendix-b">#</a>][<a
               href="#appendix-b">back to top</a>]</p>
           <h4 id="minimum-z-coördinaat-appendix-b">Minimum z-coördinaat</h4>
@@ -9843,7 +9856,7 @@ DQ_DomainConsistency.result&gt;DQ_ConformanceResult.specification&gt;CI_Citation
                 <th>Opmerking</th>
                 <td>Het is alleen verplicht als de dataset een INSPIRE bron is
                   of als de informatie is gemodelleerd volgens een specifiek
-                  informatie model.Type gebeurtenis wordt gekozen uit codelijst
+                  informatie model. Type gebeurtenis wordt gekozen uit codelijst
                   B.5.2. Mogelijke gebeurtenissen zijn: creatie, publicatie of
                   revisie.</td>
               </tr>
