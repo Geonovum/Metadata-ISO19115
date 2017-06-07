@@ -473,7 +473,8 @@
             <tr>
               <td>Unieke Identifier van de bron.</td>
               <td>V</td>
-              <td>&nbsp;</td>
+              <td>Het gebruik van een persistente op het web beschikbare URI 
+              als identificatie wordt aangeraden (voor INSPIRE verplicht)</td>
             </tr>
             <tr>
               <td>Taal van de bron</td>
@@ -483,10 +484,7 @@
             <tr>
               <td>Karakterset van de bron</td>
               <td>C</td>
-              <td>Voor INSPIRE verplicht als voor de uitwisseling van de bron
-                geen GML wordt gebruikt en de gebruikte karakterset geen utf8
-                is. Voor niet INSPIRE datasets is het verplicht als de waarde
-                niet voldoet aan de ISO/IEC 10646 standaard. </td>
+              <td>Verplicht als de in de bron gebruikte karakterset geen utf8 is.</td>
             </tr>
             <tr>
               <td>Onderwerp</td>
@@ -564,12 +562,13 @@
               <td>Toepassingsschaal</td>
               <td>C</td>
               <td>Verplicht als er een toepassingsschaal gespecificeerd kan
-                worden.</td>
+                worden en het element Resolutie niet aanwezig is.</td>
             </tr>
             <tr>
               <td>Resolutie</td>
               <td>C</td>
-              <td>Verplicht als er een resolutie gespecificeerd kan worden.</td>
+              <td>Verplicht als er een resolutie gespecificeerd kan worden 
+              en het element toepassingsschaal niet aanwezig is.</td>
             </tr>
             <tr>
               <td>Codereferentiesysteem</td>
@@ -993,7 +992,7 @@
             van een anchor met een verwijzing naar een <a title="Uniform Resource Identifier"
               href="https://nl.wikipedia.org/wiki/Uniform_resource_identifier">URI</a>.
             Indien een URI gebruikt wordt dient deze te verwijzen naar een
-            bestaande bron op het web. </p>
+            bestaande bron op het web.</p>
           <table>
             <colgroup><col style="width: 25%"><col style="width: 75%"></colgroup>
             <tbody>
@@ -1039,11 +1038,7 @@ xlink:href="https://nationaalgeoregister.nl/geonetwork/srv/metadata/ee543323-0fe
           <h4>Karakterset van de bron</h4>
           <p style="text-align:left"><em>identificationInfo[1]/*/</em><span style="float:right">[<a
                 data-cite="ISO19139">ISO 19139:2007</a>]</span></p>
-          <p>Voor INSPIRE verplicht als voor de uitwisseling van de bron geen
-            GML wordt gebruikt en de gebruikte karakterset geen utf8 is. Voor
-            niet INSPIRE datasets is het verplicht als de waarde niet voldoet
-            aan de ISO/IEC 10646 standaard. Utf8 en utf16 voldoen aan deze
-            standaard.</p>
+          <p>Verplicht als de in de bron gebruikte karakterset geen utf8 is.</p>
           <table>
             <colgroup><col style="width: 25%"><col style="width: 75%"></colgroup>
             <tbody>
@@ -7511,7 +7506,7 @@ xlink:href="https://nationaalgeoregister.nl/geonetwork/srv/metadata/ee543323-0fe
               </tr>
               <tr>
                 <th>Conditie</th>
-                <td>Verplicht</td>
+                <td>Conditioneel</td>
               </tr>
               <tr>
                 <th>Type veld</th>
@@ -7531,14 +7526,7 @@ xlink:href="https://nationaalgeoregister.nl/geonetwork/srv/metadata/ee543323-0fe
               </tr>
               <tr>
                 <th>Opmerking</th>
-                <td>Voor INSPIRE conditioneel , het is verplicht als voor de
-                  uitwisseling van de bron geen GML wordt gebruikt en de
-                  gebruikte karakterset geen utf8 is. Als het niet aan
-                  bovenstaande conditie voldoet moet de waarde voldoen aan de
-                  ISO/IEC 10646 standaard. Utf8 en utf16 voldoen hieraan.
-                  Hierdoor is het niet nodig dit element uit te wisselen. Als
-                  men van deze standaard afwijkt, dient men wel de karakter
-                  codeerstandaard op te nemen</td>
+                <td>Verplicht als de in de bron gebruikte karakterset geen utf8 is.</td>
               </tr>
               <tr>
                 <th>Multipliciteit</th>
@@ -10805,10 +10793,7 @@ DQ_DomainConsistency.result&gt;DQ_ConformanceResult.specification&gt;CI_Citation
             <td>&nbsp;</td>
             <td>IR interoperability of spatial data sets and services</td>
             <td>40</td>
-            <td>Voor INSPIRE verplicht als voor de uitwisseling van de bron geen
-              GML wordt gebruikt en de gebruikte karakterset geen utf8 is. Voor
-              niet INSPIRE datasets is het verplicht als de waarde niet voldoet
-              aan de ISO/IEC 10646 standaard.</td>
+            <td>Verplicht als de in de bron gebruikte karakterset geen utf8 is.</td>
           </tr>
           <tr>
             <td>Onderwerp</td>
@@ -11306,10 +11291,7 @@ DQ_DomainConsistency.result&gt;DQ_ConformanceResult.specification&gt;CI_Citation
             <td>C</td>
             <td>IR interoperability of spatial data sets and services</td>
             <td>40</td>
-            <td>Voor INSPIRE verplicht als voor de uitwisseling van de bron geen
-              GML wordt gebruikt en de gebruikte karakterset geen utf8 is. Voor
-              niet INSPIRE datasets is het verplicht als de waarde niet voldoet
-              aan de ISO/IEC 10646 standaard.</td>
+            <td>Verplicht als de in de bron gebruikte karakterset geen utf8 is.</td>
             <td>&nbsp;</td>
             <td>&nbsp;</td>
           </tr>
