@@ -468,6 +468,12 @@ http://schemas.opengis.net/csw/2.0.2/profiles/apiso/1.0.0/apiso.xsd</a></td>
               <td>Het is verplicht als de bron tekstuele informatie bevat.</td>
             </tr>
             <tr>
+              <td>Ruimtelijk schema</td>
+              <td>C</td>
+              <td>Ruimtelijk schema</td>
+              <td>Dit element is conditioneel. Dit element is verplicht voor INSPIRE.</td>
+            </tr>
+            <tr>
               <td>Karakterset van de bron</td>
               <td>C</td>
               <td>Verplicht als de in de bron gebruikte karakterset geen utf8
@@ -1024,6 +1030,29 @@ xlink:href="http://domein/id/record/ee543323-0fe4-4353"&gt;
             </tbody>
           </table>
         </section>
+        <section id="ruimtelijk-schema-van-de-bron">
+          <h4>Ruimtelijk schema van de bron</h4>
+          <p style="text-align:left"><em>identificationInfo[1]/*/spatialRepresentationType/MD_SpatialRepresentationTypeCode</em><span style="float:right">[<a
+                data-cite="ISO19139">ISO 19139:2007</a>]</span></p>
+          <p>Dit element is conditioneel. Dit element is verplicht voor INSPIRE. Er dient een waarde uit de codelist MD_SpatialRepresentationTypeCode gebruikt te worden.</p>
+          <table>
+            <colgroup><col style="width: 25%"><col style="width: 75%"></colgroup>
+            <tbody>
+              <tr>
+                <th>Data type of Domein</th>
+                <th>Voorbeeld</th>
+              </tr>
+              <tr>
+                <td>B.5.10</td>
+                <td>
+                 <pre><code>
+                  &lt;gmd:MD_SpatialRepresentationTypeCode codeList="http://www.isotc211.org/2005/resources/codeList.xml#MD_SpatialRepresentationTypeCode" codeListValue="vector"&gt;
+                    vector&lt;/gmd:MD_SpatialRepresentationTypeCode&gt;</code></pre>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </section>
         <section id="karakterset-van-de-bron">
           <h4>Karakterset van de bron</h4>
           <p style="text-align:left"><em>identificationInfo[1]/*/</em><span style="float:right">[<a
@@ -1093,6 +1122,15 @@ xlink:href="http://domein/id/record/ee543323-0fe4-4353"&gt;
               <tr>
                 <td>String</td>
                 <td>Beschermde Gebieden</td>
+              </tr>
+              <tr>
+                <td>Anchor</td>
+                <td>
+                  <pre><code>
+&lt;gmx:Anchor
+ xlink:href="http://inspire.ec.europa.eu/theme/mf"&gt;
+ Meteorologische geografische kenmerken&lt;/gmx:Anchor&gt;</code></pre>
+                </td>
               </tr>
             </tbody>
           </table>
@@ -1286,12 +1324,10 @@ xlink:href="http://domein/id/record/ee543323-0fe4-4353"&gt;
               <tr>
                 <td>String/Anchor</td>
                 <td>
-                  <aside class="example" title="XML voorbeeld">
-                    <pre><code>
+                  <pre><code>
 &lt;gmx:Anchor
  xlink:href="http://standaarden.overheid.nl/owms/terms/Ameland"&gt;
  Ameland&lt;/gmx:Anchor&gt;</code></pre>
-                  </aside>
                 </td>
               </tr>
             </tbody>
@@ -1743,7 +1779,7 @@ xlink:href="http://domein/id/record/ee543323-0fe4-4353"&gt;
               </tr>
               <tr>
                 <td>B.5.24</td>
-                <td>otherRestrictions</td>
+                <td>intellectualPropertyRights</td>
               </tr>
             </tbody>
           </table>
@@ -1754,9 +1790,9 @@ xlink:href="http://domein/id/record/ee543323-0fe4-4353"&gt;
               style="float:right">[<a data-cite="ISO19139">ISO 19139:2007</a>]</span></p>
           <p>Als er geen beperkingen zijn dient men dat bij overige beperkingen
             aan te geven. Als er een waarde in dit element wordt ingevuld, dient
-            bij het element juridische toegangsrestricties de waarde
-            "otherRestrictions" gekozen te worden. Als er geen beperkingen zijn
-            dient men de tekst “geen beperkingen” op te nemen.</p>
+            bij het element juridische toegangsrestricties de waarde "anders"
+            gekozen te worden. Als er geen beperkingen zijn dient men de tekst
+            “geen beperkingen” op te nemen.</p>
           <table>
             <colgroup><col style="width: 25%"><col style="width: 75%"></colgroup>
             <tbody>
@@ -2323,13 +2359,6 @@ xlink:href="http://domein/id/record/ee543323-0fe4-4353"&gt;
             <td>66.4</td>
             <td>Type relatie</td>
             <td>Type relatie tussen de datasets.</td>
-          </tr>
-          <tr>
-            <td>Ruimtelijk schema</td>
-            <td>37</td>
-            <td>Ruimtelijk schema</td>
-            <td>Methode die gebruikt wordt om de geografische informatie
-              ruimtelijk te representeren.</td>
           </tr>
           <tr>
             <td>Beschrijving temporele dekking</td>
@@ -3496,7 +3525,7 @@ Toelichting: Eenheid waar een lidstaat rechtsbevoegdheid
                 <td>tin</td>
                 <td>Triangulated irregular network.</td>
               </tr>
-              <tr>
+              <!--<tr>
                 <td>stereoModel *</td>
                 <td>stereoModel</td>
                 <td>3D overzicht wordt gevormd door intersectie van twee
@@ -3506,7 +3535,7 @@ Toelichting: Eenheid waar een lidstaat rechtsbevoegdheid
                 <td>Video *</td>
                 <td>video</td>
                 <td>Scène uit een video opname.</td>
-              </tr>
+              </tr>-->
             </tbody>
           </table>
           * Deze waarden zijn niet toegestaan in de context van INSPIRE metadata
