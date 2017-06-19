@@ -182,24 +182,27 @@
       <h2>Normatieve verwijzing</h2>
       <p>De volgende normen, standaarden en specificaties zijn toegepast in dit
         profiel:</p>
-      <p><b>EN ISO 19115:2005</b>, Geographic information - Metadata<br>
-          <span class="note">EN ISO 19115:2005
-            is de adoptie door CEN van ISO 19115:2003</span></p>
-      <p><b>EN ISO 19115:2005/AC:2008</b>, Geographic information – Metadata,
+      <p><b>ISO 19115:</b></p>
+      <ul>
+        <li>EN ISO 19115:2005, Geographic information - Metadata<br>
+          <span class="note"><span class="marker">NOOT</span>EN ISO 19115:2005
+            is de adoptie door CEN van ISO 19115:2003</span></li>
+        <li>EN ISO 19115:2005/AC:2008 , Geographic information – Metadata,
           Technical Corrigendum 1<br>
-          <span class="note">EN ISO
-            19115:2005/AC:2008 is de adoptie door CEN van ISO 19115/Cor.1:2006</span></p>
+          <span class="note"><span class="marker">NOOT</span>EN ISO
+            19115:2005/AC:2008 is de adoptie door CEN van ISO 19115/Cor.1:2006</span></li>
+      </ul>
       <p></p>
       <p><b>CEN ISO/TS 19139:2009</b>, Geographic information - Metadata – XML
         Schema Implementation<br>
-        <span class="note">CEN ISO/TS 19139:2009
+        <span class="note"><span class="marker">NOOT</span>CEN ISO/TS 19139:2009
           is de adoptie door CEN van ISO/TS 19139:2007</span></p>
       <p><b>CSW2 AP ISO</b>, <a href="portal.opengeospatial.org/files/?artifact_id=21460">OpenGIS
           Catalogue Services Specification 2.0.2 - ISO Metadata Application
           Profile</a>, Version 1.0.0, OGC 07-045, 2007</p>
       <p><b>ISO 19108</b>, EN ISO 19108:2005, Geographic information – Temporal
         Schema<br>
-        <span class="note">EN ISO 19108:2005 is
+        <span class="note"><span class="marker">NOOT</span>EN ISO 19108:2005 is
           de adoptie door CEN van ISO 19108:2002</span></p>
       <p><b>ISO 8601:2004</b>, Data elements and interchange formats -
         Information interchange - Representation of dates and times</p>
@@ -229,22 +232,19 @@
           </tr>
           <tr>
             <td>GMD</td>
-            <td><br>
-            </td>
+            <td>0.1</td>
             <td><a href="http://schemas.opengis.net/iso/19139/20060504/gmd/gmd.xsd">
                 /gmd/gmd.xsd</a></td>
           </tr>
           <tr>
             <td>SRV</td>
-            <td><br>
-            </td>
+            <td>0.1</td>
             <td><a href="http://schemas.opengis.net/iso/19139/20060504/srv/srv.xsd">
                 /srv/srv.xsd</a></td>
           </tr>
           <tr>
             <td>GMX</td>
-            <td><br>
-            </td>
+            <td>0.1</td>
             <td><a href="http://schemas.opengis.net/iso/19139/20060504/gmx/gmx.xsd">
                 /gmx/gmx.xsd</a></td>
           </tr>
@@ -256,16 +256,15 @@
           </tr>
           <tr>
             <td>GCO</td>
-            <td><br>
-            </td>
+            <td>0.1</td>
             <td><a href="http://schemas.opengis.net/iso/19139/20060504/gml/gml.xsd">
                 /gco/gco.xsd</a></td>
           </tr>
           <tr>
             <td>GFX</td>
             <td>0.1</td>
-            <td><a href="http://www.isotc211.org/2005/gfc/gfx.xsd">
-                http://www.isotc211.org/2005/gfx/gfx.xsd</a></td>
+            <td><a href="http://www.isotc211.org/2005/gfc/gfc.xsd">
+                http://www.isotc211.org/2005/gfc/gfc.xsd</a></td>
           </tr>
           <tr>
             <td>CSW</td>
@@ -290,15 +289,18 @@ http://schemas.opengis.net/csw/2.0.2/profiles/apiso/1.0.0/apiso.xsd</a></td>
         een link naar een webadres op te nemen waar meer informatie over dit
         element te vinden is.</p>
       <p><em>SRV</em>: Schema ISO 19119 om Dataservices te beschrijven</p>
-      <p><em>GFX</em>: Schema ISO 19110 om object- en attribuutinformatie te
+      <p><em>GFC</em>: Schema ISO 19110 om object- en attribuutinformatie te
         beschrijven.</p>
       <p><em>CSW</em>: Schema dat de interfaces en het core model van de basis
         catalogue service definiëert.</p>
       <p><em>APISO</em>: Basis schema van het ISO Application Profile voor de
         OGC Catalogue Service 2.0.2. Dit schema is verbonden met ISO 19139.</p>
       <p>Metadata, zoals beschreven in die profiel, zal ge-encodeerd worden in
-        XML formaat valide volgens de bovenstaande schema's.</p>
-      <aside class="example" title="Voorbeeld header inclusief verwijzing naar GMX schema">
+        XML formaat valide volgens de bovenstaande schema's. Er mag ook verwezen
+        worden naar een (op het web ontsloten) kopie van deze schema's. Daarbij
+        mag het gedupliceerde GMD-schema gewijzigd worden om het GMX schema te
+        importeren.</p>
+      <aside class="example" title="XML voorbeeld">
         <pre><code> 
 &lt;gmd:MD_Metadata
     xmlns:gmd="http://www.isotc211.org/2005/gmd"
@@ -306,11 +308,8 @@ http://schemas.opengis.net/csw/2.0.2/profiles/apiso/1.0.0/apiso.xsd</a></td>
       http://schemas.opengis.net/iso/19139/20060504/gmd/gmd.xsd
       http://www.isotc211.org/2005/gmx
       http://schemas.opengis.net/iso/19139/20060504/gmx/gmx.xsd"
-    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"&gt;</code></pre>
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"&gt; </code></pre>
       </aside>
-      <p>Er mag ook verwezen worden naar een (op het web ontsloten) kopie van
-        deze schema's. Daarbij mag het gedupliceerde GMD-schema gewijzigd worden
-        om het GMX schema te importeren.</p>
     </section>
     <section id="termen-en-definities">
       <h2>Termen en definities</h2>
@@ -881,9 +880,17 @@ http://schemas.opengis.net/csw/2.0.2/profiles/apiso/1.0.0/apiso.xsd</a></td>
                 <td>URL</td>
                 <td>www.dinoloket.nl</td>
               </tr>
+            </tbody>
+          </table>
+          <table>
+            <colgroup><col style="width: 25%"><col style="width: 75%"></colgroup>
+            <tbody>
               <tr>
-                <td><br>
-                </td>
+                <th>Data type of Domein</th>
+                <th>Voorbeeld</th>
+              </tr>
+              <tr>
+                <td>URL</td>
                 <td>http://wms.nitg.tno.nl/OneGeology?</td>
               </tr>
             </tbody>
@@ -910,9 +917,17 @@ http://schemas.opengis.net/csw/2.0.2/profiles/apiso/1.0.0/apiso.xsd</a></td>
                 <td>SV_ServiceType</td>
                 <td>website</td>
               </tr>
+            </tbody>
+          </table>
+          <table>
+            <colgroup><col style="width: 25%"><col style="width: 75%"></colgroup>
+            <tbody>
               <tr>
-                <td><br>
-                </td>
+                <th>Data type of Domein</th>
+                <th>Voorbeeld</th>
+              </tr>
+              <tr>
+                <td>SV_ServiceType</td>
                 <td>OGC:WMS</td>
               </tr>
             </tbody>
@@ -950,15 +965,6 @@ http://schemas.opengis.net/csw/2.0.2/profiles/apiso/1.0.0/apiso.xsd</a></td>
                 <td>String</td>
                 <td>Gemeentegrenzen</td>
               </tr>
-              <tr>
-                <td>Anchor</td>
-                <td>
-                  <pre><code>
-&lt;gmx:Anchor
- xlink:href="http://domein/id/record/ee543323-0fe4-4353"&gt;
-  ee543323-0fe4-4353-9161-eda61ff26c07&lt;/gmx:Anchor&gt;
-</code></pre> </td>
-              </tr>
             </tbody>
           </table>
         </section>
@@ -986,11 +992,13 @@ http://schemas.opengis.net/csw/2.0.2/profiles/apiso/1.0.0/apiso.xsd</a></td>
               <tr>
                 <td>Anchor</td>
                 <td>
-                  <pre><code>
-&lt;gmx:Anchor
- xlink:href="https://monumentenregister.cultureelerfgoed.nl/monuments"&gt;
-  Monumentenregister&lt;/gmx:Anchor&gt;
-</code></pre> </td>
+                  <aside class="example" title="XML voorbeeld">
+                    <pre><code>
+&lt;Anchor
+xlink:href="http://domein/id/record/ee543323-0fe4-4353"&gt;
+  ee543323-0fe4-4353-9161-eda61ff26c07&lt;/Anchor&gt;</code></pre>
+                  </aside>
+                </td>
               </tr>
             </tbody>
           </table>
@@ -1281,7 +1289,7 @@ http://schemas.opengis.net/csw/2.0.2/profiles/apiso/1.0.0/apiso.xsd</a></td>
               <tr>
                 <td>String/Anchor</td>
                 <td>
-                  <aside class="example" title="Voorbeeld Anchor met link naar externe URL">
+                  <aside class="example" title="XML voorbeeld">
                     <pre><code>
 &lt;gmx:Anchor
  xlink:href="http://standaarden.overheid.nl/owms/terms/Ameland"&gt;
@@ -3913,7 +3921,7 @@ Toelichting: Eenheid waar een lidstaat rechtsbevoegdheid
         </table>
         <p style="float: right; font-size: small;">[<a href="#appendix-b">back
             to top</a>]</p>
-        <aside class="example" title="Voorbeeld unieke identifier">
+        <aside class="example" title="XML voorbeeld">
           <pre><code>&lt;gmd:MD_Metadata&gt;
   &lt;gmd:fileIdentifier&gt;
     &lt;gco:CharacterString&gt;550E8400-E29B-11D4-A716-446655440000&lt;/gmd:CharacterString&gt;
@@ -3964,7 +3972,7 @@ Toelichting: Eenheid waar een lidstaat rechtsbevoegdheid
         </table>
         <p style="float: right; font-size: small;">[<a href="#appendix-b">back
             to top</a>]</p>
-        <aside class="example" title="Voorbeeld taal metadata">
+        <aside class="example" title="XML voorbeeld">
           <pre><code>&lt;gmd:MD_Metadata&gt;
   &lt;gmd:language&gt;
     &lt;gmd:LanguageCode codeList="http://www.loc.gov/standards/iso639-2/" codeListValue="dut"&gt;Nederlands&lt;/gmd:LanguageCode&gt;
@@ -4018,7 +4026,7 @@ Toelichting: Eenheid waar een lidstaat rechtsbevoegdheid
         </table>
         <p style="float: right; font-size: small;">[<a href="#appendix-b">back
             to top</a>]</p>
-        <aside class="example" title="Voorbeeld karakterset">
+        <aside class="example" title="XML voorbeeld">
           <pre><code>&lt;gmd:MD_Metadata&gt;
   &lt;gmd:characterSet&gt;
     &lt;gmd:MD_CharacterSetCode codeList="http://www.isotc211.org/2005/resources/Codelist/gmxCodelists.xml#MD_CharacterSetCode" codeListValue="utf8"/&gt;
@@ -4071,7 +4079,7 @@ Toelichting: Eenheid waar een lidstaat rechtsbevoegdheid
         </table>
         <p style="float: right; font-size: small;">[<a href="#appendix-b">back
             to top</a>]</p>
-        <aside class="example" title="Voorbeeld parentidentifier">
+        <aside class="example" title="XML voorbeeld">
           <pre><code>&lt;gmd:MD_Metadata&gt;
   &lt;gmd:parentIdentifier&gt;
     &lt;gco:CharacterString&gt;550E8400-E29B-11D4-A716-446655540000&lt;/gco:CharacterString&gt;
@@ -4122,7 +4130,7 @@ Toelichting: Eenheid waar een lidstaat rechtsbevoegdheid
         </table>
         <p style="float: right; font-size: small;">[<a href="#appendix-b">back
             to top</a>]</p>
-        <aside class="example" title="Voorbeeld hiërarchieniveau"> **
+        <aside class="example" title="XML voorbeeld"> **
           <pre><code>&lt;gmd:MD_Metadata&gt;
   &lt;gmd:hierarchyLevel&gt;
     &lt;gmd:MD_ScopeCode 
@@ -4175,7 +4183,7 @@ Toelichting: Eenheid waar een lidstaat rechtsbevoegdheid
         </table>
         <p style="float: right; font-size: small;">[<a href="#appendix-b">back
             to top</a>]</p>
-        <aside class="example" title="Voorbeeld naam hiërarchieniveau">
+        <aside class="example" title="XML voorbeeld">
           <pre><code>&lt;gmd:MD_Metadata&gt;
   &lt;gmd:hierarchyLevelname&gt;
     &lt;gco:CharacterString&gt;AHN Nederland&lt;/gco:CharacterString&gt;
@@ -4344,7 +4352,7 @@ Toelichting: Eenheid waar een lidstaat rechtsbevoegdheid
           </table>
           <p style="float: right; font-size: small;">[<a href="#contact-appendix-b">#</a>][<a
               href="#appendix-b">back to top</a>]</p>
-          <aside class="example" title="Voorbeeld verantwoordelijke organisatie als anchor">
+          <aside class="example" title="XML voorbeeld">
             <pre class="highlight"><code>&lt;gmd:MD_Metadata&gt;
   &lt;gmd:contact&gt;
     &lt;gmd:CI_ResponsibleParty&gt;
@@ -4352,6 +4360,7 @@ Toelichting: Eenheid waar een lidstaat rechtsbevoegdheid
         &lt;gco:CharacterString&gt;Bleker, L.&lt;/gco:CharacterString&gt;
       &lt;/gmd:individualName&gt;
       &lt;gmd:organisationName&gt;
+
         &lt;gmx:Anchor 
           xlink:href="http://standaarden.overheid.nl/owms/terms/Ministerie_van_Economische_Zaken_Landbouw_en_Innovatie"&gt;
           Ministerie van Economische Zaken, Landbouw en Innovatie&lt;/gmx:Anchor&gt;
@@ -4403,28 +4412,6 @@ Toelichting: Eenheid waar een lidstaat rechtsbevoegdheid
               </tr>
             </tbody>
           </table>
-          <aside class="example" title="Voorbeeld telefoonnummer">
-            <pre class="highlight"><code>&lt;gmd:MD_Metadata&gt;
-  &lt;gmd:contact&gt;
-    &lt;gmd:CI_ResponsibleParty&gt;
-      &lt;gmd:contactInfo&gt;
-        &lt;gmd:CI_Contact&gt;
-          &lt;gmd:Phone&gt;
-            &lt;gmd:CI_Telephone&gt;
-              &lt;gmd:voice&gt;
-                &lt;gco:CharacterString&gt;030 - 2756600&lt;/gco:CharacterString&gt;
-              &lt;/gmd:voice&gt;
-              &lt;gmd:facsimile&gt;
-                &lt;gco:CharacterString&gt;030 - 2756899&lt;/gco:CharacterString&gt;
-              &lt;/gmd:facsimile&gt;
-            &lt;/gmd:CI_Telephone&gt;
-          &lt;/gmd:Phone&gt;
-        &lt;/gmd:CI_Contact&gt;
-      &lt;/gmd:contactInfo&gt;
-    &lt;/gmd:CI_ResponsibleParty&gt;
-  &lt;/gmd:contact&gt;
-&lt;/gmd:MD_Metadata&gt;</code></pre>
-          </aside>
           <p style="float: right; font-size: small;">[<a href="#contact-appendix-b">#</a>][<a
               href="#appendix-b">back to top</a>]</p>
           <h4 id="faxnummer-appendix-b">Faxnummer</h4>
@@ -4469,6 +4456,28 @@ Toelichting: Eenheid waar een lidstaat rechtsbevoegdheid
           </table>
           <p style="float: right; font-size: small;">[<a href="#contact-appendix-b">#</a>][<a
               href="#appendix-b">back to top</a>]</p>
+          <aside class="example" title="XML voorbeeld">
+            <pre class="highlight"><code>&lt;gmd:MD_Metadata&gt;
+  &lt;gmd:contact&gt;
+    &lt;gmd:CI_ResponsibleParty&gt;
+      &lt;gmd:contactInfo&gt;
+        &lt;gmd:CI_Contact&gt;
+          &lt;gmd:Phone&gt;
+            &lt;gmd:CI_Telephone&gt;
+              &lt;gmd:voice&gt;
+                &lt;gco:CharacterString&gt;030 - 2756600&lt;/gco:CharacterString&gt;
+              &lt;/gmd:voice&gt;
+              &lt;gmd:facsimile&gt;
+                &lt;gco:CharacterString&gt;030 - 2756899&lt;/gco:CharacterString&gt;
+              &lt;/gmd:facsimile&gt;
+            &lt;/gmd:CI_Telephone&gt;
+          &lt;/gmd:Phone&gt;
+        &lt;/gmd:CI_Contact&gt;
+      &lt;/gmd:contactInfo&gt;
+    &lt;/gmd:CI_ResponsibleParty&gt;
+  &lt;/gmd:contact&gt;
+&lt;/gmd:MD_Metadata&gt;</code></pre>
+          </aside>
           <h4 id="adres-appendix-b">Adres</h4>
           <em>Adres</em> - Contactadres van de organisatie.
           <table>
@@ -4731,7 +4740,7 @@ Toelichting: Eenheid waar een lidstaat rechtsbevoegdheid
           </table>
           <p style="float: right; font-size: small;">[<a href="#contact-appendix-b">#</a>][<a
               href="#appendix-b">back to top</a>]</p>
-          <aside class="example" title="Voorbeeld adres">
+          <aside class="example" title="XML voorbeeld">
             <pre class="highlight"><code>&lt;gmd:MD_Metadata&gt;
   &lt;gmd:contact&gt;
     &lt;gmd:CI_ResponsibleParty&gt;
@@ -4811,7 +4820,7 @@ Toelichting: Eenheid waar een lidstaat rechtsbevoegdheid
           </table>
           <p style="float: right; font-size: small;">[<a href="#contact-appendix-b">#</a>][<a
               href="#appendix-b">back to top</a>]</p>
-          <aside class="example" title="Voorbeeld URL verantwoordelijke organisatie">
+          <aside class="example" title="XML voorbeeld">
             <pre class="highlight"><code>&lt;gmd:MD_Metadata&gt;
   &lt;gmd:contact&gt;
     &lt;gmd:CI_ResponsibleParty&gt;
@@ -4873,7 +4882,7 @@ Toelichting: Eenheid waar een lidstaat rechtsbevoegdheid
           </table>
           <p style="float: right; font-size: small;">[<a href="#contact-appendix-b">#</a>][<a
               href="#appendix-b">back to top</a>]</p>
-          <aside class="example" title="Voorbeeld rol verantwoordelijke organisatie">
+          <aside class="example" title="XML voorbeeld">
             <pre class="highlight"><code>&lt;gmd:MD_Metadata&gt;
   &lt;gmd:contact&gt;
     &lt;gmd:CI_ResponsibleParty&gt;
@@ -4929,7 +4938,7 @@ Toelichting: Eenheid waar een lidstaat rechtsbevoegdheid
         </table>
         <p style="float: right; font-size: small;">[<a href="#appendix-b">back
             to top</a>]</p>
-        <aside class="example" title="Voorbeeld datum metadata">
+        <aside class="example" title="XML voorbeeld">
           <pre><code>&lt;gmd:MD_Metadata&gt;
   &lt;gmd:dateStamp&gt;
     &lt;gco:Date&gt;2005-03-27&lt;/gco:Date&gt;
@@ -4980,7 +4989,7 @@ Toelichting: Eenheid waar een lidstaat rechtsbevoegdheid
         </table>
         <p style="float: right; font-size: small;">[<a href="#appendix-b">back
             to top</a>]</p>
-        <aside class="example" title="Voorbeeld metadata standaard">
+        <aside class="example" title="XML voorbeeld">
           <pre><code>&lt;gmd:MD_Metadata&gt;
   &lt;gmd:metadataStandardName&gt;
     &lt;gco:CharacterString&gt;ISO 19115&lt;/gco:CharacterString&gt;
@@ -5031,7 +5040,7 @@ Toelichting: Eenheid waar een lidstaat rechtsbevoegdheid
         </table>
         <p style="float: right; font-size: small;">[<a href="#appendix-b">back
             to top</a>]</p>
-        <aside class="example" title="Voorbeeld metadata versie">
+        <aside class="example" title="XML voorbeeld">
           <pre><code>&lt;gmd:MD_Metadata&gt;
   &lt;gmd:metadataStandardVersion&gt;
     &lt;gco:CharacterString&gt;Nederlandse metadata profiel op ISO 19115 voor geografie 1.3&lt;/gco:CharacterString&gt;
@@ -5159,7 +5168,7 @@ Toelichting: Eenheid waar een lidstaat rechtsbevoegdheid
               </tr>
             </tbody>
           </table>
-          <aside class="example" title="Voorbeeld code referentiesysteem">
+          <aside class="example" title="XML voorbeeld">
             <pre><code>
 &lt;gmd:referenceSystemInfo&gt;
   &lt;gmd:MD_ReferenceSystem&gt;
@@ -5321,7 +5330,7 @@ Toelichting: Eenheid waar een lidstaat rechtsbevoegdheid
           </table>
           <p style="float: right; font-size: small;">[<a href="#role-name:-referencesysteminfo-appendix-b">#</a>][<a
               href="#appendix-b">back to top</a>]</p>
-          <aside class="example" title="Voorbeeld code verticaal referentiesysteem">
+          <aside class="example" title="XML voorbeeld">
             <pre><code>
 &lt;gmd:referenceSystemInfo&gt;
   &lt;gmd:MD_ReferenceSystem&gt;
@@ -5711,7 +5720,7 @@ Toelichting: Eenheid waar een lidstaat rechtsbevoegdheid
           </table>
           <p style="float: right; font-size: small;">[<a href="#role-name:-identificatieinfo-appendix-b">#</a>][<a
               href="#appendix-b">back to top</a>]</p>
-          <aside class="example" title="Voorbeeld serienaam/-nummer">
+          <aside class="example" title="XML voorbeeld">
             <pre><code>&lt;gmd:MD_Metadata&gt;
   &lt;gmd:identificationInfo&gt;
     &lt;gmd:MD_DataIdentification&gt;
@@ -5793,7 +5802,7 @@ Toelichting: Eenheid waar een lidstaat rechtsbevoegdheid
           </table>
           <p style="float: right; font-size: small;">[<a href="#role-name:-identificatieinfo-appendix-b">#</a>][<a
               href="#appendix-b">back to top</a>]</p>
-          <aside class="example" title="Voorbeeld samenvatting">
+          <aside class="example" title="XML voorbeeld">
             <pre><code>&lt;gmd:MD_Metadata&gt;
   &lt;gmd:identificationInfo&gt;
     &lt;gmd:MD_DataIdentification&gt;
@@ -7465,7 +7474,7 @@ Toelichting: Eenheid waar een lidstaat rechtsbevoegdheid
           </table>
           <p style="float: right; font-size: small;">[<a href="#role-name:-identificatieinfo-appendix-b">#</a>][<a
               href="#appendix-b">back to top</a>]</p>
-          <aside class="example" title="Voorbeeld resolutie">
+          <aside class="example" title="XML voorbeeld">
             <pre><code>&lt;gmd:spatialResolution&gt;
   &lt;gmd:MD_Resolution&gt;
     &lt;gmd:distance&gt;
@@ -7949,7 +7958,7 @@ Toelichting: Eenheid waar een lidstaat rechtsbevoegdheid
               </tr>
             </tbody>
           </table>
-          <aside class="example" title="Voorbeeld temporele dekking">
+          <aside class="example" title="XML voorbeeld">
             <pre class="highlight">              <code>
 &lt;gmd:extent&gt;
   &lt;gml:TimePeriod gml:id="IDd2febbb4-e66f-4ac8-ba76-8fd9bc7c8be6"&gt;
