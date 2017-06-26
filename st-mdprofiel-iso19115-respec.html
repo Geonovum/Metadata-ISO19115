@@ -471,7 +471,8 @@ http://schemas.opengis.net/csw/2.0.2/profiles/apiso/1.0.0/apiso.xsd</a></td>
               <td>Ruimtelijk schema</td>
               <td>C</td>
               <td>Ruimtelijk schema</td>
-              <td>Dit element is conditioneel. Dit element is verplicht voor INSPIRE.</td>
+              <td>Dit element is conditioneel. Dit element is verplicht voor
+                INSPIRE.</td>
             </tr>
             <tr>
               <td>Karakterset van de bron</td>
@@ -1032,9 +1033,11 @@ xlink:href="http://domein/id/record/ee543323-0fe4-4353"&gt;
         </section>
         <section id="ruimtelijk-schema-van-de-bron">
           <h4>Ruimtelijk schema van de bron</h4>
-          <p style="text-align:left"><em>identificationInfo[1]/*/spatialRepresentationType/MD_SpatialRepresentationTypeCode</em><span style="float:right">[<a
-                data-cite="ISO19139">ISO 19139:2007</a>]</span></p>
-          <p>Dit element is conditioneel. Dit element is verplicht voor INSPIRE. Er dient een waarde uit de codelist MD_SpatialRepresentationTypeCode gebruikt te worden.</p>
+          <p style="text-align:left"><em>identificationInfo[1]/*/spatialRepresentationType/MD_SpatialRepresentationTypeCode</em><span
+              style="float:right">[<a data-cite="ISO19139">ISO 19139:2007</a>]</span></p>
+          <p>Dit element is conditioneel. Dit element is verplicht voor INSPIRE.
+            Er dient een waarde uit de codelist MD_SpatialRepresentationTypeCode
+            gebruikt te worden.</p>
           <table>
             <colgroup><col style="width: 25%"><col style="width: 75%"></colgroup>
             <tbody>
@@ -1045,7 +1048,7 @@ xlink:href="http://domein/id/record/ee543323-0fe4-4353"&gt;
               <tr>
                 <td>B.5.10</td>
                 <td>
-                 <pre><code>
+                  <pre><code>
                   &lt;gmd:MD_SpatialRepresentationTypeCode codeList="http://www.isotc211.org/2005/resources/codeList.xml#MD_SpatialRepresentationTypeCode" codeListValue="vector"&gt;
                     vector&lt;/gmd:MD_SpatialRepresentationTypeCode&gt;</code></pre>
                 </td>
@@ -1480,7 +1483,8 @@ xlink:href="http://domein/id/record/ee543323-0fe4-4353"&gt;
               style="float:right">[<a data-cite="ISO19139">ISO 19139:2007</a>]</span></p>
           <p>Dit element bevat de Alfanumerieke waarde die het gebruikte
             referentiesysteem van de dataset aangeeft. EPSG geeft deze code’s
-            uit. Voor het RD wordt de code 28992 gehanteerd.</p>
+            uit. Voor het RD wordt de code 28992 gehanteerd. Het
+            referentiesysteem wordt met een URI die ook de code bevat opgenomen.</p>
           <table>
             <colgroup><col style="width: 25%"><col style="width: 75%"></colgroup>
             <tbody>
@@ -1490,7 +1494,7 @@ xlink:href="http://domein/id/record/ee543323-0fe4-4353"&gt;
               </tr>
               <tr>
                 <td>String</td>
-                <td>28992</td>
+                <td>http://www.opengis.net/def/crs/EPSG/0/28992</td>
               </tr>
             </tbody>
           </table>
@@ -1499,8 +1503,8 @@ xlink:href="http://domein/id/record/ee543323-0fe4-4353"&gt;
               verticaal ruimtelijk referentiesysteem in de metadata worden
               opgeslagen, bijvoorbeeld NAP. Deze gegevens kan men in het
               optionele element Code verticaal referentiesysteem plaatsen.</p>
-            <p>De EPSG codes kunnen gevonden worden op de website <a href="http://http://www.opengis.net/def/crs/">http://www.opengis.net/def/crs/</a>.
-            </p>
+            <p>De EPSG codes kunnen gevonden worden op de website <a href="http://http://www.opengis.net/def/crs/0">http://www.opengis.net/def/crs/0</a>
+              . </p>
           </div>
         </section>
         <section id="temporeel-referentiesysteem">
@@ -3526,16 +3530,8 @@ Toelichting: Eenheid waar een lidstaat rechtsbevoegdheid
                 <td>Triangulated irregular network.</td>
               </tr>
               <!--<tr>
-                <td>stereoModel *</td>
-                <td>stereoModel</td>
-                <td>3D overzicht wordt gevormd door intersectie van twee
-                  kernstralen van twee overlappende beelden.</td>
-              </tr>
-              <tr>
-                <td>Video *</td>
-                <td>video</td>
-                <td>Scène uit een video opname.</td>
-              </tr>-->
+                <td>stereoModel *</td>                <td>stereoModel</td>                <td>3D overzicht wordt gevormd door intersectie van twee                  kernstralen van twee overlappende beelden.</td>              </tr>              <tr>                <td>Video *</td>                <td>video</td>
+                <td>Scène uit een video opname.</td>              </tr>-->
             </tbody>
           </table>
           * Deze waarden zijn niet toegestaan in de context van INSPIRE metadata
