@@ -870,10 +870,10 @@ http://schemas.opengis.net/csw/2.0.2/profiles/apiso/1.0.0/apiso.xsd</a></td>
             voorkomen, bijvoorbeeld als link naar een direct downloadbaar
             bestand, een data loket, WMS en WFS.</p>
           <p>Het bevat een valide URL voor online toegang tot een direct
-            downloadbaar bestand, een service, een link naar een webapplicatie
-            waarmee de data direct getoond word&nbsp; of een webpagina die
+            downloadbaar bestand (endPoint) of een link naar een webapplicatie
+            waarmee de data direct getoond wordt of een webpagina die
             aanvullende instructies geeft over hoe de dataset te ontsloten kan
-            worden. Voor een service dient de URL gelijk te zijn aan de
+            worden (accessPoint). Voor een service dient de URL gelijk te zijn aan de
             resourcelocator uit het Nederlands metadata profiel op ISO19119 voor
             services.</p>
           <table>
@@ -885,7 +885,7 @@ http://schemas.opengis.net/csw/2.0.2/profiles/apiso/1.0.0/apiso.xsd</a></td>
               </tr>
               <tr>
                 <td>URL</td>
-                <td>www.dinoloket.nl</td>
+                <td>http://www.dinoloket.nl</td>
               </tr>
             </tbody>
           </table>
@@ -898,7 +898,7 @@ http://schemas.opengis.net/csw/2.0.2/profiles/apiso/1.0.0/apiso.xsd</a></td>
               </tr>
               <tr>
                 <td>URL</td>
-                <td>http://wms.nitg.tno.nl/OneGeology?</td>
+                <td>https://geodata.nationaalgeoregister.nl/inspire/cp/ows?request=getcapabilities&amp;service=wfs&amp;version=2.0.0</td>
               </tr>
             </tbody>
           </table>
@@ -907,11 +907,9 @@ http://schemas.opengis.net/csw/2.0.2/profiles/apiso/1.0.0/apiso.xsd</a></td>
           <h4>Description</h4>
           <p style="text-align:left"><em>distributionInfo/*/transferOptions/*/onLine/*/description</em><span
               style="float:right">[<a data-cite="ISO19139">ISO 19139:2007</a>]</span></p>
-          <p>Dit element is conditioneel. Het is verplicht als er een URL is
+          <p>Dit element is conditioneel. Het is verplicht als er een URL van het type 'endPoint' is
             opgegeven. Het bevat een verwijzing naar een waarde uit de <a href="http://inspire.ec.europa.eu/metadata-codelist/OnLineDescriptionCode">codelijst OnLineDescriptionCode</a> die het type URL beschrijft.</p>
-
-              <p>Indien verwezen wordt naar een URL die rechtstreeks een dataset in een specifiek mediatype oplevert dient de waarde endPoint gebruikt te worden. In andere gevallen de waarde accessPoint.</p> 
-
+          <p>Indien verwezen wordt naar een URL die rechtstreeks een dataset in een specifiek mediatype oplevert dient de waarde endPoint gebruikt te worden. In andere gevallen de waarde accessPoint. Een accessPoint betreft een document (capabilities) hoe een data service aangeroepen kan worden, dan wel een applicatie van waaruit de dataset gedownload kan worden.</p> 
           <table>
             <colgroup><col style="width: 25%"><col style="width: 75%"></colgroup>
             <tbody>
@@ -943,12 +941,12 @@ http://schemas.opengis.net/csw/2.0.2/profiles/apiso/1.0.0/apiso.xsd</a></td>
                 <th>Voorbeeld</th>
               </tr>
               <tr>
-                <td>protocol</td>
+                <td>protocol (endPpint)</td>
                 <td><code>&lt;gmx:Anchor xlink:href="https://www.iana.org/assignments/media-types/application/gml+xml"&gt;
                 GML&lt;/gmx:Anchor&gt;</code></td>
               </tr>
               <tr>
-                <td>protocol</td>
+                <td>protocol (accessPoint</td>
                 <td><code>&lt;gmx:Anchor xlink:href="http://standaarden.geonovum.nl/servicetype/OGC:WMS"&gt;
                 OGC:WMS&lt;/gmx:Anchor&gt;</code></td>
               </tr>
