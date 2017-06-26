@@ -569,11 +569,6 @@ http://schemas.opengis.net/csw/2.0.2/profiles/apiso/1.0.0/apiso.xsd</a></td>
               <td>&nbsp;</td>
             </tr>
             <tr>
-              <td>Verantwoordelijke organisatie voor namespace referentiesysteem</td>
-              <td>V</td>
-              <td>&nbsp;</td>
-            </tr>
-            <tr>
               <td>Temporeel referentiesysteem&nbsp;</td>
               <td>C</td>
               <td>Verplicht als de dataset temporele informatie bevat die niet
@@ -644,12 +639,15 @@ http://schemas.opengis.net/csw/2.0.2/profiles/apiso/1.0.0/apiso.xsd</a></td>
             </tr>
             <tr>
               <td>(Juridische) toegangsrestricties</td>
-              <td rowspan="2">V</td>
-              <td rowspan="2">Het is verplicht om juridische toegangsrestricties
-                op te nemen.</td>
+              <td>V</td>
+              <td><br>
+              </td>
             </tr>
             <tr>
               <td>Overige beperkingen</td>
+              <td>C</td>
+              <td>Het is verplicht om Overige beperkingen op te nemen als
+                juridische toegangsrestricties de waarde anders hebben.</td>
             </tr>
             <tr>
               <td>Gebruiksbeperkingen</td>
@@ -1768,8 +1766,13 @@ xlink:href="http://domein/id/record/ee543323-0fe4-4353"&gt;
           <h4>Juridische toegangsrestricties</h4>
           <p style="text-align:left"><em>identificationInfo[1]/*/resourceConstraints/*/accessConstraints</em><span
               style="float:right">[<a data-cite="ISO19139">ISO 19139:2007</a>]</span></p>
-          <p>Het is verplicht juridische toegangsrestricties op te nemen. Dit
-            element bevat toegangseisen die er zorg voor dragen dat privacy of
+          <p>Het is verplicht juridische toegangsrestricties op te nemen. Het is
+            verplicht een waarde op te nemen voor beperkingen op publieke
+            toegang in één gmd:resourceConstraints/gmd:MD_LegalConstraints
+            element. Daarnaast is het verplicht voorwaarden voor toegang en
+            gebruik op te nemen in één ander
+            gmd:resourceConstraints/gmd:MD_LegalConstraints element. Dit element
+            bevat toegangseisen die er zorg voor dragen dat privacy of
             intellectueel eigendom gewaarborgd zijn en elke andere speciale
             beperkingen voor het verkrijgen van de metadata of data. De waardes
             komen uit <a href="#codelijst-b524">codelijst B.5.24 van ISO19115</a>.</p>
@@ -1782,7 +1785,7 @@ xlink:href="http://domein/id/record/ee543323-0fe4-4353"&gt;
               </tr>
               <tr>
                 <td>B.5.24</td>
-                <td>intellectualPropertyRights</td>
+                <td>otherRestrictions</td>
               </tr>
             </tbody>
           </table>
@@ -1791,11 +1794,28 @@ xlink:href="http://domein/id/record/ee543323-0fe4-4353"&gt;
           <h4>Overige beperkingen</h4>
           <p style="text-align:left"><em>identificationInfo[1]/*/resourceConstraints/*/otherConstraints</em><span
               style="float:right">[<a data-cite="ISO19139">ISO 19139:2007</a>]</span></p>
-          <p>Als er geen beperkingen zijn dient men dat bij overige beperkingen
-            aan te geven. Als er een waarde in dit element wordt ingevuld, dient
-            bij het element juridische toegangsrestricties de waarde "anders"
-            gekozen te worden. Als er geen beperkingen zijn dient men de tekst
-            “geen beperkingen” op te nemen.</p>
+          <p>Dit element is conditioneel, als het element juridische
+            toegangsrestricties de waarde otherRestrictions bevat dient het te
+            worden opgenomen.&nbsp; </p>
+          <p>Hierin wordt&nbsp;in één&nbsp;
+            gmd:resourceConstraints/gmd:MD_LegalConstraints element&nbsp; voor
+            de voorwaarden voor toegang en gebruik&nbsp; een link naar de
+            licentie opgenomen.&nbsp; Als het een INSPIRE dataset is en er geen
+            beperkingen zijn of deze niet bekend zijn wordt er daarnaast een
+            waarde uit de INSPIRE code lijst ConditionsApplyingToAccessAndUse
+            voor "noConditionsApply" of "conditionsUnknown" opgenomen in een
+            tweede otherConstraints element binnen hetzelfde&nbsp;
+            md:resourceConstraints/gmd:MD_LegalConstraints element.&nbsp; Het
+            bevat, indien van toepassing ook prijsinformatie voor het gebruik
+            van de dataset.&nbsp; </p>
+          <p>Daarnaast wordt voor beperkingen op publieke toegang in één ander
+            gmd:resourceConstraints/gmd:MD_LegalConstraints een waarde opgenomen
+            uit de codelijst LimitationsOnPublicAccess. Als er geen beperkingen
+            zijn dient men dat ook aan te geven, met de waarde "noLimitations".
+            <br>
+          </p>
+          <p><br>
+          </p>
           <table>
             <colgroup><col style="width: 25%"><col style="width: 75%"></colgroup>
             <tbody>
@@ -1815,8 +1835,7 @@ xlink:href="http://domein/id/record/ee543323-0fe4-4353"&gt;
           <p style="text-align:left"><em>identificationInfo[1]/*/resourceConstraints/*/useLimitation</em><span
               style="float:right">[<a data-cite="ISO19139">ISO 19139:2007</a>]</span></p>
           <p>Dit element bevat toepassingen waarvoor de dataset niet geschikt
-            is. Voor INSPIRE, bevat het indien van toepassing ook
-            prijsinformatie voor het gebruik van de dataset.</p>
+            is. </p>
           <table>
             <colgroup><col style="width: 25%"><col style="width: 75%"></colgroup>
             <tbody>
