@@ -903,16 +903,38 @@ http://schemas.opengis.net/csw/2.0.2/profiles/apiso/1.0.0/apiso.xsd</a></td>
             </tbody>
           </table>
         </section>
+        <section id="description">
+          <h4>Description</h4>
+          <p style="text-align:left"><em>distributionInfo/*/transferOptions/*/onLine/*/description</em><span
+              style="float:right">[<a data-cite="ISO19139">ISO 19139:2007</a>]</span></p>
+          <p>Dit element is conditioneel. Het is verplicht als er een URL is
+            opgegeven. Het bevat een verwijzing naar een waarde uit de <a href="http://inspire.ec.europa.eu/metadata-codelist/OnLineDescriptionCode">codelijst OnLineDescriptionCode</a> die het type URL beschrijft.</p>
+
+              <p>Indien verwezen wordt naar een URL die rechtstreeks een dataset in een specifiek mediatype oplevert dient de waarde endPoint gebruikt te worden. In andere gevallen de waarde accessPoint.</p> 
+
+          <table>
+            <colgroup><col style="width: 25%"><col style="width: 75%"></colgroup>
+            <tbody>
+              <tr>
+                <th>Data type of Domein</th>
+                <th>Voorbeeld</th>
+              </tr>
+              <tr>
+                <td>OnLineDescriptionCode</td>
+                <td><code>&lt;gmx:Anchor xlink:href="http://inspire.ec.europa.eu/metadata-codelist/OnLineDescriptionCode/accessPoint"&gt;accessPoint&lt;/gmx:Anchor&gt;</code></td>
+              </tr>
+            </tbody>
+          </table>
+        </section>
         <section id="protocol">
           <h4>Protocol</h4>
           <p style="text-align:left"><em>distributionInfo/*/transferOptions/*/onLine/*/protocol</em><span
               style="float:right">[<a data-cite="ISO19139">ISO 19139:2007</a>]</span></p>
           <p>Dit element is conditioneel. Het is verplicht als er een URL is
-            opgegeven. Bijvoorbeeld naar een zip bestand, WMS of WFS.</p>
-          <p>Het bevat het protocol voor het afhandelen van de URL. De <a href="#codelijst-sv-servicetype">codelijst
-              SV_ServiceType</a> wordt hier gehanteerd. De codelijst is
-            uitgebreid met INSPIRE Atom. Onder download vallen bijvoorbeeld ZIP
-            documenten van shapefiles.</p>
+            opgegeven. Bijvoorbeeld naar een zip bestand, WMS of WFS. Indien  de URL een 'endPoint' betreft dan dient een waarde 
+            geselecteerd te worden uit de <a href="http://inspire.ec.europa.eu/media-types">codelijst media-types</a>. 
+            Indien het een 'accessPoint' betreft, dient een waarde geselecteerd te worden uit de <a href="#codelijst-sv-servicetype">codelijst
+              SV_ServiceType</a>.</p>
           <table>
             <colgroup><col style="width: 25%"><col style="width: 75%"></colgroup>
             <tbody>
@@ -921,37 +943,31 @@ http://schemas.opengis.net/csw/2.0.2/profiles/apiso/1.0.0/apiso.xsd</a></td>
                 <th>Voorbeeld</th>
               </tr>
               <tr>
-                <td>SV_ServiceType</td>
-                <td>website</td>
+                <td>protocol</td>
+                <td><code>&lt;gmx:Anchor xlink:href="https://www.iana.org/assignments/media-types/application/gml+xml"&gt;
+                GML&lt;/gmx:Anchor&gt;</code></td>
+              </tr>
+              <tr>
+                <td>protocol</td>
+                <td><code>&lt;gmx:Anchor xlink:href="http://standaarden.geonovum.nl/servicetype/OGC:WMS"&gt;
+                OGC:WMS&lt;/gmx:Anchor&gt;</code></td>
               </tr>
             </tbody>
           </table>
-          <table>
-            <colgroup><col style="width: 25%"><col style="width: 75%"></colgroup>
-            <tbody>
-              <tr>
-                <th>Data type of Domein</th>
-                <th>Voorbeeld</th>
-              </tr>
-              <tr>
-                <td>SV_ServiceType</td>
-                <td>OGC:WMS</td>
-              </tr>
-            </tbody>
-          </table>
-          <div class="advisement "><i>Toelichting</i>
+          <div class="advisement "><i><br>
+              Toelichting</i>
             <p>Het element Protocol, is van belang voor het automatisch kunnen
               downloaden van de dataset, en/of het benaderen van de service die
               deze dataset representeert. Het maakt gebruik van een codelijst
-              die het Nederlandse metadata profiel op ISO19119 wordt vastgelegd,
-              maar het element is een ISO19115 element. Door gebruik te maken
-              van deze codelijst is de invulling van het element software
-              onafhankelijk. Het metadataelement Naam legt de relatie naar de
-              layer in de service die de dataset representeert, door middel van
-              de naam van de layer of de naam van het featuretype. In deze
-              elementen wordt maar één maal per servicetype de relatie gelegd,
-              waarmee de dataset als service gerepresenteerd wordt, zodat het
-              mogelijk wordt de dataset via een service te benaderen.</p>
+              die in het Nederlandse metadata profiel op ISO19119 wordt
+              vastgelegd, maar het element is een ISO19115 element. Door gebruik
+              te maken van deze codelijst is de invulling van het element
+              software onafhankelijk. Het metadata element Naam legt de relatie
+              naar de layer in de service die de dataset representeert, door
+              middel van de naam van de layer of de naam van het featuretype. In
+              deze elementen wordt maar één maal per servicetype de relatie
+              gelegd, waarmee de dataset als service gerepresenteerd wordt,
+              zodat het mogelijk wordt de dataset via een service te benaderen.</p>
           </div>
         </section>
         <section id="naam">
@@ -998,13 +1014,8 @@ http://schemas.opengis.net/csw/2.0.2/profiles/apiso/1.0.0/apiso.xsd</a></td>
               </tr>
               <tr>
                 <td>Anchor</td>
-                <td>
-                  <aside class="example" title="XML voorbeeld">
-                    <pre><code>
-&lt;Anchor
-xlink:href="http://domein/id/record/ee543323-0fe4-4353"&gt;
-  ee543323-0fe4-4353-9161-eda61ff26c07&lt;/Anchor&gt;</code></pre>
-                  </aside>
+                <td><code>&lt;Anchor xlink:href="http://domein/id/record/ee543323-0fe4-4353"&gt;
+  ee543323-0fe4-4353-9161-eda61ff26c07&lt;/Anchor&gt;</code>
                 </td>
               </tr>
             </tbody>
@@ -2132,7 +2143,7 @@ beperkingen&lt;/gmx:anchor&gt;</code></pre>
               </tr>
               <tr>
                 <td>String</td>
-                <td>Nederlandse metadata profiel op ISO 19115 voor geografie 1.3</td>
+                <td>Nederlandse metadata profiel op ISO 19115 voor geografie 2.0</td>
               </tr>
             </tbody>
           </table>
@@ -17685,6 +17696,6 @@ Toelichting: Eenheid waar een lidstaat rechtsbevoegdheid
             src="st-mdprofiel-iso19115/image005.svg" alt="image005"></a> <figcaption>Koppeling
           vanuit metadata met data en service.</figcaption> </figure>
     </section>
-    <script class="remove" src="st-mdprofiel-iso19115/localscript.js"></script>
+    <script class="remove" src="st-mdprofiel-iso19115/localscript.js"></script>  
   </body>
 </html>
