@@ -51,17 +51,9 @@
           <tr>
             <td>2017</td>
             <td>2.0.0</td>
-            <td>Nederlands proefiel, aangepast op<br>
-              <ul>
-                <br>
-                <li>INSPIRE, 2017, Technical Guidance for the implementation of
-                  INSPIRE dataset and service metadata based on ISO/TS
-                  19139:2007<br>
-                </li>
-                <li>Diverse wijzigingen met betrekking tot identificatie van
-                  objecten (introductie gmx:anchor)</li>
-              </ul>
-            </td>
+            <td>Diverse wijzigingen met betrekking tot identificatie van
+              objecten (introductie gmx:anchor) Speciale aandacht voor Feature
+              catalog metadata.</td>
           </tr>
           <tr>
             <td>2013</td>
@@ -265,7 +257,7 @@
           <tr>
             <td>GCO</td>
             <td>0.1</td>
-            <td><a href="http://schemas.opengis.net/iso/19139/20060504/gco/gco.xsd">
+            <td><a href="http://schemas.opengis.net/iso/19139/20060504/gml/gml.xsd">
                 /gco/gco.xsd</a></td>
           </tr>
           <tr>
@@ -289,8 +281,7 @@ http://schemas.opengis.net/csw/2.0.2/profiles/apiso/1.0.0/apiso.xsd</a></td>
         </tbody>
       </table>
       <p><em>GMD, GCO, GML</em>: Dit zijn de XML encoding schema’s voor ISO
-        19115:2003. De namespace http://www.isotc211.org/2005/gmd wordt
-        gebruikt. In de metadata dienen ook de codelijsten die op deze locatie
+        19115:2003. In de metadata dienen ook de codelijsten die op deze locatie
         te vinden zijn gehanteerd te worden.</p>
       <p><em>GMX</em>: Een uitbreiding op het basis ISO 19115:2003 model. Het
         biedt de mogelijkheid een gco:CharacterString te vervangen voor
@@ -305,10 +296,10 @@ http://schemas.opengis.net/csw/2.0.2/profiles/apiso/1.0.0/apiso.xsd</a></td>
       <p><em>APISO</em>: Basis schema van het ISO Application Profile voor de
         OGC Catalogue Service 2.0.2. Dit schema is verbonden met ISO 19139.</p>
       <p>Metadata, zoals beschreven in die profiel, zal ge-encodeerd worden in
-        XML formaat valide volgens de bovenstaande schema's. </p>
-      <p>Er mag ook verwezen worden naar een (op het web ontsloten) kopie van
-        deze schema's. Daarbij mag het gedupliceerde GMD-schema gewijzigd worden
-        om het GMX schema te importeren.</p>
+        XML formaat valide volgens de bovenstaande schema's. Er mag ook verwezen
+        worden naar een (op het web ontsloten) kopie van deze schema's. Daarbij
+        mag het gedupliceerde GMD-schema gewijzigd worden om het GMX schema te
+        importeren.</p>
       <aside class="example" title="XML voorbeeld">
         <pre><code> 
 &lt;gmd:MD_Metadata
@@ -317,10 +308,9 @@ http://schemas.opengis.net/csw/2.0.2/profiles/apiso/1.0.0/apiso.xsd</a></td>
       http://schemas.opengis.net/iso/19139/20060504/gmd/gmd.xsd
       http://www.isotc211.org/2005/gmx
       http://schemas.opengis.net/iso/19139/20060504/gmx/gmx.xsd"
-    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"&gt; <br><br></code></pre>
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"&gt; </code></pre>
       </aside>
-              De metadata voor een INSPIRE data set, data set series of service wordt ge-encoded met exact een gmd:MD_Metadata element.<br>Als er meer dan één gmd:MD_DataIdentification element wordt opgenomen, zal deze&nbsp; een unieke identifier moeten bevatten van het element zelf,&nbsp; zodat daar rechtstreeks naar verwezen kan worden vanuit de service metadata voor de coupled resource. Deze identifier is een waarde van de attribuut id van het&nbsp; gmd:MD_DataIdentification element.<br><br
-<="" section="">
+    </section>
     <section id="termen-en-definities">
       <h2>Termen en definities</h2>
       <p>De volgende termen en definities zijn van toepassing op het onderwerp
@@ -382,7 +372,7 @@ http://schemas.opengis.net/csw/2.0.2/profiles/apiso/1.0.0/apiso.xsd</a></td>
         <dt>Namespace</dt>
         <dd>Verzameling van namen, geïdentificeerd door een URI-referentie, die
           gebruikt worden in XML-documenten als elementnamen en atribuutnamen [<a
-data-cite="ISO19136">ISO 19136:2007</a>].</dd>
+            data-cite="ISO19136">ISO 19136:2007</a>].</dd>
         <dt>Optioneel element</dt>
         <dd>Element wat gevuld mag zijn met een waarde.</dd>
         <dt>Profiel</dt>
@@ -412,7 +402,7 @@ data-cite="ISO19136">ISO 19136:2007</a>].</dd>
           conditie verplichte elementen. Bij elk conditioneel element is de
           conditie benoemd. De in <a href="#appendix-d">Appendix D</a>
           opgenomen tabel “verantwoording metadata elementen” is gebaseerd op <a
-data-cite="INSPIRE-19115-19119"><em>INSPIRE Metadata Implementing
+            data-cite="INSPIRE-19115-19119"><em>INSPIRE Metadata Implementing
               Rules: Technical Guidelines based on EN ISO 19115 and EN ISO
               19119, v1.2</em></a>. Hiermee is de relatie gelegd tussen dit
           document en INSPIRE. </p>
@@ -472,7 +462,6 @@ data-cite="INSPIRE-19115-19119"><em>INSPIRE Metadata Implementing
               <td>Dit element is verplicht. Het gebuik van een URI is
                 conditioneel. Het is verplicht voor INSPIRE datasets. </td>
             </tr>
-            
             <tr>
               <td>Taal van de bron</td>
               <td>C</td>
@@ -733,7 +722,7 @@ data-cite="INSPIRE-19115-19119"><em>INSPIRE Metadata Implementing
         <section id="titel-van-de-bron">
           <h4>Titel van de bron</h4>
           <p style="text-align:left"><em>identificationInfo[1]/*/citation/*/title</em><span
-style="float:right">[<a data-cite="ISO19139">ISO 19139:2007</a>]</span></p>
+              style="float:right">[<a data-cite="ISO19139">ISO 19139:2007</a>]</span></p>
           <p>Dit element dient om de naam van de dataset in vast te leggen.</p>
           <table>
             <colgroup><col style="width: 25%"><col style="width: 75%"></colgroup>
@@ -752,7 +741,7 @@ style="float:right">[<a data-cite="ISO19139">ISO 19139:2007</a>]</span></p>
         <section id="samenvatting">
           <h4>Samenvatting</h4>
           <p style="text-align:left"><em>identificationInfo[1]/*/abstract</em><span
-style="float:right">[<a data-cite="ISO19139">ISO 19139:2007</a>]</span></p>
+              style="float:right">[<a data-cite="ISO19139">ISO 19139:2007</a>]</span></p>
           <p>Dit element bevat een beschrijving van de inhoud van de dataset,
             probeer in deze samenvatting&nbsp; publieks vriendelijk informatie
             te geven over de inhoud van de dataset.</p>
@@ -779,7 +768,7 @@ style="float:right">[<a data-cite="ISO19139">ISO 19139:2007</a>]</span></p>
         <section id="status">
           <h4>Status</h4>
           <p style="text-align:left"><em>identificationInfo[1]/*/status</em><span
-style="float:right">[<a data-cite="ISO19139">ISO 19139:2007</a>]</span></p>
+              style="float:right">[<a data-cite="ISO19139">ISO 19139:2007</a>]</span></p>
           <p>Dit element is opgenomen in de Nederlandse kernset, omdat de status
             van de dataset als zoekcriterium kan dienen en een indirecte
             kwaliteitseigenschap weergeeft. De waarden komen uit <a href="#codelijst-b523">codelijst
@@ -801,7 +790,7 @@ style="float:right">[<a data-cite="ISO19139">ISO 19139:2007</a>]</span></p>
         <section id="hiërarchieniveau">
           <h4>Hiërarchieniveau</h4>
           <p style="text-align:left"><em>hierarchyLevel</em><span style="float:right">[<a
-data-cite="ISO19139">ISO 19139:2007</a>]</span></p>
+                data-cite="ISO19139">ISO 19139:2007</a>]</span></p>
           <p>Het element geeft aan waarop de metadata betrekking heeft, de
             dataset of dataset serie. Voor de waarden geldt de <a href="#codelijst-b525">codelijst
               B.5.25 MD_ScopeCode</a> uit ISO19115. </p>
@@ -818,8 +807,7 @@ data-cite="ISO19139">ISO 19139:2007</a>]</span></p>
               </tr>
             </tbody>
           </table>
-          <div class="advisement"><i><br>
-              Toelichting</i>
+          <div class="advisement"><i>Toelichting</i>
             <p>De kernset van het Nederlands metadata profiel voorgeografie
               geldt niet alleen voor geografische datasets, maar ook voor
               datasetseries. Volgens ISO 19115 is een dataset serie een
@@ -847,13 +835,13 @@ data-cite="ISO19139">ISO 19139:2007</a>]</span></p>
               aard.</p>
           </div>
           <figure id="image002"> <a href="st-mdprofiel-iso19115/image002.svg"><img
-src="st-mdprofiel-iso19115/image002.svg" alt="image002"></a> <figcaption>Gerelateerde
+                src="st-mdprofiel-iso19115/image002.svg" alt="image002"></a> <figcaption>Gerelateerde
               datasets.</figcaption> </figure>
         </section>
         <section id="hiërarchieniveaunaam">
           <h4>Hiërarchieniveau naam</h4>
           <p style="text-align:left"><em>hierarchyLevelName</em><span style="float:right">[<a
-data-cite="ISO19139">ISO 19139:2007</a>]</span></p>
+                data-cite="ISO19139">ISO 19139:2007</a>]</span></p>
           <p>Dit element is conditioneel. Het is verplicht als Hiërarchieniveau
             niet gelijk is aan dataset. Het bevat de naam van het
             hiërarchieniveau waarvoor de metadata is beschreven. Indien het
@@ -875,7 +863,7 @@ data-cite="ISO19139">ISO 19139:2007</a>]</span></p>
         <section id="url">
           <h4>URL</h4>
           <p style="text-align:left"><em>distributionInfo/*/transferOptions/*/onLine/*/linkage</em><span
-style="float:right">[<a data-cite="ISO19139">ISO 19139:2007</a>]</span></p>
+              style="float:right">[<a data-cite="ISO19139">ISO 19139:2007</a>]</span></p>
           <p>Dit element is conditioneel. Het is verplicht indien de ontsluiting
             publiek toegankelijk is en onder de verantwoordelijkheid van de
             beherende organisatie valt. Het element kan meerdere keren
@@ -885,9 +873,16 @@ style="float:right">[<a data-cite="ISO19139">ISO 19139:2007</a>]</span></p>
             downloadbaar bestand (endPoint) of een link naar een webapplicatie
             waarmee de data direct getoond wordt of een webpagina die
             aanvullende instructies geeft over hoe de dataset te ontsloten kan
-            worden (accessPoint). Voor een service dient de URL gelijk te zijn
-            aan de resource locator uit het Nederlands metadata profiel op
-            ISO19119 voor services.</p>
+<<<<<<< HEAD
+            worden.&nbsp; De URL wordt zodanig aangeboden, dat deze altijd
+            direct een resultaat geeft, zonder dat deze bevraagd word. Voor een
+            service dient de URL gelijk te zijn aan de resourcelocator uit het
+            Nederlands metadata profiel op ISO19119 voor services.</p>
+=======
+            worden (accessPoint). Voor een service dient de URL gelijk te zijn aan de
+            resourcelocator uit het Nederlands metadata profiel op ISO19119 voor
+            services.</p>
+>>>>>>> 4f483b33ee4d81fbb25c8661649ce16d94169863
           <table>
             <colgroup><col style="width: 25%"><col style="width: 75%"></colgroup>
             <tbody>
@@ -896,30 +891,69 @@ style="float:right">[<a data-cite="ISO19139">ISO 19139:2007</a>]</span></p>
                 <th>Voorbeeld</th>
               </tr>
               <tr>
-                <td>URL</td>
-                <td>https://monumentenregister.cultureelerfgoed.nl/leeswijzer</td>
+<<<<<<< HEAD
+                <td>URL Accespoint</td>
+                <td>http://services.rce.geovoorziening.nl/rce/wms?&amp;request=GetCapabilities&amp;service=WMS</td>
               </tr>
               <tr>
+                <td>URL Accespoint</td>
+                <td>http://services.rce.geovoorziening.nl/www/download/data/Rijksmonumenten_nl.xml</td>
+=======
+                <td>URL</td>
+                <td>http://www.dinoloket.nl</td>
+>>>>>>> 4f483b33ee4d81fbb25c8661649ce16d94169863
+              </tr>
+            </tbody>
+          </table>
+          <table>
+            <colgroup><col style="width: 25%"><col style="width: 75%"></colgroup>
+            <tbody>
+              <tr>
+                <th>Data type of Domein</th>
+                <th>Voorbeeld</th>
+              </tr>
+              <tr>
+<<<<<<< HEAD
+                <td>URL endPoint</td>
+                <td>http://services.rce.geovoorziening.nl/rce/ows?SERVICE=WMS&amp;&amp;SERVICE=WMS&amp;VERSION=1.3.0
+                  &amp;REQUEST=GetMap&amp;FORMAT=image%2Fpng&amp;TRANSPARENT=true&amp;LAYERS=rce%3AArcheologicalMonuments
+                  &amp;STYLES=Archeologie_in_Nederland&amp;CRS=EPSG%3A28992&amp;WIDTH=1650&amp;HEIGHT=830
+                  &amp;BBOX=-16020.479999999981%2C396426.24%2C161387.52000000002%2C485667.83999999997</td>
+              </tr>
+              <tr>
+                <td>URL endPoint</td>
+                <td>http://services.rce.geovoorziening.nl/www/download/data/Rijksmonumenten_4258_gml.zip</td>
+=======
                 <td>URL</td>
                 <td>https://geodata.nationaalgeoregister.nl/inspire/cp/ows?request=getcapabilities&amp;service=wfs&amp;version=2.0.0</td>
+>>>>>>> 4f483b33ee4d81fbb25c8661649ce16d94169863
               </tr>
+              <tr>
+                <td>URL endPoint</td>
+                <td>http://services.rce.geovoorziening.nl/rce/wfs?request=GetFeature&amp;service=WFS&amp;version=2.0.0&amp;typeName=NationalListedMonuments&amp;outputFormat=json
+                  </td> </tr>
             </tbody>
           </table>
         </section>
         <section id="description">
           <h4>Description</h4>
           <p style="text-align:left"><em>distributionInfo/*/transferOptions/*/onLine/*/description</em><span
-style="float:right">[<a data-cite="ISO19139">ISO 19139:2007</a>]</span></p>
-          <p>Dit element is conditioneel. Het is verplicht als er een URL van
-            het type 'endPoint' is opgegeven. Het bevat een verwijzing naar een
-            waarde uit de <a href="http://inspire.ec.europa.eu/metadata-codelist/OnLineDescriptionCode">codelijst
+              style="float:right">[<a data-cite="ISO19139">ISO 19139:2007</a>]</span></p>
+<<<<<<< HEAD
+          <p>Dit element is conditioneel. Het is verplicht als er een URL is
+            opgegeven. Het bevat een verwijzing naar een waarde uit de <a href="http://inspire.ec.europa.eu/metadata-codelist/OnLineDescriptionCode">codelijst
               OnLineDescriptionCode</a> die het type URL beschrijft.</p>
           <p>Indien verwezen wordt naar een URL die rechtstreeks een dataset in
             een specifiek mediatype oplevert dient de waarde endPoint gebruikt
-            te worden. In andere gevallen de waarde accessPoint. Een accessPoint
-            betreft een document (capabilities) hoe een data service aangeroepen
-            kan worden, dan wel een applicatie van waaruit de dataset gedownload
-            kan worden.</p>
+            te worden. In andere gevallen de waarde accessPoint.</p>
+          <p>De accessPoint URL levert informatie over de service inclusief zijn
+            endPoints. Dat kan bijvoorbeeld een capabilities of WSDL document
+            zijn of een webpagina waar data te downloden is.</p>
+=======
+          <p>Dit element is conditioneel. Het is verplicht als er een URL van het type 'endPoint' is
+            opgegeven. Het bevat een verwijzing naar een waarde uit de <a href="http://inspire.ec.europa.eu/metadata-codelist/OnLineDescriptionCode">codelijst OnLineDescriptionCode</a> die het type URL beschrijft.</p>
+          <p>Indien verwezen wordt naar een URL die rechtstreeks een dataset in een specifiek mediatype oplevert dient de waarde endPoint gebruikt te worden. In andere gevallen de waarde accessPoint. Een accessPoint betreft een document (capabilities) hoe een data service aangeroepen kan worden, dan wel een applicatie van waaruit de dataset gedownload kan worden.</p> 
+>>>>>>> 4f483b33ee4d81fbb25c8661649ce16d94169863
           <table>
             <colgroup><col style="width: 25%"><col style="width: 75%"></colgroup>
             <tbody>
@@ -938,10 +972,10 @@ xlink:href="http://inspire.ec.europa.eu/metadata-codelist/OnLineDescriptionCode/
         <section id="protocol">
           <h4>Protocol</h4>
           <p style="text-align:left"><em>distributionInfo/*/transferOptions/*/onLine/*/protocol</em><span
-style="float:right">[<a data-cite="ISO19139">ISO 19139:2007</a>]</span></p>
+              style="float:right">[<a data-cite="ISO19139">ISO 19139:2007</a>]</span></p>
           <p>Dit element is conditioneel. Het is verplicht als er een URL is
-            opgegeven. Bijvoorbeeld naar een bestand, WFS of webpagina. Indien
-            de URL een 'endPoint' betreft dan dient een waarde geselecteerd te
+            opgegeven. Bijvoorbeeld naar een zip bestand, WMS of WFS. Indien de
+            URL een 'endPoint' betreft dan dient een waarde geselecteerd te
             worden uit de <a href="http://inspire.ec.europa.eu/media-types">codelijst
               media-types</a>. Indien het een 'accessPoint' betreft, dient een
             waarde geselecteerd te worden uit de <a href="#codelijst-sv-servicetype">codelijst
@@ -954,38 +988,53 @@ style="float:right">[<a data-cite="ISO19139">ISO 19139:2007</a>]</span></p>
                 <th>Voorbeeld</th>
               </tr>
               <tr>
-                <td>protocol (endPoint)</td>
+<<<<<<< HEAD
+                <td>protocol endPoint</td>
                 <td><code>&lt;gmx:Anchor
                     xlink:href="https://www.iana.org/assignments/media-types/application/gml+xml"&gt;
-                    GML &lt;/gmx:Anchor&gt;</code></td>
+                    GML&lt;/gmx:Anchor&gt;</code></td>
+              </tr>
+              <tr>
+                <td>protocol accessPoint</td>
+                <td><code>&lt;gmx:Anchor
+                    xlink:href="http://standaarden.geonovum.nl/servicetype/OGC:WMS"&gt;
+                    OGC:WMS&lt;/gmx:Anchor&gt;</code></td>
+=======
+                <td>protocol (endPpint)</td>
+                <td><code>&lt;gmx:Anchor xlink:href="https://www.iana.org/assignments/media-types/application/gml+xml"&gt;
+                GML&lt;/gmx:Anchor&gt;</code></td>
               </tr>
               <tr>
                 <td>protocol (accessPoint</td>
-                <td><code>&lt;gmx:Anchor
-                    xlink:href="http://standaarden.geonovum.nl/SV_ServiceType/OGC:WMS"&gt;
-                    OGC:WMS &lt;/gmx:Anchor&gt;</code></td>
+                <td><code>&lt;gmx:Anchor xlink:href="http://standaarden.geonovum.nl/servicetype/OGC:WMS"&gt;
+                OGC:WMS&lt;/gmx:Anchor&gt;</code></td>
+>>>>>>> 4f483b33ee4d81fbb25c8661649ce16d94169863
               </tr>
             </tbody>
           </table>
           <div class="advisement "><i><br>
               Toelichting</i>
             <p>Het element Protocol, is van belang voor het automatisch kunnen
-              downloaden van de dataset en/of het benaderen van de service die
-              deze dataset ontsluit. Het maakt gebruik van algemene codelijsten
-              van servicetypes en media-types. Door data aan te bieden op basis
-              van waardes uit deze codelijsten is de ontsluiting software
-              onafhankelijk en daardoor breder toegankelijk. </p>
+              downloaden van de dataset, en/of het benaderen van de service die
+              deze dataset representeert. Het maakt gebruik van een codelijst
+              die in het Nederlandse metadata profiel op ISO19119 wordt
+              vastgelegd, maar het element is een ISO19115 element. Door gebruik
+              te maken van deze codelijst is de invulling van het element
+              software onafhankelijk. Het metadata element Naam legt de relatie
+              naar de layer in de service die de dataset representeert, door
+              middel van de naam van de layer of de naam van het featuretype. In
+              deze elementen wordt maar één maal per servicetype de relatie
+              gelegd, waarmee de dataset als service gerepresenteerd wordt,
+              zodat het mogelijk wordt de dataset via een service te benaderen.</p>
           </div>
         </section>
         <section id="naam">
           <h4>Naam</h4>
           <p style="text-align:left"><em>distributionInfo/*/transferOptions/*/onLine/*/name</em><span
-style="float:right">[<a data-cite="ISO19139">ISO 19139:2007</a>]</span></p>
+              style="float:right">[<a data-cite="ISO19139">ISO 19139:2007</a>]</span></p>
           <p>Dit element is conditioneel. Voor Nederland is de naam verplicht
-            voor de service typen OGC:WMS, OGC:WFS, OGC:WMTS, OGC:WCS en
-            INSPIRE:Atom. Dit element bevat de layername uit WMS of WCS,
-            identifier uit WMTS, de featureType name uit WFS of Dataset Feed
-            Title uit Atom.</p>
+            gesteld voor de OGC:WMS, OGC:WFS en OGC:WCS. Dit element bevat de
+            layer name uit de WMS of WCS of de featureType name van een WFS.</p>
           <table>
             <colgroup><col style="width: 25%"><col style="width: 75%"></colgroup>
             <tbody>
@@ -1001,28 +1050,19 @@ style="float:right">[<a data-cite="ISO19139">ISO 19139:2007</a>]</span></p>
           </table>
         </section>
         <section id="unieke-identifier-van-de-bron">
-          <h4><strong><em>Toelichting</em></strong></h4>
-          <p>Het metadata element 'name' legt de relatie naar de
-            layer/featuretype in de service die de dataset ontsluit. Een service
-            ontsluit typisch diverse datasets, dus is een extra parameter nodig
-            om aan te geven welke layer/featuretype uit de service relevant is.
-            Een alternatieve aanpak is om middels de metadata url of identifier
-            in de service beschrijving een link terug naar de metadata te
-            leggen.</p>
           <h4>Unieke Identifier van de bron</h4>
           <p style="text-align:left"><em>identificationInfo[1]/*/citation/*/identifier/MD_Identifier/code</em><span
-style="float:right">[<a data-cite="ISO19139">ISO 19139:2007</a>]</span></p>
-          <p>Dit element is verplicht. Het gebuik van een anchor met een link
-            naar een URI is conditioneel. Het gebruik van een anchor is
-            verplicht voor INSPIRE datasets. Dit element bevat de waarde die een
-            object uniek identificeert. Er wordt sterk geadviseerd om gebruik te
-            maken van een anchor met een verwijzing naar een <a title="Uniform Resource Identifier"
-href="https://nl.wikipedia.org/wiki/Uniform_resource_identifier">URI</a>.
+              style="float:right">[<a data-cite="ISO19139">ISO 19139:2007</a>]</span></p>
+          <p>Dit element is&nbsp; verplicht. Het gebuik van een URI is
+            conditioneel. Het is verplicht voor INSPIRE datasets. Dit element
+            bevat de waarde die een object uniek identificeert. Er wordt sterk
+            geadviseerd om gebruik te maken van een anchor met een verwijzing
+            naar een <a title="Uniform Resource Identifier" href="https://nl.wikipedia.org/wiki/Uniform_resource_identifier">URI</a>.
             Indien een URI gebruikt wordt dient deze te verwijzen naar een
             bestaande bron op het web. De aanbieders van URI's dienen te zorgen
-            dat de uitgegeven identificatie geldig blijft en beschikbaar is voor
-            de gehele beschikbaarheidstermijn van de&nbsp; bron en bij voorkeur
-            ook daarna. </p>
+            dat de uitgegeven identificaties geldig blijven en beschikbaar zijn
+            voor de gehele beschikbaarheidstermijn van de&nbsp; bron, en bij
+            voorkeur ook daarna. </p>
           <table>
             <colgroup><col style="width: 25%"><col style="width: 75%"></colgroup>
             <tbody>
@@ -1034,15 +1074,15 @@ href="https://nl.wikipedia.org/wiki/Uniform_resource_identifier">URI</a>.
                 <td>Anchor</td>
                 <td><code>&lt;Anchor
                     xlink:href="http://domein/id/record/ee543323-0fe4-4353"&gt;
-                    ee543323-0fe4-4353-9161-eda61ff26c07 &lt;/Anchor&gt;</code>
-                </td>
+                    ee543323-0fe4-4353-9161-eda61ff26c07&lt;/Anchor&gt;</code> </td>
               </tr>
             </tbody>
           </table>
         </section>
-        <section id="taal-van-de-bron"><br><h4>Taal van de bron</h4>
+        <section id="taal-van-de-bron">
+          <h4>Taal van de bron</h4>
           <p style="text-align:left"><em>identificationInfo[1]/*/language</em><span
-style="float:right">[<a data-cite="ISO19139">ISO 19139:2007</a>]</span></p>
+              style="float:right">[<a data-cite="ISO19139">ISO 19139:2007</a>]</span></p>
           <p>Dit element is conditioneel. Het is verplicht als de brontekstuele
             informatie bevat. Het bevat de code van de taal waarin de tekst in
             de bron is opgenomen. Gebruik hiervoor alleen de drie-letter codes
@@ -1066,7 +1106,7 @@ style="float:right">[<a data-cite="ISO19139">ISO 19139:2007</a>]</span></p>
         <section id="ruimtelijk-schema-van-de-bron">
           <h4>Ruimtelijk schema van de bron</h4>
           <p style="text-align:left"><em>identificationInfo[1]/*/spatialRepresentationType/MD_SpatialRepresentationTypeCode</em><span
-style="float:right">[<a data-cite="ISO19139">ISO 19139:2007</a>]</span></p>
+              style="float:right">[<a data-cite="ISO19139">ISO 19139:2007</a>]</span></p>
           <p>Dit element is conditioneel. Dit element is verplicht voor INSPIRE.
             Er dient een waarde uit de codelist MD_SpatialRepresentationTypeCode
             gebruikt te worden.</p>
@@ -1090,7 +1130,7 @@ style="float:right">[<a data-cite="ISO19139">ISO 19139:2007</a>]</span></p>
         <section id="karakterset-van-de-bron">
           <h4>Karakterset van de bron</h4>
           <p style="text-align:left"><em>identificationInfo[1]/*/</em><span style="float:right">[<a
-data-cite="ISO19139">ISO 19139:2007</a>]</span></p>
+                data-cite="ISO19139">ISO 19139:2007</a>]</span></p>
           <p>Verplicht als de in de bron gebruikte karakterset geen utf8 is.</p>
           <table>
             <colgroup><col style="width: 25%"><col style="width: 75%"></colgroup>
@@ -1109,7 +1149,7 @@ data-cite="ISO19139">ISO 19139:2007</a>]</span></p>
         <section id="onderwerp">
           <h4>Onderwerp</h4>
           <p style="text-align:left"><em>identificationInfo[1]/*/topicCategory</em><span
-style="float:right">[<a data-cite="ISO19139">ISO 19139:2007</a>]</span></p>
+              style="float:right">[<a data-cite="ISO19139">ISO 19139:2007</a>]</span></p>
           <p>Het bevat de belangrijkste onderwerpen van de dataset. De te
             hanteren onderwerpen zijn opgenomen in <a href="#codelijst-b527">codelijst
               B.5.27</a>.</p>
@@ -1130,7 +1170,7 @@ style="float:right">[<a data-cite="ISO19139">ISO 19139:2007</a>]</span></p>
         <section id="trefwoord">
           <h4>Trefwoord</h4>
           <p style="text-align:left"><em>identificationInfo[1]/*/descriptiveKeywords/*/keyword</em><span
-style="float:right">[<a data-cite="ISO19139">ISO 19139:2007</a>]</span></p>
+              style="float:right">[<a data-cite="ISO19139">ISO 19139:2007</a>]</span></p>
           <p>Het element bevat in het algemeen gebruikte woorden of
             geformaliseerde zinnen om een dataset of datasetserie te
             beschrijven. Voor datasets en dataset series die betrekking hebben
@@ -1172,7 +1212,7 @@ style="float:right">[<a data-cite="ISO19139">ISO 19139:2007</a>]</span></p>
         <section id="thesaurus">
           <h4>Thesaurus</h4>
           <p style="text-align:left"><em>identificationInfo[1]/*/descriptiveKeywords/*/thesaurusName/*/title</em><span
-style="float:right">[<a data-cite="ISO19139">ISO 19139:2007</a>]</span></p>
+              style="float:right">[<a data-cite="ISO19139">ISO 19139:2007</a>]</span></p>
           <p>Dit is een conditioneel element. Het is verplicht als een trefwoord
             uit een thesaurus afkomstig is zoals in ieder geval voor de INSPIRE
             thema’s. Het bevat de naam van de thesaurus waar het trefwoord uit
@@ -1196,7 +1236,7 @@ style="float:right">[<a data-cite="ISO19139">ISO 19139:2007</a>]</span></p>
         <section id="thesaurusdatum">
           <h4>Thesaurusdatum</h4>
           <p style="text-align:left"><em>identificationInfo[1]/*/descriptiveKeywords/*/thesaurusName/*/date/*/date</em><span
-style="float:right">[<a data-cite="ISO19139">ISO 19139:2007</a>]</span></p>
+              style="float:right">[<a data-cite="ISO19139">ISO 19139:2007</a>]</span></p>
           <p>Dit is een conditioneel element. Het is verplicht als een trefwoord
             uit een thesaurus afkomstig is zoals in ieder geval voor de INSPIRE
             thema’s. Het bevat de publicatie datum van de thesaurus waar het
@@ -1219,7 +1259,7 @@ style="float:right">[<a data-cite="ISO19139">ISO 19139:2007</a>]</span></p>
         <section id="thesaurusdatum-type">
           <h4>Thesaurusdatum type</h4>
           <p style="text-align:left"><em>identificationInfo[1]/*/descriptiveKeywords/*/thesaurusName/*/date/*/dateType</em><span
-style="float:right">[<a data-cite="ISO19139">ISO 19139:2007</a>]</span></p>
+              style="float:right">[<a data-cite="ISO19139">ISO 19139:2007</a>]</span></p>
           <p>Dit is een conditioneel element. Het is verplicht als een trefwoord
             uit een thesaurus afkomstig is zoals in ieder geval voor de INSPIRE
             thema’s. Het bevat het type gebeurtenis waar de datum betrekking op
@@ -1243,7 +1283,7 @@ style="float:right">[<a data-cite="ISO19139">ISO 19139:2007</a>]</span></p>
         <section id="minimum-x-coördinaat">
           <h4>Minimum x-coördinaat</h4>
           <p style="text-align:left"><em>identificationInfo[1]/*/extent/*/geographicElement/*/</em><span
-style="float:right">[<a data-cite="ISO19139">ISO 19139:2007</a>]</span></p>
+              style="float:right">[<a data-cite="ISO19139">ISO 19139:2007</a>]</span></p>
           <p>Dit element bevat de meest westelijke coördinaat uit de horizontale
             dekking van de dataset weergegeven in longitude en lattitude in
             decimale graden (noord en oost als positievewaarden). De coördinaten
@@ -1261,8 +1301,7 @@ style="float:right">[<a data-cite="ISO19139">ISO 19139:2007</a>]</span></p>
               </tr>
             </tbody>
           </table>
-          <div class="advisement"><i><br>
-              Toelichting: Omgrenzende rechthoek</i>
+          <div class="advisement"><i>Toelichting: Omgrenzende rechthoek</i>
             <p>De geografische locatie kan op drie manier worden beschreven,
               namelijk door een omgrenzende polygon (1), een omgrenzende
               rechthoek (2) of door een beschrijving (3). De
@@ -1278,7 +1317,7 @@ style="float:right">[<a data-cite="ISO19139">ISO 19139:2007</a>]</span></p>
         <section id="maximum-x-coördinaat">
           <h4>Maximum x-coördinaat</h4>
           <p style="text-align:left"><em>identificationInfo[1]/*/extent/*/geographicElement/*/</em><span
-style="float:right">[<a data-cite="ISO19139">ISO 19139:2007</a>]</span></p>
+              style="float:right">[<a data-cite="ISO19139">ISO 19139:2007</a>]</span></p>
           <p>Dit element bevat de meest oostelijke coördinaat uit de horizontale
             dekking van de dataset weergegeven in longitude en lattitude in
             decimale graden (noord en oost als positievewaarden). De coördinaten
@@ -1300,7 +1339,7 @@ style="float:right">[<a data-cite="ISO19139">ISO 19139:2007</a>]</span></p>
         <section id="minimum-y-coördinaat">
           <h4>Minimum y-coördinaat</h4>
           <p style="text-align:left"><em>identificationInfo[1]/*/extent/*/geographicElement/*/</em><span
-style="float:right">[<a data-cite="ISO19139">ISO 19139:2007</a>]</span></p>
+              style="float:right">[<a data-cite="ISO19139">ISO 19139:2007</a>]</span></p>
           <p>Dit element bevat de meest zuidelijke coördinaat uit de horizontale
             dekking van de dataset weergegeven in longitude en lattitude in
             decimale graden (noord en oost als positievewaarden). De coördinaten
@@ -1322,7 +1361,7 @@ style="float:right">[<a data-cite="ISO19139">ISO 19139:2007</a>]</span></p>
         <section id="maximum-y-coördinaat">
           <h4>Maximum y-coördinaat</h4>
           <p style="text-align:left"><em>identificationInfo[1]/*/extent/*/geographicElement/*/</em><span
-style="float:right">[<a data-cite="ISO19139">ISO 19139:2007</a>]</span></p>
+              style="float:right">[<a data-cite="ISO19139">ISO 19139:2007</a>]</span></p>
           <p>Dit element bevat de meest noordelijke coördinaat uit de
             horizontale dekking van de dataset weergegeven in longitude en
             lattitude in decimale graden (noord en oost als positievewaarden).
@@ -1342,10 +1381,37 @@ style="float:right">[<a data-cite="ISO19139">ISO 19139:2007</a>]</span></p>
             </tbody>
           </table>
         </section>
+        <section id="identifier-geografisch-gebied">
+          <h4>Identifier geografisch gebied</h4>
+          <p style="text-align:left"><em>identificationInfo[1]/*/extent/*/geographicIdentifier/*/</em><span
+              style="float:right">[<a data-cite="ISO19139">ISO 19139:2007</a>]</span></p>
+          <p>Dit element bevat een verwijzing naar een gebied dat de
+            verspreiding van de dataset beschrijft. Het element kan optioneel
+            ingevuld worden. Het faciliteert het hergebruik van de data in
+            minder geografisch georienteerde omgevingen.</p>
+          <table>
+            <colgroup><col style="width: 25%"><col style="width: 75%"></colgroup>
+            <tbody>
+              <tr>
+                <th>Data type of Domein</th>
+                <th>Voorbeeld</th>
+              </tr>
+              <tr>
+                <td>String/Anchor</td>
+                <td>
+                  <pre><code>
+&lt;gmx:Anchor
+ xlink:href="http://standaarden.overheid.nl/owms/terms/Ameland"&gt;
+ Ameland&lt;/gmx:Anchor&gt;</code></pre>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </section>
         <section id="datum-van-de-bron">
           <h4>Datum van de bron</h4>
           <p style="text-align:left"><em>identificationInfo[1]/*/citation/*/date/*/date</em><span
-style="float:right">[<a data-cite="ISO19139">ISO 19139:2007</a>]</span></p>
+              style="float:right">[<a data-cite="ISO19139">ISO 19139:2007</a>]</span></p>
           <p>Op z’n minst één van de elementen Datum creatie, Datum publicatie
             of Datum wijziging is verplicht,&nbsp; met een maximum van 1 creatie
             datum. Voor INSPIRE geldt ook een maximum van 1 laatste wijziging
@@ -1367,7 +1433,7 @@ style="float:right">[<a data-cite="ISO19139">ISO 19139:2007</a>]</span></p>
         <section id="datum-type-van-de-bron">
           <h4>Datum type van de bron</h4>
           <p style="text-align:left"><em>identificationInfo[1]/*/citation/*/date/*/dateType</em><span
-style="float:right">[<a data-cite="ISO19139">ISO 19139:2007</a>]</span></p>
+              style="float:right">[<a data-cite="ISO19139">ISO 19139:2007</a>]</span></p>
           <p>Dit element bevat het type gebeurtenis waar de datum betrekking op
             heeft. Type gebeurtenis wordt gekozen uit <a href="#codelijst-b52">codelijst
               B.5.2</a>. Mogelijke gebeurtenissen zijn: creatie-, publicatie-,
@@ -1390,7 +1456,7 @@ style="float:right">[<a data-cite="ISO19139">ISO 19139:2007</a>]</span></p>
         <section id="niveau-kwaliteitsbeschrijving">
           <h4>Niveau kwaliteitsbeschrijving</h4>
           <p style="text-align:left"><em>dataQualityInfo/*/scope/*/level</em><span
-style="float:right">[<a data-cite="ISO19139">ISO 19139:2007</a>]</span></p>
+              style="float:right">[<a data-cite="ISO19139">ISO 19139:2007</a>]</span></p>
           <p>Dit element beschrijft het niveau waarop de kwaliteitsinformatie
             betrekking heeft. Dit niveau wordt gekozen uit <a href="#codelijst-b525">codelijst
               B.5.25</a>. Mogelijke niveau’s zijn: dataset en series. </p>
@@ -1411,7 +1477,7 @@ style="float:right">[<a data-cite="ISO19139">ISO 19139:2007</a>]</span></p>
         <section id="algemene-beschrijving-herkomst">
           <h4>Algemene beschrijving herkomst</h4>
           <p style="text-align:left"><em>dataQualityInfo/*/lineage/*/statement</em><span
-style="float:right">[<a data-cite="ISO19139">ISO 19139:2007</a>]</span></p>
+              style="float:right">[<a data-cite="ISO19139">ISO 19139:2007</a>]</span></p>
           <p>Dit element beschrijft de proceshistorie. Ook kwaliteitsinformatie
             kan hierin worden opgenomen. Kwaliteitsinformatie kan meerdere keren
             worden opgenomen. Er dient slechts één set kwaliteitsinformatie
@@ -1437,7 +1503,7 @@ style="float:right">[<a data-cite="ISO19139">ISO 19139:2007</a>]</span></p>
         <section id="toepassingsschaal">
           <h4>Toepassingsschaal</h4>
           <p style="text-align:left"><em>identificationInfo[1]/*/spatialResolution/*/equivalentScale/*/denominator</em><span
-style="float:right">[<a data-cite="ISO19139">ISO 19139:2007</a>]</span></p>
+              style="float:right">[<a data-cite="ISO19139">ISO 19139:2007</a>]</span></p>
           <p>Dit element is conditioneel. Het element is verplicht als er een
             toepassingsschaal gespecificeerd kan worden en het element resolutie
             niet voorkomt. Het element bevat de mate van detail aangeduid als
@@ -1461,7 +1527,7 @@ style="float:right">[<a data-cite="ISO19139">ISO 19139:2007</a>]</span></p>
         <section id="resolutie">
           <h4>Resolutie</h4>
           <p style="text-align:left"><em>identificationInfo[1]/*/spatialResolution/*/distance</em><span
-style="float:right">[<a data-cite="ISO19139">ISO 19139:2007</a>]</span></p>
+              style="float:right">[<a data-cite="ISO19139">ISO 19139:2007</a>]</span></p>
           <p>Dit element is conditioneel. Het is verplicht als er een resolutie
             gespecificeerd kan worden en het element toepassingsschaal niet
             voorkomt. Het element bevat de resolutie in meters. Het element kan
@@ -1486,7 +1552,7 @@ style="float:right">[<a data-cite="ISO19139">ISO 19139:2007</a>]</span></p>
         <section id="codereferentiesysteem">
           <h4>Codereferentiesysteem</h4>
           <p style="text-align:left"><em>referenceSystemInfo/*/referenceSystemIdentifier/*/code</em><span
-style="float:right">[<a data-cite="ISO19139">ISO 19139:2007</a>]</span></p>
+              style="float:right">[<a data-cite="ISO19139">ISO 19139:2007</a>]</span></p>
           <p>Dit element bevat de Alfanumerieke waarde die het gebruikte
             referentiesysteem van de dataset aangeeft. EPSG geeft deze code’s
             uit. Voor het RD wordt de code 28992 gehanteerd. Het
@@ -1504,8 +1570,7 @@ style="float:right">[<a data-cite="ISO19139">ISO 19139:2007</a>]</span></p>
               </tr>
             </tbody>
           </table>
-          <div class="advisement"><i><br>
-              Toelichting</i>
+          <div class="advisement"><i>Toelichting</i>
             <p>Naast het horizontaal ruimtelijk referentiesysteem kan ook het
               verticaal ruimtelijk referentiesysteem in de metadata worden
               opgeslagen, bijvoorbeeld NAP. Deze gegevens kan men in het
@@ -1517,7 +1582,7 @@ style="float:right">[<a data-cite="ISO19139">ISO 19139:2007</a>]</span></p>
         <section id="temporeel-referentiesysteem">
           <h4>Temporeel referentiesysteem</h4>
           <p style="text-align:left"><em>referenceSystemInfo/*/referenceSystemIdentifier/*/code</em><span
-style="float:right">[<a data-cite="ISO19139">ISO 19139:2007</a>]</span></p>
+              style="float:right">[<a data-cite="ISO19139">ISO 19139:2007</a>]</span></p>
           <p>Dit element is conditioneel in dit profiel. Het is alleen verplicht
             als de dataset temporele informatie bevat die niet gebaseerd is op
             de Gregoriaanse kalender of de Coordinated Universal Time. Dit
@@ -1540,7 +1605,7 @@ style="float:right">[<a data-cite="ISO19139">ISO 19139:2007</a>]</span></p>
         <section id="naam-distributie-formaat">
           <h4>Naam distributie formaat</h4>
           <p style="text-align:left"><em>distributionInfo/*/distributionFormat/*/name</em><span
-style="float:right">[<a data-cite="ISO19139">ISO 19139:2007</a>]</span></p>
+              style="float:right">[<a data-cite="ISO19139">ISO 19139:2007</a>]</span></p>
           <p>Dit element is conditioneel in dit profiel. Het is alleen verplicht
             als de dataset een INSPIRE bron is. Dit element bevat de naam van
             het distributie formaat van de dataset. Deze informatie is te vinden
@@ -1562,7 +1627,7 @@ style="float:right">[<a data-cite="ISO19139">ISO 19139:2007</a>]</span></p>
         <section id="versie-distributie-formaat">
           <h4>Versie distributie formaat</h4>
           <p style="text-align:left"><em>distributionInfo/*/distributionFormat/*/version</em><span
-style="float:right">[<a data-cite="ISO19139">ISO 19139:2007</a>]</span></p>
+              style="float:right">[<a data-cite="ISO19139">ISO 19139:2007</a>]</span></p>
           <p>Dit element is conditioneel in dit profiel. Het is alleen verplicht
             als de dataset een INSPIRE bron is. Dit element bevat de versie van
             het distributie formaat van de dataset. Deze informatie is te vinden
@@ -1584,7 +1649,7 @@ style="float:right">[<a data-cite="ISO19139">ISO 19139:2007</a>]</span></p>
         <section id="specificatie-distributie-formaat">
           <h4>Specificatie distributie formaat</h4>
           <p style="text-align:left"><em>distributionInfo/*/distributionFormat/*/specification</em><span
-style="float:right">[<a data-cite="ISO19139">ISO 19139:2007</a>]</span></p>
+              style="float:right">[<a data-cite="ISO19139">ISO 19139:2007</a>]</span></p>
           <p>Dit element is conditioneel in dit profiel. Het is alleen verplicht
             als de dataset een INSPIRE bron is. Dit element bevat de
             specificatie van het distributie formaat van de dataset. Deze
@@ -1607,7 +1672,7 @@ style="float:right">[<a data-cite="ISO19139">ISO 19139:2007</a>]</span></p>
         <section id="conformiteit-indicatie-met-de-specificatie">
           <h4>Conformiteit indicatie met de specificatie</h4>
           <p style="text-align:left"><em>dataQualityInfo/*/report/*/result/*/pass</em><span
-style="float:right">[<a data-cite="ISO19139">ISO 19139:2007</a>]</span></p>
+              style="float:right">[<a data-cite="ISO19139">ISO 19139:2007</a>]</span></p>
           <p>Dit element is conditioneel in dit profiel. Het is alleen verplicht
             als de dataset een INSPIRE bron is of als de informatie is
             gemodelleerd volgens een specifiek informatie model. In dit element
@@ -1630,7 +1695,7 @@ style="float:right">[<a data-cite="ISO19139">ISO 19139:2007</a>]</span></p>
         <section id="verklaring">
           <h4>Verklaring</h4>
           <p style="text-align:left"><em>dataQualityInfo/*/report/*/result/*/explanation</em><span
-style="float:right">[<a data-cite="ISO19139">ISO 19139:2007</a>]</span></p>
+              style="float:right">[<a data-cite="ISO19139">ISO 19139:2007</a>]</span></p>
           <p>Dit element is conditioneel in dit profiel. Het is alleen verplicht
             als de dataset een INSPIRE bron is of als de informatie is
             gemodelleerd volgens een specifiek informatie model. Het bevat de
@@ -1653,7 +1718,7 @@ style="float:right">[<a data-cite="ISO19139">ISO 19139:2007</a>]</span></p>
         <section id="specificatie">
           <h4>Specificatie</h4>
           <p style="text-align:left"><em>dataQualityInfo/*/report/*/result/*/specification/*/title</em><span
-style="float:right">[<a data-cite="ISO19139">ISO 19139:2007</a>]</span></p>
+              style="float:right">[<a data-cite="ISO19139">ISO 19139:2007</a>]</span></p>
           <p>Dit element is conditioneel in dit profiel. Het is alleen verplicht
             als de dataset een INSPIRE bron is of als de informatie is
             gemodelleerd volgens een specifiek informatie model. Het bevat de
@@ -1682,7 +1747,7 @@ style="float:right">[<a data-cite="ISO19139">ISO 19139:2007</a>]</span></p>
         <section id="specificatiedatum">
           <h4>Specificatiedatum</h4>
           <p style="text-align:left"><em>dataQualityInfo/*/report/*/result/*/specification/*/date/*/date</em><span
-style="float:right">[<a data-cite="ISO19139">ISO 19139:2007</a>]</span></p>
+              style="float:right">[<a data-cite="ISO19139">ISO 19139:2007</a>]</span></p>
           <p>Dit element is conditioneel in dit profiel. Het is alleen verplicht
             als de dataset een INSPIRE bron is of als de informatie is
             gemodelleerd volgens een specifiek informatie model. Het bevat de
@@ -1706,7 +1771,7 @@ style="float:right">[<a data-cite="ISO19139">ISO 19139:2007</a>]</span></p>
         <section id="specificatiedatum-type">
           <h4>Specificatiedatum type</h4>
           <p style="text-align:left"><em>dataQualityInfo/*/report/*/result/*/specification/*/date/*/dateType</em><span
-style="float:right">[<a data-cite="ISO19139">ISO 19139:2007</a>]</span></p>
+              style="float:right">[<a data-cite="ISO19139">ISO 19139:2007</a>]</span></p>
           <p>Dit element is conditioneel in dit profiel. Het is alleen verplicht
             als de dataset een INSPIRE bron is of als de informatie is
             gemodelleerd volgens een specifiek informatie model. Het bevat het
@@ -1731,7 +1796,7 @@ style="float:right">[<a data-cite="ISO19139">ISO 19139:2007</a>]</span></p>
         <section id="type-waarde">
           <h4>Type waarde</h4>
           <p style="text-align:left"><em>dataQualityInfo/*/report/*/</em><span style="float:right">[<a
-data-cite="ISO19139">ISO 19139:2007</a>]</span></p>
+                data-cite="ISO19139">ISO 19139:2007</a>]</span></p>
           <p>Dit element is conditioneel in dit profiel. Het is verplicht voor
             INSPIRE datasets als voor netwerken de aansluiting van hartlijnen
             niet is verzekerd. Het bevat de meeteenheid waarmee de topologische
@@ -1753,7 +1818,7 @@ data-cite="ISO19139">ISO 19139:2007</a>]</span></p>
         <section id="topologische-samenhang">
           <h4>Topologische samenhang</h4>
           <p style="text-align:left"><em>dataQualityInfo/*/report/*/</em><span style="float:right">[<a
-data-cite="ISO19139">ISO 19139:2007</a>]</span></p>
+                data-cite="ISO19139">ISO 19139:2007</a>]</span></p>
           <p>Dit element is conditioneel in dit profiel. Het is verplicht voor
             INSPIRE datasets als voor netwerken de aansluiting van hartlijnen
             niet is verzekerd. Het bevat de tolerantie waarmee de topologische
@@ -1775,7 +1840,7 @@ data-cite="ISO19139">ISO 19139:2007</a>]</span></p>
         <section id="juridische-toegangsrestricties">
           <h4>Juridische toegangsrestricties</h4>
           <p style="text-align:left"><em>identificationInfo[1]/*/resourceConstraints/*/accessConstraints</em><span
-style="float:right">[<a data-cite="ISO19139">ISO 19139:2007</a>]</span></p>
+              style="float:right">[<a data-cite="ISO19139">ISO 19139:2007</a>]</span></p>
           <p>Het is verplicht juridische toegangsrestricties op te nemen. Het is
             verplicht een waarde op te nemen voor beperkingen op publieke
             toegang in één gmd:resourceConstraints/gmd:MD_LegalConstraints
@@ -1803,7 +1868,7 @@ style="float:right">[<a data-cite="ISO19139">ISO 19139:2007</a>]</span></p>
         <section id="overige-beperkingen">
           <h4>Overige beperkingen</h4>
           <p style="text-align:left"><em>identificationInfo[1]/*/resourceConstraints/*/otherConstraints</em><span
-style="float:right">[<a data-cite="ISO19139">ISO 19139:2007</a>]</span></p>
+              style="float:right">[<a data-cite="ISO19139">ISO 19139:2007</a>]</span></p>
           <p>Dit element is conditioneel, als het element juridische
             toegangsrestricties de waarde otherRestrictions bevat dient het te
             worden opgenomen.&nbsp; </p>
@@ -1862,7 +1927,7 @@ beperkingen&lt;/gmx:anchor&gt;</code></pre>
         <section id="gebruiksbeperkingen">
           <h4>Gebruiksbeperkingen</h4>
           <p style="text-align:left"><em>identificationInfo[1]/*/resourceConstraints/*/useLimitation</em><span
-style="float:right">[<a data-cite="ISO19139">ISO 19139:2007</a>]</span></p>
+              style="float:right">[<a data-cite="ISO19139">ISO 19139:2007</a>]</span></p>
           <p>Dit element bevat toepassingen waarvoor de dataset niet geschikt
             is. </p>
           <table>
@@ -1882,7 +1947,7 @@ style="float:right">[<a data-cite="ISO19139">ISO 19139:2007</a>]</span></p>
         <section id="verantwoordelijke-organisatie-bron">
           <h4>Verantwoordelijke organisatie bron</h4>
           <p style="text-align:left"><em>identificationInfo[1]/*/pointOfContact/*/organisationName</em><span
-style="float:right">[<a data-cite="ISO19139">ISO 19139:2007</a>]</span></p>
+              style="float:right">[<a data-cite="ISO19139">ISO 19139:2007</a>]</span></p>
           <p>Gebruik de volledig uitgeschreven naam van de verantwoordelijke
             organisatie. De afkorting kan toegevoegd worden aan de
             organisatienaam. Gebruik bij voorkeur een&nbsp; URI uit een
@@ -1908,7 +1973,7 @@ style="float:right">[<a data-cite="ISO19139">ISO 19139:2007</a>]</span></p>
         <section id="verantwoordelijke-organisatie-bron-email">
           <h4>Verantwoordelijke organisatie bron: e-mail</h4>
           <p style="text-align:left"><em>identificationInfo[1]/*/pointOfContact/*/contactInfo/*/address/*/electronicMailAddress</em><span
-style="float:right">[<a data-cite="ISO19139">ISO 19139:2007</a>]</span></p>
+              style="float:right">[<a data-cite="ISO19139">ISO 19139:2007</a>]</span></p>
           <p>Dit element bevat het e-mail adres van de verantwoordelijke
             organisatie van de bron.</p>
           <table>
@@ -1928,7 +1993,7 @@ style="float:right">[<a data-cite="ISO19139">ISO 19139:2007</a>]</span></p>
         <section id="verantwoordelijke-organisatie-bron:-rol">
           <h4>Verantwoordelijke organisatie bron rol</h4>
           <p style="text-align:left"><em>identificationInfo[1]/*/pointOfContact/*/role</em><span
-style="float:right">[<a data-cite="ISO19139">ISO 19139:2007</a>]</span></p>
+              style="float:right">[<a data-cite="ISO19139">ISO 19139:2007</a>]</span></p>
           <p>Dit element geeft de rol van de verantwoordelijke organisatie van
             de bron weer. Voor de rol van de organisatie wordt een codelijst
             gehanteerd, zie zie <a href="#codelijst-b55">Codelijst B.5.5
@@ -1950,7 +2015,7 @@ style="float:right">[<a data-cite="ISO19139">ISO 19139:2007</a>]</span></p>
         <section id="metadata-unieke-identifier">
           <h4>Metadata unieke identifier</h4>
           <p style="text-align:left"><em>fileIdentifier</em><span style="float:right">[<a
-data-cite="ISO19139">ISO 19139:2007</a>]</span></p>
+                data-cite="ISO19139">ISO 19139:2007</a>]</span></p>
           <p>Dit element bevat de unieke identifier voor de metadata file.
             Geadviseerd wordt om gebruik te maken van een betekenisloze
             identifier die wereldwijd uniek is zoals de <a href="http://en.wikipedia.org/wiki/UUID">Universal
@@ -1972,7 +2037,7 @@ data-cite="ISO19139">ISO 19139:2007</a>]</span></p>
         <section id="parent-unieke-identifier">
           <h4>Parent unieke identifier</h4>
           <p style="text-align:left"><em>parentIdentifier</em><span style="float:right">[<a
-data-cite="ISO19139">ISO 19139:2007</a>]</span></p>
+                data-cite="ISO19139">ISO 19139:2007</a>]</span></p>
           <p>Dit element is conditioneel in de kernset. Het is verplicht als er
             een dataset met hogere hiërarchie is. Het bevat de unieke ID van de
             metadata waarvan deze metadata een subset is.</p>
@@ -1993,7 +2058,7 @@ data-cite="ISO19139">ISO 19139:2007</a>]</span></p>
         <section id="verantwoordelijke-organisatie-metadata">
           <h4>Verantwoordelijke organisatie metadata</h4>
           <p style="text-align:left"><em>contact/*/organisationName</em><span style="float:right">[<a
-data-cite="ISO19139">ISO 19139:2007</a>]</span></p>
+                data-cite="ISO19139">ISO 19139:2007</a>]</span></p>
           <p>Gebruik de volledig uitgeschreven naam van de verantwoordelijke
             organisatie. De afkorting kan toegevoegd worden aan de
             organisatienaam. Voor de correcte overheidsnamen zie:
@@ -2018,7 +2083,7 @@ data-cite="ISO19139">ISO 19139:2007</a>]</span></p>
         <section id="verantwoordelijke-organisatie-metadata:-rol">
           <h4>Verantwoordelijke organisatie metadata rol</h4>
           <p style="text-align:left"><em>contact/*/role</em><span style="float:right">[<a
-data-cite="ISO19139">ISO 19139:2007</a>]</span></p>
+                data-cite="ISO19139">ISO 19139:2007</a>]</span></p>
           <p>Dit element bevat de rol van de organisatie verantwoordelijk voor
             de metadata. Voor de rol van de organisatie wordt een codelijst
             gehanteerd. INSPIRE vereist pointOfContact.</p>
@@ -2039,7 +2104,7 @@ data-cite="ISO19139">ISO 19139:2007</a>]</span></p>
         <section id="verantwoordelijke-organisatie-metadata:-e-mail">
           <h4>Verantwoordelijke organisatie metadata e mail</h4>
           <p style="text-align:left"><em>contact/*/contactInfo/*/address/*/electronicMailAddress</em><span
-style="float:right">[<a data-cite="ISO19139">ISO 19139:2007</a>]</span></p>
+              style="float:right">[<a data-cite="ISO19139">ISO 19139:2007</a>]</span></p>
           <p>Dit element bevat het e-mail adres van de organisatie
             verantwoordelijk voor de metadata.</p>
           <table>
@@ -2059,7 +2124,7 @@ style="float:right">[<a data-cite="ISO19139">ISO 19139:2007</a>]</span></p>
         <section id="metadatadatum">
           <h4>Metadatadatum</h4>
           <p style="text-align:left"><em>dateStamp</em><span style="float:right">[<a
-data-cite="ISO19139">ISO 19139:2007</a>]</span></p>
+                data-cite="ISO19139">ISO 19139:2007</a>]</span></p>
           <p>Datum waarop de metadata gemaakt ofgewijzigd is. Het formaat van de
             datum is JJJJ-MM-DD (met streepjes).</p>
           <table>
@@ -2079,7 +2144,7 @@ data-cite="ISO19139">ISO 19139:2007</a>]</span></p>
         <section id="taal-van-de-metadata">
           <h4>Taal van de metadata</h4>
           <p style="text-align:left"><em>Language</em><span style="float:right">[<a
-data-cite="ISO19139">ISO 19139:2007</a>]</span></p>
+                data-cite="ISO19139">ISO 19139:2007</a>]</span></p>
           <p>In dit element wordt vastgelegd in welke taal de metadata is
             beschreven. Het bevat de code van de taal waarin de tekst in de
             metadata is opgenomen. Gebruik hiervoor alleen de drie-letter codes
@@ -2103,7 +2168,7 @@ data-cite="ISO19139">ISO 19139:2007</a>]</span></p>
         <section id="metadata-standaard-naam">
           <h4>Metadata standaard naam</h4>
           <p style="text-align:left"><em>metadataStandardName</em><span style="float:right">[<a
-data-cite="ISO19139">ISO 19139:2007</a>]</span></p>
+                data-cite="ISO19139">ISO 19139:2007</a>]</span></p>
           <p>Dit element is nodig om uitbreidingen op profielen te duiden. Dit
             element bevat de naam van de standaard.</p>
           <table>
@@ -2123,7 +2188,7 @@ data-cite="ISO19139">ISO 19139:2007</a>]</span></p>
         <section id="metadatastandaard-versie">
           <h4>Metadatastandaard versie</h4>
           <p style="text-align:left"><em>metadataStandardVersion</em><span style="float:right">[<a
-data-cite="ISO19139">ISO 19139:2007</a>]</span></p>
+                data-cite="ISO19139">ISO 19139:2007</a>]</span></p>
           <p>Dit element is nodig om uitbreidingen op standaarden aan te geven.
             Dit element bevat de versie (profiel) van de metadatastandaard die
             wordtgebruikt.</p>
@@ -2161,7 +2226,7 @@ data-cite="ISO19139">ISO 19139:2007</a>]</span></p>
         set aangegeven via de abstracte klassen die ISO 19115 gebruikt.</p>
       <table>
         <colgroup><col style="width: 20%;"><col style="width: 10%;"><col style="width: 20%;"><col
-style="width: 50%"></colgroup>
+            style="width: 50%"></colgroup>
         <thead>
           <tr>
             <th>Metadata naam</th>
@@ -2709,8 +2774,8 @@ style="width: 50%"></colgroup>
         vastgelegd. <a href="#image003">Figuur 3</a> geeft de klasse van
         MD_Metadata weer en het UML-schema van deze extensie op characterString
         weer.</p>
-      <figure id="image003"> <a href="st-mdprofiel-iso19115/image003.png"><img src="st-mdprofiel-iso19115/image003.png"
-alt="image003"></a> <figcaption>Attributen
+      <figure id="image003"> <a href="st-mdprofiel-iso19115/image003.png"><img
+            src="st-mdprofiel-iso19115/image003.png" alt="image003"></a> <figcaption>Attributen
           van MD_Metadata in het XML-schema voor geografische metadata.</figcaption>
       </figure>
       <p>De elementen met vrije tekst in het domein van CharacterString property
@@ -2724,8 +2789,8 @@ alt="image003"></a> <figcaption>Attributen
         is voldoende aangezien codelijsten zelf letterlijk vertaald kunnen
         worden. Onderstaand conceptueel schema is opgenomen in ISO19139, ook de
         benodigde data dictionary is opgenomen in ISO 19139.</p>
-      <figure id="image004"> <a href="st-mdprofiel-iso19115/image004.png"><img src="st-mdprofiel-iso19115/image004.png"
-alt="image004"></a> <figcaption>Vrije
+      <figure id="image004"> <a href="st-mdprofiel-iso19115/image004.png"><img
+            src="st-mdprofiel-iso19115/image004.png" alt="image004"></a> <figcaption>Vrije
           tekst en “localised” characterString.</figcaption> </figure>
     </section>
     <section id="object-en-attribuutinformatie">
@@ -3818,6 +3883,24 @@ Toelichting: Eenheid waar een lidstaat rechtsbevoegdheid
                 <td>Other Services</td>
               </tr>
               <tr>
+                <td>OGC:WMC</td>
+                <td>Web Map Context</td>
+                <td> <br>
+                </td>
+              </tr>
+              <tr>
+                <td>OGC:KML</td>
+                <td>Keyhole Mark-up Language</td>
+                <td> <br>
+                </td>
+              </tr>
+              <tr>
+                <td>OGC:GML</td>
+                <td>Geography Markup Language</td>
+                <td> <br>
+                </td>
+              </tr>
+              <tr>
                 <td>OGC:WFS-G</td>
                 <td>Gazzetteer service</td>
                 <td> <br>
@@ -3878,40 +3961,14 @@ Toelichting: Eenheid waar een lidstaat rechtsbevoegdheid
                 </td>
               </tr>
               <tr>
-                <td>OGC:SensorThings</td>
-                <td>SensorThings API</td>
-                <td><br>
-                </td>
-              </tr>
-              <tr>
-                <td>W3C:SPARQL</td>
-                <td>SPARQL Query Language for RDF</td>
-                <td><br>
-                </td>
-              </tr>
-              <tr>
-                <td>OASIS:OData</td>
-                <td>Open data protocol</td>
-                <td><br>
-                </td>
-              </tr>
-              <tr>
-                <td>OAS</td>
-                <td>Open API Specification</td>
-                <td><br>
-                </td>
-              </tr>
-              <tr>
-                <td>landingpage</td>
-                <td>Een webpagina die toegang geeft tot de dataset of overige
-                  informatie bevat</td>
+                <td>website</td>
+                <td>website</td>
                 <td> <br>
                 </td>
               </tr>
               <tr>
-                <td>application</td>
-                <td>Een (web) applicatie die rechtstreeks toegang geeft tot de
-                  dataset</td>
+                <td>download</td>
+                <td>download</td>
                 <td> <br>
                 </td>
               </tr>
@@ -3929,7 +3986,7 @@ Toelichting: Eenheid waar een lidstaat rechtsbevoegdheid
     <section class="appendix" id="appendix-b">
       <h2>Invulinstructies</h2>
       <table rules="GROUPS" class="table-small" border="1" cellpadding="5" cellspacing="0"
-width="100%">
+        width="100%">
         <colgroup><col> <col> <col> <col> <col> <col> <col> <col> <col>
           <col> <col> <col> <col> <col> <col> <col> <col> <col> <col> <col>
           <col> </colgroup>
@@ -10255,17 +10312,15 @@ width="100%">
                   MD_Identifier.code</span></p>
             </td>
             <td>
-              <p>Anchor dat zowel een link naar een URI als wel een
-                Alfanumerieke waarde die het geografisch gebied dat wordt bedekt
-                door de data aangeeft.</p>
+              <p>Alfanumerieke waarde die het geografisch gebied dat wordt
+                bedekt door de data aangeeft.</p>
             </td>
             <td>
-              <p>&lt;Anchor
-                xlink:href="http://standaarden.overheid.nl/owms/terms/Ameland"&gt;</p>
-              <p>Ameland&lt;/Anchor&gt;</p>
+              <p>7777-25-9999</p>
+              <p>Achterhoek</p>
             </td>
             <td>
-              <p>Hier kan men bijvoorbeeld een URI opnemen uit de OWMS waardelijsten</p>
+              <p>Hier kan men bijvoorbeeld de ID opnemen van adressen uit de BAG</p>
             </td>
             <td>
               <p>string</p>
@@ -16688,7 +16743,7 @@ width="100%">
         in de vorige versie van het Nederlandse profiel verplicht zijn.</p>
       <table>
         <colgroup><col width="20%"><col width="9%"><col width="9%"><col width="16%"><col
-width="8%"><col width="38%"></colgroup>
+            width="8%"><col width="38%"></colgroup>
         <thead>
           <tr>
             <th>Metadata element</th>
@@ -17180,7 +17235,7 @@ width="8%"><col width="38%"></colgroup>
         verplicht zijn, zijn in geel weergegeven.</p>
       <table>
         <colgroup><col width="20%"><col width="9%"><col width="16%"><col width="8%"><col
-width="16%"><col width="15%"><col width="16%"></colgroup>
+            width="16%"><col width="15%"><col width="16%"></colgroup>
         <thead>
           <tr>
             <th>Metadata element</th>
@@ -17695,9 +17750,10 @@ width="16%"><col width="15%"><col width="16%"></colgroup>
     </section>
     <section class="appendix" id="appendix-f">
       <h2>Koppeling vanuit metadata met data en service</h2>
-      <figure id="image005"> <a href="st-mdprofiel-iso19115/image005.svg"><img src="st-mdprofiel-iso19115/image005.svg"
-alt="image005"></a> <figcaption>Koppeling
+      <figure id="image005"> <a href="st-mdprofiel-iso19115/image005.svg"><img
+            src="st-mdprofiel-iso19115/image005.svg" alt="image005"></a> <figcaption>Koppeling
           vanuit metadata met data en service.</figcaption> </figure>
     </section>
     <script class="remove" src="st-mdprofiel-iso19115/localscript.js"></script>
-</section></body></html>
+  </body>
+</html>
