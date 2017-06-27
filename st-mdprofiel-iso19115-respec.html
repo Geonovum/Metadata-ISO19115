@@ -469,6 +469,11 @@ http://schemas.opengis.net/csw/2.0.2/profiles/apiso/1.0.0/apiso.xsd</a></td>
                 conditioneel. Het is verplicht voor INSPIRE datasets. </td>
             </tr>
             <tr>
+              <td>Unieke identifier van de identificatie sectie.</td>
+              <td>C</td>
+              <td>Verplicht voor INSPIRE</td>
+            </tr>
+            <tr>
               <td>Taal van de bron</td>
               <td>C</td>
               <td>Het is verplicht als de bron tekstuele informatie bevat.</td>
@@ -1019,8 +1024,8 @@ xlink:href="http://inspire.ec.europa.eu/metadata-codelist/OnLineDescriptionCode/
           <h4>Unieke Identifier van de bron</h4>
           <p style="text-align:left"><em>identificationInfo[1]/*/citation/*/identifier/MD_Identifier/code</em><span
               style="float:right">[<a data-cite="ISO19139">ISO 19139:2007</a>]</span></p>
-          <p>Dit element is&nbsp; verplicht. Het gebuik van een anchor met een
-            link naar een URI is conditioneel. Het gebruik van een anchor is
+          <p>Dit element is verplicht. Het gebuik van een anchor met een link
+            naar een URI is conditioneel. Het gebruik van een anchor is
             verplicht voor INSPIRE datasets. Dit element bevat de waarde die een
             object uniek identificeert. Er wordt sterk geadviseerd om gebruik te
             maken van een anchor met een verwijzing naar een <a title="Uniform Resource Identifier"
@@ -1048,6 +1053,35 @@ xlink:href="http://inspire.ec.europa.eu/metadata-codelist/OnLineDescriptionCode/
           </table>
         </section>
         <section id="taal-van-de-bron">
+          <h4>Unieke identifier van de identificatie sectie.</h4>
+          <em>identificationInfo/</em><em><code>MD_DataIdentification</code>[@gml:id]</em><span
+            style="float:right">[<a data-cite="ISO19139">ISO 19139:2007</a>]</span>
+          <p>Dit element is voor INSPIRE verplicht indien een service metadata
+            verwijst naar dit element. De aanbieders van datasets dienen te
+            zorgen dat de uitgegeven identificatie uniek is binnen de catalogi
+            waarin het record aangeboden wordt en constant is voor de
+            beschikbaarheidstermijn van de bron. </p>
+          <table>
+            <colgroup><col style="width: 25%"><col style="width: 75%"></colgroup>
+            <tbody>
+              <tr>
+                <th>Data type of Domein</th>
+                <th>Voorbeeld</th>
+              </tr>
+              <tr>
+                <td>String</td>
+                <td><code>&lt;MD_DataIdentification
+                    id="04dbf480-1bee-4860-a280-d869cbbe193a"&gt;...&lt;/MD_DataIdentification&gt;</code></td>
+              </tr>
+            </tbody>
+          </table>
+          <em><br>
+            Toelichting</em>
+          <p>INSPIRE vereist dat de operatesOn link in Service metadata verwijst
+            naar de relevante MD_DataIdentification sectie in het gekoppelde
+            record. Om uniek te kunnen verwijzen dient ieder
+            MD_DataIdentification sectie een unieke identifier te bevatten.<br>
+          </p>
           <h4>Taal van de bron</h4>
           <p style="text-align:left"><em>identificationInfo[1]/*/language</em><span
               style="float:right">[<a data-cite="ISO19139">ISO 19139:2007</a>]</span></p>
