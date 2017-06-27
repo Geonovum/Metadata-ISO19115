@@ -973,8 +973,8 @@ xlink:href="http://inspire.ec.europa.eu/metadata-codelist/OnLineDescriptionCode/
           <p>Dit element is conditioneel. Voor Nederland is de naam verplicht
             voor de service typen OGC:WMS, OGC:WFS, OGC:WMTS, OGC:WCS en
             INSPIRE:Atom. Dit element bevat de layername uit WMS of WCS,
-            identifier uit WMTS, de featureType name uit WFS of Dataset Feed Title
-            uit Atom.</p>
+            identifier uit WMTS, de featureType name uit WFS of Dataset Feed
+            Title uit Atom.</p>
           <table>
             <colgroup><col style="width: 25%"><col style="width: 75%"></colgroup>
             <tbody>
@@ -991,11 +991,13 @@ xlink:href="http://inspire.ec.europa.eu/metadata-codelist/OnLineDescriptionCode/
         </section>
         <section id="unieke-identifier-van-de-bron">
           <h4><strong><em>Toelichting</em></strong></h4>
-          <p>Het metadata element Naam legt de relatie naar de layer in de
-            service die de dataset ontsluit, door middel van de naam van de
-            layer, feed of featuretype. Hiermee wordt het mogelijk een of
-            meerdere datasets uit een service te benaderen. Alternatieve aanpak
-            is om middels metadata url of identifier een link te leggen.</p>
+          <p>Het metadata element 'name' legt de relatie naar de
+            layer/featuretype in de service die de dataset ontsluit. Een service
+            ontsluit typisch diverse datasets, dus is een extra parameter nodig
+            om aan te geven welke layer/featuretype uit de service relevant is.
+            Een alternatieve aanpak is om middels de metadata url of identifier
+            in de service beschrijving een link terug naar de metadata te
+            leggen.</p>
           <h4>Unieke Identifier van de bron</h4>
           <p style="text-align:left"><em>identificationInfo[1]/*/citation/*/identifier/MD_Identifier/code</em><span
               style="float:right">[<a data-cite="ISO19139">ISO 19139:2007</a>]</span></p>
@@ -3831,24 +3833,6 @@ Toelichting: Eenheid waar een lidstaat rechtsbevoegdheid
                 <td>Other Services</td>
               </tr>
               <tr>
-                <td>OGC:WMC</td>
-                <td>Web Map Context</td>
-                <td> <br>
-                </td>
-              </tr>
-              <tr>
-                <td>OGC:KML</td>
-                <td>Keyhole Mark-up Language</td>
-                <td> <br>
-                </td>
-              </tr>
-              <tr>
-                <td>OGC:GML</td>
-                <td>Geography Markup Language</td>
-                <td> <br>
-                </td>
-              </tr>
-              <tr>
                 <td>OGC:WFS-G</td>
                 <td>Gazzetteer service</td>
                 <td> <br>
@@ -3909,14 +3893,40 @@ Toelichting: Eenheid waar een lidstaat rechtsbevoegdheid
                 </td>
               </tr>
               <tr>
-                <td>website</td>
-                <td>website</td>
+                <td>OGC:SensorThings</td>
+                <td>SensorThings API</td>
+                <td><br>
+                </td>
+              </tr>
+              <tr>
+                <td>W3C:SPARQL</td>
+                <td>SPARQL Query Language for RDF</td>
+                <td><br>
+                </td>
+              </tr>
+              <tr>
+                <td>OASIS:OData</td>
+                <td>Open data protocol</td>
+                <td><br>
+                </td>
+              </tr>
+              <tr>
+                <td>OAS</td>
+                <td>Open API Specification</td>
+                <td><br>
+                </td>
+              </tr>
+              <tr>
+                <td>landingpage</td>
+                <td>Een webpagina die toegang geeft tot de dataset of overige
+                  informatie bevat</td>
                 <td> <br>
                 </td>
               </tr>
               <tr>
-                <td>download</td>
-                <td>download</td>
+                <td>application</td>
+                <td>Een (web) applicatie die rechtstreeks toegang geeft tot de
+                  dataset</td>
                 <td> <br>
                 </td>
               </tr>
