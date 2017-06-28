@@ -885,9 +885,10 @@ style="float:right">[<a data-cite="ISO19139">ISO 19139:2007</a>]</span></p>
             downloadbaar bestand (endPoint) of een link naar een webapplicatie
             waarmee de data direct getoond wordt of een webpagina die
             aanvullende instructies geeft over hoe de dataset te ontsloten kan
-            worden (accessPoint). Voor een service dient de URL gelijk te zijn
-            aan de resource locator uit het Nederlands metadata profiel op
-            ISO19119 voor services.</p>
+            worden (accessPoint). De URL wordt zodanig aangeboden, dat deze
+            altijd direct een resultaat geeft, zonder dat deze bevraagd wordt.
+            Voor een service dient de URL gelijk te zijn aan de resource locator
+            uit het Nederlands metadata profiel op ISO19119 voor services.</p>
           <table>
             <colgroup><col style="width: 25%"><col style="width: 75%"></colgroup>
             <tbody>
@@ -896,12 +897,24 @@ style="float:right">[<a data-cite="ISO19139">ISO 19139:2007</a>]</span></p>
                 <th>Voorbeeld</th>
               </tr>
               <tr>
-                <td>URL</td>
-                <td>https://monumentenregister.cultureelerfgoed.nl/leeswijzer</td>
+                <td>URL accessPoint</td>
+                <td>http://services.rce.geovoorziening.nl/rce/wms?&amp;request=GetCapabilities&amp;service=WMS</td>
               </tr>
               <tr>
-                <td>URL</td>
-                <td>https://geodata.nationaalgeoregister.nl/inspire/cp/ows?request=getcapabilities&amp;service=wfs&amp;version=2.0.0</td>
+                <td>URL accessPoint</td>
+                <td>http://services.rce.geovoorziening.nl/www/download/data/Rijksmonumenten_nl.xml</td>
+              </tr>
+              <tr>
+                <td>URL endPoint</td>
+                <td>http://services.rce.geovoorziening.nl/rce/ows?SERVICE=WMS&amp;&amp;SERVICE=WMS&amp;VERSION=1.3.0
+                  &amp;REQUEST=GetMap&amp;FORMAT=image%2Fpng&amp;TRANSPARENT=true&amp;LAYERS=rce%3AArcheologicalMonuments
+                  &amp;STYLES=Archeologie_in_Nederland&amp;CRS=EPSG%3A28992&amp;WIDTH=1650&amp;HEIGHT=830
+                  &amp;BBOX=-16020.479999999981%2C396426.24%2C161387.52000000002%2C485667.83999999997</td>
+              </tr>
+              <tr>
+                <td>URL endPoint</td>
+                <td>http://services.rce.geovoorziening.nl/rce/wfs?request=GetFeature&amp;service=WFS&amp;version=2.0.0&amp;typeName=NationalListedMonuments&amp;outputFormat=json
+                  </td>
               </tr>
             </tbody>
           </table>
@@ -916,10 +929,10 @@ style="float:right">[<a data-cite="ISO19139">ISO 19139:2007</a>]</span></p>
               OnLineDescriptionCode</a> die het type URL beschrijft.</p>
           <p>Indien verwezen wordt naar een URL die rechtstreeks een dataset in
             een specifiek mediatype oplevert dient de waarde endPoint gebruikt
-            te worden. In andere gevallen de waarde accessPoint. Een accessPoint
-            betreft een document (capabilities) hoe een data service aangeroepen
-            kan worden, dan wel een applicatie van waaruit de dataset gedownload
-            kan worden.</p>
+            te worden. In andere gevallen de waarde accessPoint. De accessPoint
+            URL levert informatie over de service inclusief zijn endPoints. Dat
+            kan bijvoorbeeld een capabilities of WSDL document zijn of een
+            webpagina waar data te downloden is.</p>
           <table>
             <colgroup><col style="width: 25%"><col style="width: 75%"></colgroup>
             <tbody>
