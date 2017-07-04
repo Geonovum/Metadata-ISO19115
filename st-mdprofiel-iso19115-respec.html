@@ -467,6 +467,12 @@ data-cite="INSPIRE-19115-19119"><em>INSPIRE Metadata Implementing
               <td>Verplicht gesteld voor de OGC:WMS, OGC:WFS en OGC:WCS.</td>
             </tr>
             <tr>
+              <td>Description</td>
+              <td>C</td>
+              <td>Het is verplicht als er een URL van het type 'endPoint' is
+                opgegeven.</td>
+            </tr>
+            <tr>
               <td>Unieke Identifier van de bron.</td>
               <td>V</td>
               <td>Dit element is verplicht. Het gebuik van een URI is
@@ -967,13 +973,13 @@ style="float:right">[<a data-cite="ISO19139">ISO 19139:2007</a>]</span></p>
                 <th>Voorbeeld</th>
               </tr>
               <tr>
-                <td>protocol (endPoint)</td>
+                <td>protocol endPoint</td>
                 <td><code>&lt;gmx:Anchor
                     xlink:href="https://www.iana.org/assignments/media-types/application/gml+xml"&gt;
                     GML &lt;/gmx:Anchor&gt;</code></td>
               </tr>
               <tr>
-                <td>protocol (accessPoint</td>
+                <td>protocol accessPoint</td>
                 <td><code>&lt;gmx:Anchor
                     xlink:href="http://standaarden.geonovum.nl/SV_ServiceType/OGC:WMS"&gt;
                     OGC:WMS &lt;/gmx:Anchor&gt;</code></td>
@@ -1964,9 +1970,9 @@ style="float:right">[<a data-cite="ISO19139">ISO 19139:2007</a>]</span></p>
           <h4>Metadata unieke identifier</h4>
           <p style="text-align:left"><em>fileIdentifier</em><span style="float:right">[<a
 data-cite="ISO19139">ISO 19139:2007</a>]</span></p>
-          <p>Dit element bevat de unieke identifier voor de metadata file.
-            Geadviseerd wordt om gebruik te maken van een betekenisloze
-            identifier die wereldwijd uniek is zoals de <a href="http://en.wikipedia.org/wiki/UUID">Universal
+          <p>Dit element bevat de unieke en persistente identifier voor de
+            metadata file. Geadviseerd wordt om gebruik te maken van een
+            betekenisloze identifier die wereldwijd uniek is zoals de <a href="http://en.wikipedia.org/wiki/UUID">Universal
               Unique Identifier</a></p>
           <table>
             <colgroup><col style="width: 25%"><col style="width: 75%"></colgroup>
