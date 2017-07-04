@@ -193,24 +193,24 @@
       <p><b>ISO 19115:</b></p>
       <ul>
         <li>EN ISO 19115:2005, Geographic information - Metadata<br>
-          <span class="note"><span class="marker">NOOT</span> EN ISO 19115:2005
+          <span class="note"><span class="marker">NOOT</span>EN ISO 19115:2005
             is de adoptie door CEN van ISO 19115:2003</span></li>
         <li>EN ISO 19115:2005/AC:2008 , Geographic information – Metadata,
           Technical Corrigendum 1<br>
-          <span class="note"><span class="marker">NOOT </span>EN ISO
+          <span class="note"><span class="marker">NOOT</span>EN ISO
             19115:2005/AC:2008 is de adoptie door CEN van ISO 19115/Cor.1:2006</span></li>
       </ul>
       <p></p>
       <p><b>CEN ISO/TS 19139:2009</b>, Geographic information - Metadata – XML
         Schema Implementation<br>
-        <span class="note"><span class="marker">NOOT </span>CEN ISO/TS
-          19139:2009 is de adoptie door CEN van ISO/TS 19139:2007</span></p>
+        <span class="note"><span class="marker">NOOT</span>CEN ISO/TS 19139:2009
+          is de adoptie door CEN van ISO/TS 19139:2007</span></p>
       <p><b>CSW2 AP ISO</b>, <a href="portal.opengeospatial.org/files/?artifact_id=21460">OpenGIS
           Catalogue Services Specification 2.0.2 - ISO Metadata Application
           Profile</a>, Version 1.0.0, OGC 07-045, 2007</p>
       <p><b>ISO 19108</b>, EN ISO 19108:2005, Geographic information – Temporal
         Schema<br>
-        <span class="note"><span class="marker">NOOT</span> EN ISO 19108:2005 is
+        <span class="note"><span class="marker">NOOT</span>EN ISO 19108:2005 is
           de adoptie door CEN van ISO 19108:2002</span></p>
       <p><b>ISO 8601:2004</b>, Data elements and interchange formats -
         Information interchange - Representation of dates and times</p>
@@ -462,15 +462,15 @@ data-cite="INSPIRE-19115-19119"><em>INSPIRE Metadata Implementing
               <td>Verplicht als er een URL is opgegeven.</td>
             </tr>
             <tr>
+              <td>Naam </td>
+              <td>C</td>
+              <td>Verplicht gesteld voor de OGC:WMS, OGC:WFS en OGC:WCS.</td>
+            </tr>
+            <tr>
               <td>Description</td>
               <td>C</td>
               <td>Het is verplicht als er een URL van het type 'endPoint' is
                 opgegeven.</td>
-            </tr>
-            <tr>
-              <td>Naam </td>
-              <td>C</td>
-              <td>Verplicht gesteld voor de OGC:WMS, OGC:WFS en OGC:WCS.</td>
             </tr>
             <tr>
               <td>Unieke Identifier van de bron.</td>
@@ -478,11 +478,7 @@ data-cite="INSPIRE-19115-19119"><em>INSPIRE Metadata Implementing
               <td>Dit element is verplicht. Het gebuik van een URI is
                 conditioneel. Het is verplicht voor INSPIRE datasets. </td>
             </tr>
-            <tr>
-              <td>Unieke identifier van de identificatie sectie.</td>
-              <td>C</td>
-              <td>Verplicht voor INSPIRE</td>
-            </tr>
+            
             <tr>
               <td>Taal van de bron</td>
               <td>C</td>
@@ -924,7 +920,8 @@ style="float:right">[<a data-cite="ISO19139">ISO 19139:2007</a>]</span></p>
               <tr>
                 <td>URL endPoint</td>
                 <td>http://services.rce.geovoorziening.nl/rce/wfs?request=GetFeature&amp;service=WFS&amp;version=2.0.0&amp;typeName=NationalListedMonuments&amp;outputFormat=json
-                  </td> </tr>
+                  </td>
+              </tr>
             </tbody>
           </table>
         </section>
@@ -941,7 +938,7 @@ style="float:right">[<a data-cite="ISO19139">ISO 19139:2007</a>]</span></p>
             te worden. In andere gevallen de waarde accessPoint. De accessPoint
             URL levert informatie over de service inclusief zijn endPoints. Dat
             kan bijvoorbeeld een capabilities of WSDL document zijn of een
-            webpagina waar data te downloden is. </p>
+            webpagina waar data te downloden is.</p>
           <table>
             <colgroup><col style="width: 25%"><col style="width: 75%"></colgroup>
             <tbody>
@@ -1021,8 +1018,6 @@ style="float:right">[<a data-cite="ISO19139">ISO 19139:2007</a>]</span></p>
               </tr>
             </tbody>
           </table>
-        </section>
-        <section id="unieke-identifier-van-de-bron">
           <h4><strong><em>Toelichting</em></strong></h4>
           <p>Het metadata element 'name' legt de relatie naar de
             layer/featuretype in de service die de dataset ontsluit. Een service
@@ -1031,6 +1026,9 @@ style="float:right">[<a data-cite="ISO19139">ISO 19139:2007</a>]</span></p>
             Een alternatieve aanpak is om middels de metadata url of identifier
             in de service beschrijving een link terug naar de metadata te
             leggen.</p>
+        </section>
+        <section id="unieke-identifier-van-de-bron">
+          
           <h4>Unieke Identifier van de bron</h4>
           <p style="text-align:left"><em>identificationInfo[1]/*/citation/*/identifier/MD_Identifier/code</em><span
 style="float:right">[<a data-cite="ISO19139">ISO 19139:2007</a>]</span></p>
@@ -1092,6 +1090,7 @@ style="float:right">[<a data-cite="ISO19139">ISO 19139:2007</a>]</span>
             record. Om uniek te kunnen verwijzen dient ieder
             MD_DataIdentification sectie een unieke identifier te bevatten.<br>
           </p>
+        </section>
           <h4>Taal van de bron</h4>
           <p style="text-align:left"><em>identificationInfo[1]/*/language</em><span
 style="float:right">[<a data-cite="ISO19139">ISO 19139:2007</a>]</span></p>
@@ -1313,7 +1312,8 @@ style="float:right">[<a data-cite="ISO19139">ISO 19139:2007</a>]</span></p>
               </tr>
             </tbody>
           </table>
-          <div class="advisement"><i>Toelichting: Omgrenzende rechthoek</i>
+          <div class="advisement"><i><br>
+              Toelichting: Omgrenzende rechthoek</i>
             <p>De geografische locatie kan op drie manier worden beschreven,
               namelijk door een omgrenzende polygon (1), een omgrenzende
               rechthoek (2) of door een beschrijving (3). De
@@ -1555,7 +1555,8 @@ style="float:right">[<a data-cite="ISO19139">ISO 19139:2007</a>]</span></p>
               </tr>
             </tbody>
           </table>
-          <div class="advisement"><i>Toelichting</i>
+          <div class="advisement"><i><br>
+              Toelichting</i>
             <p>Naast het horizontaal ruimtelijk referentiesysteem kan ook het
               verticaal ruimtelijk referentiesysteem in de metadata worden
               opgeslagen, bijvoorbeeld NAP. Deze gegevens kan men in het
@@ -2004,8 +2005,7 @@ data-cite="ISO19139">ISO 19139:2007</a>]</span></p>
           <p>Dit element bevat de unieke en persistente identifier voor de
             metadata file. Geadviseerd wordt om gebruik te maken van een
             betekenisloze identifier die wereldwijd uniek is zoals de <a href="http://en.wikipedia.org/wiki/UUID">Universal
-              Unique Identifier <br>
-            </a></p>
+              Unique Identifier</a></p>
           <table>
             <colgroup><col style="width: 25%"><col style="width: 75%"></colgroup>
             <tbody>
@@ -10306,15 +10306,17 @@ width="100%">
                   MD_Identifier.code</span></p>
             </td>
             <td>
-              <p>Alfanumerieke waarde die het geografisch gebied dat wordt
-                bedekt door de data aangeeft.</p>
+              <p>Anchor dat zowel een link naar een URI als wel een
+                Alfanumerieke waarde die het geografisch gebied dat wordt bedekt
+                door de data aangeeft.</p>
             </td>
             <td>
-              <p>7777-25-9999</p>
-              <p>Achterhoek</p>
+              <p>&lt;Anchor
+                xlink:href="http://standaarden.overheid.nl/owms/terms/Ameland"&gt;</p>
+              <p>Ameland&lt;/Anchor&gt;</p>
             </td>
             <td>
-              <p>Hier kan men bijvoorbeeld de ID opnemen van adressen uit de BAG</p>
+              <p>Hier kan men bijvoorbeeld een URI opnemen uit de OWMS waardelijsten</p>
             </td>
             <td>
               <p>string</p>
