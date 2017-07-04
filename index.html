@@ -557,8 +557,7 @@ github.com style (c) Vasily Polovnyov <vast@whiteants.net>
     </ul>
     <p>Ten behoeve van de Europese INSPIRE regelgeving is ook een metadata profiel opgesteld. De vereisten uit het INSPIRE profiel zijn opgenomen in de Nederlandse profielen, zodat door te voldoen aan het Nederlandse profiel tevens aan de Europese INSPIRE vereisten voldaan kan worden.</p>
     <p>​Het metadataprofiel voor services wordt gebruikt in combinatie met het profiel voor datasets. Beide profielen staan op de <a href="http://forumstandaardisatie.nl/open-standaarden/lijsten-met-open-standaarden/">Pas-toe-of-leg-uit-lijst</a> van het College Standaardisatie.</p>
-    Het Nederlandse metadata profiel voor geografie is niet statisch. Dit document wordt daarom onder beheer gebracht om wijzigingen naar behoefte en op basis van voorstellen gestructureerd door te voeren. Geonovum, als beherende instantie, zal de wijzigingen registreren.
-  </section>
+    Het Nederlandse metadata profiel voor geografie is niet statisch. Dit document wordt daarom onder beheer gebracht om wijzigingen naar behoefte en op basis van voorstellen gestructureerd door te voeren. Geonovum, als beherende instantie, zal de wijzigingen registreren. </section>
 
   <section id="sotd" class="introductory">
     <h2 id="h-sotd" resource="#h-sotd"><span property="xhv:role" resource="xhv:heading">Status van dit document</span></h2>
@@ -731,7 +730,8 @@ github.com style (c) Vasily Polovnyov <vast@whiteants.net>
       </h3>
       <p><a href="#image001" class="fig-ref">Figuur 1</a> plaatst het Nederlandse metadata profiel voor geografie in zijn internationale en sectorale context. De ISO-kernset is de kleinste eenheid, een selectie uit ISO 19115.</p>
       <figure id="image001"> <a href="st-mdprofiel-iso19115/image001.svg"><img src="st-mdprofiel-iso19115/image001.svg" alt="image001"></a>
-        <figcaption>Figuur <span class="figno">1</span> <span class="fig-title">Context profiel.</span></figcaption>
+        <figcaption>Figuur <span class="figno">1</span> <span class="fig-title">Context
+            profiel.</span></figcaption>
       </figure>
       <p>De Nederlandse kernset bevat de Europese kernset (INSPIRE) plus een selectie van metadata-elementen uit ISO 19115. In dit profiel zijn de metadata elementen met hun oorsprong aangegeven in <a href="#appendix-d">Appendix
             D</a>.</p>
@@ -750,26 +750,30 @@ github.com style (c) Vasily Polovnyov <vast@whiteants.net>
     <!--OddPage-->
     <h2 id="h-normatieve-verwijzing" resource="#h-normatieve-verwijzing"><span property="xhv:role" resource="xhv:heading"><span class="secno">2. </span> Normatieve verwijzing</span>
     </h2>
-
     <p>De volgende normen, standaarden en specificaties zijn toegepast in dit profiel:
     </p>
-
-    EN ISO 19115:2005, Geographic information - Metadata<br>
+    <b>EN ISO 19115:2005</b>, Geographic information - Metadata<br>
+    <br>
     <div class="note">
       <div class="note-title marker" aria-level="3" role="heading" id="h-note2"><span>Noot</span></div>
-      <div class="">EN ISO 19115:2005 is de adoptie door CEN van ISO 19115:2003</div>
+      <div class="">EN ISO 19115:2005 is de adoptie door CEN van ISO 19115:2003
+        <br>
+      </div>
     </div>
-    EN ISO 19115:2005/AC:2008 , Geographic information – Metadata, Technical Corrigendum 1<br>
+    <b>EN ISO 19115:2005/AC:2008 ,</b> Geographic information – Metadata, Technical Corrigendum 1<br>
+    <br>
     <div class="note">
       <div class="note-title marker" aria-level="3" role="heading" id="h-note3"><span>Noot</span></div>
-      <div class="">EN ISO 19115:2005/AC:2008 is de adoptie door CEN van ISO 19115/Cor.1:2006</div>
+      <div class="">EN ISO 19115:2005/AC:2008 is de adoptie door CEN van ISO 19115/Cor.1:2006
+      </div>
     </div>
     <p></p>
     <p><b>CEN ISO/TS 19139:2009</b>, Geographic information - Metadata – XML Schema Implementation<br>
     </p>
     <div class="note">
       <div class="note-title marker" aria-level="3" role="heading" id="h-note4"><span>Noot</span></div>
-      <div class="">CEN ISO/TS 19139:2009 is de adoptie door CEN van ISO/TS 19139:2007</div>
+      <div class="">CEN ISO/TS 19139:2009 is de adoptie door CEN van ISO/TS 19139:2007
+      </div>
     </div>
     <p></p>
     <p><b>CSW2 AP ISO</b>, <a href="portal.opengeospatial.org/files/?artifact_id=21460">OpenGIS
@@ -780,7 +784,8 @@ github.com style (c) Vasily Polovnyov <vast@whiteants.net>
     </p>
     <div class="note">
       <div class="note-title marker" aria-level="3" role="heading" id="h-note5"><span>Noot</span></div>
-      <div class="">EN ISO 19108:2005 is de adoptie door CEN van ISO 19108:2002</div>
+      <div class="">EN ISO 19108:2005 is de adoptie door CEN van ISO 19108:2002
+      </div>
     </div>
     <p></p>
     <p><b>ISO 8601:2004</b>, Data elements and interchange formats - Information interchange - Representation of dates and times</p>
@@ -1013,7 +1018,7 @@ http://schemas.opengis.net/csw/2.0.2/profiles/apiso/1.0.0/apiso.xsd</a></td>
           <tr>
             <td>Naam </td>
             <td>C</td>
-            <td>Verplicht gesteld voor de OGC:WMS, OGC:WFS en OGC:WCS.</td>
+            <td>Verplicht gesteld voor de OGC:WMS, OGC:WFS OGC:WMTS OGC:WCS en INSPIRE:Atom.</td>
           </tr>
           <tr>
             <td>Description</td>
@@ -1026,7 +1031,12 @@ http://schemas.opengis.net/csw/2.0.2/profiles/apiso/1.0.0/apiso.xsd</a></td>
             <td>V</td>
             <td>Dit element is verplicht. Het gebuik van een URI is conditioneel. Het is verplicht voor INSPIRE datasets. </td>
           </tr>
-
+          <tr>
+            <td>Unieke Identifier van de identificatie sectie</td>
+            <td>C</td>
+            <td>Het is voor INSPIRE verplicht als er meer dan één gmd:MD_DataIdentification element wordt opgenomen.
+            </td>
+          </tr>
           <tr>
             <td>Taal van de bron</td>
             <td>C</td>
@@ -1407,7 +1417,12 @@ http://schemas.opengis.net/csw/2.0.2/profiles/apiso/1.0.0/apiso.xsd</a></td>
         </h4>
         <p style="text-align:left"><em>distributionInfo/*/transferOptions/*/onLine/*/linkage</em><span style="float:right">[<a href="http://inspire.ec.europa.eu/documents/Metadata/INSPIRE_MD_IR_and_ISO_v1_2_20100616.pdf">ISO 19139:2007</a>]</span></p>
         <p>Dit element is conditioneel. Het is verplicht indien de ontsluiting publiek toegankelijk is en onder de verantwoordelijkheid van de beherende organisatie valt. Het element kan meerdere keren voorkomen, bijvoorbeeld als link naar een direct downloadbaar bestand, een data loket, WMS en WFS.</p>
-        <p>Het bevat een valide URL voor online toegang tot een direct downloadbaar bestand (endPoint) of een link naar een webapplicatie waarmee de data direct getoond wordt of een webpagina die aanvullende instructies geeft over hoe de dataset te ontsloten kan worden (accessPoint). De URL wordt zodanig aangeboden, dat deze altijd direct een resultaat geeft, zonder dat deze bevraagd wordt. Voor een service dient de URL gelijk te zijn aan de resource locator uit het Nederlands metadata profiel op ISO19119 voor services.</p>
+
+        <p>Het bevat een valide URL voor online toegang tot een service, een link naar een webapplicatie waarmee de data direct getoond wordt of een webpagina die aanvullende instructies geeft over hoe de dataset te ontsloten kan worden. </p>
+        <p>Voor services bevat het in ieder geval een accessPoint URL. Een accessPoint URL levert informatie over de service inclusief zijn endPoints. Dat kan bijvoorbeeld een capabilities of WSDL document zijn of een webpagina waar data te downloden is.</p>
+        <p>Een URL die rechtstreeks een dataset in een specifiek mediatype oplevert is een endPoint. </p>
+        <p>De URL wordt zodanig aangeboden, dat deze altijd direct een resultaat geeft, zonder dat deze bevraagd wordt. </p>
+        <p>Voor een service dient de URL gelijk te zijn aan de resource locator uit het Nederlands metadata profiel op ISO19119 voor services.</p>
         <table>
           <colgroup>
             <col style="width: 25%">
@@ -1416,23 +1431,27 @@ http://schemas.opengis.net/csw/2.0.2/profiles/apiso/1.0.0/apiso.xsd</a></td>
           <tbody>
             <tr>
               <th>Data type of Domein</th>
-              <th>Voorbeeld</th>
+              <th>Voorbeeld accessPoint</th>
             </tr>
             <tr>
-              <td>URL accessPoint</td>
+              <td>URL </td>
               <td>http://services.rce.geovoorziening.nl/rce/wms?&amp;request=GetCapabilities&amp;service=WMS</td>
             </tr>
             <tr>
-              <td>URL accessPoint</td>
+              <td>URL </td>
               <td>http://services.rce.geovoorziening.nl/www/download/data/Rijksmonumenten_nl.xml</td>
             </tr>
             <tr>
-              <td>URL endPoint</td>
+              <th>Data type of Domein</th>
+              <th>Voorbeeld endPoint</th>
+            </tr>
+            <tr>
+              <td>URL </td>
               <td>http://services.rce.geovoorziening.nl/rce/ows?SERVICE=WMS&amp;&amp;SERVICE=WMS&amp;VERSION=1.3.0 &amp;REQUEST=GetMap&amp;FORMAT=image%2Fpng&amp;TRANSPARENT=true&amp;LAYERS=rce%3AArcheologicalMonuments &amp;STYLES=Archeologie_in_Nederland&amp;CRS=EPSG%3A28992&amp;WIDTH=1650&amp;HEIGHT=830 &amp;BBOX=-16020.479999999981%2C396426.24%2C161387.52000000002%2C485667.83999999997
               </td>
             </tr>
             <tr>
-              <td>URL endPoint</td>
+              <td>URL</td>
               <td>http://services.rce.geovoorziening.nl/rce/wfs?request=GetFeature&amp;service=WFS&amp;version=2.0.0&amp;typeName=NationalListedMonuments&amp;outputFormat=json
               </td>
             </tr>
@@ -1472,7 +1491,7 @@ xlink:href="http://inspire.ec.europa.eu/metadata-codelist/OnLineDescriptionCode/
         <p style="text-align:left"><em>distributionInfo/*/transferOptions/*/onLine/*/protocol</em><span style="float:right">[<a href="http://inspire.ec.europa.eu/documents/Metadata/INSPIRE_MD_IR_and_ISO_v1_2_20100616.pdf">ISO 19139:2007</a>]</span></p>
         <p>Dit element is conditioneel. Het is verplicht als er een URL is opgegeven. Bijvoorbeeld naar een bestand, WFS of webpagina. Indien de URL een 'endPoint' betreft dan dient een waarde geselecteerd te worden uit de <a href="http://inspire.ec.europa.eu/media-types">codelijst
               media-types</a>. Indien het een 'accessPoint' betreft, dient een waarde geselecteerd te worden uit de <a href="#codelijst-sv-servicetype">codelijst
-              SV_ServiceType</a>.</p>
+              SV_ServiceType</a>. </p>
         <table>
           <colgroup>
             <col style="width: 25%">
@@ -1484,13 +1503,13 @@ xlink:href="http://inspire.ec.europa.eu/metadata-codelist/OnLineDescriptionCode/
               <th>Voorbeeld</th>
             </tr>
             <tr>
-              <td>protocol endPoint</td>
+              <td>media-types</td>
               <td><code>&lt;gmx:Anchor
                     xlink:href="https://www.iana.org/assignments/media-types/application/gml+xml"&gt;
                     GML &lt;/gmx:Anchor&gt;</code></td>
             </tr>
             <tr>
-              <td>protocol accessPoint</td>
+              <td>SV_ServiceType</td>
               <td><code>&lt;gmx:Anchor
                     xlink:href="http://standaarden.geonovum.nl/SV_ServiceType/OGC:WMS"&gt;
                     OGC:WMS &lt;/gmx:Anchor&gt;</code></td>
@@ -1525,8 +1544,7 @@ xlink:href="http://inspire.ec.europa.eu/metadata-codelist/OnLineDescriptionCode/
           </tbody>
         </table>
         <h4 id="toelichting"><strong><em>Toelichting</em></strong></h4>
-        <p>Het metadata element 'name' legt de relatie naar de layer/featuretype in de service die de dataset ontsluit. Een service ontsluit typisch diverse datasets, dus is een extra parameter nodig om aan te geven welke layer/featuretype uit de service relevant is. Een alternatieve aanpak is om middels de metadata url of identifier in de service beschrijving een link terug naar de metadata te leggen.
-        </p>
+        <p>Het metadata element 'name' legt de relatie naar de layer/featuretype in de service die de dataset ontsluit. Een service ontsluit typisch diverse datasets, dus is een extra parameter nodig om aan te geven welke layer/featuretype uit de service relevant is.</p>
       </section>
 
       <section id="unieke-identifier-van-de-bron" typeof="bibo:Chapter" resource="#unieke-identifier-van-de-bron" property="bibo:hasPart">
@@ -1560,7 +1578,7 @@ xlink:href="http://inspire.ec.europa.eu/metadata-codelist/OnLineDescriptionCode/
         <h4 id="h-unieke-identifier-van-de-identificatie-sectie" resource="#h-unieke-identifier-van-de-identificatie-sectie"><span property="xhv:role" resource="xhv:heading"><span class="secno">5.2.11 </span>Unieke identifier van de identificatie sectie</span>
         </h4>
         <em>identificationInfo/</em><em><code>MD_DataIdentification</code>[@gml:id]</em><span style="float:right">[ISO 19139:2007]</span>
-        <p>Dit element is voor INSPIRE verplicht indien een service metadata verwijst naar dit element. De aanbieders van datasets dienen te zorgen dat de uitgegeven identificatie uniek is binnen de catalogi waarin het record aangeboden wordt en constant is voor de beschikbaarheidstermijn van de bron. </p>
+        <p>Dit element conditioneel. Het is voor INSPIRE verplicht als er meer dan één gmd:MD_DataIdentification element wordt opgenomen. De aanbieders van datasets dienen te zorgen dat de uitgegeven identificatie uniek is binnen de catalogi waarin het record aangeboden wordt en constant is voor de beschikbaarheidstermijn van de bron. </p>
         <table>
           <colgroup>
             <col style="width: 25%">
@@ -1580,7 +1598,7 @@ xlink:href="http://inspire.ec.europa.eu/metadata-codelist/OnLineDescriptionCode/
         </table>
         <em><br>
             Toelichting</em>
-        <p>INSPIRE vereist dat de operatesOn link in Service metadata verwijst naar de relevante MD_DataIdentification sectie in het gekoppelde record. Om uniek te kunnen verwijzen dient ieder MD_DataIdentification sectie een unieke identifier te bevatten.<br>
+        <p>INSPIRE vereist dat de operatesOn link in Service metadata verwijst naar de relevante MD_DataIdentification sectie in het gekoppelde record. Om uniek te kunnen verwijzen dient ieder MD_DataIdentification sectie een unieke identifier te bevatten, als deze meerdere keren voorkomt.<br>
         </p>
       </section>
 
@@ -2319,7 +2337,7 @@ xlink:href="http://inspire.ec.europa.eu/metadata-codelist/OnLineDescriptionCode/
         <h4 id="h-juridische-toegangsrestricties" resource="#h-juridische-toegangsrestricties"><span property="xhv:role" resource="xhv:heading"><span class="secno">5.2.42 </span>Juridische toegangsrestricties</span>
         </h4>
         <p style="text-align:left"><em>identificationInfo[1]/*/resourceConstraints/*/accessConstraints</em><span style="float:right">[<a href="http://inspire.ec.europa.eu/documents/Metadata/INSPIRE_MD_IR_and_ISO_v1_2_20100616.pdf">ISO 19139:2007</a>]</span></p>
-        <p>Het is verplicht juridische toegangsrestricties op te nemen. Het is verplicht een waarde op te nemen voor beperkingen op publieke toegang in één gmd:resourceConstraints/gmd:MD_LegalConstraints element. Daarnaast is het verplicht voorwaarden voor toegang en gebruik op te nemen in één ander gmd:resourceConstraints/gmd:MD_LegalConstraints element. Dit element bevat toegangseisen die er zorg voor dragen dat privacy of intellectueel eigendom gewaarborgd zijn en elke andere speciale beperkingen voor het verkrijgen van de metadata of data. De waardes komen uit <a href="#codelijst-b524">codelijst B.5.24 van ISO19115</a>.</p>
+        <p>Het is verplicht juridische toegangsrestricties op te nemen. Het is verplicht een waarde op te nemen voor beperkingen op publieke toegang in één gmd:resourceConstraints/gmd:MD_LegalConstraints element. Daarnaast is het verplicht voorwaarden voor toegang en gebruik op te nemen in één ander gmd:resourceConstraints/gmd:MD_LegalConstraints element. Voor INSPIRE datasets, bevat dit element de waarde "otherRestrictions". Dit element bevat toegangseisen die er zorg voor dragen dat privacy of intellectueel eigendom gewaarborgd zijn en elke andere speciale beperkingen voor het verkrijgen van de metadata of data. De waardes komen uit <a href="#codelijst-b524">codelijst B.5.24 van ISO19115</a>.</p>
         <table>
           <colgroup>
             <col style="width: 25%">
@@ -2343,8 +2361,8 @@ xlink:href="http://inspire.ec.europa.eu/metadata-codelist/OnLineDescriptionCode/
         </h4>
         <p style="text-align:left"><em>identificationInfo[1]/*/resourceConstraints/*/otherConstraints</em><span style="float:right">[<a href="http://inspire.ec.europa.eu/documents/Metadata/INSPIRE_MD_IR_and_ISO_v1_2_20100616.pdf">ISO 19139:2007</a>]</span></p>
         <p>Dit element is conditioneel, als het element juridische toegangsrestricties de waarde otherRestrictions bevat dient het te worden opgenomen.&nbsp; </p>
-        <p>Hierin wordt&nbsp;in één&nbsp; gmd:resourceConstraints/gmd:MD_LegalConstraints element&nbsp; voor de voorwaarden voor toegang en gebruik&nbsp; een link naar de licentie opgenomen.&nbsp; Als het een INSPIRE dataset is en er geen beperkingen zijn of deze niet bekend zijn wordt er daarnaast een waarde uit de INSPIRE code lijst ConditionsApplyingToAccessAndUse voor "noConditionsApply" of "conditionsUnknown" opgenomen in een tweede otherConstraints element binnen hetzelfde&nbsp; md:resourceConstraints/gmd:MD_LegalConstraints element.&nbsp; Het bevat, indien van toepassing ook prijsinformatie voor het gebruik van de dataset.&nbsp; </p>
-        <p>Daarnaast wordt voor beperkingen op publieke toegang in één ander gmd:resourceConstraints/gmd:MD_LegalConstraints een waarde opgenomen uit de codelijst LimitationsOnPublicAccess. Als er geen beperkingen zijn dient men dat ook aan te geven, met de waarde "noLimitations".
+        <p>Hierin wordt&nbsp;in één&nbsp; gmd:resourceConstraints/gmd:MD_LegalConstraints element&nbsp; voor de voorwaarden voor toegang en gebruik&nbsp; een link naar de licentie opgenomen.&nbsp; Daarnaast wordt er, als het een INSPIRE dataset is en er geen beperkingen zijn of deze niet bekend zijn, een waarde uit <a href="http://inspire.ec.europa.eu/metadata-codelist/ConditionsApplyingToAccessAndUse/">codelijst ConditionsApplyingToAccessAndUse</a> opgenomen in een tweede otherConstraints element binnen hetzelfde&nbsp; md:resourceConstraints/gmd:MD_LegalConstraints element.&nbsp; Het bevat, indien van toepassing ook prijsinformatie voor het gebruik van de dataset.&nbsp; </p>
+        <p>Daarnaast wordt voor beperkingen op publieke toegang in één ander gmd:resourceConstraints/gmd:MD_LegalConstraints een waarde opgenomen uit <a href="http://inspire.ec.europa.eu/metadata-codelist/LimitationsOnPublicAccess/">codelijst LimitationsOnPublicAccess</a> . Als er geen beperkingen zijn dient men dat ook aan te geven, met de waarde "noLimitations".
           <br>
         </p>
         <p><br>
@@ -2380,7 +2398,7 @@ beperkingen<span class="hljs-tag">&lt;/<span class="hljs-name">gmx:anchor</span>
               <th>Voorbeeld</th>
             </tr>
             <tr>
-              <td>String</td>
+              <td>ConditionsApplyingToAccessAndUse</td>
               <td> <code>&lt;gmx:anchor
                     xlink:href="http://inspire.ec.europa.eu/metadata-codelist/ConditionsApplyingToAccessAndUse/noConditionsApply"&gt;
                     Geen beperkingen&lt;/gmx:anchor&gt;</code> </td>
@@ -2625,7 +2643,8 @@ beperkingen<span class="hljs-tag">&lt;/<span class="hljs-name">gmx:anchor</span>
         <h4 id="h-taal-van-de-metadata" resource="#h-taal-van-de-metadata"><span property="xhv:role" resource="xhv:heading"><span class="secno">5.2.54 </span>Taal van de metadata</span>
         </h4>
         <p style="text-align:left"><em>Language</em><span style="float:right">[<a href="http://inspire.ec.europa.eu/documents/Metadata/INSPIRE_MD_IR_and_ISO_v1_2_20100616.pdf">ISO 19139:2007</a>]</span></p>
-        <p>In dit element wordt vastgelegd in welke taal de metadata is beschreven. Het bevat de code van de taal waarin de tekst in de metadata is opgenomen. Gebruik hiervoor alleen de drie-letter codes van 639-2/B (bibliographic codes), zoals gedefinieerd op <a href="http://www.loc.gov/standards/iso639-2/">http://www.loc.gov/standards/iso639-2/</a>. De code voor Nederlands is dut, zie <a href="#codelijst-iso-639-2">Appendix
+        <p>In dit element wordt vastgelegd in welke taal de metadata is beschreven. Het bevat de code van de taal waarin de tekst in de metadata is opgenomen. Gebruik hiervoor alleen de drie-letter codes van 639-2/B (bibliographic codes), zoals gedefinieerd op
+          <a href="http://www.loc.gov/standards/iso639-2/">http://www.loc.gov/standards/iso639-2/</a>. De code voor Nederlands is dut, zie <a href="#codelijst-iso-639-2">Appendix
               A</a>. Over het algemeen is dut de default waarde.</p>
         <table>
           <colgroup>
