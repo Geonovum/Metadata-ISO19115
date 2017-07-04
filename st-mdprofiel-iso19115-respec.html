@@ -32,10 +32,11 @@
       Het Nederlandse metadata profiel voor geografie is niet statisch. Dit
       document wordt daarom onder beheer gebracht om wijzigingen naar behoefte
       en op basis van voorstellen gestructureerd door te voeren. Geonovum, als
-      beherende instantie, zal de wijzigingen registreren.</section>
+      beherende instantie, zal de wijzigingen registreren.
+    </section>
     <section id="sotd">
       <p>Versie 2.0.0 van het Nederlands metadataprofiel voor geografie is
-        ingegaan op xx xxx xxxx. Versie 2.0.0 kent een&nbsp; aantal
+        ingegaan op xx xxx xxxx. Versie 2.0.0 kent een aantal
         aanpassingen, waarbij introductie van het gebruik van &lt;gmx:anchor&gt;
         het meest in het oog springt. De voorgaande versie (v1.3.1) wordt nog
         tot xxx xxxx ondersteund.</p>
@@ -127,7 +128,7 @@
           kenmerken die bronnen van geo-data beschrijven. Dit profiel richt zich
           op een model voor het beschrijving van ruimtelijke datasets en dataset
           series.</p>
-        <p>Het <a href="http://www.geonovum.nl/wegwijzer/standaarden/nederlands-metadataprofiel-op-iso-19119-services-121">
+        <p>Het <a href="http://www.geonovum.nl/wegwijzer/standaarden/nederlands-metadataprofiel-op-iso-19119-services-200">
             Nederlandse profiel op ISO 19119 voor services versie 2.0</a> richt
           zich op de beschrijving van ruimtelijke dataservices. Als er services
           beschikbaar zijn dienen volgens deze profielen zowel de service als de
@@ -161,8 +162,8 @@
           profiel voor geografie in zijn internationale en sectorale context. De
           ISO-kernset is de kleinste eenheid, een selectie uit ISO 19115.</p>
         <figure id="image001"> <a href="st-mdprofiel-iso19115/image001.svg"><img
-              src="st-mdprofiel-iso19115/image001.svg" alt="image001"></a> <figcaption>Context
-            profiel.</figcaption> </figure>
+              src="st-mdprofiel-iso19115/image001.svg" alt="image001"></a> 
+        <figcaption>Context profiel.</figcaption> </figure>
         <p>De Nederlandse kernset bevat de Europese kernset (INSPIRE) plus een
           selectie van metadata-elementen uit ISO 19115. In dit profiel zijn de
           metadata elementen met hun oorsprong aangegeven in <a href="#appendix-d">Appendix
@@ -187,31 +188,30 @@
       </section>
     </section>
     <section id="normatieve-verwijzing">
-      <h2>Normatieve verwijzing</h2>
+      <h1> Normatieve verwijzing</h1>
+     
       <p>De volgende normen, standaarden en specificaties zijn toegepast in dit
         profiel:</p>
-      <p><b>ISO 19115:</b></p>
-      <ul>
-        <li>EN ISO 19115:2005, Geographic information - Metadata<br>
-          <span class="note"><span class="marker">NOOT</span>EN ISO 19115:2005
-            is de adoptie door CEN van ISO 19115:2003</span></li>
-        <li>EN ISO 19115:2005/AC:2008 , Geographic information – Metadata,
+
+      EN ISO 19115:2005, Geographic information - Metadata<br>
+          <div class="note">EN ISO 19115:2005
+            is de adoptie door CEN van ISO 19115:2003</div>
+        EN ISO 19115:2005/AC:2008 , Geographic information – Metadata,
           Technical Corrigendum 1<br>
-          <span class="note"><span class="marker">NOOT</span>EN ISO
-            19115:2005/AC:2008 is de adoptie door CEN van ISO 19115/Cor.1:2006</span></li>
-      </ul>
+          <div class="note">EN ISO
+            19115:2005/AC:2008 is de adoptie door CEN van ISO 19115/Cor.1:2006</div>
       <p></p>
       <p><b>CEN ISO/TS 19139:2009</b>, Geographic information - Metadata – XML
         Schema Implementation<br>
-        <span class="note"><span class="marker">NOOT</span>CEN ISO/TS 19139:2009
-          is de adoptie door CEN van ISO/TS 19139:2007</span></p>
+        <div class="note">CEN ISO/TS 19139:2009
+          is de adoptie door CEN van ISO/TS 19139:2007</div></p>
       <p><b>CSW2 AP ISO</b>, <a href="portal.opengeospatial.org/files/?artifact_id=21460">OpenGIS
           Catalogue Services Specification 2.0.2 - ISO Metadata Application
           Profile</a>, Version 1.0.0, OGC 07-045, 2007</p>
       <p><b>ISO 19108</b>, EN ISO 19108:2005, Geographic information – Temporal
         Schema<br>
-        <span class="note"><span class="marker">NOOT</span>EN ISO 19108:2005 is
-          de adoptie door CEN van ISO 19108:2002</span></p>
+        <div class="note">EN ISO 19108:2005 is
+          de adoptie door CEN van ISO 19108:2002</div></p>
       <p><b>ISO 8601:2004</b>, Data elements and interchange formats -
         Information interchange - Representation of dates and times</p>
       <p><b>ISO 10646-1</b>, Information technology ― Universal Multiple-Octet
@@ -313,14 +313,16 @@ http://schemas.opengis.net/csw/2.0.2/profiles/apiso/1.0.0/apiso.xsd</a></td>
         <pre><code> 
 &lt;gmd:MD_Metadata
     xmlns:gmd="http://www.isotc211.org/2005/gmd"
+    xmlns:gmx="http://www.isotc211.org/2005/gmx"
+    xmlns:gco="http://www.isotc211.org/2005/gco"
     xsi:schemaLocation="http://www.isotc211.org/2005/gmd
       http://schemas.opengis.net/iso/19139/20060504/gmd/gmd.xsd
       http://www.isotc211.org/2005/gmx
       http://schemas.opengis.net/iso/19139/20060504/gmx/gmx.xsd"
     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"&gt; <br><br></code></pre>
       </aside>
-              De metadata voor een INSPIRE data set, data set series of service wordt ge-encoded met exact een gmd:MD_Metadata element.<br>Als er meer dan één gmd:MD_DataIdentification element wordt opgenomen, zal deze&nbsp; een unieke identifier moeten bevatten van het element zelf,&nbsp; zodat daar rechtstreeks naar verwezen kan worden vanuit de service metadata voor de coupled resource. Deze identifier is een waarde van de attribuut id van het&nbsp; gmd:MD_DataIdentification element.<br><br
-<="" section="">
+              De metadata voor een INSPIRE data set, data set series of service wordt ge-encoded met exact een gmd:MD_Metadata element.<br>Als er meer dan één gmd:MD_DataIdentification element wordt opgenomen, zal deze&nbsp; een unieke identifier moeten bevatten van het element zelf,&nbsp; zodat daar rechtstreeks naar verwezen kan worden vanuit de service metadata voor de coupled resource. Deze identifier is een waarde van de attribuut id van het&nbsp; gmd:MD_DataIdentification element.<br>
+    </section>
     <section id="termen-en-definities">
       <h2>Termen en definities</h2>
       <p>De volgende termen en definities zijn van toepassing op het onderwerp
