@@ -1020,8 +1020,6 @@ style="float:right">[<a data-cite="ISO19139">ISO 19139:2007</a>]</span></p>
               </tr>
             </tbody>
           </table>
-        </section>
-        <section id="unieke-identifier-van-de-bron">
           <h4><strong><em>Toelichting</em></strong></h4>
           <p>Het metadata element 'name' legt de relatie naar de
             layer/featuretype in de service die de dataset ontsluit. Een service
@@ -1030,6 +1028,9 @@ style="float:right">[<a data-cite="ISO19139">ISO 19139:2007</a>]</span></p>
             Een alternatieve aanpak is om middels de metadata url of identifier
             in de service beschrijving een link terug naar de metadata te
             leggen.</p>
+        </section>
+        <section id="unieke-identifier-van-de-bron">
+          
           <h4>Unieke Identifier van de bron</h4>
           <p style="text-align:left"><em>identificationInfo[1]/*/citation/*/identifier/MD_Identifier/code</em><span
 style="float:right">[<a data-cite="ISO19139">ISO 19139:2007</a>]</span></p>
@@ -1061,13 +1062,46 @@ href="https://nl.wikipedia.org/wiki/Uniform_resource_identifier">URI</a>.
             </tbody>
           </table>
         </section>
-        <section id="taal-van-de-bron"><br><h4>Taal van de bron</h4>
-          <p style="text-align:left"><em>identificationInfo[1]/*/language</em><span
-style="float:right">[<a data-cite="ISO19139">ISO 19139:2007</a>]</span></p>
+        <section id="unieke-identifier-van-de-identificatie-sectie">
+          <h4>Unieke identifier van de identificatie sectie</h4>
+          <em>identificationInfo/</em><em><code>MD_DataIdentification</code>[@gml:id]</em><span
+style="float:right">[ISO 19139:2007]</span>
+          <p>Dit element is voor INSPIRE verplicht indien een service metadata
+            verwijst naar dit element. De aanbieders van datasets dienen te
+            zorgen dat de uitgegeven identificatie uniek is binnen de catalogi
+            waarin het record aangeboden wordt en constant is voor de
+            beschikbaarheidstermijn van de bron. </p>
+          <table>
+            <colgroup><col style="width: 25%"><col style="width: 75%"></colgroup>
+            <tbody>
+              <tr>
+                <th>Data type of Domein</th>
+                <th>Voorbeeld</th>
+              </tr>
+              <tr>
+                <td>String</td>
+                <td><code>&lt;MD_DataIdentification
+                    id="04dbf480-1bee-4860-a280-d869cbbe193a"&gt;...&lt;/MD_DataIdentification&gt;</code></td>
+              </tr>
+            </tbody>
+          </table>
+          <em><br>
+            Toelichting</em>
+          <p>INSPIRE vereist dat de operatesOn link in Service metadata verwijst
+            naar de relevante MD_DataIdentification sectie in het gekoppelde
+            record. Om uniek te kunnen verwijzen dient ieder
+            MD_DataIdentification sectie een unieke identifier te bevatten.<br>
+          </p>
+        </section>
+        <section id="taal-van-de-bron">
+        <h4>Taal van de bron</h4>
+          <p style="text-align:left"><em>identificationInfo[1]/*/language</em>
+          <span style="float:right">[<a data-cite="ISO19139">ISO 19139:2007</a>]</span></p>
           <p>Dit element is conditioneel. Het is verplicht als de brontekstuele
             informatie bevat. Het bevat de code van de taal waarin de tekst in
             de bron is opgenomen. Gebruik hiervoor alleen de drie-letter codes
-            van 639-2/B (bibliographic codes), zoals gedefinieerd op <a href="http://www.loc.gov/standards/iso639-2/">http://www.loc.gov/standards/iso639-2/</a>.
+            van 639-2/B (bibliographic codes), zoals gedefinieerd op 
+            <a href="http://www.loc.gov/standards/iso639-2/">http://www.loc.gov/standards/iso639-2/</a>.
             Voor Nederlands is de code dut, zie <a href="#codelijst-iso-639-2">Appendix
               A</a>.</p>
           <table>
