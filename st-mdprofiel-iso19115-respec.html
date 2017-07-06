@@ -357,7 +357,7 @@ http://schemas.opengis.net/csw/2.0.2/profiles/apiso/1.0.0/apiso.xsd</a></td>
           gelimiteerd door beperkingen zoals een geografisch gebied of
           geo-objecttype ("feature type"), die aanwezig is in een grotere
           dataset. Theoretisch kan een dataset bestaan uit een enkel geo-object
-          of een een attribuut van een geo-object dat aanwezig is in een grotere
+          of een attribuut van een geo-object dat aanwezig is in een grotere
           dataset. Het Nederlandse metadata profiel voor geografie gaat niet uit
           van dit soort type datasets.</dd>
         <dt>Dataset serie</dt>
@@ -777,7 +777,7 @@ style="float:right">[<a data-cite="ISO19139">ISO 19139:2007</a>]</span></p>
               </tr>
               <tr>
                 <td>String</td>
-                <td>Nieuwe kaart van Nederland</td>
+                <td>Basisregistratie Adressen en Gebouwen</td>
               </tr>
             </tbody>
           </table>
@@ -1331,7 +1331,7 @@ style="float:right">[<a data-cite="ISO19139">ISO 19139:2007</a>]</span></p>
 style="float:right">[<a data-cite="ISO19139">ISO 19139:2007</a>]</span></p>
           <p>Dit element bevat de meest westelijke coördinaat uit de horizontale
             dekking van de dataset weergegeven in longitude en lattitude in
-            decimale graden (noord en oost als positievewaarden). De coördinaten
+            decimale graden (noord en oost als positieve waarden). De coördinaten
             dienen te worden weergegeven volgens referentiesysteem WGS 84.</p>
           <table>
             <colgroup><col style="width: 25%"><col style="width: 75%"></colgroup>
@@ -1366,7 +1366,7 @@ style="float:right">[<a data-cite="ISO19139">ISO 19139:2007</a>]</span></p>
 style="float:right">[<a data-cite="ISO19139">ISO 19139:2007</a>]</span></p>
           <p>Dit element bevat de meest oostelijke coördinaat uit de horizontale
             dekking van de dataset weergegeven in longitude en lattitude in
-            decimale graden (noord en oost als positievewaarden). De coördinaten
+            decimale graden (noord en oost als positieve waarden). De coördinaten
             dienen te worden weergegeven volgens referentiesysteem WGS 84.</p>
           <table>
             <colgroup><col style="width: 25%"><col style="width: 75%"></colgroup>
@@ -1388,7 +1388,7 @@ style="float:right">[<a data-cite="ISO19139">ISO 19139:2007</a>]</span></p>
 style="float:right">[<a data-cite="ISO19139">ISO 19139:2007</a>]</span></p>
           <p>Dit element bevat de meest zuidelijke coördinaat uit de horizontale
             dekking van de dataset weergegeven in longitude en lattitude in
-            decimale graden (noord en oost als positievewaarden). De coördinaten
+            decimale graden (noord en oost als positieve waarden). De coördinaten
             dienen te worden weergegeven volgens referentiesysteem WGS 84.</p>
           <table>
             <colgroup><col style="width: 25%"><col style="width: 75%"></colgroup>
@@ -1410,7 +1410,7 @@ style="float:right">[<a data-cite="ISO19139">ISO 19139:2007</a>]</span></p>
 style="float:right">[<a data-cite="ISO19139">ISO 19139:2007</a>]</span></p>
           <p>Dit element bevat de meest noordelijke coördinaat uit de
             horizontale dekking van de dataset weergegeven in longitude en
-            lattitude in decimale graden (noord en oost als positievewaarden).
+            lattitude in decimale graden (noord en oost als positieve waarden).
             De coördinaten dienen te worden weergegeven volgens
             referentiesysteem WGS 84.</p>
           <table>
@@ -1512,7 +1512,7 @@ style="float:right">[<a data-cite="ISO19139">ISO 19139:2007</a>]</span></p>
               <tr>
                 <td>String</td>
                 <td>In dit bestand is bij de grenzen van de provincies, daar
-                  waar ze grenzen aan de Waddenzee, Noordzee en Ijsselmeer,
+                  waar ze grenzen aan de Waddenzee, Noordzee en IJsselmeer,
                   uitgegaan van de land-watergrens en niet van de
                   bestuursrechtelijke provinciegrens.</td>
               </tr>
@@ -1921,8 +1921,15 @@ style="float:right">[<a data-cite="ISO19139">ISO 19139:2007</a>]</span></p>
               <tr>
                 <td>String</td>
                 <td>
-                  <pre><code>&lt;gmx:anchor xlink:href="https://creativecommons.org/publicdomain/mark/*/deed.nl"&gt;Geen
-beperkingen&lt;/gmx:anchor&gt;</code></pre>
+                  <pre><code>&lt;otherConstraints&gt;https://creativecommons.org/publicdomain/mark/*/deed.nl&lt;/otherConstraints&gt;
+&lt;otherConstraints&gt;Geen beperkingen&lt;/otherConstraints&gt;</code></pre>
+                </td>
+              </tr>
+              <tr>
+                <td>Anchor</td>
+                <td>
+                  <pre><code>&lt;otherConstraints&gt;&lt;gmx:anchor xlink:href="https://creativecommons.org/publicdomain/mark/*/deed.nl"&gt;Geen
+beperkingen&lt;/gmx:anchor&gt;&lt;/otherConstraints&gt;</code></pre>
                 </td>
               </tr>
             </tbody>
