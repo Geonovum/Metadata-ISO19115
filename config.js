@@ -31,7 +31,7 @@ var respecConfig = {
       "publisher": "International Organization for Standardization",
     },
     "ISO19139": {
-      "href": "http://inspire.ec.europa.eu/documents/Metadata/INSPIRE_MD_IR_and_ISO_v1_2_20100616.pdf",
+      "href": "https://www.iso.org/standard/32557.html",
       "title": " ISO/TS 19139:2007 Geographic information -- Metadata -- XML schema implementation",
       "authors": [""],
       "date": "April 2007",
