@@ -135,24 +135,22 @@
           tussen metadata van data, metadata van services en de data en services
           is opgenomen in <a href="#appendix-f">Appendix F</a>. </p>
         <p>Geonovum beheert tevens een <a href="wiki.geonovum.nl/index.php/2_Metadata">metadata
-            wiki</a> waarin alle aspecten van het aanmaken van metadata
-          beschreven zijn.</p>
+            wiki</a> waarin voorbeelden zijn opgenomen en alle aspecten van het
+          aanmaken van metadata beschreven zijn.</p>
       </section>
       <section id="scope">
         <h3>Scope</h3>
         <p>Dit metadata profiel bevat de semantische beschrijving van de
-          verplichte of door conditie verplichte metadata elementen, de kernset,
-          van een dataset of dataset serie. Dit metadata profiel beschrijft
-          tevens de encoding van de metadata van een dataset of dataset serie
-          zodat de uitwisseling tussen machines of mens en machine kan plaats
-          vinden. Er is tevens een optionele set als aanvulling op de kernset,
-          die voorziet in de behoefte van het geo-werkveld aan een brede
-          gemeenschappelijke basis van metadata-elementen, in het bijzonder voor
-          het beheer.</p>
-        <p>Bij het voldoen aan dit profiel wordt tevens aan de INSPIRE
-          verplichting voldaan.</p>
-        <div class="note">Deze verplichting geldt alleen voor metadata van de
-          door INSPIRE benoemde ruimtelijke datasets.</div>
+          verplichte of door conditie verplichte metadata elementen, van een
+          dataset of dataset serie. Dit metadata profiel beschrijft tevens de
+          encoding van de metadata van een dataset of dataset serie zodat de
+          uitwisseling tussen machines of mens en machine kan plaats vinden. Er
+          is tevens een optionele set als aanvulling op de kernset, die voorziet
+          in de behoefte van het geo-werkveld aan een brede gemeenschappelijke
+          basis van metadata-elementen, in het bijzonder voor het beheer.</p>
+        <p>Bij het voldoen aan dit profiel kan tevens aan de INSPIRE
+          verplichting voldaan. Deze verplichting geldt alleen voor metadata van
+          de door INSPIRE benoemde ruimtelijke datasets.</p>
         <p></p>
       </section>
       <section id="context">
@@ -160,30 +158,39 @@
         <p><a href="#image001">Figuur 1</a> plaatst het Nederlandse metadata
           profiel voor geografie in zijn internationale en sectorale context. De
           ISO-kernset is de kleinste eenheid, een selectie uit ISO 19115.</p>
-        <figure id="image001"> <a href="st-mdprofiel-iso19115/image001.svg"><img
-              src="st-mdprofiel-iso19115/image001.svg" alt="image001"></a> <figcaption>Context
+        <figure id="image001"> <a href="st-mdprofiel-iso19115/context.svg"><img
+              src="st-mdprofiel-iso19115/context.svg" alt="image001"></a> <figcaption>Context
             profiel.</figcaption> </figure>
-        <p>De Nederlandse kernset bevat de Europese kernset (INSPIRE) plus een
-          selectie van metadata-elementen uit ISO 19115. In dit profiel zijn de
-          metadata elementen met hun oorsprong aangegeven in <a href="#appendix-d">Appendix
-            D</a>.</p>
+        <p>Het Nederlands profiel bevat nast de ISO kernset, de INSPIRE
+          elementen plus een selectie van metadata-elementen uit ISO 19115. In
+          dit profiel zijn de metadata elementen met hun oorsprong aangegeven in
+          <a href="#appendix-d">Appendix D</a>.</p>
         <p>Sectoren in Nederland kunnen een eigen uitbreiding op het Nederlandse
-          profiel ontwikkelen. Voorwaarde is dat de Nederlandse kernset metadata
+          profiel ontwikkelen. Voorwaarde is dat de Nederlandse profiel metadata
           onderdeel is van het sectorale metadata profiel. Deze sectorale
           uitbreidingen dienen onderdeel te zijn van ISO 19115.</p>
       </section>
       <section id="leeswijzer">
         <h3>Leeswijzer</h3>
-        <p><a href="#normatieve-verwijzing">Hoofdstuk 2</a> toont de normatieve
-          verwijzingen, <a href="#relevante-xsd-schemas">hoofdstuk 3</a> bevat
-          de XSD schema's waarna in <a href="#termen-en-definities">hoofdstuk 4</a>
-          de gehanteerde termen en definities worden beschreven. Het formele
-          deel van het profiel waarin onder andere de verplichte elementen, de
-          kernset, worden beschreven die gelden voor metadata voor geografie
-          staan in <a href="#metadata-elementen">hoofdstuk 5</a>. In <a href="#optionele-set-metadata">hoofdstuk
-            6</a> staan de optionele elementen. De volgende hoofdstukken geven
-          op specifieke onderdelen van het profiel uitleg. De bijlagen dienen
-          ter ondersteuning van de hoofdstukken.</p>
+        <p>Dit metadata profiel richt zich vooral op software ontwikkelaars en
+          metadata experts. Het bevat de semantische beschrijving van de
+          verplichte of door conditie verplichte metadata elementen, van een
+          dataset of dataset serie. Dit metadata profiel beschrijft tevens de
+          encoding van de metadata van een dataset of dataset serie zodat de
+          uitwisseling tussen machines of mens en machine kan plaats vinden.
+          Geonovum beheert tevens een <a href="wiki.geonovum.nl/index.php/2_Metadata">metadata
+            wiki</a> waarin voorbeelden zijn opgenomen en alle aspecten van het
+          aanmaken van metadata beschreven zijn. <a href="#normatieve-verwijzing">Hoofdstuk
+            2</a> toont de normatieve verwijzingen, <a href="#relevante-xsd-schemas">hoofdstuk
+            3</a> bevat de XSD schema's waarna in <a href="#termen-en-definities">hoofdstuk
+            4</a> de gehanteerde termen en definities worden beschreven. Het
+          formele deel van het profiel waarin onder andere de verplichte
+          elementen,&nbsp; worden beschreven die gelden voor metadata voor
+          geografie staan in <a href="#metadata-elementen">hoofdstuk 5</a>. In
+          <a href="#optionele-set-metadata">hoofdstuk 6</a> staan de optionele
+          elementen. De volgende hoofdstukken geven op specifieke onderdelen van
+          het profiel uitleg. De bijlagen dienen ter ondersteuning van de
+          hoofdstukken.</p>
       </section>
     </section>
     <section id="normatieve-verwijzing">
@@ -229,92 +236,94 @@
       <p><b>INSPIRE</b>, 2017, Technical Guidance for the implementation of
         INSPIRE dataset and service metadata based on ISO/TS 19139:2007</p>
     </section>
-    <section id="relevante-xsd-schemas">
-      <h2>Relevante XSD schema's</h2>
-      <p>Alle relevante schema’s zijn in de OGC schema repository beschikbaar.
-        De meeste schema's zijn beschikbaar onder <a href="http://schemas.opengis.net/iso/19139/20060504/">http://schemas.opengis.net/iso/19139/20060504/</a>.
-        De volgende tabel toont de relevante schema's voor dit profiel. </p>
-      <table>
-        <caption>Tabel 1: Locatie van het relevante XSD schema</caption>
-        <tbody>
-          <tr>
-            <th>Specificatie</th>
-            <th>Versie</th>
-            <th>Schema locatie</th>
-          </tr>
-          <tr>
-            <td>GMD</td>
-            <td>0.1</td>
-            <td><a href="http://schemas.opengis.net/iso/19139/20060504/gmd/gmd.xsd">
-                /gmd/gmd.xsd</a></td>
-          </tr>
-          <tr>
-            <td>SRV</td>
-            <td>0.1</td>
-            <td><a href="http://schemas.opengis.net/iso/19139/20060504/srv/srv.xsd">
-                /srv/srv.xsd</a></td>
-          </tr>
-          <tr>
-            <td>GMX</td>
-            <td>0.1</td>
-            <td><a href="http://schemas.opengis.net/iso/19139/20060504/gmx/gmx.xsd">
-                /gmx/gmx.xsd</a></td>
-          </tr>
-          <tr>
-            <td>GML</td>
-            <td>3.2.0</td>
-            <td><a href="http://schemas.opengis.net/iso/19139/20060504/gml/gml.xsd">
-                /gml/gml.xsd</a></td>
-          </tr>
-          <tr>
-            <td>GCO</td>
-            <td>0.1</td>
-            <td><a href="http://schemas.opengis.net/iso/19139/20060504/gco/gco.xsd">
-                /gco/gco.xsd</a></td>
-          </tr>
-          <tr>
-            <td>GFC</td>
-            <td>0.1</td>
-            <td><a href="http://www.isotc211.org/2005/gfc/gfc.xsd">
-                http://www.isotc211.org/2005/gfc/gfc.xsd</a></td>
-          </tr>
-          <tr>
-            <td>CSW</td>
-            <td>2.0.2.2</td>
-            <td><a href="http://schemas.opengis.net/csw/2.0.2/csw.xsd">
-                http://schemas.opengis.net/csw/2.0.2/csw.xsd</a></td>
-          </tr>
-          <tr>
-            <td>CSW AP-ISO</td>
-            <td>1.0.0</td>
-            <td><a href="http://schemas.opengis.net/csw/2.0.2/profiles/apiso/1.0.0/apiso.xsd">
+    <section id="Structuur en schema's ">
+      <h2>Structuur en schema's</h2>
+      <section id="relevante-xsd-schemas">
+        <h3>relevante-xsd-schemas</h3>
+        <p>Alle relevante schema’s zijn in de OGC schema repository beschikbaar.
+          De meeste schema's zijn beschikbaar onder <a href="http://schemas.opengis.net/iso/19139/20060504/">http://schemas.opengis.net/iso/19139/20060504/</a>.
+          De volgende tabel toont de relevante schema's voor dit profiel. </p>
+        <table>
+          <caption>Tabel 1: Locatie van het relevante XSD schema</caption>
+          <tbody>
+            <tr>
+              <th>Specificatie</th>
+              <th>Versie</th>
+              <th>Schema locatie</th>
+            </tr>
+            <tr>
+              <td>GMD</td>
+              <td>0.1</td>
+              <td><a href="http://schemas.opengis.net/iso/19139/20060504/gmd/gmd.xsd">
+                  /gmd/gmd.xsd</a></td>
+            </tr>
+            <tr>
+              <td>SRV</td>
+              <td>0.1</td>
+              <td><a href="http://schemas.opengis.net/iso/19139/20060504/srv/srv.xsd">
+                  /srv/srv.xsd</a></td>
+            </tr>
+            <tr>
+              <td>GMX</td>
+              <td>0.1</td>
+              <td><a href="http://schemas.opengis.net/iso/19139/20060504/gmx/gmx.xsd">
+                  /gmx/gmx.xsd</a></td>
+            </tr>
+            <tr>
+              <td>GML</td>
+              <td>3.2.0</td>
+              <td><a href="http://schemas.opengis.net/iso/19139/20060504/gml/gml.xsd">
+                  /gml/gml.xsd</a></td>
+            </tr>
+            <tr>
+              <td>GCO</td>
+              <td>0.1</td>
+              <td><a href="http://schemas.opengis.net/iso/19139/20060504/gco/gco.xsd">
+                  /gco/gco.xsd</a></td>
+            </tr>
+            <tr>
+              <td>GFC</td>
+              <td>0.1</td>
+              <td><a href="http://www.isotc211.org/2005/gfc/gfc.xsd">
+                  http://www.isotc211.org/2005/gfc/gfc.xsd</a></td>
+            </tr>
+            <tr>
+              <td>CSW</td>
+              <td>2.0.2.2</td>
+              <td><a href="http://schemas.opengis.net/csw/2.0.2/csw.xsd">
+                  http://schemas.opengis.net/csw/2.0.2/csw.xsd</a></td>
+            </tr>
+            <tr>
+              <td>CSW AP-ISO</td>
+              <td>1.0.0</td>
+              <td><a href="http://schemas.opengis.net/csw/2.0.2/profiles/apiso/1.0.0/apiso.xsd">
 http://schemas.opengis.net/csw/2.0.2/profiles/apiso/1.0.0/apiso.xsd</a></td>
-          </tr>
-        </tbody>
-      </table>
-      <p><em>GMD, GCO, GML</em>: Dit zijn de XML encoding schema’s voor ISO
-        19115:2003. De namespace http://www.isotc211.org/2005/gmd wordt
-        gebruikt. In de metadata dienen ook de codelijsten die op deze locatie
-        te vinden zijn gehanteerd te worden.</p>
-      <p><em>GMX</em>: Een uitbreiding op het basis ISO 19115:2003 model. Het
-        biedt de mogelijkheid een gco:CharacterString te vervangen voor
-        gmx:Anchor. gmx:Anchor biedt de mogelijkheid om naast een string tevens
-        een link naar een webadres op te nemen waar meer informatie over dit
-        element te vinden is.</p>
-      <p><em>SRV</em>: Schema ISO 19119 om Dataservices te beschrijven</p>
-      <p><em>GFC</em>: Schema ISO 19110 om object- en attribuutinformatie te
-        beschrijven.</p>
-      <p><em>CSW</em>: Schema dat de interfaces en het core model van de basis
-        catalogue service definiëert.</p>
-      <p><em>APISO</em>: Basis schema van het ISO Application Profile voor de
-        OGC Catalogue Service 2.0.2. Dit schema is verbonden met ISO 19139.</p>
-      <p>Metadata, zoals beschreven in die profiel, zal ge-encodeerd worden in
-        XML formaat valide volgens de bovenstaande schema's. </p>
-      <p>Er mag ook verwezen worden naar een (op het web ontsloten) kopie van
-        deze schema's. Daarbij mag het gedupliceerde GMD-schema gewijzigd worden
-        om het GMX schema te importeren.</p>
-      <aside class="example" title="XML voorbeeld">
-        <pre><code> 
+            </tr>
+          </tbody>
+        </table>
+        <p><em>GMD, GCO, GML</em>: Dit zijn de XML encoding schema’s voor ISO
+          19115:2003. De namespace http://www.isotc211.org/2005/gmd wordt
+          gebruikt. In de metadata dienen ook de codelijsten die op deze locatie
+          te vinden zijn gehanteerd te worden.</p>
+        <p><em>GMX</em>: Een uitbreiding op het basis ISO 19115:2003 model. Het
+          biedt de mogelijkheid een gco:CharacterString te vervangen voor
+          gmx:Anchor. gmx:Anchor biedt de mogelijkheid om naast een string
+          tevens een link naar een webadres op te nemen waar meer informatie
+          over dit element te vinden is.</p>
+        <p><em>SRV</em>: Schema ISO 19119 om Dataservices te beschrijven</p>
+        <p><em>GFC</em>: Schema ISO 19110 om object- en attribuutinformatie te
+          beschrijven.</p>
+        <p><em>CSW</em>: Schema dat de interfaces en het core model van de basis
+          catalogue service definiëert.</p>
+        <p><em>APISO</em>: Basis schema van het ISO Application Profile voor de
+          OGC Catalogue Service 2.0.2. Dit schema is verbonden met ISO 19139.</p>
+        <p>Metadata, zoals beschreven in die profiel, zal ge-encodeerd worden in
+          XML formaat valide volgens de bovenstaande schema's. </p>
+        <p>Er mag ook verwezen worden naar een (op het web ontsloten) kopie van
+          deze schema's. Daarbij mag het gedupliceerde GMD-schema gewijzigd
+          worden om het GMX schema te importeren.</p>
+        <aside class="example" title="XML voorbeeld">
+          <pre><code> 
 &lt;gmd:MD_Metadata
     xmlns:gmd="http://www.isotc211.org/2005/gmd"
     xmlns:gmx="http://www.isotc211.org/2005/gmx"
@@ -325,7 +334,19 @@ http://schemas.opengis.net/csw/2.0.2/profiles/apiso/1.0.0/apiso.xsd</a></td>
       http://schemas.opengis.net/iso/19139/20060504/gmx/gmx.xsd"
     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"&gt; <br><br></code></pre>
       </aside>
-              De metadata voor een INSPIRE data set, data set series of service wordt ge-encoded met exact een gmd:MD_Metadata element.<br>Als er meer dan één gmd:MD_DataIdentification element wordt opgenomen, zal deze&nbsp; een unieke identifier moeten bevatten van het element zelf,&nbsp; zodat daar rechtstreeks naar verwezen kan worden vanuit de service metadata voor de coupled resource. Deze identifier is een waarde van de attribuut id van het&nbsp; gmd:MD_DataIdentification element.<br>
+     </section>
+      <section id="Structuur">
+          <h3>Structuur</h3>          
+             <p> De metadata voor een INSPIRE data set, data set series of service wordt ge-encoded met exact een gmd:MD_Metadata element.<br>Als er meer dan één gmd:MD_DataIdentification element wordt opgenomen, zal deze&nbsp; een unieke identifier moeten bevatten van het element zelf,&nbsp; zodat daar rechtstreeks naar verwezen kan worden vanuit de service metadata voor de coupled resource. Deze identifier is een waarde van de attribuut id van het&nbsp; gmd:MD_DataIdentification element.<br><br>
+    </p>
+                </section>
+                <section id="Codelijsten">
+          <h3>Codelijsten</h3> 
+           <p></p>       
+    </section>
+                <section id="String elementen"> 
+                <h3>String elementen</h3> 
+           <p></p>       
     </section>
     <section id="termen-en-definities">
       <h2>Termen en definities</h2>
@@ -17797,4 +17818,4 @@ alt="image005"></a> <figcaption>Koppeling
           vanuit metadata met data en service.</figcaption> </figure>
     </section>
     <script class="remove" src="st-mdprofiel-iso19115/localscript.js"></script>
-</body></html>
+</section></body></html>
