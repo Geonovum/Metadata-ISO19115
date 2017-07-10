@@ -470,18 +470,18 @@ data-cite="INSPIRE-19115-19119"><em>INSPIRE Metadata Implementing
             <tr>
               <td><a href="#hi%C3%ABrarchieniveaunaam">Hiërarchieniveau naam</a></td>
               <td>C</td>
-              <td>C</td><td>Verplicht als Hiërarchieniveau niet gelijk is aan dataset.</td>
+              <td>C</td><td>Het is verplicht als Hiërarchieniveau niet gelijk is aan dataset.</td>
             </tr>
             <tr>
               <td><a href="#unieke-identifier-van-de-bron">Unieke Identifier van de bron</a>.</td>
               <td>V</td>
-              <td>V</td><td>Dit element is verplicht. Het gebuik van een URI is
+              <td>V</td><td>Het gebuik van een URI is
                 conditioneel. Het is verplicht voor INSPIRE datasets. </td>
             </tr>
             <tr>
               <td><a href="#unieke-identifier-van-de-identificatie-sectie">Unieke Identifier van de identificatie sectie</a></td>
               <td>C</td>
-              <td>C</td><td>Het is voor INSPIRE verplicht als er meer dan één gmd:MD_DataIdentification element wordt opgenomen.
+              <td>C</td><td>Het is verplicht als er meer dan één gmd:MD_DataIdentification element wordt opgenomen.
           </td>
             </tr>
                <tr>
@@ -497,7 +497,7 @@ data-cite="INSPIRE-19115-19119"><em>INSPIRE Metadata Implementing
             <tr>
               <td><a href="#karakterset-van-de-bron">Karakterset van de bron</a></td>
               <td>C</td>
-              <td>C</td><td>Verplicht als de in de bron gebruikte karakterset geen utf8
+              <td>C</td><td>Het is verplicht als de in de bron gebruikte karakterset geen utf8
                 is.</td>
             </tr>
             <tr>
@@ -508,19 +508,19 @@ data-cite="INSPIRE-19115-19119"><em>INSPIRE Metadata Implementing
             <tr><td colspan="4" rowspan="1"><strong>Distributies</strong></td></tr><tr>
               <td>&nbsp; &nbsp; <a href="#url">URL</a> </td>
               <td>C</td>
-              <td>C</td><td>Dit element is conditioneel. Het is verplicht indien de
+              <td>C</td><td>Het is verplicht indien de
                 ontsluiting publiek toegankelijk is en onder de
                 verantwoordelijkheid van de beherende organisatie valt. </td>
             </tr>
             <tr>
               <td>&nbsp; &nbsp; <a href="#protocol">Protocol</a></td>
               <td>C</td>
-              <td>O</td><td>Verplicht als er een URL is opgegeven.</td>
+              <td>O</td><td>Het is verplicht als er een URL is opgegeven.</td>
             </tr>
             <tr>
               <td>&nbsp;&nbsp;&nbsp; <a href="#naam">Naam</a> </td>
               <td>C</td>
-              <td>O</td><td>Verplicht gesteld voor de OGC:WMS, OGC:WFS OGC:WMTS OGC:WCS en INSPIRE:Atom.</td>
+              <td>O</td><td>Het is verplicht als het protocol één van de volgende waardes heeft&nbsp; OGC:WMS, OGC:WFS OGC:WMTS OGC:WCS en INSPIRE:Atom.</td>
             </tr>
             <tr>
               <td>&nbsp; &nbsp; <a href="#description">Omschrijving</a></td>
@@ -578,13 +578,10 @@ data-cite="INSPIRE-19115-19119"><em>INSPIRE Metadata Implementing
             <tr>
               <td>Datum van de bron</td>
               <td>V</td>
-              <td>V</td><td>Op z’n minst één van de elementen Datum voltooiing, Datum
-                publicatie en Datum laatste wijziging verplicht. Voor INSPIRE
-                geldt een maximum van 1 datum voltooiing en/of 1 datum laatste
-                wijziging.</td>
+              <td>V</td><td><br></td>
             </tr>
             <tr>
-              <td>Datumtype van de bron</td><td><br></td><td><br></td><td><br></td>
+              <td>Datumtype van de bron</td><td>V</td><td>V</td><td><br></td>
             </tr>
             <tr>
               <td>Niveau kwaliteitsbeschrijving</td>
@@ -599,13 +596,13 @@ data-cite="INSPIRE-19115-19119"><em>INSPIRE Metadata Implementing
             <tr>
               <td>Toepassingsschaal</td>
               <td>C</td>
-              <td>C</td><td>Verplicht als er een toepassingsschaal gespecificeerd kan
+              <td>C</td><td>Het is verplicht als er een toepassingsschaal gespecificeerd kan
                 worden en het element Resolutie niet aanwezig is.</td>
             </tr>
             <tr>
               <td>Resolutie</td>
               <td>C</td>
-              <td>C</td><td>Verplicht als er een resolutie gespecificeerd kan worden en
+              <td>C</td><td>Het is verplicht als er een resolutie gespecificeerd kan worden en
                 het element toepassingsschaal niet aanwezig is.</td>
             </tr>
             <tr>
@@ -616,26 +613,26 @@ data-cite="INSPIRE-19115-19119"><em>INSPIRE Metadata Implementing
             <tr>
               <td>Temporeel referentiesysteem&nbsp;</td>
               <td>C</td>
-              <td>C</td><td>Verplicht als de dataset temporele informatie bevat die niet
+              <td>C</td><td>Het is verplicht als de dataset temporele informatie bevat die niet
                 gebaseerd is op de Gregoriaanse kalender of de Coordinated
                 Universal Time.</td>
             </tr>
             <tr><td><strong>Distributie formaat</strong></td><td><br></td><td><br></td><td><br></td></tr><tr>
               <td>&nbsp;&nbsp;&nbsp; Naam </td>
               <td>O</td>
-              <td>C</td><td>Het is alleen verplicht als de dataset een INSPIRE bron is en als de informatie is gemodelleerd volgens een specifiek
+              <td>C</td><td>Het is verplicht als de dataset een geharmoniseerde INSPIRE bron is en als de informatie is gemodelleerd volgens een specifiek
                 informatie model.</td>
             </tr>
             <tr>
               <td>&nbsp;&nbsp;&nbsp; Versie</td>
               <td>O</td>
-              <td>C</td><td>Het is alleen verplicht als de dataset een INSPIRE bron is en als de informatie is gemodelleerd volgens een specifiek
+              <td>C</td><td>Het is verplicht als de dataset een geharmoniseerde INSPIRE bron is en als de informatie is gemodelleerd volgens een specifiek
                 informatie model.</td>
             </tr>
             <tr>
               <td>&nbsp;&nbsp;&nbsp; Specificatie</td>
               <td>O</td>
-              <td>C</td><td>Het is alleen verplicht als de dataset een INSPIRE bron is en als de informatie is gemodelleerd volgens een specifiek
+              <td>C</td><td>Het is verplicht als de dataset een geharmoniseerde INSPIRE bron is en als de informatie is gemodelleerd volgens een specifiek
                 informatie model.</td>
             </tr>
             <tr>
@@ -646,48 +643,48 @@ data-cite="INSPIRE-19115-19119"><em>INSPIRE Metadata Implementing
                <tr>
               <td>&nbsp;&nbsp;&nbsp; Conformiteit indicatie met een specificatie</td>
               <td>C</td>
-              <td>V</td><td>Het is alleen verplicht als de dataset een INSPIRE bron is of
+              <td>V</td><td>Het is verplicht als de dataset een INSPIRE bron is of
                 als de informatie is gemodelleerd volgens een specifiek
                 informatie model.</td>
             </tr>
             <tr>
               <td>&nbsp;&nbsp;&nbsp; Verklaring</td>
               <td>C</td>
-              <td>V</td><td>Het is alleen verplicht als de dataset een INSPIRE bron is of
+              <td>V</td><td>Het is verplicht als de dataset een INSPIRE bron is of
                 als de informatie is gemodelleerd volgens een specifiek
                 informatie model.</td>
             </tr>
             <tr>
               <td>&nbsp;&nbsp;&nbsp; Specificatie</td>
               <td>C</td>
-              <td>V</td><td>Het is alleen verplicht als de dataset een INSPIRE bron is of
+              <td>V</td><td>Het is verplicht als de dataset een INSPIRE bron is of
                 als de informatie is gemodelleerd volgens een specifiek
                 informatie model.</td>
             </tr>
             <tr>
               <td>&nbsp;&nbsp;&nbsp; Specificatiedatum</td>
               <td>C</td>
-              <td>V</td><td>Het is alleen verplicht als de dataset een INSPIRE bron is of
+              <td>V</td><td>Het is verplicht als de dataset een INSPIRE bron is of
                 als de informatie is gemodelleerd volgens een specifiek
                 informatie model.</td>
             </tr>
             <tr>
               <td>&nbsp;&nbsp;&nbsp; Specificatiedatum type</td>
               <td>C</td>
-              <td>V</td><td>Het is alleen verplicht als de dataset een INSPIRE bron is of
+              <td>V</td><td>Het is verplicht als de dataset een INSPIRE bron is of
                 als de informatie is gemodelleerd volgens een specifiek
                 informatie model.</td>
             </tr>
             <tr><td colspan="4" rowspan="1"><strong>Topologische samenhang</strong></td></tr><tr>
               <td>&nbsp;&nbsp;&nbsp; Waarde</td>
-              <td>C</td>
-              <td>C</td><td>Verplicht voor INSPIRE datasets als voor netwerken de
+              <td>O</td>
+              <td>C</td><td>Het is verplicht voor INSPIRE datasets als voor netwerken de
                 aansluiting van hartlijnen niet is verzekerd.</td>
             </tr>
             <tr>
               <td>&nbsp;&nbsp;&nbsp; Type waarde</td>
-              <td>C</td>
-              <td>C</td><td>Verplicht voor INSPIRE datasets als voor netwerken de
+              <td>O</td>
+              <td>C</td><td>Het is verplicht voor INSPIRE datasets als voor netwerken de
                 aansluiting van hartlijnen niet is verzekerd.</td>
             </tr>
             <tr><td colspan="4" rowspan="1"><b>Beperkingen</b></td></tr><tr>
@@ -699,8 +696,8 @@ data-cite="INSPIRE-19115-19119"><em>INSPIRE Metadata Implementing
             <tr>
               <td>&nbsp;&nbsp;&nbsp;&nbsp; Overige beperkingen</td>
               <td>C</td>
-              <td>C</td><td>Het is verplicht om Overige beperkingen op te nemen als
-                juridische toegangsrestricties de waarde anders heeft.</td>
+              <td>C</td><td>Het is verplicht als
+                juridische toegangsrestricties de waarde "otherRestrictions" heeft.</td>
             </tr>
             <tr>
               <td>Gebruiksbeperkingen</td>
@@ -762,12 +759,12 @@ data-cite="INSPIRE-19115-19119"><em>INSPIRE Metadata Implementing
             <tr><td colspan="4" rowspan="1"><strong>Metadata standaard</strong></td></tr><tr>
               <td>&nbsp;&nbsp;&nbsp; Naam</td>
               <td>V</td>
-              <td>V</td><td>&nbsp;</td>
+              <td>O</td><td>&nbsp;</td>
             </tr>
             <tr>
               <td>&nbsp;&nbsp;&nbsp; Versie</td>
               <td>V</td>
-              <td>V</td><td>&nbsp;</td>
+              <td>O</td><td>&nbsp;</td>
             </tr>
           </tbody>
         </table>
