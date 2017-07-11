@@ -198,21 +198,16 @@
       <p>De volgende normen, standaarden en specificaties zijn toegepast in dit
         profiel:</p>
       <b>EN ISO 19115:2005</b>, Geographic information - Metadata<br>
-      <br>
-      <div class="note">EN ISO 19115:2005 is de adoptie door CEN van ISO
-        19115:2003<br>
-      </div>
+      <p><i>EN ISO 19115:2005 is de adoptie door CEN van ISO 19115:2003</i> </p>
       <b>EN ISO 19115:2005/AC:2008 ,</b> Geographic information – Metadata,
       Technical Corrigendum 1<br>
-      <br>
-      <div class="note">EN ISO 19115:2005/AC:2008 is de adoptie door CEN van ISO
-        19115/Cor.1:2006</div>
+      <p><i>EN ISO 19115:2005/AC:2008 is de adoptie door CEN van ISO
+          19115/Cor.1:2006</i></p>
       <p></p>
       <p><b>CEN ISO/TS 19139:2009</b>, Geographic information - Metadata – XML
         Schema Implementation<br>
       </p>
-      <div class="note">CEN ISO/TS 19139:2009 is de adoptie door CEN van ISO/TS
-        19139:2007</div>
+      <p><i>CEN ISO/TS 19139:2009 is de adoptie door CEN van ISO/TS 19139:2007</i></p>
       <p></p>
       <p><b>CSW2 AP ISO</b>, <a href="portal.opengeospatial.org/files/?artifact_id=21460">OpenGIS
           Catalogue Services Specification 2.0.2 - ISO Metadata Application
@@ -220,8 +215,7 @@
       <p><b>ISO 19108</b>, EN ISO 19108:2005, Geographic information – Temporal
         Schema<br>
       </p>
-      <div class="note">EN ISO 19108:2005 is de adoptie door CEN van ISO
-        19108:2002</div>
+      <p><i>EN ISO 19108:2005 is de adoptie door CEN van ISO 19108:2002</i></p>
       <p></p>
       <p><b>ISO 8601:2004</b>, Data elements and interchange formats -
         Information interchange - Representation of dates and times</p>
@@ -303,13 +297,10 @@ http://schemas.opengis.net/csw/2.0.2/profiles/apiso/1.0.0/apiso.xsd</a></td>
         </table>
         <p><em>GMD, GCO, GML</em>: Dit zijn de XML encoding schema’s voor ISO
           19115:2003. De namespace http://www.isotc211.org/2005/gmd wordt
-          gebruikt. In de metadata dienen ook de codelijsten die op deze locatie
-          te vinden zijn gehanteerd te worden.</p>
+          gebruikt. </p>
         <p><em>GMX</em>: Een uitbreiding op het basis ISO 19115:2003 model. Het
           biedt de mogelijkheid een gco:CharacterString te vervangen voor
-          gmx:Anchor. gmx:Anchor biedt de mogelijkheid om naast een string
-          tevens een link naar een webadres op te nemen waar meer informatie
-          over dit element te vinden is.</p>
+          gmx:Anchor.</p>
         <p><em>SRV</em>: Schema ISO 19119 om Dataservices te beschrijven</p>
         <p><em>GFC</em>: Schema ISO 19110 om object- en attribuutinformatie te
           beschrijven.</p>
@@ -342,11 +333,25 @@ http://schemas.opengis.net/csw/2.0.2/profiles/apiso/1.0.0/apiso.xsd</a></td>
                 </section>
                 <section id="Codelijsten">
           <h3>Codelijsten</h3> 
-           <p></p>       
+           <p>In de metadata dienen de codelijsten waarnaar verwezen wordt bij de element beschrijving, gehanteerd te worden. Deze codeljsten zijn ook opgenomen in <a
+href="#appendix-a">appendix-a</a>. Dit zijn vaak de ISO codelijsten, soms zijn de waarden die in dit profiel gebruikt mogen worden beperkt. Voor een aantal String elementen wordt ook een codelijst gehanteerd. hierbij wordt soms het gebruik van gmx:Anchor element vereist.</p>       
     </section>
                 <section id="String elementen"> 
                 <h3>String elementen</h3> 
-           <p></p>       
+           <p>De ISO 19139 schema's staan meerdere manieren toe om vrije text op te nemen. Het basis element daarvoor is gco:CharacterString. Wanneer de vrije text een term of code&nbsp; bevat die verwijst naar een extern gedefinieerde uitleg of register waarde, 
+           wordt aanbevolen om het gmx:Anchor element te gebruiken in plaats van gco:CharacterString. gmx:Anchor biedt de mogelijkheid
+                    om naast een string tevens een link naar een webadres op te
+                    nemen waar meer informatie over dit element te vinden is. Daarvoor wordt het xlink:href attribuut gebruikt, die een valide URL dient te bevatten. De textwaarde van het element moet naast de link in het xlink:href attribuut nog steeds worden gegeven. Het zal worden gegeven als mens leesbare text. 
+                  
+                  
+      </p><aside class="example" title="XML voorbeeld">
+      <pre><code>  
+         &lt;gmd:keyword&gt;
+            &lt;gmx:anchor xlink:href="http://inspire.ec.europa.eu/theme/mf"&gt;Meteorological geographical features&lt;/gmx:anchor&gt; 
+         &lt;/gmd:keyword&gt;      
+   </code></pre>
+      </aside><p>Meertaligheid in&nbsp; het metadata document wordt ondersteund door meerdere keren opnemen van het string element in verschillende talen, met extra informatie over de taal. Dit is uitgewerkt in <a
+href="#meertaligheid-metadata">Hoofdstuk 7</a>.</p><p><br></p>
     </section>
     <section id="termen-en-definities">
       <h2>Termen en definities</h2>
@@ -356,7 +361,9 @@ http://schemas.opengis.net/csw/2.0.2/profiles/apiso/1.0.0/apiso.xsd</a></td>
         <dt>Abstracte klasse</dt>
         
         <dd>Een abstracte klasse is een klasse zonder objecten.</dd>
-        <dt>AccessPoint</dt><dd><br></dd><dt>Applicatie</dt>
+        <dt>AccessPoint</dt>
+        <dd>een internetadres dat een gedetailleerde beschrijving van een dienst met betrekking tot ruimtelijke gegevens bevat, met inbegrip van een lijst van eindpunten waarmee hij kan worden uitgevoerd [INSPIRE (EU) No 1312/2014]</dd>
+        <dt>Applicatie</dt>
         <dd>Manipulatie en verwerking van data om in gebruiksbehoefte te
           voorzien [<a data-cite="ISO19101">ISO 19101:2002</a>].</dd>
         <dt>Catalogues service</dt>
@@ -388,7 +395,9 @@ http://schemas.opengis.net/csw/2.0.2/profiles/apiso/1.0.0/apiso.xsd</a></td>
         <dd>Metadata element met een standaardwaarde.</dd>
         <dt>Interface</dt>
         <dd>Benoemde set van operaties die het gedrag van een entiteit karakteriseren [ISO 19119].</dd>
-        <dt>EndPoint</dt><dd><br></dd><dt>Expliciete metadata</dt>
+        <dt>EndPoint</dt>
+        <dd>het internetadres dat wordt gebruikt om een door een dienst met betrekking tot ruimtelijke gegevens aangeboden operatie rechtstreeks aan te roepen [INSPIRE (EU) No 1312/2014]</dd>
+        <dt>Expliciete metadata</dt>
         <dd>Metadata die niet direct of indirect in de dataset opgeslagen zit en
           daarom handmatig moet worden opgevoerd.</dd>
         <dt>Feature</dt>
@@ -420,11 +429,10 @@ data-cite="ISO19136">ISO 19136:2007</a>].</dd>
         <dt>Optioneel element</dt>
         <dd>Element wat gevuld mag zijn met een waarde.</dd>
         <dt>Profiel</dt>
-        <dd>
-          <p>Set van één of meerdere basisstandaarden en indien van toepassing
+        <dd>Set van één of meerdere basisstandaarden en indien van toepassing
             de identificatie van hoofdstukken, paragrafen, opties en parameters
             van deze basisstandaarden die noodzakelijk zijn voor het volbrengen
-            van een specifieke functie [ISOIEC21 1998, ISO34 2002].</p>
+            van een specifieke functie [ISOIEC21 1998, ISO34 2002].
           <p>Een basisstandaard is één van de standaarden uit de serie ISO 19100
             of andere ICT-standaard die gebruikt kan worden als bron voor
             componenten voor een profiel of productspecificatie.</p>
@@ -2845,7 +2853,24 @@ alt="image003"></a> <figcaption>Attributen
       <figure id="image004"> <a href="st-mdprofiel-iso19115/image004.png"><img src="st-mdprofiel-iso19115/image004.png"
 alt="image004"></a> <figcaption>Vrije
           tekst en “localised” characterString.</figcaption> </figure>
-    </section>
+     <aside class="example" title="XML voorbeeld">
+                    <pre><code> 
+                
+                &lt;gmd:organisationName xsi:type="gmd:PT_FreeText_PropertyType"&gt; 
+                   &lt;gco:CharacterString&gt;Ilmatieteen laitos&lt;/gco:CharacterString&gt; 
+                   &lt;gmd:PT_FreeText&gt;
+                      &lt;gmd:textGroup&gt;
+                         &lt;gmd:LocalisedCharacterString locale="#locale-swe"&gt;Meteorologiska institutet&lt;/gmd:LocalisedCharacterString&gt; 
+                      &lt;/gmd:textGroup&gt;
+                      &lt;gmd:textGroup&gt; 
+                         &lt;gmd:LocalisedCharacterString locale="#locale-en"&gt;Finnish Meteorological Institute&lt;/gmd:LocalisedCharacterString&gt; 
+                      &lt;/gmd:textGroup&gt; 
+                   &lt;/gmd:PT_FreeText&gt; 
+                &lt;/gmd:organisationName&gt;
+                </code></pre><code>
+                </code> 
+      </aside>
+                </section>
     <section id="object-en-attribuutinformatie">
       <h2>Object- en attribuutinformatie</h2>
       <p> De standaard voor het vastleggen van object en attribuutinformatie is
