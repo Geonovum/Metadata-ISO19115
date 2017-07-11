@@ -332,7 +332,15 @@ http://schemas.opengis.net/csw/2.0.2/profiles/apiso/1.0.0/apiso.xsd</a></td>
                 <section id="Codelijsten">
           <h3>Codelijsten</h3> 
            <p>In de metadata dienen de codelijsten waarnaar verwezen wordt bij de element beschrijving, gehanteerd te worden. Deze codeljsten zijn ook opgenomen in <a
-href="#appendix-a">appendix-a</a>. Dit zijn vaak de ISO codelijsten, soms zijn de waarden die in dit profiel gebruikt mogen worden beperkt. Voor een aantal String elementen wordt ook een codelijst gehanteerd. hierbij wordt soms het gebruik van gmx:Anchor element vereist.</p>       
+href="#appendix-a">appendix-a</a>. Dit zijn vaak de ISO codelijsten, soms zijn de waarden die in dit profiel gebruikt mogen worden beperkt. Voor een aantal String elementen wordt ook een codelijst gehanteerd. hierbij wordt soms het gebruik van gmx:Anchor element vereist.
+                  </p>
+                  <aside class="example" title="XML voorbeeld">
+                    <pre><code> 
+                  <ci_datetypecode codelist="http://standards.iso.org/iso/19139/resources/codelist/gmxCodelists.xml#CI_DateTypeCode"
+codelistvalue="creation">Creazione</ci_datetypecode>
+                  
+                  </code></pre>
+      </aside>
     </section>
                 <section id="String elementen"> 
                 <h3>String elementen</h3> 
@@ -417,7 +425,7 @@ href="#meertaligheid-metadata">Hoofdstuk 7</a>.</p><p><br></p>
         <dd>Metadata die een beschrijving geeft van een specifieke dataset [<a data-cite="ISO19101">ISO
             19101:2002</a>].</dd>
         <dt>Multipliciteit</dt>
-        <dd>Eigenschap die aangeeft of een element niet, 1 of meerdere keren
+        <dd>Eigenschap die aangeeft of een element niet, één of meerdere keren
           voor kan of dient te komen.</dd>
         <dt>Namespace</dt>
         <dd>Verzameling van namen, geïdentificeerd door een URI-referentie, die
@@ -1022,7 +1030,11 @@ style="float:right">[<a data-cite="ISO19139">ISO 19139:2007</a>]</span></p>
               <tr>
                 <td>OnLineDescriptionCode</td>
                 <td><code>&lt;gmx:Anchor
-xlink:href="http://inspire.ec.europa.eu/metadata-codelist/OnLineDescriptionCode/accessPoint"&gt;accessPoint&lt;/gmx:Anchor&gt;</code></td>
+<br>xlink:href="http://inspire.ec.europa.eu/metadata-codelist/OnLineDescriptionCode/endPoint"&gt;endPoint<br>&lt;/gmx:Anchor&gt;</code></td>
+              </tr>
+              <tr>
+                <td>OnLineDescriptionCode</td>
+                <td>endPoint</td>
               </tr>
             </tbody>
           </table>
@@ -1048,14 +1060,22 @@ style="float:right">[<a data-cite="ISO19139">ISO 19139:2007</a>]</span></p>
               <tr>
                 <td>media-types</td>
                 <td><code>&lt;gmx:Anchor
-                    xlink:href="https://www.iana.org/assignments/media-types/application/gml+xml"&gt;
-                    GML &lt;/gmx:Anchor&gt;</code></td>
+<br>                    xlink:href="https://www.iana.org/assignments/media-types/application/gml+xml"&gt;
+                    GML <br>&lt;/gmx:Anchor&gt;</code></td>
               </tr>
               <tr>
                 <td>SV_ServiceType</td>
                 <td><code>&lt;gmx:Anchor
-                    xlink:href="http://standaarden.geonovum.nl/SV_ServiceType/OGC:WMS"&gt;
-                    OGC:WMS &lt;/gmx:Anchor&gt;</code></td>
+<br>                    xlink:href="http://standaarden.geonovum.nl/SV_ServiceType/OGC:WMS"&gt;
+                    OGC:WMS <br>&lt;/gmx:Anchor&gt;</code></td>
+              </tr>
+              <tr>
+                <td>media-types</td>
+                <td>GML</td>
+              </tr>
+              <tr>
+                <td>SV_ServiceType</td>
+                <td>OGC:WMS</td>
               </tr>
             </tbody>
           </table>
@@ -1124,9 +1144,13 @@ href="https://nl.wikipedia.org/wiki/Uniform_resource_identifier">URI</a>.
               <tr>
                 <td>Anchor</td>
                 <td><code>&lt;Anchor
-                    xlink:href="http://domein/id/record/ee543323-0fe4-4353"&gt;
-                    ee543323-0fe4-4353-9161-eda61ff26c07 &lt;/Anchor&gt;</code>
+<br>                    xlink:href="http://domein/id/record/ee543323-0fe4-4353"&gt;
+                    ee543323-0fe4-4353-9161-eda61ff26c07 <br>&lt;/Anchor&gt;</code>
                 </td>
+              </tr>
+              <tr>
+                <td>String</td>
+                <td>ee543323-0fe4-4353-9161-eda61ff26c07</td>
               </tr>
             </tbody>
           </table>
@@ -1150,7 +1174,7 @@ style="float:right">[ISO 19139:2007]</span>
               <tr>
                 <td>String</td>
                 <td><code>&lt;MD_DataIdentification
-                    id="04dbf480-1bee-4860-a280-d869cbbe193a"&gt;...&lt;/MD_DataIdentification&gt;</code></td>
+                    id="04dbf480-1bee-4860-a280-d869cbbe193a"&gt;<br>...<br>&lt;/MD_DataIdentification&gt;</code></td>
               </tr>
             </tbody>
           </table>
@@ -1204,9 +1228,13 @@ style="float:right">[<a data-cite="ISO19139">ISO 19139:2007</a>]</span></p>
               <tr>
                 <td>B.5.10</td>
                 <td> <code> &lt;gmd:MD_SpatialRepresentationTypeCode
-                    codeList="http://www.isotc211.org/2005/resources/codeList.xml#MD_SpatialRepresentationTypeCode"
-                    codeListValue="vector"&gt;
-                    vector&lt;/gmd:MD_SpatialRepresentationTypeCode&gt;</code> </td>
+<br>                    codeList="http://www.isotc211.org/2005/resources/codeList.xml#MD_SpatialRepresentationTypeCode"
+<br>                    codeListValue="vector"&gt;
+                    vector<br>&lt;/gmd:MD_SpatialRepresentationTypeCode&gt;</code> </td>
+              </tr>
+              <tr>
+                <td>B.5.10</td>
+                <td>vector</td>
               </tr>
             </tbody>
           </table>
@@ -1280,8 +1308,7 @@ style="float:right">[<a data-cite="ISO19139">ISO 19139:2007</a>]</span></p>
               <tr>
                 <td>Anchor</td>
                 <td><pre><code>&lt;gmx:Anchor
- xlink:href="http://inspire.ec.europa.eu/theme/ps"&gt;
- Beschermde gebieden&lt;/gmx:Anchor&gt;</code></pre>
+ xlink:href="http://inspire.ec.europa.eu/theme/ps"&gt;Beschermde gebieden<br>&lt;/gmx:Anchor&gt;</code></pre>
                 </td>
               </tr>
               <tr>
@@ -1308,6 +1335,11 @@ style="float:right">[<a data-cite="ISO19139">ISO 19139:2007</a>]</span></p>
               <tr>
                 <th>Data type of Domein</th>
                 <th>Voorbeeld</th>
+              </tr>
+              <tr>
+                <td>Anchor</td>
+                <td><pre><code>&lt;gmx:Anchor <br>xlink:href="http://www.eionet.europa.eu/gemet/inspire_themes"&gt;GEMET - INSPIRE themes, version 1.0<br>&lt;/gmx:Anchor&gt;</code></pre>
+</td>
               </tr>
               <tr>
                 <td>String</td>
@@ -1553,12 +1585,12 @@ style="float:right">[<a data-cite="ISO19139">ISO 19139:2007</a>]</span></p>
                 <th>Data type of Domein</th>
                 <th>Voorbeeld</th>
               </tr>
+              <tr><td>Anchor</td><td><pre><code>&lt;gmx:Anchor
+ xlink:href="</code><code>http://www.opengis.net/def/crs/EPSG/0/28992"&gt;RD new<br>&lt;/gmx:Anchor&gt;</code></pre></td></tr>
               <tr>
                 <td>String</td>
                 <td>http://www.opengis.net/def/crs/EPSG/0/28992</td>
-              </tr><tr><td>Anchor</td><td><pre><code>&lt;gmx:Anchor
- xlink:href="</code><code>http://www.opengis.net/def/crs/EPSG/0/28992"&gt;
- RD new&lt;/gmx:Anchor&gt;</code></pre></td></tr>
+              </tr>
             </tbody>
           </table>
           <div class="advisement"><i><br>
@@ -1600,8 +1632,7 @@ style="float:right">[<a data-cite="ISO19139">ISO 19139:2007</a>]</span></p>
 style="float:right">[<a data-cite="ISO19139">ISO 19139:2007</a>]</span></p>
           <p>Dit element is conditioneel in dit profiel. Het is verplicht
             als de dataset een geharmoniseerde INSPIRE bron is. Dit element bevat de naam van
-            het distributie formaat van de dataset. Deze informatie is te vinden
-            in de INSPIRE dataspecificaties in de paragraaf genaamd Encoding.</p>
+            het distributie formaat van de dataset. </p>
           <table>
             <colgroup><col style="width: 25%"><col style="width: 75%"></colgroup>
             <tbody>
@@ -1609,6 +1640,10 @@ style="float:right">[<a data-cite="ISO19139">ISO 19139:2007</a>]</span></p>
                 <th>Data type of Domein</th>
                 <th>Voorbeeld</th>
               </tr>
+               <tr><td>Anchor</td><td><pre><code>&lt;gmx:Anchor
+ xlink:href="http://inspire.ec.europa.eu/schemas/hy/4.0/HydroBase.xsd"&gt;Hydrography GML application schema<br>&lt;/gmx:Anchor&gt;</code></pre>
+</td></tr>
+              
               <tr>
                 <td>String</td>
                 <td>Hydrography GML application schema</td>
@@ -1622,8 +1657,7 @@ style="float:right">[<a data-cite="ISO19139">ISO 19139:2007</a>]</span></p>
 style="float:right">[<a data-cite="ISO19139">ISO 19139:2007</a>]</span></p>
           <p>Dit element is conditioneel in dit profiel. Het is verplicht
             als de dataset een geharmoniseerde INSPIRE bron is. Dit element bevat de versie van
-            het distributie formaat van de dataset. Deze informatie is te vinden
-            in de INSPIRE dataspecificaties in de paragraaf genaamd Encoding.</p>
+            het distributie formaat van de dataset. </p>
           <table>
             <colgroup><col style="width: 25%"><col style="width: 75%"></colgroup>
             <tbody>
@@ -1633,7 +1667,7 @@ style="float:right">[<a data-cite="ISO19139">ISO 19139:2007</a>]</span></p>
               </tr>
               <tr>
                 <td>String</td>
-                <td>version 3.0; GML, version 3.2.1</td>
+                <td>versie 4.0; GML, versie 3.2.1</td>
               </tr>
             </tbody>
           </table>
@@ -1644,9 +1678,7 @@ style="float:right">[<a data-cite="ISO19139">ISO 19139:2007</a>]</span></p>
 style="float:right">[<a data-cite="ISO19139">ISO 19139:2007</a>]</span></p>
           <p>Dit element is conditioneel in dit profiel. Het is verplicht
             als de dataset een geharmoniseerde INSPIRE bron is. Dit element bevat de
-            specificatie van het distributie formaat van de dataset. Deze
-            informatie is te vinden in de INSPIRE dataspecificaties in de
-            paragraaf genaamd Encoding.</p>
+            specificatie van het distributie formaat van de dataset. </p>
           <table>
             <colgroup><col style="width: 25%"><col style="width: 75%"></colgroup>
             <tbody>
@@ -1654,13 +1686,13 @@ style="float:right">[<a data-cite="ISO19139">ISO 19139:2007</a>]</span></p>
                 <th>Data type of Domein</th>
                 <th>Voorbeeld</th>
               </tr>
+              <tr><td>Anchor</td><td><pre><code>&lt;gmx:Anchor
+ xlink:href="http://inspire.ec.europa.eu/id/document/tg/hy"&gt;Data specificatie hydrografie<br>&lt;/gmx:Anchor&gt;</code></pre>
+</td></tr>
               <tr>
                 <td>String</td>
-                <td>D2.8.I.8 Data Specification on Hydrography – Guidelines</td>
-              </tr><tr><td>Anchor</td><td><pre><code>&lt;gmx:Anchor
- xlink:href="http://inspire.ec.europa.eu/theme/hy"&gt;
- Data specificatie hydrografie&lt;/gmx:Anchor&gt;</code></pre>
-</td></tr>
+                <td>Data Specification on Hydrography – Guidelines</td>
+              </tr>
             </tbody>
           </table>
         </section>
@@ -1726,13 +1758,17 @@ style="float:right">[<a data-cite="ISO19139">ISO 19139:2007</a>]</span></p>
                 <th>Data type of Domein</th>
                 <th>Voorbeeld</th>
               </tr>
+              <tr><td>Anchor</td><td><pre><code>&lt;gmx:Anchor
+ xlink:href="http://inspire.ec.europa.eu/id/document/tg/au"&gt;Data specificatie administratieve eenheden<br>&lt;/gmx:Anchor&gt;</code></pre>
+</td></tr>
               <tr>
+              </tr><tr>
                 <td>String</td>
                 <td>“INSPIRE Data Specification on Administrative Units –
                   Guidelines v3.0.1”.</td>
               </tr>
               <tr>
-                <td> <br>
+                <td> String<br>
                 </td>
                 <td>IMRO2008</td>
               </tr>
@@ -1905,8 +1941,7 @@ style="float:right">[<a data-cite="ISO19139">ISO 19139:2007</a>]</span></p>
               <tr>
                 <td>Anchor</td>
                 <td>
-                  <pre><code>&lt;otherConstraints&gt;&lt;gmx:anchor xlink:href="https://creativecommons.org/publicdomain/mark/*/deed.nl"&gt;Geen
-beperkingen&lt;/gmx:anchor&gt;&lt;/otherConstraints&gt;</code></pre>
+                  <pre><code>&lt;otherConstraints&gt;<br>&lt;gmx:anchor <br>xlink:href="https://creativecommons.org/publicdomain/mark/*/deed.nl"&gt;Geen beperkingen<br>&lt;/gmx:anchor&gt;<br>&lt;/otherConstraints&gt;</code></pre>
                 </td>
               </tr>
               <tr>
@@ -1929,7 +1964,7 @@ beperkingen&lt;/gmx:anchor&gt;&lt;/otherConstraints&gt;</code></pre>
               <tr>
                 <td>ConditionsApplyingToAccessAndUse</td>
                 <td> <code>&lt;gmx:anchor
-                    xlink:href="http://inspire.ec.europa.eu/metadata-codelist/ConditionsApplyingToAccessAndUse/noConditionsApply"&gt;Geen beperkingen&lt;/gmx:anchor&gt;</code> </td>
+                    <br>xlink:href="http://inspire.ec.europa.eu/metadata-codelist/ConditionsApplyingToAccessAndUse/noConditionsApply"&gt;Geen beperkingen<br>&lt;/gmx:anchor&gt;</code> </td>
               </tr>
             </tbody>
           </table>
@@ -2319,7 +2354,7 @@ style="width: 50%"></colgroup>
           </tr>
           <tr>
             <td rowspan="2">Contactpersoon metadata
-              <div class="note">Geonovum adviseert de contactgegevens te
+              <div class="note">Er wordt geadviseerd de contactgegevens te
                 ontsluiten via een website (URL organisatie) met daarop de
                 relevante gegevens in plaats van deze elementen.</div>
             </td>
@@ -2441,7 +2476,7 @@ style="width: 50%"></colgroup>
               data.</td>
           </tr>
           <tr>
-            <td rowspan="8">Contactpersoon dataset contactgegevens1</td>
+            <td rowspan="8">Contactpersoon dataset contactgegevens</td>
             <td>408</td>
             <td>Telefoonnummer</td>
             <td>Telefoonnummer.</td>
@@ -2661,7 +2696,7 @@ style="width: 50%"></colgroup>
           <tr>
             <td rowspan="8">Contactpersoon distribuerende organisatie
               Contactgegevens
-              <div class="note">Geonovum adviseert de contactgegevens te
+              <div class="note">Er wordt geadviseerd de contactgegevens te
                 ontsluiten via een website (URL organisatie) met daarop de
                 relevante gegevens in plaats van deze elementen.</div>
             </td>
@@ -2884,8 +2919,7 @@ alt="image004"></a> <figcaption>Vrije
         ISO 19110 <em>FeatureCatalogue</em>. Het verstrekken van deze metadata
         wordt niet door dit profiel verplicht gesteld, het is echter aan te
         bevelen deze informatie ter beschikking te stellen.</p>
-      <p>Het ISO 19110 is een apart document waarnaar verwezen kan worden vanuit
-        1 of meerdere dataset beschijvingen. De relatie vanuit de metadata naar
+      <p>Het ISO 19110 is een apart document waarnaar verwezen kan worden vanuit één of meerdere dataset beschijvingen. De relatie vanuit de metadata naar
         de featurecatalogue kan worden gelegd door in de dataset beschrijving
         elementen van de klasse MD_FeatureCatalogueDescription op te nemen. De
         koppeling word gelegd vanuit een featureCatalogueCitation naar het
@@ -4612,7 +4646,7 @@ width="100%">
             <td> <br>
             </td>
             <td rowspan="4">
-              <p>Geonovum adviseert contactinformatie op de website van de
+              <p>ER wordt geadviseert contactinformatie op de website van de
                 organisatie te plaatsen. Contactgegevens hoeven hier dan niet
                 ingevuld en bijgehouden te worden.</p>
             </td>
@@ -7127,7 +7161,7 @@ width="100%">
             <td> <br>
             </td>
             <td rowspan="4">
-              <p>Geonovum adviseert contactinformatie op de website van de
+              <p>ER wordt geadviseert contactinformatie op de website van de
                 organisatie te plaatsen. Contactgegevens hoeven hier dan niet
                 ingevuld en bijgehouden te worden.</p>
             </td>
@@ -12058,7 +12092,7 @@ width="100%">
             <td> <br>
             </td>
             <td rowspan="4">
-              <p>Geonovum adviseert contactinformatie op de website van de
+              <p>Er wordt geadviseerd contactinformatie op de website van de
                 organisatie te plaatsen. Contactgegevens hoeven hier dan niet
                 ingevuld en bijgehouden te worden.</p>
             </td>
