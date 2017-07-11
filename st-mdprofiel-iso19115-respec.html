@@ -336,8 +336,8 @@ href="#appendix-a">appendix-a</a>. Dit zijn vaak de ISO codelijsten, soms zijn d
                   </p>
                   <aside class="example" title="XML voorbeeld">
                     <pre><code> 
-                  <ci_datetypecode codelist="http://standards.iso.org/iso/19139/resources/codelist/gmxCodelists.xml#CI_DateTypeCode"
-codelistvalue="creation">Creazione</ci_datetypecode>
+&lt;ci_datetypecode codelist="http://standards.iso.org/iso/19139/resources/codelist/gmxCodelists.xml#CI_DateTypeCode"
+codelistvalue="creation"&gt;Creatie datum&lt;/ci_datetypecode&gt;
                   
                   </code></pre>
       </aside>
@@ -352,9 +352,9 @@ codelistvalue="creation">Creazione</ci_datetypecode>
                   
       </p><aside class="example" title="XML voorbeeld">
       <pre><code>  
-         &lt;gmd:keyword&gt;
-            &lt;gmx:anchor xlink:href="http://inspire.ec.europa.eu/theme/mf"&gt;Meteorological geographical features&lt;/gmx:anchor&gt; 
-         &lt;/gmd:keyword&gt;      
+&lt;gmd:keyword&gt;
+  &lt;gmx:anchor xlink:href="http://inspire.ec.europa.eu/theme/mf"&gt;Meteorological geographical features&lt;/gmx:anchor&gt; 
+&lt;/gmd:keyword&gt;      
    </code></pre>
       </aside><p>Meertaligheid in&nbsp; het metadata document wordt ondersteund door meerdere keren opnemen van het string element in verschillende talen, met extra informatie over de taal. Dit is uitgewerkt in <a
 href="#meertaligheid-metadata">Hoofdstuk 7</a>.</p><p><br></p>
@@ -566,30 +566,30 @@ data-cite="INSPIRE-19115-19119"><em>INSPIRE Metadata Implementing
             </tr>
             
             <tr><td colspan="4" rowspan="1"><strong>Trefwoorden</strong></td></tr><tr>
-              <td>&nbsp;&nbsp;&nbsp; Trefwoord</td>
+              <td>&nbsp;&nbsp;&nbsp; <a href="#trefwoord">Trefwoord</a></td>
               <td>V</td>
               <td>V</td><td>&nbsp;</td>
             </tr>
             <tr><td>&nbsp;&nbsp;&nbsp; Thesaurus</td><td><br></td><td><br></td><td><br></td></tr><tr>
-              <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Titel</td>
+              <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <a href="#thesaurus">Titel</a></td>
               <td>C&nbsp;</td>
               <td>C</td><td>Het is verplicht als een keyword uit een thesaurus afkomstig
                 is.</td>
             </tr>
             <tr>
-              <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Datum</td>
+              <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <a href="#thesaurusdatum">Datum</a></td>
               <td>C</td>
               <td>C</td><td>Het is verplicht als een keyword uit een thesaurus afkomstig
                 is.</td>
             </tr>
             <tr>
-              <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Datum type</td>
+              <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <a href="#thesaurusdatum-type">Datum type</a></td>
               <td>C</td>
               <td>C</td><td>Het is verplicht als een keyword uit een thesaurus afkomstig
                 is.</td>
             </tr>
             <tr>
-              <td colspan="4"><b>Omgrenzenderechthoek</b></td>
+              <td colspan="4"><a href="#Omgrenzende%20rechthoek"><b>Omgrenzende rechthoek</b></a></td>
             </tr>
             <tr>
               <td>&nbsp;&nbsp;&nbsp; Minimum x-coördinaat</td>
@@ -612,61 +612,61 @@ data-cite="INSPIRE-19115-19119"><em>INSPIRE Metadata Implementing
               <td>V</td><td>&nbsp;</td>
             </tr>
             <tr>
-              <td>Datum van de bron</td>
+              <td><a href="#datum-van-de-bron">Datum van de bron</a></td>
               <td>V</td>
               <td>V</td><td><br></td>
             </tr>
             <tr>
-              <td>Datumtype van de bron</td><td>V</td><td>V</td><td><br></td>
+              <td><a href="#datum-type-van-de-bron">Datumtype van de bron</a></td><td>V</td><td>V</td><td><br></td>
             </tr>
             <tr>
-              <td>Niveau kwaliteitsbeschrijving</td>
+              <td><a href="#niveau-kwaliteitsbeschrijving">Niveau kwaliteitsbeschrijving</a></td>
               <td>V</td>
               <td>V</td><td>&nbsp;</td>
             </tr>
             <tr>
-              <td>Algemene beschrijving herkomst</td>
+              <td><a href="#algemene-beschrijving-herkomst">Algemene beschrijving herkomst</a></td>
               <td>V</td>
               <td>V</td><td>&nbsp;</td>
             </tr>
             <tr>
-              <td>Toepassingsschaal</td>
+              <td><a href="#toepassingsschaal">Toepassingsschaal</a></td>
               <td>C</td>
               <td>C</td><td>Het is verplicht als er een toepassingsschaal gespecificeerd kan
                 worden en het element Resolutie niet aanwezig is.</td>
             </tr>
             <tr>
-              <td>Resolutie</td>
+              <td><a href="#resolutie">Resolutie</a></td>
               <td>C</td>
               <td>C</td><td>Het is verplicht als er een resolutie gespecificeerd kan worden en
                 het element toepassingsschaal niet aanwezig is.</td>
             </tr>
             <tr>
-              <td>Ruimtelijk referentiesysteem</td>
+              <td><a href="#codereferentiesysteem">Ruimtelijk referentiesysteem</a></td>
               <td>V</td>
               <td>V</td><td>&nbsp;</td>
             </tr>
             <tr>
-              <td>Temporeel referentiesysteem&nbsp;</td>
+              <td><a href="#temporeel-referentiesysteem">Temporeel referentiesysteem</a>&nbsp;</td>
               <td>C</td>
               <td>C</td><td>Het is verplicht als de dataset temporele informatie bevat die niet
                 gebaseerd is op de Gregoriaanse kalender of de Coordinated
                 Universal Time.</td>
             </tr>
             <tr><td><strong>Distributie formaat</strong></td><td><br></td><td><br></td><td><br></td></tr><tr>
-              <td>&nbsp;&nbsp;&nbsp; Naam </td>
+              <td>&nbsp;&nbsp;&nbsp; <a href="#naam-distributie-formaat">Naam</a> </td>
               <td>O</td>
               <td>C</td><td>Het is verplicht als de dataset een geharmoniseerde INSPIRE bron is en als de informatie is gemodelleerd volgens een specifiek
                 informatie model.</td>
             </tr>
             <tr>
-              <td>&nbsp;&nbsp;&nbsp; Versie</td>
+              <td>&nbsp;&nbsp;&nbsp; <a href="#versie-distributie-formaat">Versie</a></td>
               <td>O</td>
               <td>C</td><td>Het is verplicht als de dataset een geharmoniseerde INSPIRE bron is en als de informatie is gemodelleerd volgens een specifiek
                 informatie model.</td>
             </tr>
             <tr>
-              <td>&nbsp;&nbsp;&nbsp; Specificatie</td>
+              <td>&nbsp;&nbsp;&nbsp; <a href="#specificatie-distributie-formaat">Specificatie</a></td>
               <td>O</td>
               <td>C</td><td>Het is verplicht als de dataset een geharmoniseerde INSPIRE bron is en als de informatie is gemodelleerd volgens een specifiek
                 informatie model.</td>
@@ -677,42 +677,42 @@ data-cite="INSPIRE-19115-19119"><em>INSPIRE Metadata Implementing
               
             </tr>
                <tr>
-              <td>&nbsp;&nbsp;&nbsp; Conformiteit indicatie met een specificatie</td>
+              <td>&nbsp;&nbsp;&nbsp; <a href="#conformiteit-indicatie-met-de-specificatie">Conformiteit indicatie met een specificatie</a></td>
               <td>C</td>
               <td>V</td><td>Het is verplicht als de dataset een INSPIRE bron is of
                 als de informatie is gemodelleerd volgens een specifiek
                 informatie model.</td>
             </tr>
             <tr>
-              <td>&nbsp;&nbsp;&nbsp; Verklaring</td>
+              <td>&nbsp;&nbsp;&nbsp; <a href="#verklaring">Verklaring</a></td>
               <td>C</td>
               <td>V</td><td>Het is verplicht als de dataset een INSPIRE bron is of
                 als de informatie is gemodelleerd volgens een specifiek
                 informatie model.</td>
             </tr>
             <tr>
-              <td>&nbsp;&nbsp;&nbsp; Specificatie</td>
+              <td>&nbsp;&nbsp;&nbsp; <a href="#specificatie">Specificatie</a></td>
               <td>C</td>
               <td>V</td><td>Het is verplicht als de dataset een INSPIRE bron is of
                 als de informatie is gemodelleerd volgens een specifiek
                 informatie model.</td>
             </tr>
             <tr>
-              <td>&nbsp;&nbsp;&nbsp; Specificatiedatum</td>
+              <td>&nbsp;&nbsp;&nbsp; <a href="#specificatiedatum">Specificatiedatum</a></td>
               <td>C</td>
               <td>V</td><td>Het is verplicht als de dataset een INSPIRE bron is of
                 als de informatie is gemodelleerd volgens een specifiek
                 informatie model.</td>
             </tr>
             <tr>
-              <td>&nbsp;&nbsp;&nbsp; Specificatiedatum type</td>
+              <td>&nbsp;&nbsp;&nbsp; <a href="#specificatiedatum-type">Specificatiedatum type</a></td>
               <td>C</td>
               <td>V</td><td>Het is verplicht als de dataset een INSPIRE bron is of
                 als de informatie is gemodelleerd volgens een specifiek
                 informatie model.</td>
             </tr>
             <tr><td colspan="4" rowspan="1"><strong>Topologische samenhang</strong></td></tr><tr>
-              <td>&nbsp;&nbsp;&nbsp; Waarde</td>
+              <td>&nbsp;&nbsp;&nbsp; <a href="#topologische-samenhang">Waarde</a></td>
               <td>O</td>
               <td>C</td><td>Het is verplicht voor INSPIRE datasets als voor netwerken de
                 aansluiting van hartlijnen niet is verzekerd.</td>
@@ -724,81 +724,81 @@ data-cite="INSPIRE-19115-19119"><em>INSPIRE Metadata Implementing
                 aansluiting van hartlijnen niet is verzekerd.</td>
             </tr>
             <tr><td colspan="4" rowspan="1"><b>Beperkingen</b></td></tr><tr>
-              <td>&nbsp;&nbsp;&nbsp;&nbsp; Toegangsrestricties</td>
+              <td>&nbsp;&nbsp;&nbsp;&nbsp; <a href="#juridische-toegangsrestricties">Juridische toegangsrestricties</a></td>
               <td>V</td>
               <td>V</td><td><br>
               </td>
             </tr>
             <tr>
-              <td>&nbsp;&nbsp;&nbsp;&nbsp; Overige beperkingen</td>
+              <td>&nbsp;&nbsp;&nbsp;&nbsp; <a href="#overige-beperkingen">Overige beperkingen</a></td>
               <td>C</td>
               <td>C</td><td>Het is verplicht als
                 juridische toegangsrestricties de waarde "otherRestrictions" heeft.</td>
             </tr>
             <tr>
-              <td>Gebruiksbeperkingen</td>
+              <td>&nbsp;&nbsp;&nbsp;&nbsp; <a href="#gebruiksbeperkingen">Gebruiksbeperkingen</a></td>
               <td>V</td>
               <td>V</td><td>&nbsp;</td>
             </tr>
             <tr><td colspan="4" rowspan="1"><strong>Contactinformatie bron</strong><strong><br></strong></td></tr><tr>
-              <td>&nbsp;&nbsp;&nbsp; Organisatie</td>
+              <td>&nbsp;&nbsp;&nbsp; <a href="#verantwoordelijke-organisatie-bron">Organisatie</a></td>
               <td>V</td>
               <td>V</td><td>&nbsp;</td>
             </tr>
             <tr>
-              <td>&nbsp;&nbsp;&nbsp; E-mail</td>
+              <td>&nbsp;&nbsp;&nbsp; <a href="#verantwoordelijke-organisatie-bron-email">E-mail</a></td>
               <td>V</td>
               <td>V</td><td>&nbsp;</td>
             </tr>
             <tr>
-              <td>&nbsp;&nbsp;&nbsp; Rol</td>
+              <td>&nbsp;&nbsp;&nbsp; <a href="#verantwoordelijke-organisatie-bron:-rol">Rol</a></td>
               <td>V</td>
               <td>V</td><td>&nbsp;</td>
             </tr>
             <tr>
-              <td>Parent unieke identifier</td>
+              <td><a href="#parent-unieke-identifier">Parent unieke identifier</a></td>
               <td>C</td>
               <td>C</td><td>Het is verplicht als er een dataset met hogere hiërarchie bestaat.</td>
             </tr>
             
             
             <tr>
-              <td>Metadata unieke identifier</td>
+              <td><a href="#metadata-unieke-identifier">Metadata unieke identifier</a></td>
               <td>V</td>
               <td>V</td><td>&nbsp;</td>
             </tr>
             <tr><td colspan="4" rowspan="1"><strong>Contactinformatie metadata</strong></td></tr><tr>
-              <td>&nbsp;&nbsp;&nbsp; Organisatie</td>
+              <td>&nbsp;&nbsp;&nbsp; <a href="#verantwoordelijke-organisatie-metadata">Organisatie</a></td>
               <td>V</td>
               <td>V</td><td>&nbsp;</td>
             </tr>
             <tr>
-              <td>&nbsp;&nbsp;&nbsp; E-mail</td>
+              <td>&nbsp;&nbsp;&nbsp; <a href="#verantwoordelijke-organisatie-metadata:-e-mail">E-mail</a></td>
               <td>V</td>
               <td>V</td><td>&nbsp;</td>
             </tr>
             <tr>
-              <td>&nbsp;&nbsp;&nbsp; Rol</td>
+              <td>&nbsp;&nbsp;&nbsp; <a href="#verantwoordelijke-organisatie-metadata:-rol">Rol</a></td>
               <td>V</td>
               <td>V</td><td>&nbsp;</td>
             </tr>
             <tr>
-              <td>Metadata datum</td>
+              <td><a href="#metadatadatum">Metadata datum</a></td>
               <td>V</td>
               <td>V</td><td>&nbsp;</td>
             </tr>
             <tr>
-              <td>Taal van de metadata</td>
+              <td><a href="#taal-van-de-metadata">Taal van de metadata</a></td>
               <td>V</td>
               <td>V</td><td>&nbsp;</td>
             </tr>
             <tr><td colspan="4" rowspan="1"><strong>Metadata standaard</strong></td></tr><tr>
-              <td>&nbsp;&nbsp;&nbsp; Naam</td>
+              <td>&nbsp;&nbsp;&nbsp; <a href="#metadata-standaard-naam">Naam</a></td>
               <td>V</td>
               <td>O</td><td>&nbsp;</td>
             </tr>
             <tr>
-              <td>&nbsp;&nbsp;&nbsp; Versie</td>
+              <td>&nbsp;&nbsp;&nbsp; <a href="#metadatastandaard-versie">Versie</a></td>
               <td>V</td>
               <td>O</td><td>&nbsp;</td>
             </tr>
