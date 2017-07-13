@@ -14,9 +14,8 @@
       <p>Geonovum ontwikkelt en <a href="http://www.geonovum.nl/onderwerp-artikel/beheer-geo-standaarden">beheert</a>
         de Nederlandse metadataprofielen. Deze profielen zijn een
         verbijzondering van de internationale metadatastandaarden van ISO en
-        zijn bedoeld om de interoperabiliteit binnen Nederland te
-        bevorderen. De volgende metadataprofielen worden ondersteund en
-        gebruikt:</p>
+        zijn bedoeld om de interoperabiliteit binnen Nederland te bevorderen. De
+        volgende metadataprofielen worden ondersteund en gebruikt:</p>
       <ul>
         <li>datasets: <a href="https://github.com/Geonovum/Metadata-ISO19115">Nederlands
             metadataprofiel op ISO 19115 voor geografie v2.0.0</a></li>
@@ -340,18 +339,18 @@ http://schemas.opengis.net/csw/2.0.2/profiles/apiso/1.0.0/apiso.xsd</a></td>
       </section>
       <section id="Codelijsten">
         <h3>Codelijsten</h3>
-        <p>In de metadata dienen de codelijsten waarnaar verwezen wordt bij de
-          element beschrijving, gehanteerd te worden. Deze codeljsten zijn ook
-          opgenomen in <a href="#appendix-a">appendix-a</a>. Dit zijn vaak de
-          ISO codelijsten, soms zijn de waarden die in dit profiel gebruikt
-          mogen worden beperkt. Voor een aantal String elementen wordt ook een
-          codelijst gehanteerd. hierbij wordt soms het gebruik van gmx:Anchor
-          element vereist. </p>
+        <p>In de metadata dienen de waarden uit de codelijsten waarnaar verwezen
+          wordt bij de element beschrijving, gehanteerd te worden. Deze
+          codelijsten zijn ook opgenomen in <a href="#appendix-a">appendix-a</a>.
+          Dit zijn vaak de ISO codelijsten, soms zijn de waarden die in dit
+          profiel gebruikt mogen worden beperkt. Voor een aantal String
+          elementen wordt ook een codelijst gehanteerd. Hierbij wordt soms het
+          gebruik van gmx:Anchor element vereist. </p>
         <aside class="example" title="Verwijzing naar codelijst">
           <pre><code>&lt;ci_datetypecode 
   codelist="http://standards.iso.org/iso/19139/resources/codelist/gmxCodelists.xml#CI_DateTypeCode"
-  codelistvalue="creation"&gt;
-    Creatie datum&lt;/ci_datetypecode&gt;</code></pre>
+  codelistvalue="creation"&gt;Creatie datum
+&lt;/ci_datetypecode&gt;</code></pre>
         </aside>
       </section>
       <section id="String elementen">
@@ -830,7 +829,7 @@ http://schemas.opengis.net/csw/2.0.2/profiles/apiso/1.0.0/apiso.xsd</a></td>
                   aansluiting van hartlijnen niet is verzekerd.</td>
               </tr>
               <tr>
-                <td>&nbsp;&nbsp;&nbsp; Type waarde</td>
+                <td>&nbsp;&nbsp;&nbsp;<a href="#Type-waarde"> Type waarde</a></td>
                 <td>O</td>
                 <td>C</td>
                 <td>Het is verplicht voor INSPIRE datasets als voor netwerken de
@@ -1176,7 +1175,7 @@ http://schemas.opengis.net/csw/2.0.2/profiles/apiso/1.0.0/apiso.xsd</a></td>
             <p>Bij een URL van het type&nbsp; 'accessPoint' kan het element leeg
               gelaten worden. Aanname is dat als er geen waarde is opgegeven,
               het een accessPoint is.</p>
-            <p>Het bevat een verwijzing naar een waarde uit de <a href="http://inspire.ec.europa.eu/metadata-codelist/OnLineDescriptionCode">codelijst
+            <p>Het bevat een verwijzing naar een waarde uit de <a href="codelijst-INSPIRE-OnLineDescriptionCode">codelijst
                 OnLineDescriptionCode</a> die het type URL beschrijft. </p>
             <p>Indien verwezen wordt naar een URL die rechtstreeks een dataset
               in een specifiek mediatype oplevert dient de waarde endPoint
@@ -1211,7 +1210,7 @@ xlink:href="http://inspire.ec.europa.eu/metadata-codelist/OnLineDescriptionCode/
             <p>Dit element is conditioneel. Het is verplicht als er een URL is
               opgegeven. Bijvoorbeeld naar een bestand, WFS of webpagina. </p>
             <p>Indien de URL een 'endPoint' betreft dan dient een waarde
-              geselecteerd te worden uit de <a href="http://inspire.ec.europa.eu/media-types">codelijst
+              geselecteerd te worden uit de <a href="#codelijst-media-types">codelijst
                 media-types</a>. </p>
             <p>Indien de URL een 'accessPoint' betreft, dient een waarde
               geselecteerd te worden uit de <a href="#codelijst-sv-servicetype">codelijst
@@ -1369,9 +1368,8 @@ xlink:href="http://inspire.ec.europa.eu/metadata-codelist/OnLineDescriptionCode/
               brontekstuele informatie bevat. Het bevat de code van de taal
               waarin de tekst in de bron is opgenomen. Gebruik hiervoor alleen
               de drie-letter codes van 639-2/B (bibliographic codes), zoals
-              gedefinieerd op <a href="http://www.loc.gov/standards/iso639-2/">http://www.loc.gov/standards/iso639-2/</a>.
-              Voor Nederlands is de code dut, zie <a href="#codelijst-iso-639-2">Appendix
-                A</a>.</p>
+              gedefinieerd op <a href="http://www.loc.gov/standards/iso639-2/">http://www.loc.gov/standards/iso639-2/</a>
+              zie <a href="#codelijst-iso-639-2">Appendix A</a>.</p>
             <table>
               <colgroup><col style="width: 25%"><col style="width: 75%"></colgroup>
               <tbody>
@@ -1391,8 +1389,8 @@ xlink:href="http://inspire.ec.europa.eu/metadata-codelist/OnLineDescriptionCode/
             <p style="text-align:left"><em>identificationInfo[1]/*/spatialRepresentationType/MD_SpatialRepresentationTypeCode</em><span
                 style="float:right">[<a data-cite="ISO19139">ISO 19139:2007</a>]</span></p>
             <p>Dit element is conditioneel. Dit element is verplicht voor
-              INSPIRE. Er dient een waarde uit de codelist
-              MD_SpatialRepresentationTypeCode gebruikt te worden.</p>
+              INSPIRE. Er dient een waarde uit de <a href="#codelijst-b526">codelijst
+                MD_SpatialRepresentationTypeCode</a> gebruikt te worden.</p>
             <table>
               <colgroup><col style="width: 25%"><col style="width: 75%"></colgroup>
               <tbody>
@@ -1421,7 +1419,9 @@ xlink:href="http://inspire.ec.europa.eu/metadata-codelist/OnLineDescriptionCode/
             <h4>Karakterset van de bron</h4>
             <p style="text-align:left"><em>identificationInfo[1]/*/</em><span style="float:right">[<a
                   data-cite="ISO19139">ISO 19139:2007</a>]</span></p>
-            <p>Verplicht als de in de bron gebruikte karakterset geen utf8 is.</p>
+            <p>Verplicht als de in de bron gebruikte karakterset geen utf8 is.
+              Er dient een waarde uit <a href="#codelijst-b510">codelijst
+                B.5.10</a> gebruikt te worden</p>
             <table>
               <colgroup><col style="width: 25%"><col style="width: 75%"></colgroup>
               <tbody>
@@ -1568,7 +1568,7 @@ xlink:href="http://inspire.ec.europa.eu/metadata-codelist/OnLineDescriptionCode/
               trefwoord uit een thesaurus afkomstig is zoals in ieder geval voor
               de INSPIRE thema’s. Het bevat het type gebeurtenis waar de datum
               betrekking op heeft. Type gebeurtenis wordt gekozen uit <a href="#codelijst-b52">codelijst
-                B.5.2 uit ISO 19115</a>. Mogelijke gebeurtenissen zijn:
+                B.5.2</a> uit ISO 19115. Mogelijke gebeurtenissen zijn:
               creatie-, publicatie-, of revisiedatum.</p>
             <table>
               <colgroup><col style="width: 25%"><col style="width: 75%"></colgroup>
@@ -1783,7 +1783,7 @@ xlink:href="http://inspire.ec.europa.eu/metadata-codelist/OnLineDescriptionCode/
                   <td>Anchor</td>
                   <td>
                     <pre><code>&lt;gmx:Anchor
-  xlink:href="http://www.opengis.net/def/crs/EPSG/0/28992"&gt;RD new
+  xlink:href="http://www.opengis.net/def/crs/EPSG/0/28992"&gt;RD
 &lt;/gmx:Anchor&gt;</code></pre>
                   </td>
                 </tr>
@@ -2063,7 +2063,7 @@ xlink:href="http://inspire.ec.europa.eu/metadata-codelist/OnLineDescriptionCode/
               </tbody>
             </table>
           </section>
-          <section id="juridische-toegangsrestricties">
+          <section id="Type-waarde">
             <h4>Type waarde</h4>
             <p style="text-align:left"><em>dataQualityInfo/*/report/*/</em><span
                 style="float:right">[<a data-cite="ISO19139">ISO 19139:2007</a>]</span></p>
@@ -2102,8 +2102,8 @@ xlink:href="http://inspire.ec.europa.eu/metadata-codelist/OnLineDescriptionCode/
             <p>Dit element bevat toegangseisen die er zorg voor dragen dat
               privacy of intellectueel eigendom gewaarborgd zijn en elke andere
               speciale beperkingen voor het verkrijgen van de metadata of data.
-              De waardes komen uit <a href="#codelijst-b524">codelijst B.5.24
-                van ISO19115</a>.</p>
+              De waardes komen uit <a href="#codelijst-b524">codelijst B.5.24</a>
+              uit ISO 19115.</p>
             <table>
               <colgroup><col style="width: 25%"><col style="width: 75%"></colgroup>
               <tbody>
@@ -2121,8 +2121,8 @@ xlink:href="http://inspire.ec.europa.eu/metadata-codelist/OnLineDescriptionCode/
                 Toelichting</i>
               <p> De Nederlandse overheid wil overheidsinformatie zoveel
                 mogelijk gratis en zonder gebruiksvoorwaarden beschikbaar
-                stellen. Dat geldt ook voor geo-informatie.
-                Het ministerie van Infrastructuur en Milieu hanteert <a href="http://creativecommons.nl/publiek-domein/#commons">Creative
+                stellen. Dat geldt ook voor geo-informatie. Het ministerie van
+                Infrastructuur en Milieu hanteert <a href="http://creativecommons.nl/publiek-domein/#commons">Creative
                   Commons ZERO</a> als de voorkeurslicentie (om aan te geven dat
                 een werk zonder restricties gebruikt kan worden) voor data van
                 haar ministerie. </p>
@@ -2138,8 +2138,8 @@ xlink:href="http://inspire.ec.europa.eu/metadata-codelist/OnLineDescriptionCode/
                 gebruiksvoorwaarden voor geo-informatie op een eenvoudige,
                 heldere en gestandaardiseerde manier kenbaar te maken. Het is
                 ontstaan uit de behoefte van de overheid om de bestaande
-                gebruiksvoorwaarden voor geo-informatie te stroomlijnen.
-                Zie ook <a href="http://www.geonovum.nl/onderwerpen/gebruiksvoorwaarden/algemeen-gebruiksvoorwaarden">
+                gebruiksvoorwaarden voor geo-informatie te stroomlijnen. Zie ook
+                <a href="http://www.geonovum.nl/onderwerpen/gebruiksvoorwaarden/algemeen-gebruiksvoorwaarden">
                   algemeen gebruiksvoorwaarden</a></p>
             </div>
           </section>
@@ -2155,7 +2155,7 @@ xlink:href="http://inspire.ec.europa.eu/metadata-codelist/OnLineDescriptionCode/
               de voorwaarden voor toegang en gebruik&nbsp; een link naar de
               licentie en de bijbehorende beschrijving opgenomen.&nbsp;
               Daarnaast wordt er, als het een INSPIRE dataset is en er geen
-              beperkingen zijn of deze niet bekend zijn, een waarde uit <a href="http://inspire.ec.europa.eu/metadata-codelist/ConditionsApplyingToAccessAndUse/">codelijst
+              beperkingen zijn of deze niet bekend zijn, een waarde uit <a href="#Codelijst-INSPIRE-ConditionsApplyingToAccessAndUse">codelijst
                 ConditionsApplyingToAccessAndUse</a> opgenomen in een tweede
               otherConstraints element binnen hetzelfde&nbsp;
               md:resourceConstraints/gmd:MD_LegalConstraints element. Voor
@@ -2164,7 +2164,7 @@ xlink:href="http://inspire.ec.europa.eu/metadata-codelist/OnLineDescriptionCode/
               dataset.&nbsp; </p>
             <p>Daarnaast wordt voor beperkingen op publieke toegang in één ander
               gmd:resourceConstraints/gmd:MD_LegalConstraints een waarde
-              opgenomen uit <a href="http://inspire.ec.europa.eu/metadata-codelist/LimitationsOnPublicAccess/">codelijst
+              opgenomen uit <a href="Codelijst-INSPIRE-LimitationsOnPublicAccess/">codelijst
                 LimitationsOnPublicAccess</a> . Als er geen beperkingen zijn
               dient men dat ook aan te geven, met de waarde "noLimitations".
               Voor INSPIRE is het gebruik van een Anchor verplicht.<br>
@@ -2331,25 +2331,26 @@ xlink:href="http://inspire.ec.europa.eu/metadata-codelist/OnLineDescriptionCode/
                   <th>Voorbeeld</th>
                 </tr>
                 <tr>
-                  <td>String</td>
-                  <td>Nederlandse organisatie voor
-                    toegepast-natuurwetenschappelijk onderzoek (TNO)</td>
-                </tr>
-                <tr>
                   <td>Anchor</td>
                   <td>
-                    <pre><code>&lt;Anchor xlink:href="https://www.tno.nl/nl/over-tno/organisatie"&gt;
+                    <pre><code>&lt;Anchor <br> xlink:href="https://www.tno.nl/nl/over-tno/organisatie"&gt;
   Nederlandse organisatie voor toegepast-natuurwetenschappelijk onderzoek (TNO)
 &lt;/Anchor&gt;</code></pre>
                   </td>
                 </tr>
+                                    <tr>
+                                      <td>String</td>
+                                      <td>Nederlandse organisatie voor
+                                        toegepast-natuurwetenschappelijk
+                                        onderzoek (TNO)</td>
+                                    </tr>
               </tbody>
             </table>
           </section>
           <section id="verantwoordelijke-organisatie-bron-email">
             <h4>Verantwoordelijke organisatie bron: e-mail</h4>
             <p style="text-align:left"><em>identificationInfo[1]/*/pointOfContact/*/contactInfo/*/address/*/electronicMailAddress</em><span
-                style="float:right">[<a data-cite="ISO19139">ISO 19139:2007</a>]</span></p>
+style="float:right">[<a data-cite="ISO19139">ISO 19139:2007</a>]</span></p>
             <p>Dit element bevat het e-mail adres van de verantwoordelijke
               organisatie van de bron. Gebruik bij voorkeur een functioneel
               e-mail adres.</p>
@@ -2370,7 +2371,7 @@ xlink:href="http://inspire.ec.europa.eu/metadata-codelist/OnLineDescriptionCode/
           <section id="verantwoordelijke-organisatie-bron:-rol">
             <h4>Verantwoordelijke organisatie bron rol</h4>
             <p style="text-align:left"><em>identificationInfo[1]/*/pointOfContact/*/role</em><span
-                style="float:right">[<a data-cite="ISO19139">ISO 19139:2007</a>]</span></p>
+style="float:right">[<a data-cite="ISO19139">ISO 19139:2007</a>]</span></p>
             <p>Dit element geeft de rol van de verantwoordelijke organisatie van
               de bron weer. Voor de rol van de organisatie wordt een codelijst
               gehanteerd, zie zie <a href="#codelijst-b55">Codelijst B.5.5
@@ -2392,7 +2393,7 @@ xlink:href="http://inspire.ec.europa.eu/metadata-codelist/OnLineDescriptionCode/
           <section id="metadata-unieke-identifier">
             <h4>Metadata unieke identifier</h4>
             <p style="text-align:left"><em>fileIdentifier</em><span style="float:right">[<a
-                  data-cite="ISO19139">ISO 19139:2007</a>]</span></p>
+data-cite="ISO19139">ISO 19139:2007</a>]</span></p>
             <p>Dit element bevat de unieke en persistente identifier voor de
               metadata file. Geadviseerd wordt om gebruik te maken van een
               betekenisloze identifier die wereldwijd uniek is zoals de <a href="http://en.wikipedia.org/wiki/UUID">Universal
@@ -2415,7 +2416,7 @@ xlink:href="http://inspire.ec.europa.eu/metadata-codelist/OnLineDescriptionCode/
           <section id="parent-unieke-identifier">
             <h4>Parent unieke identifier</h4>
             <p style="text-align:left"><em>parentIdentifier</em><span style="float:right">[<a
-                  data-cite="ISO19139">ISO 19139:2007</a>]</span></p>
+data-cite="ISO19139">ISO 19139:2007</a>]</span></p>
             <p>Dit element is conditioneel. Het is verplicht als er een dataset
               met hogere hiërarchie is. Het bevat de unieke ID van de metadata
               waarvan deze metadata een subset is.</p>
@@ -2436,7 +2437,7 @@ xlink:href="http://inspire.ec.europa.eu/metadata-codelist/OnLineDescriptionCode/
           <section id="verantwoordelijke-organisatie-metadata">
             <h4>Verantwoordelijke organisatie metadata</h4>
             <p style="text-align:left"><em>contact/*/organisationName</em><span
-                style="float:right">[<a data-cite="ISO19139">ISO 19139:2007</a>]</span></p>
+style="float:right">[<a data-cite="ISO19139">ISO 19139:2007</a>]</span></p>
             <p>Dit element bevat de naam van de organisatie verantwoordelijk
               voor de metadata. Gebruik de volledig uitgeschreven naam van de
               verantwoordelijke organisatie. De afkorting kan toegevoegd worden
@@ -2452,18 +2453,19 @@ xlink:href="http://inspire.ec.europa.eu/metadata-codelist/OnLineDescriptionCode/
                   <th>Data type of Domein</th>
                   <th>Voorbeeld</th>
                 </tr>
-                <tr>
-                  <td>String</td>
-                  <td>Nederlandse organisatie voor
-                    toegepast-natuurwetenschappelijk onderzoek (TNO)</td>
-                </tr>
+               
                 <tr>
                   <td>Anchor</td>
                   <td>
-                    <pre><code>&lt;Anchor xlink:href="https://www.tno.nl/nl/over-tno/organisatie"&gt;
+                    <pre><code>&lt;Anchor<br>&nbsp;xlink:href="https://www.tno.nl/nl/over-tno/organisatie"&gt;
   Nederlandse organisatie voor toegepast-natuurwetenschappelijk onderzoek (TNO)
 &lt;/Anchor&gt;</code></pre>
                   </td>
+                </tr>
+                 <tr>
+                  <td>String</td>
+                  <td>Nederlandse organisatie voor
+                    toegepast-natuurwetenschappelijk onderzoek (TNO)</td>
                 </tr>
               </tbody>
             </table>
@@ -2471,10 +2473,11 @@ xlink:href="http://inspire.ec.europa.eu/metadata-codelist/OnLineDescriptionCode/
           <section id="verantwoordelijke-organisatie-metadata:-rol">
             <h4>Verantwoordelijke organisatie metadata rol</h4>
             <p style="text-align:left"><em>contact/*/role</em><span style="float:right">[<a
-                  data-cite="ISO19139">ISO 19139:2007</a>]</span></p>
+data-cite="ISO19139">ISO 19139:2007</a>]</span></p>
             <p>Dit element bevat de rol van de organisatie verantwoordelijk voor
-              de metadata. Voor de rol van de organisatie wordt een codelijst
-              gehanteerd. INSPIRE vereist pointOfContact.</p>
+              de metadata.  INSPIRE vereist pointOfContact. Voor de rol van de organisatie wordt <a
+href="#codelijst-b55">Codelijst B.5.5
+                CI_RoleCode</a> gehanteerd.</p>
             <table>
               <colgroup><col style="width: 25%"><col style="width: 75%"></colgroup>
               <tbody>
@@ -2492,7 +2495,7 @@ xlink:href="http://inspire.ec.europa.eu/metadata-codelist/OnLineDescriptionCode/
           <section id="verantwoordelijke-organisatie-metadata:-e-mail">
             <h4>Verantwoordelijke organisatie metadata e mail</h4>
             <p style="text-align:left"><em>contact/*/contactInfo/*/address/*/electronicMailAddress</em><span
-                style="float:right">[<a data-cite="ISO19139">ISO 19139:2007</a>]</span></p>
+style="float:right">[<a data-cite="ISO19139">ISO 19139:2007</a>]</span></p>
             <p>Dit element bevat het e-mail adres van de organisatie
               verantwoordelijk voor de metadata. Gebruik bij voorkeur een
               functioneel e-mail adres.</p>
@@ -2513,7 +2516,7 @@ xlink:href="http://inspire.ec.europa.eu/metadata-codelist/OnLineDescriptionCode/
           <section id="metadatadatum">
             <h4>Metadatadatum</h4>
             <p style="text-align:left"><em>dateStamp</em><span style="float:right">[<a
-                  data-cite="ISO19139">ISO 19139:2007</a>]</span></p>
+data-cite="ISO19139">ISO 19139:2007</a>]</span></p>
             <p>Dit element bevat de datum waarop de metadata gemaakt ofgewijzigd
               is. Het formaat van de datum is JJJJ-MM-DD (met streepjes).</p>
             <table>
@@ -2533,12 +2536,12 @@ xlink:href="http://inspire.ec.europa.eu/metadata-codelist/OnLineDescriptionCode/
           <section id="taal-van-de-metadata">
             <h4>Taal van de metadata</h4>
             <p style="text-align:left"><em>Language</em><span style="float:right">[<a
-                  data-cite="ISO19139">ISO 19139:2007</a>]</span></p>
+data-cite="ISO19139">ISO 19139:2007</a>]</span></p>
             <p>In dit element wordt vastgelegd in welke taal de metadata is
               beschreven. Het bevat de code van de taal waarin de tekst in de
               metadata is opgenomen. Gebruik hiervoor alleen de drie-letter
               codes van 639-2/B (bibliographic codes), zoals gedefinieerd op <a
-                href="http://www.loc.gov/standards/iso639-2/">http://www.loc.gov/standards/iso639-2/</a>.
+href="http://www.loc.gov/standards/iso639-2/">http://www.loc.gov/standards/iso639-2/</a>.
               De code voor Nederlands is dut, zie <a href="#codelijst-iso-639-2">Appendix
                 A</a>. Over het algemeen is dut de default waarde.</p>
             <table>
@@ -2558,7 +2561,7 @@ xlink:href="http://inspire.ec.europa.eu/metadata-codelist/OnLineDescriptionCode/
           <section id="metadata-standaard-naam">
             <h4>Metadata standaard naam</h4>
             <p style="text-align:left"><em>metadataStandardName</em><span style="float:right">[<a
-                  data-cite="ISO19139">ISO 19139:2007</a>]</span></p>
+data-cite="ISO19139">ISO 19139:2007</a>]</span></p>
             <p>Dit element is nodig om uitbreidingen op profielen te duiden. Dit
               element bevat de naam van de standaard.</p>
             <table>
@@ -2578,7 +2581,7 @@ xlink:href="http://inspire.ec.europa.eu/metadata-codelist/OnLineDescriptionCode/
           <section id="metadatastandaard-versie">
             <h4>Metadatastandaard versie</h4>
             <p style="text-align:left"><em>metadataStandardVersion</em><span style="float:right">[<a
-                  data-cite="ISO19139">ISO 19139:2007</a>]</span></p>
+data-cite="ISO19139">ISO 19139:2007</a>]</span></p>
             <p>Dit element is nodig om uitbreidingen op standaarden aan te
               geven. Dit element bevat de versie (profiel) van de
               metadatastandaard die wordtgebruikt.</p>
@@ -2618,7 +2621,7 @@ xlink:href="http://inspire.ec.europa.eu/metadata-codelist/OnLineDescriptionCode/
           set aangegeven via de abstracte klassen die ISO 19115 gebruikt.</p>
         <table>
           <colgroup><col style="width: 20%;"><col style="width: 10%;"><col style="width: 20%;"><col
-              style="width: 50%"></colgroup>
+style="width: 50%"></colgroup>
           <thead>
             <tr>
               <th>Metadata naam</th>
@@ -3165,7 +3168,7 @@ xlink:href="http://inspire.ec.europa.eu/metadata-codelist/OnLineDescriptionCode/
           klasse van MD_Metadata weer en het UML-schema van deze extensie op
           characterString weer.</p>
         <figure id="image003"> <a href="st-mdprofiel-iso19115/image003.png"><img
-              src="st-mdprofiel-iso19115/image003.png" alt="image003"></a> <figcaption>Attributen
+src="st-mdprofiel-iso19115/image003.png" alt="image003"></a> <figcaption>Attributen
             van MD_Metadata in het XML-schema voor geografische metadata.</figcaption>
         </figure>
         <p>De elementen met vrije tekst in het domein van CharacterString
@@ -3180,7 +3183,7 @@ xlink:href="http://inspire.ec.europa.eu/metadata-codelist/OnLineDescriptionCode/
           worden. Onderstaand conceptueel schema is opgenomen in ISO19139, ook
           de benodigde data dictionary is opgenomen in ISO 19139.</p>
         <figure id="image004"> <a href="st-mdprofiel-iso19115/image004.png"><img
-              src="st-mdprofiel-iso19115/image004.png" alt="image004"></a> <figcaption>Vrije
+src="st-mdprofiel-iso19115/image004.png" alt="image004"></a> <figcaption>Vrije
             tekst en “localised” characterString.</figcaption> </figure>
         <aside class="example" title="Meertalige metadata">
           <pre><code>&lt;gmd:organisationName xsi:type="gmd:PT_FreeText_PropertyType"&gt; 
@@ -3293,8 +3296,7 @@ Toelichting: Eenheid waar een lidstaat rechtsbevoegdheid
       <section class="appendix" id="appendix-a">
         <h2>Codelijsten</h2>
         <p>Deze bijlage bevat de codelijsten die van toepassing zijn in de
-          Nederlandse metadatastandaard voor geografie. Gegevenzijn de Engelse
-          naam uit ISO 19115 en de Nederlandse vertaling voor gebruikers. De
+          Nederlandse metadatastandaard voor geografie. Gegevenzijn de de Engelse naam die als waarde gebruikt wordt uit ISO 19115 en de Nederlandse vertaling voor gebruikers. De
           CharacterString van het XML-bestand die moet worden uitgewisseld kan
           verschillen om te voldoen aan de naamgeving in XML. ISO 19139
           definieert in paragraaf 8.5.5.1 drie XML-attributen die gerelateerd
@@ -3316,7 +3318,7 @@ Toelichting: Eenheid waar een lidstaat rechtsbevoegdheid
           worden beschouwd als CodelistValue en de Nederlandse naam kan worden
           beschouwd als Codespace.</p>
         <section id="codelijsten-iso19115-en-inspire">
-          <h3>De codelijsten in ISO 19115 en INSPIRE</h3>
+          <h3>De codelijsten uit&nbsp; ISO 19115 en INSPIRE</h3>
           <section id="codelijst-b52">
             <h4>Codelijst B.5.2 CI_DateTypeCode</h4>
             <table>
@@ -3888,8 +3890,8 @@ Toelichting: Eenheid waar een lidstaat rechtsbevoegdheid
               <colgroup><col style="width: 25%;"><col style="width: 25%;"><col style="width: 50%;"></colgroup>
               <tbody>
                 <tr>
-                  <th>Naam</th>
-                  <th>Engelse naam</th>
+                  <th>NL vertaling waarde</th>
+                  <th>Waarde</th>
                   <th>Beschrijving</th>
                 </tr>
                 <tr>
@@ -4001,8 +4003,8 @@ Toelichting: Eenheid waar een lidstaat rechtsbevoegdheid
               <colgroup><col style="width: 25%;"><col style="width: 25%;"><col style="width: 50%;"></colgroup>
               <tbody>
                 <tr>
-                  <th>Naam</th>
-                  <th>Engelse naam</th>
+                  <th>NL vertaling waarde</th>
+                  <th>Waarde</th>
                   <th>Beschrijving</th>
                 </tr>
                 <tr>
@@ -4051,149 +4053,246 @@ Toelichting: Eenheid waar een lidstaat rechtsbevoegdheid
                   <td>tin</td>
                   <td>Triangulated irregular network.</td>
                 </tr>
-                <!--<tr>
-                <td>stereoModel *</td>                <td>stereoModel</td>                <td>3D overzicht wordt gevormd door intersectie van twee                  kernstralen van twee overlappende beelden.</td>              </tr>              <tr>                <td>Video *</td>                <td>video</td>                <td>Scène uit een video opname.</td>              </tr>-->
-              </tbody>
+                 </tbody>
             </table>
-            * Deze waarden zijn niet toegestaan in de context van INSPIRE
-            metadata </section>
+             </section>
           <section id="codelijst-b527">
             <h4>Codelijst B.5.27 MD_TopicCategoryCode</h4>
             <table>
               <colgroup><col style="width: 25%;"><col style="width: 25%;"><col style="width: 50%;"></colgroup>
               <tbody>
                 <tr>
-                  <th>Naam</th>
-                  <th>Engelse naam</th>
+                  <th>NL vertaling waarde</th>
+                  <th>Waarde</th>
                   <th>Beschrijving</th>
                 </tr>
                 <tr>
                   <td>Landbouw en veeteelt</td>
                   <td>farming</td>
-                  <td>Houden van dieren en/of verbouwen van
-                    planten. Vb: landbouw, irrigatie, ziekten die gewassen
-                    aantasten.</td>
+                  <td>Houden van dieren en/of verbouwen van planten. Voorbeeld:
+                    landbouw, irrigatie, ziekten die gewassen aantasten.</td>
                 </tr>
                 <tr>
                   <td>Biota</td>
                   <td>biota</td>
-                  <td>Vb: habitats, ecologie.</td>
+                  <td>Voorbeeld: habitats, ecologie.</td>
                 </tr>
                 <tr>
                   <td>Grenzen</td>
                   <td>boundaries</td>
                   <td>Wettelijke gebiedsbeschrijvingen. Flora en fauna in
-                    natuurlijke omgeving. Vb: politieke en administratieve
+                    natuurlijke omgeving. Voorbeeld: politieke en administratieve
                     grenzen.</td>
                 </tr>
                 <tr>
                   <td>Klimatologie, meteorologie atmosfeer</td>
                   <td>climatologyMeteorologyAtmosphere</td>
-                  <td>Processen en fenomenen in de
-                    atmosfeer. Vb: wolkbedekking, weer, klimaat verandering.</td>
+                  <td>Processen en fenomenen in de atmosfeer. Voorbeeld: wolkbedekking,
+                    weer, klimaat verandering.</td>
                 </tr>
                 <tr>
                   <td>Economie</td>
                   <td>economy</td>
-                  <td>Economische activiteiten, condities en
-                    werkgelegenheid. Vb: Werkgelegenheid, industrie, toerisme,
-                    olie- en gasvelden, bosbouw, visserij.</td>
+                  <td>Economische activiteiten, condities en werkgelegenheid.
+                    Voorbeeld: Werkgelegenheid, industrie, toerisme, olie- en
+                    gasvelden, bosbouw, visserij.</td>
                 </tr>
                 <tr>
                   <td>Hoogte</td>
                   <td>elevation</td>
-                  <td>Hoogte boven of onder zeeniveau Vb: hoogtekaart, DEM,
+                  <td>Hoogte boven of onder zeeniveau Voorbeeld: hoogtekaart, DEM,
                     hellingen.</td>
                 </tr>
                 <tr>
                   <td>Natuur en milieu</td>
                   <td>environment</td>
-                  <td>Natuurlijke bronnen, bescherming en beheer. Vb:
+                  <td>Natuurlijke bronnen, bescherming en beheer. Voorbeeld:
                     milieuverontreiniging, landschap, natuurlijke reserves,
                     vuilopslag.</td>
                 </tr>
                 <tr>
                   <td>Geo wetenschappelijke data</td>
                   <td>geoscientificInformation</td>
-                  <td>Data die behoort tot een
-                    aardwetenschap. Vb: geologie, mineralen, structuur van de
-                    aarde, zwaartekrachtskaart, grondstoffen, erosie.</td>
+                  <td>Data die behoort tot een aardwetenschap. Voorbeeld: geologie,
+                    mineralen, structuur van de aarde, zwaartekrachtskaart,
+                    grondstoffen, erosie.</td>
                 </tr>
                 <tr>
                   <td>Gezondheid</td>
                   <td>health</td>
-                  <td>Gezondheid(szorg), menselijke ecologie
-                    en veiligheid. Vb: ziekten, hygiëne, gezondheidszorg.</td>
+                  <td>Gezondheid(szorg), menselijke ecologie en veiligheid. Voorbeeld:
+                    ziekten, hygiëne, gezondheidszorg.</td>
                 </tr>
                 <tr>
                   <td>Referentie materiaal aardbedekking</td>
                   <td>imageryBaseMapsEarthCover</td>
-                  <td>Basiskaarten. Vb: landbedekking, topografische kaarten,
+                  <td>Basiskaarten. Voorbeeld: landbedekking, topografische kaarten,
                     foto's, ongeclassificeerde kaarten.</td>
                 </tr>
                 <tr>
                   <td>Militair</td>
                   <td>intelligenceMilitary</td>
-                  <td>Militaire basissen, structuren en
-                    activiteiten. Vb: barakken, oefenterreinen, militaire
-                    transporten.</td>
+                  <td>Militaire basissen, structuren en activiteiten. Voorbeeld:
+                    barakken, oefenterreinen, militaire transporten.</td>
                 </tr>
                 <tr>
                   <td>Binnenwater</td>
                   <td>inlandWaters</td>
-                  <td>Binnenwater, drainagesystemen en hun
-                    karakteristieken. Vb: Rivieren en gletsjers, dijken,
-                    stromen, waterzuiveringsinstallaties, overloopgebieden.</td>
+                  <td>Binnenwater, drainagesystemen en hun karakteristieken. Voorbeeld:
+                    Rivieren en gletsjers, dijken, stromen,
+                    waterzuiveringsinstallaties, overloopgebieden.</td>
                 </tr>
                 <tr>
                   <td>Locatie</td>
                   <td>location</td>
-                  <td>Positionele informatie en services. Vb: adressen,
+                  <td>Positionele informatie en services. Voorbeeld: adressen,
                     geodetisch netwerk, postcode gebieden, plaatsnamen,
                     controlepunten.</td>
                 </tr>
                 <tr>
                   <td>Oceanen</td>
                   <td>oceans</td>
-                  <td>Gebieden met zoutwaterlichamen (niet
-                    binnenlands). Vb: Getijden, tsunami's, kustinformatie,
-                    riffen.</td>
+                  <td>Gebieden met zoutwaterlichamen (niet binnenlands). Voorbeeld:
+                    Getijden, tsunami's, kustinformatie, riffen.</td>
                 </tr>
                 <tr>
                   <td>Planning kadaster</td>
                   <td>planningCadastre</td>
-                  <td>Informatie die gebruikt wordt voor
-                    nodige planmatige activiteiten. Vb: Landgebruik, kadastrale
-                    informatie.</td>
+                  <td>Informatie die gebruikt wordt voor nodige planmatige
+                    activiteiten. Voorbeeld: Landgebruik, kadastrale informatie.</td>
                 </tr>
                 <tr>
                   <td>Maatschappij</td>
                   <td>society</td>
-                  <td>Kenmerken van maatschappij en
-                    culturen. Vb: antropologie, archeologie, criminaliteit,
-                    gewoonten, nederzettingen, onderwijs.</td>
+                  <td>Kenmerken van maatschappij en culturen. Voorbeeld: antropologie,
+                    archeologie, criminaliteit, gewoonten, nederzettingen,
+                    onderwijs.</td>
                 </tr>
                 <tr>
                   <td>(civiele) structuren</td>
                   <td>structure</td>
-                  <td>Civiele werken (door mensen gemaakte
-                    structuren). Vb. Gebouwen, musea, kerken, winkels, torens.</td>
+                  <td>Civiele werken (door mensen gemaakte structuren). Voorbeeld:
+                    Gebouwen, musea, kerken, winkels, torens.</td>
                 </tr>
                 <tr>
                   <td>Transport</td>
                   <td>transportation</td>
-                  <td>Middelen voor vervoer van goederen
-                    en/of personen. Vb: Wegen, Vliegvelden, tunnels, spoorwegen.</td>
+                  <td>Middelen voor vervoer van goederen en/of personen. Voorbeeld:
+                    Wegen, Vliegvelden, tunnels, spoorwegen.</td>
                 </tr>
                 <tr>
                   <td>Nutsbedrijven communicatie</td>
                   <td>utilitiesCommunication</td>
-                  <td>Energie, waterleidingen en riolering en
-                    communicatie infrastructuren en
-                    services. Vb: elektriciteit- en gasdistributie,
-                    waterzuivering en verstrekking, telecommunicatie, radio.</td>
+                  <td>Energie, waterleidingen en riolering en communicatie
+                    infrastructuren en services. Voorbeeld: elektriciteit- en
+                    gasdistributie, waterzuivering en verstrekking,
+                    telecommunicatie, radio.</td>
                 </tr>
               </tbody>
+            </table>
+          </section>
+          <section id="Codelijst-INSPIRE-OnLineDescriptionCode">
+            <h4>Codelijst INSPIRE OnLineDescriptionCode</h4>
+            <table>
+              <colgroup><col style="width: 25%;"><col style="width: 25%;"><col style="width: 50%;"></colgroup>
+              <tbody>
+                <tr>
+                  <th>NL vertaling waarde</th>
+                  <th>Waarde</th>
+                  <th>Beschrijving</th>
+                </tr>
+                <tr>
+                  <td>toegangspunt</td>
+                  <td>accessPoint</td>
+                  <td> <br></td>
+                </tr>
+                <tr>
+                  <td>endpunt</td>
+                  <td>endPoint</td>
+                  <td> <br></td>
+                </tr>
+              </tbody>
+            </table>
+          </section>
+         
+          <section id="Codelijst-INSPIRE-ConditionsApplyingToAccessAndUse">
+            <h4>Codelijst INSPIRE  ConditionsApplyingToAccessAndUse</h4>
+            <table>
+              <colgroup><col style="width: 50%;"><col style="width: 50%;"></colgroup>
+              <tbody>
+                <tr>
+                  <th>Waarde</th>
+                  <th>Definitie</th>
+                </tr>
+                <tr>
+                  <td>chttp://inspire.ec.europa.eu/metadata-codelist/ConditionsApplyingToAccessAndUse/conditionsUnknown</td>
+                  <td>condities zijn onbekend</td>
+                </tr>
+                <tr>
+                  <td>http://inspire.ec.europa.eu/metadata-codelist/ConditionsApplyingToAccessAndUse/noConditionsApply</td>
+                  <td>er zijn geen condities voor toegang en gebruik</td>
+                </tr>
+          </tbody>
+            </table>
+          </section>   
+           <section id="Codelijst-INSPIRE-LimitationsOnPublicAccess">
+            <h4>Codelijst INSPIRE  LimitationsOnPublicAccess</h4>
+            <table>
+              <colgroup><col style="width: 50%;"><col style="width: 50%;"></colgroup>
+              <tbody>
+                <tr>
+                  <th>Waarde</th>
+                   <th>Definitie</th>
+                </tr>
+                <tr>
+                  <td>http://inspire.ec.europa.eu/metadata-codelist/LimitationsOnPublicAccess/noLimitations</td>
+                   <td>Geen beperkingen voor publieke toegang</td>
+                </tr>
+                <tr>
+                  <td>http://inspire.ec.europa.eu/metadata-codelist/LimitationsOnPublicAccess/INSPIRE_Directive_Article13_1a</td>
+                  <td>Publieke toegang beperkt ivm afbreuk van het vertrouwelijke karakter van handelingen van overheidsinstanties,
+indien deze vertrouwelijkheid bij wet is voorzien</td>
+                </tr>
+                <tr>
+                  <td>http://inspire.ec.europa.eu/metadata-codelist/LimitationsOnPublicAccess/INSPIRE_Directive_Article13_1b</td>
+                  <td>Publieke toegang beperkt ivm afbreuk van internationale betrekkingen, openbare veiligheid of nationale
+defensie</td>
+                </tr><tr>
+                  <td>http://inspire.ec.europa.eu/metadata-codelist/LimitationsOnPublicAccess/INSPIRE_Directive_Article13_1c</td>
+                <td>Publieke toegang beperkt ivm afbreuk van de rechtsgang, de mogelijkheid voor een persoon een eerlijk
+proces te krijgen of de mogelijkheid voor een overheid om
+een onderzoek van strafrechtelijke of disciplinaire aard in te
+stellen</td>
+                </tr><tr>
+                  <td>http://inspire.ec.europa.eu/metadata-codelist/LimitationsOnPublicAccess/INSPIRE_Directive_Article13_1d</td>
+                <td>Publieke toegang beperkt ivm afbreuk van de vertrouwelijkheid van commerciële of industriële
+informatie, wanneer deze vertrouwelijkheid in de nationale
+of de communautaire wetgeving geboden wordt om een gewettigd economisch belang te beschermen, met inbegrip
+van het algemeen belang dat met statistische en fiscale
+geheimhouding is gediend</td>
+                </tr><tr>
+                  <td>http://inspire.ec.europa.eu/metadata-codelist/LimitationsOnPublicAccess/INSPIRE_Directive_Article13_1e</td>
+                <td>Publieke toegang beperkt ivm afbreuk van intellectuele-eigendomsrechten </td>
+                </tr><tr>
+                  <td>http://inspire.ec.europa.eu/metadata-codelist/LimitationsOnPublicAccess/INSPIRE_Directive_Article13_1f</td>
+                <td>Publieke toegang beperkt ivm afbreuk van de vertrouwelijkheid van persoonsgegevens en/of -dossiers
+met betrekking tot een natuurlijk persoon wanneer die
+persoon niet heeft ingestemd met bekendmaking van de
+informatie aan het publiek, wanneer in deze vertrouwelijkheid
+is voorzien in het nationaal of het Gemeenschapsrecht </td>
+                </tr><tr>
+                  <td>http://inspire.ec.europa.eu/metadata-codelist/LimitationsOnPublicAccess/INSPIRE_Directive_Article13_1g</td>
+                <td>Publieke toegang beperkt ivm afbreuk van de belangen of de bescherming van diegene die de
+verzochte informatie op vrijwillige basis heeft verstrekt
+zonder daartoe wettelijk verplicht te zijn of te kunnen
+worden, tenzij die persoon ermee heeft ingestemd dat de
+betrokken informatie wordt vrijgegeven</td>
+                </tr><tr>                
+                  <td>http://inspire.ec.europa.eu/metadata-codelist/LimitationsOnPublicAccess/INSPIRE_Directive_Article13_1h</td>
+                <td>Publieke toegang beperkt ivm afbreuk van de bescherming van het milieu waarop die informatie
+betrekking heeft, zoals de habitat van zeldzame soorten</td>
+                </tr>
+          </tbody>
             </table>
           </section>
         </section>
@@ -4259,16 +4358,16 @@ Toelichting: Eenheid waar een lidstaat rechtsbevoegdheid
             </table>
           </section>
           <section id="codelijst-sv-servicetype">
-            <h4>CodelijstSV_ServiceType</h4>
+            <h4>Codelijst SV_ServiceType</h4>
             <p>Deze codelijstis gebaseerd op het voorstel uit INSPIRE
               metadataimplementing rules based on ISO 19115 and ISO 19119</p>
             <table>
               <colgroup><col style="width: 25%;"><col style="width: 50%;"><col style="width: 25%;"></colgroup>
               <tbody>
                 <tr>
-                  <th>Naam</th>
+                  <th>Waarde</th>
                   <th>Beschrijving</th>
-                  <th>MD IR Name</th>
+                  <th>INSPIRE service type</th>
                 </tr>
                 <tr>
                   <td>OGC:CSW</td>
@@ -4422,12 +4521,31 @@ Toelichting: Eenheid waar een lidstaat rechtsbevoegdheid
               </tbody>
             </table>
           </section>
+           <section id="codelijst-media-types">
+            <h4>Codelijst media types</h4>
+            <table>
+              <colgroup><col style="width: 25%;"><col style="width: 50%;"><col style="width: 25%;"></colgroup>
+              <tbody>
+                <tr>
+                  <th>Waarde</th>
+                  <th>Beschrijving</th>
+                  <th> <br></th>
+                </tr>
+                <tr>
+                  <td> <br></td>
+                  <td> <br></td>
+                  <td> <br></td>
+                </tr>
+                
+              </tbody>
+            </table>
+          </section>
         </section>
       </section>
       <section class="appendix" id="appendix-b">
         <h2>Invulinstructies</h2>
         <table rules="GROUPS" class="table-small" border="1" cellpadding="5" cellspacing="0"
-          width="100%">
+width="100%">
           <colgroup><col> <col> <col> <col> <col> <col> <col> <col> <col>
             <col> <col> <col> <col> <col> <col> <col> <col> <col> <col>
             <col> <col> </colgroup>
@@ -17212,7 +17330,7 @@ Toelichting: Eenheid waar een lidstaat rechtsbevoegdheid
           zijn.</p>
         <table>
           <colgroup><col width="20%"><col width="9%"><col width="9%"><col width="16%"><col
-              width="8%"><col width="38%"></colgroup>
+width="8%"><col width="38%"></colgroup>
           <thead>
             <tr>
               <th>Metadata element</th>
@@ -17709,7 +17827,7 @@ Toelichting: Eenheid waar een lidstaat rechtsbevoegdheid
           die verplicht zijn, zijn in geel weergegeven.</p>
         <table>
           <colgroup><col width="20%"><col width="9%"><col width="16%"><col width="8%"><col
-              width="16%"><col width="15%"><col width="16%"></colgroup>
+width="16%"><col width="15%"><col width="16%"></colgroup>
           <thead>
             <tr>
               <th>Metadata element</th>
@@ -18230,10 +18348,9 @@ Toelichting: Eenheid waar een lidstaat rechtsbevoegdheid
       <section class="appendix" id="appendix-f">
         <h2>Koppeling vanuit metadata met data en service</h2>
         <figure id="image005"> <a href="st-mdprofiel-iso19115/image005.svg"><img
-              src="st-mdprofiel-iso19115/image005.svg" alt="image005"></a> <figcaption>Koppeling
+src="st-mdprofiel-iso19115/image005.svg" alt="image005"></a> <figcaption>Koppeling
             vanuit metadata met data en service.</figcaption> </figure>
       </section>
       <script class="remove" src="st-mdprofiel-iso19115/localscript.js"></script>
     </section>
-  </body>
-</html>
+</body></html>
