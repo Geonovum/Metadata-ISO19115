@@ -1536,7 +1536,7 @@ style="float:right">[<a data-cite="ISO19139">ISO
                                 <p>Dit element is conditioneel. Dit element is
                                   verplicht voor INSPIRE. Er dient een waarde
                                   uit de <a href="#codelijst-b526">codelijst
-                                    MD_SpatialRepresentationTypeCode</a>
+                                    B.5.26</a>
                                   gebruikt te worden.</p>
                                 <table>
                                   <colgroup><col style="width: 25%"><col style="width: 75%"></colgroup>
@@ -5256,19 +5256,16 @@ width="100%">
               </td>
               <td>
                 <p>Volledige naam van de voor metadata verantwoordelijke
-                  organisatie. Indien niet een organisatie verantwoordelijk is,
-                  maar een persoon, dan wordt de naam van deze persoon ingevuld.
-                </p>
+                  organisatie.</p>
               </td>
               <td>
-                <p>Ministerie van Economische Zaken, Landbouw en Innovatie</p>
-                <p>, Dienst Landelijk Gebied (EL&amp;I DLG)</p>
+                <p>Nederlandse organisatie voor toegepast-natuurwetenschappelijk onderzoek (TNO)</p>
               </td>
               <td>
                 <p>Gebruik de volledig uitgeschreven naam van de
                   verantwoordelijke organisatie. De afkorting kan toegevoegd
                   worden aan de organisatienaam. Voor de correcte overheidsnamen
-                  zie: http://almanak.overheid.nl/.</p>
+                  zie: http://almanak.overheid.nl/.Gebruik bij voorkeur een  URI uit een organisatienamenlijst </p>
               </td>
               <td>
                 <p>string</p>
@@ -5344,7 +5341,7 @@ width="100%">
               <td> <br>
               </td>
               <td rowspan="4">
-                <p>ER wordt geadviseert contactinformatie op de website van de
+                <p>Er wordt geadviseert contactinformatie op de website van de
                   organisatie te plaatsen. Contactgegevens hoeven hier dan niet
                   ingevuld en bijgehouden te worden.</p>
               </td>
@@ -5850,12 +5847,10 @@ width="100%">
                 <p>E-mail adres van de organisatie.</p>
               </td>
               <td>
-                <p>geoloket@agi.rws.minvenw.nl</p>
+                <p>geo-info@organisatienaam.nl</p>
               </td>
               <td>
-                <p>Maak hier voor implementatie een e-maillink van, zodat na
-                  klikken op het e-mailadres direct een e-mail verstuurd kan
-                  worden.</p>
+                <p>Gebruik bij voorkeur een functioneel e-mail adres.</p>
               </td>
               <td>
                 <p>string</p>
@@ -5976,7 +5971,7 @@ width="100%">
                   Resource Locator adres of een vergelijkbaar schema.</p>
               </td>
               <td>
-                <p><a href="http://www.dienstlandelijkgebied.nl/"><u>http://www.dienstlandelijkgebied.nl</u></a></p>
+                <p><a href="https://www.tno.nl/nl/over-tno/organisatie"><u>https://www.tno.nl/nl/over-tno/organisatie</u></a></p>
               </td>
               <td>
                 <p>&nbsp;Link naar de website van de verantwoordelijke
@@ -6122,7 +6117,7 @@ width="100%">
                   gebruikt.</p>
               </td>
               <td>
-                <p>Nederlandse metadata profiel op ISO 19115 voor geografie 1.3</p>
+                <p>Nederlandse metadata profiel op ISO 19115 voor geografie 2.0</p>
               </td>
               <td> <br>
               </td>
@@ -6317,7 +6312,7 @@ width="100%">
                 <p><b>207</b></p>
               </td>
               <td colspan="7">
-                <p><b><a href="codereferentiesysteem">Code referentiesysteem</a></b></p>
+                <p><b><a href="codereferentiesysteem">Ruimtelijk referentiesysteem</a></b></p>
               </td>
               <td>
                 <p>MD_Metadata.referenceSystemInfo &gt;
@@ -6329,11 +6324,11 @@ width="100%">
                   de dataset aangeeft.</p>
               </td>
               <td>
-                <p>28992</p>
+                <p>http://www.opengis.net/def/crs/EPSG/0/28992</p>
               </td>
               <td>
-                <p>EPSG codes dienen gebruikt te worden. Aantal voorbeelden in
-                  NL: 28992 (RD) 4937 (ETRS89) 4326 (WGS84)</p>
+                <p>EPSG codes dienen gebruikt te worden. Het referentiesysteem wordt met een URI die ook de code bevat opgenomen. Aantal voorbeelden in
+                  NL: http://www.opengis.net/def/crs/EPSG/0/28992 (RD) http://www.opengis.net/def/crs/EPSG/0/4937 (ETRS89) http://www.opengis.net/def/crs/EPSG/0/4326 (WGS84)</p>
               </td>
               <td>
                 <p>string</p>
@@ -6762,7 +6757,7 @@ width="100%">
                 <p>207</p>
               </td>
               <td colspan="7">
-                <p>Code verticaal referentiesysteem</p>
+                <p>Verticaal referentiesysteem</p>
               </td>
               <td>
                 <p>MD_Metadata.referenceSystemInfo &gt;
@@ -6774,13 +6769,13 @@ width="100%">
                   referentiesysteem van de dataset aangeeft.</p>
               </td>
               <td>
-                <p>5621</p>
+                <p>http://www.opengis.net/def/crs/EPSG/0/5621</p>
               </td>
               <td>
                 <p>De EPSG code voor het verticaal referentiesysteem. INSPIRE
-                  maakt gebruik van EVRF2007 (= EPSG code: 5621). </p>
+                  maakt gebruik van EVRF2007 (= EPSG code: http://www.opengis.net/def/crs/EPSG/0/5621). </p>
                 <p>Indien het niet gaat om een INSPIRE dataset en het
-                  refentiesysteem NAP wordt gebruikt is de EPSG code: 5709.</p>
+                  refentiesysteem NAP wordt gebruikt is de EPSG code: http://www.opengis.net/def/crs/EPSG/0/5709.</p>
                 <p><br>
                 </p>
               </td>
@@ -7374,12 +7369,13 @@ width="100%">
                 <p>Unieke waarde om data te beschrijven binnen een namespace.</p>
               </td>
               <td>
-                <p>5a389ad2-22dd-11d1-aa77-002035b29093</p>
+                <p><code>&lt;anchor xlink:href="http://domein/id/record/ee543323-0fe4-4353-9161-eda61ff26c07"&gt; ee543323-0fe4-4353-9161-eda61ff26c07 
+ &lt;/anchor&gt;</code></p><p><code><br></code></p>
+                
+                <p>ee543323-0fe4-4353-9161-eda61ff26c07</p>
               </td>
               <td>
-                <p>Unieke identifier van de bron. Gebruik hiervoor een UUID
-                  (Universal Unique Identifier
-                  (http://en.wikipedia.org/wiki/UUID)</p>
+                <p>Unieke identifier van de bron. Het gebuik van een anchor met een link naar een URI is conditioneel. Het gebruik van een anchor is verplicht voor INSPIRE datasets.</p>
               </td>
               <td>
                 <p>string</p>
@@ -7541,7 +7537,8 @@ width="100%">
                   adresgegevens. Werkbestand RIZA. De Unie van Waterschappen
                   werkt aan een verbeterd bestand.</p>
               </td>
-              <td> <br>
+              <td>  <p>Geef in deze samenvatting  publieks vriendelijk informatie over de inhoud van de dataset. Deze is minimaal drie zinnen en maximaal één alinea lang (2000 karakters). </p>
+              
               </td>
               <td>
                 <p>string</p>
@@ -7582,8 +7579,7 @@ width="100%">
               <td>
                 <p>Project HSL Zuid</p>
               </td>
-              <td> <br>
-              </td>
+              <td> <br></td>
               <td>
                 <p>string</p>
               </td>
@@ -7772,8 +7768,7 @@ width="100%">
                 <p>Naam van de verantwoordelijke organisatie.</p>
               </td>
               <td>
-                <p>Ministerie van Economische Zaken, Landbouw en Innovatie</p>
-                <p>(EL&amp;I), </p>
+                <p>Nederlandse organisatie voor toegepast-natuurwetenschappelijk onderzoek (TNO) </p>
               </td>
               <td>
                 <p>Gebruik de volledig uitgeschreven naam van de
@@ -7865,7 +7860,7 @@ width="100%">
               <td> <br>
               </td>
               <td rowspan="4">
-                <p>ER wordt geadviseert contactinformatie op de website van de
+                <p>Er wordt geadviseert contactinformatie op de website van de
                   organisatie te plaatsen. Contactgegevens hoeven hier dan niet
                   ingevuld en bijgehouden te worden.</p>
               </td>
@@ -8410,12 +8405,10 @@ width="100%">
                 <p>E-mail adres van de organisatie.</p>
               </td>
               <td>
-                <p>geoloket@agi.rws.minvenw.nl</p>
+                <p>geo-info@organisatienaam.nl</p>
               </td>
               <td>
-                <p>Maak hier voor implementatie een e-maillink van, zodat na
-                  klikken op het e-mailadres direct een e-mail verstuurd kan
-                  worden.</p>
+                <p>Gebruik bij voorkeur een functioneel e-mail adres.</p>
               </td>
               <td>
                 <p>string</p>
@@ -8544,7 +8537,7 @@ width="100%">
                   Resource Locator adres of een vergelijkbaar schema.</p>
               </td>
               <td>
-                <p><a href="http://www.dienstlandelijkgebied.nl/"><u>http://www.dienstlandelijkgebied.nl</u></a></p>
+                <p><a href="https://www.tno.nl/nl/over-tno/organisatie"><u>https://www.tno.nl/nl/over-tno/organisatie</u></a></p>
               </td>
               <td>
                 <p>&nbsp;Link naar de website van de organisatie</p>
@@ -8706,7 +8699,7 @@ width="100%">
                 <p>maandelijks</p>
               </td>
               <td>
-                <p>Engelse naam wordt in de XML opgenomen. </p>
+                <p><br></p>
               </td>
               <td>
                 <p>codelijst</p>
@@ -8861,7 +8854,7 @@ width="100%">
                   zien is.</p>
               </td>
               <td>
-                <p><u>http:<a href="/C:%5CDocuments%20and%20Settings%5Cvoorbeelden%5Cdataset123.jpg">\\SERVER01\voorbeelden\dataset123.jpg</a></u>
+                <p><u>http:\\SERVER01\voorbeelden\dataset123.jpg</u>
                 </p>
               </td>
               <td>
@@ -9486,11 +9479,10 @@ width="100%">
                   data.</p>
               </td>
               <td>
-                <p>copyright</p>
+                <p>otherRestrictions</p>
               </td>
               <td>
-                <p>Als er overige beperkingen worden opgenomen, dient hier de
-                  waarde “anders” gekozen te worden</p>
+                <p>Voor INSPIRE datasets, bevat dit element de waarde "otherRestrictions". Voor organisaties die zich conformeren aan afspraken in het GI-beraad, bevat dit element ook de waarde "otherRestrictions". Daarmee kunnen er overige beperkingen worden opgenomen.</p>
               </td>
               <td>
                 <p>codelijst</p>
@@ -9582,13 +9574,10 @@ width="100%">
                   kunnen worden ondergebracht.</p>
               </td>
               <td>
-                <p>geen beperkingen </p>
+                <p>https://creativecommons.org/publicdomain/mark/*/deed.nl </p><p><br></p><p>geen beperkingen </p>
               </td>
               <td>
-                <p>Als er geen restrictie is dient hier de tekst ''geen
-                  beperkingen'' opgenomen te worden. Als er een waarde in dit
-                  element wordt ingevuld, dient bij het element
-                  toegangsrestricties de waarde “anders” gekozen te worden</p>
+                <p>Dit element is conditioneel, als het element juridische toegangsrestricties de waarde otherRestrictions bevat dient het te worden opgenomen.</p>
               </td>
               <td>
                 <p>string</p>
@@ -10188,7 +10177,7 @@ width="100%">
                 <p>37</p>
               </td>
               <td colspan="9">
-                <p><a href="#ruimtelijk-schema-van-de-bron">Ruimtelijk schema</a></p>
+                <p><b><a href="#ruimtelijk-schema-van-de-bron">Ruimtelijk schema</a></b></p>
               </td>
               <td>
                 <p>MD_Metadata.identificationInfo &gt;
@@ -10202,8 +10191,7 @@ width="100%">
                 <p>vector</p>
               </td>
               <td>
-                <p>Impliciet indien toegepast ruimtelijk schema bekend is bij
-                  systeem.</p>
+                <p>Dit element is conditioneel. Dit element is verplicht voor INSPIRE</p>
               </td>
               <td>
                 <p>codelijst</p>
@@ -10391,7 +10379,7 @@ width="100%">
                 <p>10000</p>
               </td>
               <td>
-                <p>indien er een toepassingschaal gespecificeerd kan worden is
+                <p>indien er een toepassingschaal gespecificeerd kan worden en het element Resolutie niet aanwezig is, is
                   het verplicht. Dit moet een positief numeriek getal zijn. Hier
                   mag enkele een geheel getal ingevoerd worden en dus zonder de
                   tekenreeks 1: ervoor!</p>
@@ -10443,7 +10431,7 @@ width="100%">
                 <p>3 </p>
               </td>
               <td>
-                <p>Indien er een resolutie gespecificeerd kan worden is het
+                <p>Indien er een resolutie gespecificeerd kan worden  en het element toepassingsschaal niet aanwezig is, is het
                   verplicht Naast de resolutie moet de meeteenheid voor lengte
                   uit de ISOStandardUnits, de meter, worden opgenomen in het
                   attribuut UnitOfMeasure van distance. Binnen de xml ziet dit
@@ -10547,15 +10535,8 @@ width="100%">
                 <p>Utf16</p>
               </td>
               <td>
-                <p>Voor INSPIRE conditioneel , het is verplicht als voor de
-                  uitwisseling van de bron geen GML wordt gebruikt en de
-                  gebruikte karakterset geen utf8 is. Als het niet aan
-                  bovenstaande conditie voldoet moet de waarde voldoen aan de
-                  ISO/IEC 10646 standaard. Utf8 en utf16 voldoen hieraan.
-                  Hierdoor is het niet nodig dit element uit te wisselen. Als
-                  men van deze standaard afwijkt, dient men wel de karakter
-                  codeerstandaard op te nemen</p>
-              </td>
+                <p>Verplicht als de in de bron gebruikte karakterset geen utf8 is.
+              </p></td>
               <td>
                 <p>codelijst</p>
               </td>
@@ -11580,7 +11561,7 @@ width="100%">
                   'http://www.minvenw.nl/rws/mdi/geoloket/ahn.html'</p>
               </td>
               <td>
-                <p>Referentie naar documentatie. Met een zip bestand kunnen
+                <p>Referentie naar documentatie, of een pagina waarop
                   meerder documenten ontsloten kunnen worden</p>
               </td>
               <td>
@@ -12207,8 +12188,7 @@ width="100%">
                 <p>5a389ad2-22dd-11d1-aa77-002035b29093</p>
               </td>
               <td>
-                <p>Komt tot stand door gebruik Universal Unique Identifier
-                  (http://en.wikipedia.org/wiki/UUID).</p>
+                <p> Er wordt sterk geadviseerd om gebruik te maken van een anchor met een verwijzing naar een URI.</p>
               </td>
               <td>
                 <p>string</p>
@@ -12370,10 +12350,7 @@ width="100%">
                 <p>Hydrography GML application schema</p>
               </td>
               <td>
-                <p>&nbsp;Indien het een INSPIRE dataset is dient de naam van het
-                  distributie formaat opgenomen te worden. Deze informatie is te
-                  vinden in de INSPIRE dataspecificaties in de paragraaf genaamd
-                  Encoding</p>
+                <p>Het is verplicht als de dataset een geharmoniseerde INSPIRE bron is</p>
               </td>
               <td>
                 <p>string</p>
@@ -12418,10 +12395,7 @@ width="100%">
                 <p>version 3.0; GML, version 3.2.1</p>
               </td>
               <td>
-                <p>&nbsp;Indien het een INSPIRE dataset is dient de versie van
-                  het distributie formaat opgenomen te worden. Deze informatie
-                  is te vinden in de INSPIRE dataspecificaties in de paragraaf
-                  genaamd Encoding</p>
+                <p>Het is verplicht als de dataset een geharmoniseerde INSPIRE bron is</p>
               </td>
               <td>
                 <p>string</p>
@@ -12464,13 +12438,11 @@ width="100%">
                 <p>Specificatie van het distributie formaat.</p>
               </td>
               <td>
-                <p>D2.8.I.8 Data Specification on Hydrography –</p>
+                <p>Data Specification on Hydrography –</p>
                 <p>Guidelines</p>
               </td>
               <td>
-                <p>&nbsp;Indien het een INSPIRE dataset is dient de specificatie
-                  opgenomen te worden. Deze informatie is te vinden in de
-                  INSPIRE dataspecificaties in de paragraaf genaamd Encoding</p>
+                <p>Het is verplicht als de dataset een geharmoniseerde INSPIRE bron is</p>
               </td>
               <td>
                 <p>string</p>
@@ -12705,8 +12677,7 @@ width="100%">
                 <p>Naam van de verantwoordelijke organisatie.</p>
               </td>
               <td>
-                <p>Ministerie van Economische Zaken, Landbouw en Innovatie</p>
-                <p>(EL&amp;I)</p>
+                <p>Nederlandse organisatie voor toegepast-natuurwetenschappelijk onderzoek (TNO)</p>
               </td>
               <td>
                 <p>Gebruik de volledig uitgeschreven naam van de
@@ -13633,7 +13604,7 @@ width="100%">
                   Resource Locator adres of een vergelijkbaar schema.</p>
               </td>
               <td>
-                <p><a href="http://www.dienstlandelijkgebied.nl/"><u>http://www.dienstlandelijkgebied.nl</u></a></p>
+                <p><a href="https://www.tno.nl/nl/over-tno/organisatie"><u>https://www.tno.nl/nl/over-tno/organisatie</u></a></p>
               </td>
               <td> <br>
               </td>
@@ -13854,7 +13825,7 @@ width="100%">
                   de distributeur.</p>
               </td>
               <td>
-                <p>Neem contact op met het Geoloket van Rijkswaterstaat.</p>
+                <p>Neem contact op met de servicedesk van Rijkswaterstaat.</p>
               </td>
               <td> <br>
               </td>
@@ -14186,15 +14157,7 @@ width="100%">
                 <p>http://wms.nitg.tno.nl/OneGeology?</p>
               </td>
               <td>
-                <p>Dit element is conditioneel. Het is voor INSPIRE verplicht
-                  als er een link is naar meer informatie over de bron en / of
-                  er een link is die toegang geeft tot gerelateerde services,
-                  ook al is die service voorzien van metadata. Voor datasets die
-                  buiten INSPIRE vallen en waarvoor gerelateerde services
-                  aanwezig zijn, is het verplicht als er geen service metadata
-                  is Neem hier de WFS/WCS/WMS URL op naar de service die deze
-                  dataset ontsluit. Mogelijkheid is ook om de URI naar locale
-                  dataset locatie op te nemen</p>
+                <p>Het is verplicht indien de ontsluiting publiek toegankelijk is en onder de verantwoordelijkheid van de beherende organisatie valt. </p>
               </td>
               <td>
                 <p>URL</p>
@@ -14296,7 +14259,7 @@ width="100%">
                 <p>Gemeente</p>
               </td>
               <td>
-                <p>Verplicht gesteld voor de OGC:WMS, OGC:WFS en OGC:WCS.</p>
+                <p>Verplicht gesteld voor OGC:WMS, OGC:WFS, OGC:WMTS, OGC:WCS en INSPIRE:Atom. </p>
               </td>
               <td>
                 <p>string</p>
@@ -14584,9 +14547,7 @@ width="100%">
                 <p>dataset</p>
               </td>
               <td>
-                <p>Als voor INSPIRE het niveau featureType wordt gekozen dient
-                  het element Features te worden gebruikt om de featuretype
-                  namen in op te nemen.</p>
+                <p><br></p>
               </td>
               <td>
                 <p>codelijst</p>
@@ -15002,8 +14963,7 @@ width="100%">
                         v3.0.1</span></a></u><span>”</span></p>
               </td>
               <td>
-                <p>Indien het een INSPIRE dataset is dient de specificatie
-                  opgenomen te worden</p>
+                <p>Het is verplicht als de dataset een INSPIRE bron is of als de informatie is gemodelleerd volgens een specifiek informatie model.</p>
               </td>
               <td>
                 <p>string</p>
@@ -16491,8 +16451,7 @@ width="100%">
                   uitgevoerd.</p>
               </td>
               <td>
-                <p>Ministerie van Economische Zaken, Landbouw en Innovatie</p>
-                <p>(EL&amp;I)</p>
+                <p>Nederlandse organisatie voor toegepast-natuurwetenschappelijk onderzoek (TNO)</p>
               </td>
               <td>
                 <p>Gebruik de volledig uitgeschreven naam van de
