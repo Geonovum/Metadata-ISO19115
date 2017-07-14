@@ -538,12 +538,41 @@ data-cite="ISO19136">ISO 19136:2007</a>].</dd>
                                     <th>INSPIRE optionaliteit</th>
                                     <th>Conditie en/of opmerking</th>
                                   </tr>
+                                   <tr>
+                                    <td colspan="4" rowspan="1"><strong>Informatie over de
+                                        bron</strong><strong><br>
+                                      </strong></td>
+                                  </tr>
                                   <tr>
                                     <td><a href="#titel-van-de-bron">Titel van
                                         de bron</a></td>
                                     <td>V</td>
                                     <td>V</td>
                                     <td>&nbsp;</td>
+                                  </tr>
+                                    <tr>
+                                    <td><a href="#datum-van-de-bron">Datum van
+                                        de bron</a></td>
+                                    <td>V</td>
+                                    <td>V</td>
+                                    <td><br>
+                                    </td>
+                                  </tr>
+                                  <tr>
+                                    <td><a href="#datum-type-van-de-bron">Datumtype
+                                        van de bron</a></td>
+                                    <td>V</td>
+                                    <td>V</td>
+                                    <td><br>
+                                    </td>
+                                  </tr>
+                                   <tr>
+                                    <td><a href="#unieke-identifier-van-de-bron">Unieke
+                                        Identifier van de bron</a>.</td>
+                                    <td>V</td>
+                                    <td>V</td>
+                                    <td>Het gebuik van een URI is conditioneel.
+                                      Het is verplicht voor INSPIRE datasets. </td>
                                   </tr>
                                   <tr>
                                     <td><a href="#samenvatting">Samenvatting</a></td>
@@ -557,38 +586,7 @@ data-cite="ISO19136">ISO 19136:2007</a>].</dd>
                                     <td>V</td>
                                     <td>&nbsp;</td>
                                   </tr>
-                                  <tr>
-                                    <td><a href="#hi%C3%ABrarchieniveau">Hiërarchieniveau</a></td>
-                                    <td>V</td>
-                                    <td>V</td>
-                                    <td>&nbsp;</td>
-                                  </tr>
-                                  <tr>
-                                    <td><a href="#hi%C3%ABrarchieniveaunaam">Hiërarchieniveau
-                                        naam</a></td>
-                                    <td>C</td>
-                                    <td>C</td>
-                                    <td>Het is verplicht als het
-                                      Hiërarchieniveau dataset serie is.</td>
-                                  </tr>
-                                  <tr>
-                                    <td><a href="#unieke-identifier-van-de-bron">Unieke
-                                        Identifier van de bron</a>.</td>
-                                    <td>V</td>
-                                    <td>V</td>
-                                    <td>Het gebuik van een URI is conditioneel.
-                                      Het is verplicht voor INSPIRE datasets. </td>
-                                  </tr>
-                                  <tr>
-                                    <td><a href="#unieke-identifier-van-de-identificatie-sectie">Unieke
-                                        Identifier van de identificatie sectie</a></td>
-                                    <td>C</td>
-                                    <td>C</td>
-                                    <td>Het is verplicht als er meer dan één
-                                      gmd:MD_DataIdentification element wordt
-                                      opgenomen. </td>
-                                  </tr>
-                                  <tr>
+                                    <tr>
                                     <td><a href="#taal-van-de-bron">Taal van de
                                         bron</a></td>
                                     <td>C</td>
@@ -596,14 +594,7 @@ data-cite="ISO19136">ISO 19136:2007</a>].</dd>
                                     <td>Het is verplicht als de bron tekstuele
                                       informatie bevat.</td>
                                   </tr>
-                                  <tr>
-                                    <td><a href="#ruimtelijk-schema-van-de-bron">Ruimtelijk
-                                        schema</a></td>
-                                    <td>O</td>
-                                    <td>V</td>
-                                    <td><br>
-                                    </td>
-                                  </tr>
+                                  
                                   <tr>
                                     <td><a href="#karakterset-van-de-bron">Karakterset
                                         van de bron</a></td>
@@ -618,42 +609,30 @@ data-cite="ISO19136">ISO 19136:2007</a>].</dd>
                                     <td>V</td>
                                     <td>&nbsp;</td>
                                   </tr>
-                                  <tr>
-                                    <td colspan="4" rowspan="1"><strong>Distributies</strong></td>
+                                   <tr>
+                                    <td colspan="4" rowspan="1"><strong>Contactinformatie
+                                        bron</strong><strong><br>
+                                      </strong></td>
                                   </tr>
                                   <tr>
-                                    <td>&nbsp; &nbsp; <a href="#url">URL</a> </td>
-                                    <td>C</td>
-                                    <td>C</td>
-                                    <td>Het is verplicht indien de ontsluiting
-                                      publiek toegankelijk is en onder de
-                                      verantwoordelijkheid van de beherende
-                                      organisatie valt. </td>
+                                    <td>&nbsp;&nbsp;&nbsp; <a href="#verantwoordelijke-organisatie-bron">Organisatie</a></td>
+                                    <td>V</td>
+                                    <td>V</td>
+                                    <td>&nbsp;</td>
                                   </tr>
                                   <tr>
-                                    <td>&nbsp; &nbsp; <a href="#protocol">Protocol</a></td>
-                                    <td>C</td>
-                                    <td>O</td>
-                                    <td>Het is verplicht als er een URL is
-                                      opgegeven.</td>
+                                    <td>&nbsp;&nbsp;&nbsp; <a href="#verantwoordelijke-organisatie-bron-email">E-mail</a></td>
+                                    <td>V</td>
+                                    <td>V</td>
+                                    <td>&nbsp;</td>
                                   </tr>
                                   <tr>
-                                    <td>&nbsp;&nbsp;&nbsp; <a href="#naam">Naam</a>
-                                    </td>
-                                    <td>C</td>
-                                    <td>O</td>
-                                    <td>Het is verplicht als het protocol één
-                                      van de volgende waardes heeft&nbsp;
-                                      "OGC:WMS", "OGC:WFS", "OGC:WMTS",
-                                      "OGC:WCS" en "INSPIRE:Atom".</td>
+                                    <td>&nbsp;&nbsp;&nbsp; <a href="#verantwoordelijke-organisatie-bron:-rol">Rol</a></td>
+                                    <td>V</td>
+                                    <td>V</td>
+                                    <td>&nbsp;</td>
                                   </tr>
-                                  <tr>
-                                    <td>&nbsp; &nbsp; <a href="#description">Omschrijving</a></td>
-                                    <td>C</td>
-                                    <td>C</td>
-                                    <td>Het is verplicht als er een URL van het
-                                      type 'endPoint' is opgegeven.</td>
-                                  </tr>
+                                 
                                   <tr>
                                     <td colspan="4" rowspan="1"><strong>Trefwoorden</strong></td>
                                   </tr>
@@ -697,62 +676,43 @@ href="#thesaurusdatum-type">Datum type</a></td>
                                       thesaurus afkomstig is.</td>
                                   </tr>
                                   <tr>
-                                    <td colspan="4"><a href="#Omgrenzende%20rechthoek"><b>Omgrenzende
-                                          rechthoek</b></a></td>
+                                    <td colspan="4" rowspan="1"><b>Beperkingen</b></td>
                                   </tr>
                                   <tr>
-                                    <td>&nbsp;&nbsp;&nbsp; Minimum x-coördinaat</td>
+                                    <td>&nbsp;&nbsp;&nbsp;&nbsp; <a href="#gebruiksbeperkingen">Gebruiksbeperkingen</a></td>
                                     <td>V</td>
                                     <td>V</td>
                                     <td>&nbsp;</td>
                                   </tr>
                                   <tr>
-                                    <td>&nbsp;&nbsp;&nbsp; Maximum x-coördinaat</td>
-                                    <td>V</td>
-                                    <td>V</td>
-                                    <td>&nbsp;</td>
-                                  </tr>
-                                  <tr>
-                                    <td>&nbsp;&nbsp;&nbsp; Minimum y-coördinaat</td>
-                                    <td>V</td>
-                                    <td>V</td>
-                                    <td>&nbsp;</td>
-                                  </tr>
-                                  <tr>
-                                    <td>&nbsp;&nbsp;&nbsp; Maximum y-coördinaat</td>
-                                    <td>V</td>
-                                    <td>V</td>
-                                    <td>&nbsp;</td>
-                                  </tr>
-                                  <tr>
-                                    <td><a href="#datum-van-de-bron">Datum van
-                                        de bron</a></td>
+                                    <td>&nbsp;&nbsp;&nbsp;&nbsp; <a href="#juridische-toegangsrestricties">Juridische
+                                        toegangsrestricties</a></td>
                                     <td>V</td>
                                     <td>V</td>
                                     <td><br>
                                     </td>
                                   </tr>
                                   <tr>
-                                    <td><a href="#datum-type-van-de-bron">Datumtype
-                                        van de bron</a></td>
-                                    <td>V</td>
+                                    <td>&nbsp;&nbsp;&nbsp;&nbsp; <a href="#overige-beperkingen">Overige
+                                        beperkingen</a></td>
+                                    <td>C</td>
+                                    <td>C</td>
+                                    <td>Het is verplicht als juridische
+                                      toegangsrestricties de waarde
+                                      "otherRestrictions" heeft.</td>
+                                  </tr>
+                                   <tr>
+                                    <td colspan="4" rowspan="1"><strong>Ruimtelijke informatie
+                                        bron</strong><strong><br>
+                                      </strong></td>
+                                  </tr>
+                                  <tr>
+                                    <td><a href="#ruimtelijk-schema-van-de-bron">Ruimtelijk
+                                        schema</a></td>
+                                    <td>O</td>
                                     <td>V</td>
                                     <td><br>
                                     </td>
-                                  </tr>
-                                  <tr>
-                                    <td><a href="#niveau-kwaliteitsbeschrijving">Niveau
-                                        kwaliteitsbeschrijving</a></td>
-                                    <td>V</td>
-                                    <td>V</td>
-                                    <td>&nbsp;</td>
-                                  </tr>
-                                  <tr>
-                                    <td><a href="#algemene-beschrijving-herkomst">Algemene
-                                        beschrijving herkomst</a></td>
-                                    <td>V</td>
-                                    <td>V</td>
-                                    <td>&nbsp;</td>
                                   </tr>
                                   <tr>
                                     <td><a href="#toepassingsschaal">Toepassingsschaal</a></td>
@@ -787,6 +747,35 @@ href="#thesaurusdatum-type">Datum type</a></td>
                                       temporele informatie bevat die niet
                                       gebaseerd is op de Gregoriaanse kalender
                                       of de Coordinated Universal Time.</td>
+                                  </tr>
+                                 
+                                    <tr>
+                                    <td colspan="4"><a href="#Omgrenzende%20rechthoek"><b>Omgrenzende
+                                          rechthoek</b></a></td>
+                                  </tr>
+                                  <tr>
+                                    <td>&nbsp;&nbsp;&nbsp; Minimum x-coördinaat</td>
+                                    <td>V</td>
+                                    <td>V</td>
+                                    <td>&nbsp;</td>
+                                  </tr>
+                                  <tr>
+                                    <td>&nbsp;&nbsp;&nbsp; Maximum x-coördinaat</td>
+                                    <td>V</td>
+                                    <td>V</td>
+                                    <td>&nbsp;</td>
+                                  </tr>
+                                  <tr>
+                                    <td>&nbsp;&nbsp;&nbsp; Minimum y-coördinaat</td>
+                                    <td>V</td>
+                                    <td>V</td>
+                                    <td>&nbsp;</td>
+                                  </tr>
+                                  <tr>
+                                    <td>&nbsp;&nbsp;&nbsp; Maximum y-coördinaat</td>
+                                    <td>V</td>
+                                    <td>V</td>
+                                    <td>&nbsp;</td>
                                   </tr>
                                   <tr>
                                     <td><strong>Distributie formaat</strong></td>
@@ -825,30 +814,66 @@ href="#thesaurusdatum-type">Datum type</a></td>
                                       informatie is gemodelleerd volgens een
                                       specifiek informatie model.</td>
                                   </tr>
+                                   <tr>
+                                    <td colspan="4" rowspan="1"><strong>Distributies</strong></td>
+                                  </tr>
+                                  <tr>
+                                    <td>&nbsp; &nbsp; <a href="#url">URL</a> </td>
+                                    <td>C</td>
+                                    <td>C</td>
+                                    <td>Het is verplicht indien de ontsluiting
+                                      publiek toegankelijk is en onder de
+                                      verantwoordelijkheid van de beherende
+                                      organisatie valt. </td>
+                                  </tr>
+                                  <tr>
+                                    <td>&nbsp; &nbsp; <a href="#protocol">Protocol</a></td>
+                                    <td>C</td>
+                                    <td>O</td>
+                                    <td>Het is verplicht als er een URL is
+                                      opgegeven.</td>
+                                  </tr>
+                                  <tr>
+                                    <td>&nbsp;&nbsp;&nbsp; <a href="#naam">Naam</a>
+                                    </td>
+                                    <td>C</td>
+                                    <td>O</td>
+                                    <td>Het is verplicht als het protocol één
+                                      van de volgende waardes heeft&nbsp;
+                                      "OGC:WMS", "OGC:WFS", "OGC:WMTS",
+                                      "OGC:WCS" en "INSPIRE:Atom".</td>
+                                  </tr>
+                                  <tr>
+                                    <td>&nbsp; &nbsp; <a href="#description">Omschrijving</a></td>
+                                    <td>C</td>
+                                    <td>C</td>
+                                    <td>Het is verplicht als er een URL van het
+                                      type 'endPoint' is opgegeven.</td>
+                                  </tr>
+                                   <tr>
+                                    <td colspan="4" rowspan="1"><strong>Kwaliteits informatie
+                                        </strong><strong><br>
+                                      </strong></td>
+                                  </tr>
+                                  
+                                    <tr><td><a href="#niveau-kwaliteitsbeschrijving">Niveau
+                                        kwaliteitsbeschrijving</a></td>
+                                    <td>V</td>
+                                    <td>V</td>
+                                    <td>&nbsp;</td>
+                                  </tr>
+                                   <tr>
+                                    <td><a href="#algemene-beschrijving-herkomst">Algemene
+                                        beschrijving herkomst</a></td>
+                                    <td>V</td>
+                                    <td>V</td>
+                                    <td>&nbsp;</td>
+                                  </tr>
                                   <tr>
                                     <td colspan="5" rowspan="1"><strong>Conformiteit
                                         <br> </strong></td>
                                   </tr>
-                                  <tr>
-                                    <td>&nbsp;&nbsp;&nbsp; <a href="#conformiteit-indicatie-met-de-specificatie">Conformiteit
-                                        indicatie met een specificatie</a></td>
-                                    <td>C</td>
-                                    <td>V</td>
-                                    <td>Het is verplicht als de dataset een
-                                      INSPIRE bron is of als de informatie is
-                                      gemodelleerd volgens een specifiek
-                                      informatie model.</td>
-                                  </tr>
-                                  <tr>
-                                    <td>&nbsp;&nbsp;&nbsp; <a href="#verklaring">Verklaring</a></td>
-                                    <td>C</td>
-                                    <td>V</td>
-                                    <td>Het is verplicht als de dataset een
-                                      INSPIRE bron is of als de informatie is
-                                      gemodelleerd volgens een specifiek
-                                      informatie model.</td>
-                                  </tr>
-                                  <tr>
+                                   <tr>
                                     <td>&nbsp;&nbsp;&nbsp; <a href="#specificatie">Specificatie</a></td>
                                     <td>C</td>
                                     <td>V</td>
@@ -877,17 +902,29 @@ href="#thesaurusdatum-type">Datum type</a></td>
                                       informatie model.</td>
                                   </tr>
                                   <tr>
+                                    <td>&nbsp;&nbsp;&nbsp; <a href="#verklaring">Verklaring</a></td>
+                                    <td>C</td>
+                                    <td>V</td>
+                                    <td>Het is verplicht als de dataset een
+                                      INSPIRE bron is of als de informatie is
+                                      gemodelleerd volgens een specifiek
+                                      informatie model.</td>
+                                  </tr>
+                                  <tr>
+                                    <td>&nbsp;&nbsp;&nbsp; <a href="#conformiteit-indicatie-met-de-specificatie">Conformiteit
+                                        indicatie met een specificatie</a></td>
+                                    <td>C</td>
+                                    <td>V</td>
+                                    <td>Het is verplicht als de dataset een
+                                      INSPIRE bron is of als de informatie is
+                                      gemodelleerd volgens een specifiek
+                                      informatie model.</td>
+                                  </tr>
+                                   <tr>
                                     <td colspan="4" rowspan="1"><strong>Topologische
                                         samenhang</strong></td>
                                   </tr>
-                                  <tr>
-                                    <td>&nbsp;&nbsp;&nbsp; <a href="#topologische-samenhang">Waarde</a></td>
-                                    <td>O</td>
-                                    <td>C</td>
-                                    <td>Het is verplicht voor INSPIRE datasets
-                                      als voor netwerken de aansluiting van
-                                      hartlijnen niet is verzekerd.</td>
-                                  </tr>
+                                  
                                   <tr>
                                     <td>&nbsp;&nbsp;&nbsp;<a href="#Type-waarde">
                                         Type waarde</a></td>
@@ -898,63 +935,20 @@ href="#thesaurusdatum-type">Datum type</a></td>
                                       hartlijnen niet is verzekerd.</td>
                                   </tr>
                                   <tr>
-                                    <td colspan="4" rowspan="1"><b>Beperkingen</b></td>
-                                  </tr>
-                                  <tr>
-                                    <td>&nbsp;&nbsp;&nbsp;&nbsp; <a href="#juridische-toegangsrestricties">Juridische
-                                        toegangsrestricties</a></td>
-                                    <td>V</td>
-                                    <td>V</td>
-                                    <td><br>
-                                    </td>
-                                  </tr>
-                                  <tr>
-                                    <td>&nbsp;&nbsp;&nbsp;&nbsp; <a href="#overige-beperkingen">Overige
-                                        beperkingen</a></td>
+                                    <td>&nbsp;&nbsp;&nbsp; <a href="#topologische-samenhang">Waarde</a></td>
+                                    <td>O</td>
                                     <td>C</td>
-                                    <td>C</td>
-                                    <td>Het is verplicht als juridische
-                                      toegangsrestricties de waarde
-                                      "otherRestrictions" heeft.</td>
+                                    <td>Het is verplicht voor INSPIRE datasets
+                                      als voor netwerken de aansluiting van
+                                      hartlijnen niet is verzekerd.</td>
                                   </tr>
-                                  <tr>
-                                    <td>&nbsp;&nbsp;&nbsp;&nbsp; <a href="#gebruiksbeperkingen">Gebruiksbeperkingen</a></td>
-                                    <td>V</td>
-                                    <td>V</td>
-                                    <td>&nbsp;</td>
-                                  </tr>
-                                  <tr>
-                                    <td colspan="4" rowspan="1"><strong>Contactinformatie
-                                        bron</strong><strong><br>
+                                 
+                                   <tr>
+                                    <td colspan="4" rowspan="1"><strong>Informatie over de 
+                                        metadata</strong><strong><br>
                                       </strong></td>
                                   </tr>
-                                  <tr>
-                                    <td>&nbsp;&nbsp;&nbsp; <a href="#verantwoordelijke-organisatie-bron">Organisatie</a></td>
-                                    <td>V</td>
-                                    <td>V</td>
-                                    <td>&nbsp;</td>
-                                  </tr>
-                                  <tr>
-                                    <td>&nbsp;&nbsp;&nbsp; <a href="#verantwoordelijke-organisatie-bron-email">E-mail</a></td>
-                                    <td>V</td>
-                                    <td>V</td>
-                                    <td>&nbsp;</td>
-                                  </tr>
-                                  <tr>
-                                    <td>&nbsp;&nbsp;&nbsp; <a href="#verantwoordelijke-organisatie-bron:-rol">Rol</a></td>
-                                    <td>V</td>
-                                    <td>V</td>
-                                    <td>&nbsp;</td>
-                                  </tr>
-                                  <tr>
-                                    <td><a href="#parent-unieke-identifier">Parent
-                                        unieke identifier</a></td>
-                                    <td>C</td>
-                                    <td>C</td>
-                                    <td>Het is verplicht als er een dataset met
-                                      hogere hiërarchie bestaat.</td>
-                                  </tr>
-                                  <tr>
+                                   <tr>
                                     <td><a href="#metadata-unieke-identifier">Metadata
                                         unieke identifier</a></td>
                                     <td>V</td>
@@ -962,6 +956,36 @@ href="#thesaurusdatum-type">Datum type</a></td>
                                     <td>&nbsp;</td>
                                   </tr>
                                   <tr>
+                                    <td><a href="#taal-van-de-metadata">Taal van
+                                        de metadata</a></td>
+                                    <td>V</td>
+                                    <td>V</td>
+                                    <td>&nbsp;</td>
+                                  </tr>
+                                   <tr>
+                                    <td><a href="#parent-unieke-identifier">Parent
+                                        unieke identifier</a></td>
+                                    <td>C</td>
+                                    <td>C</td>
+                                    <td>Het is verplicht als er een dataset met
+                                      hogere hiërarchie bestaat.</td>
+                                  </tr>
+                                  
+                                  <tr>
+                                    <td><a href="#hi%C3%ABrarchieniveau">Hiërarchieniveau</a></td>
+                                    <td>V</td>
+                                    <td>V</td>
+                                    <td>&nbsp;</td>
+                                  </tr>
+                                  <tr>
+                                    <td><a href="#hi%C3%ABrarchieniveaunaam">Hiërarchieniveau
+                                        naam</a></td>
+                                    <td>C</td>
+                                    <td>C</td>
+                                    <td>Het is verplicht als het
+                                      Hiërarchieniveau dataset serie is.</td>
+                                  </tr>
+                                 <tr>
                                     <td colspan="4" rowspan="1"><strong>Contactinformatie
                                         metadata</strong></td>
                                   </tr>
@@ -983,19 +1007,13 @@ href="#thesaurusdatum-type">Datum type</a></td>
                                     <td>V</td>
                                     <td>&nbsp;</td>
                                   </tr>
-                                  <tr>
+                                   <tr>
                                     <td><a href="#metadatadatum">Metadata datum</a></td>
                                     <td>V</td>
                                     <td>V</td>
                                     <td>&nbsp;</td>
                                   </tr>
-                                  <tr>
-                                    <td><a href="#taal-van-de-metadata">Taal van
-                                        de metadata</a></td>
-                                    <td>V</td>
-                                    <td>V</td>
-                                    <td>&nbsp;</td>
-                                  </tr>
+                                  
                                   <tr>
                                     <td colspan="4" rowspan="1"><strong>Metadata
                                         standaard</strong></td>
@@ -1012,6 +1030,33 @@ href="#thesaurusdatum-type">Datum type</a></td>
                                     <td>O</td>
                                     <td>&nbsp;</td>
                                   </tr>
+                                  
+                                  <tr>
+                                    <td><a href="#unieke-identifier-van-de-identificatie-sectie">Unieke
+                                        Identifier van de identificatie sectie</a></td>
+                                    <td>C</td>
+                                    <td>C</td>
+                                    <td>Het is verplicht als er meer dan één
+                                      gmd:MD_DataIdentification element wordt
+                                      opgenomen. </td>
+                                  </tr>
+                                  
+                                 
+                                  
+                                
+                                
+                                 
+                                  
+                                  
+                                  
+                                  
+                                 
+                                  
+                                 
+                                 
+                                 
+                                  
+                                 
                                 </tbody>
                               </table>
                             </section>
@@ -3614,6 +3659,46 @@ Toelichting: Eenheid waar een lidstaat rechtsbevoegdheid
               </tbody>
             </table>
           </section>
+          <section id="codelijst-b53">
+            <h4>Codelijst B.5.3 CI_OnLineFunctionCode</h4>
+            <table>
+              <colgroup><col style="width: 25%;"><col style="width: 25%;"><col style="width: 50%;"></colgroup>
+              <tbody>
+                <tr>
+                  <th>NL vertaling</th>
+                  <th>Waarde</th>
+                  <th>Beschrijving</th>
+                </tr>
+                <tr>
+                  <td>Download</td>
+                  <td>download</td>
+                  <td>Online instructies voor het overbrengen van gegevens van een opslagapparaat of systeem naar
+een ander</td>
+                </tr>
+                <tr>
+                  <td>Informatie</td>
+                  <td>information</td>
+                  <td>Online informatie over de bron</td>
+                </tr>
+                <tr>
+                  <td>Offline toegang</td>
+                  <td>offlineAccess</td>
+                  <td>Online instructies voor het verkrijgen van de bron van de provider</td>
+                </tr>
+                
+                <tr>
+                  <td>Bestellen</td>
+                  <td>order</td>
+                  <td>Online bestelproces voor het verkrijgen van de bron</td>
+                </tr>
+                <tr>
+                  <td>Zoeken</td>
+                  <td>search</td>
+                  <td>Online zoekinterface voor het zoeken naar informatie over de bron</td>
+                </tr>
+              </tbody>
+            </table>
+          </section>
           <section id="codelijst-b55">
             <h4>Codelijst B.5.5 CI_RoleCode</h4>
             <table>
@@ -3973,54 +4058,54 @@ Toelichting: Eenheid waar een lidstaat rechtsbevoegdheid
                   <td>Data wordt jaarlijks geactualiseerd.</td>
                 </tr>
                 <tr>
-                  <td>2-jaarlijks</td>
-                  <td>2annually</td>
-                  <td>Data wordt één keer per 2 jaar geactualiseerd.</td>
+                  <td><i>2-jaarlijks</i></td>
+                  <td><i>2annually</i></td>
+                  <td><i>Data wordt één keer per 2 jaar geactualiseerd.</i></td>
                 </tr>
                 <tr>
-                  <td>3-jaarlijks</td>
-                  <td>3annually</td>
-                  <td>Data wordt één keer per 3 jaar geactualiseerd.</td>
+                  <td><i>3-jaarlijks</i></td>
+                  <td><i>3annually</i></td>
+                  <td><i>Data wordt één keer per 3 jaar geactualiseerd.</i></td>
                 </tr>
                 <tr>
-                  <td>4-jaarlijks</td>
-                  <td>4annually</td>
-                  <td>Data wordt één keer per 4 jaar geactualiseerd.</td>
+                  <td><i>4-jaarlijks</i></td>
+                  <td><i>4annually</i></td>
+                  <td><i>Data wordt één keer per 4 jaar geactualiseerd.</i></td>
                 </tr>
                 <tr>
-                  <td>5-jaarlijks</td>
-                  <td>5annually</td>
-                  <td>Data wordt één keer per 5 jaar geactualiseerd.</td>
+                  <td><i>5-jaarlijks</i></td>
+                  <td><i>5annually</i></td>
+                  <td><i>Data wordt één keer per 5 jaar geactualiseerd.</i></td>
                 </tr>
                 <tr>
-                  <td>6-jaarlijks</td>
-                  <td>6annually</td>
-                  <td>Data wordt één keer per 6 jaar geactualiseerd.</td>
+                  <td><i>6-jaarlijks</i></td>
+                  <td><i>6annually</i></td>
+                  <td><i>Data wordt één keer per 6 jaar geactualiseerd.</i></td>
                 </tr>
                 <tr>
-                  <td>7-jaarlijks</td>
-                  <td>7annually</td>
-                  <td>Data wordt één keer per 7 jaar geactualiseerd.</td>
+                  <td><i>7-jaarlijks</i></td>
+                  <td><i>7annually</i></td>
+                  <td><i>Data wordt één keer per 7 jaar geactualiseerd.</i></td>
                 </tr>
                 <tr>
-                  <td>8-jaarlijks</td>
-                  <td>8annually</td>
-                  <td>Data wordt één keer per 8 jaar geactualiseerd.</td>
+                  <td><i>8-jaarlijks</i></td>
+                  <td><i>8annually</i></td>
+                  <td><i>Data wordt één keer per 8 jaar geactualiseerd.</i></td>
                 </tr>
                 <tr>
-                  <td>9-jaarlijks</td>
-                  <td>9annually</td>
-                  <td>Data wordt één keer per 9 jaar geactualiseerd.</td>
+                  <td><i>9-jaarlijks</i></td>
+                  <td><i>9annually</i></td>
+                  <td><i>Data wordt één keer per 9 jaar geactualiseerd.</i></td>
                 </tr>
                 <tr>
-                  <td>10-jaarlijks</td>
-                  <td>10annually</td>
-                  <td>Data wordt niet binnen 10 jaar geactualiseerd.</td>
+                  <td><i>10-jaarlijks</i></td>
+                  <td><i>10annually</i></td>
+                  <td><i>Data wordt niet binnen 10 jaar geactualiseerd.</i></td>
                 </tr>
                 <tr>
-                  <td>Meer dan 10-jaarlijks</td>
-                  <td>moreThan10annually</td>
-                  <td>Data wordt één keer per meer dan 10 jaar geactualiseerd.</td>
+                  <td><i>Meer dan 10-jaarlijks</i></td>
+                  <td><i>moreThan10annually</i></td>
+                  <td><i>Data wordt één keer per meer dan 10 jaar geactualiseerd.</i></td>
                 </tr>
                 <tr>
                   <td>Indien nodig</td>
@@ -4562,7 +4647,7 @@ betrekking heeft, zoals de habitat van zeldzame soorten</td>
           </section>
         </section>
         <section id="veranderde-codelijsten">
-          <h3>Toegevoegde en veranderde codelijsten</h3>
+          <h3>Toegevoegde codelijsten</h3>
           <section id="codelijst-iso-639-2">
             <h4>Codelijst ISO 639-2</h4>
             <p>Gebruik hiervoor alleen de drie letter codes van ISO639-2/B,
@@ -6888,9 +6973,9 @@ width="100%">
               </td>
               <td> <br>
               </td>
-              <td> <br>
+              <td> <p>&lt;MD_DataIdentification id="04dbf480-1bee-4860-a280-d869cbbe193a"&gt;</p>
               </td>
-              <td> <br>
+              <td><p> Het is verplicht als er meer dan één gmd:MD_DataIdentification wordt opgenomen om deze uniek te identificeren middels een identifier</p>
               </td>
               <td> <br>
               </td>
@@ -14276,6 +14361,105 @@ width="100%">
                 <p>1</p>
               </td>
             </tr>
+                        <tr>
+              <td> <br>
+              </td>
+              <td> <br>
+              </td>
+              <td> <br>
+              </td>
+              <td> <br>
+              </td>
+              <td> <br>
+              </td>
+              <td> <br>
+              </td>
+              <td>
+                <p><b>401</b></p>
+              </td>
+              <td colspan="5">
+                <p><b><a href="#description">Omschrijving</a></b> </p>
+              </td>
+              <td>
+                <p><span>MD_Metadata.distributionInfo &gt;
+                    MD_Distribution.transferOptions &gt;
+                    MD_DigitalTransferOptions.onL ine &gt;
+                    CI_OnlineResource.description</span></p>
+              </td>
+              <td>
+                <p>Omschrijving van wat de online resource is of doet.
+                  </p>
+              </td>
+              <td>
+                <p>http://inspire.ec.europa.eu/metadata-codelist/OnLineDescriptionCode/endPoint</p>
+              </td>
+              <td>
+                <p>Het is verplicht als er een URL van het type 'endPoint' is opgegeven</p>
+              </td>
+              <td>
+                <p>OnLineDescriptionCode</p>
+              </td>
+              <td> <br>
+              </td>
+              <td>
+                <p>expliciet</p>
+              </td>
+              <td>
+                <p>description</p>
+              </td>
+              <td>
+                <p>1</p>
+              </td>
+            </tr>
+                        <tr>
+              <td> <br>
+              </td>
+              <td> <br>
+              </td>
+              <td> <br>
+              </td>
+              <td> <br>
+              </td>
+              <td> <br>
+              </td>
+              <td> <br>
+              </td>
+              <td>
+                <p>402</p>
+              </td>
+              <td colspan="5">
+                <p>Functie</p>
+              </td>
+              <td>
+                <p><span>MD_Metadata.distributionInfo &gt;
+                    MD_Distribution.transferOptions &gt;
+                    MD_DigitalTransferOptions.onL ine &gt;
+                    CI_OnlineResource.function</span></p>
+              </td>
+              <td>
+                <p>Code voor de functie van de online resource</p>
+              </td>
+              <td>
+                <p>information</p>
+              </td>
+              <td>
+                <p> </p>
+              <br></td>
+              <td>
+                <p>B.5.3</p>
+              </td>
+              <td> <br>
+              </td>
+              <td>
+                <p>expliciet</p>
+              </td>
+              <td>
+                <p>function</p>
+              </td>
+              <td>
+                <p>1</p>
+              </td>
+            </tr>
             <tr>
               <td> <br>
               </td>
@@ -17483,67 +17667,7 @@ width="100%">
           </tbody>
         </table>
       </section>
-      <section class="appendix" id="appendix-c">
-        <p>Om het Nederlandse profiel te creëren, zijn de volgende wijzigingen
-          op ISO 19115 opgenomen, namelijk Codelijst
-          MD_MaintenanceFrequencyCode(B.5.18) is uitgebreid met de volgende
-          elementen:</p>
-        <table>
-          <colgroup><col style="width: 25%;"><col style="width: 25%;"><col style="width: 50%;"></colgroup>
-          <tbody>
-            <tr>
-              <td>2-jaarlijks</td>
-              <td>2annually</td>
-              <td>Data wordt één keer per 2 jaar geactualiseerd.</td>
-            </tr>
-            <tr>
-              <td>3-jaarlijks</td>
-              <td>3annually</td>
-              <td>Data wordt één keer per 3 jaar geactualiseerd.</td>
-            </tr>
-            <tr>
-              <td>4-jaarlijks</td>
-              <td>4annually</td>
-              <td>Data wordt één keer per 4 jaar geactualiseerd.</td>
-            </tr>
-            <tr>
-              <td>5-jaarlijks</td>
-              <td>5annually</td>
-              <td>Data wordt één keer per 5 jaar geactualiseerd.</td>
-            </tr>
-            <tr>
-              <td>6-jaarlijks</td>
-              <td>6annually</td>
-              <td>Data wordt één keer per 6 jaar geactualiseerd.</td>
-            </tr>
-            <tr>
-              <td>7-jaarlijks</td>
-              <td>7annually</td>
-              <td>Data wordt één keer per 7 jaar geactualiseerd.</td>
-            </tr>
-            <tr>
-              <td>8-jaarlijks</td>
-              <td>8annually</td>
-              <td>Data wordt één keer per 8 jaar geactualiseerd.</td>
-            </tr>
-            <tr>
-              <td>9-jaarlijks</td>
-              <td>9annually</td>
-              <td>Data wordt één keer per 9 jaar geactualiseerd.</td>
-            </tr>
-            <tr>
-              <td>10-jaarlijks</td>
-              <td>10annually</td>
-              <td>Data wordt niet binnen 10 jaar geactualiseerd.</td>
-            </tr>
-            <tr>
-              <td>Meer dan 10-jaarlijks</td>
-              <td>moreThan10annually</td>
-              <td>Data wordt één keer per meer dan 10 jaar geactualiseerd.</td>
-            </tr>
-          </tbody>
-        </table>
-      </section>
+      
       <section class="appendix" id="appendix-d">
         <h2>Verantwoording metadata elementen</h2>
         <p>In deze tabel is door middel van het ISO nummer aangegeven op welk
