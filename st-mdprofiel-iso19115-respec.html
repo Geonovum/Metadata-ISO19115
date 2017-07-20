@@ -219,14 +219,15 @@
       <p></p>
       <p><b>ISO 8601:2004</b>, Data elements and interchange formats -
         Information interchange - Representation of dates and times</p>
-      <p><b>ISO 10646-1</b>, Information technology ― Universal Multiple-Octet
-        Coded Character Set (UCS) ― Part 1: Architecture and Basic Multilingual
-        Plane</p>
+      <p><b>ISO 10646:2014</b>, Information technology -- Universal Coded
+        Character Set (UCS)</p>
       <p><b>ISO 639-2</b>, Codes for the representation of names of languages -
         Part 2: Alpha-3 code</p>
       <p><b>ISO TC 46/SC 4</b>, 2009, Dublin Core Metadata Element Set, ook
         gepubliceerd als ISO 15836:2009</p>
       <p><b>INSPIRE</b>, 2008, Implementing Rules for Metadata</p>
+      <p><b>INSPIRE</b>, 2010, Implementing Rules for interoperability of
+        spatial data sets and services, met amendementen uit 2011, 2013 en 2014.</p>
       <p><b>INSPIRE</b>, 2017, Technical Guidance for the implementation of
         INSPIRE dataset and service metadata based on ISO/TS 19139:2007</p>
     </section>
@@ -349,25 +350,28 @@ http://schemas.opengis.net/csw/2.0.2/profiles/apiso/1.0.0/apiso.xsd</a></td>
         <aside class="example" title="Verwijzing naar codelijst">
           <pre><code>&lt;ci_datetypecode 
   codelist="http://standards.iso.org/iso/19139/resources/codelist/gmxCodelists.xml#CI_DateTypeCode"
-  codelistvalue="creation"&gt;Creatie datum
+  codelistvalue="creation" <br>  codeSpace="dut"&gt;Creatie datum
 &lt;/ci_datetypecode&gt;</code></pre>
-        </aside>
-      </section>
-      <section id="String elementen">
-        <h3>String elementen</h3>
-        <p>De ISO 19139 schema's staan meerdere manieren toe om vrije text op te
-          nemen. Het basis element daarvoor is gco:CharacterString. Wanneer de
-          vrije text een term of code&nbsp; bevat die verwijst naar een extern
-          gedefinieerde uitleg of register waarde, wordt aanbevolen om het
-          gmx:Anchor element te gebruiken in plaats van gco:CharacterString.
-          gmx:Anchor biedt de mogelijkheid om naast een string tevens een link
-          naar een webadres op te nemen waar meer informatie over dit element te
-          vinden is. Daarvoor wordt het xlink:href attribuut gebruikt, die een
-          valide URL dient te bevatten. De textwaarde van het element moet naast
-          de link in het xlink:href attribuut nog steeds worden gegeven. Het zal
-          worden gegeven als mens leesbare text. </p>
-        <aside class="example" title="Trefwoord verwijzing met Anchor">
-          <pre><code>&lt;gmd:keyword&gt;
+                  </aside>
+                </section>
+                <section id="String elementen">
+                  <h3>String elementen</h3>
+                  <p>De ISO 19139 schema's staan meerdere manieren toe om vrije
+                    text op te nemen. Het basis element daarvoor is
+                    gco:CharacterString. Wanneer de vrije text een term of
+                    code&nbsp; bevat die verwijst naar een extern gedefinieerde
+                    uitleg of register waarde, wordt aanbevolen om het
+                    gmx:Anchor element te gebruiken in plaats van
+                    gco:CharacterString. gmx:Anchor biedt de mogelijkheid om
+                    naast een string tevens een link naar een webadres op te
+                    nemen waar meer informatie over dit element te vinden is.
+                    Daarvoor wordt het xlink:href attribuut gebruikt, die een
+                    valide URL dient te bevatten. De textwaarde van het element
+                    moet naast de link in het xlink:href attribuut nog steeds
+                    worden gegeven. Het zal worden gegeven als mens leesbare
+                    text. </p>
+                  <aside class="example" title="Trefwoord verwijzing met Anchor">
+                    <pre><code>&lt;gmd:keyword&gt;
   &lt;gmx:anchor <br>   xlink:href="http://inspire.ec.europa.eu/theme/mf"&gt;
     Meteorological geographical features<br>  &lt;/gmx:anchor&gt; 
 &lt;/gmd:keyword&gt;</code></pre>
@@ -2932,12 +2936,12 @@ style="float:right">[ISO 19139:2007]</span>
       </section>
       <section id="optionele-set-metadata">
         <h2>Optionele set metadata</h2>
-        <p>Naast de verplichte kernset heeft dit metadata profiel tevens een
+        <p>Naast de verplichte elementen heeft dit metadata profiel tevens een
           optionele set. Deze set bestaat uit een selectie van
           metadata-elementen uit ISO 19115, die nuttig zijn voor het beheer van
           geografische datasets en –series. Het betreft niet de volledige ISO
           19115 set. Als men meer metadata wil vastleggen dan mogelijk met de
-          verplichte kernset dan dient men bij voorkeur de benodigde elementen
+          verplichte elementen, dan dient men bij voorkeur de benodigde elementen
           uit deze optionele set te kiezen. Hierdoor blijft interoperabiliteit
           beter behouden. <a href="#table-58">Tabel 3</a> bevat de optionele
           set. Van elk metadata element wordt achtereenvolgens gegeven: de
@@ -2945,8 +2949,7 @@ style="float:right">[ISO 19139:2007]</span>
           het ISO nummer, de (eventueel specialiseerde) Nederlandse metadata
           element naam van het element in ISO 19115 en de bijbehorende
           definitie. In <a href="#appendix-b">Appendix B</a> worden de
-          onderlinge relaties tussen de elementen in de kernset en de optionele
-          set aangegeven via de abstracte klassen die ISO 19115 gebruikt.</p>
+          onderlinge relaties tussen de verplichte elementen en de optionele elementen aangegeven via de abstracte klassen die ISO 19115 gebruikt.</p>
         <table>
           <colgroup><col style="width: 20%;"><col style="width: 10%;"><col style="width: 20%;"><col
 style="width: 50%"></colgroup>
@@ -3512,24 +3515,33 @@ src="st-mdprofiel-iso19115/image003.png" alt="image003"></a> <figcaption>Attribu
           de benodigde data dictionary is opgenomen in ISO 19139.</p>
         <figure id="image004"> <a href="st-mdprofiel-iso19115/image004.png"><img
 src="st-mdprofiel-iso19115/image004.png" alt="image004"></a> <figcaption>Vrije
-            tekst en “localised” characterString.</figcaption> </figure>
+            tekst en “localised” characterString.<br><br>Hieronder een voorbeeld hoe meertaligheid in een XML wordt toegepast, de locale wordt één keer opgenomen, voor elke character wordt de waarde van het element in de metadata taal, in onderstaande geval in het engels en in de localised taal opgenomen :</figcaption> </figure>
         <aside class="example" title="Meertalige metadata">
-          <pre><code>&lt;gmd:organisationName xsi:type="gmd:PT_FreeText_PropertyType"&gt; 
-  &lt;gco:CharacterString&gt;Ilmatieteen laitos&lt;/gco:CharacterString&gt; 
-  &lt;gmd:PT_FreeText&gt;
-    &lt;gmd:textGroup&gt;
-      &lt;gmd:LocalisedCharacterString locale="#locale-swe"&gt;
-        Meteorologiska institutet
-      &lt;/gmd:LocalisedCharacterString&gt; 
-    &lt;/gmd:textGroup&gt;
-    &lt;gmd:textGroup&gt; 
-      &lt;gmd:LocalisedCharacterString locale="#locale-en"&gt;
-        Finnish Meteorological Institute
-      &lt;/gmd:LocalisedCharacterString&gt; 
-    &lt;/gmd:textGroup&gt; 
-  &lt;/gmd:PT_FreeText&gt; 
-&lt;/gmd:organisationName&gt;</code></pre>
-          <code> </code> </aside>
+          <pre><code>
+  &lt;gmd:locale&gt;
+    &lt;gmd:PT_Locale id="DUT"&gt;
+       &lt;gmd:languageCode&gt;
+            &lt;gmd:LanguageCode codeListValue="dut" codeList="http://www.loc.gov/standards/iso639-2/"/&gt;
+        &lt;/gmd:languageCode&gt;
+    &lt;/gmd:PT_Locale&gt;
+&lt;/gmd:locale&gt;
+....
+  &lt;gmd:title xsi:type="gmd:PT_FreeText_PropertyType"&gt;
+        &lt;gco:CharacterString xmlns:gco="http://www.isotc211.org/2005/gco"&gt;
+            KNMI view service for actual synoptic observations from NL land, coastal areas and North Sea stations per 10 minutes
+       &lt;/gco:CharacterString&gt;
+        &lt;gmd:PT_FreeText&gt;
+           &lt;gmd:textGroup&gt;
+                &lt;gmd:LocalisedCharacterString locale="#DUT"&gt;
+                    KNMI view service voor actuele synoptische waarnemingen van NL land, kustgebieden en Noordzee stations per 10 minuten
+                &lt;/gmd:LocalisedCharacterString&gt;
+            &lt;/gmd:textGroup&gt;
+        &lt;/gmd:PT_FreeText&gt;
+   &lt;/gmd:title&gt;
+          
+          
+  </code></pre>
+           </aside>
       </section>
       <section id="object-en-attribuutinformatie">
         <h2>Object- en attribuutinformatie</h2>
@@ -3566,33 +3578,54 @@ src="st-mdprofiel-iso19115/image004.png" alt="image004"></a> <figcaption>Vrije
           &lt;/CI_Citation&gt;
         &lt;/featureCatalogueCitation&gt;
         </code></pre>
+        
+          Of als de featurecatalog in een catalog service is ontsloten:
+          
+      <pre><code>  
+     &lt;gmd:featureCatalogueCitation <br>     uuidref="7c0b5c3e-f41c-4b33-8e1e-be8c0e68edb2" <br>     xlink:href="http://sdi.eea.europa.eu/catalogue/srv/en/csw?<br>     &amp;service=CSW<br>     &amp;version=2.0.2<br>     &amp;request=GetRecordById<br>     &amp;resultType=results<br>     &amp;elementSetName=full<br>     &amp;typeNames=gfc:FC_FeatureCatalogue<br>     &amp;outputSchema=http://www.isotc211.org/2005/gfc<br>     &amp;outputFormat=application/xml&amp;id=7c0b5c3e-f41c-4b33-8e1e-be8c0e68edb2"/&gt;
+
+    &nbsp;<br></code></pre>
         </aside>
-        <p>De elementen die minimaal opgeslagen worden in een ISO 19110 document
-          zijn;</p>
+        <p>De elementen die minimaal opgeslagen worden in een ISO 19110 document zijn:</p>
+        <p>Gegevens van de featurecatalog (<i>FC_FeatureCatalogue</i>);</p>
+      <ul>
+        <li>de naam van de feturecatalog (<i>FC_FeatureCatalogue.Name</i>);</li>
+        <li>het versie nummer (<i>FC_FeatureCatalogue.versionNumber</i>);</li>
+        <li>de datum (<i>FC_FeatureCatalogue.versionDate</i>);</li>
+        <li>de verantwoordelijke organisatie (<i>FC_FeatureCatalogue.producer.CI_ResponsibleParty.organisationName</i>);</li>
+        <li>rol verantwoordelijke orgaisatie (<i>FC_FeatureCatalogue.producer.CI_ResponsibleParty.role</i>);</li>
+         </ul>
+        
+        <p>Minimaal één featuretype (<i>FC_FeatureType</i>);</p>
         <ul>
           <li>de naam van het object (<i>FC_FeatureType.typeName</i>);</li>
           <li>de definitie van het object (<i>FC_FeatureType.definition</i>);</li>
         </ul>
         <p></p>
-        <p>Per attribuut (<i>FeatureAttribute</i>);</p>
+        <p>Eventueel per featuretype de attributen en eventueel een toelichting (<i>FC_FeatureAttribute</i>) ;</p>
         <ul>
           <li>Naam van attribuut (<i>FC_FeatureAttribute.memberName</i>)</li>
-          <li>Code van attribuut (<i>FC_FeatureAttribute.code</i>)</li>
-          <li>Toelichting bij het attribuut (<i>FC_FeatureAttribute.definition</i>)</li>
-          <li>Type van het attribuut (<i>FC_FeatureAttribute.typeName</i>)</li>
-          <li>Bereik van de waarden van het attribuut (<i>FC_FeatureAttribute.range</i>)</li>
+          <li>Toelichting bij het attribuut (<i>FC_FeatureAttribute.definition</i>)</li></ul>
+        <p>Eventueel per attribuut de mogelijke labels en eventueel een code (<i>FC_ListedValue</i>):</p>
+        <ul>
+          <li>Code van attribuut (<i>FC_ListedValue.label</i>)</li>
+          <li>Code van attribuut (<i>FC_ListedValue.code</i>)</li> 
         </ul>
         <p></p>
         <aside class="example" title="Voorbeeld Featurecatalogue">
-          <pre><b>Een voorbeeld van featurecatalogue</b>
-Naam object: Administratieve eenheden
-Toelichting: Eenheid waar een lidstaat rechtsbevoegdheid
-<b>Per attribuut</b> 
-  Naam: Nummer
-  Code: gemnr
-  Toelichting: gemeentenummer, conform cbs nummering jaartal x.
-  Type: String
-  Bereik: Waarden van 1 tot 1200</pre>
+          <pre><b>Voorbeeld van de waarden van bovengenomede elementen;</b>
+<b>De featurecatalog<br></b>  naam: Voorbeeld feture catalog<br>  versie:1.0<br>  datum:20-07-2017<br>  verantwoordelijke organisatie:Geonovum<br>  verantwoordelijke organisatie rol: pointOfContact<b><br></b><b>Minimaal één featuretype</b>       
+  Naam object: Administratieve eenheden
+  Toelichting: Eenheden waar een lidstaat rechtsbevoegdheid heeft
+<b>Eventueel per featuretype één of meerdere attributen</b> <b>met eventueeel een toelichting</b>
+  Naam: Gemeentecode
+  Toelichting: gemeentencode, conform CBS lijst 2017.
+<b>Eventueel per attribuut één of meerdere labels met eventueel een code</b>
+  Label: Apeloorn
+  Code: 200
+  Label: Arnhem
+  Code: 202
+ </pre>
         </aside>
         <p>Deze methode van vastleggen van object en attribuutinformatie is
           conform NEN3610. Indien een dataset volgens een sectormodel van
@@ -3604,7 +3637,7 @@ Toelichting: Eenheid waar een lidstaat rechtsbevoegdheid
       <section id="richtlijnen-voor-sectoren">
         <h2>Richtlijnen voor sectoren</h2>
         <p>Sectoren in Nederland kunnen een eigen uitbreiding op het Nederlandse
-          profiel ontwikkelen. Voorwaarde is dat de Nederlandse kernset metadata
+          profiel ontwikkelen. Voorwaarde is dat de Nederlandse verplichte metadata elementen
           onderdeel is van het sectorale metadata profiel. Deze sectorale
           uitbreidingen dienen onderdeel te zijn van ISO 19115.</p>
         <p> </p>
@@ -3625,18 +3658,23 @@ Toelichting: Eenheid waar een lidstaat rechtsbevoegdheid
         <h2>Codelijsten</h2>
         <p>Deze bijlage bevat de codelijsten die van toepassing zijn in de
           Nederlandse metadatastandaard voor geografie.&nbsp;&nbsp; ISO 19139
-          definieert in paragraaf 8.5.5.1 drie XML-attributen die gerelateerd
+          definieert in drie XML-attributen die gerelateerd
           zijn aan de codelijst.&nbsp; De drie
           attributen zijn:</p>
         <ul>
-          <li>Codelist: een catalogus of register gerelateerd aan een
-            codelijstdefinitie;</li>
-          <li>CodelistValue: een catalogus of register gerelateerd aan een
-            attribuut uit de codelijst met definitie;</li>
-          <li>CodeSpace: een
-            alternatieve uitdrukking van het attribuut uit de codelijst.</li>
+          <li>Codelist: de referentie naar de codelijst;</li>
+          <li>CodelistValue: dit attribuut bevat de waarde uit een codelijst;</li>
+          <li>CodeSpace: de taal waarin het element is opgenomen, als deze leeg wordt gelaten wordt er van uitgegaan dat de waarde uit de codelijst is gebruikt.</li></ul><ul>
         </ul>
-        <p>Gegeven zijn de de Engelse naam uit ISO 19115, die als waarde gebruikt wordt en de Nederlandse vertaling die in de CodeSpace kan worden opgenomen. </p>
+        <aside class="example" title="Verwijzing naar codelijst">
+                    <pre><code>&lt;ci_datetypecode 
+  codelist="http://standards.iso.org/iso/19139/resources/codelist/gmxCodelists.xml#CI_DateTypeCode"
+  codelistvalue="creation"<br>  codeSpace="dut"&gt;Creatie datum
+&lt;/ci_datetypecode&gt;</code></pre>
+                  </aside>
+        
+        
+        <p>Voor de leesbaarheid zijn in de onderstaande codelijsten de kolomtitel Name uit ISO 19115, die als waarde gebruikt wordt, vervangen door het kopje waarde.  </p>
         <section id="codelijsten-iso19115-en-inspire">
           <h3>De codelijsten uit&nbsp; ISO 19115 en INSPIRE</h3>
           <section id="codelijst-b52">
@@ -10323,7 +10361,7 @@ width="100%">
               <td> <br>
               </td>
               <td>
-                <p>37</p>
+                <p><b>37</b></p>
               </td>
               <td colspan="9">
                 <p><b><a href="#ruimtelijk-schema-van-de-bron">Ruimtelijk schema</a></b></p>
