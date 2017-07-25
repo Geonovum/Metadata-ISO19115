@@ -1,321 +1,347 @@
 <!DOCTYPE html>
-<html lang="nl">
-  <head>
-    <meta content="text/html; charset=utf-8" http-equiv="content-type">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <link rel="shortcut icon" type="image/x-icon" href="https://tools.geostandaarden.nl/respec/media/logos/Geonovum.ico">
-    <link rel="stylesheet" type="text/css" href="st-mdprofiel-iso19115/localstyle.css">
-    <title>Nederlands profiel op ISO 19115 voor geografie versie 2.0.0</title>
-    <script class="remove" src="https://tools.geostandaarden.nl/respec/builds/respec-geonovum.js"></script>
-    <script class="remove" src="config.js"></script>
-  </head>
-  <body>
-    <section id="abstract">
-      <p>Geonovum ontwikkelt en <a href="http://www.geonovum.nl/onderwerp-artikel/beheer-geo-standaarden">beheert</a>
-        de Nederlandse metadataprofielen. Deze profielen zijn een
-        verbijzondering van de internationale metadatastandaarden van ISO en
-        zijn bedoeld om de interoperabiliteit binnen Nederland te bevorderen. De
-        volgende metadataprofielen worden ondersteund en gebruikt:</p>
-      <ul>
-        <li>datasets: <a href="https://github.com/Geonovum/Metadata-ISO19115">Nederlands
-            metadataprofiel op ISO 19115 voor geografie v2.0.0</a></li>
-        <li>services: <a href="https://github.com/Geonovum/Metadata-ISO19119">Nederlands
-            metadataprofiel op ISO 19119 voor services v2.0.0</a></li>
-      </ul>
-      <p>Ten behoeve van de Europese INSPIRE regelgeving is ook een metadata
-        profiel opgesteld. De vereisten uit het INSPIRE profiel zijn opgenomen
-        in de Nederlandse profielen, zodat door te voldoen aan het Nederlandse
-        profiel tevens aan de Europese INSPIRE vereisten voldaan kan worden.</p>
-      <p>​Het metadataprofiel voor services wordt gebruikt in combinatie met het
-        profiel voor datasets. Beide profielen staan op de <a href="http://forumstandaardisatie.nl/open-standaarden/lijsten-met-open-standaarden/">Pas-toe-of-leg-uit-lijst</a>
-        van het College Standaardisatie.</p>
-      Het Nederlandse metadata profiel voor geografie is niet statisch. Dit
-      document wordt daarom onder beheer gebracht om wijzigingen naar behoefte
-      en op basis van voorstellen gestructureerd door te voeren. Geonovum, als
-      beherende instantie, zal de wijzigingen registreren. </section>
-    <section id="sotd">
-      <p>Versie 2.0.0 van het Nederlands metadataprofiel voor geografie is
-        ingegaan op xx xxx xxxx. Versie 2.0.0 kent een aantal aanpassingen,
-        waarbij introductie van het gebruik van &lt;gmx:anchor&gt; het meest in
-        het oog springt. De voorgaande versie (v1.3.1) wordt nog tot xxx xxxx
-        ondersteund.</p>
-      <b>Versienummer</b>
-      <table>
-        <colgroup><col style="width: 10%;"><col style="width: 15%;"><col style="width: 75%;"></colgroup>
-        <tbody>
-          <tr>
-            <th>Jaar</th>
-            <th>Versienummer</th>
-            <th>Versiebeschrijving</th>
-          </tr>
-          <tr>
-            <td>2017</td>
-            <td>2.0.0</td>
-            <td>Nederlands proefiel, aangepast op<br>
-              <ul>
-                <br>
-                <li>INSPIRE, 2017, Technical Guidance for the implementation of
-                  INSPIRE dataset and service metadata based on ISO/TS
-                  19139:2007<br>
-                </li>
-                <li>Diverse wijzigingen met betrekking tot identificatie van
-                  objecten (introductie gmx:anchor)</li>
-              </ul>
-            </td>
-          </tr>
-          <tr>
-            <td>2013</td>
-            <td>1.3.1</td>
-            <td>Nederlands profiel, aangepast op:
-              <ul>
-                <li>INSPIRE INSPIRE codelijst SV_ServiceType uitgebreid met
-                  INSPIRE Atom</li>
-              </ul>
-            </td>
-          </tr>
-          <tr>
-            <td>2011</td>
-            <td>1.3</td>
-            <td>Nederlands profiel, aangepast op:
-              <ul>
-                <li>INSPIRE Metadata Implementing Rules: Technical Guidelines
-                  based on EN ISO 19115 and EN ISO 19119, v 1.2</li>
-                <li>Wijzigingsvoorstellen uit het werkveld.</li>
-              </ul>
-            </td>
-          </tr>
-          <tr>
-            <td>2008</td>
-            <td>1.2</td>
-            <td>Nederlands profiel, aangepast op:
-              <ul>
-                <li>INSPIRE, 2007, Relation between EN ISO 19115 and 19119 and
-                  the elements of the INSPIRE draft metadata implementing rules</li>
-                <li>Updates van international standaarden; en</li>
-                <li>wijzigingsvoorstellen uit het werkveld.</li>
-              </ul>
-            </td>
-          </tr>
-          <tr>
-            <td>2006</td>
-            <td>1.1</td>
-            <td>Naar aanleiding van veranderingen in de INSPIRE metadata core
-              set en gebruikers wensen zijn de elementen “toepassingsschaal” en
-              “temporele dekking” verplicht geworden. De elementen “niveau
-              kwaliteitsbeschrijving” en “geografische nauwkeurigheid” zijn
-              optioneel geworden. Dit is besloten op de workshop metadata op 15
-              mei 2006. Tevens is de DC vs ISO mapping is vernieuwd.</td>
-          </tr>
-          <tr>
-            <td>2006</td>
-            <td>1.0</td>
-            <td>Nederlandse metadatastandaard (profiel), gebaseerd op ISO
-              19115:2003, met de beschrijving van verplichte metadata-elementen
-              voor het zoeken en optionele metadata-elementen voor het beheer
-              van geografische datasets en dataset series, inclusief
-              invulinstructies voor toepassing van de standaard.</td>
-          </tr>
-        </tbody>
-      </table>
-    </section>
-    <section id="inleiding">
-      <h2>Inleiding</h2>
-      <section id="afbakening">
-        <h3>Afbakening</h3>
-        <p>De term metadata komt voor bij meerdere informatie disciplines.
-          Indien in dit document over metadata wordt gesproken betreft het
-          kenmerken die bronnen van geo-data beschrijven. Dit profiel richt zich
-          op een model voor het beschrijving van ruimtelijke datasets en dataset
-          series.</p>
-        <p>Het <a href="http://www.geonovum.nl/wegwijzer/standaarden/nederlands-metadataprofiel-op-iso-19119-services-200">
-            Nederlandse profiel op ISO 19119 voor services versie 2.0</a> richt
-          zich op de beschrijving van ruimtelijke dataservices. Als er services
-          beschikbaar zijn dienen volgens deze profielen zowel de service als de
-          daarin ontsloten datasets van metadata te worden voorzien. De relatie
-          tussen metadata van data, metadata van services en de data en services
-          is opgenomen in <a href="#appendix-f">Appendix F</a>. </p>
-        <p>Geonovum beheert tevens een <a href="wiki.geonovum.nl/index.php/2_Metadata">metadata
-            wiki</a> waarin voorbeelden zijn opgenomen en alle aspecten van het
-          aanmaken van metadata beschreven zijn.</p>
-      </section>
-      <section id="scope">
-        <h3>Scope</h3>
-        <p>Dit metadata profiel bevat de semantische beschrijving van de
-          verplichte of door conditie verplichte metadata elementen, van een
-          dataset of dataset serie. Dit metadata profiel beschrijft tevens de
-          encoding van de metadata van een dataset of dataset serie zodat de
-          uitwisseling tussen machines of mens en machine kan plaats vinden. Er
-          is tevens een optionele set als aanvulling op de kernset, die voorziet
-          in de behoefte van het geo-werkveld aan een brede gemeenschappelijke
-          basis van metadata-elementen, in het bijzonder voor het beheer.</p>
-        <p>Bij het voldoen aan dit profiel kan tevens aan de INSPIRE
-          verplichting voldaan. Deze verplichting geldt alleen voor metadata van
-          de door INSPIRE benoemde ruimtelijke datasets.</p>
-        <p></p>
-      </section>
-      <section id="context">
-        <h3>Context</h3>
-        <p><a href="#image001">Figuur 1</a> plaatst het Nederlandse metadata
-          profiel voor geografie in zijn internationale en sectorale context. De
-          ISO-kernset is de kleinste eenheid, een selectie uit ISO 19115.</p>
-        <figure id="image001"> <a href="st-mdprofiel-iso19115/context.png"><img
-              src="st-mdprofiel-iso19115/context.png" alt="image001"></a> <figcaption>Context
-            profiel.</figcaption> </figure>
-        <p>Het Nederlands profiel bevat nast de ISO kernset, de INSPIRE
-          elementen plus een selectie van metadata-elementen uit ISO 19115. In
-          dit profiel zijn de metadata elementen met hun oorsprong aangegeven in
-          <a href="#appendix-d">Appendix D</a>.</p>
-        <p>Sectoren in Nederland kunnen een eigen uitbreiding op het Nederlandse
-          profiel ontwikkelen. Voorwaarde is dat de Nederlandse profiel metadata
-          onderdeel is van het sectorale metadata profiel. Deze sectorale
-          uitbreidingen dienen onderdeel te zijn van ISO 19115.</p>
-      </section>
-      <section id="leeswijzer">
-        <h3>Leeswijzer</h3>
-        <p>Dit metadata profiel richt zich vooral op software ontwikkelaars en
-          metadata experts. Het bevat de semantische beschrijving van de
-          verplichte of door conditie verplichte metadata elementen, van een
-          dataset of dataset serie. Dit metadata profiel beschrijft tevens de
-          encoding van de metadata van een dataset of dataset serie zodat de
-          uitwisseling tussen machines of mens en machine kan plaats vinden.
-          Geonovum beheert tevens een <a href="wiki.geonovum.nl/index.php/2_Metadata">metadata
-            wiki</a> waarin voorbeelden zijn opgenomen en alle aspecten van het
-          aanmaken van metadata beschreven zijn. <a href="#normatieve-verwijzing">Hoofdstuk
-            2</a> toont de normatieve verwijzingen, <a href="#relevante-xsd-schemas">hoofdstuk
-            3</a> bevat de XSD schema's waarna in <a href="#termen-en-definities">hoofdstuk
-            4</a> de gehanteerde termen en definities worden beschreven. Het
-          formele deel van het profiel waarin onder andere de verplichte
-          elementen,&nbsp; worden beschreven die gelden voor metadata voor
-          geografie staan in <a href="#metadata-elementen">hoofdstuk 5</a>. In
-          <a href="#optionele-set-metadata">hoofdstuk 6</a> staan de optionele
-          elementen. De volgende hoofdstukken geven op specifieke onderdelen van
-          het profiel uitleg. De bijlagen dienen ter ondersteuning van de
-          hoofdstukken.</p>
-      </section>
-    </section>
-    <section id="normatieve-verwijzing">
-      <h1> Normatieve verwijzing</h1>
-      <p>De volgende normen, standaarden en specificaties zijn toegepast in dit
-        profiel:</p>
-      <b>EN ISO 19115:2005</b>, Geographic information - Metadata<br>
-      <p><i>EN ISO 19115:2005 is de adoptie door CEN van ISO 19115:2003</i> </p>
-      <b>EN ISO 19115:2005/AC:2008 ,</b> Geographic information – Metadata,
-      Technical Corrigendum 1<br>
-      <p><i>EN ISO 19115:2005/AC:2008 is de adoptie door CEN van ISO
-          19115/Cor.1:2006</i></p>
-      <p></p>
-      <p><b>CEN ISO/TS 19139:2009</b>, Geographic information - Metadata – XML
-        Schema Implementation<br>
-      </p>
-      <p><i>CEN ISO/TS 19139:2009 is de adoptie door CEN van ISO/TS 19139:2007</i></p>
-      <p></p>
-      <p><b>CSW2 AP ISO</b>, <a href="portal.opengeospatial.org/files/?artifact_id=21460">OpenGIS
-          Catalogue Services Specification 2.0.2 - ISO Metadata Application
-          Profile</a>, Version 1.0.0, OGC 07-045, 2007</p>
-      <p><b>ISO 19108</b>, EN ISO 19108:2005, Geographic information – Temporal
-        Schema<br>
-      </p>
-      <p><i>EN ISO 19108:2005 is de adoptie door CEN van ISO 19108:2002</i></p>
-      <p></p>
-      <p><b>ISO 8601:2004</b>, Data elements and interchange formats -
-        Information interchange - Representation of dates and times</p>
-      <p><b>ISO 10646:2014</b>, Information technology -- Universal Coded
-        Character Set (UCS)</p>
-      <p><b>ISO 639-2</b>, Codes for the representation of names of languages -
-        Part 2: Alpha-3 code</p>
-      <p><b>ISO TC 46/SC 4</b>, 2009, Dublin Core Metadata Element Set, ook
-        gepubliceerd als ISO 15836:2009</p>
-      <p><b>INSPIRE</b>, 2008, Implementing Rules for Metadata</p>
-      <p><b>INSPIRE</b>, 2010, Implementing Rules for interoperability of
-        spatial data sets and services, met amendementen uit 2011, 2013 en 2014.</p>
-      <p><b>INSPIRE</b>, 2017, Technical Guidance for the implementation of
-        INSPIRE dataset and service metadata based on ISO/TS 19139:2007</p>
-    </section>
-    <section id="Structuur en schema's ">
-      <h2>Structuur en schema's</h2>
-      <section id="relevante-xsd-schemas">
-        <h3>relevante-xsd-schemas</h3>
-        <p>Alle relevante schema’s zijn in de OGC schema repository beschikbaar.
-          De meeste schema's zijn beschikbaar onder <a href="http://schemas.opengis.net/iso/19139/20060504/">http://schemas.opengis.net/iso/19139/20060504/</a>.
-          De volgende tabel toont de relevante schema's voor dit profiel. </p>
-        <table>
-          <caption>Tabel 1: Locatie van het relevante XSD schema</caption>
-          <tbody>
-            <tr>
-              <th>Specificatie</th>
-              <th>Versie</th>
-              <th>Schema locatie</th>
-            </tr>
-            <tr>
-              <td>GMD</td>
-              <td>0.1</td>
-              <td><a href="http://schemas.opengis.net/iso/19139/20060504/gmd/gmd.xsd">
-                  /gmd/gmd.xsd</a></td>
-            </tr>
-            <tr>
-              <td>SRV</td>
-              <td>0.1</td>
-              <td><a href="http://schemas.opengis.net/iso/19139/20060504/srv/srv.xsd">
-                  /srv/srv.xsd</a></td>
-            </tr>
-            <tr>
-              <td>GMX</td>
-              <td>0.1</td>
-              <td><a href="http://schemas.opengis.net/iso/19139/20060504/gmx/gmx.xsd">
-                  /gmx/gmx.xsd</a></td>
-            </tr>
-            <tr>
-              <td>GML</td>
-              <td>3.2.0</td>
-              <td><a href="http://schemas.opengis.net/iso/19139/20060504/gml/gml.xsd">
-                  /gml/gml.xsd</a></td>
-            </tr>
-            <tr>
-              <td>GCO</td>
-              <td>0.1</td>
-              <td><a href="http://schemas.opengis.net/iso/19139/20060504/gco/gco.xsd">
-                  /gco/gco.xsd</a></td>
-            </tr>
-            <tr>
-              <td>GFC</td>
-              <td>0.1</td>
-              <td><a href="http://www.isotc211.org/2005/gfc/gfc.xsd">
-                  http://www.isotc211.org/2005/gfc/gfc.xsd</a></td>
-            </tr>
-            <tr>
-              <td>CSW</td>
-              <td>2.0.2.2</td>
-              <td><a href="http://schemas.opengis.net/csw/2.0.2/csw.xsd">
-                  http://schemas.opengis.net/csw/2.0.2/csw.xsd</a></td>
-            </tr>
-            <tr>
-              <td>CSW AP-ISO</td>
-              <td>1.0.0</td>
-              <td><a href="http://schemas.opengis.net/csw/2.0.2/profiles/apiso/1.0.0/apiso.xsd">
+          <html lang="nl">
+            <head>
+              <meta content="text/html; charset=utf-8" http-equiv="content-type">
+              <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+              <link rel="shortcut icon" type="image/x-icon" href="https://tools.geostandaarden.nl/respec/media/logos/Geonovum.ico">
+              <link rel="stylesheet" type="text/css" href="st-mdprofiel-iso19115/localstyle.css">
+              <title>Nederlands profiel op ISO 19115 voor geografie versie 2.0.0</title>
+              <script class="remove" src="https://tools.geostandaarden.nl/respec/builds/respec-geonovum.js"></script>
+              <script class="remove" src="config.js"></script>
+            </head>
+            <body>
+              <section id="abstract">
+                <p>Geonovum ontwikkelt en <a href="http://www.geonovum.nl/onderwerp-artikel/beheer-geo-standaarden">beheert</a>
+                  de Nederlandse metadataprofielen. Deze profielen zijn een
+                  verbijzondering van de internationale metadatastandaarden van
+                  ISO en zijn bedoeld om de interoperabiliteit binnen Nederland
+                  te bevorderen. De volgende metadataprofielen worden
+                  ondersteund en gebruikt:</p>
+                <ul>
+                  <li>datasets: <a href="https://github.com/Geonovum/Metadata-ISO19115">Nederlands
+                      metadataprofiel op ISO 19115 voor geografie v2.0.0</a></li>
+                  <li>services: <a href="https://github.com/Geonovum/Metadata-ISO19119">Nederlands
+                      metadataprofiel op ISO 19119 voor services v2.0.0</a></li>
+                </ul>
+                <p>Ten behoeve van de Europese INSPIRE regelgeving is ook een
+                  metadata profiel opgesteld. De vereisten uit het INSPIRE
+                  profiel zijn opgenomen in de Nederlandse profielen, zodat door
+                  te voldoen aan het Nederlandse profiel tevens aan de Europese
+                  INSPIRE vereisten voldaan kan worden.</p>
+                <p>​Het metadataprofiel voor services wordt gebruikt in
+                  combinatie met het profiel voor datasets. Beide profielen
+                  staan op de <a href="http://forumstandaardisatie.nl/open-standaarden/lijsten-met-open-standaarden/">Pas-toe-of-leg-uit-lijst</a>
+                  van het College Standaardisatie.</p>
+                Het Nederlandse metadata profiel voor geografie is niet
+                statisch. Dit document wordt daarom onder beheer gebracht om
+                wijzigingen naar behoefte en op basis van voorstellen
+                gestructureerd door te voeren. Geonovum, als beherende
+                instantie, zal de wijzigingen registreren. </section>
+              <section id="sotd">
+                <p>Versie 2.0.0 van het Nederlands metadataprofiel voor
+                  geografie is ingegaan op xx xxx xxxx. Versie 2.0.0 kent een
+                  aantal aanpassingen, waarbij introductie van het gebruik van
+                  &lt;gmx:anchor&gt; het meest in het oog springt. De voorgaande
+                  versie (v1.3.1) wordt nog tot xxx xxxx ondersteund.</p>
+                <b>Versienummer</b>
+                <table>
+                  <colgroup><col style="width: 10%;"><col style="width: 15%;"><col
+                      style="width: 75%;"></colgroup>
+                  <tbody>
+                    <tr>
+                      <th>Jaar</th>
+                      <th>Versienummer</th>
+                      <th>Versiebeschrijving</th>
+                    </tr>
+                    <tr>
+                      <td>2017</td>
+                      <td>2.0.0</td>
+                      <td>Nederlands proefiel, aangepast op<br>
+                        <ul>
+                          <br>
+                          <li>INSPIRE, 2017, Technical Guidance for the
+                            implementation of INSPIRE dataset and service
+                            metadata based on ISO/TS 19139:2007<br>
+                          </li>
+                          <li>Diverse wijzigingen met betrekking tot
+                            identificatie van objecten (introductie gmx:anchor)</li>
+                        </ul>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>2013</td>
+                      <td>1.3.1</td>
+                      <td>Nederlands profiel, aangepast op:
+                        <ul>
+                          <li>INSPIRE INSPIRE codelijst SV_ServiceType
+                            uitgebreid met INSPIRE Atom</li>
+                        </ul>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>2011</td>
+                      <td>1.3</td>
+                      <td>Nederlands profiel, aangepast op:
+                        <ul>
+                          <li>INSPIRE Metadata Implementing Rules: Technical
+                            Guidelines based on EN ISO 19115 and EN ISO 19119, v
+                            1.2</li>
+                          <li>Wijzigingsvoorstellen uit het werkveld.</li>
+                        </ul>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>2008</td>
+                      <td>1.2</td>
+                      <td>Nederlands profiel, aangepast op:
+                        <ul>
+                          <li>INSPIRE, 2007, Relation between EN ISO 19115 and
+                            19119 and the elements of the INSPIRE draft metadata
+                            implementing rules</li>
+                          <li>Updates van international standaarden; en</li>
+                          <li>wijzigingsvoorstellen uit het werkveld.</li>
+                        </ul>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>2006</td>
+                      <td>1.1</td>
+                      <td>Naar aanleiding van veranderingen in de INSPIRE
+                        metadata core set en gebruikers wensen zijn de elementen
+                        “toepassingsschaal” en “temporele dekking” verplicht
+                        geworden. De elementen “niveau kwaliteitsbeschrijving”
+                        en “geografische nauwkeurigheid” zijn optioneel
+                        geworden. Dit is besloten op de workshop metadata op 15
+                        mei 2006. Tevens is de DC vs ISO mapping is vernieuwd.</td>
+                    </tr>
+                    <tr>
+                      <td>2006</td>
+                      <td>1.0</td>
+                      <td>Nederlandse metadatastandaard (profiel), gebaseerd op
+                        ISO 19115:2003, met de beschrijving van verplichte
+                        metadata-elementen voor het zoeken en optionele
+                        metadata-elementen voor het beheer van geografische
+                        datasets en dataset series, inclusief invulinstructies
+                        voor toepassing van de standaard.</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </section>
+              <section id="inleiding">
+                <h2>Inleiding</h2>
+                <section id="afbakening">
+                  <h3>Afbakening</h3>
+                  <p>De term metadata komt voor bij meerdere informatie
+                    disciplines. Indien in dit document over metadata wordt
+                    gesproken betreft het kenmerken die bronnen van geo-data
+                    beschrijven. Dit profiel richt zich op een model voor het
+                    beschrijving van ruimtelijke datasets en dataset series.</p>
+                  <p>Het <a href="http://www.geonovum.nl/wegwijzer/standaarden/nederlands-metadataprofiel-op-iso-19119-services-200">
+                      Nederlandse profiel op ISO 19119 voor services versie 2.0</a>
+                    richt zich op de beschrijving van ruimtelijke dataservices.
+                    Als er services beschikbaar zijn dienen volgens deze
+                    profielen zowel de service als de daarin ontsloten datasets
+                    van metadata te worden voorzien. De relatie tussen metadata
+                    van data, metadata van services en de data en services is
+                    opgenomen in <a href="#appendix-f">Appendix F</a>. </p>
+                  <p>Geonovum beheert tevens een <a href="wiki.geonovum.nl/index.php/2_Metadata">metadata
+                      wiki</a> waarin voorbeelden zijn opgenomen en alle
+                    aspecten van het aanmaken van metadata beschreven zijn.</p>
+                </section>
+                <section id="scope">
+                  <h3>Scope</h3>
+                  <p>Dit metadata profiel bevat de semantische beschrijving van
+                    de verplichte of door conditie verplichte metadata
+                    elementen, van een dataset of dataset serie. Dit metadata
+                    profiel beschrijft tevens de encoding van de metadata van
+                    een dataset of dataset serie zodat de uitwisseling tussen
+                    machines of mens en machine kan plaats vinden. Er is tevens
+                    een optionele set als aanvulling op de kernset, die voorziet
+                    in de behoefte van het geo-werkveld aan een brede
+                    gemeenschappelijke basis van metadata-elementen, in het
+                    bijzonder voor het beheer.</p>
+                  <p>Bij het voldoen aan dit profiel kan tevens aan de INSPIRE
+                    verplichting voldaan. Deze verplichting geldt alleen voor
+                    metadata van de door INSPIRE benoemde ruimtelijke datasets.</p>
+                  <p></p>
+                </section>
+                <section id="context">
+                  <h3>Context</h3>
+                  <p><a href="#image001">Figuur 1</a> plaatst het Nederlandse
+                    metadata profiel voor geografie in zijn internationale en
+                    sectorale context. De ISO-kernset is de kleinste eenheid,
+                    een selectie uit ISO 19115.</p>
+                  <figure id="image001"> <a href="st-mdprofiel-iso19115/context.png"><img
+                        src="st-mdprofiel-iso19115/context.png" alt="image001"></a>
+                    <figcaption>Context profiel.</figcaption> </figure>
+                  <p>Het Nederlands profiel bevat nast de ISO kernset, de
+                    INSPIRE elementen plus een selectie van metadata-elementen
+                    uit ISO 19115. In dit profiel zijn de metadata elementen met
+                    hun oorsprong aangegeven in <a href="#appendix-d">Appendix
+                      D</a>.</p>
+                  <p>Sectoren in Nederland kunnen een eigen uitbreiding op het
+                    Nederlandse profiel ontwikkelen. Voorwaarde is dat de
+                    Nederlandse profiel metadata onderdeel is van het sectorale
+                    metadata profiel. Deze sectorale uitbreidingen dienen
+                    onderdeel te zijn van ISO 19115.</p>
+                </section>
+                <section id="leeswijzer">
+                  <h3>Leeswijzer</h3>
+                  <p>Dit metadata profiel richt zich vooral op software
+                    ontwikkelaars en metadata experts. Het bevat de semantische
+                    beschrijving van de verplichte of door conditie verplichte
+                    metadata elementen, van een dataset of dataset serie. Dit
+                    metadata profiel beschrijft tevens de encoding van de
+                    metadata van een dataset of dataset serie zodat de
+                    uitwisseling tussen machines of mens en machine kan plaats
+                    vinden. Geonovum beheert tevens een <a href="wiki.geonovum.nl/index.php/2_Metadata">metadata
+                      wiki</a> waarin voorbeelden zijn opgenomen en alle
+                    aspecten van het aanmaken van metadata beschreven zijn. <a
+                      href="#normatieve-verwijzing">Hoofdstuk 2</a> toont de
+                    normatieve verwijzingen, <a href="#relevante-xsd-schemas">hoofdstuk
+                      3</a> bevat de XSD schema's waarna in <a href="#termen-en-definities">hoofdstuk
+                      4</a> de gehanteerde termen en definities worden
+                    beschreven. Het formele deel van het profiel waarin onder
+                    andere de verplichte elementen,&nbsp; worden beschreven die
+                    gelden voor metadata voor geografie staan in <a href="#metadata-elementen">hoofdstuk
+                      5</a>. In <a href="#optionele-set-metadata">hoofdstuk 6</a>
+                    staan de optionele elementen. De volgende hoofdstukken geven
+                    op specifieke onderdelen van het profiel uitleg. De bijlagen
+                    dienen ter ondersteuning van de hoofdstukken.</p>
+                </section>
+              </section>
+              <section id="normatieve-verwijzing">
+                <h1> Normatieve verwijzing</h1>
+                <p>De volgende normen, standaarden en specificaties zijn
+                  toegepast in dit profiel:</p>
+                <b>EN ISO 19115:2005</b>, Geographic information - Metadata<br>
+                <p><i>EN ISO 19115:2005 is de adoptie door CEN van ISO
+                    19115:2003</i> </p>
+                <b>EN ISO 19115:2005/AC:2008 ,</b> Geographic information –
+                Metadata, Technical Corrigendum 1<br>
+                <p><i>EN ISO 19115:2005/AC:2008 is de adoptie door CEN van ISO
+                    19115/Cor.1:2006</i></p>
+                <p></p>
+                <p><b>CEN ISO/TS 19139:2009</b>, Geographic information -
+                  Metadata – XML Schema Implementation<br>
+                </p>
+                <p><i>CEN ISO/TS 19139:2009 is de adoptie door CEN van ISO/TS
+                    19139:2007</i></p>
+                <p></p>
+                <p><b>CSW2 AP ISO</b>, <a href="portal.opengeospatial.org/files/?artifact_id=21460">OpenGIS
+                    Catalogue Services Specification 2.0.2 - ISO Metadata
+                    Application Profile</a>, Version 1.0.0, OGC 07-045, 2007</p>
+                <p><b>ISO 19108</b>, EN ISO 19108:2005, Geographic information –
+                  Temporal Schema<br>
+                </p>
+                <p><i>EN ISO 19108:2005 is de adoptie door CEN van ISO
+                    19108:2002</i></p>
+                <p></p>
+                <p><b>ISO 8601:2004</b>, Data elements and interchange formats -
+                  Information interchange - Representation of dates and times</p>
+                <p><b>ISO 10646:2014</b>, Information technology -- Universal
+                  Coded Character Set (UCS)</p>
+                <p><b>ISO 639-2</b>, Codes for the representation of names of
+                  languages - Part 2: Alpha-3 code</p>
+                <p><b>ISO TC 46/SC 4</b>, 2009, Dublin Core Metadata Element
+                  Set, ook gepubliceerd als ISO 15836:2009</p>
+                <p><b>INSPIRE</b>, 2008, Implementing Rules for Metadata</p>
+                <p><b>INSPIRE</b>, 2010, Implementing Rules for interoperability
+                  of spatial data sets and services, met amendementen uit 2011,
+                  2013 en 2014.</p>
+                <p><b>INSPIRE</b>, 2017, Technical Guidance for the
+                  implementation of INSPIRE dataset and service metadata based
+                  on ISO/TS 19139:2007</p>
+              </section>
+              <section id="Structuur en schema's ">
+                <h2>Structuur en schema's</h2>
+                <section id="relevante-xsd-schemas">
+                  <h3>relevante-xsd-schemas</h3>
+                  <p>Alle relevante schema’s zijn in de OGC schema repository
+                    beschikbaar. De meeste schema's zijn beschikbaar onder <a href="http://schemas.opengis.net/iso/19139/20060504/">http://schemas.opengis.net/iso/19139/20060504/</a>.
+                    De volgende tabel toont de relevante schema's voor dit
+                    profiel. </p>
+                  <table>
+                    <caption>Tabel 1: Locatie van het relevante XSD schema</caption>
+                    <tbody>
+                      <tr>
+                        <th>Specificatie</th>
+                        <th>Versie</th>
+                        <th>Schema locatie</th>
+                      </tr>
+                      <tr>
+                        <td>GMD</td>
+                        <td>0.1</td>
+                        <td><a href="http://schemas.opengis.net/iso/19139/20060504/gmd/gmd.xsd">
+                            /gmd/gmd.xsd</a></td>
+                      </tr>
+                      <tr>
+                        <td>SRV</td>
+                        <td>0.1</td>
+                        <td><a href="http://schemas.opengis.net/iso/19139/20060504/srv/srv.xsd">
+                            /srv/srv.xsd</a></td>
+                      </tr>
+                      <tr>
+                        <td>GMX</td>
+                        <td>0.1</td>
+                        <td><a href="http://schemas.opengis.net/iso/19139/20060504/gmx/gmx.xsd">
+                            /gmx/gmx.xsd</a></td>
+                      </tr>
+                      <tr>
+                        <td>GML</td>
+                        <td>3.2.0</td>
+                        <td><a href="http://schemas.opengis.net/iso/19139/20060504/gml/gml.xsd">
+                            /gml/gml.xsd</a></td>
+                      </tr>
+                      <tr>
+                        <td>GCO</td>
+                        <td>0.1</td>
+                        <td><a href="http://schemas.opengis.net/iso/19139/20060504/gco/gco.xsd">
+                            /gco/gco.xsd</a></td>
+                      </tr>
+                      <tr>
+                        <td>GFC</td>
+                        <td>0.1</td>
+                        <td><a href="http://www.isotc211.org/2005/gfc/gfc.xsd">
+                            http://www.isotc211.org/2005/gfc/gfc.xsd</a></td>
+                      </tr>
+                      <tr>
+                        <td>CSW</td>
+                        <td>2.0.2.2</td>
+                        <td><a href="http://schemas.opengis.net/csw/2.0.2/csw.xsd">
+                            http://schemas.opengis.net/csw/2.0.2/csw.xsd</a></td>
+                      </tr>
+                      <tr>
+                        <td>CSW AP-ISO</td>
+                        <td>1.0.0</td>
+                        <td><a href="http://schemas.opengis.net/csw/2.0.2/profiles/apiso/1.0.0/apiso.xsd">
 http://schemas.opengis.net/csw/2.0.2/profiles/apiso/1.0.0/apiso.xsd</a></td>
-            </tr>
-          </tbody>
-        </table>
-        <p><em>GMD, GCO, GML</em>: Dit zijn de XML encoding schema’s voor ISO
-          19115:2003. De namespace http://www.isotc211.org/2005/gmd wordt
-          gebruikt. </p>
-        <p><em>GMX</em>: Een uitbreiding op het basis ISO 19115:2003 model. Het
-          biedt de mogelijkheid een gco:CharacterString te vervangen voor
-          gmx:Anchor.</p>
-        <p><em>SRV</em>: Schema ISO 19119 om Dataservices te beschrijven</p>
-        <p><em>GFC</em>: Schema ISO 19110 om object- en attribuutinformatie te
-          beschrijven.</p>
-        <p><em>CSW</em>: Schema dat de interfaces en het core model van de basis
-          catalogue service definiëert.</p>
-        <p><em>APISO</em>: Basis schema van het ISO Application Profile voor de
-          OGC Catalogue Service 2.0.2. Dit schema is verbonden met ISO 19139.</p>
-        <p>Metadata, zoals beschreven in die profiel, zal ge-encodeerd worden in
-          XML formaat valide volgens de bovenstaande schema's. </p>
-        <p>Er mag ook verwezen worden naar een (op het web ontsloten) kopie van
-          deze schema's. Daarbij mag het gedupliceerde GMD-schema gewijzigd
-          worden om het GMX schema te importeren.</p>
-        <aside class="example" title="Schema verwijzingen in metadata">
-          <pre><code>&lt;gmd:MD_Metadata
+                      </tr>
+                    </tbody>
+                  </table>
+                  <p><em>GMD, GCO, GML</em>: Dit zijn de XML encoding schema’s
+                    voor ISO 19115:2003. De namespace
+                    http://www.isotc211.org/2005/gmd wordt gebruikt. </p>
+                  <p><em>GMX</em>: Een uitbreiding op het basis ISO 19115:2003
+                    model. Het biedt de mogelijkheid een gco:CharacterString te
+                    vervangen voor gmx:Anchor.</p>
+                  <p><em>SRV</em>: Schema ISO 19119 om Dataservices te
+                    beschrijven</p>
+                  <p><em>GFC</em>: Schema ISO 19110 om object- en
+                    attribuutinformatie te beschrijven.</p>
+                  <p><em>CSW</em>: Schema dat de interfaces en het core model
+                    van de basis catalogue service definiëert.</p>
+                  <p><em>APISO</em>: Basis schema van het ISO Application
+                    Profile voor de OGC Catalogue Service 2.0.2. Dit schema is
+                    verbonden met ISO 19139.</p>
+                  <p>Metadata, zoals beschreven in die profiel, zal ge-encodeerd
+                    worden in XML formaat valide volgens de bovenstaande
+                    schema's. </p>
+                  <p>Er mag ook verwezen worden naar een (op het web ontsloten)
+                    kopie van deze schema's. Daarbij mag het gedupliceerde
+                    GMD-schema gewijzigd worden om het GMX schema te importeren.</p>
+                  <aside class="example" title="Schema verwijzingen in metadata">
+                    <pre><code>&lt;gmd:MD_Metadata
     xmlns:gmd="http://www.isotc211.org/2005/gmd"
     xmlns:gmx="http://www.isotc211.org/2005/gmx"
     xmlns:gco="http://www.isotc211.org/2005/gco"
@@ -323,32 +349,35 @@ http://schemas.opengis.net/csw/2.0.2/profiles/apiso/1.0.0/apiso.xsd</a></td>
      "http://www.isotc211.org/2005/gmd http://schemas.opengis.net/iso/19139/20060504/gmd/gmd.xsd
       http://www.isotc211.org/2005/gmx http://schemas.opengis.net/iso/19139/20060504/gmx/gmx.xsd"
     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"&gt;</code></pre>
-        </aside>
-      </section>
-      <section id="Structuur">
-        <h3>Structuur</h3>
-        <p> De metadata voor een INSPIRE data set, data set series of service
-          wordt ge-encoded met exact een gmd:MD_Metadata element.<br>
-          Als er meer dan één gmd:MD_DataIdentification element wordt opgenomen,
-          zal deze&nbsp; een unieke identifier moeten bevatten van het element
-          zelf,&nbsp; zodat daar rechtstreeks naar verwezen kan worden vanuit de
-          service metadata voor de coupled resource. Deze identifier is een
-          waarde van de attribuut id van het&nbsp; gmd:MD_DataIdentification
-          element.<br>
-          <br>
-        </p>
-      </section>
-      <section id="Codelijsten">
-        <h3>Codelijsten</h3>
-        <p>In de metadata dienen de waarden uit de codelijsten waarnaar verwezen
-          wordt bij de element beschrijving, gehanteerd te worden. Deze
-          codelijsten zijn ook opgenomen in <a href="#appendix-a">appendix-a</a>.
-          Dit zijn vaak de ISO codelijsten, soms zijn de waarden die in dit
-          profiel gebruikt mogen worden beperkt. Voor een aantal String
-          elementen wordt ook een codelijst gehanteerd. Hierbij wordt soms het
-          gebruik van gmx:Anchor element vereist. </p>
-        <aside class="example" title="Verwijzing naar codelijst">
-          <pre><code>&lt;ci_datetypecode 
+                  </aside>
+                </section>
+                <section id="Structuur">
+                  <h3>Structuur</h3>
+                  <p> De metadata voor een INSPIRE data set, data set series of
+                    service wordt ge-encoded met exact een gmd:MD_Metadata
+                    element.<br>
+                    Als er meer dan één gmd:MD_DataIdentification element wordt
+                    opgenomen, zal deze&nbsp; een unieke identifier moeten
+                    bevatten van het element zelf,&nbsp; zodat daar rechtstreeks
+                    naar verwezen kan worden vanuit de service metadata voor de
+                    coupled resource. Deze identifier is een waarde van de
+                    attribuut id van het&nbsp; gmd:MD_DataIdentification
+                    element.<br>
+                    <br>
+                  </p>
+                </section>
+                <section id="Codelijsten">
+                  <h3>Codelijsten</h3>
+                  <p>In de metadata dienen de waarden uit de codelijsten
+                    waarnaar verwezen wordt bij de element beschrijving,
+                    gehanteerd te worden. Deze codelijsten zijn ook opgenomen in
+                    <a href="#appendix-a">appendix-a</a>. Dit zijn vaak de ISO
+                    codelijsten, soms zijn de waarden die in dit profiel
+                    gebruikt mogen worden beperkt. Voor een aantal String
+                    elementen wordt ook een codelijst gehanteerd. Hierbij wordt
+                    soms het gebruik van gmx:Anchor element vereist. </p>
+                  <aside class="example" title="Verwijzing naar codelijst">
+                    <pre><code>&lt;ci_datetypecode 
   codelist="http://standards.iso.org/iso/19139/resources/codelist/gmxCodelists.xml#CI_DateTypeCode"
   codelistvalue="creation" <br>  codeSpace="dut"&gt;Creatie datum
 &lt;/ci_datetypecode&gt;</code></pre>
@@ -2207,8 +2236,8 @@ style="float:right">[<a data-cite="ISO19139">ISO
                                     media-types</a>. </p>
                                 <p>Indien de URL een 'accessPoint' betreft,
                                   dient een waarde geselecteerd te worden uit de
-                                  <a href="#codelijst-sv-servicetype">codelijst
-                                    SV_ServiceType</a>. </p>
+                                  <a href="#codelijst-protocol">codelijst
+                                    Protocol</a>. </p>
                                 <table>
                                   <colgroup><col style="width: 25%"><col style="width: 75%"></colgroup>
                                   <tbody>
@@ -2224,9 +2253,9 @@ style="float:right">[<a data-cite="ISO19139">ISO
                                           &lt;/gmx:Anchor&gt;</code></td>
                                     </tr>
                                     <tr>
-                                      <td>SV_ServiceType</td>
+                                      <td>protocol</td>
                                       <td><code>&lt;gmx:Anchor <br>
-                                          xlink:href="http://standaarden.geonovum.nl/SV_ServiceType/OGC:WMS"&gt;
+                                          xlink:href="http://standaarden.geonovum.nl/protocol/OGC:WMS"&gt;
                                           OGC:WMS <br>
                                           &lt;/gmx:Anchor&gt;</code></td>
                                     </tr>
@@ -2235,7 +2264,7 @@ style="float:right">[<a data-cite="ISO19139">ISO
                                       <td>GML</td>
                                     </tr>
                                     <tr>
-                                      <td>SV_ServiceType</td>
+                                      <td>protocol</td>
                                       <td>OGC:WMS</td>
                                     </tr>
                                   </tbody>
@@ -4755,167 +4784,121 @@ betrekking heeft, zoals de habitat van zeldzame soorten</td>
               </tbody>
             </table>
           </section>
-          <section id="codelijst-sv-servicetype">
-            <h4>Codelijst SV_ServiceType</h4>
-            <p>De INSPIRE service type codelijst is gebaseerd op INSPIRE
-              metadata implementing rules </p>
+          <section id="codelijst-protocol">
+            <h4>Codelijst Protocol</h4>
+            <p> </p>
             <table>
-              <colgroup><col style="width: 25%;"><col style="width: 50%;"><col style="width: 25%;"></colgroup>
+              <colgroup><col style="width: 50%;"><col style="width: 50%;"></colgroup>
               <tbody>
                 <tr>
                   <th>Waarde</th>
                   <th>Beschrijving</th>
-                  <th>INSPIRE service type</th>
                 </tr>
                 <tr>
                   <td>OGC:CSW</td>
                   <td>Web Catalog service</td>
-                  <td>Discovery Service</td>
                 </tr>
                 <tr>
                   <td>OGC:WMS</td>
                   <td>Web Map service</td>
-                  <td>View Service</td>
                 </tr>
                 <tr>
                   <td>OGC:WMTS</td>
                   <td>Web Mapping Tiling Service</td>
-                  <td>View service</td>
                 </tr>
                 <tr>
                   <td>OGC:WFS</td>
                   <td>Web Feature Service</td>
-                  <td>Download Service</td>
                 </tr>
                 <tr>
                   <td>OGC:WCS</td>
                   <td>Web Coverage Service</td>
-                  <td>Download Service</td>
                 </tr>
                         <tr>
                   <td>OGC:SOS</td>
                   <td>Sensor Observation Service</td>
-                  <td> Download Service<br>
-                  </td>
                 </tr>
                 <tr>
                   <td>INSPIRE Atom</td>
                   <td>Atom Service Feed</td>
-                  <td>Download Service</td>
                 </tr>
                 <tr>
                   <td>OGC:WCTS</td>
                   <td>Web Coordinate Transformation Service</td>
-                  <td>Transformation Service</td>
                 </tr>
                 <tr>
                   <td>OGC:WPS</td>
                   <td>Web Processing Service</td>
-                  <td>Invoke Spatial Data Service</td>
                 </tr>
                 <tr>
                   <td>UKST</td>
                   <td>Unknown Service Type</td>
-                  <td>Other Services</td>
                 </tr>
                 <tr>
                   <td>OGC:WFS-G</td>
                   <td>Gazzetteer service</td>
-                  <td> <br>
-                  </td>
                 </tr>
-        
                 <tr>
                   <td>OGC:SPS</td>
                   <td>Sensor Planning Service</td>
-                  <td> <br>
-                  </td>
                 </tr>
                 <tr>
                   <td>OGC:SAS</td>
                   <td>Sensor Alert Service</td>
-                  <td> <br>
-                  </td>
                 </tr>
                 <tr>
                   <td>OGC:WNS</td>
                   <td>Web Notification Service</td>
-                  <td> <br>
-                  </td>
                 </tr>
                 <tr>
                   <td>OGC:ODS</td>
                   <td>OpenLS Directory Service</td>
-                  <td> <br>
-                  </td>
                 </tr>
                 <tr>
                   <td>OGC:OGS</td>
                   <td>OpenLS Gateway Service</td>
-                  <td> <br>
-                  </td>
                 </tr>
                 <tr>
                   <td>OGC:OUS</td>
                   <td>OpenLS Utility Service</td>
-                  <td> <br>
-                  </td>
                 </tr>
                 <tr>
                   <td>OGC:OPS</td>
                   <td>OpenLS Presentation Service</td>
-                  <td> <br>
-                  </td>
                 </tr>
                 <tr>
                   <td>OGC:ORS</td>
                   <td>OpenLS Route Service</td>
-                  <td> <br>
-                  </td>
                 </tr>
                 <tr>
                   <td>OGC:SensorThings</td>
                   <td>SensorThings API</td>
-                  <td><br>
-                  </td>
                 </tr>
                 <tr>
                   <td>W3C:SPARQL</td>
                   <td>SPARQL Query Language for RDF</td>
-                  <td><br>
-                  </td>
                 </tr>
                 <tr>
                   <td>OASIS:OData</td>
                   <td>Open data protocol</td>
-                  <td><br>
-                  </td>
                 </tr>
                 <tr>
                   <td>OAS</td>
                   <td>Open API Specification</td>
-                  <td><br>
-                  </td>
                 </tr>
                 <tr>
                   <td>landingpage</td>
                   <td>Een webpagina die toegang geeft tot de dataset of overige
                     informatie bevat</td>
-                  <td> <br>
-                  </td>
                 </tr>
                 <tr>
                   <td>application</td>
                   <td>Een (web) applicatie die rechtstreeks toegang geeft tot de
                     dataset</td>
-                  <td> <br>
-                  </td>
                 </tr>
                 <tr>
                   <td>dataset</td>
                   <td>URI naar locale dataset locatie</td>
-                  <td> <br>
-                  </td>
                 </tr>
               </tbody>
             </table>
@@ -14399,7 +14382,7 @@ width="100%">
                   dataset”</p>
               </td>
               <td>
-                <p>SV_ServiceType of media-types</p>
+                <p>protocol of media-types</p>
               </td>
               <td> <br>
               </td>
