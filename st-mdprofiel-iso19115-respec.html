@@ -1765,7 +1765,7 @@ http://schemas.opengis.net/csw/2.0.2/profiles/apiso/1.0.0/apiso.xsd</a></td>
           </table>
         </section>
         <section id="Omgrenzende rechthoek">
-          <h4>Omgrenzende rechthoekt</h4>
+          <h4>Omgrenzende rechthoek</h4>
           <p style="text-align:left"><em>identificationInfo[1]/*/extent/*/geographicElement/*/</em><span
               style="float:right">[<a data-cite="ISO19139">ISO 19139:2007</a>]</span></p>
           <p>Dit element bevat de meest westelijke, oostelijke, noordelijke en
@@ -10263,8 +10263,8 @@ verantwoordelijke organisatie rol: pointOfContact
                 door de data aangeeft.</p>
             </td>
             <td>
-              <p>&lt;Anchor
-                xlink:href="http://standaarden.overheid.nl/owms/terms/Ameland"&gt;</p>
+              <p>&lt;Anchor xlink:href="http://standaarden.overheid.nl
+                /owms/terms/Ameland"&gt;</p>
               <p>Ameland&lt;/Anchor&gt;</p>
             </td>
             <td>
@@ -18071,12 +18071,91 @@ verantwoordelijke organisatie rol: pointOfContact
         </tbody>
       </table>
     </section>
-    <section class="appendix" id="appendix-f">
+    <section class="appendix" id="appendif-f">
+      <h2>XML Uitwerkingen</h2>
+      <h3>Temporele dekking</h3>
+      <p>Er zijn verschillende methoden, waarmee de temporele dekking in XML kan
+        worden vastgelegd. Voor de interoperabiliteit is het echter optimaal
+        dezelfde methode te
+        hanteren. Daarom wordt voor de implementatie van dit profiel de
+        notering, die ook door INSPIRE voorgesteld wordt, gehanteerd; </p>
+      <aside class="example" title="XML notatie temporele dekking">
+        <pre><code>&lt;extent&gt; 
+  &lt;EX_Extent&gt; 
+    &lt;temporalElement&gt; 
+      &lt;EX_TemporalExtent&gt; 
+        &lt;extent&gt; 
+          &lt;gml:TimePeriod gml:id="d2febbb4-e66f-4ac8-ba76-8fd9bc7c8be6"&gt; 
+            &lt;gml:beginPosition&gt;2008-01-01T11:45:30&lt;/gml:beginPosition&gt; 
+            &lt;gml:endPosition&gt;2008-12-31T09:10:00&lt;/gml:endPosition&gt; 
+          &lt;/gml:TimePeriod&gt; 
+        &lt;/extent&gt; 
+      &lt;/EX_TemporalExtent&gt;
+    &lt;/temporalElement&gt;
+  &lt;/EX_Extent&gt;
+&lt;/extent&gt;
+        </code></pre>
+      </aside>
+      <h3>Identifier gebied</h3>
+      <p>Het refereren aan de unieke identificatie van een gebied dat betrekking
+        heeft op de dataset ondersteunt een eventuele ontsluiting van de
+        metadata in communities die geen ondersteuning bieden voor een
+        geometrisch object, zoals bijvoorbeeld DCAT-NL. In DCAT-NL worden bij
+        voorkeur OWMS waardelijsten gebruikt om een gebied aan te duiden. </p>
+      <aside class="example" title="XML notatie identifier gebied">
+        <pre><code>&lt;extent&gt; 
+  &lt;EX_Extent&gt; 
+    &lt;geographicElement&gt;
+      &lt;EX_GeographicDescription&gt;
+        &lt;geographicIdentifier&gt;
+          &lt;MD_Identifier&gt;
+            &lt;code&gt;
+              &lt;Anchor xlink:href="http://standaarden.overheid.nl/owms/terms/Ameland"&gt;
+              	Ameland&lt;/Anchor&gt;
+            &lt;code&gt;
+          &lt;MD_Identifier&gt;
+        &lt;geographicIdentifier&gt;
+      &lt;EX_GeographicDescription&gt;
+    &lt;geographicElement&gt;   
+  &lt;EX_Extent&gt;
+&lt;extent&gt;
+        </code></pre>
+      </aside>
+      <h3>Open data licentie</h3>
+      <p>In het geval van een INSPIRE dataset dient twee maal het element gebruikt te worden.</p>
+      <aside class="example" title="XML notatie open data licentie met INSPIRE">
+        <pre><code>&lt;resourceConstraints&gt;
+  &lt;MD_LegalConstraints&gt;
+    &lt;accessConstraints&gt;
+      &lt;MD_RestrictionCode 
+      	codeListValue="otherRestrictions" 
+        codeList="http://www.isotc211.org/2005/resources/Codelist/gmxCodelists.xml#MD_RestrictionCode"/&gt;
+    &lt;/accessConstraints&gt;   
+    &lt;otherConstraints&gt;
+      &lt;gmx:anchor
+        xlink:href="https://creativecommons.org/publicdomain/mark/*/deed.nl"&gt;
+          Geen beperkingen
+      &lt;/gmx:anchor&gt;
+    &lt;/otherConstraints&gt;
+    &lt;otherConstraints&gt;
+      &lt;gmx:anchor
+        xlink:href="http://inspire.ec.europa.eu/metadata-codelist
+          /ConditionsApplyingToAccessAndUse/noConditionsApply"&gt;
+          Geen beperkingen
+      &lt;/gmx:anchor&gt;
+    &lt;/otherConstraints&gt;
+  &lt;/MD_LegalConstraints&gt;
+&lt;/resourceConstraints&gt;  
+        </code></pre>
+      </aside>
+    </section>
+    <section class="appendix" id="appendix-g">
       <h2>Koppeling vanuit metadata met data en service</h2>
       <figure id="image005"><a href="st-mdprofiel-iso19115/image005.svg"><img src="st-mdprofiel-iso19115/image005.svg"
             alt="image005"></a> <figcaption>Koppeling vanuit metadata met data
           en service. </figcaption> </figure>
     </section>
     <script class="remove" src="st-mdprofiel-iso19115/localscript.js"></script>
+    
   </body>
 </html>
