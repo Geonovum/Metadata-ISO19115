@@ -34,6 +34,10 @@ th {
     margin:2px;
 }
 
+.cell-req td {
+    background-color: #fee;
+}
+
  /* Style the class-elements blocks */
 div.azlist {
     background: #dddddd;
@@ -45,3 +49,11 @@ div.azlist {
 .back {
       float: right; font-size: small;
     }
+
+@media print {
+    .page-break {page-break-before: always;}
+    table { page-break-inside: avoid }
+}
+
+
+
