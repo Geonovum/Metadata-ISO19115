@@ -1015,10 +1015,10 @@ http://schemas.opengis.net/csw/2.0.2/profiles/apiso/1.0.0/apiso.xsd</a></td>
           <p style="text-align:left"><em>identificationInfo[1]/*/citation/*/date/*/dateType</em><span
               style="float:right">[<a data-cite="ISO19139">ISO 19139:2007</a>]</span></p>
           <p>Dit element bevat het type gebeurtenis waar de datum betrekking op
-            heeft. Type gebeurtenis wordt gekozen uit <a href="#codelijst-b52">codelijst
-              B.5.2</a>. Mogelijke gebeurtenissen zijn: creatie-, publicatie-,
-            of revisiedatum. INSPIRE vereist bovendien dat het datum type uniek
-            is per set aan datums van de bron.</p>
+            heeft. Type gebeurtenis wordt gekozen uit <a href="#codelist-datetypecode">codelijst
+              DateTypeCode</a>. Mogelijke gebeurtenissen zijn: creatie-,
+            publicatie-, of revisiedatum. INSPIRE vereist bovendien dat het
+            datum type uniek is per set aan datums van de bron.</p>
           <table>
             <colgroup> <col style="width: 25%"> <col style="width: 75%"> </colgroup>
             <tbody>
@@ -1106,8 +1106,8 @@ http://schemas.opengis.net/csw/2.0.2/profiles/apiso/1.0.0/apiso.xsd</a></td>
               style="float:right">[<a data-cite="ISO19139">ISO 19139:2007</a>]</span></p>
           <p>Dit element bevat de status van de dataset. De dataset kan onder
             andere nog in ontwikkeling zijn, geactualiseerd moeten worden, of
-            gearchiveerd zijn.&nbsp; De waarden komen uit <a href="#codelijst-b523">codelijst
-              B.5.23 van ISO19115</a>.</p>
+            gearchiveerd zijn.&nbsp; De waarden komen uit <a href="#codelist-progresscode">codelijst
+              ProgressCode</a>.</p>
           <table>
             <colgroup> <col style="width: 25%"> <col style="width: 75%"> </colgroup>
             <tbody>
@@ -1129,8 +1129,8 @@ http://schemas.opengis.net/csw/2.0.2/profiles/apiso/1.0.0/apiso.xsd</a></td>
           <p>Dit element is conditioneel. Het is verplicht als de brontekstuele
             informatie bevat. Het bevat de code van de taal waarin de tekst in
             de bron is opgenomen. Gebruik hiervoor alleen de drie-letter codes
-            van 639-2/B (bibliographic codes), zoals gedefinieerd op <a href="http://www.loc.gov/standards/iso639-2/">http://www.loc.gov/standards/iso639-2/</a>
-            zie <a href="#codelijst-iso-639-2">Appendix A</a>.</p>
+            van 639-2/B (bibliographic codes), zoals gedefinieerd op <a href="#codelist-iso639-2">iso
+              639-2</a>.</p>
           <table>
             <colgroup> <col style="width: 25%"> <col style="width: 75%"> </colgroup>
             <tbody>
@@ -1150,8 +1150,8 @@ http://schemas.opengis.net/csw/2.0.2/profiles/apiso/1.0.0/apiso.xsd</a></td>
           <p style="text-align:left"><em>identificationInfo[1]/*/</em><span style="float:right">[<a
                 data-cite="ISO19139">ISO 19139:2007</a>]</span></p>
           <p>Verplicht als de in de bron gebruikte karakterset geen utf8 is. Er
-            dient een waarde uit <a href="#codelijst-b510">codelijst B.5.10</a>
-            gebruikt te worden</p>
+            dient een waarde uit <a href="#codelist-charactersetcode">codelijst
+              CharacterSetCode</a> gebruikt te worden</p>
           <table>
             <colgroup> <col style="width: 25%"> <col style="width: 75%"> </colgroup>
             <tbody>
@@ -1171,8 +1171,8 @@ http://schemas.opengis.net/csw/2.0.2/profiles/apiso/1.0.0/apiso.xsd</a></td>
           <p style="text-align:left"><em>identificationInfo[1]/*/topicCategory</em><span
               style="float:right">[<a data-cite="ISO19139">ISO 19139:2007</a>]</span></p>
           <p>Het bevat de belangrijkste onderwerpen van de dataset. De te
-            hanteren onderwerpen zijn opgenomen in <a href="#codelijst-b527">codelijst
-              B.5.27</a>.</p>
+            hanteren onderwerpen zijn opgenomen in <a href="#codelist-topiccategorycode">codelijst
+              TopicCategoryCode</a>.</p>
           <table>
             <colgroup> <col style="width: 25%"> <col style="width: 75%"> </colgroup>
             <tbody>
@@ -1250,7 +1250,7 @@ http://schemas.opengis.net/csw/2.0.2/profiles/apiso/1.0.0/apiso.xsd</a></td>
               style="float:right">[<a data-cite="ISO19139">ISO 19139:2007</a>]</span></p>
           <p>Dit element geeft de rol van de verantwoordelijke organisatie van
             de bron weer. Voor de rol van de organisatie wordt een codelijst
-            gehanteerd, zie zie <a href="#codelijst-b55">Codelijst B.5.5
+            gehanteerd, zie zie <a href="#codelist-rolecode">Codelijst
               CI_RoleCode</a>.</p>
           <table>
             <colgroup> <col style="width: 25%"> <col style="width: 75%"> </colgroup>
@@ -1377,9 +1377,9 @@ http://schemas.opengis.net/csw/2.0.2/profiles/apiso/1.0.0/apiso.xsd</a></td>
           <p>Dit is een conditioneel element. Het is verplicht als een trefwoord
             uit een thesaurus afkomstig is zoals in ieder geval voor de INSPIRE
             thema’s. Het bevat het type gebeurtenis waar de datum betrekking op
-            heeft. Type gebeurtenis wordt gekozen uit <a href="#codelijst-b52">codelijst
-              B.5.2</a> uit ISO 19115. Mogelijke gebeurtenissen zijn: creatie-,
-            publicatie-, of revisiedatum.</p>
+            heeft. Type gebeurtenis wordt gekozen uit <a href="#codelijst-datetypecode">codelijst
+              DateTypeCode</a> uit ISO 19115. Mogelijke gebeurtenissen zijn:
+            creatie-, publicatie-, of revisiedatum.</p>
           <table>
             <colgroup> <col style="width: 25%"> <col style="width: 75%"> </colgroup>
             <tbody>
@@ -1412,8 +1412,8 @@ http://schemas.opengis.net/csw/2.0.2/profiles/apiso/1.0.0/apiso.xsd</a></td>
           <p>Dit element bevat toegangseisen die er zorg voor dragen dat privacy
             of intellectueel eigendom gewaarborgd zijn en elke andere speciale
             beperkingen voor het verkrijgen van de metadata of data. De waardes
-            komen uit <a href="#codelijst-b524">codelijst B.5.24</a> uit ISO
-            19115.</p>
+            komen uit <a href="#codelist-restrictioncode">codelijst
+              RestrictionCode</a> uit ISO 19115.</p>
           <table>
             <colgroup> <col style="width: 25%"> <col style="width: 75%"> </colgroup>
             <tbody>
@@ -1462,7 +1462,7 @@ http://schemas.opengis.net/csw/2.0.2/profiles/apiso/1.0.0/apiso.xsd</a></td>
             de voorwaarden voor toegang en gebruik&nbsp; een link naar de
             licentie en de bijbehorende beschrijving opgenomen.&nbsp; Daarnaast
             wordt er, als het een INSPIRE dataset is en er geen beperkingen zijn
-            of deze niet bekend zijn, een waarde uit <a href="#Codelijst-INSPIRE-ConditionsApplyingToAccessAndUse">codelijst
+            of deze niet bekend zijn, een waarde uit <a href="#Codelist-INSPIRE-ConditionsApplyingToAccessAndUse">codelijst
               ConditionsApplyingToAccessAndUse</a> opgenomen in een tweede
             otherConstraints element binnen hetzelfde&nbsp;
             md:resourceConstraints/gmd:MD_LegalConstraints element. Voor INSPIRE
@@ -1623,8 +1623,8 @@ http://schemas.opengis.net/csw/2.0.2/profiles/apiso/1.0.0/apiso.xsd</a></td>
           <p style="text-align:left"><em>identificationInfo[1]/*/spatialRepresentationType/MD_SpatialRepresentationTypeCode</em><span
               style="float:right">[<a data-cite="ISO19139">ISO 19139:2007</a>]</span></p>
           <p>Dit element is conditioneel. Dit element is verplicht voor INSPIRE.
-            Er dient een waarde uit de <a href="#codelijst-b526">codelijst
-              B.5.26</a> gebruikt te worden.</p>
+            Er dient een waarde uit de <a href="#codelist-spatialrepresentationtypecode">codelijst
+              MD_SpatialRepresentationTypeCode</a> gebruikt te worden.</p>
           <table>
             <colgroup> <col style="width: 25%"> <col style="width: 75%"> </colgroup>
             <tbody>
@@ -1945,10 +1945,10 @@ http://schemas.opengis.net/csw/2.0.2/profiles/apiso/1.0.0/apiso.xsd</a></td>
           <p>Dit element is conditioneel. Het is verplicht als er een URL is
             opgegeven. Bijvoorbeeld naar een bestand, WFS of webpagina. </p>
           <p>Indien de URL een 'endPoint' betreft dan dient een waarde
-            geselecteerd te worden uit de <a href="#codelijst-media-types">codelijst
+            geselecteerd te worden uit de <a href="#codelist-mediatypes">codelijst
               media-types</a>. </p>
           <p>Indien de URL een 'accessPoint' betreft, dient een waarde
-            geselecteerd te worden uit de <a href="#codelijst-protocol">codelijst
+            geselecteerd te worden uit de <a href="#codelist-protocol">codelijst
               Protocol</a>. </p>
           <table>
             <colgroup> <col style="width: 25%"> <col style="width: 75%"> </colgroup>
@@ -2067,8 +2067,8 @@ http://schemas.opengis.net/csw/2.0.2/profiles/apiso/1.0.0/apiso.xsd</a></td>
           <p style="text-align:left"><em>dataQualityInfo/*/scope/*/level</em><span
               style="float:right">[<a data-cite="ISO19139">ISO 19139:2007</a>]</span></p>
           <p>Dit element beschrijft het niveau waarop de kwaliteitsinformatie
-            betrekking heeft. Dit niveau wordt gekozen uit <a href="#codelijst-b525">codelijst
-              B.5.25</a>. Mogelijke niveau’s zijn: dataset en series. </p>
+            betrekking heeft. Dit niveau wordt gekozen uit <a href="#codelist-scopecode">codelijst
+              ScopeCode</a>. Mogelijke niveau’s zijn: dataset en series. </p>
           <table>
             <colgroup> <col style="width: 25%"> <col style="width: 75%"> </colgroup>
             <tbody>
@@ -2183,9 +2183,9 @@ http://schemas.opengis.net/csw/2.0.2/profiles/apiso/1.0.0/apiso.xsd</a></td>
             dataset een INSPIRE bron is of als de informatie is gemodelleerd
             volgens een specifiek informatie model. Het bevat het type
             gebeurtenis waar de datum betrekking op heeft. Type gebeurtenis
-            wordt gekozen uit <a href="#codelijst-b52">codelijst B.5.2</a>.
-            Mogelijke gebeurtenissen zijn: creatie-, publicatie-, of
-            revisiedatum.</p>
+            wordt gekozen uit <a href="#codelist-datetypecode">codelijst
+              CI_DateTypeCode</a>. Mogelijke gebeurtenissen zijn: creatie-,
+            publicatie-, of revisiedatum.</p>
           <table>
             <colgroup> <col style="width: 25%"> <col style="width: 75%"> </colgroup>
             <tbody>
@@ -2340,9 +2340,9 @@ http://schemas.opengis.net/csw/2.0.2/profiles/apiso/1.0.0/apiso.xsd</a></td>
           <p>In dit element wordt vastgelegd in welke taal de metadata is
             beschreven. Het bevat de code van de taal waarin de tekst in de
             metadata is opgenomen. Gebruik hiervoor alleen de drie-letter codes
-            van 639-2/B (bibliographic codes), zoals gedefinieerd op <a href="http://www.loc.gov/standards/iso639-2/">http://www.loc.gov/standards/iso639-2/</a>.
-            De code voor Nederlands is dut, zie <a href="#codelijst-iso-639-2">Appendix
-              A</a>. Over het algemeen is dut de default waarde.</p>
+            van 639-2/B (bibliographic codes), zoals gedefinieerd op <a href="#codelist-iso639-2">iso
+              639-2</a>. De code voor Nederlands is dut. Over het algemeen is
+            dut de default waarde.</p>
           <table>
             <colgroup> <col style="width: 25%"> <col style="width: 75%"> </colgroup>
             <tbody>
@@ -2383,8 +2383,8 @@ http://schemas.opengis.net/csw/2.0.2/profiles/apiso/1.0.0/apiso.xsd</a></td>
           <p style="text-align:left"><em>hierarchyLevel</em><span style="float:right">[<a
                 data-cite="ISO19139">ISO 19139:2007</a>]</span></p>
           <p>Het element geeft aan waarop de metadata betrekking heeft, de
-            dataset of dataset serie. Voor de waarden geldt de <a href="#codelijst-b525">codelijst
-              B.5.25 MD_ScopeCode</a> uit ISO19115. </p>
+            dataset of dataset serie. Voor de waarden geldt de <a href="#codelist-scopecode">codelijst
+              MD_ScopeCode</a> uit ISO19115. </p>
           <table>
             <colgroup> <col style="width: 25%"> <col style="width: 75%"> </colgroup>
             <tbody>
@@ -2490,7 +2490,7 @@ http://schemas.opengis.net/csw/2.0.2/profiles/apiso/1.0.0/apiso.xsd</a></td>
                 data-cite="ISO19139">ISO 19139:2007</a>]</span></p>
           <p>Dit element bevat de rol van de organisatie verantwoordelijk voor
             de metadata. INSPIRE vereist pointOfContact. Voor de rol van de
-            organisatie wordt <a href="#codelijst-b55">Codelijst B.5.5
+            organisatie wordt <a href="#codelist-rolecode">Codelijst
               CI_RoleCode</a> gehanteerd.</p>
           <table>
             <colgroup> <col style="width: 25%"> <col style="width: 75%"> </colgroup>
@@ -2822,1314 +2822,1313 @@ verantwoordelijke organisatie rol: pointOfContact
       <p>Voor de leesbaarheid zijn in de onderstaande codelijsten de kolomtitel
         Name uit ISO 19115, die als waarde gebruikt wordt, vervangen door het
         kopje waarde. </p>
-      <section id="codelijsten-iso19115-en-inspire">
-        <h3>De codelijsten uit&nbsp; ISO 19115 en INSPIRE</h3>
-        <section id="codelijst-b52">
-          <h4>Codelijst B.5.2 CI_DateTypeCode</h4>
-          <table>
-            <colgroup> <col style="width: 25%;"> <col style="width: 25%;"> <col
-                style="width: 50%;"> </colgroup>
-            <tbody>
-              <tr>
-                <th>NL vertaling</th>
-                <th>Waarde</th>
-                <th>Beschrijving</th>
-              </tr>
-              <tr>
-                <td>Creatie</td>
-                <td>creation</td>
-                <td>Datum waarop de dataset of dataset serie is gecreëerd.</td>
-              </tr>
-              <tr>
-                <td>Publicatie</td>
-                <td>publication</td>
-                <td>Publicatie datum waarop de dataset of dataset serie is
-                  gepubliceerd. </td>
-              </tr>
-              <tr>
-                <td>Revisie</td>
-                <td>revision</td>
-                <td>Datum waarop de dataset of dataset serie is gecontroleerd,
-                  verbeterd of is gewijzigd. </td>
-              </tr>
-            </tbody>
-          </table>
-        </section>
-        <section id="codelijst-b53">
-          <h4>Codelijst B.5.3 CI_OnLineFunctionCode</h4>
-          <table>
-            <colgroup> <col style="width: 25%;"> <col style="width: 25%;"> <col
-                style="width: 50%;"> </colgroup>
-            <tbody>
-              <tr>
-                <th>NL vertaling</th>
-                <th>Waarde</th>
-                <th>Beschrijving</th>
-              </tr>
-              <tr>
-                <td>Download</td>
-                <td>download</td>
-                <td>Online instructies voor het overbrengen van gegevens van een
-                  opslagapparaat of systeem naar een ander </td>
-              </tr>
-              <tr>
-                <td>Informatie</td>
-                <td>information</td>
-                <td>Online informatie over de bron</td>
-              </tr>
-              <tr>
-                <td>Offline toegang</td>
-                <td>offlineAccess</td>
-                <td>Online instructies voor het verkrijgen van de bron van de
-                  provider</td>
-              </tr>
-              <tr>
-                <td>Bestellen</td>
-                <td>order</td>
-                <td>Online bestelproces voor het verkrijgen van de bron</td>
-              </tr>
-              <tr>
-                <td>Zoeken</td>
-                <td>search</td>
-                <td>Online zoekinterface voor het zoeken naar informatie over de
-                  bron</td>
-              </tr>
-            </tbody>
-          </table>
-        </section>
-        <section id="codelijst-b55">
-          <h4>Codelijst B.5.5 CI_RoleCode</h4>
-          <table>
-            <colgroup> <col style="width: 25%;"> <col style="width: 25%;"> <col
-                style="width: 50%;"> </colgroup>
-            <tbody>
-              <tr>
-                <th>NL vertaling</th>
-                <th>Waarde</th>
-                <th>Beschrijving</th>
-              </tr>
-              <tr>
-                <td>Verstrekker</td>
-                <td>resourceProvider</td>
-                <td>Organisatie die de data verstrekt.</td>
-              </tr>
-              <tr>
-                <td>Beheerder</td>
-                <td>custodian</td>
-                <td>voor het beheer van de data.</td>
-              </tr>
-              <tr>
-                <td>Eigenaar</td>
-                <td>owner</td>
-                <td>Partij die eigenaar is van de data.</td>
-              </tr>
-              <tr>
-                <td>Gebruiker</td>
-                <td>user</td>
-                <td>Partij die de data gebruikt.</td>
-              </tr>
-              <tr>
-                <td>Distributeur</td>
-                <td>distributor</td>
-                <td>Partij die de data verstrekt.</td>
-              </tr>
-              <tr>
-                <td>Maker</td>
-                <td>originator</td>
-                <td>Partij die de data heeft gecreëerd</td>
-              </tr>
-              <tr>
-                <td>Contactpunt</td>
-                <td>pointOfContact</td>
-                <td>van kennis of verstrekking van de data.</td>
-              </tr>
-              <tr>
-                <td>Inwinner</td>
-                <td>principalInvestigator</td>
-                <td>uitvoering van onderzoek.</td>
-              </tr>
-              <tr>
-                <td>Bewerker</td>
-                <td>processor</td>
-                <td>Partij die de data heeft bewerkt, zodanig dat de data is
-                  gewijzigd. </td>
-              </tr>
-              <tr>
-                <td>Uitgever</td>
-                <td>publisher</td>
-                <td>Partij die de data publiceert.</td>
-              </tr>
-              <tr>
-                <td>Auteur</td>
-                <td>author</td>
-                <td>Partij die auteur is van de data.</td>
-              </tr>
-            </tbody>
-          </table>
-        </section>
-        <section id="codelijst-b57">
-          <h4>Codelijst B.5.7 DS_AssociationTypeCode</h4>
-          <table>
-            <colgroup> <col style="width: 25%;"> <col style="width: 25%;"> <col
-                style="width: 50%;"> </colgroup>
-            <tbody>
-              <tr>
-                <th>NL vertaling</th>
-                <th>Waarde</th>
-                <th>Beschrijving</th>
-              </tr>
-              <tr>
-                <td>Kruisverwijzing</td>
-                <td>crossReference</td>
-                <td>Verwijzing van één dataset naar een andere dataset</td>
-              </tr>
-            </tbody>
-          </table>
-        </section>
-        <section id="codelijst-b510">
-          <h4>Codelijst B.5.10 MD_CharacterSetCode</h4>
-          <table>
-            <colgroup> <col style="width: 25%;"> <col style="width: 25%;"> <col
-                style="width: 50%;"> </colgroup>
-            <tbody>
-              <tr>
-                <th>NL vertaling</th>
-                <th>Waarde</th>
-                <th>Beschrijving</th>
-              </tr>
-              <tr>
-                <td>Ucs2</td>
-                <td>ucs2</td>
-                <td>16-bit fixed size Universal Character Set, based on ISO/IEC
-                  10646. </td>
-              </tr>
-              <tr>
-                <td>Ucs4</td>
-                <td>ucs4</td>
-                <td>32-bit fixed size Universal Character Set, based on ISO/IEC
-                  10646. </td>
-              </tr>
-              <tr>
-                <td>Utf7</td>
-                <td>utf7</td>
-                <td>7-bit variable size UCS Transfer Format, based on ISO/IEC
-                  10646. </td>
-              </tr>
-              <tr>
-                <td>Utf8</td>
-                <td>utf8</td>
-                <td>8-bit variable size UCS Transfer Format, based on ISO/IEC
-                  10646. </td>
-              </tr>
-              <tr>
-                <td>Utf16</td>
-                <td>utf16</td>
-                <td>16-bit variable size UCS Transfer Format, based on ISO/IEC
-                  10646. </td>
-              </tr>
-              <tr>
-                <td>8859part1</td>
-                <td>8859part1</td>
-                <td>ISO/IEC 8859-1, Information technology 8-bit single-byte
-                  coded graphic character sets Part 1: Latin alphabet No. 1. </td>
-              </tr>
-              <tr>
-                <td>8859part2</td>
-                <td>8859part2</td>
-                <td>ISO/IEC 8859-2, Information technology 8-bit single-byte
-                  coded graphic character sets Part 2: Latin alphabet No. 2. </td>
-              </tr>
-              <tr>
-                <td>8859part3</td>
-                <td>8859part3</td>
-                <td>ISO/IEC 8859-3, Information technology 8-bit single-byte
-                  coded graphic character sets Part 3: Latin alphabet No. 3. </td>
-              </tr>
-              <tr>
-                <td>8859part4</td>
-                <td>8859part4</td>
-                <td>ISO/IEC 8859-4, Information technology 8-bit single-byte
-                  coded graphic character sets Part 4: Latin alphabet No. 4. </td>
-              </tr>
-              <tr>
-                <td>8859part5</td>
-                <td>8859part5</td>
-                <td>ISO/IEC 8859-5, Information technology 8-bit single-byte
-                  coded graphic character sets Part 5: Latin/Cyrillic alphabet.
-                </td>
-              </tr>
-              <tr>
-                <td>8859part6</td>
-                <td>8859part6</td>
-                <td>ISO/IEC 8859-6, Information technology 8-bit single-byte
-                  coded graphic character sets Part 6: Latin/Arabic alphabet. </td>
-              </tr>
-              <tr>
-                <td>8859part7</td>
-                <td>8859part7</td>
-                <td>ISO/IEC 8859-7, Information technology 8-bit single-byte
-                  coded graphic character sets Part 7: Latin/Greek alphabet. </td>
-              </tr>
-              <tr>
-                <td>8859part8</td>
-                <td>8859part8</td>
-                <td>ISO/IEC 8859-8, Information technology 8-bit single-byte
-                  coded graphic character sets Part 8: Latin/Hebrew alphabet. </td>
-              </tr>
-              <tr>
-                <td>8859part9</td>
-                <td>8859part9</td>
-                <td>ISO/IEC 8859-9, Information technology 8-bit single-byte
-                  coded graphic character sets Part 9: Latin alphabet No. 5. </td>
-              </tr>
-              <tr>
-                <td>8859part10</td>
-                <td>8859part10</td>
-                <td>ISO/IEC 8859-10, Information technology 8-bit single-byte
-                  coded graphic character sets Part 10: Latin alphabet No. 6. </td>
-              </tr>
-              <tr>
-                <td>8859part11</td>
-                <td>8859part11</td>
-                <td>ISO/IEC 8859-11, Information technology 8-bit single-byte
-                  coded graphic character sets Part 11: Latin/Thai alphabet. </td>
-              </tr>
-              <tr>
-                <td>(gereserveerd voor toekomstig gebruik)</td>
-                <td>(reserved for future use)</td>
-                <td>a future ISO/IEC 8-bit single-byte coded graphic character
-                  set (e.g. possibly 8859-12). </td>
-              </tr>
-              <tr>
-                <td>8859part13</td>
-                <td>8859part13</td>
-                <td>ISO/IEC 8859-13, Information technology 8-bit single-byte
-                  coded graphic character sets Part 13: Latin alphabet No. 7. </td>
-              </tr>
-              <tr>
-                <td>8859part14</td>
-                <td>8859part14</td>
-                <td>ISO/IEC 8859-14, Information technology 8-bit single-byte
-                  coded graphic character sets Part 14: Latin alphabet No. 8
-                  (Celtic). </td>
-              </tr>
-              <tr>
-                <td>8859part15</td>
-                <td>8859part15</td>
-                <td>ISO/IEC 8859-15, Information technology 8-bit single-byte
-                  coded graphic character sets Part 15: Latin alphabet No. 9. </td>
-              </tr>
-              <tr>
-                <td>8859part16</td>
-                <td>8859part16</td>
-                <td>ISO/IEC 8859-16, Information technology 8-bit single-byte
-                  coded graphic character sets Part 16: Latin alphabet No. 10. </td>
-              </tr>
-              <tr>
-                <td>Jis</td>
-                <td>jis</td>
-                <td>Japanese code set used for electronic transmission.</td>
-              </tr>
-              <tr>
-                <td>ShiftJIS</td>
-                <td>shiftJIS</td>
-                <td>Japanese code set used on MS-DOS based machines.</td>
-              </tr>
-              <tr>
-                <td>EucJP</td>
-                <td>eucJP</td>
-                <td>Japanese code set used on UNIX based machines.</td>
-              </tr>
-              <tr>
-                <td>UsAscii</td>
-                <td>usAscii</td>
-                <td>United states ASCII code set (ISO 646 US).</td>
-              </tr>
-              <tr>
-                <td>Ebcdic</td>
-                <td>ebcdic</td>
-                <td>Ibm mainframe code set.</td>
-              </tr>
-              <tr>
-                <td>EucKR</td>
-                <td>eucKR</td>
-                <td>Korean code set.</td>
-              </tr>
-              <tr>
-                <td>Big5</td>
-                <td>big5</td>
-                <td>Traditional Chinese code set used in Taiwan, Hong Kong of
-                  China and other areas. </td>
-              </tr>
-              <tr>
-                <td>GB2312</td>
-                <td>GB2312</td>
-                <td>Simplified Chinese code set.</td>
-              </tr>
-            </tbody>
-          </table>
-        </section>
-        <section id="codelijst-b511">
-          <h4>Codelijst B.5.11 MD_ClassificationCode</h4>
-          <table>
-            <colgroup> <col style="width: 25%;"> <col style="width: 25%;"> <col
-                style="width: 50%;"> </colgroup>
-            <tbody>
-              <tr>
-                <th>NL vertaling</th>
-                <th>Waarde</th>
-                <th>Beschrijving</th>
-              </tr>
-              <tr>
-                <td>Vrij toegankelijk</td>
-                <td>unclassified</td>
-                <td>Beschikbaar voor algemene ontsluiting.</td>
-              </tr>
-              <tr>
-                <td>Niet toegankelijk</td>
-                <td>restricted</td>
-                <td><br>
-                </td>
-              </tr>
-              <tr>
-                <td>Vertrouwelijk</td>
-                <td>confidential</td>
-                <td>informatie.</td>
-              </tr>
-              <tr>
-                <td>Geheim</td>
-                <td>secret</td>
-                <td>behalve een geselecteerde groep personen.</td>
-              </tr>
-              <tr>
-                <td>Zeer geheim</td>
-                <td>topSecret</td>
-                <td>Hoogste geheimhouding verplicht.</td>
-              </tr>
-            </tbody>
-          </table>
-        </section>
-        <section id="codelijst-b518">
-          <h4>Codelijst B.5.18 MD_MaintenanceFrequencyCode</h4>
-          <table>
-            <colgroup> <col style="width: 25%;"> <col style="width: 25%;"> <col
-                style="width: 50%;"> </colgroup>
-            <tbody>
-              <tr>
-                <th>NL vertaling</th>
-                <th>Waarde</th>
-                <th>Beschrijving</th>
-              </tr>
-              <tr>
-                <td>continu</td>
-                <td>continual</td>
-                <td>Data wordt herhaaldelijk en vaak geactualiseerd.</td>
-              </tr>
-              <tr>
-                <td>Dagelijks</td>
-                <td>daily</td>
-                <td>Data wordt elke dag geactualiseerd.</td>
-              </tr>
-              <tr>
-                <td>Wekelijks</td>
-                <td>weekly</td>
-                <td>Data wordt wekelijks geactualiseerd.</td>
-              </tr>
-              <tr>
-                <td>2-wekelijks</td>
-                <td>fortnightly</td>
-                <td>Data wordt 2-wekelijks geactualiseerd.</td>
-              </tr>
-              <tr>
-                <td>Maandelijks</td>
-                <td>monthly</td>
-                <td>Data wordt maandelijks geactualiseerd.</td>
-              </tr>
-              <tr>
-                <td>1 x per kwartaal</td>
-                <td>quarterly</td>
-                <td>Data wordt elke kwartaal geactualiseerd.</td>
-              </tr>
-              <tr>
-                <td>1 x per half jaar</td>
-                <td>biannually</td>
-                <td>Data wordt half jaarlijks geactualiseerd.</td>
-              </tr>
-              <tr>
-                <td>Jaarlijks</td>
-                <td>annually</td>
-                <td>Data wordt jaarlijks geactualiseerd.</td>
-              </tr>
-              <tr>
-                <td><i>2-jaarlijks</i></td>
-                <td><i>2annually</i></td>
-                <td><i>Data wordt één keer per 2 jaar geactualiseerd.</i></td>
-              </tr>
-              <tr>
-                <td><i>3-jaarlijks</i></td>
-                <td><i>3annually</i></td>
-                <td><i>Data wordt één keer per 3 jaar geactualiseerd.</i></td>
-              </tr>
-              <tr>
-                <td><i>4-jaarlijks</i></td>
-                <td><i>4annually</i></td>
-                <td><i>Data wordt één keer per 4 jaar geactualiseerd.</i></td>
-              </tr>
-              <tr>
-                <td><i>5-jaarlijks</i></td>
-                <td><i>5annually</i></td>
-                <td><i>Data wordt één keer per 5 jaar geactualiseerd.</i></td>
-              </tr>
-              <tr>
-                <td><i>6-jaarlijks</i></td>
-                <td><i>6annually</i></td>
-                <td><i>Data wordt één keer per 6 jaar geactualiseerd.</i></td>
-              </tr>
-              <tr>
-                <td><i>7-jaarlijks</i></td>
-                <td><i>7annually</i></td>
-                <td><i>Data wordt één keer per 7 jaar geactualiseerd.</i></td>
-              </tr>
-              <tr>
-                <td><i>8-jaarlijks</i></td>
-                <td><i>8annually</i></td>
-                <td><i>Data wordt één keer per 8 jaar geactualiseerd.</i></td>
-              </tr>
-              <tr>
-                <td><i>9-jaarlijks</i></td>
-                <td><i>9annually</i></td>
-                <td><i>Data wordt één keer per 9 jaar geactualiseerd.</i></td>
-              </tr>
-              <tr>
-                <td><i>10-jaarlijks</i></td>
-                <td><i>10annually</i></td>
-                <td><i>Data wordt niet binnen 10 jaar geactualiseerd.</i></td>
-              </tr>
-              <tr>
-                <td><i>Meer dan 10-jaarlijks</i></td>
-                <td><i>moreThan10annually</i></td>
-                <td><i>Data wordt één keer per meer dan 10 jaar geactualiseerd.</i></td>
-              </tr>
-              <tr>
-                <td>Indien nodig</td>
-                <td>asNeeded</td>
-                <td>Data wordt geactualiseerd indien nodig.</td>
-              </tr>
-              <tr>
-                <td>Onregelmatig</td>
-                <td>irregular</td>
-                <td>Data wordt geactualiseerd in intervallen die niet even lang
-                  duren. </td>
-              </tr>
-              <tr>
-                <td>Niet gepland</td>
-                <td>notPlanned</td>
-                <td>Er zijn geen plannen om de data te actualiseren.</td>
-              </tr>
-              <tr>
-                <td>Onbekend</td>
-                <td>unknown</td>
-                <td>Herzieningsfrequentie is niet bekend.</td>
-              </tr>
-            </tbody>
-          </table>
-        </section>
-        <section id="codelijst-b520">
-          <h4>Codelijst B.5.20 MD_MediumNameCode</h4>
-          <table>
-            <colgroup> <col style="width: 25%;"> <col style="width: 25%;"> <col
-                style="width: 50%;"> </colgroup>
-            <tbody>
-              <tr>
-                <th>NL vertaling</th>
-                <th>Waarde</th>
-                <th>Beschrijving</th>
-              </tr>
-              <tr>
-                <td>cdRom</td>
-                <td>cdRom</td>
-                <td>Read only optical disk</td>
-              </tr>
-              <tr>
-                <td>dvd</td>
-                <td>dvd</td>
-                <td>Digital versatile disk</td>
-              </tr>
-              <tr>
-                <td>dvdRom</td>
-                <td>dvdRom</td>
-                <td>Digital versatile disk, read only</td>
-              </tr>
-              <tr>
-                <td>3halfInchFloppy</td>
-                <td>3halfInchFloppy</td>
-                <td>3,5 inch magnetic disk</td>
-              </tr>
-              <tr>
-                <td>5quarterInchFloppy</td>
-                <td>5quarterInchFloppy</td>
-                <td>5,25 inch magnetic disk</td>
-              </tr>
-              <tr>
-                <td>7trackTape</td>
-                <td>7trackTape</td>
-                <td>7 track magnetic tape</td>
-              </tr>
-              <tr>
-                <td>9trackTape</td>
-                <td>9trackTape</td>
-                <td>9 track magnetic tape</td>
-              </tr>
-              <tr>
-                <td>3480Cartridge</td>
-                <td>3480Cartridge</td>
-                <td>3480 cartridge tape drive</td>
-              </tr>
-              <tr>
-                <td>3490Cartridge</td>
-                <td>3490Cartridge</td>
-                <td>3490 cartridge tape drive</td>
-              </tr>
-              <tr>
-                <td>3580Cartridge</td>
-                <td>3580Cartridge</td>
-                <td>3580 cartridge tape drive</td>
-              </tr>
-              <tr>
-                <td>4mmCartridgeTape</td>
-                <td>4mmCartridgeTape</td>
-                <td>4 millimetre magnetic tape</td>
-              </tr>
-              <tr>
-                <td>8mmCartridgeTape</td>
-                <td>8mmCartridgeTape</td>
-                <td>8 millimetre magnetic tape</td>
-              </tr>
-              <tr>
-                <td>1quarterInchCartridgeTape</td>
-                <td>1quarterInchCartridgeTape</td>
-                <td>0,25 inch magnetic tape</td>
-              </tr>
-              <tr>
-                <td>digitalLinearTape</td>
-                <td>digitalLinearTape</td>
-                <td>Half inch cartridge streaming tape drive</td>
-              </tr>
-              <tr>
-                <td>onLine</td>
-                <td>onLine</td>
-                <td>Direct computer linkage</td>
-              </tr>
-              <tr>
-                <td>satellite</td>
-                <td>satellite</td>
-                <td>Linkage through a atellite communication system</td>
-              </tr>
-              <tr>
-                <td>telephoneLink</td>
-                <td>telephoneLink</td>
-                <td>Communication trough a telephone network</td>
-              </tr>
-              <tr>
-                <td>hardcopy</td>
-                <td>hardcopy</td>
-                <td>Pamphlet or leaflet giving descriptive information</td>
-              </tr>
-            </tbody>
-          </table>
-        </section>
-        <section id="codelijst-b523">
-          <h4>Codelijst B.5.23 MD_ProgressCode</h4>
-          <table>
-            <colgroup> <col style="width: 25%;"> <col style="width: 25%;"> <col
-                style="width: 50%;"> </colgroup>
-            <tbody>
-              <tr>
-                <th>NL vertaling</th>
-                <th>Waarde</th>
-                <th>Beschrijving</th>
-              </tr>
-              <tr>
-                <td>Compleet</td>
-                <td>completed</td>
-                <td>Productie van de data is compleet / afgerond.</td>
-              </tr>
-              <tr>
-                <td>Historisch archief</td>
-                <td>historicalArchive</td>
-                <td>De data is opgeslagen in een offline opslagmedium.</td>
-              </tr>
-              <tr>
-                <td>Niet relevant</td>
-                <td>obsolete</td>
-                <td>Data is niet langer relevant.</td>
-              </tr>
-              <tr>
-                <td>Continu geactualiseerd</td>
-                <td>onGoing</td>
-                <td>Data wordt continu geactualiseerd.</td>
-              </tr>
-              <tr>
-                <td>Gepland</td>
-                <td>planned</td>
-                <td>Datum is al bekend wanneer de data gecreëerd of
-                  geactualiseerd moet zijn. </td>
-              </tr>
-              <tr>
-                <td>Actualisatie vereist</td>
-                <td>required</td>
-                <td>Data moet nog gegenereerd of geactualiseerd worden.</td>
-              </tr>
-              <tr>
-                <td>In ontwikkeling</td>
-                <td>underDevelopment</td>
-                <td>Data wordt momenteel gecreëerd.</td>
-              </tr>
-            </tbody>
-          </table>
-        </section>
-        <section id="codelijst-b524">
-          <h4>Codelijst B.5.24 MD_RestrictionCode</h4>
-          <table>
-            <colgroup> <col style="width: 25%;"> <col style="width: 25%;"> <col
-                style="width: 50%;"> </colgroup>
-            <tbody>
-              <tr>
-                <th>NL vertaling</th>
-                <th>Waarde</th>
-                <th>Beschrijving</th>
-              </tr>
-              <tr>
-                <td>Copyright</td>
-                <td>copyright</td>
-                <td>Exclusief recht voor publicatie, productie, of verkoop van
-                  rechten op een literair, theater, muzikaal of artistiek werk,
-                  of op het gebruik van een commerciële druk of label, toegekend
-                  bij wet voor een specifieke periode of tijd aan een auteur,
-                  componist, artiest of distributeur. </td>
-              </tr>
-              <tr>
-                <td>Patent</td>
-                <td>patent</td>
-                <td>Overheid heeft een exclusief recht toegekend om een
-                  uitvinding te maken, verkopen, gebruiken of in licentie uit te
-                  geven. </td>
-              </tr>
-              <tr>
-                <td>Patent in wording</td>
-                <td>patentPending</td>
-                <td>Geproduceerde of verkochte informatie wachtend op een
-                  patent. </td>
-              </tr>
-              <tr>
-                <td>Merknaam</td>
-                <td>trademark</td>
-                <td>Een naam, symbool of ander object om een product te
-                  identificeren, wat officieel geregistreerd is en gebruik
-                  wettelijk voorbehouden is aan de eigenaar of fabrikant. </td>
-              </tr>
-              <tr>
-                <td>Licentie</td>
-                <td>license</td>
-                <td>Formele toestemming of iets te doen.</td>
-              </tr>
-              <tr>
-                <td>Intellectueel eigendom</td>
-                <td>intellectualPropertyRights</td>
-                <td>Recht op een financieel voordeel van en controle hebben op
-                  de distributie een niet tastbaar eigendom wat het resultaat is
-                  van creativiteit. </td>
-              </tr>
-              <tr>
-                <td>Niet toegankelijk</td>
-                <td>restricted</td>
-                <td>Verbod op distributie en gebruik.</td>
-              </tr>
-              <tr>
-                <td>Anders</td>
-                <td>otherRestrictions</td>
-                <td>Restrictie niet opgenomen in lijst.</td>
-              </tr>
-            </tbody>
-          </table>
-        </section>
-        <section id="codelijst-b525">
-          <h4>Codelijst B.5.25 MD_ScopeCode</h4>
-          <table>
-            <colgroup> <col style="width: 25%;"> <col style="width: 25%;"> <col
-                style="width: 50%;"> </colgroup>
-            <tbody>
-              <tr>
-                <th>NL vertaling</th>
-                <th>Waarde</th>
-                <th>Beschrijving</th>
-              </tr>
-              <tr>
-                <td>Dataset</td>
-                <td>dataset</td>
-                <td>Informatie heeft betrekking op de dataset.</td>
-              </tr>
-              <tr>
-                <td>Series</td>
-                <td>series</td>
-                <td>Informatie heeft betrekking op de serie.</td>
-              </tr>
-            </tbody>
-          </table>
-        </section>
-        <section id="codelijst-b526">
-          <h4>Codelijst B.5.26 MD_SpatialRepresentationTypeCode</h4>
-          <table>
-            <colgroup> <col style="width: 25%;"> <col style="width: 25%;"> <col
-                style="width: 50%;"> </colgroup>
-            <tbody>
-              <tr>
-                <th>NL vertaling</th>
-                <th>Waarde</th>
-                <th>Beschrijving</th>
-              </tr>
-              <tr>
-                <td>Vector</td>
-                <td>vector</td>
-                <td>Vector data wordt gebruikt om geografische data te
-                  representeren. </td>
-              </tr>
-              <tr>
-                <td>Grid</td>
-                <td>grid</td>
-                <td>Grid data wordt gebruikt om geografische data te
-                  representeren. </td>
-              </tr>
-              <tr>
-                <td>Tekst tabel</td>
-                <td>textTable</td>
-                <td>Tekstuele of tabel data wordt gebruikt om geografische data
-                  te representeren. </td>
-              </tr>
-              <tr>
-                <td>Tin</td>
-                <td>tin</td>
-                <td>Triangulated irregular network.</td>
-              </tr>
-            </tbody>
-          </table>
-        </section>
-        <section id="codelijst-b527">
-          <h4>Codelijst B.5.27 MD_TopicCategoryCode</h4>
-          <table>
-            <colgroup> <col style="width: 25%;"> <col style="width: 25%;"> <col
-                style="width: 50%;"> </colgroup>
-            <tbody>
-              <tr>
-                <th>NL vertaling</th>
-                <th>Waarde</th>
-                <th>Beschrijving</th>
-              </tr>
-              <tr>
-                <td>Landbouw en veeteelt</td>
-                <td>farming</td>
-                <td>Houden van dieren en/of verbouwen van planten. Voorbeeld:
-                  landbouw, irrigatie, ziekten die gewassen aantasten. </td>
-              </tr>
-              <tr>
-                <td>Biota</td>
-                <td>biota</td>
-                <td>Voorbeeld: habitats, ecologie.</td>
-              </tr>
-              <tr>
-                <td>Grenzen</td>
-                <td>boundaries</td>
-                <td>Wettelijke gebiedsbeschrijvingen. Flora en fauna in
-                  natuurlijke omgeving. Voorbeeld: politieke en administratieve
-                  grenzen. </td>
-              </tr>
-              <tr>
-                <td>Klimatologie, meteorologie atmosfeer</td>
-                <td>climatologyMeteorologyAtmosphere</td>
-                <td>Processen en fenomenen in de atmosfeer. Voorbeeld:
-                  wolkbedekking, weer, klimaat verandering. </td>
-              </tr>
-              <tr>
-                <td>Economie</td>
-                <td>economy</td>
-                <td>Economische activiteiten, condities en werkgelegenheid.
-                  Voorbeeld: Werkgelegenheid, industrie, toerisme, olie- en
-                  gasvelden, bosbouw, visserij. </td>
-              </tr>
-              <tr>
-                <td>Hoogte</td>
-                <td>elevation</td>
-                <td>Hoogte boven of onder zeeniveau Voorbeeld: hoogtekaart, DEM,
-                  hellingen. </td>
-              </tr>
-              <tr>
-                <td>Natuur en milieu</td>
-                <td>environment</td>
-                <td>Natuurlijke bronnen, bescherming en beheer. Voorbeeld:
-                  milieuverontreiniging, landschap, natuurlijke reserves,
-                  vuilopslag. </td>
-              </tr>
-              <tr>
-                <td>Geo wetenschappelijke data</td>
-                <td>geoscientificInformation</td>
-                <td>Data die behoort tot een aardwetenschap. Voorbeeld:
-                  geologie, mineralen, structuur van de aarde,
-                  zwaartekrachtskaart, grondstoffen, erosie. </td>
-              </tr>
-              <tr>
-                <td>Gezondheid</td>
-                <td>health</td>
-                <td>Gezondheid(szorg), menselijke ecologie en veiligheid.
-                  Voorbeeld: ziekten, hygiëne, gezondheidszorg. </td>
-              </tr>
-              <tr>
-                <td>Referentie materiaal aardbedekking</td>
-                <td>imageryBaseMapsEarthCover</td>
-                <td>Basiskaarten. Voorbeeld: landbedekking, topografische
-                  kaarten, foto's, ongeclassificeerde kaarten. </td>
-              </tr>
-              <tr>
-                <td>Militair</td>
-                <td>intelligenceMilitary</td>
-                <td>Militaire basissen, structuren en activiteiten. Voorbeeld:
-                  barakken, oefenterreinen, militaire transporten. </td>
-              </tr>
-              <tr>
-                <td>Binnenwater</td>
-                <td>inlandWaters</td>
-                <td>Binnenwater, drainagesystemen en hun karakteristieken.
-                  Voorbeeld: Rivieren en gletsjers, dijken, stromen,
-                  waterzuiveringsinstallaties, overloopgebieden. </td>
-              </tr>
-              <tr>
-                <td>Locatie</td>
-                <td>location</td>
-                <td>Positionele informatie en services. Voorbeeld: adressen,
-                  geodetisch netwerk, postcode gebieden, plaatsnamen,
-                  controlepunten. </td>
-              </tr>
-              <tr>
-                <td>Oceanen</td>
-                <td>oceans</td>
-                <td>Gebieden met zoutwaterlichamen (niet binnenlands).
-                  Voorbeeld: Getijden, tsunami's, kustinformatie, riffen. </td>
-              </tr>
-              <tr>
-                <td>Planning kadaster</td>
-                <td>planningCadastre</td>
-                <td>Informatie die gebruikt wordt voor nodige planmatige
-                  activiteiten. Voorbeeld: Landgebruik, kadastrale informatie. </td>
-              </tr>
-              <tr>
-                <td>Maatschappij</td>
-                <td>society</td>
-                <td>Kenmerken van maatschappij en culturen. Voorbeeld:
-                  antropologie, archeologie, criminaliteit, gewoonten,
-                  nederzettingen, onderwijs. </td>
-              </tr>
-              <tr>
-                <td>(civiele) structuren</td>
-                <td>structure</td>
-                <td>Civiele werken (door mensen gemaakte structuren). Voorbeeld:
-                  Gebouwen, musea, kerken, winkels, torens. </td>
-              </tr>
-              <tr>
-                <td>Transport</td>
-                <td>transportation</td>
-                <td>Middelen voor vervoer van goederen en/of personen.
-                  Voorbeeld: Wegen, Vliegvelden, tunnels, spoorwegen. </td>
-              </tr>
-              <tr>
-                <td>Nutsbedrijven communicatie</td>
-                <td>utilitiesCommunication</td>
-                <td>Energie, waterleidingen en riolering en communicatie
-                  infrastructuren en services. Voorbeeld: elektriciteit- en
-                  gasdistributie, waterzuivering en verstrekking,
-                  telecommunicatie, radio. </td>
-              </tr>
-            </tbody>
-          </table>
-        </section>
-        <section id="Codelijst-INSPIRE-OnLineDescriptionCode">
-          <h4>Codelijst INSPIRE OnLineDescriptionCode</h4>
-          <table>
-            <colgroup> <col style="width: 50%;"> <col style="width: 50%;"> </colgroup>
-            <tbody>
-              <tr>
-                <th>Waarde</th>
-                <th>Beschrijving</th>
-              </tr>
-              <tr>
-                <td>http://inspire.ec.europa.eu/metadata-codelist/OnLineDescriptionCode/accessPoint</td>
-                <td>accessPoint</td>
-              </tr>
-              <tr>
-                <td>http://inspire.ec.europa.eu/metadata-codelist/OnLineDescriptionCode/endPoint</td>
-                <td>endPoint</td>
-              </tr>
-            </tbody>
-          </table>
-        </section>
-        <section id="Codelijst-INSPIRE-ConditionsApplyingToAccessAndUse">
-          <h4>Codelijst INSPIRE ConditionsApplyingToAccessAndUse</h4>
-          <table>
-            <colgroup> <col style="width: 50%;"> <col style="width: 50%;"> </colgroup>
-            <tbody>
-              <tr>
-                <th>Waarde</th>
-                <th>Definitie</th>
-              </tr>
-              <tr>
-                <td>
-                  http://inspire.ec.europa.eu/metadata-codelist/ConditionsApplyingToAccessAndUse/conditionsUnknown
-                  </td>
-                <td>Condities zijn onbekend</td>
-              </tr>
-              <tr>
-                <td>
-                  http://inspire.ec.europa.eu/metadata-codelist/ConditionsApplyingToAccessAndUse/noConditionsApply
-                  </td>
-                <td>Er zijn geen condities voor toegang en gebruik</td>
-              </tr>
-            </tbody>
-          </table>
-        </section>
-        <section id="Codelijst-INSPIRE-LimitationsOnPublicAccess">
-          <h4>Codelijst INSPIRE LimitationsOnPublicAccess</h4>
-          <table>
-            <colgroup> <col style="width: 50%;"> <col style="width: 50%;"> </colgroup>
-            <tbody>
-              <tr>
-                <th>Waarde</th>
-                <th>Definitie</th>
-              </tr>
-              <tr>
-                <td>http://inspire.ec.europa.eu/metadata-codelist/LimitationsOnPublicAccess/noLimitations</td>
-                <td>Geen beperkingen voor publieke toegang</td>
-              </tr>
-              <tr>
-                <td>
-                  http://inspire.ec.europa.eu/metadata-codelist/LimitationsOnPublicAccess/INSPIRE_Directive_Article13_1a
-                  </td>
-                <td>Publieke toegang beperkt ivm afbreuk van het vertrouwelijke
-                  karakter van handelingen van overheidsinstanties, indien deze
-                  vertrouwelijkheid bij wet is voorzien </td>
-              </tr>
-              <tr>
-                <td>
-                  http://inspire.ec.europa.eu/metadata-codelist/LimitationsOnPublicAccess/INSPIRE_Directive_Article13_1b
-                  </td>
-                <td>Publieke toegang beperkt ivm afbreuk van internationale
-                  betrekkingen, openbare veiligheid of nationale defensie </td>
-              </tr>
-              <tr>
-                <td>
-                  http://inspire.ec.europa.eu/metadata-codelist/LimitationsOnPublicAccess/INSPIRE_Directive_Article13_1c
-                  </td>
-                <td>Publieke toegang beperkt ivm afbreuk van de rechtsgang, de
-                  mogelijkheid voor een persoon een eerlijk proces te krijgen of
-                  de mogelijkheid voor een overheid om een onderzoek van
-                  strafrechtelijke of disciplinaire aard in te stellen </td>
-              </tr>
-              <tr>
-                <td>
-                  http://inspire.ec.europa.eu/metadata-codelist/LimitationsOnPublicAccess/INSPIRE_Directive_Article13_1d
-                  </td>
-                <td>Publieke toegang beperkt ivm afbreuk van de
-                  vertrouwelijkheid van commerciële of industriële informatie,
-                  wanneer deze vertrouwelijkheid in de nationale of de
-                  communautaire wetgeving geboden wordt om een gewettigd
-                  economisch belang te beschermen, met inbegrip van het algemeen
-                  belang dat met statistische en fiscale geheimhouding is
-                  gediend </td>
-              </tr>
-              <tr>
-                <td>
-                  http://inspire.ec.europa.eu/metadata-codelist/LimitationsOnPublicAccess/INSPIRE_Directive_Article13_1e
-                  </td>
-                <td>Publieke toegang beperkt ivm afbreuk van
-                  intellectuele-eigendomsrechten</td>
-              </tr>
-              <tr>
-                <td>
-                  http://inspire.ec.europa.eu/metadata-codelist/LimitationsOnPublicAccess/INSPIRE_Directive_Article13_1f
-                  </td>
-                <td>Publieke toegang beperkt ivm afbreuk van de
-                  vertrouwelijkheid van persoonsgegevens en/of -dossiers met
-                  betrekking tot een natuurlijk persoon wanneer die persoon niet
-                  heeft ingestemd met bekendmaking van de informatie aan het
-                  publiek, wanneer in deze vertrouwelijkheid is voorzien in het
-                  nationaal of het Gemeenschapsrecht </td>
-              </tr>
-              <tr>
-                <td>
-                  http://inspire.ec.europa.eu/metadata-codelist/LimitationsOnPublicAccess/INSPIRE_Directive_Article13_1g
-                  </td>
-                <td>Publieke toegang beperkt ivm afbreuk van de belangen of de
-                  bescherming van diegene die de verzochte informatie op
-                  vrijwillige basis heeft verstrekt zonder daartoe wettelijk
-                  verplicht te zijn of te kunnen worden, tenzij die persoon
-                  ermee heeft ingestemd dat de betrokken informatie wordt
-                  vrijgegeven </td>
-              </tr>
-              <tr>
-                <td>
-                  http://inspire.ec.europa.eu/metadata-codelist/LimitationsOnPublicAccess/INSPIRE_Directive_Article13_1h
-                  </td>
-                <td>Publieke toegang beperkt ivm afbreuk van de bescherming van
-                  het milieu waarop die informatie betrekking heeft, zoals de
-                  habitat van zeldzame soorten </td>
-              </tr>
-            </tbody>
-          </table>
-        </section>
+      <section id="codelist-datetypecode">
+        <h4>Codelijst CI_DateTypeCode</h4>
+        <table>
+          <colgroup> <col style="width: 25%;"> <col style="width: 25%;"> <col
+              style="width: 50%;"> </colgroup>
+          <tbody>
+            <tr>
+              <th>NL vertaling</th>
+              <th>Waarde</th>
+              <th>Beschrijving</th>
+            </tr>
+            <tr>
+              <td>Creatie</td>
+              <td>creation</td>
+              <td>Datum waarop de dataset of dataset serie is gecreëerd.</td>
+            </tr>
+            <tr>
+              <td>Publicatie</td>
+              <td>publication</td>
+              <td>Publicatie datum waarop de dataset of dataset serie is
+                gepubliceerd. </td>
+            </tr>
+            <tr>
+              <td>Revisie</td>
+              <td>revision</td>
+              <td>Datum waarop de dataset of dataset serie is gecontroleerd,
+                verbeterd of is gewijzigd. </td>
+            </tr>
+          </tbody>
+        </table>
       </section>
-      <section id="veranderde-codelijsten">
-        <h3>Toegevoegde codelijsten</h3>
-        <section id="codelijst-iso-639-2">
-          <h4>Codelijst ISO 639-2</h4>
-          <p>Gebruik hiervoor alleen de drie letter codes van ISO639-2/B, zoals
-            gedefinieerd op <a href="http://www.loc.gov/standards/iso639-2/">http://www.loc.gov/standards/iso639-2/</a>.
-            Decodes voor de 23 officiële EU talen zijn:</p>
-          <table>
-            <colgroup> <col style="width: 50%;"> <col style="width: 50%;"> </colgroup>
-            <tbody>
-              <tr>
-                <td>Bulgarian - <b>bul</b></td>
-                <td>Italian - <b>ita</b></td>
-              </tr>
-              <tr>
-                <td>Czech - <b>cze</b></td>
-                <td>Latvian - <b>lav</b></td>
-              </tr>
-              <tr>
-                <td>Danish - <b>dan</b></td>
-                <td>Lithuanian - <b>lit</b></td>
-              </tr>
-              <tr>
-                <td>Dutch - <b>dut</b></td>
-                <td>Maltese - <b>mlt</b></td>
-              </tr>
-              <tr>
-                <td>English - <b>eng</b></td>
-                <td>Polish - <b>pol</b></td>
-              </tr>
-              <tr>
-                <td>Estonian - <b>est</b></td>
-                <td>Portugese - <b>por</b></td>
-              </tr>
-              <tr>
-                <td>Finnish - <b>fin</b></td>
-                <td>Romanian - <b>rum</b></td>
-              </tr>
-              <tr>
-                <td>French - <b>fre</b></td>
-                <td>Slovak - <b>slo</b></td>
-              </tr>
-              <tr>
-                <td>German - <b>ger</b></td>
-                <td>Slovenian - <b>slv</b></td>
-              </tr>
-              <tr>
-                <td>Greek - <b>gre</b></td>
-                <td>Spanish - <b>spa</b></td>
-              </tr>
-              <tr>
-                <td>Hungarian - <b>hun</b></td>
-                <td>Swedish - <b>swe</b></td>
-              </tr>
-              <tr>
-                <td>Irish - <b>gle</b></td>
-                <td>&nbsp;</td>
-              </tr>
-            </tbody>
-          </table>
-        </section>
-        <section id="codelijst-protocol">
-          <h4>Codelijst Protocol</h4>
-          <p></p>
-          <table>
-            <colgroup> <col style="width: 50%;"> <col style="width: 50%;"> </colgroup>
-            <tbody>
-              <tr>
-                <th>Waarde</th>
-                <th>Beschrijving</th>
-              </tr>
-              <tr>
-                <td>OGC:CSW</td>
-                <td>Web Catalog service</td>
-              </tr>
-              <tr>
-                <td>OGC:WMS</td>
-                <td>Web Map service</td>
-              </tr>
-              <tr>
-                <td>OGC:WMTS</td>
-                <td>Web Mapping Tiling Service</td>
-              </tr>
-              <tr>
-                <td>OGC:WFS</td>
-                <td>Web Feature Service</td>
-              </tr>
-              <tr>
-                <td>OGC:WCS</td>
-                <td>Web Coverage Service</td>
-              </tr>
-              <tr>
-                <td>OGC:SOS</td>
-                <td>Sensor Observation Service</td>
-              </tr>
-              <tr>
-                <td>INSPIRE Atom</td>
-                <td>Atom Service Feed</td>
-              </tr>
-              <tr>
-                <td>OGC:WCTS</td>
-                <td>Web Coordinate Transformation Service</td>
-              </tr>
-              <tr>
-                <td>OGC:WPS</td>
-                <td>Web Processing Service</td>
-              </tr>
-              <tr>
-                <td>UKST</td>
-                <td>Unknown Service Type</td>
-              </tr>
-              <tr>
-                <td>OGC:WFS-G</td>
-                <td>Gazzetteer service</td>
-              </tr>
-              <tr>
-                <td>OGC:SPS</td>
-                <td>Sensor Planning Service</td>
-              </tr>
-              <tr>
-                <td>OGC:SAS</td>
-                <td>Sensor Alert Service</td>
-              </tr>
-              <tr>
-                <td>OGC:WNS</td>
-                <td>Web Notification Service</td>
-              </tr>
-              <tr>
-                <td>OGC:ODS</td>
-                <td>OpenLS Directory Service</td>
-              </tr>
-              <tr>
-                <td>OGC:OGS</td>
-                <td>OpenLS Gateway Service</td>
-              </tr>
-              <tr>
-                <td>OGC:OUS</td>
-                <td>OpenLS Utility Service</td>
-              </tr>
-              <tr>
-                <td>OGC:OPS</td>
-                <td>OpenLS Presentation Service</td>
-              </tr>
-              <tr>
-                <td>OGC:ORS</td>
-                <td>OpenLS Route Service</td>
-              </tr>
-              <tr>
-                <td>OGC:SensorThings</td>
-                <td>SensorThings API</td>
-              </tr>
-              <tr>
-                <td>W3C:SPARQL</td>
-                <td>SPARQL Query Language for RDF</td>
-              </tr>
-              <tr>
-                <td>OASIS:OData</td>
-                <td>Open data protocol</td>
-              </tr>
-              <tr>
-                <td>OAS</td>
-                <td>Open API Specification</td>
-              </tr>
-              <tr>
-                <td>landingpage</td>
-                <td>Een webpagina die toegang geeft tot de dataset of overige
-                  informatie bevat </td>
-              </tr>
-              <tr>
-                <td>application</td>
-                <td>Een (web) applicatie die rechtstreeks toegang geeft tot de
-                  dataset </td>
-              </tr>
-              <tr>
-                <td>dataset</td>
-                <td>URI naar locale dataset locatie</td>
-              </tr>
-            </tbody>
-          </table>
-        </section>
-        <section id="codelijst-media-types">
-          <h4>Codelijst media types</h4>
-          <p>De codelijst is een subset van geregistreerde media types bij
-            www.iana.org </p>
-          <table>
-            <colgroup> <col style="width: 50%;"> <col style="width: 50%;"> </colgroup>
-            <tbody>
-              <tr>
-                <th>Waarde</th>
-                <th>Beschrijving</th>
-              </tr>
-              <tr>
-                <td>
-                  https://www.iana.org/assignments/media-types/application/atom+xml</td>
-                <td> atom+xml</td>
-              </tr>
-              <tr>
-                <td>
-                  https://www.iana.org/assignments/media-types/application/geo+json</td>
-                <td> geo+json</td>
-              </tr>
-              <tr>
-                <td>
-                  https://www.iana.org/assignments/media-types/application/gml+xml</td>
-                <td> gml+xml</td>
-              </tr>
-              <tr>
-                <td>
-                  https://www.iana.org/assignments/media-types/application/json</td>
-                <td> json</td>
-              </tr>
-              <tr>
-                <td>
-                  https://www.iana.org/assignments/media-types/application/ld+json</td>
-                <td> ld+json</td>
-              </tr>
-              <tr>
-                <td>
-                  https://www.iana.org/assignments/media-types/application/rdf+xml</td>
-                <td> rdf+xml</td>
-              </tr>
-              <tr>
-                <td>
-                  https://www.iana.org/assignments/media-types/application/xml</td>
-                <td> xml</td>
-              </tr>
-              <tr>
-                <td>
-                  https://www.iana.org/assignments/media-types/application/zip</td>
-                <td> zip</td>
-              </tr>
-              <tr>
-                <td> https://www.iana.org/assignments/media-types/image/png</td>
-                <td> png</td>
-              </tr>
-              <tr>
-                <td> https://www.iana.org/assignments/media-types/image/gif</td>
-                <td> gif</td>
-              </tr>
-              <tr>
-                <td> https://www.iana.org/assignments/media-types/text/csv</td>
-                <td> csv</td>
-              </tr>
-            </tbody>
-          </table>
-        </section>
+      <section id="codelist-onlinefunctioncode">
+        <h4>Codelijst CI_OnLineFunctionCode</h4>
+        <table>
+          <colgroup> <col style="width: 25%;"> <col style="width: 25%;"> <col
+              style="width: 50%;"> </colgroup>
+          <tbody>
+            <tr>
+              <th>NL vertaling</th>
+              <th>Waarde</th>
+              <th>Beschrijving</th>
+            </tr>
+            <tr>
+              <td>Download</td>
+              <td>download</td>
+              <td>Online instructies voor het overbrengen van gegevens van een
+                opslagapparaat of systeem naar een ander </td>
+            </tr>
+            <tr>
+              <td>Informatie</td>
+              <td>information</td>
+              <td>Online informatie over de bron</td>
+            </tr>
+            <tr>
+              <td>Offline toegang</td>
+              <td>offlineAccess</td>
+              <td>Online instructies voor het verkrijgen van de bron van de
+                provider</td>
+            </tr>
+            <tr>
+              <td>Bestellen</td>
+              <td>order</td>
+              <td>Online bestelproces voor het verkrijgen van de bron</td>
+            </tr>
+            <tr>
+              <td>Zoeken</td>
+              <td>search</td>
+              <td>Online zoekinterface voor het zoeken naar informatie over de
+                bron</td>
+            </tr>
+          </tbody>
+        </table>
+      </section>
+      <section id="codelist-rolecode">
+        <h4>Codelijst CI_RoleCode</h4>
+        <table>
+          <colgroup> <col style="width: 25%;"> <col style="width: 25%;"> <col
+              style="width: 50%;"> </colgroup>
+          <tbody>
+            <tr>
+              <th>NL vertaling</th>
+              <th>Waarde</th>
+              <th>Beschrijving</th>
+            </tr>
+            <tr>
+              <td>Verstrekker</td>
+              <td>resourceProvider</td>
+              <td>Organisatie die de data verstrekt.</td>
+            </tr>
+            <tr>
+              <td>Beheerder</td>
+              <td>custodian</td>
+              <td>voor het beheer van de data.</td>
+            </tr>
+            <tr>
+              <td>Eigenaar</td>
+              <td>owner</td>
+              <td>Partij die eigenaar is van de data.</td>
+            </tr>
+            <tr>
+              <td>Gebruiker</td>
+              <td>user</td>
+              <td>Partij die de data gebruikt.</td>
+            </tr>
+            <tr>
+              <td>Distributeur</td>
+              <td>distributor</td>
+              <td>Partij die de data verstrekt.</td>
+            </tr>
+            <tr>
+              <td>Maker</td>
+              <td>originator</td>
+              <td>Partij die de data heeft gecreëerd</td>
+            </tr>
+            <tr>
+              <td>Contactpunt</td>
+              <td>pointOfContact</td>
+              <td>van kennis of verstrekking van de data.</td>
+            </tr>
+            <tr>
+              <td>Inwinner</td>
+              <td>principalInvestigator</td>
+              <td>uitvoering van onderzoek.</td>
+            </tr>
+            <tr>
+              <td>Bewerker</td>
+              <td>processor</td>
+              <td>Partij die de data heeft bewerkt, zodanig dat de data is
+                gewijzigd. </td>
+            </tr>
+            <tr>
+              <td>Uitgever</td>
+              <td>publisher</td>
+              <td>Partij die de data publiceert.</td>
+            </tr>
+            <tr>
+              <td>Auteur</td>
+              <td>author</td>
+              <td>Partij die auteur is van de data.</td>
+            </tr>
+          </tbody>
+        </table>
+      </section>
+      <section id="codelist-associationtypecode">
+        <h4>Codelijst DS_AssociationTypeCode</h4>
+        <table>
+          <colgroup> <col style="width: 25%;"> <col style="width: 25%;"> <col
+              style="width: 50%;"> </colgroup>
+          <tbody>
+            <tr>
+              <th>NL vertaling</th>
+              <th>Waarde</th>
+              <th>Beschrijving</th>
+            </tr>
+            <tr>
+              <td>Kruisverwijzing</td>
+              <td>crossReference</td>
+              <td>Verwijzing van één dataset naar een andere dataset</td>
+            </tr>
+          </tbody>
+        </table>
+      </section>
+      <section id="codelist-charactersetcode">
+        <h4>Codelijst MD_CharacterSetCode</h4>
+        <table>
+          <colgroup> <col style="width: 25%;"> <col style="width: 25%;"> <col
+              style="width: 50%;"> </colgroup>
+          <tbody>
+            <tr>
+              <th>NL vertaling</th>
+              <th>Waarde</th>
+              <th>Beschrijving</th>
+            </tr>
+            <tr>
+              <td>Ucs2</td>
+              <td>ucs2</td>
+              <td>16-bit fixed size Universal Character Set, based on ISO/IEC
+                10646. </td>
+            </tr>
+            <tr>
+              <td>Ucs4</td>
+              <td>ucs4</td>
+              <td>32-bit fixed size Universal Character Set, based on ISO/IEC
+                10646. </td>
+            </tr>
+            <tr>
+              <td>Utf7</td>
+              <td>utf7</td>
+              <td>7-bit variable size UCS Transfer Format, based on ISO/IEC
+                10646. </td>
+            </tr>
+            <tr>
+              <td>Utf8</td>
+              <td>utf8</td>
+              <td>8-bit variable size UCS Transfer Format, based on ISO/IEC
+                10646. </td>
+            </tr>
+            <tr>
+              <td>Utf16</td>
+              <td>utf16</td>
+              <td>16-bit variable size UCS Transfer Format, based on ISO/IEC
+                10646. </td>
+            </tr>
+            <tr>
+              <td>8859part1</td>
+              <td>8859part1</td>
+              <td>ISO/IEC 8859-1, Information technology 8-bit single-byte coded
+                graphic character sets Part 1: Latin alphabet No. 1. </td>
+            </tr>
+            <tr>
+              <td>8859part2</td>
+              <td>8859part2</td>
+              <td>ISO/IEC 8859-2, Information technology 8-bit single-byte coded
+                graphic character sets Part 2: Latin alphabet No. 2. </td>
+            </tr>
+            <tr>
+              <td>8859part3</td>
+              <td>8859part3</td>
+              <td>ISO/IEC 8859-3, Information technology 8-bit single-byte coded
+                graphic character sets Part 3: Latin alphabet No. 3. </td>
+            </tr>
+            <tr>
+              <td>8859part4</td>
+              <td>8859part4</td>
+              <td>ISO/IEC 8859-4, Information technology 8-bit single-byte coded
+                graphic character sets Part 4: Latin alphabet No. 4. </td>
+            </tr>
+            <tr>
+              <td>8859part5</td>
+              <td>8859part5</td>
+              <td>ISO/IEC 8859-5, Information technology 8-bit single-byte coded
+                graphic character sets Part 5: Latin/Cyrillic alphabet. </td>
+            </tr>
+            <tr>
+              <td>8859part6</td>
+              <td>8859part6</td>
+              <td>ISO/IEC 8859-6, Information technology 8-bit single-byte coded
+                graphic character sets Part 6: Latin/Arabic alphabet. </td>
+            </tr>
+            <tr>
+              <td>8859part7</td>
+              <td>8859part7</td>
+              <td>ISO/IEC 8859-7, Information technology 8-bit single-byte coded
+                graphic character sets Part 7: Latin/Greek alphabet. </td>
+            </tr>
+            <tr>
+              <td>8859part8</td>
+              <td>8859part8</td>
+              <td>ISO/IEC 8859-8, Information technology 8-bit single-byte coded
+                graphic character sets Part 8: Latin/Hebrew alphabet. </td>
+            </tr>
+            <tr>
+              <td>8859part9</td>
+              <td>8859part9</td>
+              <td>ISO/IEC 8859-9, Information technology 8-bit single-byte coded
+                graphic character sets Part 9: Latin alphabet No. 5. </td>
+            </tr>
+            <tr>
+              <td>8859part10</td>
+              <td>8859part10</td>
+              <td>ISO/IEC 8859-10, Information technology 8-bit single-byte
+                coded graphic character sets Part 10: Latin alphabet No. 6. </td>
+            </tr>
+            <tr>
+              <td>8859part11</td>
+              <td>8859part11</td>
+              <td>ISO/IEC 8859-11, Information technology 8-bit single-byte
+                coded graphic character sets Part 11: Latin/Thai alphabet. </td>
+            </tr>
+            <tr>
+              <td>(gereserveerd voor toekomstig gebruik)</td>
+              <td>(reserved for future use)</td>
+              <td>a future ISO/IEC 8-bit single-byte coded graphic character set
+                (e.g. possibly 8859-12). </td>
+            </tr>
+            <tr>
+              <td>8859part13</td>
+              <td>8859part13</td>
+              <td>ISO/IEC 8859-13, Information technology 8-bit single-byte
+                coded graphic character sets Part 13: Latin alphabet No. 7. </td>
+            </tr>
+            <tr>
+              <td>8859part14</td>
+              <td>8859part14</td>
+              <td>ISO/IEC 8859-14, Information technology 8-bit single-byte
+                coded graphic character sets Part 14: Latin alphabet No. 8
+                (Celtic). </td>
+            </tr>
+            <tr>
+              <td>8859part15</td>
+              <td>8859part15</td>
+              <td>ISO/IEC 8859-15, Information technology 8-bit single-byte
+                coded graphic character sets Part 15: Latin alphabet No. 9. </td>
+            </tr>
+            <tr>
+              <td>8859part16</td>
+              <td>8859part16</td>
+              <td>ISO/IEC 8859-16, Information technology 8-bit single-byte
+                coded graphic character sets Part 16: Latin alphabet No. 10. </td>
+            </tr>
+            <tr>
+              <td>Jis</td>
+              <td>jis</td>
+              <td>Japanese code set used for electronic transmission.</td>
+            </tr>
+            <tr>
+              <td>ShiftJIS</td>
+              <td>shiftJIS</td>
+              <td>Japanese code set used on MS-DOS based machines.</td>
+            </tr>
+            <tr>
+              <td>EucJP</td>
+              <td>eucJP</td>
+              <td>Japanese code set used on UNIX based machines.</td>
+            </tr>
+            <tr>
+              <td>UsAscii</td>
+              <td>usAscii</td>
+              <td>United states ASCII code set (ISO 646 US).</td>
+            </tr>
+            <tr>
+              <td>Ebcdic</td>
+              <td>ebcdic</td>
+              <td>Ibm mainframe code set.</td>
+            </tr>
+            <tr>
+              <td>EucKR</td>
+              <td>eucKR</td>
+              <td>Korean code set.</td>
+            </tr>
+            <tr>
+              <td>Big5</td>
+              <td>big5</td>
+              <td>Traditional Chinese code set used in Taiwan, Hong Kong of
+                China and other areas. </td>
+            </tr>
+            <tr>
+              <td>GB2312</td>
+              <td>GB2312</td>
+              <td>Simplified Chinese code set.</td>
+            </tr>
+          </tbody>
+        </table>
+      </section>
+      <section id="codelist-classificationcode">
+        <h4>Codelijst MD_ClassificationCode</h4>
+        <table>
+          <colgroup> <col style="width: 25%;"> <col style="width: 25%;"> <col
+              style="width: 50%;"> </colgroup>
+          <tbody>
+            <tr>
+              <th>NL vertaling</th>
+              <th>Waarde</th>
+              <th>Beschrijving</th>
+            </tr>
+            <tr>
+              <td>Vrij toegankelijk</td>
+              <td>unclassified</td>
+              <td>Beschikbaar voor algemene ontsluiting.</td>
+            </tr>
+            <tr>
+              <td>Niet toegankelijk</td>
+              <td>restricted</td>
+              <td><br>
+              </td>
+            </tr>
+            <tr>
+              <td>Vertrouwelijk</td>
+              <td>confidential</td>
+              <td>informatie.</td>
+            </tr>
+            <tr>
+              <td>Geheim</td>
+              <td>secret</td>
+              <td>behalve een geselecteerde groep personen.</td>
+            </tr>
+            <tr>
+              <td>Zeer geheim</td>
+              <td>topSecret</td>
+              <td>Hoogste geheimhouding verplicht.</td>
+            </tr>
+          </tbody>
+        </table>
+      </section>
+      <section id="codelist-maintenancefrequencycode">
+        <h4>Codelijst MD_MaintenanceFrequencyCode</h4>
+        <table>
+          <colgroup> <col style="width: 25%;"> <col style="width: 25%;"> <col
+              style="width: 50%;"> </colgroup>
+          <tbody>
+            <tr>
+              <th>NL vertaling</th>
+              <th>Waarde</th>
+              <th>Beschrijving</th>
+            </tr>
+            <tr>
+              <td>continu</td>
+              <td>continual</td>
+              <td>Data wordt herhaaldelijk en vaak geactualiseerd.</td>
+            </tr>
+            <tr>
+              <td>Dagelijks</td>
+              <td>daily</td>
+              <td>Data wordt elke dag geactualiseerd.</td>
+            </tr>
+            <tr>
+              <td>Wekelijks</td>
+              <td>weekly</td>
+              <td>Data wordt wekelijks geactualiseerd.</td>
+            </tr>
+            <tr>
+              <td>2-wekelijks</td>
+              <td>fortnightly</td>
+              <td>Data wordt 2-wekelijks geactualiseerd.</td>
+            </tr>
+            <tr>
+              <td>Maandelijks</td>
+              <td>monthly</td>
+              <td>Data wordt maandelijks geactualiseerd.</td>
+            </tr>
+            <tr>
+              <td>1 x per kwartaal</td>
+              <td>quarterly</td>
+              <td>Data wordt elke kwartaal geactualiseerd.</td>
+            </tr>
+            <tr>
+              <td>1 x per half jaar</td>
+              <td>biannually</td>
+              <td>Data wordt half jaarlijks geactualiseerd.</td>
+            </tr>
+            <tr>
+              <td>Jaarlijks</td>
+              <td>annually</td>
+              <td>Data wordt jaarlijks geactualiseerd.</td>
+            </tr>
+            <tr>
+              <td>2-jaarlijks</td>
+              <td>2annually</td>
+              <td>Data wordt één keer per 2 jaar geactualiseerd.</td>
+            </tr>
+            <tr>
+              <td>3-jaarlijks</td>
+              <td>3annually</td>
+              <td>Data wordt één keer per 3 jaar geactualiseerd.</td>
+            </tr>
+            <tr>
+              <td>4-jaarlijks</td>
+              <td>4annually</td>
+              <td>Data wordt één keer per 4 jaar geactualiseerd.</td>
+            </tr>
+            <tr>
+              <td>5-jaarlijks</td>
+              <td>5annually</td>
+              <td>Data wordt één keer per 5 jaar geactualiseerd.</td>
+            </tr>
+            <tr>
+              <td>6-jaarlijks</td>
+              <td>6annually</td>
+              <td>Data wordt één keer per 6 jaar geactualiseerd.</td>
+            </tr>
+            <tr>
+              <td>7-jaarlijks</td>
+              <td>7annually</td>
+              <td>Data wordt één keer per 7 jaar geactualiseerd.</td>
+            </tr>
+            <tr>
+              <td>8-jaarlijks</td>
+              <td>8annually</td>
+              <td>Data wordt één keer per 8 jaar geactualiseerd.</td>
+            </tr>
+            <tr>
+              <td>9-jaarlijks</td>
+              <td>9annually</td>
+              <td>Data wordt één keer per 9 jaar geactualiseerd.</td>
+            </tr>
+            <tr>
+              <td>10-jaarlijks</td>
+              <td>10annually</td>
+              <td>Data wordt niet binnen 10 jaar geactualiseerd.</td>
+            </tr>
+            <tr>
+              <td><i>Meer dan 10-jaarlijks</i></td>
+              <td><i>moreThan10annually</i></td>
+              <td><i>Data wordt één keer per meer dan 10 jaar geactualiseerd.</i></td>
+            </tr>
+            <tr>
+              <td>Indien nodig</td>
+              <td>asNeeded</td>
+              <td>Data wordt geactualiseerd indien nodig.</td>
+            </tr>
+            <tr>
+              <td>Onregelmatig</td>
+              <td>irregular</td>
+              <td>Data wordt geactualiseerd in intervallen die niet even lang
+                duren. </td>
+            </tr>
+            <tr>
+              <td>Niet gepland</td>
+              <td>notPlanned</td>
+              <td>Er zijn geen plannen om de data te actualiseren.</td>
+            </tr>
+            <tr>
+              <td>Onbekend</td>
+              <td>unknown</td>
+              <td>Herzieningsfrequentie is niet bekend.</td>
+            </tr>
+          </tbody>
+        </table>
+      </section>
+      <section id="codelist-mediumnamecode">
+        <h4>Codelijst MD_MediumNameCode</h4>
+        <table>
+          <colgroup> <col style="width: 25%;"> <col style="width: 25%;"> <col
+              style="width: 50%;"> </colgroup>
+          <tbody>
+            <tr>
+              <th>NL vertaling</th>
+              <th>Waarde</th>
+              <th>Beschrijving</th>
+            </tr>
+            <tr>
+              <td>cdRom</td>
+              <td>cdRom</td>
+              <td>Read only optical disk</td>
+            </tr>
+            <tr>
+              <td>dvd</td>
+              <td>dvd</td>
+              <td>Digital versatile disk</td>
+            </tr>
+            <tr>
+              <td>dvdRom</td>
+              <td>dvdRom</td>
+              <td>Digital versatile disk, read only</td>
+            </tr>
+            <tr>
+              <td>3halfInchFloppy</td>
+              <td>3halfInchFloppy</td>
+              <td>3,5 inch magnetic disk</td>
+            </tr>
+            <tr>
+              <td>5quarterInchFloppy</td>
+              <td>5quarterInchFloppy</td>
+              <td>5,25 inch magnetic disk</td>
+            </tr>
+            <tr>
+              <td>7trackTape</td>
+              <td>7trackTape</td>
+              <td>7 track magnetic tape</td>
+            </tr>
+            <tr>
+              <td>9trackTape</td>
+              <td>9trackTape</td>
+              <td>9 track magnetic tape</td>
+            </tr>
+            <tr>
+              <td>3480Cartridge</td>
+              <td>3480Cartridge</td>
+              <td>3480 cartridge tape drive</td>
+            </tr>
+            <tr>
+              <td>3490Cartridge</td>
+              <td>3490Cartridge</td>
+              <td>3490 cartridge tape drive</td>
+            </tr>
+            <tr>
+              <td>3580Cartridge</td>
+              <td>3580Cartridge</td>
+              <td>3580 cartridge tape drive</td>
+            </tr>
+            <tr>
+              <td>4mmCartridgeTape</td>
+              <td>4mmCartridgeTape</td>
+              <td>4 millimetre magnetic tape</td>
+            </tr>
+            <tr>
+              <td>8mmCartridgeTape</td>
+              <td>8mmCartridgeTape</td>
+              <td>8 millimetre magnetic tape</td>
+            </tr>
+            <tr>
+              <td>1quarterInchCartridgeTape</td>
+              <td>1quarterInchCartridgeTape</td>
+              <td>0,25 inch magnetic tape</td>
+            </tr>
+            <tr>
+              <td>digitalLinearTape</td>
+              <td>digitalLinearTape</td>
+              <td>Half inch cartridge streaming tape drive</td>
+            </tr>
+            <tr>
+              <td>onLine</td>
+              <td>onLine</td>
+              <td>Direct computer linkage</td>
+            </tr>
+            <tr>
+              <td>satellite</td>
+              <td>satellite</td>
+              <td>Linkage through a atellite communication system</td>
+            </tr>
+            <tr>
+              <td>telephoneLink</td>
+              <td>telephoneLink</td>
+              <td>Communication trough a telephone network</td>
+            </tr>
+            <tr>
+              <td>hardcopy</td>
+              <td>hardcopy</td>
+              <td>Pamphlet or leaflet giving descriptive information</td>
+            </tr>
+          </tbody>
+        </table>
+      </section>
+      <section id="codelist-progresscode">
+        <h4>Codelijst MD_ProgressCode</h4>
+        <table>
+          <colgroup> <col style="width: 25%;"> <col style="width: 25%;"> <col
+              style="width: 50%;"> </colgroup>
+          <tbody>
+            <tr>
+              <th>NL vertaling</th>
+              <th>Waarde</th>
+              <th>Beschrijving</th>
+            </tr>
+            <tr>
+              <td>Compleet</td>
+              <td>completed</td>
+              <td>Productie van de data is compleet / afgerond.</td>
+            </tr>
+            <tr>
+              <td>Historisch archief</td>
+              <td>historicalArchive</td>
+              <td>De data is opgeslagen in een offline opslagmedium.</td>
+            </tr>
+            <tr>
+              <td>Niet relevant</td>
+              <td>obsolete</td>
+              <td>Data is niet langer relevant.</td>
+            </tr>
+            <tr>
+              <td>Continu geactualiseerd</td>
+              <td>onGoing</td>
+              <td>Data wordt continu geactualiseerd.</td>
+            </tr>
+            <tr>
+              <td>Gepland</td>
+              <td>planned</td>
+              <td>Datum is al bekend wanneer de data gecreëerd of geactualiseerd
+                moet zijn. </td>
+            </tr>
+            <tr>
+              <td>Actualisatie vereist</td>
+              <td>required</td>
+              <td>Data moet nog gegenereerd of geactualiseerd worden.</td>
+            </tr>
+            <tr>
+              <td>In ontwikkeling</td>
+              <td>underDevelopment</td>
+              <td>Data wordt momenteel gecreëerd.</td>
+            </tr>
+          </tbody>
+        </table>
+      </section>
+      <section id="codelist-restrictioncode">
+        <h4>Codelijst MD_RestrictionCode</h4>
+        <table>
+          <colgroup> <col style="width: 25%;"> <col style="width: 25%;"> <col
+              style="width: 50%;"> </colgroup>
+          <tbody>
+            <tr>
+              <th>NL vertaling</th>
+              <th>Waarde</th>
+              <th>Beschrijving</th>
+            </tr>
+            <tr>
+              <td>Copyright</td>
+              <td>copyright</td>
+              <td>Exclusief recht voor publicatie, productie, of verkoop van
+                rechten op een literair, theater, muzikaal of artistiek werk, of
+                op het gebruik van een commerciële druk of label, toegekend bij
+                wet voor een specifieke periode of tijd aan een auteur,
+                componist, artiest of distributeur. </td>
+            </tr>
+            <tr>
+              <td>Patent</td>
+              <td>patent</td>
+              <td>Overheid heeft een exclusief recht toegekend om een uitvinding
+                te maken, verkopen, gebruiken of in licentie uit te geven. </td>
+            </tr>
+            <tr>
+              <td>Patent in wording</td>
+              <td>patentPending</td>
+              <td>Geproduceerde of verkochte informatie wachtend op een patent.
+              </td>
+            </tr>
+            <tr>
+              <td>Merknaam</td>
+              <td>trademark</td>
+              <td>Een naam, symbool of ander object om een product te
+                identificeren, wat officieel geregistreerd is en gebruik
+                wettelijk voorbehouden is aan de eigenaar of fabrikant. </td>
+            </tr>
+            <tr>
+              <td>Licentie</td>
+              <td>license</td>
+              <td>Formele toestemming of iets te doen.</td>
+            </tr>
+            <tr>
+              <td>Intellectueel eigendom</td>
+              <td>intellectualPropertyRights</td>
+              <td>Recht op een financieel voordeel van en controle hebben op de
+                distributie een niet tastbaar eigendom wat het resultaat is van
+                creativiteit. </td>
+            </tr>
+            <tr>
+              <td>Niet toegankelijk</td>
+              <td>restricted</td>
+              <td>Verbod op distributie en gebruik.</td>
+            </tr>
+            <tr>
+              <td>Anders</td>
+              <td>otherRestrictions</td>
+              <td>Restrictie niet opgenomen in lijst.</td>
+            </tr>
+          </tbody>
+        </table>
+      </section>
+      <section id="codelist-scopecode">
+        <h4>Codelijst MD_ScopeCode</h4>
+        <table>
+          <colgroup> <col style="width: 25%;"> <col style="width: 25%;"> <col
+              style="width: 50%;"> </colgroup>
+          <tbody>
+            <tr>
+              <th>NL vertaling</th>
+              <th>Waarde</th>
+              <th>Beschrijving</th>
+            </tr>
+            <tr>
+              <td>Dataset</td>
+              <td>dataset</td>
+              <td>Informatie heeft betrekking op de dataset.</td>
+            </tr>
+            <tr>
+              <td>Series</td>
+              <td>series</td>
+              <td>Informatie heeft betrekking op de serie.</td>
+            </tr>
+          </tbody>
+        </table>
+      </section>
+      <section id="codelist-spatialrepresentationtypecode">
+        <h4>Codelijst MD_SpatialRepresentationTypeCode</h4>
+        <table>
+          <colgroup> <col style="width: 25%;"> <col style="width: 25%;"> <col
+              style="width: 50%;"> </colgroup>
+          <tbody>
+            <tr>
+              <th>NL vertaling</th>
+              <th>Waarde</th>
+              <th>Beschrijving</th>
+            </tr>
+            <tr>
+              <td>Vector</td>
+              <td>vector</td>
+              <td>Vector data wordt gebruikt om geografische data te
+                representeren. </td>
+            </tr>
+            <tr>
+              <td>Grid</td>
+              <td>grid</td>
+              <td>Grid data wordt gebruikt om geografische data te
+                representeren. </td>
+            </tr>
+            <tr>
+              <td>Tekst tabel</td>
+              <td>textTable</td>
+              <td>Tekstuele of tabel data wordt gebruikt om geografische data te
+                representeren. </td>
+            </tr>
+            <tr>
+              <td>Tin</td>
+              <td>tin</td>
+              <td>Triangulated irregular network.</td>
+            </tr>
+          </tbody>
+        </table>
+      </section>
+      <section id="codelist-topiccategorycode">
+        <h4>Codelijst MD_TopicCategoryCode</h4>
+        <table>
+          <colgroup> <col style="width: 25%;"> <col style="width: 25%;"> <col
+              style="width: 50%;"> </colgroup>
+          <tbody>
+            <tr>
+              <th>NL vertaling</th>
+              <th>Waarde</th>
+              <th>Beschrijving</th>
+            </tr>
+            <tr>
+              <td>Landbouw en veeteelt</td>
+              <td>farming</td>
+              <td>Houden van dieren en/of verbouwen van planten. Voorbeeld:
+                landbouw, irrigatie, ziekten die gewassen aantasten. </td>
+            </tr>
+            <tr>
+              <td>Biota</td>
+              <td>biota</td>
+              <td>Voorbeeld: habitats, ecologie.</td>
+            </tr>
+            <tr>
+              <td>Grenzen</td>
+              <td>boundaries</td>
+              <td>Wettelijke gebiedsbeschrijvingen. Flora en fauna in
+                natuurlijke omgeving. Voorbeeld: politieke en administratieve
+                grenzen. </td>
+            </tr>
+            <tr>
+              <td>Klimatologie, meteorologie atmosfeer</td>
+              <td>climatologyMeteorologyAtmosphere</td>
+              <td>Processen en fenomenen in de atmosfeer. Voorbeeld:
+                wolkbedekking, weer, klimaat verandering. </td>
+            </tr>
+            <tr>
+              <td>Economie</td>
+              <td>economy</td>
+              <td>Economische activiteiten, condities en werkgelegenheid.
+                Voorbeeld: Werkgelegenheid, industrie, toerisme, olie- en
+                gasvelden, bosbouw, visserij. </td>
+            </tr>
+            <tr>
+              <td>Hoogte</td>
+              <td>elevation</td>
+              <td>Hoogte boven of onder zeeniveau Voorbeeld: hoogtekaart, DEM,
+                hellingen. </td>
+            </tr>
+            <tr>
+              <td>Natuur en milieu</td>
+              <td>environment</td>
+              <td>Natuurlijke bronnen, bescherming en beheer. Voorbeeld:
+                milieuverontreiniging, landschap, natuurlijke reserves,
+                vuilopslag. </td>
+            </tr>
+            <tr>
+              <td>Geo wetenschappelijke data</td>
+              <td>geoscientificInformation</td>
+              <td>Data die behoort tot een aardwetenschap. Voorbeeld: geologie,
+                mineralen, structuur van de aarde, zwaartekrachtskaart,
+                grondstoffen, erosie. </td>
+            </tr>
+            <tr>
+              <td>Gezondheid</td>
+              <td>health</td>
+              <td>Gezondheid(szorg), menselijke ecologie en veiligheid.
+                Voorbeeld: ziekten, hygiëne, gezondheidszorg. </td>
+            </tr>
+            <tr>
+              <td>Referentie materiaal aardbedekking</td>
+              <td>imageryBaseMapsEarthCover</td>
+              <td>Basiskaarten. Voorbeeld: landbedekking, topografische kaarten,
+                foto's, ongeclassificeerde kaarten. </td>
+            </tr>
+            <tr>
+              <td>Militair</td>
+              <td>intelligenceMilitary</td>
+              <td>Militaire basissen, structuren en activiteiten. Voorbeeld:
+                barakken, oefenterreinen, militaire transporten. </td>
+            </tr>
+            <tr>
+              <td>Binnenwater</td>
+              <td>inlandWaters</td>
+              <td>Binnenwater, drainagesystemen en hun karakteristieken.
+                Voorbeeld: Rivieren en gletsjers, dijken, stromen,
+                waterzuiveringsinstallaties, overloopgebieden. </td>
+            </tr>
+            <tr>
+              <td>Locatie</td>
+              <td>location</td>
+              <td>Positionele informatie en services. Voorbeeld: adressen,
+                geodetisch netwerk, postcode gebieden, plaatsnamen,
+                controlepunten. </td>
+            </tr>
+            <tr>
+              <td>Oceanen</td>
+              <td>oceans</td>
+              <td>Gebieden met zoutwaterlichamen (niet binnenlands). Voorbeeld:
+                Getijden, tsunami's, kustinformatie, riffen. </td>
+            </tr>
+            <tr>
+              <td>Planning kadaster</td>
+              <td>planningCadastre</td>
+              <td>Informatie die gebruikt wordt voor nodige planmatige
+                activiteiten. Voorbeeld: Landgebruik, kadastrale informatie. </td>
+            </tr>
+            <tr>
+              <td>Maatschappij</td>
+              <td>society</td>
+              <td>Kenmerken van maatschappij en culturen. Voorbeeld:
+                antropologie, archeologie, criminaliteit, gewoonten,
+                nederzettingen, onderwijs. </td>
+            </tr>
+            <tr>
+              <td>(civiele) structuren</td>
+              <td>structure</td>
+              <td>Civiele werken (door mensen gemaakte structuren). Voorbeeld:
+                Gebouwen, musea, kerken, winkels, torens. </td>
+            </tr>
+            <tr>
+              <td>Transport</td>
+              <td>transportation</td>
+              <td>Middelen voor vervoer van goederen en/of personen. Voorbeeld:
+                Wegen, Vliegvelden, tunnels, spoorwegen. </td>
+            </tr>
+            <tr>
+              <td>Nutsbedrijven communicatie</td>
+              <td>utilitiesCommunication</td>
+              <td>Energie, waterleidingen en riolering en communicatie
+                infrastructuren en services. Voorbeeld: elektriciteit- en
+                gasdistributie, waterzuivering en verstrekking,
+                telecommunicatie, radio. </td>
+            </tr>
+          </tbody>
+        </table>
+      </section>
+      <section id="Codelist-INSPIRE-OnLineDescriptionCode">
+        <h4>Codelijst INSPIRE OnLineDescriptionCode</h4>
+        <table>
+          <colgroup> <col style="width: 50%;"> <col style="width: 50%;"> </colgroup>
+          <tbody>
+            <tr>
+              <th>Waarde</th>
+              <th>Beschrijving</th>
+            </tr>
+            <tr>
+              <td>http://inspire.ec.europa.eu/metadata-codelist/OnLineDescriptionCode/accessPoint</td>
+              <td>accessPoint</td>
+            </tr>
+            <tr>
+              <td>http://inspire.ec.europa.eu/metadata-codelist/OnLineDescriptionCode/endPoint</td>
+              <td>endPoint</td>
+            </tr>
+          </tbody>
+        </table>
+      </section>
+      <section id="Codelijst-INSPIRE-ConditionsApplyingToAccessAndUse">
+        <h4>Codelijst INSPIRE ConditionsApplyingToAccessAndUse</h4>
+        <table>
+          <colgroup> <col style="width: 50%;"> <col style="width: 50%;"> </colgroup>
+          <tbody>
+            <tr>
+              <th>Waarde</th>
+              <th>Definitie</th>
+            </tr>
+            <tr>
+              <td>
+                http://inspire.ec.europa.eu/metadata-codelist/ConditionsApplyingToAccessAndUse/conditionsUnknown
+                </td>
+              <td>Condities zijn onbekend</td>
+            </tr>
+            <tr>
+              <td>
+                http://inspire.ec.europa.eu/metadata-codelist/ConditionsApplyingToAccessAndUse/noConditionsApply
+                </td>
+              <td>Er zijn geen condities voor toegang en gebruik</td>
+            </tr>
+          </tbody>
+        </table>
+      </section>
+      <section id="Codelijst-INSPIRE-LimitationsOnPublicAccess">
+        <h4>Codelijst INSPIRE LimitationsOnPublicAccess</h4>
+        <table>
+          <colgroup> <col style="width: 50%;"> <col style="width: 50%;"> </colgroup>
+          <tbody>
+            <tr>
+              <th>Waarde</th>
+              <th>Definitie</th>
+            </tr>
+            <tr>
+              <td>http://inspire.ec.europa.eu/metadata-codelist/LimitationsOnPublicAccess/noLimitations</td>
+              <td>Geen beperkingen voor publieke toegang</td>
+            </tr>
+            <tr>
+              <td>
+                http://inspire.ec.europa.eu/metadata-codelist/LimitationsOnPublicAccess/INSPIRE_Directive_Article13_1a
+                </td>
+              <td>Publieke toegang beperkt ivm afbreuk van het vertrouwelijke
+                karakter van handelingen van overheidsinstanties, indien deze
+                vertrouwelijkheid bij wet is voorzien </td>
+            </tr>
+            <tr>
+              <td>
+                http://inspire.ec.europa.eu/metadata-codelist/LimitationsOnPublicAccess/INSPIRE_Directive_Article13_1b
+                </td>
+              <td>Publieke toegang beperkt ivm afbreuk van internationale
+                betrekkingen, openbare veiligheid of nationale defensie </td>
+            </tr>
+            <tr>
+              <td>
+                http://inspire.ec.europa.eu/metadata-codelist/LimitationsOnPublicAccess/INSPIRE_Directive_Article13_1c
+                </td>
+              <td>Publieke toegang beperkt ivm afbreuk van de rechtsgang, de
+                mogelijkheid voor een persoon een eerlijk proces te krijgen of
+                de mogelijkheid voor een overheid om een onderzoek van
+                strafrechtelijke of disciplinaire aard in te stellen </td>
+            </tr>
+            <tr>
+              <td>
+                http://inspire.ec.europa.eu/metadata-codelist/LimitationsOnPublicAccess/INSPIRE_Directive_Article13_1d
+                </td>
+              <td>Publieke toegang beperkt ivm afbreuk van de vertrouwelijkheid
+                van commerciële of industriële informatie, wanneer deze
+                vertrouwelijkheid in de nationale of de communautaire wetgeving
+                geboden wordt om een gewettigd economisch belang te beschermen,
+                met inbegrip van het algemeen belang dat met statistische en
+                fiscale geheimhouding is gediend </td>
+            </tr>
+            <tr>
+              <td>
+                http://inspire.ec.europa.eu/metadata-codelist/LimitationsOnPublicAccess/INSPIRE_Directive_Article13_1e
+                </td>
+              <td>Publieke toegang beperkt ivm afbreuk van
+                intellectuele-eigendomsrechten</td>
+            </tr>
+            <tr>
+              <td>
+                http://inspire.ec.europa.eu/metadata-codelist/LimitationsOnPublicAccess/INSPIRE_Directive_Article13_1f
+                </td>
+              <td>Publieke toegang beperkt ivm afbreuk van de vertrouwelijkheid
+                van persoonsgegevens en/of -dossiers met betrekking tot een
+                natuurlijk persoon wanneer die persoon niet heeft ingestemd met
+                bekendmaking van de informatie aan het publiek, wanneer in deze
+                vertrouwelijkheid is voorzien in het nationaal of het
+                Gemeenschapsrecht </td>
+            </tr>
+            <tr>
+              <td>
+                http://inspire.ec.europa.eu/metadata-codelist/LimitationsOnPublicAccess/INSPIRE_Directive_Article13_1g
+                </td>
+              <td>Publieke toegang beperkt ivm afbreuk van de belangen of de
+                bescherming van diegene die de verzochte informatie op
+                vrijwillige basis heeft verstrekt zonder daartoe wettelijk
+                verplicht te zijn of te kunnen worden, tenzij die persoon ermee
+                heeft ingestemd dat de betrokken informatie wordt vrijgegeven </td>
+            </tr>
+            <tr>
+              <td>
+                http://inspire.ec.europa.eu/metadata-codelist/LimitationsOnPublicAccess/INSPIRE_Directive_Article13_1h
+                </td>
+              <td>Publieke toegang beperkt ivm afbreuk van de bescherming van
+                het milieu waarop die informatie betrekking heeft, zoals de
+                habitat van zeldzame soorten </td>
+            </tr>
+          </tbody>
+        </table>
+      </section>
+      <section id="codelist-iso639-2">
+        <h4>Codelijst Talen (ISO 639-2)</h4>
+        <p>Gebruik hiervoor alleen de drie letter codes van ISO639-2/B, zoals
+          gedefinieerd op <a href="http://www.loc.gov/standards/iso639-2/">http://www.loc.gov/standards/iso639-2/</a>.
+          Decodes voor de 23 officiële EU talen zijn:</p>
+        <table>
+          <colgroup> <col style="width: 50%;"> <col style="width: 50%;"> </colgroup>
+          <tbody>
+            <tr>
+              <td>Bulgarian - <b>bul</b></td>
+              <td>Italian - <b>ita</b></td>
+            </tr>
+            <tr>
+              <td>Czech - <b>cze</b></td>
+              <td>Latvian - <b>lav</b></td>
+            </tr>
+            <tr>
+              <td>Danish - <b>dan</b></td>
+              <td>Lithuanian - <b>lit</b></td>
+            </tr>
+            <tr>
+              <td>Dutch - <b>dut</b></td>
+              <td>Maltese - <b>mlt</b></td>
+            </tr>
+            <tr>
+              <td>English - <b>eng</b></td>
+              <td>Polish - <b>pol</b></td>
+            </tr>
+            <tr>
+              <td>Estonian - <b>est</b></td>
+              <td>Portugese - <b>por</b></td>
+            </tr>
+            <tr>
+              <td>Finnish - <b>fin</b></td>
+              <td>Romanian - <b>rum</b></td>
+            </tr>
+            <tr>
+              <td>French - <b>fre</b></td>
+              <td>Slovak - <b>slo</b></td>
+            </tr>
+            <tr>
+              <td>German - <b>ger</b></td>
+              <td>Slovenian - <b>slv</b></td>
+            </tr>
+            <tr>
+              <td>Greek - <b>gre</b></td>
+              <td>Spanish - <b>spa</b></td>
+            </tr>
+            <tr>
+              <td>Hungarian - <b>hun</b></td>
+              <td>Swedish - <b>swe</b></td>
+            </tr>
+            <tr>
+              <td>Irish - <b>gle</b></td>
+              <td>&nbsp;</td>
+            </tr>
+          </tbody>
+        </table>
+      </section>
+      <section id="codelist-protocol">
+        <h4>Codelijst Protocol</h4>
+        <p></p>
+        <table>
+          <colgroup> <col style="width: 50%;"> <col style="width: 50%;"> </colgroup>
+          <tbody>
+            <tr>
+              <th>Waarde</th>
+              <th>Beschrijving</th>
+            </tr>
+            <tr>
+              <td>OGC:CSW</td>
+              <td>Web Catalog service</td>
+            </tr>
+            <tr>
+              <td>OGC:WMS</td>
+              <td>Web Map service</td>
+            </tr>
+            <tr>
+              <td>OGC:WMTS</td>
+              <td>Web Mapping Tiling Service</td>
+            </tr>
+            <tr>
+              <td>OGC:WFS</td>
+              <td>Web Feature Service</td>
+            </tr>
+            <tr>
+              <td>OGC:WCS</td>
+              <td>Web Coverage Service</td>
+            </tr>
+            <tr>
+              <td>OGC:SOS</td>
+              <td>Sensor Observation Service</td>
+            </tr>
+            <tr>
+              <td>INSPIRE Atom</td>
+              <td>Atom Service Feed</td>
+            </tr>
+            <tr>
+              <td>OGC:WCTS</td>
+              <td>Web Coordinate Transformation Service</td>
+            </tr>
+            <tr>
+              <td>OGC:WPS</td>
+              <td>Web Processing Service</td>
+            </tr>
+            <tr>
+              <td>UKST</td>
+              <td>Unknown Service Type</td>
+            </tr>
+            <tr>
+              <td>OGC:WFS-G</td>
+              <td>Gazzetteer service</td>
+            </tr>
+            <tr>
+              <td>OGC:SPS</td>
+              <td>Sensor Planning Service</td>
+            </tr>
+            <tr>
+              <td>OGC:SAS</td>
+              <td>Sensor Alert Service</td>
+            </tr>
+            <tr>
+              <td>OGC:WNS</td>
+              <td>Web Notification Service</td>
+            </tr>
+            <tr>
+              <td>OGC:ODS</td>
+              <td>OpenLS Directory Service</td>
+            </tr>
+            <tr>
+              <td>OGC:OGS</td>
+              <td>OpenLS Gateway Service</td>
+            </tr>
+            <tr>
+              <td>OGC:OUS</td>
+              <td>OpenLS Utility Service</td>
+            </tr>
+            <tr>
+              <td>OGC:OPS</td>
+              <td>OpenLS Presentation Service</td>
+            </tr>
+            <tr>
+              <td>OGC:ORS</td>
+              <td>OpenLS Route Service</td>
+            </tr>
+            <tr>
+              <td>OGC:SensorThings</td>
+              <td>SensorThings API</td>
+            </tr>
+            <tr>
+              <td>W3C:SPARQL</td>
+              <td>SPARQL Query Language for RDF</td>
+            </tr>
+            <tr>
+              <td>OASIS:OData</td>
+              <td>Open data protocol</td>
+            </tr>
+            <tr>
+              <td>OAS</td>
+              <td>Open API Specification</td>
+            </tr>
+            <tr>
+              <td>landingpage</td>
+              <td>Een webpagina die toegang geeft tot de dataset of overige
+                informatie bevat </td>
+            </tr>
+            <tr>
+              <td>application</td>
+              <td>Een (web) applicatie die rechtstreeks toegang geeft tot de
+                dataset </td>
+            </tr>
+            <tr>
+              <td>dataset</td>
+              <td>Referentie naar een locale dataset locatie</td>
+            </tr>
+          </tbody>
+        </table>
+      </section>
+      <section id="codelist-mediatypes">
+        <h4>Codelijst media types</h4>
+        <p>De codelijst is een subset van geregistreerde media types bij
+          www.iana.org en INSPIRE</p>
+        <table>
+          <colgroup> <col style="width: 50%;"> <col style="width: 50%;"> </colgroup>
+          <tbody>
+            <tr>
+              <th>Waarde</th>
+              <th>Beschrijving</th>
+            </tr>
+            <tr>
+              <td>
+                https://www.iana.org/assignments/media-types/application/atom+xml</td>
+              <td> ATOM</td>
+            </tr>
+            <tr>
+              <td>http://www.iana.org/assignments/media-types/application/vnd.google-earth.kml+xml</td>
+              <td>KML</td>
+            </tr>
+            <tr>
+              <td>
+                https://www.iana.org/assignments/media-types/application/geo+json</td>
+              <td> GeoJSON</td>
+            </tr>
+            <tr>
+              <td>
+                https://www.iana.org/assignments/media-types/application/gml+xml</td>
+              <td> GML</td>
+            </tr>
+            <tr>
+              <td> https://www.iana.org/assignments/media-types/application/json</td>
+              <td> JSON</td>
+            </tr>
+            <tr>
+              <td>
+                https://www.iana.org/assignments/media-types/application/ld+json</td>
+              <td> JSONLD</td>
+            </tr>
+            <tr>
+              <td>
+                https://www.iana.org/assignments/media-types/application/rdf+xml</td>
+              <td> RDF/XML</td>
+            </tr>
+            <tr>
+              <td> https://www.iana.org/assignments/media-types/application/xml</td>
+              <td> XML</td>
+            </tr>
+            <tr>
+              <td> https://www.iana.org/assignments/media-types/application/zip</td>
+              <td> ZIP</td>
+            </tr>
+            <tr>
+              <td> https://www.iana.org/assignments/media-types/image/png</td>
+              <td> PNG</td>
+            </tr>
+            <tr>
+              <td> https://www.iana.org/assignments/media-types/image/gif</td>
+              <td> GIF</td>
+            </tr>
+            <tr>
+              <td>https://www.iana.org/assignments/media-types/image/jp2</td>
+              <td>JPEG 2000</td>
+            </tr>
+            <tr>
+              <td>https://www.iana.org/assignments/media-types/image/tiff</td>
+              <td>TIFF</td>
+            </tr>
+            <tr>
+              <td> https://www.iana.org/assignments/media-types/text/csv</td>
+              <td> CSV</td>
+            </tr>
+          </tbody>
+        </table>
       </section>
     </section>
     <section class="appendix page-break landscape" id="appendix-b">
@@ -17530,7 +17529,7 @@ verantwoordelijke organisatie rol: pointOfContact
         </tbody>
       </table>
     </section>
-    <section class="appendix" id="appendix-g">
+    <section class="appendix" id="appendix-e">
       <h2>Mapping NL profiel op ISO19115 - TMLO</h2>
       <p>Voor het archiveren van documenten zijn, uit het oogpunt van digitale
         duurzaamheid, richtlijnen ontwikkeld qua metadatering; het
