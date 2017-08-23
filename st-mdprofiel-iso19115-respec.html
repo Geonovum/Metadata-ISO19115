@@ -1015,10 +1015,10 @@ http://schemas.opengis.net/csw/2.0.2/profiles/apiso/1.0.0/apiso.xsd</a></td>
           <p style="text-align:left"><em>identificationInfo[1]/*/citation/*/date/*/dateType</em><span
               style="float:right">[<a data-cite="ISO19139">ISO 19139:2007</a>]</span></p>
           <p>Dit element bevat het type gebeurtenis waar de datum betrekking op
-            heeft. Type gebeurtenis wordt gekozen uit <a href="#codelijst-b52">codelijst
-              B.5.2</a>. Mogelijke gebeurtenissen zijn: creatie-, publicatie-,
-            of revisiedatum. INSPIRE vereist bovendien dat het datum type uniek
-            is per set aan datums van de bron.</p>
+            heeft. Type gebeurtenis wordt gekozen uit <a href="#codelist-datetypecode">codelijst
+              DateTypeCode</a>. Mogelijke gebeurtenissen zijn: creatie-,
+            publicatie-, of revisiedatum. INSPIRE vereist bovendien dat het
+            datum type uniek is per set aan datums van de bron.</p>
           <table>
             <colgroup> <col style="width: 25%"> <col style="width: 75%"> </colgroup>
             <tbody>
@@ -1106,8 +1106,8 @@ http://schemas.opengis.net/csw/2.0.2/profiles/apiso/1.0.0/apiso.xsd</a></td>
               style="float:right">[<a data-cite="ISO19139">ISO 19139:2007</a>]</span></p>
           <p>Dit element bevat de status van de dataset. De dataset kan onder
             andere nog in ontwikkeling zijn, geactualiseerd moeten worden, of
-            gearchiveerd zijn.&nbsp; De waarden komen uit <a href="#codelijst-b523">codelijst
-              B.5.23 van ISO19115</a>.</p>
+            gearchiveerd zijn.&nbsp; De waarden komen uit <a href="#codelist-progresscode">codelijst
+              ProgressCode</a>.</p>
           <table>
             <colgroup> <col style="width: 25%"> <col style="width: 75%"> </colgroup>
             <tbody>
@@ -1129,8 +1129,8 @@ http://schemas.opengis.net/csw/2.0.2/profiles/apiso/1.0.0/apiso.xsd</a></td>
           <p>Dit element is conditioneel. Het is verplicht als de brontekstuele
             informatie bevat. Het bevat de code van de taal waarin de tekst in
             de bron is opgenomen. Gebruik hiervoor alleen de drie-letter codes
-            van 639-2/B (bibliographic codes), zoals gedefinieerd op <a href="http://www.loc.gov/standards/iso639-2/">http://www.loc.gov/standards/iso639-2/</a>
-            zie <a href="#codelijst-iso-639-2">Appendix A</a>.</p>
+            van 639-2/B (bibliographic codes), zoals gedefinieerd op <a href="#codelist-iso639-2">iso
+              639-2</a>.</p>
           <table>
             <colgroup> <col style="width: 25%"> <col style="width: 75%"> </colgroup>
             <tbody>
@@ -1150,8 +1150,8 @@ http://schemas.opengis.net/csw/2.0.2/profiles/apiso/1.0.0/apiso.xsd</a></td>
           <p style="text-align:left"><em>identificationInfo[1]/*/</em><span style="float:right">[<a
                 data-cite="ISO19139">ISO 19139:2007</a>]</span></p>
           <p>Verplicht als de in de bron gebruikte karakterset geen utf8 is. Er
-            dient een waarde uit <a href="#codelijst-b510">codelijst B.5.10</a>
-            gebruikt te worden</p>
+            dient een waarde uit <a href="#codelist-charactersetcode">codelijst
+              CharacterSetCode</a> gebruikt te worden</p>
           <table>
             <colgroup> <col style="width: 25%"> <col style="width: 75%"> </colgroup>
             <tbody>
@@ -1171,8 +1171,8 @@ http://schemas.opengis.net/csw/2.0.2/profiles/apiso/1.0.0/apiso.xsd</a></td>
           <p style="text-align:left"><em>identificationInfo[1]/*/topicCategory</em><span
               style="float:right">[<a data-cite="ISO19139">ISO 19139:2007</a>]</span></p>
           <p>Het bevat de belangrijkste onderwerpen van de dataset. De te
-            hanteren onderwerpen zijn opgenomen in <a href="#codelijst-b527">codelijst
-              B.5.27</a>.</p>
+            hanteren onderwerpen zijn opgenomen in <a href="#codelist-topiccategorycode">codelijst
+              TopicCategoryCode</a>.</p>
           <table>
             <colgroup> <col style="width: 25%"> <col style="width: 75%"> </colgroup>
             <tbody>
@@ -1250,7 +1250,7 @@ http://schemas.opengis.net/csw/2.0.2/profiles/apiso/1.0.0/apiso.xsd</a></td>
               style="float:right">[<a data-cite="ISO19139">ISO 19139:2007</a>]</span></p>
           <p>Dit element geeft de rol van de verantwoordelijke organisatie van
             de bron weer. Voor de rol van de organisatie wordt een codelijst
-            gehanteerd, zie zie <a href="#codelijst-b55">Codelijst B.5.5
+            gehanteerd, zie zie <a href="#codelist-rolecode">Codelijst
               CI_RoleCode</a>.</p>
           <table>
             <colgroup> <col style="width: 25%"> <col style="width: 75%"> </colgroup>
@@ -1377,9 +1377,9 @@ http://schemas.opengis.net/csw/2.0.2/profiles/apiso/1.0.0/apiso.xsd</a></td>
           <p>Dit is een conditioneel element. Het is verplicht als een trefwoord
             uit een thesaurus afkomstig is zoals in ieder geval voor de INSPIRE
             thema’s. Het bevat het type gebeurtenis waar de datum betrekking op
-            heeft. Type gebeurtenis wordt gekozen uit <a href="#codelijst-b52">codelijst
-              B.5.2</a> uit ISO 19115. Mogelijke gebeurtenissen zijn: creatie-,
-            publicatie-, of revisiedatum.</p>
+            heeft. Type gebeurtenis wordt gekozen uit <a href="#codelijst-datetypecode">codelijst
+              DateTypeCode</a> uit ISO 19115. Mogelijke gebeurtenissen zijn:
+            creatie-, publicatie-, of revisiedatum.</p>
           <table>
             <colgroup> <col style="width: 25%"> <col style="width: 75%"> </colgroup>
             <tbody>
@@ -1412,8 +1412,8 @@ http://schemas.opengis.net/csw/2.0.2/profiles/apiso/1.0.0/apiso.xsd</a></td>
           <p>Dit element bevat toegangseisen die er zorg voor dragen dat privacy
             of intellectueel eigendom gewaarborgd zijn en elke andere speciale
             beperkingen voor het verkrijgen van de metadata of data. De waardes
-            komen uit <a href="#codelijst-b524">codelijst B.5.24</a> uit ISO
-            19115.</p>
+            komen uit <a href="#codelist-restrictioncode">codelijst
+              RestrictionCode</a> uit ISO 19115.</p>
           <table>
             <colgroup> <col style="width: 25%"> <col style="width: 75%"> </colgroup>
             <tbody>
@@ -1462,7 +1462,7 @@ http://schemas.opengis.net/csw/2.0.2/profiles/apiso/1.0.0/apiso.xsd</a></td>
             de voorwaarden voor toegang en gebruik&nbsp; een link naar de
             licentie en de bijbehorende beschrijving opgenomen.&nbsp; Daarnaast
             wordt er, als het een INSPIRE dataset is en er geen beperkingen zijn
-            of deze niet bekend zijn, een waarde uit <a href="#Codelijst-INSPIRE-ConditionsApplyingToAccessAndUse">codelijst
+            of deze niet bekend zijn, een waarde uit <a href="#Codelist-INSPIRE-ConditionsApplyingToAccessAndUse">codelijst
               ConditionsApplyingToAccessAndUse</a> opgenomen in een tweede
             otherConstraints element binnen hetzelfde&nbsp;
             md:resourceConstraints/gmd:MD_LegalConstraints element. Voor INSPIRE
@@ -1623,8 +1623,8 @@ http://schemas.opengis.net/csw/2.0.2/profiles/apiso/1.0.0/apiso.xsd</a></td>
           <p style="text-align:left"><em>identificationInfo[1]/*/spatialRepresentationType/MD_SpatialRepresentationTypeCode</em><span
               style="float:right">[<a data-cite="ISO19139">ISO 19139:2007</a>]</span></p>
           <p>Dit element is conditioneel. Dit element is verplicht voor INSPIRE.
-            Er dient een waarde uit de <a href="#codelijst-b526">codelijst
-              B.5.26</a> gebruikt te worden.</p>
+            Er dient een waarde uit de <a href="#codelist-spatialrepresentationtypecode">codelijst
+              MD_SpatialRepresentationTypeCode</a> gebruikt te worden.</p>
           <table>
             <colgroup> <col style="width: 25%"> <col style="width: 75%"> </colgroup>
             <tbody>
@@ -1945,10 +1945,10 @@ http://schemas.opengis.net/csw/2.0.2/profiles/apiso/1.0.0/apiso.xsd</a></td>
           <p>Dit element is conditioneel. Het is verplicht als er een URL is
             opgegeven. Bijvoorbeeld naar een bestand, WFS of webpagina. </p>
           <p>Indien de URL een 'endPoint' betreft dan dient een waarde
-            geselecteerd te worden uit de <a href="#codelijst-media-types">codelijst
+            geselecteerd te worden uit de <a href="#codelist-mediatypes">codelijst
               media-types</a>. </p>
           <p>Indien de URL een 'accessPoint' betreft, dient een waarde
-            geselecteerd te worden uit de <a href="#codelijst-protocol">codelijst
+            geselecteerd te worden uit de <a href="#codelist-protocol">codelijst
               Protocol</a>. </p>
           <table>
             <colgroup> <col style="width: 25%"> <col style="width: 75%"> </colgroup>
@@ -2067,8 +2067,8 @@ http://schemas.opengis.net/csw/2.0.2/profiles/apiso/1.0.0/apiso.xsd</a></td>
           <p style="text-align:left"><em>dataQualityInfo/*/scope/*/level</em><span
               style="float:right">[<a data-cite="ISO19139">ISO 19139:2007</a>]</span></p>
           <p>Dit element beschrijft het niveau waarop de kwaliteitsinformatie
-            betrekking heeft. Dit niveau wordt gekozen uit <a href="#codelijst-b525">codelijst
-              B.5.25</a>. Mogelijke niveau’s zijn: dataset en series. </p>
+            betrekking heeft. Dit niveau wordt gekozen uit <a href="#codelist-scopecode">codelijst
+              ScopeCode</a>. Mogelijke niveau’s zijn: dataset en series. </p>
           <table>
             <colgroup> <col style="width: 25%"> <col style="width: 75%"> </colgroup>
             <tbody>
@@ -2183,9 +2183,9 @@ http://schemas.opengis.net/csw/2.0.2/profiles/apiso/1.0.0/apiso.xsd</a></td>
             dataset een INSPIRE bron is of als de informatie is gemodelleerd
             volgens een specifiek informatie model. Het bevat het type
             gebeurtenis waar de datum betrekking op heeft. Type gebeurtenis
-            wordt gekozen uit <a href="#codelijst-b52">codelijst B.5.2</a>.
-            Mogelijke gebeurtenissen zijn: creatie-, publicatie-, of
-            revisiedatum.</p>
+            wordt gekozen uit <a href="#codelist-datetypecode">codelijst
+              CI_DateTypeCode</a>. Mogelijke gebeurtenissen zijn: creatie-,
+            publicatie-, of revisiedatum.</p>
           <table>
             <colgroup> <col style="width: 25%"> <col style="width: 75%"> </colgroup>
             <tbody>
@@ -2340,9 +2340,9 @@ http://schemas.opengis.net/csw/2.0.2/profiles/apiso/1.0.0/apiso.xsd</a></td>
           <p>In dit element wordt vastgelegd in welke taal de metadata is
             beschreven. Het bevat de code van de taal waarin de tekst in de
             metadata is opgenomen. Gebruik hiervoor alleen de drie-letter codes
-            van 639-2/B (bibliographic codes), zoals gedefinieerd op <a href="http://www.loc.gov/standards/iso639-2/">http://www.loc.gov/standards/iso639-2/</a>.
-            De code voor Nederlands is dut, zie <a href="#codelijst-iso-639-2">Appendix
-              A</a>. Over het algemeen is dut de default waarde.</p>
+            van 639-2/B (bibliographic codes), zoals gedefinieerd op <a href="#codelist-iso639-2">iso
+              639-2</a>. De code voor Nederlands is dut. Over het algemeen is
+            dut de default waarde.</p>
           <table>
             <colgroup> <col style="width: 25%"> <col style="width: 75%"> </colgroup>
             <tbody>
@@ -2383,8 +2383,8 @@ http://schemas.opengis.net/csw/2.0.2/profiles/apiso/1.0.0/apiso.xsd</a></td>
           <p style="text-align:left"><em>hierarchyLevel</em><span style="float:right">[<a
                 data-cite="ISO19139">ISO 19139:2007</a>]</span></p>
           <p>Het element geeft aan waarop de metadata betrekking heeft, de
-            dataset of dataset serie. Voor de waarden geldt de <a href="#codelijst-b525">codelijst
-              B.5.25 MD_ScopeCode</a> uit ISO19115. </p>
+            dataset of dataset serie. Voor de waarden geldt de <a href="#codelist-scopecode">codelijst
+              MD_ScopeCode</a> uit ISO19115. </p>
           <table>
             <colgroup> <col style="width: 25%"> <col style="width: 75%"> </colgroup>
             <tbody>
@@ -2490,7 +2490,7 @@ http://schemas.opengis.net/csw/2.0.2/profiles/apiso/1.0.0/apiso.xsd</a></td>
                 data-cite="ISO19139">ISO 19139:2007</a>]</span></p>
           <p>Dit element bevat de rol van de organisatie verantwoordelijk voor
             de metadata. INSPIRE vereist pointOfContact. Voor de rol van de
-            organisatie wordt <a href="#codelijst-b55">Codelijst B.5.5
+            organisatie wordt <a href="#codelist-rolecode">Codelijst
               CI_RoleCode</a> gehanteerd.</p>
           <table>
             <colgroup> <col style="width: 25%"> <col style="width: 75%"> </colgroup>
@@ -2824,8 +2824,8 @@ verantwoordelijke organisatie rol: pointOfContact
         kopje waarde. </p>
       <section id="codelijsten-iso19115-en-inspire">
         <h3>De codelijsten uit&nbsp; ISO 19115 en INSPIRE</h3>
-        <section id="codelijst-b52">
-          <h4>Codelijst B.5.2 CI_DateTypeCode</h4>
+        <section id="codelist-datetypecode">
+          <h4>Codelijst CI_DateTypeCode</h4>
           <table>
             <colgroup> <col style="width: 25%;"> <col style="width: 25%;"> <col
                 style="width: 50%;"> </colgroup>
@@ -2855,8 +2855,8 @@ verantwoordelijke organisatie rol: pointOfContact
             </tbody>
           </table>
         </section>
-        <section id="codelijst-b53">
-          <h4>Codelijst B.5.3 CI_OnLineFunctionCode</h4>
+        <section id="codelist-onlinefunctioncode">
+          <h4>Codelijst CI_OnLineFunctionCode</h4>
           <table>
             <colgroup> <col style="width: 25%;"> <col style="width: 25%;"> <col
                 style="width: 50%;"> </colgroup>
@@ -2897,8 +2897,8 @@ verantwoordelijke organisatie rol: pointOfContact
             </tbody>
           </table>
         </section>
-        <section id="codelijst-b55">
-          <h4>Codelijst B.5.5 CI_RoleCode</h4>
+        <section id="codelist-rolecode">
+          <h4>Codelijst CI_RoleCode</h4>
           <table>
             <colgroup> <col style="width: 25%;"> <col style="width: 25%;"> <col
                 style="width: 50%;"> </colgroup>
@@ -2967,8 +2967,8 @@ verantwoordelijke organisatie rol: pointOfContact
             </tbody>
           </table>
         </section>
-        <section id="codelijst-b57">
-          <h4>Codelijst B.5.7 DS_AssociationTypeCode</h4>
+        <section id="codelist-associationtypecode">
+          <h4>Codelijst DS_AssociationTypeCode</h4>
           <table>
             <colgroup> <col style="width: 25%;"> <col style="width: 25%;"> <col
                 style="width: 50%;"> </colgroup>
@@ -2986,8 +2986,8 @@ verantwoordelijke organisatie rol: pointOfContact
             </tbody>
           </table>
         </section>
-        <section id="codelijst-b510">
-          <h4>Codelijst B.5.10 MD_CharacterSetCode</h4>
+        <section id="codelist-charactersetcode">
+          <h4>Codelijst MD_CharacterSetCode</h4>
           <table>
             <colgroup> <col style="width: 25%;"> <col style="width: 25%;"> <col
                 style="width: 50%;"> </colgroup>
@@ -3169,8 +3169,8 @@ verantwoordelijke organisatie rol: pointOfContact
             </tbody>
           </table>
         </section>
-        <section id="codelijst-b511">
-          <h4>Codelijst B.5.11 MD_ClassificationCode</h4>
+        <section id="codelist-classificationcode">
+          <h4>Codelijst MD_ClassificationCode</h4>
           <table>
             <colgroup> <col style="width: 25%;"> <col style="width: 25%;"> <col
                 style="width: 50%;"> </colgroup>
@@ -3209,8 +3209,8 @@ verantwoordelijke organisatie rol: pointOfContact
             </tbody>
           </table>
         </section>
-        <section id="codelijst-b518">
-          <h4>Codelijst B.5.18 MD_MaintenanceFrequencyCode</h4>
+        <section id="codelist-maintenancefrequencycode">
+          <h4>Codelijst MD_MaintenanceFrequencyCode</h4>
           <table>
             <colgroup> <col style="width: 25%;"> <col style="width: 25%;"> <col
                 style="width: 50%;"> </colgroup>
@@ -3261,49 +3261,49 @@ verantwoordelijke organisatie rol: pointOfContact
                 <td>Data wordt jaarlijks geactualiseerd.</td>
               </tr>
               <tr>
-                <td><i>2-jaarlijks</i></td>
-                <td><i>2annually</i></td>
-                <td><i>Data wordt één keer per 2 jaar geactualiseerd.</i></td>
+                <td>2-jaarlijks</td>
+                <td>2annually</td>
+                <td>Data wordt één keer per 2 jaar geactualiseerd.</td>
               </tr>
               <tr>
-                <td><i>3-jaarlijks</i></td>
-                <td><i>3annually</i></td>
-                <td><i>Data wordt één keer per 3 jaar geactualiseerd.</i></td>
+                <td>3-jaarlijks</td>
+                <td>3annually</td>
+                <td>Data wordt één keer per 3 jaar geactualiseerd.</td>
               </tr>
               <tr>
-                <td><i>4-jaarlijks</i></td>
-                <td><i>4annually</i></td>
-                <td><i>Data wordt één keer per 4 jaar geactualiseerd.</i></td>
+                <td>4-jaarlijks</td>
+                <td>4annually</td>
+                <td>Data wordt één keer per 4 jaar geactualiseerd.</td>
               </tr>
               <tr>
-                <td><i>5-jaarlijks</i></td>
-                <td><i>5annually</i></td>
-                <td><i>Data wordt één keer per 5 jaar geactualiseerd.</i></td>
+                <td>5-jaarlijks</td>
+                <td>5annually</td>
+                <td>Data wordt één keer per 5 jaar geactualiseerd.</td>
               </tr>
               <tr>
-                <td><i>6-jaarlijks</i></td>
-                <td><i>6annually</i></td>
-                <td><i>Data wordt één keer per 6 jaar geactualiseerd.</i></td>
+                <td>6-jaarlijks</td>
+                <td>6annually</td>
+                <td>Data wordt één keer per 6 jaar geactualiseerd.</td>
               </tr>
               <tr>
-                <td><i>7-jaarlijks</i></td>
-                <td><i>7annually</i></td>
-                <td><i>Data wordt één keer per 7 jaar geactualiseerd.</i></td>
+                <td>7-jaarlijks</td>
+                <td>7annually</td>
+                <td>Data wordt één keer per 7 jaar geactualiseerd.</td>
               </tr>
               <tr>
-                <td><i>8-jaarlijks</i></td>
-                <td><i>8annually</i></td>
-                <td><i>Data wordt één keer per 8 jaar geactualiseerd.</i></td>
+                <td>8-jaarlijks</td>
+                <td>8annually</td>
+                <td>Data wordt één keer per 8 jaar geactualiseerd.</td>
               </tr>
               <tr>
-                <td><i>9-jaarlijks</i></td>
-                <td><i>9annually</i></td>
-                <td><i>Data wordt één keer per 9 jaar geactualiseerd.</i></td>
+                <td>9-jaarlijks</td>
+                <td>9annually</td>
+                <td>Data wordt één keer per 9 jaar geactualiseerd.</td>
               </tr>
               <tr>
-                <td><i>10-jaarlijks</i></td>
-                <td><i>10annually</i></td>
-                <td><i>Data wordt niet binnen 10 jaar geactualiseerd.</i></td>
+                <td>10-jaarlijks</td>
+                <td>10annually</td>
+                <td>Data wordt niet binnen 10 jaar geactualiseerd.</td>
               </tr>
               <tr>
                 <td><i>Meer dan 10-jaarlijks</i></td>
@@ -3334,8 +3334,8 @@ verantwoordelijke organisatie rol: pointOfContact
             </tbody>
           </table>
         </section>
-        <section id="codelijst-b520">
-          <h4>Codelijst B.5.20 MD_MediumNameCode</h4>
+        <section id="codelist-mediumnamecode">
+          <h4>Codelijst MD_MediumNameCode</h4>
           <table>
             <colgroup> <col style="width: 25%;"> <col style="width: 25%;"> <col
                 style="width: 50%;"> </colgroup>
@@ -3438,8 +3438,8 @@ verantwoordelijke organisatie rol: pointOfContact
             </tbody>
           </table>
         </section>
-        <section id="codelijst-b523">
-          <h4>Codelijst B.5.23 MD_ProgressCode</h4>
+        <section id="codelist-progresscode">
+          <h4>Codelijst MD_ProgressCode</h4>
           <table>
             <colgroup> <col style="width: 25%;"> <col style="width: 25%;"> <col
                 style="width: 50%;"> </colgroup>
@@ -3488,8 +3488,8 @@ verantwoordelijke organisatie rol: pointOfContact
             </tbody>
           </table>
         </section>
-        <section id="codelijst-b524">
-          <h4>Codelijst B.5.24 MD_RestrictionCode</h4>
+        <section id="codelist-restrictioncode">
+          <h4>Codelijst MD_RestrictionCode</h4>
           <table>
             <colgroup> <col style="width: 25%;"> <col style="width: 25%;"> <col
                 style="width: 50%;"> </colgroup>
@@ -3553,8 +3553,8 @@ verantwoordelijke organisatie rol: pointOfContact
             </tbody>
           </table>
         </section>
-        <section id="codelijst-b525">
-          <h4>Codelijst B.5.25 MD_ScopeCode</h4>
+        <section id="codelist-scopecode">
+          <h4>Codelijst MD_ScopeCode</h4>
           <table>
             <colgroup> <col style="width: 25%;"> <col style="width: 25%;"> <col
                 style="width: 50%;"> </colgroup>
@@ -3577,8 +3577,8 @@ verantwoordelijke organisatie rol: pointOfContact
             </tbody>
           </table>
         </section>
-        <section id="codelijst-b526">
-          <h4>Codelijst B.5.26 MD_SpatialRepresentationTypeCode</h4>
+        <section id="codelist-spatialrepresentationtypecode">
+          <h4>Codelijst MD_SpatialRepresentationTypeCode</h4>
           <table>
             <colgroup> <col style="width: 25%;"> <col style="width: 25%;"> <col
                 style="width: 50%;"> </colgroup>
@@ -3614,8 +3614,8 @@ verantwoordelijke organisatie rol: pointOfContact
             </tbody>
           </table>
         </section>
-        <section id="codelijst-b527">
-          <h4>Codelijst B.5.27 MD_TopicCategoryCode</h4>
+        <section id="codelist-topiccategorycode">
+          <h4>Codelijst MD_TopicCategoryCode</h4>
           <table>
             <colgroup> <col style="width: 25%;"> <col style="width: 25%;"> <col
                 style="width: 50%;"> </colgroup>
@@ -3750,7 +3750,7 @@ verantwoordelijke organisatie rol: pointOfContact
             </tbody>
           </table>
         </section>
-        <section id="Codelijst-INSPIRE-OnLineDescriptionCode">
+        <section id="Codelist-INSPIRE-OnLineDescriptionCode">
           <h4>Codelijst INSPIRE OnLineDescriptionCode</h4>
           <table>
             <colgroup> <col style="width: 50%;"> <col style="width: 50%;"> </colgroup>
@@ -3884,252 +3884,258 @@ verantwoordelijke organisatie rol: pointOfContact
           </table>
         </section>
       </section>
-      <section id="veranderde-codelijsten">
-        <h3>Toegevoegde codelijsten</h3>
-        <section id="codelijst-iso-639-2">
-          <h4>Codelijst ISO 639-2</h4>
-          <p>Gebruik hiervoor alleen de drie letter codes van ISO639-2/B, zoals
-            gedefinieerd op <a href="http://www.loc.gov/standards/iso639-2/">http://www.loc.gov/standards/iso639-2/</a>.
-            Decodes voor de 23 officiële EU talen zijn:</p>
-          <table>
-            <colgroup> <col style="width: 50%;"> <col style="width: 50%;"> </colgroup>
-            <tbody>
-              <tr>
-                <td>Bulgarian - <b>bul</b></td>
-                <td>Italian - <b>ita</b></td>
-              </tr>
-              <tr>
-                <td>Czech - <b>cze</b></td>
-                <td>Latvian - <b>lav</b></td>
-              </tr>
-              <tr>
-                <td>Danish - <b>dan</b></td>
-                <td>Lithuanian - <b>lit</b></td>
-              </tr>
-              <tr>
-                <td>Dutch - <b>dut</b></td>
-                <td>Maltese - <b>mlt</b></td>
-              </tr>
-              <tr>
-                <td>English - <b>eng</b></td>
-                <td>Polish - <b>pol</b></td>
-              </tr>
-              <tr>
-                <td>Estonian - <b>est</b></td>
-                <td>Portugese - <b>por</b></td>
-              </tr>
-              <tr>
-                <td>Finnish - <b>fin</b></td>
-                <td>Romanian - <b>rum</b></td>
-              </tr>
-              <tr>
-                <td>French - <b>fre</b></td>
-                <td>Slovak - <b>slo</b></td>
-              </tr>
-              <tr>
-                <td>German - <b>ger</b></td>
-                <td>Slovenian - <b>slv</b></td>
-              </tr>
-              <tr>
-                <td>Greek - <b>gre</b></td>
-                <td>Spanish - <b>spa</b></td>
-              </tr>
-              <tr>
-                <td>Hungarian - <b>hun</b></td>
-                <td>Swedish - <b>swe</b></td>
-              </tr>
-              <tr>
-                <td>Irish - <b>gle</b></td>
-                <td>&nbsp;</td>
-              </tr>
-            </tbody>
-          </table>
-        </section>
-        <section id="codelijst-protocol">
-          <h4>Codelijst Protocol</h4>
-          <p></p>
-          <table>
-            <colgroup> <col style="width: 50%;"> <col style="width: 50%;"> </colgroup>
-            <tbody>
-              <tr>
-                <th>Waarde</th>
-                <th>Beschrijving</th>
-              </tr>
-              <tr>
-                <td>OGC:CSW</td>
-                <td>Web Catalog service</td>
-              </tr>
-              <tr>
-                <td>OGC:WMS</td>
-                <td>Web Map service</td>
-              </tr>
-              <tr>
-                <td>OGC:WMTS</td>
-                <td>Web Mapping Tiling Service</td>
-              </tr>
-              <tr>
-                <td>OGC:WFS</td>
-                <td>Web Feature Service</td>
-              </tr>
-              <tr>
-                <td>OGC:WCS</td>
-                <td>Web Coverage Service</td>
-              </tr>
-              <tr>
-                <td>OGC:SOS</td>
-                <td>Sensor Observation Service</td>
-              </tr>
-              <tr>
-                <td>INSPIRE Atom</td>
-                <td>Atom Service Feed</td>
-              </tr>
-              <tr>
-                <td>OGC:WCTS</td>
-                <td>Web Coordinate Transformation Service</td>
-              </tr>
-              <tr>
-                <td>OGC:WPS</td>
-                <td>Web Processing Service</td>
-              </tr>
-              <tr>
-                <td>UKST</td>
-                <td>Unknown Service Type</td>
-              </tr>
-              <tr>
-                <td>OGC:WFS-G</td>
-                <td>Gazzetteer service</td>
-              </tr>
-              <tr>
-                <td>OGC:SPS</td>
-                <td>Sensor Planning Service</td>
-              </tr>
-              <tr>
-                <td>OGC:SAS</td>
-                <td>Sensor Alert Service</td>
-              </tr>
-              <tr>
-                <td>OGC:WNS</td>
-                <td>Web Notification Service</td>
-              </tr>
-              <tr>
-                <td>OGC:ODS</td>
-                <td>OpenLS Directory Service</td>
-              </tr>
-              <tr>
-                <td>OGC:OGS</td>
-                <td>OpenLS Gateway Service</td>
-              </tr>
-              <tr>
-                <td>OGC:OUS</td>
-                <td>OpenLS Utility Service</td>
-              </tr>
-              <tr>
-                <td>OGC:OPS</td>
-                <td>OpenLS Presentation Service</td>
-              </tr>
-              <tr>
-                <td>OGC:ORS</td>
-                <td>OpenLS Route Service</td>
-              </tr>
-              <tr>
-                <td>OGC:SensorThings</td>
-                <td>SensorThings API</td>
-              </tr>
-              <tr>
-                <td>W3C:SPARQL</td>
-                <td>SPARQL Query Language for RDF</td>
-              </tr>
-              <tr>
-                <td>OASIS:OData</td>
-                <td>Open data protocol</td>
-              </tr>
-              <tr>
-                <td>OAS</td>
-                <td>Open API Specification</td>
-              </tr>
-              <tr>
-                <td>landingpage</td>
-                <td>Een webpagina die toegang geeft tot de dataset of overige
-                  informatie bevat </td>
-              </tr>
-              <tr>
-                <td>application</td>
-                <td>Een (web) applicatie die rechtstreeks toegang geeft tot de
-                  dataset </td>
-              </tr>
-              <tr>
-                <td>dataset</td>
-                <td>URI naar locale dataset locatie</td>
-              </tr>
-            </tbody>
-          </table>
-        </section>
-        <section id="codelijst-media-types">
-          <h4>Codelijst media types</h4>
-          <p>De codelijst is een subset van geregistreerde media types bij
-            www.iana.org </p>
-          <table>
-            <colgroup> <col style="width: 50%;"> <col style="width: 50%;"> </colgroup>
-            <tbody>
-              <tr>
-                <th>Waarde</th>
-                <th>Beschrijving</th>
-              </tr>
-              <tr>
-                <td>
-                  https://www.iana.org/assignments/media-types/application/atom+xml</td>
-                <td> atom+xml</td>
-              </tr>
-              <tr>
-                <td>
-                  https://www.iana.org/assignments/media-types/application/geo+json</td>
-                <td> geo+json</td>
-              </tr>
-              <tr>
-                <td>
-                  https://www.iana.org/assignments/media-types/application/gml+xml</td>
-                <td> gml+xml</td>
-              </tr>
-              <tr>
-                <td>
-                  https://www.iana.org/assignments/media-types/application/json</td>
-                <td> json</td>
-              </tr>
-              <tr>
-                <td>
-                  https://www.iana.org/assignments/media-types/application/ld+json</td>
-                <td> ld+json</td>
-              </tr>
-              <tr>
-                <td>
-                  https://www.iana.org/assignments/media-types/application/rdf+xml</td>
-                <td> rdf+xml</td>
-              </tr>
-              <tr>
-                <td>
-                  https://www.iana.org/assignments/media-types/application/xml</td>
-                <td> xml</td>
-              </tr>
-              <tr>
-                <td>
-                  https://www.iana.org/assignments/media-types/application/zip</td>
-                <td> zip</td>
-              </tr>
-              <tr>
-                <td> https://www.iana.org/assignments/media-types/image/png</td>
-                <td> png</td>
-              </tr>
-              <tr>
-                <td> https://www.iana.org/assignments/media-types/image/gif</td>
-                <td> gif</td>
-              </tr>
-              <tr>
-                <td> https://www.iana.org/assignments/media-types/text/csv</td>
-                <td> csv</td>
-              </tr>
-            </tbody>
-          </table>
-        </section>
+      <section id="codelist-iso639-2">
+        <h4>Codelijst Talen (ISO 639-2)</h4>
+        <p>Gebruik hiervoor alleen de drie letter codes van ISO639-2/B, zoals
+          gedefinieerd op <a href="http://www.loc.gov/standards/iso639-2/">http://www.loc.gov/standards/iso639-2/</a>.
+          Decodes voor de 23 officiële EU talen zijn:</p>
+        <table>
+          <colgroup> <col style="width: 50%;"> <col style="width: 50%;"> </colgroup>
+          <tbody>
+            <tr>
+              <td>Bulgarian - <b>bul</b></td>
+              <td>Italian - <b>ita</b></td>
+            </tr>
+            <tr>
+              <td>Czech - <b>cze</b></td>
+              <td>Latvian - <b>lav</b></td>
+            </tr>
+            <tr>
+              <td>Danish - <b>dan</b></td>
+              <td>Lithuanian - <b>lit</b></td>
+            </tr>
+            <tr>
+              <td>Dutch - <b>dut</b></td>
+              <td>Maltese - <b>mlt</b></td>
+            </tr>
+            <tr>
+              <td>English - <b>eng</b></td>
+              <td>Polish - <b>pol</b></td>
+            </tr>
+            <tr>
+              <td>Estonian - <b>est</b></td>
+              <td>Portugese - <b>por</b></td>
+            </tr>
+            <tr>
+              <td>Finnish - <b>fin</b></td>
+              <td>Romanian - <b>rum</b></td>
+            </tr>
+            <tr>
+              <td>French - <b>fre</b></td>
+              <td>Slovak - <b>slo</b></td>
+            </tr>
+            <tr>
+              <td>German - <b>ger</b></td>
+              <td>Slovenian - <b>slv</b></td>
+            </tr>
+            <tr>
+              <td>Greek - <b>gre</b></td>
+              <td>Spanish - <b>spa</b></td>
+            </tr>
+            <tr>
+              <td>Hungarian - <b>hun</b></td>
+              <td>Swedish - <b>swe</b></td>
+            </tr>
+            <tr>
+              <td>Irish - <b>gle</b></td>
+              <td>&nbsp;</td>
+            </tr>
+          </tbody>
+        </table>
+      </section>
+      <section id="codelist-protocol">
+        <h4>Codelijst Protocol</h4>
+        <p></p>
+        <table>
+          <colgroup> <col style="width: 50%;"> <col style="width: 50%;"> </colgroup>
+          <tbody>
+            <tr>
+              <th>Waarde</th>
+              <th>Beschrijving</th>
+            </tr>
+            <tr>
+              <td>OGC:CSW</td>
+              <td>Web Catalog service</td>
+            </tr>
+            <tr>
+              <td>OGC:WMS</td>
+              <td>Web Map service</td>
+            </tr>
+            <tr>
+              <td>OGC:WMTS</td>
+              <td>Web Mapping Tiling Service</td>
+            </tr>
+            <tr>
+              <td>OGC:WFS</td>
+              <td>Web Feature Service</td>
+            </tr>
+            <tr>
+              <td>OGC:WCS</td>
+              <td>Web Coverage Service</td>
+            </tr>
+            <tr>
+              <td>OGC:SOS</td>
+              <td>Sensor Observation Service</td>
+            </tr>
+            <tr>
+              <td>INSPIRE Atom</td>
+              <td>Atom Service Feed</td>
+            </tr>
+            <tr>
+              <td>OGC:WCTS</td>
+              <td>Web Coordinate Transformation Service</td>
+            </tr>
+            <tr>
+              <td>OGC:WPS</td>
+              <td>Web Processing Service</td>
+            </tr>
+            <tr>
+              <td>UKST</td>
+              <td>Unknown Service Type</td>
+            </tr>
+            <tr>
+              <td>OGC:WFS-G</td>
+              <td>Gazzetteer service</td>
+            </tr>
+            <tr>
+              <td>OGC:SPS</td>
+              <td>Sensor Planning Service</td>
+            </tr>
+            <tr>
+              <td>OGC:SAS</td>
+              <td>Sensor Alert Service</td>
+            </tr>
+            <tr>
+              <td>OGC:WNS</td>
+              <td>Web Notification Service</td>
+            </tr>
+            <tr>
+              <td>OGC:ODS</td>
+              <td>OpenLS Directory Service</td>
+            </tr>
+            <tr>
+              <td>OGC:OGS</td>
+              <td>OpenLS Gateway Service</td>
+            </tr>
+            <tr>
+              <td>OGC:OUS</td>
+              <td>OpenLS Utility Service</td>
+            </tr>
+            <tr>
+              <td>OGC:OPS</td>
+              <td>OpenLS Presentation Service</td>
+            </tr>
+            <tr>
+              <td>OGC:ORS</td>
+              <td>OpenLS Route Service</td>
+            </tr>
+            <tr>
+              <td>OGC:SensorThings</td>
+              <td>SensorThings API</td>
+            </tr>
+            <tr>
+              <td>W3C:SPARQL</td>
+              <td>SPARQL Query Language for RDF</td>
+            </tr>
+            <tr>
+              <td>OASIS:OData</td>
+              <td>Open data protocol</td>
+            </tr>
+            <tr>
+              <td>OAS</td>
+              <td>Open API Specification</td>
+            </tr>
+            <tr>
+              <td>landingpage</td>
+              <td>Een webpagina die toegang geeft tot de dataset of overige
+                informatie bevat </td>
+            </tr>
+            <tr>
+              <td>application</td>
+              <td>Een (web) applicatie die rechtstreeks toegang geeft tot de
+                dataset </td>
+            </tr>
+            <tr>
+              <td>dataset</td>
+              <td>Referentie naar een locale dataset locatie</td>
+            </tr>
+          </tbody>
+        </table>
+      </section>
+      <section id="codelist-mediatypes">
+        <h4>Codelijst media types</h4>
+        <p>De codelijst is een subset van geregistreerde media types bij
+          www.iana.org en INSPIRE</p>
+        <table>
+          <colgroup> <col style="width: 50%;"> <col style="width: 50%;"> </colgroup>
+          <tbody>
+            <tr>
+              <th>Waarde</th>
+              <th>Beschrijving</th>
+            </tr>
+            <tr>
+              <td>
+                https://www.iana.org/assignments/media-types/application/atom+xml</td>
+              <td> ATOM</td>
+            </tr>
+            <tr>
+              <td>http://www.iana.org/assignments/media-types/application/vnd.google-earth.kml+xml</td>
+              <td>KML</td>
+            </tr>
+            <tr>
+              <td>
+                https://www.iana.org/assignments/media-types/application/geo+json</td>
+              <td> GeoJSON</td>
+            </tr>
+            <tr>
+              <td>
+                https://www.iana.org/assignments/media-types/application/gml+xml</td>
+              <td> GML</td>
+            </tr>
+            <tr>
+              <td> https://www.iana.org/assignments/media-types/application/json</td>
+              <td> JSON</td>
+            </tr>
+            <tr>
+              <td>
+                https://www.iana.org/assignments/media-types/application/ld+json</td>
+              <td> JSONLD</td>
+            </tr>
+            <tr>
+              <td>
+                https://www.iana.org/assignments/media-types/application/rdf+xml</td>
+              <td> RDF/XML</td>
+            </tr>
+            <tr>
+              <td> https://www.iana.org/assignments/media-types/application/xml</td>
+              <td> XML</td>
+            </tr>
+            <tr>
+              <td> https://www.iana.org/assignments/media-types/application/zip</td>
+              <td> ZIP</td>
+            </tr>
+            <tr>
+              <td> https://www.iana.org/assignments/media-types/image/png</td>
+              <td> PNG</td>
+            </tr>
+            <tr>
+              <td> https://www.iana.org/assignments/media-types/image/gif</td>
+              <td> GIF</td>
+            </tr>
+            <tr>
+              <td>https://www.iana.org/assignments/media-types/image/jp2</td>
+              <td>JPEG 2000</td>
+            </tr>
+            <tr>
+              <td>https://www.iana.org/assignments/media-types/image/tiff</td>
+              <td>TIFF</td>
+            </tr>
+            <tr>
+              <td> https://www.iana.org/assignments/media-types/text/csv</td>
+              <td> CSV</td>
+            </tr>
+          </tbody>
+        </table>
       </section>
     </section>
     <section class="appendix page-break landscape" id="appendix-b">
