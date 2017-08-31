@@ -26,8 +26,9 @@
         profiel opgesteld. De vereisten uit het INSPIRE profiel zijn opgenomen
         in de Nederlandse profielen, zodat door te voldoen aan het Nederlandse
         profiel tevens aan de Europese INSPIRE vereisten voldaan kan worden.</p>
-      <p>Het metadataprofiel voor services wordt gebruikt in combinatie met het
-        profiel voor datasets. Beide profielen staan op de <a href="http://forumstandaardisatie.nl/open-standaarden/lijsten-met-open-standaarden/">Pas-toe-of-leg-uit-lijst</a>
+      <p>Het metadataprofiel voor services wordt gebruikt in
+        combinatie met het profiel voor datasets. Beide profielen
+        staan op de <a href="http://forumstandaardisatie.nl/open-standaarden/lijsten-met-open-standaarden/">Pas-toe-of-leg-uit-lijst</a>
         van het College Standaardisatie.</p>
       <p>Het Nederlandse metadata profiel voor geografie is niet statisch. Dit
         document wordt daarom onder beheer gebracht om wijzigingen naar behoefte
@@ -358,23 +359,23 @@ http://schemas.opengis.net/csw/2.0.2/profiles/apiso/1.0.0/apiso.xsd</a></td>
         <h3>String elementen</h3>
         <p>De ISO 19139 schema's staan meerdere manieren toe om vrije text op te
           nemen. Het basis element daarvoor is gco:CharacterString. Wanneer de
-          vrije text een term of code&nbsp; bevat die verwijst naar een extern
-          gedefinieerde uitleg of register waarde, wordt aanbevolen om het
-          gmx:Anchor element te gebruiken in plaats van gco:CharacterString.
+          vrije tekst een term of concept bevat waarvoor een extern
+          gedefinieerde definitie of uitleg beschikbaar is, wordt aanbevolen om
+          het gmx:Anchor element te gebruiken in plaats van gco:CharacterString.
           gmx:Anchor biedt de mogelijkheid om naast een string tevens een link
           naar een webadres op te nemen waar meer informatie over dit element te
-          vinden is. Daarvoor wordt het xlink:href attribuut gebruikt, die een
-          valide URL dient te bevatten. De textwaarde van het element moet naast
-          de link in het xlink:href attribuut nog steeds worden gegeven. Het zal
-          worden gegeven als mens leesbare text. </p>
+          vinden is. Daarvoor wordt het xlink:href attribuut gebruikt, dat een
+          valide URL dient te bevatten. Als tekst waarde van het Anchor element
+          kan een willekeurige voor de mens leesbaar label gekozen worden,
+          bijvoorbeeld een Nederlandse vertaling.</p>
         <aside class="example" title="Trefwoord verwijzing met Anchor">
           <pre><code>&lt;gmd:keyword&gt;
   &lt;gmx:anchor xlink:href="http://inspire.ec.europa.eu/theme/mf"&gt;
-    Meteorological geographical features
+    Meteorologische geografische kenmerken
     &lt;/gmx:anchor&gt;
 &lt;/gmd:keyword&gt;</code></pre>
         </aside>
-        <p>Meertaligheid in&nbsp; het metadata document wordt ondersteund door
+        <p>Meertaligheid in het metadata document wordt ondersteund door
           meerdere keren opnemen van het string element in verschillende talen,
           met extra informatie over de taal. Dit is uitgewerkt in <a href="#meertaligheid-metadata">Hoofdstuk
             7</a>.</p>
@@ -1060,10 +1061,11 @@ http://schemas.opengis.net/csw/2.0.2/profiles/apiso/1.0.0/apiso.xsd</a></td>
               </tr>
               <tr>
                 <td>Anchor</td>
-                <td><code>&lt;Anchor <br>
-                    xlink:href="http://domein/id/record/ee543323-0fe4-4353"&gt;
-                    ee543323-0fe4-4353-9161-eda61ff26c07 <br>
-                    &lt;/Anchor&gt;</code></td>
+                <td>
+                  <pre><code>&lt;Anchor
+  xlink:href="http://domein/id/record/ee543323-0fe4-4353"&gt;
+  ee543323-0fe4-4353-9161-eda61ff26c07&lt;/Anchor&gt;</code></pre>
+                </td>
               </tr>
               <tr>
                 <td>String</td>
@@ -1208,11 +1210,9 @@ http://schemas.opengis.net/csw/2.0.2/profiles/apiso/1.0.0/apiso.xsd</a></td>
               <tr>
                 <td>Anchor</td>
                 <td>
-                  <aside class="example" title="Organisatie verwijzing met Anchor">
-                    <pre><code>&lt;Anchor xlink:href="https://www.tno.nl/nl/over-tno/organisatie"&gt;
+                  <pre><code>&lt;Anchor xlink:href="https://www.tno.nl/nl/over-tno/organisatie"&gt;
   Nederlandse organisatie voor toegepast-natuurwetenschappelijk onderzoek (TNO)
 &lt;/Anchor&gt;</code></pre>
-                  </aside>
                 </td>
               </tr>
               <tr>
@@ -1297,12 +1297,10 @@ http://schemas.opengis.net/csw/2.0.2/profiles/apiso/1.0.0/apiso.xsd</a></td>
               <tr>
                 <td>Anchor</td>
                 <td>
-                  <aside class="example" title="Trefwoord verwijzing met Anchor">
-                    <pre><code>&lt;gmx:Anchor
+                  <pre><code>&lt;gmx:Anchor
   xlink:href="http://inspire.ec.europa.eu/theme/ps"&gt;
     Beschermde gebieden
 &lt;/gmx:Anchor&gt;</code></pre>
-                  </aside>
                 </td>
               </tr>
               <tr>
@@ -1332,12 +1330,10 @@ http://schemas.opengis.net/csw/2.0.2/profiles/apiso/1.0.0/apiso.xsd</a></td>
               <tr>
                 <td>Anchor</td>
                 <td>
-                  <aside class="example" title="Trefwoord verwijzing naar INSPIRE thesaurus">
-                    <pre><code>&lt;gmx:Anchor
+                  <pre><code>&lt;gmx:Anchor
   xlink:href="http://www.eionet.europa.eu/gemet/inspire_themes"&gt;
     GEMET - INSPIRE themes, version 1.0
 &lt;/gmx:Anchor&gt;</code></pre>
-                  </aside>
                 </td>
               </tr>
               <tr>
@@ -1377,7 +1373,7 @@ http://schemas.opengis.net/csw/2.0.2/profiles/apiso/1.0.0/apiso.xsd</a></td>
           <p>Dit is een conditioneel element. Het is verplicht als een trefwoord
             uit een thesaurus afkomstig is zoals in ieder geval voor de INSPIRE
             thema’s. Het bevat het type gebeurtenis waar de datum betrekking op
-            heeft. Type gebeurtenis wordt gekozen uit <a href="#codelijst-datetypecode">codelijst
+            heeft. Type gebeurtenis wordt gekozen uit <a href="#codelist-datetypecode">codelijst
               DateTypeCode</a> uit ISO 19115. Mogelijke gebeurtenissen zijn:
             creatie-, publicatie-, of revisiedatum.</p>
           <table>
@@ -1449,6 +1445,33 @@ http://schemas.opengis.net/csw/2.0.2/profiles/apiso/1.0.0/apiso.xsd</a></td>
             overheid om de bestaande gebruiksvoorwaarden voor geo-informatie te
             stroomlijnen. Zie ook <a href="http://www.geonovum.nl/onderwerpen/gebruiksvoorwaarden/algemeen-gebruiksvoorwaarden">
               algemeen gebruiksvoorwaarden</a></p>
+          <p>In het geval van een INSPIRE dataset dient twee maal het element
+            otherConstraints gebruikt te worden.</p>
+          <aside class="example" title="XML notatie open data licentie met INSPIRE">
+            <pre><code>&lt;resourceConstraints&gt;
+  &lt;MD_LegalConstraints&gt;
+    &lt;accessConstraints&gt;
+      &lt;MD_RestrictionCode 
+        codeListValue="otherRestrictions" 
+        codeList="http://www.isotc211.org/2005/resources/Codelist/gmxCodelists.xml#MD_RestrictionCode"/&gt;
+    &lt;/accessConstraints&gt;   
+    &lt;otherConstraints&gt;
+      &lt;gmx:anchor
+        xlink:href="https://creativecommons.org/publicdomain/mark/*/deed.nl"&gt;
+          Geen beperkingen
+      &lt;/gmx:anchor&gt;
+    &lt;/otherConstraints&gt;
+    &lt;otherConstraints&gt;
+      &lt;gmx:anchor
+        xlink:href="http://inspire.ec.europa.eu/metadata-codelist
+          /ConditionsApplyingToAccessAndUse/noConditionsApply"&gt;
+          Geen beperkingen
+      &lt;/gmx:anchor&gt;
+    &lt;/otherConstraints&gt;
+  &lt;/MD_LegalConstraints&gt;
+&lt;/resourceConstraints&gt;  
+        </code></pre>
+          </aside>
         </section>
         <section id="overige-beperkingen">
           <h4>Overige beperkingen</h4>
@@ -1471,7 +1494,7 @@ http://schemas.opengis.net/csw/2.0.2/profiles/apiso/1.0.0/apiso.xsd</a></td>
             dataset.&nbsp; </p>
           <p>Daarnaast wordt voor beperkingen op publieke toegang in één ander
             gmd:resourceConstraints/gmd:MD_LegalConstraints een waarde opgenomen
-            uit <a href="Codelijst-INSPIRE-LimitationsOnPublicAccess/">codelijst
+            uit <a href="#Codelijst-INSPIRE-ConditionsApplyingToAccessAndUse">codelijst
               LimitationsOnPublicAccess</a> . Als er geen beperkingen zijn dient
             men dat ook aan te geven, met de waarde "noLimitations". Voor
             INSPIRE is het gebruik van een Anchor verplicht.<br>
@@ -1486,46 +1509,33 @@ http://schemas.opengis.net/csw/2.0.2/profiles/apiso/1.0.0/apiso.xsd</a></td>
                 <th>Voorbeeld</th>
               </tr>
               <tr>
-                <td>Anchor</td>
+                <td>data-licenties</td>
                 <td>
-                  <aside class="example" title="Licentie verwijzing met Anchor">
-                    <pre><code>&lt;otherConstraints&gt;
+                  <pre><code>&lt;otherConstraints&gt;
   &lt;gmx:anchor
     xlink:href="https://creativecommons.org/publicdomain/mark/*/deed.nl"&gt;
       Geen beperkingen&lt;/gmx:anchor&gt;
 &lt;/otherConstraints&gt;</code></pre>
-                  </aside>
                 </td>
               </tr>
               <tr>
                 <td>String</td>
                 <td>
-                  <aside class="example" title="Licentie verwijzing met Anchor">
-                    <pre><code>&lt;otherConstraints&gt;
+                  <pre><code>&lt;otherConstraints&gt;
   https://creativecommons.org/publicdomain/mark/*/deed.nl
 &lt;/otherConstraints&gt;
 &lt;otherConstraints&gt;
-  Geen beperkingen&lt;/otherConstraints&gt;</code></pre>
-                  </aside>
+  Geen beperkingen
+&lt;/otherConstraints&gt;</code></pre>
                 </td>
-              </tr>
-            </tbody>
-          </table>
-          <table>
-            <colgroup> <col style="width: 25%"> <col style="width: 75%"> </colgroup>
-            <tbody>
-              <tr>
-                <th>Data type of Domein</th>
-                <th>Voorbeeld</th>
               </tr>
               <tr>
                 <td>ConditionsApplyingToAccessAndUse</td>
                 <td>
-                  <aside class="example" title="Beperking verwijzing met Anchor">
-                    <pre><code>&lt;gmx:anchor
-  xlink:href="http://inspire.ec.europa.eu/metadata-codelist/ConditionsApplyingToAccessAndUse/noConditionsApply"&gt;
+                  <pre><code>&lt;gmx:anchor
+  xlink:href="http://inspire.ec.europa.eu/metadata-codelist/
+    ConditionsApplyingToAccessAndUse/noConditionsApply"&gt;
     Geen beperkingen&lt;/gmx:anchor&gt;</code></pre>
-                  </aside>
                 </td>
               </tr>
             </tbody>
@@ -1534,69 +1544,10 @@ http://schemas.opengis.net/csw/2.0.2/profiles/apiso/1.0.0/apiso.xsd</a></td>
             Toelichting<br>
             <br>
           </i>Naast de link naar de licentie, wordt ook een voor mensen leesbare
-          tekst opgenomen. In onderstande tabel zijn daarvoor de beschrijvingen
-          en de bijbehorende link naar de licentie opgenomen. <br>
+          tekst opgenomen. In codelist <a href="#codelist-datalicenties">data-licenties</a>
+          zijn de beschrijvingen en de bijbehorende link naar de licentie
+          opgenomen. <br>
           <br>
-          <table>
-            <colgroup> <col style="width: 25%"> <col style="width: 35%"> <col
-                style="width: 40%"> </colgroup>
-            <tbody>
-              <tr>
-                <th>Beperking</th>
-                <th>Beschrijving overige beperkingen</th>
-                <th>URL</th>
-              </tr>
-              <tr>
-                <td>Open data (publiek)</td>
-                <td>Geen beperkingen</td>
-                <td>http://creativecommons.org/publicdomain/mark/*/deed.nl</td>
-              </tr>
-              <tr>
-                <td>Open data (CCO)</td>
-                <td>Geen beperkingen</td>
-                <td>http://creativecommons.org/publicdomain/zero/*/deed.nl</td>
-              </tr>
-              <tr>
-                <td>Open data (CC-BY)</td>
-                <td>Naamsvermelding verplicht, organisatienaam </td>
-                <td>http://creativecommons.org/licenses/by/*/deed.nl</td>
-              </tr>
-              <tr>
-                <td>Gebruiksvoorwaarden (CC-by-sa)</td>
-                <td>Gelijk Delen, Naamsvermelding verplicht, organisatienaam </td>
-                <td>http://creativecommons.org/licenses/by-sa/*/deed.nl</td>
-              </tr>
-              <tr>
-                <td>Gebruiksvoorwaarden (CC-by-nc)</td>
-                <td>Niet Commercieel, Naamsvermelding verplicht, organisatienaam
-                </td>
-                <td>http://creativecommons.org/licenses/by-nc/*/deed.nl</td>
-              </tr>
-              <tr>
-                <td>Gebruiksvoorwaarden (CC-by-nc-sa)</td>
-                <td>Niet Commercieel, Gelijk Delen, Naamsvermelding verplicht,
-                  organisatienaam </td>
-                <td>http://creativecommons.org/licenses/by-nc-sa/*/deed.nl</td>
-              </tr>
-              <tr>
-                <td>Gebruiksvoorwaarden (CC-by-nd)</td>
-                <td>Geen Afgeleide Werken, Naamsvermelding verplicht,
-                  organisatienaam </td>
-                <td>http://creativecommons.org/licenses/by-nd/*/deed.nl</td>
-              </tr>
-              <tr>
-                <td>Gebruiksvoorwaarden (CC-by-nc-nd)</td>
-                <td>Niet Commercieel, Geen Afgeleide Werken, Naamsvermelding
-                  verplicht, organisatienaam </td>
-                <td>http://creativecommons.org/licenses/by-nc-nd/*/deed.nl</td>
-              </tr>
-              <tr>
-                <td>Gebruiksvoorwaarden Geogedeeld</td>
-                <td>Geo Gedeeld licentie</td>
-                <td>Verwijzing naar een geldige URL van de licentie (http://) </td>
-              </tr>
-            </tbody>
-          </table>
         </section>
         <section id="gebruiksbeperkingen">
           <h4>Gebruiksbeperkingen</h4>
@@ -1635,13 +1586,12 @@ http://schemas.opengis.net/csw/2.0.2/profiles/apiso/1.0.0/apiso.xsd</a></td>
               <tr>
                 <td>B.5.10</td>
                 <td>
-                  <aside class="example" title="Representatie verwijzing met Anchor">
-                    <pre><code>&lt;gmd:MD_SpatialRepresentationTypeCode
-  codeList="http://www.isotc211.org/2005/resources/codeList.xml#MD_SpatialRepresentationTypeCode"
+                  <pre><code>&lt;gmd:MD_SpatialRepresentationTypeCode
+  codeList="http://www.isotc211.org/2005/resources
+   /codeList.xml#MD_SpatialRepresentationTypeCode"
   codeListValue="vector"&gt;
     vector
 &lt;/gmd:MD_SpatialRepresentationTypeCode&gt;</code></pre>
-                  </aside>
                 </td>
               </tr>
               <tr>
@@ -1862,12 +1812,10 @@ http://schemas.opengis.net/csw/2.0.2/profiles/apiso/1.0.0/apiso.xsd</a></td>
               <tr>
                 <td>Anchor</td>
                 <td>
-                  <aside class="example" title="Formaat verwijzing met Anchor">
-                    <pre><code>&lt;gmx:Anchor
+                  <pre><code>&lt;gmx:Anchor
  xlink:href="http://inspire.ec.europa.eu/id/document/tg/hy"&gt;
    Data specificatie hydrografie
 &lt;/gmx:Anchor&gt;</code></pre>
-                  </aside>
                 </td>
               </tr>
               <tr>
@@ -1913,20 +1861,32 @@ http://schemas.opengis.net/csw/2.0.2/profiles/apiso/1.0.0/apiso.xsd</a></td>
                 <td>URL</td>
                 <td>http://services.rce.geovoorziening.nl/www/download/data/Rijksmonumenten_nl.xml</td>
               </tr>
+            </tbody>
+          </table>
+          <br>
+          <table>
+            <colgroup> <col style="width: 25%"> <col style="width: 75%"> </colgroup>
+            <tbody>
               <tr>
                 <th>Data type of Domein</th>
                 <th>Voorbeeld endPoint</th>
               </tr>
               <tr>
                 <td>URL</td>
-                <td>http://services.rce.geovoorziening.nl/rce/ows?SERVICE=WMS&amp;&amp;SERVICE=WMS&amp;VERSION=1.3.0
-                  &amp;REQUEST=GetMap&amp;FORMAT=image%2Fpng&amp;TRANSPARENT=true&amp;LAYERS=rce%3AArcheologicalMonuments
-                  &amp;STYLES=Archeologie_in_Nederland&amp;CRS=EPSG%3A28992&amp;WIDTH=1650&amp;HEIGHT=830
-                  &amp;BBOX=-16020.479999999981%2C396426.24%2C161387.52000000002%2C485667.83999999997
-                  </td> </tr>
+                <td>
+                  <pre>http://services.rce.geovoorziening.nl/rce/ows?SERVICE=WMS
+ &amp;VERSION=1.3.0&amp;REQUEST=GetMap&amp;FORMAT=image/png
+ &amp;LAYERS=rce:ArcheologicalMonuments&amp;CRS=EPSG:28992
+ &amp;WIDTH=1650&amp;HEIGHT=830&amp;BBOX=-16020,396426,161387,485667</pre>
+                </td>
+              </tr>
               <tr>
                 <td>URL</td>
-                <td>http://services.rce.geovoorziening.nl/rce/wfs?request=GetFeature&amp;service=WFS&amp;version=2.0.0&amp;typeName=NationalListedMonuments&amp;outputFormat=json&amp;Count=50</td>
+                <td>
+                  <pre>http://services.rce.geovoorziening.nl/rce/wfs?request=GetFeature
+ &amp;service=WFS&amp;version=2.0.0&amp;typeName=NationalListedMonuments
+ &amp;outputFormat=json&amp;Count=50</pre>
+                </td>
               </tr>
             </tbody>
           </table>
@@ -1946,7 +1906,7 @@ http://schemas.opengis.net/csw/2.0.2/profiles/apiso/1.0.0/apiso.xsd</a></td>
             opgegeven. Bijvoorbeeld naar een bestand, WFS of webpagina. </p>
           <p>Indien de URL een 'endPoint' betreft dan dient een waarde
             geselecteerd te worden uit de <a href="#codelist-mediatypes">codelijst
-              media-types</a>. </p>
+              Media-types</a>. </p>
           <p>Indien de URL een 'accessPoint' betreft, dient een waarde
             geselecteerd te worden uit de <a href="#codelist-protocol">codelijst
               Protocol</a>. </p>
@@ -1958,29 +1918,28 @@ http://schemas.opengis.net/csw/2.0.2/profiles/apiso/1.0.0/apiso.xsd</a></td>
                 <th>Voorbeeld</th>
               </tr>
               <tr>
-                <td>media-types</td>
+                <td>Media-types als Anchor</td>
                 <td>
                   <pre><code>&lt;gmx:Anchor
-                        xlink:href="https://www.iana.org/assignments/media-types/application/gml+xml"&gt;
-                        GML
-                        &lt;/gmx:Anchor&gt;</code></pre>
+  xlink:href="https://www.iana.org/assignments/
+    media-types/application/gml+xml"&gt;
+  GML&lt;/gmx:Anchor&gt;</code></pre>
                 </td>
               </tr>
               <tr>
-                <td>protocol</td>
-                <td>
-                  <pre><code>&lt;gmx:Anchor
-                        xlink:href="http://standaarden.geonovum.nl/protocol/OGC:WMS"&gt;
-                        OGC:WMS
-                        &lt;/gmx:Anchor&gt;</code></pre>
-                </td>
-              </tr>
-              <tr>
-                <td>media-types</td>
+                <td>Media-types als String</td>
                 <td>GML</td>
               </tr>
               <tr>
-                <td>protocol</td>
+                <td>Protocol als Anchor</td>
+                <td>
+                  <pre><code>&lt;gmx:Anchor
+  xlink:href="http://www.opengeospatial.org/standards/wms"&gt;
+  OGC:WMS&lt;/gmx:Anchor&gt;</code></pre>
+                </td>
+              </tr>
+              <tr>
+                <td>Protocol als String</td>
                 <td>OGC:WMS</td>
               </tr>
             </tbody>
@@ -2048,19 +2007,67 @@ http://schemas.opengis.net/csw/2.0.2/profiles/apiso/1.0.0/apiso.xsd</a></td>
                 <th>Voorbeeld</th>
               </tr>
               <tr>
-                <td>OnLineDescriptionCode</td>
+                <td>OnLineDescriptionCode als Anchor</td>
                 <td>
                   <pre><code>&lt;gmx:Anchor
-                        xlink:href="http://inspire.ec.europa.eu/metadata-codelist/OnLineDescriptionCode/endPoint"&gt;endPoint
-                        &lt;/gmx:Anchor&gt;</code></pre>
+  xlink:href="http://inspire.ec.europa.eu/metadata-codelist/
+    OnLineDescriptionCode/endPoint"&gt;
+  endPoint&lt;/gmx:Anchor&gt;</code></pre>
                 </td>
               </tr>
               <tr>
-                <td>OnLineDescriptionCode</td>
+                <td>OnLineDescriptionCode als String</td>
                 <td>endPoint</td>
               </tr>
             </tbody>
           </table>
+          <aside class="example" title="XML notatie van een accessPoint distributie als laag in een WMS">
+            <pre><code>
+&lt;gmd:onLine&gt;
+  &lt;gmd:CI_OnlineResource&gt;
+    &lt;gmd:linkage&gt;
+      &lt;gmd:URL&gt;
+        http://services.rce.geovoorziening.nl/rce/ows?SERVICE=WMS
+ &amp;VERSION=1.3.0&amp;REQUEST=GetCapabilities
+      &lt;/gmd:URL&gt;
+      &lt;/gmd:linkage&gt;
+      &lt;gmd:protocol&gt;
+        &lt;gmx:Anchor
+          xlink:href="http://www.opengeospatial.org/standards/wms"&gt;
+          OGC:WMS&lt;/gmx:Anchor&gt;
+      &lt;/gmd:protocol&gt;
+      &lt;gmd:description&gt;
+        &lt;gmx:Anchor
+          xlink:href="http://inspire.ec.europa.eu/metadata-codelist/OnLineDescriptionCode/accessPoint"&gt;
+          accessPoint&lt;/gmx:Anchor&gt;
+      &lt;/gmd:description&gt;
+  &lt;/gmd:CI_OnlineResource&gt;
+&lt;/gmd:onLine&gt;</code></pre>
+          </aside>
+          <aside class="example" title="XML notatie van een endPoint distributie als featuretype in een WFS">
+            <pre><code>
+&lt;gmd:onLine&gt;
+  &lt;gmd:CI_OnlineResource&gt;
+    &lt;gmd:linkage&gt;
+      &lt;gmd:URL&gt;
+        http://services.rce.geovoorziening.nl/rce/ows?service=WFS
+          &amp;request=GetFeature&amp;typeName=rce:Townscapes&amp;count=10
+          &amp;outputFormat=application/json&amp;VERSION=2.0.0
+      &lt;/gmd:URL&gt;
+      &lt;/gmd:linkage&gt;
+      &lt;gmd:protocol&gt;
+      &lt;gmx:Anchor
+        xlink:href="https://www.iana.org/assignments/media-types/application/json"&gt;
+        json&lt;/gmx:Anchor&gt;&lt;/gmd:protocol&gt;
+      &lt;gmd:description&gt;
+        &lt;gmx:Anchor
+          xlink:href="http://inspire.ec.europa.eu/metadata-codelist/OnLineDescriptionCode/endPoint"&gt;
+          endPoint&lt;/gmx:Anchor&gt;
+      &lt;/gmd:description&gt;
+  &lt;/gmd:CI_OnlineResource&gt;
+&lt;/gmd:onLine&gt;
+        </code></pre>
+          </aside>
         </section>
         <section id="niveau-kwaliteitsbeschrijving">
           <h4>Niveau kwaliteitsbeschrijving</h4>
@@ -2128,25 +2135,18 @@ http://schemas.opengis.net/csw/2.0.2/profiles/apiso/1.0.0/apiso.xsd</a></td>
               <tr>
                 <td>Anchor</td>
                 <td>
-                  <aside class="example" title="Datamodel verwijzing met Anchor">
-                    <pre><code>&lt;gmx:Anchor
+                  <pre><code>&lt;gmx:Anchor
  xlink:href="http://inspire.ec.europa.eu/id/document/tg/au"&gt;
    Data specificatie administratieve eenheden
 &lt;/gmx:Anchor&gt;</code></pre>
-                  </aside>
                 </td>
               </tr>
               <tr>
               </tr>
               <tr>
                 <td>String</td>
-                <td>“INSPIRE Data Specification on Administrative Units –
-                  Guidelines v3.0.1”. </td>
-              </tr>
-              <tr>
-                <td> String<br>
-                </td>
-                <td>IMRO2008</td>
+                <td>INSPIRE Data Specification on Administrative Units –
+                  Guidelines v3.0.1 </td>
               </tr>
             </tbody>
           </table>
@@ -2469,11 +2469,11 @@ http://schemas.opengis.net/csw/2.0.2/profiles/apiso/1.0.0/apiso.xsd</a></td>
               <tr>
                 <td>Anchor</td>
                 <td>
-                  <aside class="example" title="Trefwoord verwijzing met Anchor">
-                    <pre><code>&lt;Anchor xlink:href="https://www.tno.nl/nl/over-tno/organisatie"&gt;
-  Nederlandse organisatie voor toegepast-natuurwetenschappelijk onderzoek (TNO)
+                  <pre><code>&lt;Anchor 
+  xlink:href="https://www.tno.nl/nl/over-tno/organisatie"&gt;
+    Nederlandse organisatie voor 
+    toegepast-natuurwetenschappelijk onderzoek (TNO)
 &lt;/Anchor&gt;</code></pre>
-                  </aside>
                 </td>
               </tr>
               <tr>
@@ -2615,6 +2615,604 @@ http://schemas.opengis.net/csw/2.0.2/profiles/apiso/1.0.0/apiso.xsd</a></td>
         kiezen. Hierdoor blijft interoperabiliteit beter behouden.&nbsp; De
         tabel in <a href="#appendix-b">Appendix B</a> bevat zowel de verplichte
         als optionele elementen. </p>
+      <p>Naast de verplichte kernset heeft dit metadata profiel tevens een
+        optionele set. Deze set bestaat uit een selectie van metadata-elementen
+        uit ISO 19115, die nuttig zijn voor het beheer van geografische datasets
+        en –series. Het betreft niet de volledige ISO 19115 set. Als men meer
+        metadata wil vastleggen dan mogelijk met de verplichte kernset dan dient
+        men bij voorkeur de benodigde elementen uit deze optionele set te
+        kiezen. Hierdoor blijft interoperabiliteit beter behouden. <a href="#table-58">Tabel
+          3</a> bevat de optionele set. Van elk metadata element wordt
+        achtereenvolgens gegeven: de metadata naam (naam waaronder de metadata
+        entiteit wordt aangeduid), het ISO nummer, de (eventueel specialiseerde)
+        Nederlandse metadata element naam van het element in ISO 19115 en de
+        bijbehorende definitie. In <a href="#appendix-b">Appendix B</a> worden
+        de onderlinge relaties tussen de elementen in de kernset en de optionele
+        set aangegeven via de abstracte klassen die ISO 19115 gebruikt.</p>
+      <table>
+        <colgroup><col style="width: 20%;"><col style="width: 10%;"><col style="width: 20%;"><col
+            style="width: 50%"></colgroup>
+        <thead>
+          <tr>
+            <th>Metadata naam</th>
+            <th>ISO nr.</th>
+            <th>Nederlandse metadata-element naam</th>
+            <th>Definitie</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Metadata karakterset</td>
+            <td>4</td>
+            <td>Metadata karakterset</td>
+            <td>Volledige naam van de karakter codeerstandaard om de metadata
+              set te beschrijven.</td>
+          </tr>
+          <tr>
+            <td>Locale</td>
+            <td>11.2</td>
+            <td>Locale</td>
+            <td>Geeft informatie over de alternative gebruikte talen</td>
+          </tr>
+          <tr>
+            <td rowspan="2">Contactpersoon metadata <i>Er wordt geadviseerd de
+                contactgegevens te ontsluiten via een website (URL organisatie)
+                met daarop de relevante gegevens in plaats van deze elementen.</i>
+            </td>
+            <td>375</td>
+            <td>Naam contactpersoon metadata</td>
+            <td>Naam van de contactpersoon.</td>
+          </tr>
+          <tr>
+            <td>377</td>
+            <td>Rol contactpersoon metadata</td>
+            <td>Beschrijving op welke manier de persoon betrokken is bij de
+              metadata.</td>
+          </tr>
+          <tr>
+            <td rowspan="8">Contactpersoon metadata contactgegevens</td>
+            <td>408</td>
+            <td>Telefoonnummer</td>
+            <td>Telefoonnummer.</td>
+          </tr>
+          <tr>
+            <td>409</td>
+            <td>Faxnummer</td>
+            <td>Faxnummer.</td>
+          </tr>
+          <tr>
+            <td>381</td>
+            <td>Adres</td>
+            <td>Contactadres.</td>
+          </tr>
+          <tr>
+            <td>382</td>
+            <td>Plaats</td>
+            <td>Plaatsnaam behorende bij het contactadres van de organisatie.</td>
+          </tr>
+          <tr>
+            <td>383</td>
+            <td>Provincie</td>
+            <td>Provincie behorende bij het contactadres van de organisatie.</td>
+          </tr>
+          <tr>
+            <td>384</td>
+            <td>Postcode</td>
+            <td>Postcode behorende bij het contactadres van de organisatie.</td>
+          </tr>
+          <tr>
+            <td>385</td>
+            <td>Land</td>
+            <td>Land behorende bij het contactadres van de organisatie.</td>
+          </tr>
+          <tr>
+            <td>397</td>
+            <td>URL</td>
+            <td>URL van de organisatie</td>
+          </tr>
+          <tr>
+            <td>Code verticaal referentiesysteem</td>
+            <td>207</td>
+            <td>Code verticaal referentiesysteem</td>
+            <td>Alfanumerieke waarde die het gebruikte verticale
+              referentiesysteem van de dataset aangeeft.</td>
+          </tr>
+          <tr>
+            <td>Verantwoordelijke organisatie voor namespace verticaal
+              referentiesysteem</td>
+            <td>208.1</td>
+            <td>Verantwoordelijke organisatie voor namespace verticaal
+              referentiesysteem</td>
+            <td>Naam of identificatie van de persoon of organisatie
+              verantwoordelijk voor de namespace van het verticale referentie
+              systeem.</td>
+          </tr>
+          <tr>
+            <td>Verantwoordelijke organisatie voor namespace temporele
+              referentiesysteem</td>
+            <td>208.1</td>
+            <td>Verantwoordelijke organisatie voor namespace temporele
+              referentiesysteem</td>
+            <td>Naam of identificatie van de persoon of organisatie
+              verantwoordelijk voor de namespace van het temporele referentie
+              systeem.</td>
+          </tr>
+          <tr>
+            <td>Alternatieve titel</td>
+            <td>361</td>
+            <td>Alternatieve titel</td>
+            <td>Vertaling van de dataset titel in een andere taal of een
+              aanvulling op de dataset titel (ondertitel).</td>
+          </tr>
+          <tr>
+            <td>Versie</td>
+            <td>363</td>
+            <td>Versie</td>
+            <td>Versienummer of -naam.</td>
+          </tr>
+          <tr>
+            <td>Serienaam/-nummer</td>
+            <td>404</td>
+            <td>Serienaam/-nummer</td>
+            <td>Naam van de serie of afgeleide dataset, waar de dataset deel van
+              uitmaakt.</td>
+          </tr>
+          <tr>
+            <td>Doel van vervaardiging</td>
+            <td>26</td>
+            <td>Doel van vervaardiging</td>
+            <td>Doel waarvoor de data oorspronkelijk werd gemaakt of bedoeld.
+              Bijvoorbeeld de projectnaam.</td>
+          </tr>
+          <tr>
+            <td rowspan="2">Contactpersoon data</td>
+            <td>375</td>
+            <td>Naam contactpersoon</td>
+            <td>Naam van de contactpersoon.</td>
+          </tr>
+          <tr>
+            <td>377</td>
+            <td>Rol contactpersoon</td>
+            <td>Beschrijving op welke manier de persoon betrokken is bij de
+              data.</td>
+          </tr>
+          <tr>
+            <td rowspan="8">Contactpersoon dataset contactgegevens</td>
+            <td>408</td>
+            <td>Telefoonnummer</td>
+            <td>Telefoonnummer.</td>
+          </tr>
+          <tr>
+            <td>409</td>
+            <td>Faxnummer</td>
+            <td>Faxnummer.</td>
+          </tr>
+          <tr>
+            <td>381</td>
+            <td>Adres</td>
+            <td>Contactadres.</td>
+          </tr>
+          <tr>
+            <td>382</td>
+            <td>Plaats</td>
+            <td>Plaatsnaam behorende bij het contactadres van de organisatie.</td>
+          </tr>
+          <tr>
+            <td>383</td>
+            <td>Provincie</td>
+            <td>Provincie behorende bij het contactadres van de organisatie.</td>
+          </tr>
+          <tr>
+            <td>384</td>
+            <td>Postcode</td>
+            <td>Postcode behorende bij het contactadres van de organisatie.</td>
+          </tr>
+          <tr>
+            <td>385</td>
+            <td>Land</td>
+            <td>Land behorende bij het contactadres van de organisatie.</td>
+          </tr>
+          <tr>
+            <td>397</td>
+            <td>URL</td>
+            <td>URL van de organisatie</td>
+          </tr>
+          <tr>
+            <td>Herzieningsfrequentie</td>
+            <td>143</td>
+            <td>Herzieningsfrequentie</td>
+            <td>Frequentie waarmee de data herzien wordt.</td>
+          </tr>
+          <tr>
+            <td>Datum volgende herziening</td>
+            <td>144</td>
+            <td>Datum volgende herziening</td>
+            <td>Geplande datum volgende herziening.</td>
+          </tr>
+          <tr>
+            <td>Voorbeeld</td>
+            <td>49</td>
+            <td>Voorbeeld</td>
+            <td>Bestandsnaam van een figuur waarin een voorbeeldweergave te zien
+              is.</td>
+          </tr>
+          <tr>
+            <td>(Juridische) gebruiksrestricties</td>
+            <td>71</td>
+            <td>(Juridische) gebruiksrestricties</td>
+            <td>Gebruikseisen die er zorg voor dragen dat privacy of
+              intellectueel eigendom gewaarborgd zijn en elke andere speciale
+              beperkingen voor het verkrijgen van de metadata of data.</td>
+          </tr>
+          <tr>
+            <td>Veiligheidsrestricties</td>
+            <td>74</td>
+            <td>Veiligheidsrestricties</td>
+            <td>Beperkingen opgelegd omdat informatie vertrouwelijk is.</td>
+          </tr>
+          <tr>
+            <td>Veiligheidsrestricties Toelichting</td>
+            <td>75</td>
+            <td>Toelichting</td>
+            <td>Toelichting op de veiligheidsrestricties.</td>
+          </tr>
+          <tr>
+            <td>Naam gerelateerde dataset</td>
+            <td>360</td>
+            <td>Naam gerelateerde dataset</td>
+            <td>Groep van samenhangende datasets niet zijnde een dataset serie.
+            </td>
+          </tr>
+          <tr>
+            <td rowspan="2">Gerelateerde dataset referentie datum</td>
+            <td>394</td>
+            <td>Gerelateerde dataset referentie datum</td>
+            <td>Referentie datum van de gerelateerde dataset.</td>
+          </tr>
+          <tr>
+            <td>395</td>
+            <td>Gerelateerde dataset datum type</td>
+            <td>Gebeurtenis waar de datum betrekking op heeft.</td>
+          </tr>
+          <tr>
+            <td>Type relatie</td>
+            <td>66.4</td>
+            <td>Type relatie</td>
+            <td>Type relatie tussen de datasets.</td>
+          </tr>
+          <tr>
+            <td>Beschrijving temporele dekking</td>
+            <td>335</td>
+            <td>Beschrijving temporele dekking</td>
+            <td>Inhoudelijke geldigheid van de data, gespecificeerd als een
+              periode.</td>
+          </tr>
+          <tr>
+            <td>Minimum z-coördinaat</td>
+            <td>355</td>
+            <td>Minimum z-coördinaat</td>
+            <td>Laagste verticale waarde in de dataset.</td>
+          </tr>
+          <tr>
+            <td>Maximum z-coördinaat</td>
+            <td>356</td>
+            <td>Maximum z-coördinaat</td>
+            <td>Hoogste verticale waarde in de dataset.</td>
+          </tr>
+          <tr>
+            <td>Vertikaal CRS</td>
+            <td>358</td>
+            <td>Vertikaal CRS</td>
+            <td>Coördinaat referent system waarin de hoogtes zijn weergegeven</td>
+          </tr>
+          <tr>
+            <td>Identifier geografisch gebied</td>
+            <td>207</td>
+            <td>Identifier geografisch gebied</td>
+            <td>Verwijzing die het geografisch gebied dat wordt bedekt door de
+              data aangeeft.</td>
+          </tr>
+          <tr>
+            <td>Temporele dekking</td>
+            <td>351</td>
+            <td>Temporele dekking</td>
+            <td>Inhoudelijke geldigheid van de data, gespecificeerd naar begin-
+              en einddatum.</td>
+          </tr>
+          <tr>
+            <td>Aanvullende informatie</td>
+            <td>46</td>
+            <td>Aanvullende informatie</td>
+            <td>Aanvullende informatie over de data, bijvoorbeeld documentatie.
+            </td>
+          </tr>
+          <tr>
+            <td>Featurecatalogue inbegrepen bij dataset</td>
+            <td>236</td>
+            <td>Featurecatalogue inbegrepen bij dataset</td>
+            <td>Indicatie of een featurecatalogue beschrijving beschikbaar is
+              voor de dataset</td>
+          </tr>
+          <tr>
+            <td>FeatureTypes</td>
+            <td>237</td>
+            <td>FeatureTypes</td>
+            <td>Featuretypes uit de featurecatalogue die in de dataset voorkomen</td>
+          </tr>
+          <tr>
+            <td>Titel van de featurecatalogue</td>
+            <td>360</td>
+            <td>Titel van de featurecatalogue</td>
+            <td>Naam van de featurecatalogue</td>
+          </tr>
+          <tr>
+            <td>Datum van de featurecatalogue</td>
+            <td>394</td>
+            <td>Datum van de featurecatalogue</td>
+            <td>Referentie datum van de featurecatalogue.</td>
+          </tr>
+          <tr>
+            <td>Datum type van de featurecatalogue</td>
+            <td>395</td>
+            <td>Datum type van de featurecatalogue</td>
+            <td>Gebeurtenis waar de datum betrekking op heeft.</td>
+          </tr>
+          <tr>
+            <td>Unieke Identifier van de featurecatalogue</td>
+            <td>207</td>
+            <td>Unieke Identifier van de featurecatalogue</td>
+            <td>Unieke waarde om de featurecatalogue te beschrijven binnen een
+              namespace</td>
+          </tr>
+          <tr>
+            <td rowspan="4">Contactpersoon distribuerende organisatie</td>
+            <td>375</td>
+            <td>Naam contactpersoon</td>
+            <td>Naam van de contactpersoon distribuerende organisatie.</td>
+          </tr>
+          <tr>
+            <td>376</td>
+            <td>Naam distribuerende organisatie</td>
+            <td>Naam van de verantwoordelijke organisatie</td>
+          </tr>
+          <tr>
+            <td>377</td>
+            <td>Rol contactpersoon</td>
+            <td>Beschrijving op welke manier de persoon betrokken is bij de
+              data.</td>
+          </tr>
+          <tr>
+            <td>397</td>
+            <td>URL organisatie</td>
+            <td>Locatie voor online toegang bij gebruik van een Uniform Resource
+              Locator adres of een vergelijkbaar schema.</td>
+          </tr>
+          <tr>
+            <td>Rol organisatie</td>
+            <td>379</td>
+            <td>Rol organisatie</td>
+            <td>Functie die wordt uitgevoerd door de verantwoordelijke
+              organisatie.</td>
+          </tr>
+          <tr>
+            <td rowspan="8">Contactpersoon distribuerende organisatie
+              Contactgegevens <i>Er wordt geadviseerd de contactgegevens te
+                ontsluiten via een website (URL organisatie) met daarop de
+                relevante gegevens in plaats van deze elementen.</i> </td>
+            <td>408</td>
+            <td>Telefoonnummer</td>
+            <td>Telefoonnummer.</td>
+          </tr>
+          <tr>
+            <td>409</td>
+            <td>Faxnummer</td>
+            <td>Faxnummer.</td>
+          </tr>
+          <tr>
+            <td>381</td>
+            <td>Adres</td>
+            <td>Contactadres.</td>
+          </tr>
+          <tr>
+            <td>382</td>
+            <td>Plaats</td>
+            <td>Plaatsnaam behorende bij het contactadres van de organisatie.</td>
+          </tr>
+          <tr>
+            <td>383</td>
+            <td>Provincie</td>
+            <td>Provincie behorende bij het contactadres van de organisatie.</td>
+          </tr>
+          <tr>
+            <td>384</td>
+            <td>Postcode</td>
+            <td>Postcode behorende bij het contactadres van de organisatie.</td>
+          </tr>
+          <tr>
+            <td>385</td>
+            <td>Land</td>
+            <td>Land behorende bij het contactadres van de organisatie.</td>
+          </tr>
+          <tr>
+            <td>386</td>
+            <td>E-mail</td>
+            <td>E-mail adres van de contactpersoon of organisatie.</td>
+          </tr>
+          <tr>
+            <td rowspan="3">Ordergegevens</td>
+            <td>299</td>
+            <td>Prijsinformatie</td>
+            <td>Prijsinformatie voor het verkrijgen van de data inclusief
+              munteenheid (zoals beschreven in ISO 4217).</td>
+          </tr>
+          <tr>
+            <td>301</td>
+            <td>Orderprocedure</td>
+            <td>Algemene instructies, voorwaarden en services geleverd door de
+              distributeur.</td>
+          </tr>
+          <tr>
+            <td>302</td>
+            <td>Doorlooptijd orderprocedure</td>
+            <td>Doorlooptijd van de aanvraag.</td>
+          </tr>
+          <tr>
+            <td>Leverings-/gebruikseenheid</td>
+            <td>275</td>
+            <td>Leverings-/gebruikseenheid</td>
+            <td>Eenheid waarin de data wordt geleverd. </td>
+          </tr>
+          <tr>
+            <td>Bestandsgrootte</td>
+            <td>276</td>
+            <td>Bestandsgrootte</td>
+            <td>Verwachte grote van een eenheid van het bestand in genoemd
+              formaat in Megabyte.</td>
+          </tr>
+          <tr>
+            <td>Naam medium</td>
+            <td>292</td>
+            <td>Naam medium</td>
+            <td>Naam van het medium waarop de data ontvangen kan worden.</td>
+          </tr>
+          <tr>
+            <td>Features</td>
+            <td>151</td>
+            <td>Features</td>
+            <td>Naam van de ruimtelijke object types</td>
+          </tr>
+          <tr>
+            <td rowspan="2">Geometrische nauwkeurigheid</td>
+            <td>135</td>
+            <td>Type waarde</td>
+            <td>Indien bij kwantitatieve waarde geen numerieke waarde wordt
+              ingevuld, mag de waarde 'tekst' ingevuld worden.</td>
+          </tr>
+          <tr>
+            <td>137</td>
+            <td>Geometrische nauwkeurigheid</td>
+            <td>Afwijking van de x- en y-coördinaten ten opzichte van de
+              werkelijke plaats op aarde.</td>
+          </tr>
+          <tr>
+            <td rowspan="2">Compleetheid</td>
+            <td>135</td>
+            <td>Type waarde</td>
+            <td>Indien bij kwantitatieve waarde geen numerieke waarde wordt
+              ingevuld, mag de waarde 'tekst' ingevuld worden.</td>
+          </tr>
+          <tr>
+            <td>137</td>
+            <td>Compleetheid</td>
+            <td>Omschrijving in hoeverre een dataset compleet is, of anders
+              gezegd, een inschatting van wat er nog ontbreekt.</td>
+          </tr>
+          <tr>
+            <td>Beschrijving uitgevoerde bewerkingen</td>
+            <td>87</td>
+            <td>Beschrijving uitgevoerde bewerkingen</td>
+            <td>Beschrijving uitgevoerde bewerkingen.</td>
+          </tr>
+          <tr>
+            <td>Datum uitgevoerde bewerkingen</td>
+            <td>89</td>
+            <td>Datum uitgevoerde bewerkingen</td>
+            <td>Datum en/of periode waarop de bewerkingen zijn gestart.</td>
+          </tr>
+          <tr>
+            <td rowspan="2">Producent beschreven dataset</td>
+            <td>376</td>
+            <td>Producent beschreven dataset</td>
+            <td>Organisatie die de bewerkingen op de dataset heeft uitgevoerd.</td>
+          </tr>
+          <tr>
+            <td>379</td>
+            <td>Rol producent beschreven dataset</td>
+            <td>Rol van de organisatie die de bewerkingen op de dataset heeft
+              uitgevoerd.</td>
+          </tr>
+          <tr>
+            <td>Beschrijving brondata</td>
+            <td>93</td>
+            <td>Beschrijving brondata</td>
+            <td>Dit veld kan gebruikt worden om een algemene beschrijving of
+              opmerking te geven betreft de kwaliteit van de (verschillende)
+              brongegevens.</td>
+          </tr>
+          <tr>
+            <td>Inwinningsmethode</td>
+            <td>87</td>
+            <td>Inwinningsmethode</td>
+            <td>Methode die gebruikt is om de brongegevens in te winnen.</td>
+          </tr>
+          <tr>
+            <td>Datum inwinning brondata</td>
+            <td>89</td>
+            <td>Datum inwinning brondata</td>
+            <td>Datum of periode waarin de brongegevens zijn ingewonnen.</td>
+          </tr>
+          <tr>
+            <td rowspan="2">Inwinnende organisatie</td>
+            <td>376</td>
+            <td>Inwinnende organisatie</td>
+            <td>Naam van de organisatie die de brongegevens heeft ingewonnen.</td>
+          </tr>
+          <tr>
+            <td>379</td>
+            <td>Rol inwinnende organisatie</td>
+            <td>Rol van de organisatie die de brongegevens heeft ingewonnen.</td>
+          </tr>
+        </tbody>
+      </table>
+      Een aantal van de optionele elementen zijn hieronder verder uitgewerkt.
+      <h3>Identifier gebied</h3>
+      <p>Het refereren aan de unieke identificatie van een gebied dat betrekking
+        heeft op de dataset ondersteunt een eventuele ontsluiting van de
+        metadata in communities die geen ondersteuning bieden voor een
+        geometrisch object, zoals bijvoorbeeld DCAT-NL. In DCAT-NL worden bij
+        voorkeur OWMS waardelijsten gebruikt om een gebied aan te duiden. </p>
+      <aside class="example" title="XML notatie identifier gebied">
+        <pre><code>&lt;extent&gt; 
+  &lt;EX_Extent&gt; 
+    &lt;geographicElement&gt;
+      &lt;EX_GeographicDescription&gt;
+        &lt;geographicIdentifier&gt;
+          &lt;MD_Identifier&gt;
+            &lt;code&gt;
+              &lt;Anchor xlink:href="http://standaarden.overheid.nl/owms/terms/Ameland"&gt;
+                Ameland&lt;/Anchor&gt;
+            &lt;code&gt;
+          &lt;MD_Identifier&gt;
+        &lt;geographicIdentifier&gt;
+      &lt;EX_GeographicDescription&gt;
+    &lt;geographicElement&gt;   
+  &lt;EX_Extent&gt;
+&lt;extent&gt;
+        </code></pre>
+      </aside>
+      <h3>Temporele dekking</h3>
+      <p>Er zijn verschillende methoden, waarmee de temporele dekking in XML kan
+        worden vastgelegd. Voor de interoperabiliteit is het echter optimaal
+        dezelfde methode te hanteren. Daarom wordt voor de implementatie van dit
+        profiel de notering, die ook door INSPIRE voorgesteld wordt, gehanteerd;
+      </p>
+      <aside class="example" title="XML notatie temporele dekking">
+        <pre><code>&lt;extent&gt; 
+  &lt;EX_Extent&gt; 
+    &lt;temporalElement&gt; 
+      &lt;EX_TemporalExtent&gt; 
+        &lt;extent&gt; 
+          &lt;gml:TimePeriod gml:id="d2febbb4-e66f-4ac8-ba76-8fd9bc7c8be6"&gt; 
+            &lt;gml:beginPosition&gt;2008-01-01T11:45:30&lt;/gml:beginPosition&gt; 
+            &lt;gml:endPosition&gt;2008-12-31T09:10:00&lt;/gml:endPosition&gt; 
+          &lt;/gml:TimePeriod&gt; 
+        &lt;/extent&gt; 
+      &lt;/EX_TemporalExtent&gt;
+    &lt;/temporalElement&gt;
+  &lt;/EX_Extent&gt;
+&lt;/extent&gt;
+        </code></pre>
+      </aside>
     </section>
     <section id="meertaligheid-metadata">
       <h2>Meertaligheid metadata</h2>
@@ -2644,11 +3242,11 @@ http://schemas.opengis.net/csw/2.0.2/profiles/apiso/1.0.0/apiso.xsd</a></td>
       <figure id="image004"><a href="st-mdprofiel-iso19115/image004.png"><img src="st-mdprofiel-iso19115/image004.png"
             alt="image004"></a> <figcaption>Vrije tekst en “localised”
           characterString.<br>
-          <br>
-          Hieronder een voorbeeld hoe meertaligheid in een XML wordt toegepast,
-          de locale wordt één keer opgenomen, voor elke character wordt de
-          waarde van het element in de metadata taal, in onderstaande geval in
-          het engels en in de localised taal opgenomen : </figcaption> </figure>
+        </figcaption> </figure>
+      <p>Hieronder een voorbeeld hoe meertaligheid in een XML wordt toegepast,
+        de locale wordt één keer opgenomen, voor elke character wordt de waarde
+        van het element in de metadata taal, in onderstaande geval in het engels
+        en in de localised taal opgenomen.</p>
       <aside class="example" title="Meertalige metadata">
         <pre><code>&lt;gmd:locale&gt;
     &lt;gmd:PT_Locale id="DUT"&gt;
@@ -2677,12 +3275,14 @@ http://schemas.opengis.net/csw/2.0.2/profiles/apiso/1.0.0/apiso.xsd</a></td>
       <p> De standaard voor het vastleggen van object en attribuutinformatie is
         ISO 19110 <em>FeatureCatalogue</em>. Het verstrekken van deze metadata
         wordt niet door dit profiel verplicht gesteld, het is echter aan te
-        bevelen deze informatie ter beschikking te stellen.</p>
+        bevelen deze informatie ter beschikking te stellen. Gebruikers kunnen
+        daarmee eenvoudig de betekenis van de vaak technische of ingekorte
+        attribuut definities achterhalen.</p>
       <p>Het ISO 19110 is een apart document waarnaar verwezen kan worden vanuit
         één of meerdere dataset beschijvingen. De relatie vanuit de metadata
         naar de featurecatalogue kan worden gelegd door in de dataset
         beschrijving elementen van de klasse MD_FeatureCatalogueDescription op
-        te nemen. De koppeling word gelegd vanuit een featureCatalogueCitation
+        te nemen. De koppeling wordt gelegd vanuit een featureCatalogueCitation
         naar het feature catalog document. De titel, datum en identifier van de
         citation in metadata MD_Metadata.contentInfo &gt;
         MD_FeatureCatalogueDescription.featureCatalogueCitation &gt; CI_Citation
@@ -2746,33 +3346,67 @@ http://schemas.opengis.net/csw/2.0.2/profiles/apiso/1.0.0/apiso.xsd</a></td>
         <li>Naam van attribuut (<i>FC_FeatureAttribute.memberName</i>)</li>
         <li>Toelichting bij het attribuut (<i>FC_FeatureAttribute.definition</i>)</li>
       </ul>
-      <p>Eventueel per attribuut de mogelijke labels en eventueel een code (<i>FC_ListedValue</i>):</p>
+      <p>Indien voor de vulling van het element een codelijst gebruikt wordt,
+        kan ieder element uit de codelijst opgenomen worden (<i>FC_ListedValue</i>):</p>
       <ul>
         <li>Code van attribuut (<i>FC_ListedValue.label</i>)</li>
         <li>Code van attribuut (<i>FC_ListedValue.code</i>)</li>
       </ul>
       <p></p>
-      <aside class="example" title="Voorbeeld Featurecatalogue">
-        <pre><b>Voorbeeld van de waarden van bovengenomede elementen;</b>
-<b>De featurecatalog</b>  
-naam: Voorbeeld feture catalog
-versie:1.0  datum:20-07-2017  
-verantwoordelijke organisatie:Geonovum
-verantwoordelijke organisatie rol: pointOfContact
-<b>Minimaal één featuretype</b>
-  Naam object: Administratieve eenheden
-  Toelichting: Eenheden waar een lidstaat rechtsbevoegdheid heeft
-<b>Eventueel per featuretype één of meerdere attributen</b> 
-<b>met eventueeel een toelichting</b>
-  Naam: Gemeentecode
-  Toelichting: gemeentencode, conform CBS lijst 2017.
-<b>Eventueel per attribuut één of meerdere labels met eventueel een code</b>
-  Label: Apeloorn
-  Code: 200
-  Label: Arnhem
-  Code: 202
- </pre>
-      </aside>
+      <aside class="example" title="Voorbeeld Featurecatalogue"> <code>
+          <pre>&lt;gfc:FC_FeatureCatalogue 
+    xmlns:gfc="http://www.isotc211.org/2005/gfc" 
+    xmlns:gco="http://www.isotc211.org/2005/gco" 
+    xmlns:xlink="http://www.w3.org/1999/xlink"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+    xmlns:gmd="http://www.isotc211.org/2005/gmd" 
+    xmlns:gmx="http://www.isotc211.org/2005/gmx"
+    xsi:schemaLocation="http://www.isotc211.org/2005/gfc/gfc.xsd"&gt;
+    &lt;gfc:name&gt;
+      &lt;gco:CharacterString&gt;voorbeeld feature catalogue&lt;/gco:CharacterString&gt;
+    &lt;/gfc:name&gt;
+    &lt;gfc:versionNumber&gt;
+      &lt;gco:CharacterString&gt;1.0&lt;/gco:CharacterString&gt;
+    &lt;/gfc:versionNumber&gt;
+    &lt;gfc:versionDate&gt;
+      &lt;gco:Date&gt;2017-02-21&lt;/gco:Date&gt;
+    &lt;/gfc:versionDate&gt;
+    &lt;gfc:producer&gt;
+      &lt;gmd:CI_ResponsibleParty&gt;
+        &lt;gmd:organisationName&gt;
+          &lt;gco:CharacterString&gt;Geonovum&lt;/gco:CharacterString&gt;
+        &lt;/gmd:organisationName&gt;
+        &lt;gmd:role&gt;
+          &lt;gmd:CI_RoleCode codeListValue="pointOfContact" codeList="CI_RoleCode" /&gt;
+        &lt;/gmd:role&gt;
+      &lt;/gmd:CI_ResponsibleParty&gt;
+    &lt;/gfc:producer&gt;
+    &lt;gfc:featureType&gt;
+      &lt;gfc:FC_FeatureType&gt;
+        &lt;gfc:typeName&gt;
+          &lt;gco:LocalName&gt;Administratieve eenheden&lt;/gco:LocalName&gt;
+        &lt;/gfc:typeName&gt;
+        &lt;gfc:code&gt;
+          &lt;gmx:Anchor xlink:href="http://inspire.ec.europa.eu/theme/au"&gt;au&lt;/gmx:Anchor&gt;
+        &lt;/gfc:code&gt;
+        &lt;gfc:definition&gt;
+          &lt;gco:CharacterString&gt;
+          Door administratieve grenzen gescheiden lokale, regionale en nationale bestuurlijke eenheden die deel uitmaken van gebieden waarover de lidstaten rechtsbevoegdheid hebben en/of uitoefenen.&lt;/gco:CharacterString&gt;
+        &lt;/gfc:definition&gt;
+        &lt;gfc:carrierOfCharacteristics&gt;  
+          &lt;gfc:FC_FeatureAttribute&gt;
+            &lt;gfc:memberName&gt;
+              &lt;gco:LocalName&gt;Gemeentecode&lt;/gco:LocalName&gt;
+            &lt;/gfc:memberName&gt;
+            &lt;gfc:definition&gt;
+              &lt;gco:CharacterString&gt;gemeentecode, conform cbs gemeentecodelijst 2017&lt;/gco:CharacterString&gt;
+            &lt;/gfc:definition&gt;    
+          &lt;/gfc:FC_FeatureAttribute&gt;
+        &lt;/gfc:carrierOfCharacteristics&gt;
+      &lt;/gfc:FC_FeatureType&gt;
+    &lt;/gfc:featureType&gt;
+  &lt;/gfc:FC_FeatureCatalogue&gt;</pre>
+        </code></aside>
       <p>Deze methode van vastleggen van object en attribuutinformatie is
         conform NEN3610. Indien een dataset volgens een sectormodel van NEN3610
         is gecodeerd dan kan een objectcatalogus worden gegenereerd, aangezien
@@ -2825,27 +3459,22 @@ verantwoordelijke organisatie rol: pointOfContact
       <section id="codelist-datetypecode">
         <h4>Codelijst CI_DateTypeCode</h4>
         <table>
-          <colgroup> <col style="width: 25%;"> <col style="width: 25%;"> <col
-              style="width: 50%;"> </colgroup>
+          <colgroup> <col style="width: 25%;"> <col style="width: 75%;"> </colgroup>
           <tbody>
             <tr>
-              <th>NL vertaling</th>
               <th>Waarde</th>
               <th>Beschrijving</th>
             </tr>
             <tr>
-              <td>Creatie</td>
               <td>creation</td>
               <td>Datum waarop de dataset of dataset serie is gecreëerd.</td>
             </tr>
             <tr>
-              <td>Publicatie</td>
               <td>publication</td>
               <td>Publicatie datum waarop de dataset of dataset serie is
                 gepubliceerd. </td>
             </tr>
             <tr>
-              <td>Revisie</td>
               <td>revision</td>
               <td>Datum waarop de dataset of dataset serie is gecontroleerd,
                 verbeterd of is gewijzigd. </td>
@@ -2856,38 +3485,31 @@ verantwoordelijke organisatie rol: pointOfContact
       <section id="codelist-onlinefunctioncode">
         <h4>Codelijst CI_OnLineFunctionCode</h4>
         <table>
-          <colgroup> <col style="width: 25%;"> <col style="width: 25%;"> <col
-              style="width: 50%;"> </colgroup>
+          <colgroup> <col style="width: 25%;"> <col style="width: 75%;"> </colgroup>
           <tbody>
             <tr>
-              <th>NL vertaling</th>
               <th>Waarde</th>
               <th>Beschrijving</th>
             </tr>
             <tr>
-              <td>Download</td>
               <td>download</td>
               <td>Online instructies voor het overbrengen van gegevens van een
                 opslagapparaat of systeem naar een ander </td>
             </tr>
             <tr>
-              <td>Informatie</td>
               <td>information</td>
               <td>Online informatie over de bron</td>
             </tr>
             <tr>
-              <td>Offline toegang</td>
               <td>offlineAccess</td>
               <td>Online instructies voor het verkrijgen van de bron van de
                 provider</td>
             </tr>
             <tr>
-              <td>Bestellen</td>
               <td>order</td>
               <td>Online bestelproces voor het verkrijgen van de bron</td>
             </tr>
             <tr>
-              <td>Zoeken</td>
               <td>search</td>
               <td>Online zoekinterface voor het zoeken naar informatie over de
                 bron</td>
@@ -2898,67 +3520,55 @@ verantwoordelijke organisatie rol: pointOfContact
       <section id="codelist-rolecode">
         <h4>Codelijst CI_RoleCode</h4>
         <table>
-          <colgroup> <col style="width: 25%;"> <col style="width: 25%;"> <col
-              style="width: 50%;"> </colgroup>
+          <colgroup> <col style="width: 25%;"> <col style="width: 75%;"> </colgroup>
           <tbody>
             <tr>
-              <th>NL vertaling</th>
               <th>Waarde</th>
               <th>Beschrijving</th>
             </tr>
             <tr>
-              <td>Verstrekker</td>
               <td>resourceProvider</td>
-              <td>Organisatie die de data verstrekt.</td>
+              <td>Partij die de data verstrekt.</td>
             </tr>
             <tr>
-              <td>Beheerder</td>
               <td>custodian</td>
-              <td>voor het beheer van de data.</td>
+              <td>Partij verantwoordelijk voor het beheer van de data.</td>
             </tr>
             <tr>
-              <td>Eigenaar</td>
               <td>owner</td>
               <td>Partij die eigenaar is van de data.</td>
             </tr>
             <tr>
-              <td>Gebruiker</td>
               <td>user</td>
               <td>Partij die de data gebruikt.</td>
             </tr>
             <tr>
-              <td>Distributeur</td>
               <td>distributor</td>
               <td>Partij die de data verstrekt.</td>
             </tr>
             <tr>
-              <td>Maker</td>
               <td>originator</td>
               <td>Partij die de data heeft gecreëerd</td>
             </tr>
             <tr>
-              <td>Contactpunt</td>
               <td>pointOfContact</td>
-              <td>van kennis of verstrekking van de data.</td>
+              <td>Partij die optreedt als contactpunt voor uitwisselen van
+                kennis of verstrekking van de data.</td>
             </tr>
             <tr>
-              <td>Inwinner</td>
               <td>principalInvestigator</td>
-              <td>uitvoering van onderzoek.</td>
+              <td>Partij die betrokken was bij de uitvoering van onderzoek.</td>
             </tr>
             <tr>
-              <td>Bewerker</td>
               <td>processor</td>
               <td>Partij die de data heeft bewerkt, zodanig dat de data is
                 gewijzigd. </td>
             </tr>
             <tr>
-              <td>Uitgever</td>
               <td>publisher</td>
               <td>Partij die de data publiceert.</td>
             </tr>
             <tr>
-              <td>Auteur</td>
               <td>author</td>
               <td>Partij die auteur is van de data.</td>
             </tr>
@@ -2968,16 +3578,13 @@ verantwoordelijke organisatie rol: pointOfContact
       <section id="codelist-associationtypecode">
         <h4>Codelijst DS_AssociationTypeCode</h4>
         <table>
-          <colgroup> <col style="width: 25%;"> <col style="width: 25%;"> <col
-              style="width: 50%;"> </colgroup>
+          <colgroup> <col style="width: 25%;"> <col style="width: 75%;"> </colgroup>
           <tbody>
             <tr>
-              <th>NL vertaling</th>
               <th>Waarde</th>
               <th>Beschrijving</th>
             </tr>
             <tr>
-              <td>Kruisverwijzing</td>
               <td>crossReference</td>
               <td>Verwijzing van één dataset naar een andere dataset</td>
             </tr>
@@ -2987,124 +3594,98 @@ verantwoordelijke organisatie rol: pointOfContact
       <section id="codelist-charactersetcode">
         <h4>Codelijst MD_CharacterSetCode</h4>
         <table>
-          <colgroup> <col style="width: 25%;"> <col style="width: 25%;"> <col
-              style="width: 50%;"> </colgroup>
+          <colgroup> <col style="width: 25%;"> <col style="width: 75%;"> </colgroup>
           <tbody>
             <tr>
-              <th>NL vertaling</th>
               <th>Waarde</th>
               <th>Beschrijving</th>
             </tr>
             <tr>
-              <td>Ucs2</td>
               <td>ucs2</td>
               <td>16-bit fixed size Universal Character Set, based on ISO/IEC
                 10646. </td>
             </tr>
             <tr>
-              <td>Ucs4</td>
               <td>ucs4</td>
               <td>32-bit fixed size Universal Character Set, based on ISO/IEC
                 10646. </td>
             </tr>
             <tr>
-              <td>Utf7</td>
               <td>utf7</td>
               <td>7-bit variable size UCS Transfer Format, based on ISO/IEC
                 10646. </td>
             </tr>
             <tr>
-              <td>Utf8</td>
               <td>utf8</td>
               <td>8-bit variable size UCS Transfer Format, based on ISO/IEC
                 10646. </td>
             </tr>
             <tr>
-              <td>Utf16</td>
               <td>utf16</td>
               <td>16-bit variable size UCS Transfer Format, based on ISO/IEC
                 10646. </td>
             </tr>
             <tr>
               <td>8859part1</td>
-              <td>8859part1</td>
               <td>ISO/IEC 8859-1, Information technology 8-bit single-byte coded
                 graphic character sets Part 1: Latin alphabet No. 1. </td>
             </tr>
             <tr>
-              <td>8859part2</td>
               <td>8859part2</td>
               <td>ISO/IEC 8859-2, Information technology 8-bit single-byte coded
                 graphic character sets Part 2: Latin alphabet No. 2. </td>
             </tr>
             <tr>
               <td>8859part3</td>
-              <td>8859part3</td>
               <td>ISO/IEC 8859-3, Information technology 8-bit single-byte coded
                 graphic character sets Part 3: Latin alphabet No. 3. </td>
             </tr>
             <tr>
-              <td>8859part4</td>
               <td>8859part4</td>
               <td>ISO/IEC 8859-4, Information technology 8-bit single-byte coded
                 graphic character sets Part 4: Latin alphabet No. 4. </td>
             </tr>
             <tr>
               <td>8859part5</td>
-              <td>8859part5</td>
               <td>ISO/IEC 8859-5, Information technology 8-bit single-byte coded
                 graphic character sets Part 5: Latin/Cyrillic alphabet. </td>
             </tr>
             <tr>
-              <td>8859part6</td>
               <td>8859part6</td>
               <td>ISO/IEC 8859-6, Information technology 8-bit single-byte coded
                 graphic character sets Part 6: Latin/Arabic alphabet. </td>
             </tr>
             <tr>
               <td>8859part7</td>
-              <td>8859part7</td>
               <td>ISO/IEC 8859-7, Information technology 8-bit single-byte coded
                 graphic character sets Part 7: Latin/Greek alphabet. </td>
             </tr>
             <tr>
-              <td>8859part8</td>
               <td>8859part8</td>
               <td>ISO/IEC 8859-8, Information technology 8-bit single-byte coded
                 graphic character sets Part 8: Latin/Hebrew alphabet. </td>
             </tr>
             <tr>
               <td>8859part9</td>
-              <td>8859part9</td>
               <td>ISO/IEC 8859-9, Information technology 8-bit single-byte coded
                 graphic character sets Part 9: Latin alphabet No. 5. </td>
             </tr>
             <tr>
-              <td>8859part10</td>
               <td>8859part10</td>
               <td>ISO/IEC 8859-10, Information technology 8-bit single-byte
                 coded graphic character sets Part 10: Latin alphabet No. 6. </td>
             </tr>
             <tr>
               <td>8859part11</td>
-              <td>8859part11</td>
               <td>ISO/IEC 8859-11, Information technology 8-bit single-byte
                 coded graphic character sets Part 11: Latin/Thai alphabet. </td>
             </tr>
             <tr>
-              <td>(gereserveerd voor toekomstig gebruik)</td>
-              <td>(reserved for future use)</td>
-              <td>a future ISO/IEC 8-bit single-byte coded graphic character set
-                (e.g. possibly 8859-12). </td>
-            </tr>
-            <tr>
-              <td>8859part13</td>
               <td>8859part13</td>
               <td>ISO/IEC 8859-13, Information technology 8-bit single-byte
                 coded graphic character sets Part 13: Latin alphabet No. 7. </td>
             </tr>
             <tr>
-              <td>8859part14</td>
               <td>8859part14</td>
               <td>ISO/IEC 8859-14, Information technology 8-bit single-byte
                 coded graphic character sets Part 14: Latin alphabet No. 8
@@ -3112,54 +3693,44 @@ verantwoordelijke organisatie rol: pointOfContact
             </tr>
             <tr>
               <td>8859part15</td>
-              <td>8859part15</td>
               <td>ISO/IEC 8859-15, Information technology 8-bit single-byte
                 coded graphic character sets Part 15: Latin alphabet No. 9. </td>
             </tr>
             <tr>
               <td>8859part16</td>
-              <td>8859part16</td>
               <td>ISO/IEC 8859-16, Information technology 8-bit single-byte
                 coded graphic character sets Part 16: Latin alphabet No. 10. </td>
             </tr>
             <tr>
-              <td>Jis</td>
               <td>jis</td>
               <td>Japanese code set used for electronic transmission.</td>
             </tr>
             <tr>
-              <td>ShiftJIS</td>
               <td>shiftJIS</td>
               <td>Japanese code set used on MS-DOS based machines.</td>
             </tr>
             <tr>
-              <td>EucJP</td>
               <td>eucJP</td>
               <td>Japanese code set used on UNIX based machines.</td>
             </tr>
             <tr>
-              <td>UsAscii</td>
               <td>usAscii</td>
               <td>United states ASCII code set (ISO 646 US).</td>
             </tr>
             <tr>
-              <td>Ebcdic</td>
               <td>ebcdic</td>
               <td>Ibm mainframe code set.</td>
             </tr>
             <tr>
-              <td>EucKR</td>
               <td>eucKR</td>
               <td>Korean code set.</td>
             </tr>
             <tr>
-              <td>Big5</td>
               <td>big5</td>
               <td>Traditional Chinese code set used in Taiwan, Hong Kong of
                 China and other areas. </td>
             </tr>
             <tr>
-              <td>GB2312</td>
               <td>GB2312</td>
               <td>Simplified Chinese code set.</td>
             </tr>
@@ -3169,37 +3740,29 @@ verantwoordelijke organisatie rol: pointOfContact
       <section id="codelist-classificationcode">
         <h4>Codelijst MD_ClassificationCode</h4>
         <table>
-          <colgroup> <col style="width: 25%;"> <col style="width: 25%;"> <col
-              style="width: 50%;"> </colgroup>
+          <colgroup> <col style="width: 25%;"> <col style="width: 75%;"> </colgroup>
           <tbody>
             <tr>
-              <th>NL vertaling</th>
               <th>Waarde</th>
               <th>Beschrijving</th>
             </tr>
             <tr>
-              <td>Vrij toegankelijk</td>
               <td>unclassified</td>
               <td>Beschikbaar voor algemene ontsluiting.</td>
             </tr>
             <tr>
-              <td>Niet toegankelijk</td>
               <td>restricted</td>
-              <td><br>
-              </td>
+              <td>Niet toegankelijk. </td>
             </tr>
             <tr>
-              <td>Vertrouwelijk</td>
               <td>confidential</td>
-              <td>informatie.</td>
+              <td>Vertrouwelijke informatie.</td>
             </tr>
             <tr>
-              <td>Geheim</td>
               <td>secret</td>
-              <td>behalve een geselecteerde groep personen.</td>
+              <td>Niet toegankelijk, behalve een geselecteerde groep personen.</td>
             </tr>
             <tr>
-              <td>Zeer geheim</td>
               <td>topSecret</td>
               <td>Hoogste geheimhouding verplicht.</td>
             </tr>
@@ -3209,122 +3772,58 @@ verantwoordelijke organisatie rol: pointOfContact
       <section id="codelist-maintenancefrequencycode">
         <h4>Codelijst MD_MaintenanceFrequencyCode</h4>
         <table>
-          <colgroup> <col style="width: 25%;"> <col style="width: 25%;"> <col
-              style="width: 50%;"> </colgroup>
+          <colgroup> <col style="width: 25%;"> <col style="width: 75%;"> </colgroup>
           <tbody>
             <tr>
-              <th>NL vertaling</th>
               <th>Waarde</th>
               <th>Beschrijving</th>
             </tr>
             <tr>
-              <td>continu</td>
               <td>continual</td>
               <td>Data wordt herhaaldelijk en vaak geactualiseerd.</td>
             </tr>
             <tr>
-              <td>Dagelijks</td>
               <td>daily</td>
               <td>Data wordt elke dag geactualiseerd.</td>
             </tr>
             <tr>
-              <td>Wekelijks</td>
               <td>weekly</td>
               <td>Data wordt wekelijks geactualiseerd.</td>
             </tr>
             <tr>
-              <td>2-wekelijks</td>
               <td>fortnightly</td>
               <td>Data wordt 2-wekelijks geactualiseerd.</td>
             </tr>
             <tr>
-              <td>Maandelijks</td>
               <td>monthly</td>
               <td>Data wordt maandelijks geactualiseerd.</td>
             </tr>
             <tr>
-              <td>1 x per kwartaal</td>
               <td>quarterly</td>
               <td>Data wordt elke kwartaal geactualiseerd.</td>
             </tr>
             <tr>
-              <td>1 x per half jaar</td>
-              <td>biannually</td>
-              <td>Data wordt half jaarlijks geactualiseerd.</td>
-            </tr>
-            <tr>
-              <td>Jaarlijks</td>
               <td>annually</td>
               <td>Data wordt jaarlijks geactualiseerd.</td>
             </tr>
             <tr>
-              <td>2-jaarlijks</td>
-              <td>2annually</td>
-              <td>Data wordt één keer per 2 jaar geactualiseerd.</td>
+              <td>biannually</td>
+              <td>Data wordt iedere 2 jaar geactualiseerd.</td>
             </tr>
             <tr>
-              <td>3-jaarlijks</td>
-              <td>3annually</td>
-              <td>Data wordt één keer per 3 jaar geactualiseerd.</td>
-            </tr>
-            <tr>
-              <td>4-jaarlijks</td>
-              <td>4annually</td>
-              <td>Data wordt één keer per 4 jaar geactualiseerd.</td>
-            </tr>
-            <tr>
-              <td>5-jaarlijks</td>
-              <td>5annually</td>
-              <td>Data wordt één keer per 5 jaar geactualiseerd.</td>
-            </tr>
-            <tr>
-              <td>6-jaarlijks</td>
-              <td>6annually</td>
-              <td>Data wordt één keer per 6 jaar geactualiseerd.</td>
-            </tr>
-            <tr>
-              <td>7-jaarlijks</td>
-              <td>7annually</td>
-              <td>Data wordt één keer per 7 jaar geactualiseerd.</td>
-            </tr>
-            <tr>
-              <td>8-jaarlijks</td>
-              <td>8annually</td>
-              <td>Data wordt één keer per 8 jaar geactualiseerd.</td>
-            </tr>
-            <tr>
-              <td>9-jaarlijks</td>
-              <td>9annually</td>
-              <td>Data wordt één keer per 9 jaar geactualiseerd.</td>
-            </tr>
-            <tr>
-              <td>10-jaarlijks</td>
-              <td>10annually</td>
-              <td>Data wordt niet binnen 10 jaar geactualiseerd.</td>
-            </tr>
-            <tr>
-              <td><i>Meer dan 10-jaarlijks</i></td>
-              <td><i>moreThan10annually</i></td>
-              <td><i>Data wordt één keer per meer dan 10 jaar geactualiseerd.</i></td>
-            </tr>
-            <tr>
-              <td>Indien nodig</td>
               <td>asNeeded</td>
               <td>Data wordt geactualiseerd indien nodig.</td>
             </tr>
             <tr>
-              <td>Onregelmatig</td>
               <td>irregular</td>
               <td>Data wordt geactualiseerd in intervallen die niet even lang
                 duren. </td>
             </tr>
             <tr>
-              <td>Niet gepland</td>
               <td>notPlanned</td>
               <td>Er zijn geen plannen om de data te actualiseren.</td>
             </tr>
             <tr>
-              <td>Onbekend</td>
               <td>unknown</td>
               <td>Herzieningsfrequentie is niet bekend.</td>
             </tr>
@@ -3334,101 +3833,81 @@ verantwoordelijke organisatie rol: pointOfContact
       <section id="codelist-mediumnamecode">
         <h4>Codelijst MD_MediumNameCode</h4>
         <table>
-          <colgroup> <col style="width: 25%;"> <col style="width: 25%;"> <col
-              style="width: 50%;"> </colgroup>
+          <colgroup> <col style="width: 25%;"> <col style="width: 75%;"> </colgroup>
           <tbody>
             <tr>
-              <th>NL vertaling</th>
               <th>Waarde</th>
               <th>Beschrijving</th>
             </tr>
             <tr>
               <td>cdRom</td>
-              <td>cdRom</td>
               <td>Read only optical disk</td>
             </tr>
             <tr>
-              <td>dvd</td>
               <td>dvd</td>
               <td>Digital versatile disk</td>
             </tr>
             <tr>
               <td>dvdRom</td>
-              <td>dvdRom</td>
               <td>Digital versatile disk, read only</td>
             </tr>
             <tr>
-              <td>3halfInchFloppy</td>
               <td>3halfInchFloppy</td>
               <td>3,5 inch magnetic disk</td>
             </tr>
             <tr>
               <td>5quarterInchFloppy</td>
-              <td>5quarterInchFloppy</td>
               <td>5,25 inch magnetic disk</td>
             </tr>
             <tr>
-              <td>7trackTape</td>
               <td>7trackTape</td>
               <td>7 track magnetic tape</td>
             </tr>
             <tr>
               <td>9trackTape</td>
-              <td>9trackTape</td>
               <td>9 track magnetic tape</td>
             </tr>
             <tr>
-              <td>3480Cartridge</td>
               <td>3480Cartridge</td>
               <td>3480 cartridge tape drive</td>
             </tr>
             <tr>
               <td>3490Cartridge</td>
-              <td>3490Cartridge</td>
               <td>3490 cartridge tape drive</td>
             </tr>
             <tr>
-              <td>3580Cartridge</td>
               <td>3580Cartridge</td>
               <td>3580 cartridge tape drive</td>
             </tr>
             <tr>
               <td>4mmCartridgeTape</td>
-              <td>4mmCartridgeTape</td>
               <td>4 millimetre magnetic tape</td>
             </tr>
             <tr>
-              <td>8mmCartridgeTape</td>
               <td>8mmCartridgeTape</td>
               <td>8 millimetre magnetic tape</td>
             </tr>
             <tr>
               <td>1quarterInchCartridgeTape</td>
-              <td>1quarterInchCartridgeTape</td>
               <td>0,25 inch magnetic tape</td>
             </tr>
             <tr>
-              <td>digitalLinearTape</td>
               <td>digitalLinearTape</td>
               <td>Half inch cartridge streaming tape drive</td>
             </tr>
             <tr>
               <td>onLine</td>
-              <td>onLine</td>
               <td>Direct computer linkage</td>
             </tr>
             <tr>
-              <td>satellite</td>
               <td>satellite</td>
               <td>Linkage through a atellite communication system</td>
             </tr>
             <tr>
               <td>telephoneLink</td>
-              <td>telephoneLink</td>
               <td>Communication trough a telephone network</td>
             </tr>
             <tr>
-              <td>hardcopy</td>
               <td>hardcopy</td>
               <td>Pamphlet or leaflet giving descriptive information</td>
             </tr>
@@ -3438,47 +3917,38 @@ verantwoordelijke organisatie rol: pointOfContact
       <section id="codelist-progresscode">
         <h4>Codelijst MD_ProgressCode</h4>
         <table>
-          <colgroup> <col style="width: 25%;"> <col style="width: 25%;"> <col
-              style="width: 50%;"> </colgroup>
+          <colgroup> <col style="width: 25%;"> <col style="width: 75%;"> </colgroup>
           <tbody>
             <tr>
-              <th>NL vertaling</th>
               <th>Waarde</th>
               <th>Beschrijving</th>
             </tr>
             <tr>
-              <td>Compleet</td>
               <td>completed</td>
               <td>Productie van de data is compleet / afgerond.</td>
             </tr>
             <tr>
-              <td>Historisch archief</td>
               <td>historicalArchive</td>
               <td>De data is opgeslagen in een offline opslagmedium.</td>
             </tr>
             <tr>
-              <td>Niet relevant</td>
               <td>obsolete</td>
               <td>Data is niet langer relevant.</td>
             </tr>
             <tr>
-              <td>Continu geactualiseerd</td>
               <td>onGoing</td>
               <td>Data wordt continu geactualiseerd.</td>
             </tr>
             <tr>
-              <td>Gepland</td>
               <td>planned</td>
               <td>Datum is al bekend wanneer de data gecreëerd of geactualiseerd
                 moet zijn. </td>
             </tr>
             <tr>
-              <td>Actualisatie vereist</td>
               <td>required</td>
               <td>Data moet nog gegenereerd of geactualiseerd worden.</td>
             </tr>
             <tr>
-              <td>In ontwikkeling</td>
               <td>underDevelopment</td>
               <td>Data wordt momenteel gecreëerd.</td>
             </tr>
@@ -3488,16 +3958,13 @@ verantwoordelijke organisatie rol: pointOfContact
       <section id="codelist-restrictioncode">
         <h4>Codelijst MD_RestrictionCode</h4>
         <table>
-          <colgroup> <col style="width: 25%;"> <col style="width: 25%;"> <col
-              style="width: 50%;"> </colgroup>
+          <colgroup> <col style="width: 25%;"> <col style="width: 75%;"> </colgroup>
           <tbody>
             <tr>
-              <th>NL vertaling</th>
               <th>Waarde</th>
               <th>Beschrijving</th>
             </tr>
             <tr>
-              <td>Copyright</td>
               <td>copyright</td>
               <td>Exclusief recht voor publicatie, productie, of verkoop van
                 rechten op een literair, theater, muzikaal of artistiek werk, of
@@ -3506,43 +3973,36 @@ verantwoordelijke organisatie rol: pointOfContact
                 componist, artiest of distributeur. </td>
             </tr>
             <tr>
-              <td>Patent</td>
               <td>patent</td>
               <td>Overheid heeft een exclusief recht toegekend om een uitvinding
                 te maken, verkopen, gebruiken of in licentie uit te geven. </td>
             </tr>
             <tr>
-              <td>Patent in wording</td>
               <td>patentPending</td>
               <td>Geproduceerde of verkochte informatie wachtend op een patent.
               </td>
             </tr>
             <tr>
-              <td>Merknaam</td>
               <td>trademark</td>
               <td>Een naam, symbool of ander object om een product te
                 identificeren, wat officieel geregistreerd is en gebruik
                 wettelijk voorbehouden is aan de eigenaar of fabrikant. </td>
             </tr>
             <tr>
-              <td>Licentie</td>
               <td>license</td>
               <td>Formele toestemming of iets te doen.</td>
             </tr>
             <tr>
-              <td>Intellectueel eigendom</td>
               <td>intellectualPropertyRights</td>
               <td>Recht op een financieel voordeel van en controle hebben op de
                 distributie een niet tastbaar eigendom wat het resultaat is van
                 creativiteit. </td>
             </tr>
             <tr>
-              <td>Niet toegankelijk</td>
               <td>restricted</td>
               <td>Verbod op distributie en gebruik.</td>
             </tr>
             <tr>
-              <td>Anders</td>
               <td>otherRestrictions</td>
               <td>Restrictie niet opgenomen in lijst.</td>
             </tr>
@@ -3552,21 +4012,17 @@ verantwoordelijke organisatie rol: pointOfContact
       <section id="codelist-scopecode">
         <h4>Codelijst MD_ScopeCode</h4>
         <table>
-          <colgroup> <col style="width: 25%;"> <col style="width: 25%;"> <col
-              style="width: 50%;"> </colgroup>
+          <colgroup> <col style="width: 25%;"> <col style="width: 75%;"> </colgroup>
           <tbody>
             <tr>
-              <th>NL vertaling</th>
               <th>Waarde</th>
               <th>Beschrijving</th>
             </tr>
             <tr>
-              <td>Dataset</td>
               <td>dataset</td>
               <td>Informatie heeft betrekking op de dataset.</td>
             </tr>
             <tr>
-              <td>Series</td>
               <td>series</td>
               <td>Informatie heeft betrekking op de serie.</td>
             </tr>
@@ -3576,34 +4032,28 @@ verantwoordelijke organisatie rol: pointOfContact
       <section id="codelist-spatialrepresentationtypecode">
         <h4>Codelijst MD_SpatialRepresentationTypeCode</h4>
         <table>
-          <colgroup> <col style="width: 25%;"> <col style="width: 25%;"> <col
-              style="width: 50%;"> </colgroup>
+          <colgroup> <col style="width: 25%;"> <col style="width: 75%;"> </colgroup>
           <tbody>
             <tr>
-              <th>NL vertaling</th>
               <th>Waarde</th>
               <th>Beschrijving</th>
             </tr>
             <tr>
-              <td>Vector</td>
               <td>vector</td>
               <td>Vector data wordt gebruikt om geografische data te
                 representeren. </td>
             </tr>
             <tr>
-              <td>Grid</td>
               <td>grid</td>
               <td>Grid data wordt gebruikt om geografische data te
                 representeren. </td>
             </tr>
             <tr>
-              <td>Tekst tabel</td>
               <td>textTable</td>
               <td>Tekstuele of tabel data wordt gebruikt om geografische data te
                 representeren. </td>
             </tr>
             <tr>
-              <td>Tin</td>
               <td>tin</td>
               <td>Triangulated irregular network.</td>
             </tr>
@@ -3613,130 +4063,109 @@ verantwoordelijke organisatie rol: pointOfContact
       <section id="codelist-topiccategorycode">
         <h4>Codelijst MD_TopicCategoryCode</h4>
         <table>
-          <colgroup> <col style="width: 25%;"> <col style="width: 25%;"> <col
-              style="width: 50%;"> </colgroup>
+          <colgroup> <col style="width: 25%;"> <col style="width: 75%;"> </colgroup>
           <tbody>
             <tr>
-              <th>NL vertaling</th>
               <th>Waarde</th>
               <th>Beschrijving</th>
             </tr>
             <tr>
-              <td>Landbouw en veeteelt</td>
               <td>farming</td>
               <td>Houden van dieren en/of verbouwen van planten. Voorbeeld:
                 landbouw, irrigatie, ziekten die gewassen aantasten. </td>
             </tr>
             <tr>
-              <td>Biota</td>
               <td>biota</td>
               <td>Voorbeeld: habitats, ecologie.</td>
             </tr>
             <tr>
-              <td>Grenzen</td>
               <td>boundaries</td>
               <td>Wettelijke gebiedsbeschrijvingen. Flora en fauna in
                 natuurlijke omgeving. Voorbeeld: politieke en administratieve
                 grenzen. </td>
             </tr>
             <tr>
-              <td>Klimatologie, meteorologie atmosfeer</td>
               <td>climatologyMeteorologyAtmosphere</td>
               <td>Processen en fenomenen in de atmosfeer. Voorbeeld:
                 wolkbedekking, weer, klimaat verandering. </td>
             </tr>
             <tr>
-              <td>Economie</td>
               <td>economy</td>
               <td>Economische activiteiten, condities en werkgelegenheid.
                 Voorbeeld: Werkgelegenheid, industrie, toerisme, olie- en
                 gasvelden, bosbouw, visserij. </td>
             </tr>
             <tr>
-              <td>Hoogte</td>
               <td>elevation</td>
               <td>Hoogte boven of onder zeeniveau Voorbeeld: hoogtekaart, DEM,
                 hellingen. </td>
             </tr>
             <tr>
-              <td>Natuur en milieu</td>
               <td>environment</td>
               <td>Natuurlijke bronnen, bescherming en beheer. Voorbeeld:
                 milieuverontreiniging, landschap, natuurlijke reserves,
                 vuilopslag. </td>
             </tr>
             <tr>
-              <td>Geo wetenschappelijke data</td>
               <td>geoscientificInformation</td>
               <td>Data die behoort tot een aardwetenschap. Voorbeeld: geologie,
                 mineralen, structuur van de aarde, zwaartekrachtskaart,
                 grondstoffen, erosie. </td>
             </tr>
             <tr>
-              <td>Gezondheid</td>
               <td>health</td>
               <td>Gezondheid(szorg), menselijke ecologie en veiligheid.
                 Voorbeeld: ziekten, hygiëne, gezondheidszorg. </td>
             </tr>
             <tr>
-              <td>Referentie materiaal aardbedekking</td>
               <td>imageryBaseMapsEarthCover</td>
               <td>Basiskaarten. Voorbeeld: landbedekking, topografische kaarten,
                 foto's, ongeclassificeerde kaarten. </td>
             </tr>
             <tr>
-              <td>Militair</td>
               <td>intelligenceMilitary</td>
               <td>Militaire basissen, structuren en activiteiten. Voorbeeld:
                 barakken, oefenterreinen, militaire transporten. </td>
             </tr>
             <tr>
-              <td>Binnenwater</td>
               <td>inlandWaters</td>
               <td>Binnenwater, drainagesystemen en hun karakteristieken.
                 Voorbeeld: Rivieren en gletsjers, dijken, stromen,
                 waterzuiveringsinstallaties, overloopgebieden. </td>
             </tr>
             <tr>
-              <td>Locatie</td>
               <td>location</td>
               <td>Positionele informatie en services. Voorbeeld: adressen,
                 geodetisch netwerk, postcode gebieden, plaatsnamen,
                 controlepunten. </td>
             </tr>
             <tr>
-              <td>Oceanen</td>
               <td>oceans</td>
               <td>Gebieden met zoutwaterlichamen (niet binnenlands). Voorbeeld:
                 Getijden, tsunami's, kustinformatie, riffen. </td>
             </tr>
             <tr>
-              <td>Planning kadaster</td>
               <td>planningCadastre</td>
               <td>Informatie die gebruikt wordt voor nodige planmatige
                 activiteiten. Voorbeeld: Landgebruik, kadastrale informatie. </td>
             </tr>
             <tr>
-              <td>Maatschappij</td>
               <td>society</td>
               <td>Kenmerken van maatschappij en culturen. Voorbeeld:
                 antropologie, archeologie, criminaliteit, gewoonten,
                 nederzettingen, onderwijs. </td>
             </tr>
             <tr>
-              <td>(civiele) structuren</td>
               <td>structure</td>
               <td>Civiele werken (door mensen gemaakte structuren). Voorbeeld:
                 Gebouwen, musea, kerken, winkels, torens. </td>
             </tr>
             <tr>
-              <td>Transport</td>
               <td>transportation</td>
               <td>Middelen voor vervoer van goederen en/of personen. Voorbeeld:
                 Wegen, Vliegvelden, tunnels, spoorwegen. </td>
             </tr>
             <tr>
-              <td>Nutsbedrijven communicatie</td>
               <td>utilitiesCommunication</td>
               <td>Energie, waterleidingen en riolering en communicatie
                 infrastructuren en services. Voorbeeld: elektriciteit- en
@@ -3749,19 +4178,32 @@ verantwoordelijke organisatie rol: pointOfContact
       <section id="Codelist-INSPIRE-OnLineDescriptionCode">
         <h4>Codelijst INSPIRE OnLineDescriptionCode</h4>
         <table>
-          <colgroup> <col style="width: 50%;"> <col style="width: 50%;"> </colgroup>
+          <colgroup> <col style="width: 35%;"> <col style="width: 15%;"> <col
+              style="width: 50%;"> </colgroup>
           <tbody>
             <tr>
+              <th>URI</th>
               <th>Waarde</th>
               <th>Beschrijving</th>
             </tr>
             <tr>
               <td>http://inspire.ec.europa.eu/metadata-codelist/OnLineDescriptionCode/accessPoint</td>
               <td>accessPoint</td>
+              <td>
+                <meta charset="utf-8">
+                Een internetadres dat een gedetailleerde beschrijving van een
+                dienst met betrekking tot ruimtelijke gegevens bevat, met
+                inbegrip van een lijst van eindpunten waarmee hij kan worden
+                uitgevoerd</td>
             </tr>
             <tr>
               <td>http://inspire.ec.europa.eu/metadata-codelist/OnLineDescriptionCode/endPoint</td>
               <td>endPoint</td>
+              <td>
+                <meta charset="utf-8">
+                Een internetadres dat wordt gebruikt om een door een dienst met
+                betrekking tot ruimtelijke gegevens aangeboden operatie
+                rechtstreeks aan te roepen</td>
             </tr>
           </tbody>
         </table>
@@ -3769,22 +4211,26 @@ verantwoordelijke organisatie rol: pointOfContact
       <section id="Codelijst-INSPIRE-ConditionsApplyingToAccessAndUse">
         <h4>Codelijst INSPIRE ConditionsApplyingToAccessAndUse</h4>
         <table>
-          <colgroup> <col style="width: 50%;"> <col style="width: 50%;"> </colgroup>
+          <colgroup> <col style="width: 35%;"> <col style="width: 15%;"> <col
+              style="width: 50%;"> </colgroup>
           <tbody>
             <tr>
+              <th>URI</th>
               <th>Waarde</th>
-              <th>Definitie</th>
+              <th>Beschrijving</th>
             </tr>
             <tr>
               <td>
                 http://inspire.ec.europa.eu/metadata-codelist/ConditionsApplyingToAccessAndUse/conditionsUnknown
                 </td>
+              <td>conditionsUnknown</td>
               <td>Condities zijn onbekend</td>
             </tr>
             <tr>
               <td>
                 http://inspire.ec.europa.eu/metadata-codelist/ConditionsApplyingToAccessAndUse/noConditionsApply
                 </td>
+              <td>noConditionsApply</td>
               <td>Er zijn geen condities voor toegang en gebruik</td>
             </tr>
           </tbody>
@@ -3793,20 +4239,24 @@ verantwoordelijke organisatie rol: pointOfContact
       <section id="Codelijst-INSPIRE-LimitationsOnPublicAccess">
         <h4>Codelijst INSPIRE LimitationsOnPublicAccess</h4>
         <table>
-          <colgroup> <col style="width: 50%;"> <col style="width: 50%;"> </colgroup>
+          <colgroup> <col style="width: 35%;"> <col style="width: 15%;"> <col
+              style="width: 50%;"> </colgroup>
           <tbody>
             <tr>
+              <th>URI</th>
               <th>Waarde</th>
-              <th>Definitie</th>
+              <th>Beschrijving</th>
             </tr>
             <tr>
               <td>http://inspire.ec.europa.eu/metadata-codelist/LimitationsOnPublicAccess/noLimitations</td>
+              <td>noLimitations</td>
               <td>Geen beperkingen voor publieke toegang</td>
             </tr>
             <tr>
               <td>
                 http://inspire.ec.europa.eu/metadata-codelist/LimitationsOnPublicAccess/INSPIRE_Directive_Article13_1a
                 </td>
+              <td>INSPIRE_Directive_Article13_1a</td>
               <td>Publieke toegang beperkt ivm afbreuk van het vertrouwelijke
                 karakter van handelingen van overheidsinstanties, indien deze
                 vertrouwelijkheid bij wet is voorzien </td>
@@ -3815,6 +4265,8 @@ verantwoordelijke organisatie rol: pointOfContact
               <td>
                 http://inspire.ec.europa.eu/metadata-codelist/LimitationsOnPublicAccess/INSPIRE_Directive_Article13_1b
                 </td>
+              <td>INSPIRE_Directive_Article13_1b
+              </td>
               <td>Publieke toegang beperkt ivm afbreuk van internationale
                 betrekkingen, openbare veiligheid of nationale defensie </td>
             </tr>
@@ -3822,6 +4274,7 @@ verantwoordelijke organisatie rol: pointOfContact
               <td>
                 http://inspire.ec.europa.eu/metadata-codelist/LimitationsOnPublicAccess/INSPIRE_Directive_Article13_1c
                 </td>
+              <td>INSPIRE_Directive_Article13_1c</td>
               <td>Publieke toegang beperkt ivm afbreuk van de rechtsgang, de
                 mogelijkheid voor een persoon een eerlijk proces te krijgen of
                 de mogelijkheid voor een overheid om een onderzoek van
@@ -3831,6 +4284,7 @@ verantwoordelijke organisatie rol: pointOfContact
               <td>
                 http://inspire.ec.europa.eu/metadata-codelist/LimitationsOnPublicAccess/INSPIRE_Directive_Article13_1d
                 </td>
+              <td>INSPIRE_Directive_Article13_1d</td>
               <td>Publieke toegang beperkt ivm afbreuk van de vertrouwelijkheid
                 van commerciële of industriële informatie, wanneer deze
                 vertrouwelijkheid in de nationale of de communautaire wetgeving
@@ -3842,6 +4296,7 @@ verantwoordelijke organisatie rol: pointOfContact
               <td>
                 http://inspire.ec.europa.eu/metadata-codelist/LimitationsOnPublicAccess/INSPIRE_Directive_Article13_1e
                 </td>
+              <td>INSPIRE_Directive_Article13_1e</td>
               <td>Publieke toegang beperkt ivm afbreuk van
                 intellectuele-eigendomsrechten</td>
             </tr>
@@ -3849,6 +4304,7 @@ verantwoordelijke organisatie rol: pointOfContact
               <td>
                 http://inspire.ec.europa.eu/metadata-codelist/LimitationsOnPublicAccess/INSPIRE_Directive_Article13_1f
                 </td>
+              <td>INSPIRE_Directive_Article13_1f </td>
               <td>Publieke toegang beperkt ivm afbreuk van de vertrouwelijkheid
                 van persoonsgegevens en/of -dossiers met betrekking tot een
                 natuurlijk persoon wanneer die persoon niet heeft ingestemd met
@@ -3860,6 +4316,7 @@ verantwoordelijke organisatie rol: pointOfContact
               <td>
                 http://inspire.ec.europa.eu/metadata-codelist/LimitationsOnPublicAccess/INSPIRE_Directive_Article13_1g
                 </td>
+              <td>INSPIRE_Directive_Article13_1g</td>
               <td>Publieke toegang beperkt ivm afbreuk van de belangen of de
                 bescherming van diegene die de verzochte informatie op
                 vrijwillige basis heeft verstrekt zonder daartoe wettelijk
@@ -3870,6 +4327,7 @@ verantwoordelijke organisatie rol: pointOfContact
               <td>
                 http://inspire.ec.europa.eu/metadata-codelist/LimitationsOnPublicAccess/INSPIRE_Directive_Article13_1h
                 </td>
+              <td>INSPIRE_Directive_Article13_1h</td>
               <td>Publieke toegang beperkt ivm afbreuk van de bescherming van
                 het milieu waarop die informatie betrekking heeft, zoals de
                 habitat van zeldzame soorten </td>
@@ -3940,117 +4398,153 @@ verantwoordelijke organisatie rol: pointOfContact
         <h4>Codelijst Protocol</h4>
         <p></p>
         <table>
-          <colgroup> <col style="width: 50%;"> <col style="width: 50%;"> </colgroup>
+          <colgroup> <col style="width: 35%;"> <col style="width: 15%;"> <col
+              style="width: 50%;"> </colgroup>
           <tbody>
             <tr>
+              <th>URI</th>
               <th>Waarde</th>
               <th>Beschrijving</th>
             </tr>
             <tr>
+              <td>http://www.opengeospatial.org/standards/cat</td>
               <td>OGC:CSW</td>
               <td>Web Catalog service</td>
             </tr>
             <tr>
+              <td>http://www.opengeospatial.org/standards/wms</td>
               <td>OGC:WMS</td>
               <td>Web Map service</td>
             </tr>
             <tr>
+              <td>http://www.opengeospatial.org/standards/wmts</td>
               <td>OGC:WMTS</td>
-              <td>Web Mapping Tiling Service</td>
+              <td>Web Map Tile Service</td>
             </tr>
             <tr>
+              <td>http://www.opengeospatial.org/standards/wfs</td>
               <td>OGC:WFS</td>
               <td>Web Feature Service</td>
             </tr>
             <tr>
+              <td>http://www.opengeospatial.org/standards/wcs</td>
               <td>OGC:WCS</td>
               <td>Web Coverage Service</td>
             </tr>
             <tr>
+              <td>http://www.opengeospatial.org/standards/sos</td>
               <td>OGC:SOS</td>
               <td>Sensor Observation Service</td>
             </tr>
             <tr>
+              <td><br>
+              </td>
               <td>INSPIRE Atom</td>
               <td>Atom Service Feed</td>
             </tr>
             <tr>
+              <td>http://www.opengeospatial.org/standards/</td>
               <td>OGC:WCTS</td>
               <td>Web Coordinate Transformation Service</td>
             </tr>
             <tr>
+              <td>http://www.opengeospatial.org/standards/wps</td>
               <td>OGC:WPS</td>
               <td>Web Processing Service</td>
             </tr>
             <tr>
-              <td>UKST</td>
-              <td>Unknown Service Type</td>
-            </tr>
-            <tr>
+              <td><br>
+              </td>
               <td>OGC:WFS-G</td>
-              <td>Gazzetteer service</td>
+              <td>Gazetteer service</td>
             </tr>
             <tr>
+              <td>http://www.opengeospatial.org/standards/sps</td>
               <td>OGC:SPS</td>
               <td>Sensor Planning Service</td>
             </tr>
             <tr>
+              <td>http://www.ogcnetwork.net/SAS</td>
               <td>OGC:SAS</td>
               <td>Sensor Alert Service</td>
             </tr>
             <tr>
+              <td><br>
+              </td>
               <td>OGC:WNS</td>
               <td>Web Notification Service</td>
             </tr>
             <tr>
+              <td>http://www.opengeospatial.org/standards/ols#ODS</td>
               <td>OGC:ODS</td>
               <td>OpenLS Directory Service</td>
             </tr>
             <tr>
+              <td>http://www.opengeospatial.org/standards/ols#OGS</td>
               <td>OGC:OGS</td>
               <td>OpenLS Gateway Service</td>
             </tr>
             <tr>
+              <td>http://www.opengeospatial.org/standards/ols#OUS</td>
               <td>OGC:OUS</td>
               <td>OpenLS Utility Service</td>
             </tr>
             <tr>
+              <td>http://www.opengeospatial.org/standards/ols#OPS</td>
               <td>OGC:OPS</td>
               <td>OpenLS Presentation Service</td>
             </tr>
             <tr>
+              <td>http://www.opengeospatial.org/standards/ols#ORS</td>
               <td>OGC:ORS</td>
               <td>OpenLS Route Service</td>
             </tr>
             <tr>
+              <td>http://www.opengeospatial.org/standards/sensorthings</td>
               <td>OGC:SensorThings</td>
               <td>SensorThings API</td>
             </tr>
             <tr>
+              <td>https://www.w3.org/TR/rdf-sparql-query/</td>
               <td>W3C:SPARQL</td>
               <td>SPARQL Query Language for RDF</td>
             </tr>
             <tr>
+              <td>https://www.oasis-open.org/committees/odata</td>
               <td>OASIS:OData</td>
               <td>Open data protocol</td>
             </tr>
             <tr>
+              <td>
+                https://github.com/OAI/OpenAPI-Specification/blob/master/versions/3.0.0.md</td>
               <td>OAS</td>
               <td>Open API Specification</td>
             </tr>
             <tr>
+              <td><br>
+              </td>
               <td>landingpage</td>
               <td>Een webpagina die toegang geeft tot de dataset of overige
                 informatie bevat </td>
             </tr>
             <tr>
+              <td><br>
+              </td>
               <td>application</td>
               <td>Een (web) applicatie die rechtstreeks toegang geeft tot de
                 dataset </td>
             </tr>
             <tr>
+              <td><br>
+              </td>
               <td>dataset</td>
               <td>Referentie naar een locale dataset locatie</td>
+            </tr>
+            <tr>
+              <td><br>
+              </td>
+              <td>UKST</td>
+              <td>Unknown Service Type</td>
             </tr>
           </tbody>
         </table>
@@ -4060,72 +4554,150 @@ verantwoordelijke organisatie rol: pointOfContact
         <p>De codelijst is een subset van geregistreerde media types bij
           www.iana.org en INSPIRE</p>
         <table>
-          <colgroup> <col style="width: 50%;"> <col style="width: 50%;"> </colgroup>
+          <colgroup> <col style="width: 35%;"> <col style="width: 15%;"> <col
+              style="width: 50%;"> </colgroup>
           <tbody>
             <tr>
+              <th>URI</th>
               <th>Waarde</th>
               <th>Beschrijving</th>
             </tr>
             <tr>
               <td>
-                https://www.iana.org/assignments/media-types/application/atom+xml</td>
-              <td> ATOM</td>
+                https://www.iana.org/assignments/media-types/application/gml+xml</td>
+              <td> gml</td>
+              <td>Geography Markup Language</td>
             </tr>
             <tr>
               <td>http://www.iana.org/assignments/media-types/application/vnd.google-earth.kml+xml</td>
-              <td>KML</td>
+              <td>kml</td>
+              <td>Keyhole Markup Language</td>
             </tr>
             <tr>
               <td>
                 https://www.iana.org/assignments/media-types/application/geo+json</td>
-              <td> GeoJSON</td>
+              <td> geojson</td>
+              <td>Vector data geencodeerd in JSON</td>
             </tr>
             <tr>
-              <td>
-                https://www.iana.org/assignments/media-types/application/gml+xml</td>
-              <td> GML</td>
+              <td>http://www.opengeospatial.org/standards/geopackage </td>
+              <td> gpkg</td>
+              <td>GeoPackage</td>
             </tr>
             <tr>
               <td> https://www.iana.org/assignments/media-types/application/json</td>
-              <td> JSON</td>
+              <td> json</td>
+              <td>Javascript object notation</td>
             </tr>
             <tr>
               <td>
                 https://www.iana.org/assignments/media-types/application/ld+json</td>
-              <td> JSONLD</td>
+              <td> jsonld</td>
+              <td>RDF geencodeerd in JSON</td>
             </tr>
             <tr>
               <td>
                 https://www.iana.org/assignments/media-types/application/rdf+xml</td>
-              <td> RDF/XML</td>
+              <td> rdf-xml</td>
+              <td>RDF geencodeerd in XML</td>
             </tr>
             <tr>
               <td> https://www.iana.org/assignments/media-types/application/xml</td>
-              <td> XML</td>
+              <td> zml</td>
+              <td>Extensible Markup Language</td>
             </tr>
             <tr>
               <td> https://www.iana.org/assignments/media-types/application/zip</td>
-              <td> ZIP</td>
+              <td> zip</td>
+              <td>Bestands archief</td>
             </tr>
             <tr>
               <td> https://www.iana.org/assignments/media-types/image/png</td>
-              <td> PNG</td>
+              <td> png</td>
+              <td>Portable Network Graphics</td>
             </tr>
             <tr>
               <td> https://www.iana.org/assignments/media-types/image/gif</td>
-              <td> GIF</td>
+              <td> gif</td>
+              <td>Graphics Interchange Format</td>
             </tr>
             <tr>
               <td>https://www.iana.org/assignments/media-types/image/jp2</td>
+              <td>jp2</td>
               <td>JPEG 2000</td>
             </tr>
             <tr>
               <td>https://www.iana.org/assignments/media-types/image/tiff</td>
+              <td>tiff</td>
               <td>TIFF</td>
             </tr>
             <tr>
               <td> https://www.iana.org/assignments/media-types/text/csv</td>
-              <td> CSV</td>
+              <td> csv</td>
+              <td>Komma gescheiden waarden</td>
+            </tr>
+          </tbody>
+        </table>
+      </section>
+      <section id="codelist-datalicenties">
+        <h4>Codelijst data licenties</h4>
+        <p>De codelijst wordt beheerd door Geonovum</p>
+        <table>
+          <colgroup> <col style="width: 40%"> <col style="width: 25%"> <col style="width: 35%">
+          </colgroup>
+          <tbody>
+            <tr>
+              <th>URI</th>
+              <th>Waarde</th>
+              <th>Beschrijving</th>
+            </tr>
+            <tr>
+              <td>http://creativecommons.org/publicdomain/mark/*/deed.nl</td>
+              <td>Open data (publiek)</td>
+              <td>Geen beperkingen</td>
+            </tr>
+            <tr>
+              <td>http://creativecommons.org/publicdomain/zero/*/deed.nl</td>
+              <td>Open data (CCO)</td>
+              <td>Geen beperkingen</td>
+            </tr>
+            <tr>
+              <td>http://creativecommons.org/licenses/by/*/deed.nl</td>
+              <td>Open data (CC-BY)</td>
+              <td>Naamsvermelding verplicht, organisatienaam </td>
+            </tr>
+            <tr>
+              <td>http://creativecommons.org/licenses/by-sa/*/deed.nl</td>
+              <td>Gebruiksvoorwaarden (CC-by-sa)</td>
+              <td>Gelijk Delen, Naamsvermelding verplicht, organisatienaam </td>
+            </tr>
+            <tr>
+              <td>http://creativecommons.org/licenses/by-nc/*/deed.nl</td>
+              <td>Gebruiksvoorwaarden (CC-by-nc)</td>
+              <td>Niet Commercieel, Naamsvermelding verplicht, organisatienaam </td>
+            </tr>
+            <tr>
+              <td>http://creativecommons.org/licenses/by-nc-sa/*/deed.nl</td>
+              <td>Gebruiksvoorwaarden (CC-by-nc-sa)</td>
+              <td>Niet Commercieel, Gelijk Delen, Naamsvermelding verplicht,
+                organisatienaam </td>
+            </tr>
+            <tr>
+              <td>http://creativecommons.org/licenses/by-nd/*/deed.nl</td>
+              <td>Gebruiksvoorwaarden (CC-by-nd)</td>
+              <td>Geen Afgeleide Werken, Naamsvermelding verplicht,
+                organisatienaam </td>
+            </tr>
+            <tr>
+              <td>http://creativecommons.org/licenses/by-nc-nd/*/deed.nl</td>
+              <td>Gebruiksvoorwaarden (CC-by-nc-nd)</td>
+              <td>Niet Commercieel, Geen Afgeleide Werken, Naamsvermelding
+                verplicht, organisatienaam </td>
+            </tr>
+            <tr>
+              <td>Verwijzing naar een geldige URL van de licentie </td>
+              <td>Gebruiksvoorwaarden Geogedeeld</td>
+              <td>Geo Gedeeld licentie</td>
             </tr>
           </tbody>
         </table>
@@ -6560,12 +7132,9 @@ verantwoordelijke organisatie rol: pointOfContact
               <p>Unieke waarde om data te beschrijven binnen een namespace.</p>
             </td>
             <td>
-              <p><code>&lt;anchor
+              <pre><code>&lt;anchor
                   xlink:href="http://domein/id/record/ee543323-0fe4-4353-9161-eda61ff26c07"&gt;
-                  ee543323-0fe4-4353-9161-eda61ff26c07 &lt;/anchor&gt;</code></p>
-              <p><code><br>
-                </code></p>
-              <p>ee543323-0fe4-4353-9161-eda61ff26c07</p>
+                  ee543323-0fe4-4353-9161-eda61ff26c07 &lt;/anchor&gt;</code></pre>
             </td>
             <td>
               <p>Unieke identifier van de bron. Het gebuik van een anchor met
@@ -17080,1074 +17649,6 @@ verantwoordelijke organisatie rol: pointOfContact
           </tr>
         </tbody>
       </table>
-    </section>
-    <section class="appendix" id="appendix-e">
-      <h2>Mapping NL profiel op ISO 19115 versie 2.0 - DCAT NL v0.6</h2>
-      <p>In deze mapping is de relatie met de elementen van <a href="https://data.overheid.nl/sites/default/files/2014-11-13%20DCAT-NL%20IPM%20Datasets%200.6%20kopie.pdf">
-          IPM datasets v0.6 (DCAT NL)</a> gelegd. Na inzet van een conversie op
-        basis van deze mapping kan de metadata ook voldoen aan deze standaard.
-        DCAT kent 3 hoofd klasses; Dataset, CatalogRecord en Catalog. Het
-        Catalog record wordt in deze mapping buiten beschouwing gelaten. Wel
-        worden twee ondersteunende klasses beschreven; Distribution en Agent.<br>
-      </p>
-      <h2>dcat:dataset</h2>
-      <table>
-        <thead>
-          <tr>
-            <th>DCAT-NL</th>
-            <th>Verplichting DCAT-NL</th>
-            <th>NL-AP 19115</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td>dct:description</td>
-            <td>V</td>
-            <td>Samenvatting</td>
-          </tr>
-          <tr>
-            <td>dct:title</td>
-            <td>V</td>
-            <td>Titel van de bron</td>
-          </tr>
-          <tr>
-            <td>adms:contactPoint</td>
-            <td>A</td>
-            <td>Verantwoordelijke organisatie bron: verder uitgewerkt in
-              foaf:Agent </td>
-          </tr>
-          <tr>
-            <td>dcat:distribution</td>
-            <td>A</td>
-            <td>Verder uitgewerkt in dcat:distribution</td>
-          </tr>
-          <tr>
-            <td>dcat:keyword</td>
-            <td>A</td>
-            <td>Trefwoord</td>
-          </tr>
-          <tr>
-            <td>dcat:theme</td>
-            <td>A</td>
-            <td>Onderwerp</td>
-          </tr>
-          <tr>
-            <td>dct:publisher</td>
-            <td>A</td>
-            <td>Verantwoordelijke organisatie bron: verder uitgewerkt in
-              foaf:Agent </td>
-          </tr>
-          <tr>
-            <td>dct:identifier</td>
-            <td>V</td>
-            <td>Unieke Identifier</td>
-          </tr>
-          <tr>
-            <td>dct:language</td>
-            <td>V</td>
-            <td>Taal van de bron</td>
-          </tr>
-          <tr>
-            <td>dct:modified</td>
-            <td>V</td>
-            <td>Datum van de bron</td>
-          </tr>
-          <tr>
-            <td>dcat:landingPage</td>
-            <td>A</td>
-            <td>aanvullende informatie</td>
-          </tr>
-          <tr>
-            <td>dct:spatial</td>
-            <td>A</td>
-            <td>Omgrenzende rechthoek</td>
-          </tr>
-          <tr>
-            <td>dct:temporal</td>
-            <td>A</td>
-            <td>Temporele dekking</td>
-          </tr>
-          <tr>
-            <td>adms:versionNotes</td>
-            <td>O</td>
-            <td><br>
-            </td>
-          </tr>
-          <tr>
-            <td>dct:accrualPeriodicity</td>
-            <td>O</td>
-            <td>Herzieningsfrequentie</td>
-          </tr>
-          <tr>
-            <td>dct:conformsTo</td>
-            <td>O</td>
-            <td><br>
-            </td>
-          </tr>
-          <tr>
-            <td>dct:issued</td>
-            <td>O</td>
-            <td>Creatiedatum<br>
-            </td>
-          </tr>
-          <tr>
-            <td>adms:identifier</td>
-            <td>O</td>
-            <td><br>
-            </td>
-          </tr>
-          <tr>
-            <td>adms:sample</td>
-            <td>O</td>
-            <td><br>
-            </td>
-          </tr>
-          <tr>
-            <td>dct:accessRights</td>
-            <td>O</td>
-            <td><br>
-            </td>
-          </tr>
-          <tr>
-            <td>dct:hasVersion</td>
-            <td>O</td>
-            <td><br>
-            </td>
-          </tr>
-          <tr>
-            <td>dct:isVersionOf</td>
-            <td>O</td>
-            <td><br>
-            </td>
-          </tr>
-          <tr>
-            <td>dct:provenance</td>
-            <td>O</td>
-            <td><br>
-            </td>
-          </tr>
-          <tr>
-            <td>dct:relation</td>
-            <td>O</td>
-            <td><br>
-            </td>
-          </tr>
-          <tr>
-            <td>dct:source</td>
-            <td>O</td>
-            <td><br>
-            </td>
-          </tr>
-          <tr>
-            <td>dct:type</td>
-            <td>O</td>
-            <td><br>
-            </td>
-          </tr>
-          <tr>
-            <td>foaf:page</td>
-            <td>O</td>
-            <td><br>
-            </td>
-          </tr>
-          <tr>
-            <td>owl:versionInfo</td>
-            <td>O</td>
-            <td><br>
-            </td>
-          </tr>
-          <tr>
-            <td>dct:license</td>
-            <td>A</td>
-            <td>Veiligheidsrestricties</td>
-          </tr>
-          <tr>
-            <td>dct:rights</td>
-            <td>O</td>
-            <td>Juridische toegangsrestricties</td>
-          </tr>
-          <tr>
-            <td>dct:rights</td>
-            <td>O</td>
-            <td>Overige beperkingen</td>
-          </tr>
-          <tr>
-            <td>overheid:authority (donl)</td>
-            <td>V</td>
-            <td><br>
-            </td>
-          </tr>
-          <tr>
-            <td>overheid:grondslag</td>
-            <td>O</td>
-            <td><br>
-            </td>
-          </tr>
-          <tr>
-            <td>overheid:grondslagCiteertitel</td>
-            <td>O</td>
-            <td><br>
-            </td>
-          </tr>
-          <tr>
-            <td>overheidds:doel</td>
-            <td>O</td>
-            <td>Doel van vervaardiging</td>
-          </tr>
-          <tr>
-            <td>overheidds:kwaliteit</td>
-            <td>O</td>
-            <td>Compleetheid</td>
-          </tr>
-          <tr>
-            <td>overheidds:LODStars</td>
-            <td>O</td>
-            <td><br>
-            </td>
-          </tr>
-          <tr>
-            <td>adms:version</td>
-            <td>O</td>
-            <td>Versie</td>
-          </tr>
-        </tbody>
-      </table>
-      <h2>dcat:distribution</h2>
-      <p>dcat:distribution is vergelijkbaar met de klasse gmd:MD_Distribution </p>
-      <table>
-        <thead>
-          <tr>
-            <th>DCAT-NL</th>
-            <th>Verplichting DCAT-NL</th>
-            <th>NL-AP 19115</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td>dcat:accessURL</td>
-            <td>V</td>
-            <td>URL</td>
-          </tr>
-          <tr>
-            <td>dct:description</td>
-            <td>A</td>
-            <td>Naam<br>
-            </td>
-          </tr>
-          <tr>
-            <td>dct:format</td>
-            <td>A</td>
-            <td>Protocol</td>
-          </tr>
-          <tr>
-            <td>dct:license</td>
-            <td>O</td>
-            <td><br>
-            </td>
-          </tr>
-          <tr>
-            <td>dcat:downloadURL</td>
-            <td>A</td>
-            <td>URL</td>
-          </tr>
-          <tr>
-            <td>dct:modified</td>
-            <td>A</td>
-            <td><br>
-            </td>
-          </tr>
-          <tr>
-            <td>adms:status</td>
-            <td>O</td>
-            <td><br>
-            </td>
-          </tr>
-          <tr>
-            <td>dcat:byteSize</td>
-            <td>O</td>
-            <td><br>
-            </td>
-          </tr>
-          <tr>
-            <td>dct:issued</td>
-            <td>O</td>
-            <td>Datum van de bron </td>
-          </tr>
-          <tr>
-            <td>dct:title</td>
-            <td>O</td>
-            <td><br>
-            </td>
-          </tr>
-          <tr>
-            <td>dcat:mediaType</td>
-            <td>O</td>
-            <td><br>
-            </td>
-          </tr>
-          <tr>
-            <td>dct:rights</td>
-            <td>O</td>
-            <td><br>
-            </td>
-          </tr>
-          <tr>
-            <td>dct:conformsTo</td>
-            <td>O</td>
-            <td><br>
-            </td>
-          </tr>
-          <tr>
-            <td>dct:language</td>
-            <td>O</td>
-            <td><br>
-            </td>
-          </tr>
-          <tr>
-            <td>foaf:page</td>
-            <td>O</td>
-            <td><br>
-            </td>
-          </tr>
-          <tr>
-            <td>spdx:checksum</td>
-            <td>O</td>
-            <td><br>
-            </td>
-          </tr>
-          <tr>
-            <td>dct:type</td>
-            <td>O</td>
-            <td><br>
-            </td>
-          </tr>
-        </tbody>
-      </table>
-      <h2>dcat:CatalogRecord</h2>
-      <p>Vergelijkbaar met de sectie die de eigenschappen van de metadata
-        beschrijft</p>
-      <table>
-        <thead>
-          <tr>
-            <th>DCAT-NL</th>
-            <th>Verplichting DCAT-NL</th>
-            <th>NL-AP 19115</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td>dct:modified</td>
-            <td>V</td>
-            <td>Metadata datum </td>
-          </tr>
-          <tr>
-            <td>adms:status</td>
-            <td>A</td>
-            <td><br>
-            </td>
-          </tr>
-          <tr>
-            <td>dct:issued</td>
-            <td>O</td>
-            <td><br>
-            </td>
-          </tr>
-          <tr>
-            <td>dct:conformsTo</td>
-            <td>O</td>
-            <td><br>
-            </td>
-          </tr>
-          <tr>
-            <td>dct:description</td>
-            <td>O</td>
-            <td><br>
-            </td>
-          </tr>
-          <tr>
-            <td>dct:title</td>
-            <td>O</td>
-            <td><br>
-            </td>
-          </tr>
-          <tr>
-            <td>dct:language</td>
-            <td>O</td>
-            <td>Metadata taal </td>
-          </tr>
-          <tr>
-            <td>dct:source</td>
-            <td>O</td>
-            <td><br>
-            </td>
-          </tr>
-          <tr>
-            <td>dct:identifier</td>
-            <td>V</td>
-            <td>Metadata unieke identifier </td>
-          </tr>
-          <tr>
-            <td>schema:endDate</td>
-            <td>O</td>
-            <td><br>
-            </td>
-          </tr>
-          <tr>
-            <td>schema:startDate</td>
-            <td>O</td>
-            <td><br>
-            </td>
-          </tr>
-        </tbody>
-      </table>
-      <h2>foaf:Agent</h2>
-      <p>foaf:Agent is vergelijkbaar met de klasse gmd:CI_ResponsibleParty </p>
-      <table>
-        <thead>
-          <tr>
-            <th>DCAT-NL</th>
-            <th>Verplichting DCAT-NL</th>
-            <th>NL-AP 19115</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td>foaf:name</td>
-            <td>V</td>
-            <td>Naam organisatie</td>
-          </tr>
-          <tr>
-            <td>foaf:mbox</td>
-            <td>A</td>
-            <td>E-mail</td>
-          </tr>
-          <tr>
-            <td>foaf:homepage</td>
-            <td>O</td>
-            <td>Website organisatie</td>
-          </tr>
-        </tbody>
-      </table>
-    </section>
-    <section class="appendix" id="appendix-e">
-      <h2>Mapping NL profiel op ISO19115 - TMLO</h2>
-      <p>Voor het archiveren van documenten zijn, uit het oogpunt van digitale
-        duurzaamheid, richtlijnen ontwikkeld qua metadatering; het
-        Toepassingsprofiel Metadata Lokale Overheden (TMLO).&nbsp; Onderstaande
-        mapping van het NL profiel op ISO 19115 op TMLO is gemaakt om op basis
-        van metadata elementen uit het NL profiel op ISO 19115,
-        geo-informatie&nbsp; duurzaam digitaal te archiveren.&nbsp; Hierin zijn
-        de verplichte elementen van het TMLO gemapt op de elementen uit het NL
-        19115 profiel.</p>
-      <table>
-        <thead>
-          <tr>
-            <th>TMLO</th>
-            <th>Verplichting TMLO</th>
-            <th> NL-AP 19115</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td>Entiteittype</td>
-            <td>V<br>
-            </td>
-            <td><br>
-            </td>
-          </tr>
-          <tr>
-            <td>Identificatiekenmerk</td>
-            <td>V</td>
-            <td>Unieke identifier van de bron</td>
-          </tr>
-          <tr>
-            <td>Aggregatieniveau</td>
-            <td>V</td>
-            <td>Hiërarchieniveau</td>
-          </tr>
-          <tr>
-            <td><br>
-            </td>
-            <td><br>
-            </td>
-            <td>Hiërarchieniveau naam</td>
-          </tr>
-          <tr>
-            <td>Naam</td>
-            <td>V</td>
-            <td>Titel van de bron</td>
-          </tr>
-          <tr>
-            <td>Classificatie</td>
-            <td>V</td>
-            <td><br>
-            </td>
-          </tr>
-          <tr>
-            <td>&nbsp; Code</td>
-            <td>V</td>
-            <td>Onderwerp en Keyword</td>
-          </tr>
-          <tr>
-            <td>&nbsp; Omschrijving</td>
-            <td>V</td>
-            <td><br>
-            </td>
-          </tr>
-          <tr>
-            <td>&nbsp; Bron</td>
-            <td>V</td>
-            <td>Iso Codelist/thesaurus</td>
-          </tr>
-          <tr>
-            <td>&nbsp; Datum</td>
-            <td>V</td>
-            <td>Datum standaard/thesaurus</td>
-          </tr>
-          <tr>
-            <td>Omschrijfiving</td>
-            <td><br>
-            </td>
-            <td>Samenvatting</td>
-          </tr>
-          <tr>
-            <td>Dekking</td>
-            <td><br>
-            </td>
-            <td><br>
-            </td>
-          </tr>
-          <tr>
-            <td>&nbsp; In tijd</td>
-            <td>O</td>
-            <td>Temporele dekking</td>
-          </tr>
-          <tr>
-            <td>&nbsp; Geografisch gebied</td>
-            <td>O</td>
-            <td>Omgrenzende rechthoek</td>
-          </tr>
-          <tr>
-            <td> Externe identificatiekenmerk </td>
-            <td>V</td>
-            <td><br>
-            </td>
-          </tr>
-          <tr>
-            <td>Taal<br>
-            </td>
-            <td>V</td>
-            <td>Taal van de bron</td>
-          </tr>
-          <tr>
-            <td><br>
-            </td>
-            <td><br>
-            </td>
-            <td>Karakterset van de bron</td>
-          </tr>
-          <tr>
-            <td>Event geschiedenis</td>
-            <td>V</td>
-            <td><br>
-            </td>
-          </tr>
-          <tr>
-            <td>&nbsp; Datum/periode</td>
-            <td>V</td>
-            <td>Datum van de bron</td>
-          </tr>
-          <tr>
-            <td>&nbsp; Beschrijving</td>
-            <td>O</td>
-            <td>Algemene beschrijving herkomst</td>
-          </tr>
-          <tr>
-            <td>&nbsp; Verantwoordelijke functionaris</td>
-            <td>V</td>
-            <td>Verantwoordelijke organisatie bron</td>
-          </tr>
-          <tr>
-            <td>Event geschiedenis</td>
-            <td><br>
-            </td>
-            <td><br>
-            </td>
-          </tr>
-          <tr>
-            <td>&nbsp; Datum/periode</td>
-            <td>V</td>
-            <td>Datum uitgevoerde bewerkingen</td>
-          </tr>
-          <tr>
-            <td>&nbsp; Beschrijving</td>
-            <td>O</td>
-            <td>Beschrijving uitgevoerde bewerkingen</td>
-          </tr>
-          <tr>
-            <td>&nbsp; Verantwoordelijke functionaris</td>
-            <td>V</td>
-            <td>Producent beschreven dataset</td>
-          </tr>
-          <tr>
-            <td>Event plan</td>
-            <td>V</td>
-            <td><br>
-            </td>
-          </tr>
-          <tr>
-            <td>&nbsp; Datum/periode</td>
-            <td>V</td>
-            <td>Datum volgende herziening</td>
-          </tr>
-          <tr>
-            <td>&nbsp; Type</td>
-            <td>V</td>
-            <td>default waarde "herziening"</td>
-          </tr>
-          <tr>
-            <td>&nbsp; Beschrijving</td>
-            <td>O</td>
-            <td>Herzieningsfrequentie</td>
-          </tr>
-          <tr>
-            <td>&nbsp; Aanleiding</td>
-            <td>O</td>
-            <td><br>
-            </td>
-          </tr>
-          <tr>
-            <td>Relatie<br>
-            </td>
-            <td>V</td>
-            <td><br>
-            </td>
-          </tr>
-          <tr>
-            <td>&nbsp; RelatieID</td>
-            <td>V</td>
-            <td>ID gerelateerde dataset</td>
-          </tr>
-          <tr>
-            <td>&nbsp; Type relatie</td>
-            <td>V</td>
-            <td>Type relatie</td>
-          </tr>
-          <tr>
-            <td>&nbsp; Datum/Periode</td>
-            <td><br>
-            </td>
-            <td>Gerelateerde dataset referentiedatum</td>
-          </tr>
-          <tr>
-            <td>(Onstaans)context</td>
-            <td>V</td>
-            <td><br>
-            </td>
-          </tr>
-          <tr>
-            <td>&nbsp; Identificatiekenmerk Actor</td>
-            <td>V</td>
-            <td>Verantwoordelijke organisatie bron</td>
-          </tr>
-          <tr>
-            <td>&nbsp; Aggregatieniveau</td>
-            <td>A</td>
-            <td>default waarde "organisatie"</td>
-          </tr>
-          <tr>
-            <td>&nbsp; Geautoriseerde naam</td>
-            <td>V</td>
-            <td>Verantwoordelijke organisatie bron: e-mail</td>
-          </tr>
-          <tr>
-            <td>&nbsp; Geautoriseerde naam</td>
-            <td>V</td>
-            <td>Naam contactpersoon</td>
-          </tr>
-          <tr>
-            <td>&nbsp; Plaats</td>
-            <td>O</td>
-            <td>adres</td>
-          </tr>
-          <tr>
-            <td>&nbsp; Jurisdictie</td>
-            <td>O</td>
-            <td><br>
-            </td>
-          </tr>
-          <tr>
-            <td>(Onstaans)context<br>
-            </td>
-            <td>V</td>
-            <td><br>
-            </td>
-          </tr>
-          <tr>
-            <td>&nbsp; Identificatiekenmerk</td>
-            <td>A</td>
-            <td><br>
-            </td>
-          </tr>
-          <tr>
-            <td>&nbsp; Aggregatienveau</td>
-            <td>A</td>
-            <td>default waarde "doel van vervaardiging"</td>
-          </tr>
-          <tr>
-            <td>&nbsp; Naam (werkproces)</td>
-            <td>V</td>
-            <td>Doel van vervaardiging</td>
-          </tr>
-          <tr>
-            <td>(Onstaans)context</td>
-            <td><br>
-            </td>
-            <td><br>
-            </td>
-          </tr>
-          <tr>
-            <td>&nbsp; Identificatiekenmerk</td>
-            <td>V</td>
-            <td>Verantwoordelijke organisatie metadata</td>
-          </tr>
-          <tr>
-            <td>&nbsp; Aggregatieniveau</td>
-            <td>A</td>
-            <td>default waarde "verantwoordelijke organisatie metadata"</td>
-          </tr>
-          <tr>
-            <td>&nbsp; Geautoriseerde naam</td>
-            <td>V</td>
-            <td>Verantwoordelijke organisatie metadata: e-mail</td>
-          </tr>
-          <tr>
-            <td>&nbsp; Geautoriseerde naam</td>
-            <td>V</td>
-            <td>Naam contactpersoon</td>
-          </tr>
-          <tr>
-            <td>&nbsp; Plaats</td>
-            <td>O</td>
-            <td>adres</td>
-          </tr>
-          <tr>
-            <td>(Onstaans)context</td>
-            <td><br>
-            </td>
-            <td><br>
-            </td>
-          </tr>
-          <tr>
-            <td>&nbsp; Identificatiekenmerk</td>
-            <td>V</td>
-            <td>Naam distribuerende organisatie</td>
-          </tr>
-          <tr>
-            <td>&nbsp; Aggregatieniveau</td>
-            <td>A</td>
-            <td>default waarde "verantwoordelijke organisatie distributie"</td>
-          </tr>
-          <tr>
-            <td>&nbsp; Geautoriseerde naam</td>
-            <td>V</td>
-            <td>distribuerende organisatie: e-mail</td>
-          </tr>
-          <tr>
-            <td>&nbsp; Geautoriseerde naam</td>
-            <td>V</td>
-            <td>Naam contactpersoon</td>
-          </tr>
-          <tr>
-            <td>&nbsp; Plaats</td>
-            <td>O</td>
-            <td>adres</td>
-          </tr>
-          <tr>
-            <td>Gebruiksvoorwaarden</td>
-            <td><br>
-            </td>
-            <td><br>
-            </td>
-          </tr>
-          <tr>
-            <td>&nbsp; Omschrijving voorwaarden</td>
-            <td>V</td>
-            <td>Gebruiksbeperkingen</td>
-          </tr>
-          <tr>
-            <td><br>
-            </td>
-            <td><br>
-            </td>
-            <td>Overige beperkingen</td>
-          </tr>
-          <tr>
-            <td>&nbsp; Datum/periode</td>
-            <td>V</td>
-            <td>datum van de bron</td>
-          </tr>
-          <tr>
-            <td>Vertrouwelijkheid</td>
-            <td><br>
-            </td>
-            <td><br>
-            </td>
-          </tr>
-          <tr>
-            <td>&nbsp; Classificatie/niveau</td>
-            <td>V</td>
-            <td><br>
-            </td>
-          </tr>
-          <tr>
-            <td>&nbsp; Datum/periode</td>
-            <td>V</td>
-            <td><br>
-            </td>
-          </tr>
-          <tr>
-            <td>Openbaarheid</td>
-            <td><br>
-            </td>
-            <td><br>
-            </td>
-          </tr>
-          <tr>
-            <td>&nbsp; Omschrijving beperkingen</td>
-            <td>V</td>
-            <td><br>
-            </td>
-          </tr>
-          <tr>
-            <td>&nbsp; Datum/periode</td>
-            <td>V</td>
-            <td><br>
-            </td>
-          </tr>
-          <tr>
-            <td>Redactie/genre</td>
-            <td>V</td>
-            <td><br>
-            </td>
-          </tr>
-          <tr>
-            <td>Verschijningsvorm</td>
-            <td>V</td>
-            <td>Ruimtelijk schema</td>
-          </tr>
-          <tr>
-            <td>Structuur</td>
-            <td>V</td>
-            <td><br>
-            </td>
-          </tr>
-          <tr>
-            <td>Integriteit</td>
-            <td>V</td>
-            <td>Niveau kwaliteitsbeschrijving</td>
-          </tr>
-          <tr>
-            <td><br>
-            </td>
-            <td><br>
-            </td>
-            <td>Algemene beschrijving herkomst</td>
-          </tr>
-          <tr>
-            <td><br>
-            </td>
-            <td><br>
-            </td>
-            <td>Conformiteitsindicatie met de specificatie</td>
-          </tr>
-          <tr>
-            <td><br>
-            </td>
-            <td><br>
-            </td>
-            <td>Topologische samenhang</td>
-          </tr>
-          <tr>
-            <td><br>
-            </td>
-            <td><br>
-            </td>
-            <td>Geometrische nauwkeurigheid</td>
-          </tr>
-          <tr>
-            <td><br>
-            </td>
-            <td><br>
-            </td>
-            <td>Compleetheid</td>
-          </tr>
-          <tr>
-            <td>Formaat<br>
-            </td>
-            <td>V</td>
-            <td><br>
-            </td>
-          </tr>
-          <tr>
-            <td>&nbsp; Identificatiekenmerk</td>
-            <td>V</td>
-            <td>URL</td>
-          </tr>
-          <tr>
-            <td>&nbsp; Bestandsnaam</td>
-            <td>V</td>
-            <td>Naam</td>
-          </tr>
-          <tr>
-            <td>&nbsp; Naam</td>
-            <td>V</td>
-            <td>Naam</td>
-          </tr>
-          <tr>
-            <td>&nbsp; Extensie</td>
-            <td>O</td>
-            <td>Protocol</td>
-          </tr>
-          <tr>
-            <td>&nbsp; Type</td>
-            <td>V</td>
-            <td>Leverings-/gebruikseenheid</td>
-          </tr>
-          <tr>
-            <td>&nbsp; Omvang</td>
-            <td>V</td>
-            <td>Bestandsgrootte</td>
-          </tr>
-          <tr>
-            <td>&nbsp; Bestandsformaat</td>
-            <td>V</td>
-            <td>Naam distributie formaat</td>
-          </tr>
-          <tr>
-            <td><br>
-            </td>
-            <td><br>
-            </td>
-            <td>Versie distributie formaat</td>
-          </tr>
-          <tr>
-            <td><br>
-            </td>
-            <td><br>
-            </td>
-            <td>Specificatie distributie formaat</td>
-          </tr>
-          <tr>
-            <td>&nbsp; Creatieapplicatie</td>
-            <td>V</td>
-            <td><br>
-            </td>
-          </tr>
-          <tr>
-            <td>&nbsp; Fysieke integriteit</td>
-            <td>V</td>
-            <td><br>
-            </td>
-          </tr>
-          <tr>
-            <td>&nbsp; Datum aanmaak</td>
-            <td>V</td>
-            <td>Datum van de bron</td>
-          </tr>
-          <tr>
-            <td>&nbsp; Event plan formaat</td>
-            <td>V</td>
-            <td><br>
-            </td>
-          </tr>
-          <tr>
-            <td>&nbsp; Relatie</td>
-            <td>V</td>
-            <td><br>
-            </td>
-          </tr>
-        </tbody>
-      </table>
-    </section>
-    <section class="appendix" id="appendif-f">
-      <h2>XML Uitwerkingen</h2>
-      <h3>Temporele dekking</h3>
-      <p>Er zijn verschillende methoden, waarmee de temporele dekking in XML kan
-        worden vastgelegd. Voor de interoperabiliteit is het echter optimaal
-        dezelfde methode te hanteren. Daarom wordt voor de implementatie van dit
-        profiel de notering, die ook door INSPIRE voorgesteld wordt, gehanteerd;
-      </p>
-      <aside class="example" title="XML notatie temporele dekking">
-        <pre><code>&lt;extent&gt; 
-  &lt;EX_Extent&gt; 
-    &lt;temporalElement&gt; 
-      &lt;EX_TemporalExtent&gt; 
-        &lt;extent&gt; 
-          &lt;gml:TimePeriod gml:id="d2febbb4-e66f-4ac8-ba76-8fd9bc7c8be6"&gt; 
-            &lt;gml:beginPosition&gt;2008-01-01T11:45:30&lt;/gml:beginPosition&gt; 
-            &lt;gml:endPosition&gt;2008-12-31T09:10:00&lt;/gml:endPosition&gt; 
-          &lt;/gml:TimePeriod&gt; 
-        &lt;/extent&gt; 
-      &lt;/EX_TemporalExtent&gt;
-    &lt;/temporalElement&gt;
-  &lt;/EX_Extent&gt;
-&lt;/extent&gt;
-        </code></pre>
-      </aside>
-      <h3>Identifier gebied</h3>
-      <p>Het refereren aan de unieke identificatie van een gebied dat betrekking
-        heeft op de dataset ondersteunt een eventuele ontsluiting van de
-        metadata in communities die geen ondersteuning bieden voor een
-        geometrisch object, zoals bijvoorbeeld DCAT-NL. In DCAT-NL worden bij
-        voorkeur OWMS waardelijsten gebruikt om een gebied aan te duiden. </p>
-      <aside class="example" title="XML notatie identifier gebied">
-        <pre><code>&lt;extent&gt; 
-  &lt;EX_Extent&gt; 
-    &lt;geographicElement&gt;
-      &lt;EX_GeographicDescription&gt;
-        &lt;geographicIdentifier&gt;
-          &lt;MD_Identifier&gt;
-            &lt;code&gt;
-              &lt;Anchor xlink:href="http://standaarden.overheid.nl/owms/terms/Ameland"&gt;
-              	Ameland&lt;/Anchor&gt;
-            &lt;code&gt;
-          &lt;MD_Identifier&gt;
-        &lt;geographicIdentifier&gt;
-      &lt;EX_GeographicDescription&gt;
-    &lt;geographicElement&gt;   
-  &lt;EX_Extent&gt;
-&lt;extent&gt;
-        </code></pre>
-      </aside>
-      <h3>Open data licentie</h3>
-      <p>In het geval van een INSPIRE dataset dient twee maal het element
-        gebruikt te worden.</p>
-      <aside class="example" title="XML notatie open data licentie met INSPIRE">
-        <pre><code>&lt;resourceConstraints&gt;
-  &lt;MD_LegalConstraints&gt;
-    &lt;accessConstraints&gt;
-      &lt;MD_RestrictionCode 
-      	codeListValue="otherRestrictions" 
-        codeList="http://www.isotc211.org/2005/resources/Codelist/gmxCodelists.xml#MD_RestrictionCode"/&gt;
-    &lt;/accessConstraints&gt;   
-    &lt;otherConstraints&gt;
-      &lt;gmx:anchor
-        xlink:href="https://creativecommons.org/publicdomain/mark/*/deed.nl"&gt;
-          Geen beperkingen
-      &lt;/gmx:anchor&gt;
-    &lt;/otherConstraints&gt;
-    &lt;otherConstraints&gt;
-      &lt;gmx:anchor
-        xlink:href="http://inspire.ec.europa.eu/metadata-codelist
-          /ConditionsApplyingToAccessAndUse/noConditionsApply"&gt;
-          Geen beperkingen
-      &lt;/gmx:anchor&gt;
-    &lt;/otherConstraints&gt;
-  &lt;/MD_LegalConstraints&gt;
-&lt;/resourceConstraints&gt;  
-        </code></pre>
-      </aside>
     </section>
     <section class="appendix" id="appendix-g">
       <h2>Koppeling vanuit metadata met data en service</h2>
