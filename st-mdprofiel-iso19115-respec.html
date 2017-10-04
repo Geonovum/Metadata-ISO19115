@@ -136,7 +136,7 @@
           beschikbaar zijn dienen volgens deze profielen zowel de service als de
           daarin ontsloten datasets van metadata te worden voorzien. De relatie
           tussen metadata van data, metadata van services en de data en services
-          is opgenomen in <a href="#appendix-f">Appendix F</a>. </p>
+          is opgenomen in <a href="#appendix-d">Appendix D</a>. </p>
         <p>Geonovum beheert tevens een <a href="wiki.geonovum.nl/index.php/2_Metadata">metadata
             wiki</a> waarin voorbeelden zijn opgenomen en alle aspecten van het
           aanmaken van metadata beschreven zijn.</p>
@@ -146,11 +146,12 @@
         <p>Dit metadata profiel bevat de semantische beschrijving van de
           verplichte of door conditie verplichte metadata elementen, van een
           dataset of dataset serie. Dit metadata profiel beschrijft tevens de
-          encoding van de metadata van een dataset of dataset serie zodat de
-          uitwisseling tussen machines of mens en machine kan plaats vinden. Er
-          is tevens een optionele set als aanvulling op de kernset, die voorziet
-          in de behoefte van het geo-werkveld aan een brede gemeenschappelijke
-          basis van metadata-elementen, in het bijzonder voor het beheer.</p>
+          encoding van de metadata van een dataset of dataset serie
+          zodat de uitwisseling tussen machines of mens en machine kan plaats
+          vinden. Er is tevens een optionele set als aanvulling op de kernset,
+          die voorziet in de behoefte van het geo-werkveld aan een brede
+          gemeenschappelijke basis van metadata-elementen, in het bijzonder voor
+          het beheer.</p>
         <p>Bij het voldoen aan dit profiel kan tevens aan de INSPIRE
           verplichting voldaan. Deze verplichting geldt alleen voor metadata van
           de door INSPIRE benoemde ruimtelijke datasets.</p>
@@ -182,9 +183,11 @@
           uitwisseling tussen machines of mens en machine kan plaats vinden.
           Geonovum beheert tevens een <a href="wiki.geonovum.nl/index.php/2_Metadata">metadata
             wiki</a> waarin voorbeelden zijn opgenomen en alle aspecten van het
-          aanmaken van metadata beschreven zijn. <a href="#normatieve-verwijzing">Hoofdstuk
-            2</a> toont de normatieve verwijzingen, <a href="#relevante-xsd-schemas">hoofdstuk
-            3</a> bevat de XSD schema's waarna in <a href="#termen-en-definities">hoofdstuk
+          aanmaken van metadata beschreven zijn. In de wiki is tevens een
+          mapping tabel opgenomen van dit profiel naar OWMS 4, GeoDCAT-ap en
+          TMLO. <a href="#normatieve-verwijzing">Hoofdstuk 2</a> toont de
+          normatieve verwijzingen, <a href="#relevante-xsd-schemas">hoofdstuk 3</a>
+          bevat de XSD schema's waarna in <a href="#termen-en-definities">hoofdstuk
             4</a> de gehanteerde termen en definities worden beschreven. Het
           formele deel van het profiel waarin onder andere de verplichte
           elementen,&nbsp; worden beschreven die gelden voor metadata voor
@@ -211,11 +214,10 @@
       </p>
       <p><i>CEN ISO/TS 19139:2009 is de adoptie door CEN van ISO/TS 19139:2007</i></p>
       <p></p>
-      <p><b>[[!CSW2APISO]]</b>, OpenGIS
-          Catalogue Services Specification 2.0.2 - ISO Metadata Application
-          Profile</p>
-      <p><b>ISO 19108</b>, EN [!ISO19108]:2005, Geographic information – Temporal
-        Schema<br>
+      <p><b>[[!CSW2APISO]]</b>, OpenGIS Catalogue Services Specification 2.0.2 -
+        ISO Metadata Application Profile</p>
+      <p><b>ISO 19108</b>, EN [!ISO19108]:2005, Geographic information –
+        Temporal Schema<br>
       </p>
       <p><i>EN [[!ISO19108-2005]] is de adoptie door CEN van ISO 19108:2002</i></p>
       <p></p>
@@ -223,15 +225,15 @@
         Information interchange - Representation of dates and times</p>
       <p><b>[[!ISO1064-2014]]</b>, Information technology -- Universal Coded
         Character Set (UCS)</p>
-      <p><b>[[!ISO639-2]]</b>, Codes for the representation of names of languages -
-        Part 2: Alpha-3 code</p>
+      <p><b>[[!ISO639-2]]</b>, Codes for the representation of names of
+        languages - Part 2: Alpha-3 code</p>
       <p><b>[[!ISOTC46]]</b>, 2009, Dublin Core Metadata Element Set, ook
         gepubliceerd als ISO 15836:2009</p>
       <p>[[!INSPIRE-2008]], Implementing Rules for Metadata</p>
-      <p>[[!INSPIRE-2010]], Implementing Rules for interoperability of
-        spatial data sets and services, met amendementen uit 2011, 2013 en 2014.</p>
-      <p>[[!INSPIRE-2017]], Technical Guidance for the implementation of
-        INSPIRE dataset and service metadata based on ISO/TS 19139:2007</p>
+      <p>[[!INSPIRE-2010]], Implementing Rules for interoperability of spatial
+        data sets and services, met amendementen uit 2011, 2013 en 2014.</p>
+      <p>[[!INSPIRE-2017]], Technical Guidance for the implementation of INSPIRE
+        dataset and service metadata based on ISO/TS 19139:2007</p>
     </section>
     <section id="Structuur en schema's ">
       <h2>Structuur en schema's</h2>
@@ -410,8 +412,8 @@ http://schemas.opengis.net/csw/2.0.2/profiles/apiso/1.0.0/apiso.xsd</a></td>
         <dd>Metadata element moet gevuld worden met een waarde, indien de
           conditie van toepassing is. </dd>
         <dt>Dataset</dt>
-        <dd>Identificeerbare collectie van data [ISO 34:2002] / [[!ISO19101-2002]]. 
-          Een dataset mag een kleinere groep van data zijn,
+        <dd>Identificeerbare collectie van data [ISO 34:2002] /
+          [[!ISO19101-2002]]. Een dataset mag een kleinere groep van data zijn,
           gelimiteerd door beperkingen zoals een geografisch gebied of
           geo-objecttype ("feature type"), die aanwezig is in een grotere
           dataset. Theoretisch kan een dataset bestaan uit een enkel geo-object
@@ -420,8 +422,8 @@ http://schemas.opengis.net/csw/2.0.2/profiles/apiso/1.0.0/apiso.xsd</a></td>
           van dit soort type datasets. </dd>
         <dt>Dataset serie</dt>
         <dd>Verzameling van datasets met dezelfde productspecificaties [ISO47
-          2003] / [[!ISO19115-2003]].
-          Productspecificaties zijn thema, resolutie en methodologie. </dd>
+          2003] / [[!ISO19115-2003]]. Productspecificaties zijn thema, resolutie
+          en methodologie. </dd>
         <dt>Default element</dt>
         <dd>Metadata element met een standaardwaarde.</dd>
         <dt>Interface</dt>
@@ -435,8 +437,8 @@ http://schemas.opengis.net/csw/2.0.2/profiles/apiso/1.0.0/apiso.xsd</a></td>
         <dd>Metadata die niet direct of indirect in de dataset opgeslagen zit en
           daarom handmatig moet worden opgevoerd. </dd>
         <dt>Feature</dt>
-        <dd>Abstractie van een verschijnsel in de werkelijke wereld [[!ISO19101:2002]. 
-          Voorbeeld het verschijnsel ‘Eifel Toren’ kan met
+        <dd>Abstractie van een verschijnsel in de werkelijke wereld
+          [[!ISO19101:2002]. Voorbeeld het verschijnsel ‘Eifel Toren’ kan met
           andere soortgelijke verschijnselen geclassificeerd worden in een
           featuretype ‘toren’. </dd>
         <dt>Gerelateerde datasets</dt>
@@ -449,23 +451,25 @@ http://schemas.opengis.net/csw/2.0.2/profiles/apiso/1.0.0/apiso.xsd</a></td>
           welke het mogelijk maakt om deze te zoeken, evalueren en te gebruiken.
         </dd>
         <dt>Metadata dataset</dt>
-        <dd>Metadata die een beschrijving geeft van een specifieke dataset [[!ISO19101-2002]]. </dd>
+        <dd>Metadata die een beschrijving geeft van een specifieke dataset
+          [[!ISO19101-2002]]. </dd>
         <dt>Multipliciteit</dt>
         <dd>Eigenschap die aangeeft of een element niet, één of meerdere keren
           voor kan of dient te komen. </dd>
         <dt>Namespace</dt>
         <dd>Verzameling van namen, geïdentificeerd door een URI-referentie, die
-          gebruikt worden in XML-documenten als elementnamen en atribuutnamen [[!ISO19136-2007]]. </dd>
+          gebruikt worden in XML-documenten als elementnamen en atribuutnamen
+          [[!ISO19136-2007]]. </dd>
         <dt>Optioneel element</dt>
         <dd>Element wat gevuld mag zijn met een waarde.</dd>
         <dt>Profiel</dt>
         <dd>Set van één of meerdere basisstandaarden en indien van toepassing de
           identificatie van hoofdstukken, paragrafen, opties en parameters van
           deze basisstandaarden die noodzakelijk zijn voor het volbrengen van
-          een specifieke functie [!ISOIEC21 1998, ISO34 2002]. Een basisstandaard
-          is één van de standaarden uit de serie ISO 19100 of andere
-          ICT-standaard die gebruikt kan worden als bron voor componenten voor
-          een profiel of productspecificatie. </dd>
+          een specifieke functie [!ISOIEC21 1998, ISO34 2002]. Een
+          basisstandaard is één van de standaarden uit de serie ISO 19100 of
+          andere ICT-standaard die gebruikt kan worden als bron voor componenten
+          voor een profiel of productspecificatie. </dd>
         <dt>Resource</dt>
         <dd>Verzamelnaam voor datasets, dataset series, services en applicaties
           [[!ISO19115-2003]]. </dd>
@@ -474,8 +478,8 @@ http://schemas.opengis.net/csw/2.0.2/profiles/apiso/1.0.0/apiso.xsd</a></td>
           interfaces door een entiteit wordt aangeboden [ISO/IEC TR 14252]. </dd>
         <dt>Service instantie</dt>
         <dd>Een specifieke instantie (=verbindingspunt) van een service
-          [[!ISO19119]] toelichting: De service instantie duidt op de
-          software applicatie die op de server draait. </dd>
+          [[!ISO19119]] toelichting: De service instantie duidt op de software
+          applicatie die op de server draait. </dd>
         <dt>Service metadata</dt>
         <dd>Metadata die de operaties en geografische data beschrijft van de
           service [[!ISO19128]]. </dd>
@@ -495,10 +499,10 @@ http://schemas.opengis.net/csw/2.0.2/profiles/apiso/1.0.0/apiso.xsd</a></td>
           conditie verplichte elementen. Bij elk conditioneel element is de
           conditie benoemd. De in <a href="#appendix-d">Appendix D</a>
           opgenomen tabel “verantwoording metadata elementen” is gebaseerd op <a
-            data-cite="!INSPIRE-19115-19119"><em>INSPIRE Metadata Implementing
-              Rules: Technical Guidelines based on EN ISO 19115 and EN ISO
-              19119, v1.2</em></a>. Hiermee is de relatie gelegd tussen dit
-          document en INSPIRE.</p>
+            data-cite="!INSPIRE-19115-19119"><em>INSPIRE, 2017, Technical
+              Guidance for the implementation of INSPIRE dataset and service
+              metadata based on ISO/TS 19139:2007</em></a>. Hiermee is de
+          relatie gelegd tussen dit document en INSPIRE.</p>
         <table>
           <caption>Tabel 2: Overzicht verplichte elementen</caption> <colgroup>
             <col style="width: 30%;"> <col style="width: 20%;"><col style="width: 50%;">
@@ -1395,6 +1399,93 @@ http://schemas.opengis.net/csw/2.0.2/profiles/apiso/1.0.0/apiso.xsd</a></td>
               algemeen gebruiksvoorwaarden</a></p>
           <p>In het geval van een INSPIRE dataset dient twee maal het element
             MD_LegalConstraints gebruikt te worden.</p>
+        </section>
+        <section id="overige-beperkingen">
+          <h4>Overige beperkingen</h4>
+          <p style="text-align:left"><em>identificationInfo[1]/*/resourceConstraints/*/otherConstraints</em><span
+              style="float:right">[<a data-cite="!ISO19139-2007">ISO 19139:2007</a>]</span></p>
+          <p>Dit element is conditioneel, als het element juridische
+            toegangsrestricties de waarde otherRestrictions bevat dient het te
+            worden opgenomen. Hierin wordt&nbsp;in één
+            gmd:resourceConstraints/gmd:MD_LegalConstraints element voor de
+            voorwaarden voor toegang en gebruik een link naar de licentie en de
+            bijbehorende beschrijving opgenomen. In codelist <a href="#codelist-datalicenties">DataLicenties</a>
+            zijn de beschrijvingen en de bijbehorende link naar de licentie
+            opgenomen. </p>
+          <p>Daarnaast wordt er, als het een INSPIRE dataset is en er geen
+            beperkingen zijn of deze niet bekend zijn, een waarde uit <a href="#Codelist-INSPIRE-ConditionsApplyingToAccessAndUse">codelijst
+              ConditionsApplyingToAccessAndUse</a> opgenomen in een tweede
+            otherConstraints element binnen hetzelfde&nbsp;
+            md:resourceConstraints/gmd:MD_LegalConstraints element. Voor INSPIRE
+            is het gebruik van een Anchor verplicht. Het bevat, indien van
+            toepassing ook prijsinformatie voor het gebruik van de
+            dataset.&nbsp; </p>
+          <p>Daarnaast wordt voor beperkingen op publieke toegang in één ander
+            gmd:resourceConstraints/gmd:MD_LegalConstraints een waarde opgenomen
+            uit <a href="#Codelijst-INSPIRE-LimitationsOnPublicAccess">codelijst
+              LimitationsOnPublicAccess</a> . Als er geen beperkingen zijn dient
+            men dat ook aan te geven, met de waarde "noLimitations". Voor
+            INSPIRE is het gebruik van een Anchor verplicht.<br>
+          </p>
+          <table>
+            <colgroup> <col style="width: 30%"> <col style="width: 70%"> </colgroup>
+            <tbody>
+              <tr>
+                <th>Data type of Domein</th>
+                <th>Voorbeeld</th>
+              </tr>
+              <tr>
+                <td>Anchor, domein: DataLicenties</td>
+                <td>
+                  <pre><code>&lt;otherConstraints&gt;
+  &lt;gmx:anchor
+    xlink:href="https://creativecommons.org/
+      publicdomain/mark/*/deed.nl"&gt;
+      Geen beperkingen&lt;/gmx:anchor&gt;
+&lt;/otherConstraints&gt;</code></pre>
+                </td>
+              </tr>
+              <tr>
+                <td>Anchor, domein: ConditionsApplyingToAccessAndUse</td>
+                <td>
+                  <pre><code>&lt;otherConstraints&gt;
+ &lt;gmx:anchor
+    xlink:href="http://inspire.ec.europa.eu/metadata-codelist
+      /ConditionsApplyingToAccessAndUse/noConditionsApply"&gt;
+      Geen beperkingen
+  &lt;/gmx:anchor&gt;
+&lt;/otherConstraints&gt;</code></pre>
+                </td>
+              </tr>
+              <tr>
+                <td>Anchor, domein: LimitationsOnPublicAccess</td>
+                <td>
+                  <pre><code>&lt;otherConstraints&gt;
+  &lt;gmx:anchor
+    xlink:href="http://inspire.ec.europa.eu/metadata-codelist/LimitationsOnPublicAccess/noLimitations"&gt;
+      Geen beperkingen
+  &lt;/gmx:anchor&gt;
+&lt;/otherConstraints&gt;</code></pre>
+                </td>
+              </tr>
+              <tr>
+                <td>String, domein: DataLicenties</td>
+                <td>
+                  <pre><code>&lt;otherConstraints&gt;
+  &lt;gco:CharacterString&gt;
+    https://creativecommons.org/
+      publicdomain/mark/*/deed.nl 
+  &lt;/gco:CharacterString&gt;
+&lt;/otherConstraints&gt;
+&lt;otherConstraints&gt;
+  &lt;gco:CharacterString&gt;
+    Geen beperkingen
+  &lt;/gco:CharacterString&gt;
+&lt;/otherConstraints&gt;</code></pre>
+                </td>
+              </tr>
+            </tbody>
+          </table>
           <aside class="example" title="XML notatie open data licentie">
             <pre><code>&lt;resourceConstraints&gt;
   &lt;MD_LegalConstraints&gt;
@@ -1453,74 +1544,6 @@ http://schemas.opengis.net/csw/2.0.2/profiles/apiso/1.0.0/apiso.xsd</a></td>
 &lt;/resourceConstraints&gt;  
         </code></pre>
           </aside>
-        </section>
-        <section id="overige-beperkingen">
-          <h4>Overige beperkingen</h4>
-          <p style="text-align:left"><em>identificationInfo[1]/*/resourceConstraints/*/otherConstraints</em><span
-              style="float:right">[<a data-cite="!ISO19139-2007">ISO 19139:2007</a>]</span></p>
-          <p>Dit element is conditioneel, als het element juridische
-            toegangsrestricties de waarde otherRestrictions bevat dient het te
-            worden opgenomen. Hierin wordt&nbsp;in één
-            gmd:resourceConstraints/gmd:MD_LegalConstraints element voor de
-            voorwaarden voor toegang en gebruik een link naar de licentie en de
-            bijbehorende beschrijving opgenomen. In codelist <a href="#codelist-datalicenties">DataLicenties</a>
-            zijn de beschrijvingen en de bijbehorende link naar de licentie
-            opgenomen. </p>
-          <p>Daarnaast wordt er, als het een INSPIRE dataset is en er geen
-            beperkingen zijn of deze niet bekend zijn, een waarde uit <a href="#Codelist-INSPIRE-ConditionsApplyingToAccessAndUse">codelijst
-              ConditionsApplyingToAccessAndUse</a> opgenomen in een tweede
-            otherConstraints element binnen hetzelfde&nbsp;
-            md:resourceConstraints/gmd:MD_LegalConstraints element. Voor INSPIRE
-            is het gebruik van een Anchor verplicht. Het bevat, indien van
-            toepassing ook prijsinformatie voor het gebruik van de
-            dataset.&nbsp; </p>
-          <p>Daarnaast wordt voor beperkingen op publieke toegang in één ander
-            gmd:resourceConstraints/gmd:MD_LegalConstraints een waarde opgenomen
-            uit <a href="#Codelijst-INSPIRE-LimitationsOnPublicAccess">codelijst
-              LimitationsOnPublicAccess</a> . Als er geen beperkingen zijn dient
-            men dat ook aan te geven, met de waarde "noLimitations". Voor
-            INSPIRE is het gebruik van een Anchor verplicht.<br>
-          </p>
-          <p><br>
-          </p>
-          <table>
-            <colgroup> <col style="width: 30%"> <col style="width: 70%"> </colgroup>
-            <tbody>
-              <tr>
-                <th>Data type of Domein</th>
-                <th>Voorbeeld</th>
-              </tr>
-              <tr>
-                <td>Anchor, domein: DataLicenties<br>
-                  ConditionsApplyingToAccessAndUse<br>
-                  LimitationsOnPublicAccess)</td>
-                <td>
-                  <pre><code>&lt;otherConstraints&gt;
-  &lt;gmx:anchor
-    xlink:href="https://creativecommons.org/
-      publicdomain/mark/*/deed.nl"&gt;
-      Geen beperkingen&lt;/gmx:anchor&gt;
-&lt;/otherConstraints&gt;</code></pre>
-                </td>
-              </tr>
-              <tr>
-                <td>String, domein: DataLicenties</td>
-                <td>
-                  <pre><code>&lt;otherConstraints&gt;
-  &lt;gco:CharacterString&gt;
-    https://creativecommons.org/
-      publicdomain/mark/*/deed.nl 
-  &lt;/gco:CharacterString&gt;
-&lt;/otherConstraints&gt;
-&lt;otherConstraints&gt;
-  &lt;gco:CharacterString&gt;
-    Geen beperkingen
-  &lt;/gco:CharacterString&gt;
-&lt;/otherConstraints&gt;</code></pre>
-                </td>
-              </tr>
-            </tbody>
-          </table>
         </section>
         <section id="gebruiksbeperkingen">
           <h4>Gebruiksbeperkingen</h4>
@@ -4558,7 +4581,7 @@ http://schemas.opengis.net/csw/2.0.2/profiles/apiso/1.0.0/apiso.xsd</a></td>
       </section>
     </section>
     <section class="appendix page-break landscape" id="appendix-b">
-      <h2>Invulinstructies</h2>
+      <h2>Elementen overzicht</h2>
       <table rules="GROUPS" class="table-small" width="100%" border="1" cellpadding="5"
         cellspacing="0">
         <colgroup> <col> <col> <col> <col> <col> <col> <col> <col> <col>
@@ -17028,16 +17051,14 @@ http://schemas.opengis.net/csw/2.0.2/profiles/apiso/1.0.0/apiso.xsd</a></td>
             <th>Metadata element</th>
             <th>Optionaliteit NL profiel 1.3</th>
             <th>Optioneliteit NL profiel 2.0</th>
-            <th>INSPIRE optionaliteit</th>
             <th>INSPIRE referentie</th>
           </tr>
           <tr>
-            <td colspan="5" rowspan="1"><strong>Informatie over de bron</strong><strong><br>
+            <td colspan="4" rowspan="1"><strong>Informatie over de bron</strong><strong><br>
               </strong></td>
           </tr>
           <tr>
             <td><a href="#titel-van-de-bron">Titel van de bron</a></td>
-            <td>V</td>
             <td>V</td>
             <td>V</td>
             <td>&nbsp;2.3.1</td>
@@ -17046,13 +17067,11 @@ http://schemas.opengis.net/csw/2.0.2/profiles/apiso/1.0.0/apiso.xsd</a></td>
             <td><a href="#datum-van-de-bron">Datum van de bron</a></td>
             <td>V</td>
             <td>V</td>
-            <td>V</td>
             <td>&nbsp;2.3.4<br>
             </td>
           </tr>
           <tr>
             <td><a href="#datum-type-van-de-bron">Datumtype van de bron</a></td>
-            <td>V</td>
             <td>V</td>
             <td>V</td>
             <td>&nbsp;2.3.4<br>
@@ -17063,12 +17082,10 @@ http://schemas.opengis.net/csw/2.0.2/profiles/apiso/1.0.0/apiso.xsd</a></td>
                 de bron</a>. </td>
             <td>V</td>
             <td>V</td>
-            <td>V</td>
             <td>&nbsp;3.1.2.1</td>
           </tr>
           <tr>
             <td><a href="#samenvatting">Samenvatting</a></td>
-            <td>V</td>
             <td>V</td>
             <td>V</td>
             <td>&nbsp;2.3.2</td>
@@ -17077,12 +17094,10 @@ http://schemas.opengis.net/csw/2.0.2/profiles/apiso/1.0.0/apiso.xsd</a></td>
             <td><a href="#status">Status</a></td>
             <td>V</td>
             <td>V</td>
-            <td>V</td>
             <td>&nbsp;</td>
           </tr>
           <tr>
             <td><a href="#taal-van-de-bron">Taal van de bron</a></td>
-            <td>C</td>
             <td>C</td>
             <td>C</td>
             <td>&nbsp;3.1.2.4</td>
@@ -17091,24 +17106,21 @@ http://schemas.opengis.net/csw/2.0.2/profiles/apiso/1.0.0/apiso.xsd</a></td>
             <td><a href="#karakterset-van-de-bron">Karakterset van de bron</a></td>
             <td>C</td>
             <td>C</td>
-            <td style="width: 360px;">C</td>
             <td>&nbsp;3.2.2.2</td>
           </tr>
           <tr>
             <td><a href="#onderwerp">Onderwerp</a></td>
             <td>V</td>
             <td>V</td>
-            <td>V</td>
             <td>&nbsp;3.1.2.5</td>
           </tr>
           <tr>
-            <td colspan="5" rowspan="1"><strong>Verantwoordelijke organisatie
+            <td colspan="4" rowspan="1"><strong>Verantwoordelijke organisatie
                 bron</strong><strong><br>
               </strong></td>
           </tr>
           <tr>
             <td>&nbsp;&nbsp;&nbsp; <a href="#verantwoordelijke-organisatie-bron">Organisatie</a></td>
-            <td>V</td>
             <td>V</td>
             <td>V</td>
             <td>&nbsp;2.3.3</td>
@@ -17117,22 +17129,19 @@ http://schemas.opengis.net/csw/2.0.2/profiles/apiso/1.0.0/apiso.xsd</a></td>
             <td>&nbsp;&nbsp;&nbsp; <a href="#verantwoordelijke-organisatie-bron-email">E-mail</a></td>
             <td>V</td>
             <td>V</td>
-            <td>V</td>
             <td>&nbsp;2.3.3</td>
           </tr>
           <tr>
             <td>&nbsp;&nbsp;&nbsp; <a href="#verantwoordelijke-organisatie-bron:-rol">Rol</a></td>
             <td>V</td>
             <td>V</td>
-            <td>V</td>
             <td>&nbsp;2.3.3</td>
           </tr>
           <tr>
-            <td colspan="5" rowspan="1"><strong>Trefwoorden</strong></td>
+            <td colspan="4" rowspan="1"><strong>Trefwoorden</strong></td>
           </tr>
           <tr>
             <td>&nbsp;&nbsp;&nbsp; <a href="#trefwoord">Trefwoord</a></td>
-            <td>V</td>
             <td>V</td>
             <td>V</td>
             <td>&nbsp;2.3.5/3.1.2.2</td>
@@ -17145,19 +17154,15 @@ http://schemas.opengis.net/csw/2.0.2/profiles/apiso/1.0.0/apiso.xsd</a></td>
             </td>
             <td><br>
             </td>
-            <td><br>
-            </td>
           </tr>
           <tr>
             <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <a href="#thesaurus">Titel</a></td>
             <td>C</td>
             <td>C&nbsp;</td>
-            <td>C</td>
             <td>&nbsp;2.3.5</td>
           </tr>
           <tr>
             <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <a href="#thesaurusdatum">Datum</a></td>
-            <td>C</td>
             <td>C</td>
             <td>C</td>
             <td>&nbsp;2.3.5</td>
@@ -17167,17 +17172,15 @@ http://schemas.opengis.net/csw/2.0.2/profiles/apiso/1.0.0/apiso.xsd</a></td>
                 type</a></td>
             <td>C</td>
             <td>C</td>
-            <td>C</td>
             <td>&nbsp;2.3.5</td>
           </tr>
           <tr>
-            <td colspan="5" rowspan="1"><b>Beperkingen</b></td>
+            <td colspan="4" rowspan="1"><b>Beperkingen</b></td>
           </tr>
           <tr>
             <td>&nbsp;&nbsp;&nbsp;&nbsp; <a href="#juridische-toegangsrestricties">Juridische
                 toegangsrestricties</a></td>
             <td colspan="1" rowspan="3">V</td>
-            <td>V</td>
             <td>V</td>
             <td>2.3.6/2.3.7<br>
             </td>
@@ -17186,13 +17189,11 @@ http://schemas.opengis.net/csw/2.0.2/profiles/apiso/1.0.0/apiso.xsd</a></td>
             <td>&nbsp;&nbsp;&nbsp;&nbsp; <a href="#overige-beperkingen">Overige
                 beperkingen</a></td>
             <td>C</td>
-            <td>C</td>
             <td>2.3.6/2.3.7</td>
           </tr>
           <tr>
             <td>Veiligheidsrestricties</td>
-            <td>O</td>
-            <td>O</td>
+            <td>C</td>
             <td><br>
             </td>
           </tr>
@@ -17200,24 +17201,21 @@ http://schemas.opengis.net/csw/2.0.2/profiles/apiso/1.0.0/apiso.xsd</a></td>
             <td>&nbsp;<a href="#gebruiksbeperkingen">Gebruiksbeperkingen</a></td>
             <td>V</td>
             <td>V</td>
-            <td>V</td>
             <td>&nbsp;</td>
           </tr>
           <tr>
-            <td colspan="5" rowspan="1"><strong>Ruimtelijke informatie bron</strong><strong><br>
+            <td colspan="4" rowspan="1"><strong>Ruimtelijke informatie bron</strong><strong><br>
               </strong></td>
           </tr>
           <tr>
             <td><a href="#ruimtelijk-schema-van-de-bron">Ruimtelijk schema</a></td>
             <td>O</td>
-            <td>O</td>
-            <td>V</td>
+            <td>C</td>
             <td>&nbsp;3.2.2.1<br>
             </td>
           </tr>
           <tr>
             <td><a href="#toepassingsschaal">Toepassingsschaal</a></td>
-            <td>C</td>
             <td>C</td>
             <td>C</td>
             <td>&nbsp;3.1.2.3</td>
@@ -17226,21 +17224,18 @@ http://schemas.opengis.net/csw/2.0.2/profiles/apiso/1.0.0/apiso.xsd</a></td>
             <td><a href="#resolutie">Resolutie</a></td>
             <td>C</td>
             <td>C</td>
-            <td>C</td>
             <td>&nbsp;3.1.2.3</td>
           </tr>
           <tr>
             <td><a href="#codereferentiesysteem">Ruimtelijk referentiesysteem</a></td>
             <td>V</td>
             <td>V</td>
-            <td>V</td>
             <td>&nbsp;3.2.1.1</td>
           </tr>
           <tr>
-            <td>Verantwoordelijke oragnisatie code referentiesysteem</td>
+            <td>Verantwoordelijke organisatie code referentiesysteem</td>
             <td>V</td>
-            <td>O</td>
-            <td>O</td>
+            <td>C</td>
             <td><br>
             </td>
           </tr>
@@ -17249,13 +17244,11 @@ http://schemas.opengis.net/csw/2.0.2/profiles/apiso/1.0.0/apiso.xsd</a></td>
                 referentiesysteem</a>&nbsp;</td>
             <td>C</td>
             <td>C</td>
-            <td>C</td>
             <td>&nbsp;3.2.1.2</td>
           </tr>
           <tr>
             <td><a href="#Omgrenzende%20rechthoek">Omgrenzende rechthoek</a></td>
             <td>C</td>
-            <td>V</td>
             <td>V</td>
             <td>&nbsp;2.3.8</td>
           </tr>
@@ -17267,37 +17260,31 @@ http://schemas.opengis.net/csw/2.0.2/profiles/apiso/1.0.0/apiso.xsd</a></td>
             </td>
             <td><br>
             </td>
-            <td><br>
-            </td>
           </tr>
           <tr>
             <td>&nbsp;&nbsp;&nbsp; <a href="#naam-distributie-formaat">Naam</a>
             </td>
             <td>C</td>
-            <td>O</td>
             <td>C</td>
             <td>&nbsp;3.2.3.1</td>
           </tr>
           <tr>
             <td>&nbsp;&nbsp;&nbsp; <a href="#versie-distributie-formaat">Versie</a></td>
             <td>C</td>
-            <td>O</td>
             <td>C</td>
             <td>&nbsp;3.2.3.1</td>
           </tr>
           <tr>
             <td>&nbsp;&nbsp;&nbsp; <a href="#specificatie-distributie-formaat">Specificatie</a></td>
             <td>C</td>
-            <td>O</td>
             <td>C</td>
             <td>&nbsp;3.2.3.1</td>
           </tr>
           <tr>
-            <td colspan="5" rowspan="1"><strong>Distributies</strong></td>
+            <td colspan="4" rowspan="1"><strong>Distributies</strong></td>
           </tr>
           <tr>
             <td>&nbsp; &nbsp; <a href="#url">URL</a></td>
-            <td>C</td>
             <td>C</td>
             <td>C</td>
             <td>&nbsp; 3.1.3.1</td>
@@ -17306,7 +17293,6 @@ http://schemas.opengis.net/csw/2.0.2/profiles/apiso/1.0.0/apiso.xsd</a></td>
             <td>&nbsp; &nbsp; <a href="#protocol">Protocol</a></td>
             <td>C</td>
             <td>C</td>
-            <td>O</td>
             <td><br>
             </td>
           </tr>
@@ -17314,7 +17300,6 @@ http://schemas.opengis.net/csw/2.0.2/profiles/apiso/1.0.0/apiso.xsd</a></td>
             <td>&nbsp;&nbsp;&nbsp; <a href="#naam">Naam</a> </td>
             <td>C</td>
             <td>C</td>
-            <td>O</td>
             <td><br>
             </td>
           </tr>
@@ -17322,18 +17307,16 @@ http://schemas.opengis.net/csw/2.0.2/profiles/apiso/1.0.0/apiso.xsd</a></td>
             <td>&nbsp; &nbsp; <a href="#description">Omschrijving</a></td>
             <td>O</td>
             <td>C</td>
-            <td>C</td>
             <td><br>
             </td>
           </tr>
           <tr>
-            <td colspan="5" rowspan="1"><strong>Kwaliteits informatie </strong><strong><br>
+            <td colspan="4" rowspan="1"><strong>Kwaliteits informatie </strong><strong><br>
               </strong></td>
           </tr>
           <tr>
             <td><a href="#niveau-kwaliteitsbeschrijving">Niveau
                 kwaliteitsbeschrijving</a></td>
-            <td>V</td>
             <td>V</td>
             <td>V</td>
             <td>&nbsp;3.1.4.1</td>
@@ -17343,25 +17326,22 @@ http://schemas.opengis.net/csw/2.0.2/profiles/apiso/1.0.0/apiso.xsd</a></td>
                 herkomst</a></td>
             <td>V</td>
             <td>V</td>
-            <td>V</td>
             <td>&nbsp;3.1.4.3</td>
           </tr>
           <tr>
-            <td colspan="5" rowspan="1"><strong>Conformiteit <br>
+            <td colspan="4" rowspan="1"><strong>Conformiteit <br>
               </strong></td>
           </tr>
           <tr>
             <td>&nbsp;&nbsp;&nbsp; <a href="#specificatie">Specificatie</a></td>
             <td>C</td>
             <td>C</td>
-            <td>V</td>
             <td>2.4.1/3.1.4.2</td>
           </tr>
           <tr>
             <td>&nbsp;&nbsp;&nbsp; <a href="#specificatiedatum">Specificatiedatum</a></td>
             <td>C</td>
             <td>C</td>
-            <td>V</td>
             <td>2.4.1/3.1.4.1</td>
           </tr>
           <tr>
@@ -17369,14 +17349,12 @@ http://schemas.opengis.net/csw/2.0.2/profiles/apiso/1.0.0/apiso.xsd</a></td>
                 type</a></td>
             <td>C</td>
             <td>C</td>
-            <td>V</td>
             <td>2.4.1/3.1.4.2</td>
           </tr>
           <tr>
             <td>&nbsp;&nbsp;&nbsp; <a href="#verklaring">Verklaring</a></td>
             <td>C</td>
             <td>C</td>
-            <td>V</td>
             <td>2.4.1/3.1.4.2</td>
           </tr>
           <tr>
@@ -17384,33 +17362,29 @@ http://schemas.opengis.net/csw/2.0.2/profiles/apiso/1.0.0/apiso.xsd</a></td>
                 indicatie met een specificatie</a></td>
             <td>C</td>
             <td>C</td>
-            <td>V</td>
             <td>2.4.1/3.1.4.2</td>
           </tr>
           <tr>
-            <td colspan="5" rowspan="1"><strong>Topologische samenhang</strong></td>
+            <td colspan="4" rowspan="1"><strong>Topologische samenhang</strong></td>
           </tr>
           <tr>
             <td>&nbsp;&nbsp;&nbsp; <a href="#topologische-samenhang">Waarde</a></td>
             <td>C</td>
-            <td>O</td>
             <td>C</td>
             <td>&nbsp;3.2.4.1</td>
           </tr>
           <tr>
             <td>&nbsp;&nbsp;&nbsp;<a href="#Type-waarde"> Type waarde</a></td>
             <td>C</td>
-            <td>O</td>
             <td>C</td>
             <td>&nbsp;3.2.4.1</td>
           </tr>
           <tr>
-            <td colspan="5" rowspan="1"><strong>Informatie over de metadata</strong><strong><br>
+            <td colspan="4" rowspan="1"><strong>Informatie over de metadata</strong><strong><br>
               </strong></td>
           </tr>
           <tr>
             <td><a href="#metadata-unieke-identifier">Metadata unieke identifier</a></td>
-            <td>V</td>
             <td>V</td>
             <td>V</td>
             <td>&nbsp;2.2.1</td>
@@ -17419,19 +17393,16 @@ http://schemas.opengis.net/csw/2.0.2/profiles/apiso/1.0.0/apiso.xsd</a></td>
             <td><a href="#metadatadatum">Metadata datum</a></td>
             <td>V</td>
             <td>V</td>
-            <td>V</td>
             <td>&nbsp;2.2.4</td>
           </tr>
           <tr>
             <td><a href="#taal-van-de-metadata">Taal van de metadata</a></td>
             <td>V</td>
             <td>V</td>
-            <td>V</td>
             <td>&nbsp;2.2.2</td>
           </tr>
           <tr>
             <td><a href="#parent-unieke-identifier">Parent unieke identifier</a></td>
-            <td>C</td>
             <td>C</td>
             <td>C</td>
             <td><br>
@@ -17441,23 +17412,20 @@ http://schemas.opengis.net/csw/2.0.2/profiles/apiso/1.0.0/apiso.xsd</a></td>
             <td><a href="#hi%C3%ABrarchieniveau">Hiërarchieniveau</a></td>
             <td>V</td>
             <td>V</td>
-            <td>V</td>
             <td>&nbsp;3.1.1.1</td>
           </tr>
           <tr>
             <td><a href="#hi%C3%ABrarchieniveaunaam">Hiërarchieniveau naam</a></td>
             <td>C</td>
             <td>C</td>
-            <td>C</td>
             <td>&nbsp;3.1.1.1</td>
           </tr>
           <tr>
-            <td colspan="5" rowspan="1"><strong>Verantwoordelijke organisatie
+            <td colspan="4" rowspan="1"><strong>Verantwoordelijke organisatie
                 metadata</strong></td>
           </tr>
           <tr>
             <td>&nbsp;&nbsp;&nbsp; <a href="#verantwoordelijke-organisatie-metadata">Organisatie</a></td>
-            <td>V</td>
             <td>V</td>
             <td>V</td>
             <td>&nbsp;2.2.3</td>
@@ -17466,38 +17434,33 @@ http://schemas.opengis.net/csw/2.0.2/profiles/apiso/1.0.0/apiso.xsd</a></td>
             <td>&nbsp;&nbsp;&nbsp; <a href="#verantwoordelijke-organisatie-metadata:-e-mail">E-mail</a></td>
             <td>V</td>
             <td>V</td>
-            <td>V</td>
             <td>&nbsp;2.2.3</td>
           </tr>
           <tr>
             <td>&nbsp;&nbsp;&nbsp; <a href="#verantwoordelijke-organisatie-metadata:-rol">Rol</a></td>
             <td>V</td>
             <td>V</td>
-            <td>V</td>
             <td>&nbsp;2.2.3</td>
           </tr>
           <tr>
-            <td colspan="5" rowspan="1"><strong>Metadata standaard</strong></td>
+            <td colspan="4" rowspan="1"><strong>Metadata standaard</strong></td>
           </tr>
           <tr>
             <td>&nbsp;&nbsp;&nbsp; <a href="#metadata-standaard-naam">Naam</a></td>
             <td>V</td>
             <td>V</td>
-            <td>O</td>
             <td>&nbsp;</td>
           </tr>
           <tr>
             <td>&nbsp;&nbsp;&nbsp; <a href="#metadatastandaard-versie">Versie</a></td>
             <td>V</td>
             <td>V</td>
-            <td>O</td>
             <td>&nbsp;</td>
           </tr>
           <tr>
             <td><a href="#unieke-identifier-van-de-identificatie-sectie">Unieke
                 Identifier van de identificatie sectie</a></td>
             <td>O</td>
-            <td>C</td>
             <td>C</td>
             <td>2.2.1</td>
           </tr>
