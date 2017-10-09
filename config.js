@@ -1,6 +1,6 @@
 var respecConfig = {
   specStatus: "GN-CV",
-  pubDomein:"hi",
+  pubDomain:"md",
   specType: "ST",
   editors: [{
     name: "Geonovum",
