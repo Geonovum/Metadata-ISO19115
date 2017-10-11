@@ -215,10 +215,10 @@
       <p></p>
       <p><b>[[!CSW2APISO]]</b>, OpenGIS Catalogue Services Specification 2.0.2 -
         ISO Metadata Application Profile</p>
-      <p><b>ISO 19108</b>, EN [!ISO19108]:2005, Geographic information –
+      <p><b>ISO 19108</b>, EN [[!ISO19108-2005]], Geographic information –
         Temporal Schema<br>
       </p>
-      <p><i>EN [[!ISO19108-2005]] is de adoptie door CEN van ISO 19108:2002</i></p>
+      <p><i>EN [ISO19108-2005] is de adoptie door CEN van ISO 19108:2002</i></p>
       <p></p>
       <p><b>[[!ISO8601-2004]]</b>, Data elements and interchange formats -
         Information interchange - Representation of dates and times</p>
@@ -495,7 +495,7 @@ http://schemas.opengis.net/csw/2.0.2/profiles/apiso/1.0.0/apiso.xsd</a></td>
         <h3>Overzicht verplichte elementen</h3>
         <p>In de volgende tabel staan de verplichte of bij conditie verplichte
           elementen. Bij elk conditioneel element is de conditie benoemd. De in
-          <a href="#appendix-d">Appendix D</a> opgenomen tabel “verantwoording
+          <a href="#appendix-c">Appendix C</a> opgenomen tabel “verantwoording
           metadata elementen” is gebaseerd op <a data-cite="!INSPIRE-19115-19119"><em>INSPIRE,
               2017, Technical Guidance for the implementation of INSPIRE dataset
               and service metadata based on ISO/TS 19139:2007</em></a>. Hiermee
@@ -608,20 +608,20 @@ http://schemas.opengis.net/csw/2.0.2/profiles/apiso/1.0.0/apiso.xsd</a></td>
             <tr>
               <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <a href="#thesaurus">Titel</a></td>
               <td>C&nbsp;</td>
-              <td>Het is verplicht als een keyword uit een thesaurus afkomstig
+              <td>Het is verplicht als een trefwoord uit een thesaurus afkomstig
                 is. </td>
             </tr>
             <tr>
               <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <a href="#thesaurusdatum">Datum</a></td>
               <td>C</td>
-              <td>Het is verplicht als een keyword uit een thesaurus afkomstig
+              <td>Het is verplicht als een trefwoord uit een thesaurus afkomstig
                 is. </td>
             </tr>
             <tr>
               <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <a href="#thesaurusdatum-type">Datum
                   type</a></td>
               <td>C</td>
-              <td>Het is verplicht als een keyword uit een thesaurus afkomstig
+              <td>Het is verplicht als een trefwoord uit een thesaurus afkomstig
                 is. </td>
             </tr>
             <tr>
@@ -981,11 +981,10 @@ http://schemas.opengis.net/csw/2.0.2/profiles/apiso/1.0.0/apiso.xsd</a></td>
           <h4>Unieke Identifier van de bron</h4>
           <p style="text-align:left"><em>identificationInfo[1]/*/citation/*/identifier/MD_Identifier/code</em><span
               style="float:right">[<a data-cite="!ISO19139-2007">ISO 19139:2007</a>]</span></p>
-          <p>Dit element is verplicht. Het gebuik van een anchor met een link
-            naar een URI is conditioneel. Het gebruik van een anchor is
-            verplicht voor INSPIRE datasets. Dit element bevat de waarde die een
-            object uniek identificeert. Er wordt sterk geadviseerd om gebruik te
-            maken van een anchor met een verwijzing naar een <a title="Uniform Resource Identifier"
+          <p>Dit element is verplicht. Het gebuik van een URI is conditioneel,
+            het is verplicht voor INSPIRE datasets. Dit element bevat de waarde
+            die een object uniek identificeert. Er wordt sterk geadviseerd om
+            gebruik te maken van een anchor met een verwijzing naar een <a title="Uniform Resource Identifier"
               href="https://nl.wikipedia.org/wiki/Uniform_resource_identifier">URI</a>.
             Indien een URI gebruikt wordt dient deze te verwijzen naar een
             bestaande bron op het web. De aanbieders van URI's dienen te zorgen
@@ -1061,8 +1060,7 @@ http://schemas.opengis.net/csw/2.0.2/profiles/apiso/1.0.0/apiso.xsd</a></td>
                 <th>Voorbeeld</th>
               </tr>
               <tr>
-                <td><span style="font-family: monospace;">String, domein:
-                    ProgressCode</span></td>
+                <td>String, domein: ProgressCode</td>
                 <td>completed</td>
               </tr>
             </tbody>
@@ -1085,7 +1083,7 @@ http://schemas.opengis.net/csw/2.0.2/profiles/apiso/1.0.0/apiso.xsd</a></td>
                 <th>Voorbeeld</th>
               </tr>
               <tr>
-                <td>String, domain: ISO 639-2</td>
+                <td>String, domein: ISO 639-2</td>
                 <td>dut</td>
               </tr>
             </tbody>
@@ -1242,7 +1240,7 @@ http://schemas.opengis.net/csw/2.0.2/profiles/apiso/1.0.0/apiso.xsd</a></td>
                 <td>Anchor, domein: InspireTheme </td>
                 <td>
                   <pre><code>&lt;gmx:Anchor
-  xlink:href="http://inspire.ec.europa.eu/theme/ps"&gt;
+  xlink:href="http://www.eionet.europa.eu/gemet/nl/inspire-theme/ps"&gt;
     Beschermde gebieden
 &lt;/gmx:Anchor&gt;</code></pre>
                 </td>
@@ -1275,7 +1273,7 @@ http://schemas.opengis.net/csw/2.0.2/profiles/apiso/1.0.0/apiso.xsd</a></td>
                 <td>Anchor</td>
                 <td>
                   <pre><code>&lt;gmx:Anchor
-  xlink:href="http://www.eionet.europa.eu/gemet/inspire_themes"&gt;
+  xlink:href="http://www.eionet.europa.eu/gemet/nl/inspire-themes/"&gt;
     GEMET - INSPIRE themes, version 1.0
 &lt;/gmx:Anchor&gt;</code></pre>
                 </td>
@@ -1362,7 +1360,7 @@ http://schemas.opengis.net/csw/2.0.2/profiles/apiso/1.0.0/apiso.xsd</a></td>
                 <th>Voorbeeld</th>
               </tr>
               <tr>
-                <td>String: domein: RestrictionCode</td>
+                <td>String, domein: RestrictionCode</td>
                 <td>otherRestrictions</td>
               </tr>
             </tbody>
@@ -1454,7 +1452,8 @@ http://schemas.opengis.net/csw/2.0.2/profiles/apiso/1.0.0/apiso.xsd</a></td>
                 <td>
                   <pre><code>&lt;otherConstraints&gt;
   &lt;gmx:anchor
-    xlink:href="http://inspire.ec.europa.eu/metadata-codelist/LimitationsOnPublicAccess/noLimitations"&gt;
+    xlink:href="http://inspire.ec.europa.eu/metadata-codelist/
+      LimitationsOnPublicAccess/noLimitations"&gt;
       Geen beperkingen
   &lt;/gmx:anchor&gt;
 &lt;/otherConstraints&gt;</code></pre>
@@ -1484,7 +1483,8 @@ http://schemas.opengis.net/csw/2.0.2/profiles/apiso/1.0.0/apiso.xsd</a></td>
     &lt;accessConstraints&gt;
       &lt;MD_RestrictionCode 
         codeListValue="otherRestrictions" 
-        codeList="http://www.isotc211.org/2005/resources/Codelist/gmxCodelists.xml#MD_RestrictionCode"/&gt;
+        codeList="http://www.isotc211.org/2005/resources/
+          Codelist/gmxCodelists.xml#MD_RestrictionCode"/&gt;
     &lt;/accessConstraints&gt;   
     &lt;otherConstraints&gt;
       &lt;gmx:anchor
@@ -1502,7 +1502,8 @@ http://schemas.opengis.net/csw/2.0.2/profiles/apiso/1.0.0/apiso.xsd</a></td>
     &lt;accessConstraints&gt;
       &lt;MD_RestrictionCode 
         codeListValue="otherRestrictions" 
-        codeList="http://www.isotc211.org/2005/resources/Codelist/gmxCodelists.xml#MD_RestrictionCode"/&gt;
+        codeList="http://www.isotc211.org/2005/resources/
+          Codelist/gmxCodelists.xml#MD_RestrictionCode"/&gt;
     &lt;/accessConstraints&gt;   
     &lt;otherConstraints&gt;
       &lt;gmx:anchor
@@ -1524,11 +1525,13 @@ http://schemas.opengis.net/csw/2.0.2/profiles/apiso/1.0.0/apiso.xsd</a></td>
     &lt;accessConstraints&gt;
       &lt;MD_RestrictionCode 
         codeListValue="otherRestrictions" 
-        codeList="http://www.isotc211.org/2005/resources/Codelist/gmxCodelists.xml#MD_RestrictionCode"/&gt;
+        codeList="http://www.isotc211.org/2005/resources/
+          Codelist/gmxCodelists.xml#MD_RestrictionCode"/&gt;
     &lt;/accessConstraints&gt;
     &lt;otherConstraints&gt;
       &lt;gmx:anchor
-        xlink:href="http://inspire.ec.europa.eu/metadata-codelist/LimitationsOnPublicAccess/noLimitations"&gt;
+        xlink:href="http://inspire.ec.europa.eu/metadata-codelist/
+          LimitationsOnPublicAccess/noLimitations"&gt;
           Geen beperkingen
       &lt;/gmx:anchor&gt;
     &lt;/otherConstraints&gt;
@@ -1572,7 +1575,7 @@ http://schemas.opengis.net/csw/2.0.2/profiles/apiso/1.0.0/apiso.xsd</a></td>
                 <th>Voorbeeld</th>
               </tr>
               <tr>
-                <td>SpatialRepresentationTypeCode</td>
+                <td>String, domein: SpatialRepresentationTypeCode</td>
                 <td>vector</td>
               </tr>
             </tbody>
@@ -2225,7 +2228,7 @@ http://schemas.opengis.net/csw/2.0.2/profiles/apiso/1.0.0/apiso.xsd</a></td>
           </table>
         </section>
         <section id="topologische-samenhang">
-          <h4>Topologische samenhang</h4>
+          <h4>Waarde topologische samenhang</h4>
           <p style="text-align:left"><em>dataQualityInfo/*/report/*/</em><span style="float:right">[<a
                 data-cite="!ISO19139-2007">ISO 19139:2007</a>]</span></p>
           <p>Dit element is conditioneel in dit profiel. Het is verplicht voor
@@ -2247,7 +2250,7 @@ http://schemas.opengis.net/csw/2.0.2/profiles/apiso/1.0.0/apiso.xsd</a></td>
           </table>
         </section>
         <section id="Type-waarde">
-          <h4>Type waarde</h4>
+          <h4>Type waarde topologische samenhang</h4>
           <p style="text-align:left"><em>dataQualityInfo/*/report/*/</em><span style="float:right">[<a
                 data-cite="!ISO19139-2007">ISO 19139:2007</a>]</span></p>
           <p>Dit element is conditioneel in dit profiel. Het is verplicht voor
@@ -2329,7 +2332,7 @@ http://schemas.opengis.net/csw/2.0.2/profiles/apiso/1.0.0/apiso.xsd</a></td>
                 <th>Voorbeeld</th>
               </tr>
               <tr>
-                <td>ISO 639-2</td>
+                <td>String, domein: ISO 639-2</td>
                 <td>dut</td>
               </tr>
             </tbody>
@@ -4118,31 +4121,29 @@ http://schemas.opengis.net/csw/2.0.2/profiles/apiso/1.0.0/apiso.xsd</a></td>
               <th>Beschrijving</th>
             </tr>
             <tr>
-              <td>http://inspire.ec.europa.eu/metadata-codelist/LimitationsOnPublicAccess/noLimitations</td>
+              <td>http://inspire.ec.europa.eu/metadata-codelist/<br>
+                LimitationsOnPublicAccess/noLimitations</td>
               <td>noLimitations</td>
               <td>Geen beperkingen voor publieke toegang</td>
             </tr>
             <tr>
-              <td>
-                http://inspire.ec.europa.eu/metadata-codelist/LimitationsOnPublicAccess/INSPIRE_Directive_Article13_1a
-                </td>
+              <td> http://inspire.ec.europa.eu/metadata-codelist/<br>
+                LimitationsOnPublicAccess/INSPIRE_Directive_Article13_1a </td>
               <td>INSPIRE_Directive_Article13_1a</td>
               <td>Publieke toegang beperkt ivm afbreuk van het vertrouwelijke
                 karakter van handelingen van overheidsinstanties, indien deze
                 vertrouwelijkheid bij wet is voorzien </td>
             </tr>
             <tr>
-              <td>
-                http://inspire.ec.europa.eu/metadata-codelist/LimitationsOnPublicAccess/INSPIRE_Directive_Article13_1b
-                </td>
+              <td> http://inspire.ec.europa.eu/metadata-codelist/<br>
+                LimitationsOnPublicAccess/INSPIRE_Directive_Article13_1b </td>
               <td>INSPIRE_Directive_Article13_1b </td>
               <td>Publieke toegang beperkt ivm afbreuk van internationale
                 betrekkingen, openbare veiligheid of nationale defensie </td>
             </tr>
             <tr>
-              <td>
-                http://inspire.ec.europa.eu/metadata-codelist/LimitationsOnPublicAccess/INSPIRE_Directive_Article13_1c
-                </td>
+              <td> http://inspire.ec.europa.eu/metadata-codelist/<br>
+                LimitationsOnPublicAccess/INSPIRE_Directive_Article13_1c </td>
               <td>INSPIRE_Directive_Article13_1c</td>
               <td>Publieke toegang beperkt ivm afbreuk van de rechtsgang, de
                 mogelijkheid voor een persoon een eerlijk proces te krijgen of
@@ -4150,9 +4151,8 @@ http://schemas.opengis.net/csw/2.0.2/profiles/apiso/1.0.0/apiso.xsd</a></td>
                 strafrechtelijke of disciplinaire aard in te stellen </td>
             </tr>
             <tr>
-              <td>
-                http://inspire.ec.europa.eu/metadata-codelist/LimitationsOnPublicAccess/INSPIRE_Directive_Article13_1d
-                </td>
+              <td> http://inspire.ec.europa.eu/metadata-codelist/<br>
+                LimitationsOnPublicAccess/INSPIRE_Directive_Article13_1d </td>
               <td>INSPIRE_Directive_Article13_1d</td>
               <td>Publieke toegang beperkt ivm afbreuk van de vertrouwelijkheid
                 van commerciële of industriële informatie, wanneer deze
@@ -4162,17 +4162,15 @@ http://schemas.opengis.net/csw/2.0.2/profiles/apiso/1.0.0/apiso.xsd</a></td>
                 fiscale geheimhouding is gediend </td>
             </tr>
             <tr>
-              <td>
-                http://inspire.ec.europa.eu/metadata-codelist/LimitationsOnPublicAccess/INSPIRE_Directive_Article13_1e
-                </td>
+              <td> http://inspire.ec.europa.eu/metadata-codelist/<br>
+                LimitationsOnPublicAccess/INSPIRE_Directive_Article13_1e </td>
               <td>INSPIRE_Directive_Article13_1e</td>
               <td>Publieke toegang beperkt ivm afbreuk van
                 intellectuele-eigendomsrechten</td>
             </tr>
             <tr>
-              <td>
-                http://inspire.ec.europa.eu/metadata-codelist/LimitationsOnPublicAccess/INSPIRE_Directive_Article13_1f
-                </td>
+              <td> http://inspire.ec.europa.eu/metadata-codelist/<br>
+                LimitationsOnPublicAccess/INSPIRE_Directive_Article13_1f </td>
               <td>INSPIRE_Directive_Article13_1f </td>
               <td>Publieke toegang beperkt ivm afbreuk van de vertrouwelijkheid
                 van persoonsgegevens en/of -dossiers met betrekking tot een
@@ -4182,9 +4180,8 @@ http://schemas.opengis.net/csw/2.0.2/profiles/apiso/1.0.0/apiso.xsd</a></td>
                 Gemeenschapsrecht </td>
             </tr>
             <tr>
-              <td>
-                http://inspire.ec.europa.eu/metadata-codelist/LimitationsOnPublicAccess/INSPIRE_Directive_Article13_1g
-                </td>
+              <td> http://inspire.ec.europa.eu/metadata-codelist/<br>
+                LimitationsOnPublicAccess/INSPIRE_Directive_Article13_1g </td>
               <td>INSPIRE_Directive_Article13_1g</td>
               <td>Publieke toegang beperkt ivm afbreuk van de belangen of de
                 bescherming van diegene die de verzochte informatie op
@@ -4193,9 +4190,8 @@ http://schemas.opengis.net/csw/2.0.2/profiles/apiso/1.0.0/apiso.xsd</a></td>
                 heeft ingestemd dat de betrokken informatie wordt vrijgegeven </td>
             </tr>
             <tr>
-              <td>
-                http://inspire.ec.europa.eu/metadata-codelist/LimitationsOnPublicAccess/INSPIRE_Directive_Article13_1h
-                </td>
+              <td> http://inspire.ec.europa.eu/metadata-codelist/<br>
+                LimitationsOnPublicAccess/INSPIRE_Directive_Article13_1h </td>
               <td>INSPIRE_Directive_Article13_1h</td>
               <td>Publieke toegang beperkt ivm afbreuk van de bescherming van
                 het milieu waarop die informatie betrekking heeft, zoals de
@@ -4516,7 +4512,6 @@ http://schemas.opengis.net/csw/2.0.2/profiles/apiso/1.0.0/apiso.xsd</a></td>
       </section>
       <section id="codelist-datalicenties">
         <h4>Codelijst data licenties</h4>
-        <p>De codelijst wordt beheerd door Geonovum</p>
         <table>
           <colgroup> <col style="width: 40%"> <col style="width: 25%"> <col style="width: 35%">
           </colgroup>
@@ -4641,7 +4636,7 @@ http://schemas.opengis.net/csw/2.0.2/profiles/apiso/1.0.0/apiso.xsd</a></td>
                 Identifier (<u><a href="http://en.wikipedia.org/wiki/UUID">http://en.wikipedia.org/wiki/UUID</a></u>).</p>
             </td>
             <td>
-              <p>String</p>
+              <p>string</p>
             </td>
             <td><br>
             </td>
@@ -4717,7 +4712,7 @@ http://schemas.opengis.net/csw/2.0.2/profiles/apiso/1.0.0/apiso.xsd</a></td>
               <p>codelijst</p>
             </td>
             <td>
-              <p>B.5.10</p>
+              <p>CharacterSet</p>
             </td>
             <td>
               <p>default</p>
@@ -4752,7 +4747,7 @@ http://schemas.opengis.net/csw/2.0.2/profiles/apiso/1.0.0/apiso.xsd</a></td>
                 bestaat.</p>
             </td>
             <td>
-              <p>String</p>
+              <p>string</p>
             </td>
             <td><br>
             </td>
@@ -4788,7 +4783,7 @@ http://schemas.opengis.net/csw/2.0.2/profiles/apiso/1.0.0/apiso.xsd</a></td>
               <p>codelijst</p>
             </td>
             <td>
-              <p>B.5.25</p>
+              <p>Scope</p>
             </td>
             <td>
               <p>expliciet</p>
@@ -4821,7 +4816,7 @@ http://schemas.opengis.net/csw/2.0.2/profiles/apiso/1.0.0/apiso.xsd</a></td>
               <p>Verplicht als Hiërarchieniveau een dataset serie is</p>
             </td>
             <td>
-              <p>String</p>
+              <p>string</p>
             </td>
             <td>
               <p><br>
@@ -4893,7 +4888,7 @@ http://schemas.opengis.net/csw/2.0.2/profiles/apiso/1.0.0/apiso.xsd</a></td>
               <p> &gt; </p>
             </td>
           </tr>
-          <tr class="cell-req">
+          <tr>
             <td><br>
             </td>
             <td><br>
@@ -4957,7 +4952,8 @@ http://schemas.opengis.net/csw/2.0.2/profiles/apiso/1.0.0/apiso.xsd</a></td>
               <p>Gebruik de volledig uitgeschreven naam van de verantwoordelijke
                 organisatie. De afkorting kan toegevoegd worden aan de
                 organisatienaam. Voor de correcte overheidsnamen zie:
-                http://almanak.overheid.nl/.Gebruik bij voorkeur een URI uit een
+                <a href="http://standaarden.overheid.nl/owms/terms/Overheidsorganisatie.html">
+                  owms/Overheidsorganisatie</a>. Gebruik bij voorkeur een URI uit een
                 organisatienamenlijst </p>
             </td>
             <td>
@@ -4975,7 +4971,7 @@ http://schemas.opengis.net/csw/2.0.2/profiles/apiso/1.0.0/apiso.xsd</a></td>
               <p>1</p>
             </td>
           </tr>
-          <tr class="cell-req">
+          <tr>
             <td><br>
             </td>
             <td><br>
@@ -5032,7 +5028,7 @@ http://schemas.opengis.net/csw/2.0.2/profiles/apiso/1.0.0/apiso.xsd</a></td>
             <td><br>
             </td>
             <td rowspan="4">
-              <p>Er wordt geadviseert contactinformatie op de website van de
+              <p>Er wordt geadviseerd contactinformatie op de website van de
                 organisatie te plaatsen. Contactgegevens hoeven hier dan niet
                 ingevuld en bijgehouden te worden.</p>
             </td>
@@ -5695,7 +5691,7 @@ http://schemas.opengis.net/csw/2.0.2/profiles/apiso/1.0.0/apiso.xsd</a></td>
               <p>codelijst</p>
             </td>
             <td>
-              <p>B.5.5</p>
+              <p>Role</p>
             </td>
             <td>
               <p>default</p>
@@ -6178,7 +6174,7 @@ http://schemas.opengis.net/csw/2.0.2/profiles/apiso/1.0.0/apiso.xsd</a></td>
             <td><br>
             </td>
           </tr>
-          <tr>
+          <tr class="cell-req">
             <td><br>
             </td>
             <td><br>
@@ -6870,7 +6866,7 @@ http://schemas.opengis.net/csw/2.0.2/profiles/apiso/1.0.0/apiso.xsd</a></td>
               <p>codelijst</p>
             </td>
             <td>
-              <p>B.5.2</p>
+              <p>dateType</p>
             </td>
             <td>
               <p>expliciet</p>
@@ -7007,14 +7003,11 @@ http://schemas.opengis.net/csw/2.0.2/profiles/apiso/1.0.0/apiso.xsd</a></td>
               <p>Unieke waarde om data te beschrijven binnen een namespace.</p>
             </td>
             <td>
-              <pre><code>&lt;anchor
-                  xlink:href="http://domein/id/record/ee543323-0fe4-4353-9161-eda61ff26c07"&gt;
-                  ee543323-0fe4-4353-9161-eda61ff26c07 &lt;/anchor&gt;</code></pre>
+              <p>http://domein/id/record/ee543323-0fe4-4353-9161-eda61ff26c07</p>
             </td>
             <td>
-              <p>Unieke identifier van de bron. Het gebuik van een anchor met
-                een link naar een URI is conditioneel. Het gebruik van een
-                anchor is verplicht voor INSPIRE datasets.</p>
+              <p>Unieke identifier van de bron. Het gebuik van een URI is
+                conditioneel,&nbsp;het is verplicht voor INSPIRE datasets.</p>
             </td>
             <td>
               <p>string</p>
@@ -7260,7 +7253,7 @@ http://schemas.opengis.net/csw/2.0.2/profiles/apiso/1.0.0/apiso.xsd</a></td>
               <p>codelijst</p>
             </td>
             <td>
-              <p>B.5.23</p>
+              <p>Progress</p>
             </td>
             <td>
               <p>expliciet</p>
@@ -7410,7 +7403,8 @@ http://schemas.opengis.net/csw/2.0.2/profiles/apiso/1.0.0/apiso.xsd</a></td>
               <p>Gebruik de volledig uitgeschreven naam van de verantwoordelijke
                 organisatie. De afkorting kan toegevoegd worden aan de
                 organisatienaam. Voor de correcte overheidsnamen
-                zie:http://almanak.overheid.nl/http://almanak.overheid.nl/.</p>
+                zie: <a href="http://standaarden.overheid.nl/owms/terms/Overheidsorganisatie.html">
+                  owms/Overheidsorganisatie</a>.</p>
             </td>
             <td>
               <p>string</p>
@@ -7427,7 +7421,7 @@ http://schemas.opengis.net/csw/2.0.2/profiles/apiso/1.0.0/apiso.xsd</a></td>
               <p>1</p>
             </td>
           </tr>
-          <tr class="cell-req">
+          <tr>
             <td><br>
             </td>
             <td><br>
@@ -8213,7 +8207,7 @@ http://schemas.opengis.net/csw/2.0.2/profiles/apiso/1.0.0/apiso.xsd</a></td>
               <p>codelijst</p>
             </td>
             <td>
-              <p>B.5.5</p>
+              <p>Role</p>
             </td>
             <td>
               <p>default</p>
@@ -8323,7 +8317,7 @@ http://schemas.opengis.net/csw/2.0.2/profiles/apiso/1.0.0/apiso.xsd</a></td>
               <p>codelijst</p>
             </td>
             <td>
-              <p>B.5.18</p>
+              <p>MaintenanceFrequency</p>
             </td>
             <td>
               <p>expliciet</p>
@@ -8635,7 +8629,7 @@ http://schemas.opengis.net/csw/2.0.2/profiles/apiso/1.0.0/apiso.xsd</a></td>
               <p> &gt; </p>
             </td>
           </tr>
-          <tr>
+          <tr class="cell-req">
             <td><br>
             </td>
             <td><br>
@@ -8798,7 +8792,7 @@ http://schemas.opengis.net/csw/2.0.2/profiles/apiso/1.0.0/apiso.xsd</a></td>
               <p>1</p>
             </td>
           </tr>
-          <tr>
+          <tr class="cell-req">
             <td><br>
             </td>
             <td><br>
@@ -8852,7 +8846,7 @@ http://schemas.opengis.net/csw/2.0.2/profiles/apiso/1.0.0/apiso.xsd</a></td>
               <p>1</p>
             </td>
           </tr>
-          <tr>
+          <tr class="cell-req">
             <td><br>
             </td>
             <td><br>
@@ -8895,7 +8889,7 @@ http://schemas.opengis.net/csw/2.0.2/profiles/apiso/1.0.0/apiso.xsd</a></td>
               <p>codelijst</p>
             </td>
             <td>
-              <p>B.5.2</p>
+              <p>dateTyoe</p>
             </td>
             <td>
               <p>expliciet</p>
@@ -9088,7 +9082,7 @@ http://schemas.opengis.net/csw/2.0.2/profiles/apiso/1.0.0/apiso.xsd</a></td>
               <p>codelijst</p>
             </td>
             <td>
-              <p>B.5.24</p>
+              <p>Restriction</p>
             </td>
             <td>
               <p>default</p>
@@ -9134,7 +9128,7 @@ http://schemas.opengis.net/csw/2.0.2/profiles/apiso/1.0.0/apiso.xsd</a></td>
               <p>codelijst</p>
             </td>
             <td>
-              <p>B.5.24</p>
+              <p>Restriction</p>
             </td>
             <td>
               <p>default</p>
@@ -9146,7 +9140,7 @@ http://schemas.opengis.net/csw/2.0.2/profiles/apiso/1.0.0/apiso.xsd</a></td>
               <p>N</p>
             </td>
           </tr>
-          <tr>
+          <tr class="cell-req">
             <td><br>
             </td>
             <td><br>
@@ -9182,9 +9176,11 @@ http://schemas.opengis.net/csw/2.0.2/profiles/apiso/1.0.0/apiso.xsd</a></td>
                 te worden opgenomen.</p>
             </td>
             <td>
-              <p>string</p>
+              <p>codelist</p>
             </td>
-            <td><br>
+            <td>
+              <p>dataLicenties, limitationsOnPublicAccess,
+                conditionsApplyingToAccessAndUse</p>
             </td>
             <td>
               <p>default</p>
@@ -9239,7 +9235,7 @@ http://schemas.opengis.net/csw/2.0.2/profiles/apiso/1.0.0/apiso.xsd</a></td>
             <td><br>
             </td>
             <td>
-              <p><b>74</b></p>
+              <p>74</p>
             </td>
             <td colspan="7">
               <p>Veiligheidsrestricties</p>
@@ -9261,7 +9257,7 @@ http://schemas.opengis.net/csw/2.0.2/profiles/apiso/1.0.0/apiso.xsd</a></td>
               <p>codelijst</p>
             </td>
             <td>
-              <p>B.5.11</p>
+              <p>Restriction</p>
             </td>
             <td>
               <p>expliciet</p>
@@ -9696,7 +9692,7 @@ http://schemas.opengis.net/csw/2.0.2/profiles/apiso/1.0.0/apiso.xsd</a></td>
               <p>codelijst</p>
             </td>
             <td>
-              <p>B.5.2</p>
+              <p>dateType</p>
             </td>
             <td>
               <p>expliciet</p>
@@ -9744,7 +9740,7 @@ http://schemas.opengis.net/csw/2.0.2/profiles/apiso/1.0.0/apiso.xsd</a></td>
               <p>codelijst</p>
             </td>
             <td>
-              <p>B.5.7</p>
+              <p>AssociationType</p>
             </td>
             <td>
               <p>default</p>
@@ -9756,7 +9752,7 @@ http://schemas.opengis.net/csw/2.0.2/profiles/apiso/1.0.0/apiso.xsd</a></td>
               <p>1</p>
             </td>
           </tr>
-          <tr>
+          <tr class="cell-req">
             <td><br>
             </td>
             <td><br>
@@ -9786,7 +9782,7 @@ http://schemas.opengis.net/csw/2.0.2/profiles/apiso/1.0.0/apiso.xsd</a></td>
               <p>codelijst</p>
             </td>
             <td>
-              <p>B.5.26</p>
+              <p>SpatialRepresentationType</p>
             </td>
             <td>
               <p>impliciet</p>
@@ -9934,7 +9930,7 @@ http://schemas.opengis.net/csw/2.0.2/profiles/apiso/1.0.0/apiso.xsd</a></td>
               <p>1</p>
             </td>
           </tr>
-          <tr>
+          <tr class="cell-req">
             <td><br>
             </td>
             <td><br>
@@ -9990,7 +9986,7 @@ http://schemas.opengis.net/csw/2.0.2/profiles/apiso/1.0.0/apiso.xsd</a></td>
               <p>1</p>
             </td>
           </tr>
-          <tr>
+          <tr class="cell-req">
             <td><br>
             </td>
             <td><br>
@@ -10055,7 +10051,7 @@ http://schemas.opengis.net/csw/2.0.2/profiles/apiso/1.0.0/apiso.xsd</a></td>
               <p>1</p>
             </td>
           </tr>
-          <tr>
+          <tr class="cell-req">
             <td><br>
             </td>
             <td><br>
@@ -10096,7 +10092,7 @@ http://schemas.opengis.net/csw/2.0.2/profiles/apiso/1.0.0/apiso.xsd</a></td>
               <p>N</p>
             </td>
           </tr>
-          <tr>
+          <tr class="cell-req">
             <td><br>
             </td>
             <td><br>
@@ -10126,7 +10122,7 @@ http://schemas.opengis.net/csw/2.0.2/profiles/apiso/1.0.0/apiso.xsd</a></td>
               <p>codelijst</p>
             </td>
             <td>
-              <p>B.5.10</p>
+              <p>CharacterSet</p>
             </td>
             <td>
               <p>default</p>
@@ -10166,7 +10162,7 @@ http://schemas.opengis.net/csw/2.0.2/profiles/apiso/1.0.0/apiso.xsd</a></td>
               <p>enumeratie</p>
             </td>
             <td>
-              <p>B.5.27</p>
+              <p>TopicCategory</p>
             </td>
             <td>
               <p>expliciet</p>
@@ -11616,7 +11612,7 @@ http://schemas.opengis.net/csw/2.0.2/profiles/apiso/1.0.0/apiso.xsd</a></td>
               <p>codelijst</p>
             </td>
             <td>
-              <p>B.5.2</p>
+              <p>dateType</p>
             </td>
             <td>
               <p>expliciet</p>
@@ -11812,7 +11808,7 @@ http://schemas.opengis.net/csw/2.0.2/profiles/apiso/1.0.0/apiso.xsd</a></td>
               <p> &gt; </p>
             </td>
           </tr>
-          <tr>
+          <tr class="cell-req">
             <td><br>
             </td>
             <td><br>
@@ -11842,7 +11838,7 @@ http://schemas.opengis.net/csw/2.0.2/profiles/apiso/1.0.0/apiso.xsd</a></td>
             <td><br>
             </td>
           </tr>
-          <tr>
+          <tr class="cell-req">
             <td><br>
             </td>
             <td><br>
@@ -11875,7 +11871,7 @@ http://schemas.opengis.net/csw/2.0.2/profiles/apiso/1.0.0/apiso.xsd</a></td>
               <p> &gt; </p>
             </td>
           </tr>
-          <tr>
+          <tr class="cell-req">
             <td><br>
             </td>
             <td><br>
@@ -11919,7 +11915,7 @@ http://schemas.opengis.net/csw/2.0.2/profiles/apiso/1.0.0/apiso.xsd</a></td>
               <p>1</p>
             </td>
           </tr>
-          <tr>
+          <tr class="cell-req">
             <td><br>
             </td>
             <td><br>
@@ -11964,7 +11960,7 @@ http://schemas.opengis.net/csw/2.0.2/profiles/apiso/1.0.0/apiso.xsd</a></td>
               <p>1</p>
             </td>
           </tr>
-          <tr>
+          <tr class="cell-req">
             <td><br>
             </td>
             <td><br>
@@ -12228,7 +12224,8 @@ http://schemas.opengis.net/csw/2.0.2/profiles/apiso/1.0.0/apiso.xsd</a></td>
               <p>Gebruik de volledig uitgeschreven naam van de verantwoordelijke
                 organisatie. De afkorting kan toegevoegd worden aan de
                 organisatienaam. Voor de correcte overheidsnamen zie:
-                http://almanak.overheid.nl/.</p>
+                <a href="http://standaarden.overheid.nl/owms/terms/Overheidsorganisatie.html">
+                  owms/Overheidsorganisatie</a>.</p>
             </td>
             <td>
               <p>string</p>
@@ -13186,7 +13183,7 @@ http://schemas.opengis.net/csw/2.0.2/profiles/apiso/1.0.0/apiso.xsd</a></td>
               <p>codelijst</p>
             </td>
             <td>
-              <p>B.5.5</p>
+              <p>Role</p>
             </td>
             <td>
               <p>expliciet</p>
@@ -13563,7 +13560,7 @@ http://schemas.opengis.net/csw/2.0.2/profiles/apiso/1.0.0/apiso.xsd</a></td>
               <p>1</p>
             </td>
           </tr>
-          <tr>
+          <tr class="cell-req">
             <td><br>
             </td>
             <td><br>
@@ -13598,7 +13595,7 @@ http://schemas.opengis.net/csw/2.0.2/profiles/apiso/1.0.0/apiso.xsd</a></td>
               <p>N</p>
             </td>
           </tr>
-          <tr>
+          <tr class="cell-req">
             <td><br>
             </td>
             <td><br>
@@ -13635,7 +13632,7 @@ http://schemas.opengis.net/csw/2.0.2/profiles/apiso/1.0.0/apiso.xsd</a></td>
               <p>N</p>
             </td>
           </tr>
-          <tr>
+          <tr class="cell-req">
             <td><br>
             </td>
             <td><br>
@@ -13686,7 +13683,7 @@ http://schemas.opengis.net/csw/2.0.2/profiles/apiso/1.0.0/apiso.xsd</a></td>
               <p>1</p>
             </td>
           </tr>
-          <tr>
+          <tr class="cell-req">
             <td><br>
             </td>
             <td><br>
@@ -13736,7 +13733,7 @@ http://schemas.opengis.net/csw/2.0.2/profiles/apiso/1.0.0/apiso.xsd</a></td>
               <p>1</p>
             </td>
           </tr>
-          <tr>
+          <tr class="cell-req">
             <td><br>
             </td>
             <td><br>
@@ -13785,7 +13782,7 @@ http://schemas.opengis.net/csw/2.0.2/profiles/apiso/1.0.0/apiso.xsd</a></td>
               <p>1</p>
             </td>
           </tr>
-          <tr>
+          <tr class="cell-req">
             <td><br>
             </td>
             <td><br>
@@ -13993,7 +13990,7 @@ http://schemas.opengis.net/csw/2.0.2/profiles/apiso/1.0.0/apiso.xsd</a></td>
               <p>codelijst</p>
             </td>
             <td>
-              <p>B.5.20</p>
+              <p>MediumName</p>
             </td>
             <td>
               <p>expliciet</p>
@@ -14160,7 +14157,7 @@ http://schemas.opengis.net/csw/2.0.2/profiles/apiso/1.0.0/apiso.xsd</a></td>
               <p>codelijst</p>
             </td>
             <td>
-              <p>B.5.25</p>
+              <p>Scope</p>
             </td>
             <td>
               <p>expliciet</p>
@@ -14497,7 +14494,7 @@ http://schemas.opengis.net/csw/2.0.2/profiles/apiso/1.0.0/apiso.xsd</a></td>
               <p>1</p>
             </td>
           </tr>
-          <tr>
+          <tr class="cell-req">
             <td><br>
             </td>
             <td><br>
@@ -14530,7 +14527,7 @@ http://schemas.opengis.net/csw/2.0.2/profiles/apiso/1.0.0/apiso.xsd</a></td>
               <p> &gt; </p>
             </td>
           </tr>
-          <tr>
+          <tr class="cell-req">
             <td><br>
             </td>
             <td><br>
@@ -14622,7 +14619,7 @@ http://schemas.opengis.net/csw/2.0.2/profiles/apiso/1.0.0/apiso.xsd</a></td>
               <p>N</p>
             </td>
           </tr>
-          <tr>
+          <tr class="cell-req">
             <td><br>
             </td>
             <td><br>
@@ -14657,7 +14654,7 @@ http://schemas.opengis.net/csw/2.0.2/profiles/apiso/1.0.0/apiso.xsd</a></td>
               <p>N</p>
             </td>
           </tr>
-          <tr>
+          <tr class="cell-req">
             <td><br>
             </td>
             <td><br>
@@ -14694,7 +14691,7 @@ http://schemas.opengis.net/csw/2.0.2/profiles/apiso/1.0.0/apiso.xsd</a></td>
               <p>1</p>
             </td>
           </tr>
-          <tr>
+          <tr class="cell-req">
             <td><br>
             </td>
             <td><br>
@@ -14726,11 +14723,10 @@ http://schemas.opengis.net/csw/2.0.2/profiles/apiso/1.0.0/apiso.xsd</a></td>
               <p>2010-05-03</p>
             </td>
             <td>
-              <p>Het is alleen verplicht als de dataset een INSPIRE bron is of
-                als de informatie is gemodelleerd volgens een specifiek
-                informatie model. De type gebeurtenis waar de datum betrekking
-                op heeft wordt opgenomen in datum type. Te gebruiken notatie:
-                JJJJ-MM-DD (met streepjes).</p>
+              <p>Het is alleen verplicht als de dataset een INSPIRE bron is. Het
+                type gebeurtenis waar de datum betrekking op heeft wordt
+                opgenomen in datum type. Te gebruiken notatie: JJJJ-MM-DD (met
+                streepjes).</p>
             </td>
             <td>
               <p>klasse</p>
@@ -14748,7 +14744,7 @@ http://schemas.opengis.net/csw/2.0.2/profiles/apiso/1.0.0/apiso.xsd</a></td>
               <p>1</p>
             </td>
           </tr>
-          <tr>
+          <tr class="cell-req">
             <td><br>
             </td>
             <td><br>
@@ -14790,7 +14786,7 @@ http://schemas.opengis.net/csw/2.0.2/profiles/apiso/1.0.0/apiso.xsd</a></td>
               <p>codelijst</p>
             </td>
             <td>
-              <p>B.5.2</p>
+              <p>dateType</p>
             </td>
             <td>
               <p>expliciet</p>
@@ -14802,7 +14798,7 @@ http://schemas.opengis.net/csw/2.0.2/profiles/apiso/1.0.0/apiso.xsd</a></td>
               <p>1</p>
             </td>
           </tr>
-          <tr>
+          <tr class="cell-req">
             <td>
               <p><br>
               </p>
@@ -14869,7 +14865,7 @@ http://schemas.opengis.net/csw/2.0.2/profiles/apiso/1.0.0/apiso.xsd</a></td>
               <p>1</p>
             </td>
           </tr>
-          <tr>
+          <tr class="cell-req">
             <td><br>
             </td>
             <td><br>
@@ -15130,7 +15126,7 @@ http://schemas.opengis.net/csw/2.0.2/profiles/apiso/1.0.0/apiso.xsd</a></td>
               <p>N</p>
             </td>
           </tr>
-          <tr>
+          <tr class="cell-req">
             <td>
               <p><br>
               </p>
@@ -15157,7 +15153,7 @@ http://schemas.opengis.net/csw/2.0.2/profiles/apiso/1.0.0/apiso.xsd</a></td>
               <p> &gt; </p>
             </td>
           </tr>
-          <tr>
+          <tr class="cell-req">
             <td>
               <p><br>
               </p>
@@ -15194,7 +15190,7 @@ http://schemas.opengis.net/csw/2.0.2/profiles/apiso/1.0.0/apiso.xsd</a></td>
               <p>2</p>
             </td>
           </tr>
-          <tr>
+          <tr class="cell-req">
             <td><br>
             </td>
             <td><br>
@@ -15232,7 +15228,7 @@ http://schemas.opengis.net/csw/2.0.2/profiles/apiso/1.0.0/apiso.xsd</a></td>
               <p> &gt; </p>
             </td>
           </tr>
-          <tr>
+          <tr class="cell-req">
             <td><br>
             </td>
             <td><br>
@@ -15284,7 +15280,7 @@ http://schemas.opengis.net/csw/2.0.2/profiles/apiso/1.0.0/apiso.xsd</a></td>
               <p>1</p>
             </td>
           </tr>
-          <tr>
+          <tr class="cell-req">
             <td><br>
             </td>
             <td><br>
@@ -16021,7 +16017,8 @@ http://schemas.opengis.net/csw/2.0.2/profiles/apiso/1.0.0/apiso.xsd</a></td>
               <p>Gebruik de volledig uitgeschreven naam van de verantwoordelijke
                 organisatie. De afkorting kan toegevoegd worden aan de
                 organisatienaam. Voor de correcte overheidsnamen zie:
-                http://almanak.overheid.nl/.</p>
+                <a href="http://standaarden.overheid.nl/owms/terms/Overheidsorganisatie.html">
+                  owms/Overheidsorganisatie</a>.</p>
             </td>
             <td>
               <p>string</p>
@@ -16081,7 +16078,7 @@ http://schemas.opengis.net/csw/2.0.2/profiles/apiso/1.0.0/apiso.xsd</a></td>
               <p>string</p>
             </td>
             <td>
-              <p>B.5.5</p>
+              <p>Role</p>
             </td>
             <td>
               <p>default</p>
@@ -16532,7 +16529,8 @@ http://schemas.opengis.net/csw/2.0.2/profiles/apiso/1.0.0/apiso.xsd</a></td>
               <p>Gebruik de volledig uitgeschreven naam van de verantwoordelijke
                 organisatie. De afkorting kan toegevoegd worden aan de
                 organisatienaam. Voor de correcte overheidsnamen zie:
-                http://almanak.overheid.nl/.</p>
+                <a href="http://standaarden.overheid.nl/owms/terms/Overheidsorganisatie.html">
+                  owms/Overheidsorganisatie</a>.</p>
             </td>
             <td>
               <p>string</p>
@@ -16595,7 +16593,7 @@ http://schemas.opengis.net/csw/2.0.2/profiles/apiso/1.0.0/apiso.xsd</a></td>
               <p>string</p>
             </td>
             <td>
-              <p>B.5.5</p>
+              <p>Role</p>
             </td>
             <td>
               <p>default</p>
