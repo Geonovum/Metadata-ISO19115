@@ -1236,7 +1236,7 @@ http://schemas.opengis.net/csw/2.0.2/profiles/apiso/1.0.0/apiso.xsd</a></td>
         </section>
         <section id="karakterset-van-de-bron">
           <h4>Karakterset van de bron</h4>
-          <p style="text-align:left"><em>identificationInfo[1]/*/</em><span style="float:right">[<a
+          <p style="text-align:left"><em>identificationInfo[1]/*/characterSet/@codeListValue</em><span style="float:right">[<a
                 data-cite="!ISO19139-2007">ISO 19139:2007</a>]</span></p>
           <p>Verplicht als de in de bron gebruikte karakterset geen utf8 is. Er
             dient een waarde uit <a href="#codelist-charactersetcode">codelijst
@@ -1610,7 +1610,7 @@ http://schemas.opengis.net/csw/2.0.2/profiles/apiso/1.0.0/apiso.xsd</a></td>
                   <pre><code>&lt;otherConstraints&gt;
   &lt;gco:CharacterString&gt;
     https://creativecommons.org/
-      publicdomain/mark/*/deed.nl 
+      publicdomain/mark/*/deed.nl
   &lt;/gco:CharacterString&gt;
 &lt;/otherConstraints&gt;
 &lt;otherConstraints&gt;
@@ -1626,11 +1626,11 @@ http://schemas.opengis.net/csw/2.0.2/profiles/apiso/1.0.0/apiso.xsd</a></td>
             <pre><code>&lt;resourceConstraints&gt;
   &lt;MD_LegalConstraints&gt;
     &lt;accessConstraints&gt;
-      &lt;MD_RestrictionCode 
-        codeListValue="otherRestrictions" 
+      &lt;MD_RestrictionCode
+        codeListValue="otherRestrictions"
         codeList="http://www.isotc211.org/2005/resources/
           Codelist/gmxCodelists.xml#MD_RestrictionCode"/&gt;
-    &lt;/accessConstraints&gt;   
+    &lt;/accessConstraints&gt;
     &lt;otherConstraints&gt;
       &lt;gmx:anchor
         xlink:href="https://creativecommons.org/publicdomain/mark/*/deed.nl"&gt;
@@ -1638,18 +1638,18 @@ http://schemas.opengis.net/csw/2.0.2/profiles/apiso/1.0.0/apiso.xsd</a></td>
       &lt;/gmx:anchor&gt;
     &lt;/otherConstraints&gt;
   &lt;/MD_LegalConstraints&gt;
-&lt;/resourceConstraints&gt; 
+&lt;/resourceConstraints&gt;
         </code></pre>
           </aside>
           <aside class="example" title="XML notatie open data licentie met INSPIRE">
             <pre><code>&lt;resourceConstraints&gt;
   &lt;MD_LegalConstraints&gt;
     &lt;accessConstraints&gt;
-      &lt;MD_RestrictionCode 
-        codeListValue="otherRestrictions" 
+      &lt;MD_RestrictionCode
+        codeListValue="otherRestrictions"
         codeList="http://www.isotc211.org/2005/resources/
           Codelist/gmxCodelists.xml#MD_RestrictionCode"/&gt;
-    &lt;/accessConstraints&gt;   
+    &lt;/accessConstraints&gt;
     &lt;otherConstraints&gt;
       &lt;gmx:anchor
         xlink:href="https://creativecommons.org/publicdomain/mark/*/deed.nl"&gt;
@@ -1668,8 +1668,8 @@ http://schemas.opengis.net/csw/2.0.2/profiles/apiso/1.0.0/apiso.xsd</a></td>
 &lt;resourceConstraints&gt;
   &lt;MD_LegalConstraints&gt;
     &lt;accessConstraints&gt;
-      &lt;MD_RestrictionCode 
-        codeListValue="otherRestrictions" 
+      &lt;MD_RestrictionCode
+        codeListValue="otherRestrictions"
         codeList="http://www.isotc211.org/2005/resources/
           Codelist/gmxCodelists.xml#MD_RestrictionCode"/&gt;
     &lt;/accessConstraints&gt;
@@ -1681,7 +1681,7 @@ http://schemas.opengis.net/csw/2.0.2/profiles/apiso/1.0.0/apiso.xsd</a></td>
       &lt;/gmx:anchor&gt;
     &lt;/otherConstraints&gt;
   &lt;/MD_LegalConstraints&gt;
-&lt;/resourceConstraints&gt;  
+&lt;/resourceConstraints&gt;
         </code></pre>
           </aside>
         </section>
@@ -2595,9 +2595,9 @@ http://schemas.opengis.net/csw/2.0.2/profiles/apiso/1.0.0/apiso.xsd</a></td>
               <tr>
                 <td>Anchor</td>
                 <td>
-                  <pre><code>&lt;Anchor 
+                  <pre><code>&lt;Anchor
   xlink:href="https://www.tno.nl/nl/over-tno/organisatie"&gt;
-    Nederlandse organisatie voor 
+    Nederlandse organisatie voor
     toegepast-natuurwetenschappelijk onderzoek (TNO)
 &lt;/Anchor&gt;</code></pre>
                 </td>
@@ -3195,8 +3195,8 @@ http://schemas.opengis.net/csw/2.0.2/profiles/apiso/1.0.0/apiso.xsd</a></td>
         geometrisch object, zoals bijvoorbeeld DCAT-NL. Hier kunnen bijvoorbeeld
         de OWMS waardelijsten gebruikt worden om een gebied aan te duiden. </p>
       <aside class="example" title="XML notatie identifier gebied">
-        <pre><code>&lt;extent&gt; 
-  &lt;EX_Extent&gt; 
+        <pre><code>&lt;extent&gt;
+  &lt;EX_Extent&gt;
     &lt;geographicElement&gt;
       &lt;EX_GeographicDescription&gt;
         &lt;geographicIdentifier&gt;
@@ -3208,7 +3208,7 @@ http://schemas.opengis.net/csw/2.0.2/profiles/apiso/1.0.0/apiso.xsd</a></td>
           &lt;MD_Identifier&gt;
         &lt;geographicIdentifier&gt;
       &lt;EX_GeographicDescription&gt;
-    &lt;geographicElement&gt;   
+    &lt;geographicElement&gt;
   &lt;EX_Extent&gt;
 &lt;extent&gt;
         </code></pre>
@@ -3220,16 +3220,16 @@ http://schemas.opengis.net/csw/2.0.2/profiles/apiso/1.0.0/apiso.xsd</a></td>
         profiel de notering, die ook door INSPIRE voorgesteld wordt, gehanteerd;
       </p>
       <aside class="example" title="XML notatie temporele dekking">
-        <pre><code>&lt;extent&gt; 
-  &lt;EX_Extent&gt; 
-    &lt;temporalElement&gt; 
-      &lt;EX_TemporalExtent&gt; 
-        &lt;extent&gt; 
-          &lt;gml:TimePeriod gml:id="d2febbb4-e66f-4ac8-ba76-8fd9bc7c8be6"&gt; 
-            &lt;gml:beginPosition&gt;2008-01-01T11:45:30&lt;/gml:beginPosition&gt; 
-            &lt;gml:endPosition&gt;2008-12-31T09:10:00&lt;/gml:endPosition&gt; 
-          &lt;/gml:TimePeriod&gt; 
-        &lt;/extent&gt; 
+        <pre><code>&lt;extent&gt;
+  &lt;EX_Extent&gt;
+    &lt;temporalElement&gt;
+      &lt;EX_TemporalExtent&gt;
+        &lt;extent&gt;
+          &lt;gml:TimePeriod gml:id="d2febbb4-e66f-4ac8-ba76-8fd9bc7c8be6"&gt;
+            &lt;gml:beginPosition&gt;2008-01-01T11:45:30&lt;/gml:beginPosition&gt;
+            &lt;gml:endPosition&gt;2008-12-31T09:10:00&lt;/gml:endPosition&gt;
+          &lt;/gml:TimePeriod&gt;
+        &lt;/extent&gt;
       &lt;/EX_TemporalExtent&gt;
     &lt;/temporalElement&gt;
   &lt;/EX_Extent&gt;
@@ -3332,16 +3332,16 @@ http://schemas.opengis.net/csw/2.0.2/profiles/apiso/1.0.0/apiso.xsd</a></td>
       </aside>
       Tevens is een verkorte vorm mogelijk:
       <aside class="example" title="Voorbeeld korte vorm FeatureCatalog citatie">
-        <pre><code>&lt;gmd:featureCatalogueCitation      
-     	uuidref="7c0b5c3e-f41c-4b33-8e1e-be8c0e68edb2" 
-     	xlink:href="http://sdi.eea.europa.eu/catalogue/srv/en/csw?     
-        &amp;service=CSW     
+        <pre><code>&lt;gmd:featureCatalogueCitation
+     	uuidref="7c0b5c3e-f41c-4b33-8e1e-be8c0e68edb2"
+     	xlink:href="http://sdi.eea.europa.eu/catalogue/srv/en/csw?
+        &amp;service=CSW
         &amp;version=2.0.2
-        &amp;request=GetRecordById     
-        &amp;resultType=results     
+        &amp;request=GetRecordById
+        &amp;resultType=results
         &amp;elementSetName=full
-        &amp;typeNames=gfc:FC_FeatureCatalogue     
-        &amp;outputSchema=http://www.isotc211.org/2005/gfc     
+        &amp;typeNames=gfc:FC_FeatureCatalogue
+        &amp;outputSchema=http://www.isotc211.org/2005/gfc
         &amp;outputFormat=application/xml
         &amp;id=7c0b5c3e-f41c-4b33-8e1e-be8c0e68edb2"/&gt;</code>
     </pre>
@@ -3377,12 +3377,12 @@ http://schemas.opengis.net/csw/2.0.2/profiles/apiso/1.0.0/apiso.xsd</a></td>
       </ul>
       <p></p>
       <aside class="example" title="Voorbeeld Featurecatalogue"> <code>
-          <pre>&lt;gfc:FC_FeatureCatalogue 
-    xmlns:gfc="http://www.isotc211.org/2005/gfc" 
-    xmlns:gco="http://www.isotc211.org/2005/gco" 
+          <pre>&lt;gfc:FC_FeatureCatalogue
+    xmlns:gfc="http://www.isotc211.org/2005/gfc"
+    xmlns:gco="http://www.isotc211.org/2005/gco"
     xmlns:xlink="http://www.w3.org/1999/xlink"
-    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
-    xmlns:gmd="http://www.isotc211.org/2005/gmd" 
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:gmd="http://www.isotc211.org/2005/gmd"
     xmlns:gmx="http://www.isotc211.org/2005/gmx"
     xsi:schemaLocation="http://www.isotc211.org/2005/gfc/gfc.xsd"&gt;
     &lt;gfc:name&gt;
@@ -3416,14 +3416,14 @@ http://schemas.opengis.net/csw/2.0.2/profiles/apiso/1.0.0/apiso.xsd</a></td>
           &lt;gco:CharacterString&gt;
           Door administratieve grenzen gescheiden lokale, regionale en nationale bestuurlijke eenheden die deel uitmaken van gebieden waarover de lidstaten rechtsbevoegdheid hebben en/of uitoefenen.&lt;/gco:CharacterString&gt;
         &lt;/gfc:definition&gt;
-        &lt;gfc:carrierOfCharacteristics&gt;  
+        &lt;gfc:carrierOfCharacteristics&gt;
           &lt;gfc:FC_FeatureAttribute&gt;
             &lt;gfc:memberName&gt;
               &lt;gco:LocalName&gt;Gemeentecode&lt;/gco:LocalName&gt;
             &lt;/gfc:memberName&gt;
             &lt;gfc:definition&gt;
               &lt;gco:CharacterString&gt;gemeentecode, conform cbs gemeentecodelijst 2017&lt;/gco:CharacterString&gt;
-            &lt;/gfc:definition&gt;    
+            &lt;/gfc:definition&gt;
           &lt;/gfc:FC_FeatureAttribute&gt;
         &lt;/gfc:carrierOfCharacteristics&gt;
       &lt;/gfc:FC_FeatureType&gt;
