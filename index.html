@@ -457,7 +457,7 @@ github.com style (c) Vasily Polovnyov <vast@whiteants.net>
       geo-standaarden@geonovum.nl</a>.
         </p>
 
-        <p>Versie 2.0.0 van het Nederlands metadataprofiel voor geografie is ingegaan op xx xxx xxxx. Versie 2.0.0 kent een aantal aanpassingen, waarbij introductie van het gebruik van &lt;gmx:anchor&gt; het meest in het oog springt. De voorgaande versie
+        <p>Versie 2.0.0 van het Nederlands metadataprofiel voor geografie is ingegaan op xx xxx xxxx. Versie 2.0.0 kent een aantal aanpassingen, waarbij introductie van het gebruik van &lt;gmx:Anchor&gt; het meest in het oog springt. De voorgaande versie
             (v1.3.1) wordt nog tot xxx xxxx ondersteund.
         </p>
         <b>Versienummer</b>
@@ -482,7 +482,7 @@ github.com style (c) Vasily Polovnyov <vast@whiteants.net>
                             <li>INSPIRE, 2017, Technical Guidance for the implementation of INSPIRE dataset and service metadata based on ISO/TS 19139:2007
                                 <br>
                             </li>
-                            <li>Diverse wijzigingen met betrekking tot identificatie van objecten (introductie gmx:anchor) </li>
+                            <li>Diverse wijzigingen met betrekking tot identificatie van objecten (introductie gmx:Anchor) </li>
                         </ul>
                     </td>
                 </tr>
@@ -865,9 +865,9 @@ http://schemas.opengis.net/csw/2.0.2/profiles/apiso/1.0.0/apiso.xsd</a></td>
             <aside class="example">
                 <div class="example-title marker"><span>Voorbeeld 3</span><span style="text-transform: none">: Trefwoord verwijzing met Anchor</span></div>
                 <pre aria-busy="false" aria-live="polite" class="hljs xml"><span class="hljs-tag">&lt;<span class="hljs-name">gmd:keyword</span>&gt;</span>
-  <span class="hljs-tag">&lt;<span class="hljs-name">gmx:anchor</span> <span class="hljs-attr">xlink:href</span>=<span class="hljs-string">"http://inspire.ec.europa.eu/theme/mf"</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">gmx:Anchor</span> <span class="hljs-attr">xlink:href</span>=<span class="hljs-string">"http://inspire.ec.europa.eu/theme/mf"</span>&gt;</span>
     Meteorological geographical features
-    <span class="hljs-tag">&lt;/<span class="hljs-name">gmx:anchor</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-name">gmx:Anchor</span>&gt;</span>
 <span class="hljs-tag">&lt;/<span class="hljs-name">gmd:keyword</span>&gt;</span></pre>
             </aside>
             <p>Meertaligheid in&nbsp; het metadata document wordt ondersteund door meerdere keren opnemen van het string element in verschillende talen, met extra informatie over de taal. Dit is uitgewerkt in <a href="#meertaligheid-metadata">Hoofdstuk
@@ -1849,9 +1849,9 @@ http://schemas.opengis.net/csw/2.0.2/profiles/apiso/1.0.0/apiso.xsd</a></td>
                                 <aside class="example">
                                     <div class="example-title marker"><span>Voorbeeld 7</span><span style="text-transform: none">: Licentie verwijzing met Anchor</span></div>
                                     <pre aria-busy="false" aria-live="polite" class="hljs javascript">&lt;otherConstraints&gt;
-  <span class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">gmx:anchor</span>
+  <span class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">gmx:Anchor</span>
     <span class="hljs-attr">xlink:href</span>=<span class="hljs-string">"https://creativecommons.org/publicdomain/mark/*/deed.nl"</span>&gt;</span>
-      Geen beperkingen<span class="hljs-tag">&lt;/<span class="hljs-name">gmx:anchor</span>&gt;</span>
+      Geen beperkingen<span class="hljs-tag">&lt;/<span class="hljs-name">gmx:Anchor</span>&gt;</span>
 <span class="hljs-tag">&lt;/<span class="hljs-name">otherConstraints</span>&gt;</span></span></pre>
                                 </aside>
                             </td>
@@ -1885,9 +1885,9 @@ http://schemas.opengis.net/csw/2.0.2/profiles/apiso/1.0.0/apiso.xsd</a></td>
                             <td>
                                 <aside class="example">
                                     <div class="example-title marker"><span>Voorbeeld 9</span><span style="text-transform: none">: Beperking verwijzing met Anchor</span></div>
-                                    <pre aria-busy="false" aria-live="polite" class="hljs xml"><span class="hljs-tag">&lt;<span class="hljs-name">gmx:anchor</span>
+                                    <pre aria-busy="false" aria-live="polite" class="hljs xml"><span class="hljs-tag">&lt;<span class="hljs-name">gmx:Anchor</span>
   <span class="hljs-attr">xlink:href</span>=<span class="hljs-string">"http://inspire.ec.europa.eu/metadata-codelist/ConditionsApplyingToAccessAndUse/noConditionsApply"</span>&gt;</span>
-    Geen beperkingen<span class="hljs-tag">&lt;/<span class="hljs-name">gmx:anchor</span>&gt;</span></pre>
+    Geen beperkingen<span class="hljs-tag">&lt;/<span class="hljs-name">gmx:Anchor</span>&gt;</span></pre>
                                 </aside>
                             </td>
                         </tr>
@@ -18069,17 +18069,17 @@ http://schemas.opengis.net/csw/2.0.2/profiles/apiso/1.0.0/apiso.xsd</a></td>
         <span class="hljs-attr">codeList</span>=<span class="hljs-string">"http://www.isotc211.org/2005/resources/Codelist/gmxCodelists.xml#MD_RestrictionCode"</span>/&gt;</span>
     <span class="hljs-tag">&lt;/<span class="hljs-name">accessConstraints</span>&gt;</span>   
     <span class="hljs-tag">&lt;<span class="hljs-name">otherConstraints</span>&gt;</span>
-      <span class="hljs-tag">&lt;<span class="hljs-name">gmx:anchor</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">gmx:Anchor</span>
         <span class="hljs-attr">xlink:href</span>=<span class="hljs-string">"https://creativecommons.org/publicdomain/mark/*/deed.nl"</span>&gt;</span>
           Geen beperkingen
-      <span class="hljs-tag">&lt;/<span class="hljs-name">gmx:anchor</span>&gt;</span>
+      <span class="hljs-tag">&lt;/<span class="hljs-name">gmx:Anchor</span>&gt;</span>
     <span class="hljs-tag">&lt;/<span class="hljs-name">otherConstraints</span>&gt;</span>
     <span class="hljs-tag">&lt;<span class="hljs-name">otherConstraints</span>&gt;</span>
-      <span class="hljs-tag">&lt;<span class="hljs-name">gmx:anchor</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">gmx:Anchor</span>
         <span class="hljs-attr">xlink:href</span>=<span class="hljs-string">"http://inspire.ec.europa.eu/metadata-codelist
           /ConditionsApplyingToAccessAndUse/noConditionsApply"</span>&gt;</span>
           Geen beperkingen
-      <span class="hljs-tag">&lt;/<span class="hljs-name">gmx:anchor</span>&gt;</span>
+      <span class="hljs-tag">&lt;/<span class="hljs-name">gmx:Anchor</span>&gt;</span>
     <span class="hljs-tag">&lt;/<span class="hljs-name">otherConstraints</span>&gt;</span>
   <span class="hljs-tag">&lt;/<span class="hljs-name">MD_LegalConstraints</span>&gt;</span>
 <span class="hljs-tag">&lt;/<span class="hljs-name">resourceConstraints</span>&gt;</span>  
