@@ -7,4 +7,4 @@ Het INSPIRE metadataprofiel beschrijft de vereisten voor de metadata voor INSPIR
 
 Het metadataprofiel voor services wordt gebruikt in combinatie met het profiel voor datasets. Beide profielen staan op de [Pas-toe-of-leg-uit-lijst](https://www.forumstandaardisatie.nl/open-standaarden/lijsten-met-open-standaarden) van het College Standaardisatie.
 
-Ook de Europese richtlijn INSPIRE schrijft metadataprofielen voor. De Nederlandse profielen zijn hier op afgestemd. Past u de Nederlandse profielen toe, dan voldoet u dus ook aan de [INSPIRE profielen voor metadata](http://www.geonovum.nl/wegwijzer/standaarden/inspire-technical-guidelines-en-iso-19115-and-en-iso-19119).
+Ook de Europese richtlijn INSPIRE schrijft metadataprofielen voor. De Nederlandse profielen zijn hier op afgestemd. Past u de Nederlandse profielen toe, dan voldoet u dus ook aan de [INSPIRE profielen voor metadata](https://inspire.ec.europa.eu/metadata/6541).
