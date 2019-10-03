@@ -1495,21 +1495,22 @@ http://schemas.opengis.net/csw/2.0.2/profiles/apiso/1.0.0/apiso.xsd</a></td>
           <p style="text-align:left"><em>identificationInfo[1]/*/resourceConstraints/*/accessConstraints</em><span
               style="float:right">[<a data-cite="!ISO19139-2007">ISO 19139:2007</a>]</span></p>
           <p>Het is verplicht juridische toegangsrestricties op te nemen. Het is
-            verplicht een waarde op te nemen voor beperkingen op publieke
-            toegang in één gmd:resourceConstraints/gmd:MD_LegalConstraints
+            verplicht een waarde op te nemen voor voorwaarden voor toegang en
+            gebruik in één gmd:resourceConstraints/gmd:MD_LegalConstraints
             element. </p>
-          <p>Daarnaast is het verplicht voorwaarden voor toegang en gebruik op
-            te nemen in één ander
+          <p>Daarnaast is het voor INSPIRE verplicht voorwaarden voor
+            beperkingen op publieke toegang op te nemen in één ander
             gmd:resourceConstraints/gmd:MD_LegalConstraints element. </p>
           <p>Voor INSPIRE datasets, bevat dit element de waarde
             "otherRestrictions". Voor organisaties die zich conformeren aan
             afspraken in het GI-beraad, bevat dit element ook de waarde
-            "otherRestrictions". </p>
-          <p>Dit element bevat toegangseisen die er zorg voor dragen dat privacy
+            "otherRestrictions". Het element <a href="#overige-beperkingen">Overige
+              beperkingen</a> bevat dan de voorwaarden en restricties.</p>
+          <p>In andere gevallen bevat dit element toegangseisen die er zorg voor dragen dat privacy
             of intellectueel eigendom gewaarborgd zijn en elke andere speciale
             beperkingen voor het verkrijgen van de metadata of data. De waardes
             komen uit <a href="#codelist-restrictioncode">codelijst
-              RestrictionCode</a> uit ISO 19115.</p>
+              RestrictionCode</a>.</p>
           <table>
             <colgroup> <col style="width: 25%"> <col style="width: 75%"> </colgroup>
             <tbody>
@@ -1568,9 +1569,9 @@ http://schemas.opengis.net/csw/2.0.2/profiles/apiso/1.0.0/apiso.xsd</a></td>
             md:resourceConstraints/gmd:MD_LegalConstraints element. Voor INSPIRE
             is het gebruik van een Anchor verplicht. Het bevat, indien van
             toepassing ook prijsinformatie voor het gebruik van de dataset.</p>
-          <p>Daarnaast wordt voor beperkingen op publieke toegang in één ander
-            gmd:resourceConstraints/gmd:MD_LegalConstraints een waarde opgenomen
-            uit <a href="#Codelijst-INSPIRE-LimitationsOnPublicAccess">codelijst
+          <p>Daarnaast wordt voor INSPIRE in een tweede
+            gmd:resourceConstraints/gmd:MD_LegalConstraints element, voor de
+            beperkingen op publieke toegang een waarde opgenomen uit <a href="#Codelijst-INSPIRE-LimitationsOnPublicAccess">codelijst
               LimitationsOnPublicAccess</a> . Als er geen beperkingen zijn dient
             men dat ook aan te geven, met de waarde "noLimitations". Voor
             INSPIRE is het gebruik van een Anchor verplicht.<br>
