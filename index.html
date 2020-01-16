@@ -363,9 +363,12 @@ http://schemas.opengis.net/csw/2.0.2/profiles/apiso/1.0.0/apiso.xsd</a></td>
           wordt bij de element beschrijving, gehanteerd te worden. Deze
           codelijsten zijn ook opgenomen in <a href="#appendix-a">appendix-a</a>.
           Dit zijn vaak de ISO codelijsten, soms zijn de waarden die in dit
-          profiel gebruikt mogen worden beperkt. Voor een aantal String
-          elementen wordt ook een codelijst gehanteerd. Hierbij wordt soms het
-          gebruik van gmx:Anchor element vereist. </p>
+          profiel gebruikt mogen worden beperkt. 
+          Voor een aantal String elementen wordt ook een codelijst gehanteerd. Hierbij wordt soms het
+          gebruik van gmx:Anchor element vereist, waarin dan een URI wordt opgenomen. Deze URI's worden 
+          steeds vaker door de beherende organisaties ook in HTTPS variant beschikbaar gemaakt. Voor 
+          dit profiel kan de waarde zowel met HTTP als met HTTPS worden opgenomen, mits natuurlijk deze 
+          URI ook daadwerkelijk aanwezig is. </p>
         <aside class="example" title="Verwijzing naar codelijst">
           <pre><code>&lt;ci_datetypecode
   codelist="http://standards.iso.org/iso/19139/resources/codelist/gmxCodelists.xml#CI_DateTypeCode"
