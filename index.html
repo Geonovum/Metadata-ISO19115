@@ -1124,7 +1124,7 @@ http://schemas.opengis.net/csw/2.0.2/profiles/apiso/1.0.0/apiso.xsd</a></td>
               style="float:right">[<a data-cite="!ISO19139-2007">ISO 19139:2007</a>]</span></p>
           <p>Dit element bevat het type gebeurtenis waar de datum betrekking op
             heeft. Type gebeurtenis wordt gekozen uit <a href="#codelist-datetypecode">codelijst
-              DateTypeCode</a>. Mogelijke gebeurtenissen zijn: creatie-,
+              DateType</a>. Mogelijke gebeurtenissen zijn: creatie-,
             publicatie-, of revisiedatum. INSPIRE vereist bovendien dat het
             datum type uniek is per set aan datums van de bron.</p>
           <table>
@@ -1214,7 +1214,7 @@ http://schemas.opengis.net/csw/2.0.2/profiles/apiso/1.0.0/apiso.xsd</a></td>
           <p>Dit element bevat de status van de dataset. De dataset kan onder
             andere nog in ontwikkeling zijn, geactualiseerd moeten worden, of
             gearchiveerd zijn.&nbsp; De waarden komen uit <a href="#codelist-progresscode">codelijst
-              ProgressCode</a>.</p>
+              Progress</a>.</p>
           <table>
             <colgroup> <col style="width: 25%"> <col style="width: 75%"> </colgroup>
             <tbody>
@@ -1258,7 +1258,7 @@ http://schemas.opengis.net/csw/2.0.2/profiles/apiso/1.0.0/apiso.xsd</a></td>
               style="float:right">[<a data-cite="!ISO19139-2007">ISO 19139:2007</a>]</span></p>
           <p>Verplicht als de in de bron gebruikte karakterset geen utf8 is. Er
             dient een waarde uit <a href="#codelist-charactersetcode">codelijst
-              CharacterSetCode</a> gebruikt te worden</p>
+              CharacterSet</a> gebruikt te worden</p>
           <table>
             <colgroup> <col style="width: 25%"> <col style="width: 75%"> </colgroup>
             <tbody>
@@ -1279,7 +1279,7 @@ http://schemas.opengis.net/csw/2.0.2/profiles/apiso/1.0.0/apiso.xsd</a></td>
               style="float:right">[<a data-cite="!ISO19139-2007">ISO 19139:2007</a>]</span></p>
           <p>Het bevat de belangrijkste onderwerpen van de dataset. De te
             hanteren onderwerpen zijn opgenomen in <a href="#codelist-topiccategorycode">codelijst
-              TopicCategoryCode</a>.</p>
+              TopicCategory</a>.</p>
           <table>
             <colgroup> <col style="width: 25%"> <col style="width: 75%"> </colgroup>
             <tbody>
@@ -1356,7 +1356,7 @@ http://schemas.opengis.net/csw/2.0.2/profiles/apiso/1.0.0/apiso.xsd</a></td>
           <p>Dit element geeft de rol van de verantwoordelijke organisatie van
             de bron weer. Voor de rol van de organisatie wordt een codelijst
             gehanteerd, zie zie <a href="#codelist-rolecode">Codelijst
-              CI_RoleCode</a>.</p>
+              Role</a>.</p>
           <table>
             <colgroup> <col style="width: 25%"> <col style="width: 75%"> </colgroup>
             <tbody>
@@ -1479,7 +1479,7 @@ http://schemas.opengis.net/csw/2.0.2/profiles/apiso/1.0.0/apiso.xsd</a></td>
             uit een thesaurus afkomstig is zoals in ieder geval voor de INSPIRE
             thema’s. Het bevat het type gebeurtenis waar de datum betrekking op
             heeft. Type gebeurtenis wordt gekozen uit <a href="#codelist-datetypecode">codelijst
-              DateTypeCode</a> uit ISO 19115. Mogelijke gebeurtenissen zijn:
+              DateType</a> uit ISO 19115. Mogelijke gebeurtenissen zijn:
             creatie-, publicatie-, of revisiedatum.</p>
           <table>
             <colgroup> <col style="width: 25%"> <col style="width: 75%"> </colgroup>
@@ -1515,7 +1515,7 @@ http://schemas.opengis.net/csw/2.0.2/profiles/apiso/1.0.0/apiso.xsd</a></td>
             dragen dat privacy of intellectueel eigendom gewaarborgd zijn en
             elke andere speciale beperkingen voor het verkrijgen van de metadata
             of data. De waardes komen uit <a href="#codelist-restrictioncode">codelijst
-              RestrictionCode</a>.</p>
+              Restriction</a>.</p>
           <table>
             <colgroup> <col style="width: 25%"> <col style="width: 75%"> </colgroup>
             <tbody>
@@ -1564,7 +1564,7 @@ http://schemas.opengis.net/csw/2.0.2/profiles/apiso/1.0.0/apiso.xsd</a></td>
             worden opgenomen. Hierin wordt&nbsp;in één
             gmd:resourceConstraints/gmd:MD_LegalConstraints element voor de
             voorwaarden voor toegang en gebruik een link naar de licentie en de
-            bijbehorende beschrijving opgenomen. In codelist <a href="#codelist-datalicenties">DataLicenties</a>
+            bijbehorende beschrijving opgenomen. In codelijst <a href="#codelist-datalicenties">DataLicenties</a>
             zijn de beschrijvingen en de bijbehorende link naar de licentie
             opgenomen. </p>
           <p>Daarnaast wordt er, als het een INSPIRE dataset is en er geen
@@ -1730,7 +1730,7 @@ http://schemas.opengis.net/csw/2.0.2/profiles/apiso/1.0.0/apiso.xsd</a></td>
               style="float:right">[<a data-cite="!ISO19139-2007">ISO 19139:2007</a>]</span></p>
           <p>Dit element is conditioneel. Dit element is verplicht voor INSPIRE.
             Er dient een waarde uit de <a href="#codelist-spatialrepresentationtypecode">codelijst
-              MD_SpatialRepresentationTypeCode</a> gebruikt te worden.</p>
+              SpatialRepresentationType</a> gebruikt te worden.</p>
           <table>
             <colgroup> <col style="width: 25%"> <col style="width: 75%"> </colgroup>
             <tbody>
@@ -1780,7 +1780,7 @@ http://schemas.opengis.net/csw/2.0.2/profiles/apiso/1.0.0/apiso.xsd</a></td>
             voorkomt. Het element bevat de resolutie in meters. Het element kan
             twee keer voorkomen, hiermee wordt een interval aangegeven. Deze
             dient vanuit de klasse spatialResolution te worden aangemaakt. De
-            meeteenheid voor lengte uit de codelijst ISOStandardUnits, de meter,
+            meeteenheid voor lengte uit de codelijst ISO StandardUnits, de meter,
             wordt in het attribuut <i>UnitOfMeasure</i> van distance opgenomen.</p>
           <table>
             <colgroup> <col style="width: 25%"> <col style="width: 75%"> </colgroup>
@@ -2137,7 +2137,7 @@ http://schemas.opengis.net/csw/2.0.2/profiles/apiso/1.0.0/apiso.xsd</a></td>
             worden. Aanname is dat als er geen waarde is opgegeven, het een
             accessPoint is.</p>
           <p>Het bevat een verwijzing naar een waarde uit de <a href="codelijst-INSPIRE-OnLineDescriptionCode">codelijst
-              OnLineDescriptionCode</a> die het type URL beschrijft. </p>
+              OnLineDescription</a> die het type URL beschrijft. </p>
           <p>Indien verwezen wordt naar een URL die rechtstreeks een dataset in
             een specifiek mediatype oplevert dient de waarde endPoint gebruikt
             te worden. In andere gevallen de waarde accessPoint. De accessPoint
@@ -2219,7 +2219,7 @@ http://schemas.opengis.net/csw/2.0.2/profiles/apiso/1.0.0/apiso.xsd</a></td>
               style="float:right">[<a data-cite="!ISO19139-2007">ISO 19139:2007</a>]</span></p>
           <p>Dit element beschrijft het niveau waarop de kwaliteitsinformatie
             betrekking heeft. Dit niveau wordt gekozen uit <a href="#codelist-scopecode">codelijst
-              ScopeCode</a>. Mogelijke niveau’s zijn: dataset en series. </p>
+              Scope</a>. Mogelijke niveau’s zijn: dataset en series. </p>
           <table>
             <colgroup> <col style="width: 25%"> <col style="width: 75%"> </colgroup>
             <tbody>
@@ -2328,7 +2328,7 @@ http://schemas.opengis.net/csw/2.0.2/profiles/apiso/1.0.0/apiso.xsd</a></td>
             volgens een specifiek informatie model. Het bevat het type
             gebeurtenis waar de datum betrekking op heeft. Type gebeurtenis
             wordt gekozen uit <a href="#codelist-datetypecode">codelijst
-              CI_DateTypeCode</a>. Mogelijke gebeurtenissen zijn: creatie-,
+              DateType</a>. Mogelijke gebeurtenissen zijn: creatie-,
             publicatie-, of revisiedatum.</p>
           <table>
             <colgroup> <col style="width: 25%"> <col style="width: 75%"> </colgroup>
@@ -2528,7 +2528,7 @@ http://schemas.opengis.net/csw/2.0.2/profiles/apiso/1.0.0/apiso.xsd</a></td>
                 data-cite="!ISO19139-2007">ISO 19139:2007</a>]</span></p>
           <p>Het element geeft aan waarop de metadata betrekking heeft, de
             dataset of dataset serie. Voor de waarden geldt de <a href="#codelist-scopecode">codelijst
-              MD_ScopeCode</a> uit ISO19115. </p>
+              Scope</a> uit ISO19115. </p>
           <table>
             <colgroup> <col style="width: 25%"> <col style="width: 75%"> </colgroup>
             <tbody>
@@ -2635,7 +2635,7 @@ http://schemas.opengis.net/csw/2.0.2/profiles/apiso/1.0.0/apiso.xsd</a></td>
           <p>Dit element bevat de rol van de organisatie verantwoordelijk voor
             de metadata. INSPIRE vereist pointOfContact. Voor de rol van de
             organisatie wordt <a href="#codelist-rolecode">Codelijst
-              CI_RoleCode</a> gehanteerd.</p>
+              Role</a> gehanteerd.</p>
           <table>
             <colgroup> <col style="width: 25%"> <col style="width: 75%"> </colgroup>
             <tbody>
@@ -5951,7 +5951,7 @@ http://schemas.opengis.net/csw/2.0.2/profiles/apiso/1.0.0/apiso.xsd</a></td>
               <p>codelijst</p>
             </td>
             <td>
-              <p>RoleCode</p>
+              <p>Role</p>
             </td>
             <td>
               <p>default</p>
@@ -9147,7 +9147,7 @@ http://schemas.opengis.net/csw/2.0.2/profiles/apiso/1.0.0/apiso.xsd</a></td>
               <p>codelijst</p>
             </td>
             <td>
-              <p>dateTyoe</p>
+              <p>dateType</p>
             </td>
             <td>
               <p>expliciet</p>
