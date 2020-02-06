@@ -181,7 +181,7 @@
           basis van metadata-elementen, in het bijzonder voor het beheer.</p>
         <p>Bij het voldoen aan dit profiel kan tevens aan de INSPIRE
           verplichting voldaan. Deze verplichting geldt alleen voor metadata van
-          de door INSPIRE benoemde ruimtelijke datasets.</p>
+          de voor INSPIRE aangemerkte datasets.</p>
         <p></p>
       </section>
       <section id="context">
@@ -196,7 +196,7 @@
           dit profiel zijn de metadata elementen met hun oorsprong aangegeven in
           <a href="#appendix-c">Appendix C</a>.</p>
         <p>Sectoren in Nederland kunnen een eigen uitbreiding op het Nederlandse
-          profiel ontwikkelen. Voorwaarde is dat de Nederlandse profiel metadata
+          profiel ontwikkelen. Voorwaarde is dat het Nederlandse profiel,
           onderdeel is van het sectorale metadata profiel. Deze sectorale
           uitbreidingen dienen onderdeel te zijn van ISO 19115.</p>
       </section>
@@ -359,8 +359,8 @@ http://schemas.opengis.net/csw/2.0.2/profiles/apiso/1.0.0/apiso.xsd</a></td>
       </section>
       <section id="Structuur">
         <h3>Structuur</h3>
-        <p> De metadata voor een INSPIRE data set, data set series of service
-          wordt ge-encoded met exact een gmd:MD_Metadata element.<br>
+        <p> De metadata voor een INSPIRE data set, data set serie of service
+          wordt ge-encoded met exact één gmd:MD_Metadata element.<br>
           Als er meer dan één gmd:MD_DataIdentification element wordt opgenomen,
           zal deze een unieke identifier moeten bevatten van het element zelf,
           zodat daar rechtstreeks naar verwezen kan worden vanuit de service
@@ -379,8 +379,8 @@ http://schemas.opengis.net/csw/2.0.2/profiles/apiso/1.0.0/apiso.xsd</a></td>
           Voor een aantal String elementen wordt ook een codelijst gehanteerd. Hierbij wordt soms het
           gebruik van gmx:Anchor element vereist, waarin dan een URI wordt opgenomen. Deze URI's worden 
           steeds vaker door de beherende organisaties ook in HTTPS variant beschikbaar gemaakt. Voor 
-          dit profiel kan de waarde zowel met HTTP als met HTTPS worden opgenomen, mits natuurlijk deze 
-          URI ook daadwerkelijk aanwezig is. </p>
+          dit profiel kan de waarde zowel met HTTP als met HTTPS worden opgenomen, mits deze 
+          URI ook daadwerkelijk aanwezig is en dezelfde betekenis heeft. </p>
         <aside class="example" title="Verwijzing naar codelijst">
           <pre><code>&lt;ci_datetypecode
   codelist="http://standards.iso.org/iso/19139/resources/codelist/gmxCodelists.xml#CI_DateTypeCode"
@@ -399,8 +399,10 @@ http://schemas.opengis.net/csw/2.0.2/profiles/apiso/1.0.0/apiso.xsd</a></td>
           naar een webadres op te nemen waar meer informatie over dit element te
           vinden is. Daarvoor wordt het xlink:href attribuut gebruikt, dat een
           valide URL dient te bevatten. Als tekst waarde van het Anchor element
-          kan een willekeurige voor de mens leesbaar label gekozen worden,
-          bijvoorbeeld een Nederlandse vertaling.</p>
+          kan een willekeurige voor de mens leesbaar label gekozen worden. Om de 
+          interoperabiliteit met eerdere versies van dit profiel te behouden, 
+          wordt aanbevolen om in dit label de waarde op te nemen die bij gebruik 
+          van gco:CharacterString in dat element opgenomen zou worden. </p>
         <aside class="example" title="Trefwoord verwijzing met Anchor">
           <pre><code>&lt;gmd:keyword&gt;
   &lt;gmx:Anchor xlink:href="http://www.eionet.europa.eu/gemet/nl/inspire-theme/mf"&gt;
@@ -533,8 +535,8 @@ http://schemas.opengis.net/csw/2.0.2/profiles/apiso/1.0.0/apiso.xsd</a></td>
       <h2>Verplichte en conditionele metadata elementen</h2>
       <p>Dit hoofdstuk geeft de verplichte of bij conditie verplichte elementen
         weer inclusief uitleg in de vorm van beknopte voorbeelden of default
-        waarden. Meer informatie en voorbeelden zijn te vinden op de <a href="wiki.geonovum.nl/index.php/2_Metadata">metadata
-          wiki</a>.</p>
+        waarden. Meer informatie en voorbeelden zijn te vinden in de <a href="https://docs.geostandaarden.nl/md/Metadata-handreiking"
+            target="_blank">metadata handreiking</a>.</p>
       <section id="metadata-elementen-overzicht">
         <h3>Overzicht verplichte elementen</h3>
         <p>In de volgende tabel staan de verplichte of bij conditie verplichte
@@ -1511,18 +1513,21 @@ http://schemas.opengis.net/csw/2.0.2/profiles/apiso/1.0.0/apiso.xsd</a></td>
           <h4>Juridische toegangsrestricties</h4>
           <p style="text-align:left"><em>identificationInfo[1]/*/resourceConstraints/*/accessConstraints</em><span
               style="float:right">[<a data-cite="!ISO19139-2007">ISO 19139:2007</a>]</span></p>
-          <p>Het is verplicht juridische toegangsrestricties op te nemen. Het is
-            verplicht een waarde op te nemen voor voorwaarden voor toegang en
-            gebruik in één gmd:resourceConstraints/gmd:MD_LegalConstraints
+          <p>Het is verplicht juridische toegangsrestricties op te nemen. Dit is een subelement van het gmd:resourceConstraints/gmd:MD_LegalConstraints
+            element. </p>
+            Het is verplicht voorwaarden voor toegang en
+            gebruik op te nemen in de subelementen van één gmd:resourceConstraints/gmd:MD_LegalConstraints
             element. </p>
           <p>Daarnaast is het voor INSPIRE verplicht voorwaarden voor
-            beperkingen op publieke toegang op te nemen in één ander
+            beperkingen op publieke toegang op te nemen in de subelementen van één ander
             gmd:resourceConstraints/gmd:MD_LegalConstraints element. </p>
-          <p>Voor INSPIRE datasets, bevat dit element de waarde
+          <p>In het geval van een INSPIRE dataset dient dus twee maal het element
+            MD_LegalConstraints gebruikt te worden.</p>
+          <p>Voor INSPIRE datasets, bevat de Juridische toegangsrestrictie de waarde
             "otherRestrictions". Voor organisaties die zich conformeren aan
             afspraken in het GI-beraad, bevat dit element ook de waarde
             "otherRestrictions". Het element <a href="#overige-beperkingen">Overige
-              beperkingen</a> bevat dan de voorwaarden en restricties.</p>
+              beperkingen</a> kan hierdoor gebruikt worden en bevat dan de voorwaarden en restricties.</p>
           <p>In andere gevallen bevat dit element toegangseisen die er zorg voor
             dragen dat privacy of intellectueel eigendom gewaarborgd zijn en
             elke andere speciale beperkingen voor het verkrijgen van de metadata
@@ -1562,10 +1567,9 @@ http://schemas.opengis.net/csw/2.0.2/profiles/apiso/1.0.0/apiso.xsd</a></td>
             geo-informatie op een eenvoudige, heldere en gestandaardiseerde
             manier kenbaar te maken. Het is ontstaan uit de behoefte van de
             overheid om de bestaande gebruiksvoorwaarden voor geo-informatie te
-            stroomlijnen. Zie ook <a href="http://www.geonovum.nl/onderwerpen/gebruiksvoorwaarden/algemeen-gebruiksvoorwaarden"
-              target="_blank"> algemeen gebruiksvoorwaarden</a></p>
-          <p>In het geval van een INSPIRE dataset dient twee maal het element
-            MD_LegalConstraints gebruikt te worden.</p>
+            stroomlijnen. Zie ook <a href="https://www.geonovum.nl/geo-standaarden/gebruiksvoorwaarden"
+              target="_blank">gebruiksvoorwaarden</a></p>
+          
         </section>
         <section id="overige-beperkingen">
           <h4>Overige beperkingen</h4>
