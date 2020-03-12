@@ -3262,6 +3262,21 @@ http://schemas.opengis.net/csw/2.0.2/profiles/apiso/1.0.0/apiso.xsd</a></td>
         worden vastgelegd. Voor de interoperabiliteit is het echter optimaal
         dezelfde methode te hanteren. Daarom wordt voor de implementatie van dit
         profiel de notering, die ook door INSPIRE voorgesteld wordt, gehanteerd;
+        De waarde van elk van deze elementen kan een individuele datum zijn of een 
+        tijdsperiode tussen twee datums. De veelvoud van dit element is 0 .. *. 
+        Een enkele individuele datum of tijdsperiode wordt gecodeerd met behulp van één 
+        gmd:temporalElement/gmd:EX_TemporalExtent/gmd:extent. Voor individuele datums
+        moet dit element een gml:TimeInstant/gml:timePosition element bevatten met de 
+        datumwaarde die is opgegeven volgens [ISO 8601]. Voor een enkele periode moet 
+        het gmd:temporalElement/gmd:EX_TemporalExtent/gmd:extent element een gml:TimePeriod 
+        element bevatten met begin- en einddatums van de periode. In het geval dat de 
+        tijdsperiode open is met ofwel de start of de einddatum die onbekend is, kunnen de 
+        elementen gml:startPosition of gml:endPosition worden gebruikt met een lege waarde 
+        en het attribuut indeterminatePosition met waarde "onbekend". Als de temporele 
+        extent aan de gang is, kan de gml:endPosition worden gebruikt met een lege waarde 
+        en het attribuut indeterminatePosition met waarde "nu". Individuele datums en 
+        perioden kunnen worden gecombineerd om een complexe temporele omvang te vormen met 
+        behulp van meerdere gmd:temporalElement/gmd:EX_TemporalExtent/gmd:extent elementen.
       </p>
       <aside class="example" title="XML notatie temporele dekking">
         <pre><code>&lt;extent&gt; 
@@ -3270,8 +3285,8 @@ http://schemas.opengis.net/csw/2.0.2/profiles/apiso/1.0.0/apiso.xsd</a></td>
       &lt;EX_TemporalExtent&gt; 
         &lt;extent&gt; 
           &lt;gml:TimePeriod gml:id="d2febbb4-e66f-4ac8-ba76-8fd9bc7c8be6"&gt; 
-            &lt;gml:beginPosition&gt;2008-01-01T11:45:30&lt;/gml:beginPosition&gt; 
-            &lt;gml:endPosition&gt;2008-12-31T09:10:00&lt;/gml:endPosition&gt; 
+            &lt;gml:beginPosition&gt;2008-01-01&lt;/gml:beginPosition&gt; 
+            &lt;gml:endPosition&gt;2008-12-31&lt;/gml:endPosition&gt; 
           &lt;/gml:TimePeriod&gt; 
         &lt;/extent&gt; 
       &lt;/EX_TemporalExtent&gt;
