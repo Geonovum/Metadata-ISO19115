@@ -612,8 +612,8 @@ http://schemas.opengis.net/csw/2.0.2/profiles/apiso/1.0.0/apiso.xsd</a></td>
             </tr>
             <tr>
               <td><a href="#taal-van-de-bron">Taal van de bron</a></td>
-              <td>C</td>
-              <td>Het is verplicht als de bron tekstuele informatie bevat. </td>
+              <td>V</td>
+              <td></td>
               <td><br>
               </td>
             </tr>
@@ -1247,11 +1247,12 @@ http://schemas.opengis.net/csw/2.0.2/profiles/apiso/1.0.0/apiso.xsd</a></td>
           <h4>Taal van de bron</h4>
           <p style="text-align:left"><em>identificationInfo[1]/*/language</em> <span
               style="float:right">[<a data-cite="!ISO19139-2007">ISO 19139:2007</a>]</span></p>
-          <p>Dit element is conditioneel. Het is verplicht als de brontekstuele
-            informatie bevat. Het bevat de code van de taal waarin de tekst in
+          <p>Dit element is verplicht. Het bevat de code van de taal waarin de tekst in
             de bron is opgenomen. Gebruik hiervoor alleen de drie-letter codes
             van 639-2/B (bibliographic codes), zoals gedefinieerd op <a href="#codelist-iso639-2">iso
-              639-2</a>.</p>
+              639-2</a>. Als de beschreven bron geen tekstuele informatie bevat, uitgedrukt in een natuurlijke taal, 
+            moet de speciale codewaarde "zxx" van ISO 639-2 / B, gereserveerd voor "geen taalkundige inhoud; niet van toepassing" 
+            worden gebruikt.</p>
           <table>
             <colgroup> <col style="width: 25%"> <col style="width: 75%"> </colgroup>
             <tbody>
@@ -10349,8 +10350,7 @@ http://schemas.opengis.net/csw/2.0.2/profiles/apiso/1.0.0/apiso.xsd</a></td>
               <p>dut</p>
             </td>
             <td>
-              <p>Indien de dataset geen tekstuele informatie bevat hoeft de
-                dataset taal niet uitgewisseld te worden</p>
+              <p>Als de beschreven bron geen tekstuele informatie bevat, uitgedrukt in een natuurlijke taal, moet de speciale codewaarde "zxx" van ISO 639-2 / B, gereserveerd voor "geen taalkundige inhoud; niet van toepassing" worden gebruikt.</p>
             </td>
             <td>
               <p>codelijst</p>
@@ -17424,7 +17424,7 @@ http://schemas.opengis.net/csw/2.0.2/profiles/apiso/1.0.0/apiso.xsd</a></td>
           <tr>
             <td><a href="#taal-van-de-bron">Taal van de bron</a></td>
             <td>C</td>
-            <td>C</td>
+            <td>V (versie 2.1.0)</td>
             <td>&nbsp;3.1.2.4</td>
           </tr>
           <tr>
