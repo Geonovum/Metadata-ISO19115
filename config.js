@@ -128,5 +128,10 @@ var respecConfig = {
       "date":"1998-10",
       "publisher": "International Organization for Standardization"
     },
+     "INSPIRE": {
+      "title":"INSPIRE metadata codelijst register",
+      "href":"http://inspire.ec.europa.eu/metadata-codelist",
+      "publisher": "European Commission Joint Research Centre",
+    },
   }
 };
