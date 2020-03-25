@@ -263,7 +263,7 @@
         19139:2007</p>
       <p><strong>[[!INSPIRE-register]]</strong>, INSPIRE metadata code list register</p>
       <p><strong>[[!IANA-MediaTypes]]</strong>, IANA mediatypes register</p>
-      <p><strong>[[!Creative-Commons]</strong>, Creative Commons</p>
+      <p><strong>[[!Creative-Commons]]</strong>, Creative Commons</p>
     </section>
     <section id="Structuur en schema's ">
       <h2>Structuur en schema's</h2>
@@ -1515,7 +1515,8 @@ http://schemas.opengis.net/csw/2.0.2/profiles/apiso/1.0.0/apiso.xsd</a></td>
           <h4>Juridische toegangsrestricties</h4>
           <p style="text-align:left"><em>identificationInfo[1]/*/resourceConstraints/*/accessConstraints</em><span
               style="float:right">[<a data-cite="!ISO19139-2007">ISO 19139:2007</a>]</span></p>
-          <p>Het is verplicht juridische toegangsrestricties op te nemen. Dit is een subelement van het gmd:resourceConstraints/gmd:MD_LegalConstraints
+          <p>Het is verplicht juridische toegangsrestricties op te nemen. Juridische toegangsrestricties en Overige beperkingen zijn
+            subelementen van het gmd:resourceConstraints/gmd:MD_LegalConstraints
             element. </p>
             Het is verplicht voorwaarden voor toegang en
             gebruik op te nemen in de subelementen van één gmd:resourceConstraints/gmd:MD_LegalConstraints
@@ -1524,7 +1525,7 @@ http://schemas.opengis.net/csw/2.0.2/profiles/apiso/1.0.0/apiso.xsd</a></td>
             beperkingen op publieke toegang op te nemen in de subelementen van één ander
             gmd:resourceConstraints/gmd:MD_LegalConstraints element. </p>
           <p>In het geval van een INSPIRE dataset dient dus twee maal het element
-            MD_LegalConstraints gebruikt te worden.</p>
+            MD_LegalConstraints met de subelementen Juridische toegangsrestricties en Overige beperkingen gebruikt te worden.</p>
           <p>Voor INSPIRE datasets, bevat het element Juridische toegangsrestrictie de waarde
             "otherRestrictions". Voor organisaties die zich conformeren aan
             afspraken in het GI-beraad, bevat dit element ook de waarde
@@ -1580,8 +1581,8 @@ http://schemas.opengis.net/csw/2.0.2/profiles/apiso/1.0.0/apiso.xsd</a></td>
           <p>Dit element is conditioneel, als het element juridische
             toegangsrestricties de waarde otherRestrictions bevat dient het te
             worden opgenomen. Hierin wordt&nbsp;in één
-            gmd:resourceConstraints/gmd:MD_LegalConstraints element voor de
-            voorwaarden voor toegang en gebruik een link naar de licentie en de
+            gmd:resourceConstraints/gmd:MD_LegalConstraints element de
+            voorwaarden voor toegang en gebruik via een link naar de licentie en de
             bijbehorende beschrijving opgenomen. In codelijst <a href="#codelist-datalicenties">DataLicenties</a>
             zijn de beschrijvingen en de bijbehorende link naar de licentie
             opgenomen. </p>
@@ -1595,7 +1596,7 @@ http://schemas.opengis.net/csw/2.0.2/profiles/apiso/1.0.0/apiso.xsd</a></td>
           <p>Daarnaast wordt voor INSPIRE in een tweede
             gmd:resourceConstraints/gmd:MD_LegalConstraints element, voor de
             beperkingen op publieke toegang een waarde opgenomen uit <a href="#Codelijst-INSPIRE-LimitationsOnPublicAccess">codelijst
-              LimitationsOnPublicAccess</a> . Als er geen beperkingen zijn dient
+              LimitationsOnPublicAccess</a>. Als er geen beperkingen zijn dient
             men dat ook aan te geven, met de waarde "noLimitations". Voor
             INSPIRE is het gebruik van een Anchor verplicht.<br>
           </p>
@@ -2183,7 +2184,7 @@ http://schemas.opengis.net/csw/2.0.2/profiles/apiso/1.0.0/apiso.xsd</a></td>
               </tr>
             </tbody>
           </table>
-          <aside class="example" title="XML notatie van een accessPoint distributie als laag in een WMS">
+          <aside class="example" title="XML notatie van een accessPoint distributie met de dataset in een laag in de WMS">
             <pre><code>
 &lt;gmd:onLine&gt;
   &lt;gmd:CI_OnlineResource&gt;
@@ -2198,6 +2199,13 @@ http://schemas.opengis.net/csw/2.0.2/profiles/apiso/1.0.0/apiso.xsd</a></td>
           xlink:href="http://www.opengis.net/def/serviceType/ogc/wms"&gt;
           OGC:WMS&lt;/gmx:Anchor&gt;
       &lt;/gmd:protocol&gt;
+      &lt;gmd:applicationProfile&gt;
+				 &lt;gmx:Anchor
+						xlink:href="http://inspire.ec.europa.eu/metadata-codelist/SpatialDataServiceType/view"&gt;Raadpleegdienst&lt/gmx:Anchor&gt;
+			&lt;/gmd:applicationProfile&gt;
+      &lt;gmd:name&gt;
+						&lt;gco:CharacterString&gt;PS.ProtectedSite&lt;/gco:CharacterString&gt;
+			&lt;/gmd:name&gt;
       &lt;gmd:description&gt;
         &lt;gmx:Anchor
           xlink:href="http://inspire.ec.europa.eu/metadata-codelist/OnLineDescriptionCode/accessPoint"&gt;
@@ -2220,7 +2228,8 @@ http://schemas.opengis.net/csw/2.0.2/profiles/apiso/1.0.0/apiso.xsd</a></td>
       &lt;gmd:protocol&gt;
       &lt;gmx:Anchor
         xlink:href="https://www.iana.org/assignments/media-types/application/json"&gt;
-        json&lt;/gmx:Anchor&gt;&lt;/gmd:protocol&gt;
+        json&lt;/gmx:Anchor&gt;   
+      &lt;/gmd:protocol&gt;
       &lt;gmd:description&gt;
         &lt;gmx:Anchor
           xlink:href="http://inspire.ec.europa.eu/metadata-codelist/OnLineDescriptionCode/endPoint"&gt;
