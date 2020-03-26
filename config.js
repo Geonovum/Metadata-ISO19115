@@ -133,11 +133,11 @@ var respecConfig = {
       "href":"http://inspire.ec.europa.eu/metadata-codelist",
       "publisher": "European Commission Joint Research Centre",
     },
-     "IANA_MediaTypes": {
+     "IANA-MediaTypes": {
       "title":"IANA mediatypes register",
       "href":"https://www.iana.org/assignments/media-types/",
       "publisher": "IANA",
-    }, "Creative_Commons": {
+    }, "Creative-Commons": {
       "title":"Creative_Commons",
       "href":"https://creativecommons.org/use-remix/cc-licenses/",
       "publisher": "Creative Commons",
