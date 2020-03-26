@@ -2184,7 +2184,11 @@ http://schemas.opengis.net/csw/2.0.2/profiles/apiso/1.0.0/apiso.xsd</a></td>
               </tr>
             </tbody>
           </table>
-          <aside class="example" title="XML notatie van een accessPoint distributie met de dataset in een laag in de WMS">
+	<p>In onderstaande voorbeeld is de methode voor de eenvoudigere data service koppeling voor INSPIRE uitgewerkt. Het optionele element applicationProfile 
+		is toegevoegd. Daarin wordt aangegeven dat het om een INSPIRE view service gaat. Alleen voor de services die de INSPIRE view of de 
+		INSPIRE download service zijn wordt dit element opgenomen. Als bijvoorbeeld een ATOM en een WFS beschikbaar zijn en alleen de ATOM voldoet aan de
+		INSPIRE specificaties van download, dan wordt alleen bijde ATOM dit element met de waarde downloaddienst toegevoegd</p>
+          <aside class="example" title="XML notatie van een accessPoint distributie met eenvoudige INSPIRE data service koppeling">
             <pre><code>
 &lt;gmd:onLine&gt;
   &lt;gmd:CI_OnlineResource&gt;
