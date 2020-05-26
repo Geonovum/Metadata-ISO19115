@@ -44,7 +44,7 @@ var respecConfig = {
     },
     "CSW2APISO": {
       "title":"OpenGIS Catalogue Services Specification 2.0.2 - ISO Metadata Application Profile",
-      "href":"portal.opengeospatial.org/files/?artifact_id=21460",
+      "href":"http://portal.opengeospatial.org/files/?artifact_id=21460",
       "publisher": "Open Geospatial Consortium",
     },
     "ISO19139-2007": {
