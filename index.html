@@ -383,13 +383,11 @@ http://schemas.opengis.net/csw/2.0.2/profiles/apiso/1.0.0/apiso.xsd</a></td>
         <h3>Codelijsten</h3>
         <p>In de metadata dienen de waarden uit de codelijsten waarnaar verwezen
           wordt bij de element beschrijving, gehanteerd te worden. Deze
-          codelijsten zijn ook opgenomen in <a href="#appendix-a">appendix-a</a>.
-          Dit zijn vaak de ISO codelijsten, soms zijn de waarden die in dit
-          profiel gebruikt mogen worden beperkt. 
-          Voor een aantal String elementen wordt ook een codelijst gehanteerd. Hierbij wordt soms het
-          gebruik van gmx:Anchor element vereist, waarin dan een URI wordt opgenomen. Deze URI's worden 
-          steeds vaker door de beherende organisaties ook in HTTPS variant beschikbaar gemaakt. Voor 
-          dit profiel kan de waarde zowel met HTTP als met HTTPS worden opgenomen, mits deze 
+          codelijsten zijn opgenomen in <a href="#appendix-a">appendix-a</a>.
+          Dit zijn vaak de ISO codelijsten, daarvan zijn de waarden die in dit
+          profiel gebruikt mogen worden soms beperkt. 
+          Voor een aantal String elementen wordt ook een codelijst gehanteerd. Voor 
+          dit profiel kan de waarde uit codelijsten zowel met HTTP als met HTTPS worden opgenomen, mits deze 
           URI ook daadwerkelijk aanwezig is en dezelfde betekenis heeft. </p>
         <aside class="example" title="Verwijzing naar codelijst">
           <pre><code>&lt;ci_datetypecode
@@ -409,10 +407,12 @@ http://schemas.opengis.net/csw/2.0.2/profiles/apiso/1.0.0/apiso.xsd</a></td>
           naar een webadres op te nemen waar meer informatie over dit element te
           vinden is. Daarvoor wordt het xlink:href attribuut gebruikt, dat een
           valide URL dient te bevatten. Als tekst waarde van het Anchor element
-          kan een willekeurige voor de mens leesbaar label gekozen worden. Om de 
-          interoperabiliteit met eerdere versies van dit profiel te behouden, 
-          wordt aanbevolen om in dit label de waarde op te nemen die bij gebruik 
-          van gco:CharacterString in dat element opgenomen zou worden. </p>
+          kan een willekeurige voor de mens leesbaar label gekozen worden,
+          bijvoorbeeld een Nederlandse vertaling. Om de interoperabiliteit met 
+          eerdere versies van dit profiel te behouden, wordt aanbevolen om in dit 
+          label de waarde op te nemen die bij gebruik van gco:CharacterString in dat 
+          element opgenomen zou worden. Bij een aantal elementen is het
+          gebruik van gmx:Anchor element vereist, de URL is in die gevallen een vastgelegde waarde (URI) uit een codelijst. </p>
         <aside class="example" title="Trefwoord verwijzing met Anchor">
           <pre><code>&lt;gmd:keyword&gt;
   &lt;gmx:Anchor xlink:href="http://www.eionet.europa.eu/gemet/nl/inspire-theme/mf"&gt;
