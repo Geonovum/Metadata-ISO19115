@@ -1,14 +1,38 @@
+//-- Postprocessors -------------------------------------------------------------------
+
+//-- haalt gh-pages weg aan het eind van een URL
+//-- Stopt zodra de eerste is gevonden (want komt maar 1x voor)
+//-- JvG 2019-11-12
+function custGHPG(respecConfig)  
+{
+  var tags = document.getElementsByTagName("a");
+  var srch = "gh-pages";
+  var slen = srch.length;
+  var i;
+
+  for (i = 0; i < tags.length; i++) 
+  {
+    if(tags[i].href.indexOf(srch) > -1)
+    {
+      console.log(tags[i].href + " is gevonden");
+      tags[i].href = tags[i].href.substring(0, tags[i].href.length - slen);
+      console.log(tags[i].href + " is aangepast");
+      break;
+    }
+  } 
+}
+
 var respecConfig = {
-  specStatus: "GN-DEF",
+  specStatus: "GN-WV",
   pubDomain:"md",
   specType: "ST",
   editors: [{
     name: "Geonovum",
     url: "http://www.geonovum.nl/",
   }],
-  publishDate: "2020-06-30",
-  previousPublishDate: "2020-06-02",
-  previousMaturity: "GN-VV",
+  //publishDate: "2020-06-30",
+  previousPublishDate: "2020-06-30",
+  previousMaturity: "GN-DEF",
   shortName: "mdprofiel-iso19115",
   github: "https://github.com/Geonovum/Metadata-ISO19115/",
   localBiblio: {
