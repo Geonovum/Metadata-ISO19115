@@ -6,7 +6,7 @@ var respecConfig = {
     name: "Geonovum",
     url: "http://www.geonovum.nl/",
   }],
-  publishDate: "2020-07-06",
+  publishDate: "2020-06-30",
   previousPublishDate: "2020-06-02",
   previousMaturity: "GN-VV",
   shortName: "mdprofiel-iso19115",
